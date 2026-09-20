@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "ex": "http://example.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "fullName": "ex:fullName",
+    "hometown": "ex:hometown",
+    "age": {
+      "@id": "ex:age",
+      "@type": "xsd:integer"
+    },
+    "almaMater": "ex:almaMater",
+    "parents": "ex:parents",
+    "subjects": "ex:subjects",
+    "name": "ex:name",
+    "teachers": "ex:teachers",
+    "description": "ex:description"
+  },
+  "fullName": "Lucas Daniel Benítez Maidana",
+  "hometown": "Madrid",
+  "age": 21,
+  "almaMater": "Universidad Politécnica de Madrid",
+  "parents": [
+    "padre",
+    "madre"
+  ],
+  "subjects": [
+    {
+      "name": "Semantic Web, Linked Data and Knowledge Graphs",
+      "teachers": [
+        "Oscar Corcho",
+        "Raúl García Castro",
+        "Daniel Garijo"
+      ],
+      "description": "Course about Semantic Web technologies, Linked Data, RDF, RDF Schema, SPARQL and Knowledge Graphs."
+    }
+  ]
+}
