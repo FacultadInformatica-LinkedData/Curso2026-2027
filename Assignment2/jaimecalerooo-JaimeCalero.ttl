@@ -1,0 +1,166 @@
+﻿# ==============================================================================
+# Assignment 2a: RDF & RDFS Modeling
+# Student: Jaime Calero
+# GitHub: jaimecalerooo
+# Course: Semantic Web, Linked Data and Knowledge Graphs (2026-2027)
+# ==============================================================================
+
+@prefix : <http://example.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+#                   CLASES Y JERARQUÍA (TBox)
+#################################################################
+
+# Clase raíz para lugares
+:Place rdf:type rdfs:Class ;
+    rdfs:label "Place"@en , "Lugar"@es ;
+    rdfs:comment "Cualquier localización física o entidad espacial."@es .
+
+# Puntos de interés (subclase de Place)
+:PointOfInterest rdf:type rdfs:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Point of Interest"@en , "Punto de Interés"@es ;
+    rdfs:comment "Lugar de interés para visitantes o ciudadanos."@es .
+
+# Rama de Lugares Turísticos
+:TouristicPlace rdf:type rdfs:Class ;
+    rdfs:subClassOf :PointOfInterest ;
+    rdfs:label "Touristic Place"@en , "Lugar Turístico"@es .
+
+:Palace rdf:type rdfs:Class ;
+    rdfs:subClassOf :TouristicPlace ;
+    rdfs:label "Palace"@en , "Palacio"@es .
+
+:Church rdf:type rdfs:Class ;
+    rdfs:subClassOf :TouristicPlace ;
+    rdfs:label "Church"@en , "Iglesia"@es .
+
+:Cathedral rdf:type rdfs:Class ;
+    rdfs:subClassOf :TouristicPlace ;
+    rdfs:label "Cathedral"@en , "Catedral"@es .
+
+# Rama de Alojamientos
+:Accommodation rdf:type rdfs:Class ;
+    rdfs:subClassOf :PointOfInterest ;
+    rdfs:label "Accommodation"@en , "Alojamiento"@es .
+
+:Hotel rdf:type rdfs:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Hotel"@en , "Hotel"@es .
+
+:Hostel rdf:type rdfs:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Hostel"@en , "Hostal"@es .
+
+# Establecimientos de ocio/hostelería (Bar)
+:Bar rdf:type rdfs:Class ;
+    rdfs:subClassOf :PointOfInterest ;
+    rdfs:label "Bar"@en , "Bar"@es .
+
+# Dirección postal
+:Location rdf:type rdfs:Class ;
+    rdfs:label "Location"@en , "Dirección / Ubicación"@es ;
+    rdfs:comment "Dirección postal compuesta por calle y número."@es .
+
+# Entidades territoriales y administrativas
+:AdministrativeUnit rdf:type rdfs:Class ;
+    rdfs:label "Administrative Unit"@en , "Unidad Administrativa"@es .
+
+:Municipality rdf:type rdfs:Class ;
+    rdfs:subClassOf :AdministrativeUnit ;
+    rdfs:label "Municipality"@en , "Municipio"@es .
+
+:City rdf:type rdfs:Class ;
+    rdfs:subClassOf :Municipality ;
+    rdfs:label "City"@en , "Ciudad"@es .
+
+:Province rdf:type rdfs:Class ;
+    rdfs:subClassOf :AdministrativeUnit ;
+    rdfs:label "Province"@en , "Provincia"@es .
+
+:AutonomousCommunity rdf:type rdfs:Class ;
+    rdfs:subClassOf :AdministrativeUnit ;
+    rdfs:label "Autonomous Community"@en , "Comunidad Autónoma"@es .
+
+
+#################################################################
+#                   PROPIEDADES (RDFS)
+#################################################################
+
+# Relación entre un Lugar y su Ubicación
+:hasLocation rdf:type rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range :Location ;
+    rdfs:label "has location"@en , "tiene ubicación"@es .
+
+# Datos de la dirección postal
+:streetName rdf:type rdf:Property ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:string ;
+    rdfs:label "street name"@en , "nombre de calle"@es .
+
+:number rdf:type rdf:Property ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:integer ;
+    rdfs:label "number"@en , "número"@es .
+
+:placedAt rdf:type rdf:Property ;
+    rdfs:domain :Location ;
+    rdfs:range :Municipality ;
+    rdfs:label "placed at"@en , "situado en municipio"@es .
+
+# Población de un municipio
+:population rdf:type rdf:Property ;
+    rdfs:domain :Municipality ;
+    rdfs:range xsd:integer ;
+    rdfs:label "population"@en , "población"@es .
+
+# Límites fronterizos
+:hasBorderWith rdf:type rdf:Property ;
+    rdfs:domain :Municipality ;
+    rdfs:range :Municipality ;
+    rdfs:label "has border with"@en , "limita con"@es .
+
+# Pertenencia territorial
+:belongsTo rdf:type rdf:Property ;
+    rdfs:domain :AdministrativeUnit ;
+    rdfs:range :AdministrativeUnit ;
+    rdfs:label "belongs to"@en , "pertenece a"@es .
+
+
+#################################################################
+#                   INSTANCIAS (ABox)
+#################################################################
+
+# 1. Comunidad de Madrid
+:MadridCommunity rdf:type :AutonomousCommunity ;
+    rdfs:label "Comunidad de Madrid"@es .
+
+# 2. Ciudad de Madrid
+:Madrid rdf:type :City ;
+    rdfs:label "Madrid"@es ;
+    :population 3166000 ;
+    :belongsTo :MadridCommunity .
+
+# 3. Bar "La Mirinda"
+:LaMirinda rdf:type :Bar ;
+    rdfs:label "La Mirinda"@es ;
+    :hasLocation :LaMirindaLocation .
+
+:LaMirindaLocation rdf:type :Location ;
+    :streetName "Plaza Dos de Mayo"^^xsd:string ;
+    :number 4 ;
+    :placedAt :Madrid .
+
+# 4. Iglesia en Calle Alcalá 43
+:ChurchCalleAlcala43 rdf:type :Church ;
+    rdfs:label "Iglesia de Calle Alcalá"@es ;
+    :hasLocation :ChurchCalleAlcala43Location .
+
+:ChurchCalleAlcala43Location rdf:type :Location ;
+    :streetName "Calle Alcalá"^^xsd:string ;
+    :number 43 ;
+    :placedAt :Madrid .
