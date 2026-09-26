@@ -1,0 +1,94 @@
+@prefix ex: <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Clases principales
+ex:Place rdf:type rdfs:Class .
+ex:Location rdf:type rdfs:Class .
+ex:Municipality rdf:type rdfs:Class .
+ex:Province rdf:type rdfs:Class .
+ex:AutonomousCommunity rdf:type rdfs:Class .
+
+# Puntos de interes
+ex:PointOfInterest rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Place .
+
+ex:TouristicPlace rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:PointOfInterest .
+
+ex:Accommodation rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:PointOfInterest .
+
+# Tipos de lugares turisticos y alojamientos
+ex:Palace rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+ex:Church rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+ex:Cathedral rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Hotel rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Accommodation .
+ex:Hostel rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Accommodation .
+
+# Otros lugares
+ex:City rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Municipality .
+ex:Bar rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Place .
+
+# Propiedades y relaciones
+ex:hasLocation rdf:type rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:Location .
+
+ex:placedAt rdf:type rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range ex:Municipality .
+
+ex:hasBorderWith rdf:type rdf:Property ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range ex:Municipality .
+
+ex:belongsTo rdf:type rdf:Property . 
+
+ex:streetName rdf:type rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range xsd:string .
+
+ex:number rdf:type rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range xsd:integer .
+
+ex:population rdf:type rdf:Property ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range xsd:integer .
+
+# Instancias y datos de ejemplo
+
+# Comunidad y ciudad de Madrid
+ex:MadridCommunity rdf:type ex:AutonomousCommunity .
+
+ex:Madrid rdf:type ex:City ;
+    ex:population "3166000"^^xsd:integer ;
+    ex:belongsTo ex:MadridCommunity .
+
+# Bar La Mirinda
+ex:LocLaMirinda rdf:type ex:Location ;
+    ex:streetName "Plaza Dos de Mayo"^^xsd:string ;
+    ex:number "4"^^xsd:integer ;
+    ex:placedAt ex:Madrid .
+
+ex:LaMirinda rdf:type ex:Bar ;
+    ex:hasLocation ex:LocLaMirinda .
+
+# Iglesia en Calle Alcala
+ex:LocChurch1 rdf:type ex:Location ;
+    ex:streetName "Calle Alcalá"^^xsd:string ;
+    ex:number "43"^^xsd:integer ;
+    ex:placedAt ex:Madrid .
+
+ex:Church1 rdf:type ex:Church ;
+    ex:hasLocation ex:LocChurch1 .
