@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "fullName": "schema:name",
+    "hometown": "schema:birthPlace",
+    "age": "schema:age",
+    "almaMater": "schema:alumniOf",
+    "parents": "schema:parent",
+    "subjects": "schema:hasCourse",
+    "subjectName": "schema:name",
+    "teachers": "schema:instructor",
+    "description": "schema:description"
+  },
+  "@id": "http://example.org/student/jiaxu",
+  "@type": "schema:Person",
+  "fullName": "Jiaxu He",
+  "hometown": "Madrid",
+  "age": 21,
+  "almaMater": "Universidad Politécnica de Madrid",
+  "parents": ["Padre 1", "Padre 2"],
+  "subjects": [
+    {
+      "@type": "schema:Course",
+      "subjectName": "Semantic Web, Linked Data and Knowledge Graphs",
+      "teachers": ["Oscar Corcho", "Raúl García Castro", "Daniel Garijo"],
+      "description": "Curso sobre tecnologías semánticas, RDF y JSON-LD"
+    },
+    {
+      "@type": "schema:Course",
+      "subjectName": "Data Science",
+      "teachers": ["Profesor 1", "Profesor 2"],
+      "description": "Análisis de datos y machine learning"
+    }
+  ]
+}
