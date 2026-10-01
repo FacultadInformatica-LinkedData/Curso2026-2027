@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Dataset requirements
+		</title>
+		<style>
+			body {
+				font:16px/1.6 system-ui,sans-serif;
+				color:#172d3c;
+				background:#f3f6f8;
+				margin:0
+			}
+			main {
+				max-width:1120px;
+				margin:auto;
+				padding:36px 24px
+			}
+			h1 {
+				font-size:38px;
+				line-height:1.15
+			}
+			h2 {
+				margin-top:36px
+			}
+			h3 {
+				margin-top:24px
+			}
+			a {
+				color:#006b75
+			}
+			table {
+				width:100%;
+				border-collapse:collapse;
+				background:white
+			}
+			th,td {
+				padding:12px;
+				text-align:left;
+				border:1px solid #d5dfe5;
+				vertical-align:top
+			}
+			th {
+				background:#e6eff1
+			}
+			code {
+				overflow-wrap:anywhere
+			}
+			.note {
+				padding:16px;
+				border-left:4px solid #d49b32;
+				background:#fff4da
+			}
+			.badge {
+				color:#006b60;
+				font-weight:700
+			}
+			.screens {
+				display:grid;
+				gap:24px
+			}
+			.screen {
+				background:white;
+				border:1px solid #b7cbd3;
+				border-radius:14px;
+				overflow:hidden
+			}
+			.bar {
+				background:#153d4a;
+				color:white;
+				padding:18px 24px;
+				font-weight:700
+			}
+			.panel {
+				padding:24px
+			}
+			.chips {
+				display:flex;
+				flex-wrap:wrap;
+				gap:10px
+			}
+			.chip {
+				border:1px solid #b3c9d0;
+				padding:8px 14px;
+				border-radius:8px
+			}
+			.layout {
+				display:grid;
+				grid-template-columns:1fr 1fr;
+				gap:18px;
+				margin-top:20px
+			}
+			.card {
+				border:1px solid #cbd7dc;
+				padding:16px;
+				border-radius:10px;
+				margin:12px 0
+			}
+			.map {
+				min-height:280px;
+				background:#e6eff0;
+				border-radius:10px;
+				padding:14px
+			}
+			.muted {
+				color:#5e707a;
+				font-size:14px
+			}
+			footer {
+				margin-top:32px;
+				border-top:1px solid #cbd7dc;
+				padding-top:16px
+			}
+			@media(max-width:700px) {
+				.layout {
+					grid-template-columns:1fr
+				}
+				h1 {
+					font-size:30px
+				}
+				table {
+					font-size:14px
+				}
+				th,td {
+					padding:7px
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p>Hands-on 1 · Group04 · 29 September 2026</p>
+			<h1>Dataset requirements</h1>
+			<p><strong>Selected project:</strong> Madrid Culture Finder, a directory of libraries and museums for residents, students and visitors. Course domain: Smart community facilities, supported by Smart education (libraries) and Smart tourism (museums). The domain diagram in 07.MGLD.pdf, PDF page 46 (slide 47), explicitly lists these domains.</p>
+			<h2>1. Selected datasets and evidence</h2>
+			<h3>Bibliotecas de Madrid</h3>
+			<p>Publisher: Ayuntamiento de Madrid. Local snapshot: <a href="../csv/libraries.csv">libraries.csv</a>, downloaded 29 September 2026. 52 records; 32 columns; semicolon delimiter; Windows-1252 encoding.</p>
+			<p><a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas">Official dataset and license declaration</a> · <a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas/resource/201747-1-bibliobuses-bibliotecas-csv/download/201747-0-bibliobuses-bibliotecas.csv">Official CSV download</a> · <a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas/resource/201747-4-bibliobuses-bibliotecas/download/201747-4-bibliobuses-bibliotecas.pdf">Official field documentation</a></p>
+			<h3>Museos de la ciudad de Madrid</h3>
+			<p>Publisher: Ayuntamiento de Madrid. Local snapshot: <a href="../csv/museums.csv">museums.csv</a>, downloaded 29 September 2026. 68 records; 32 columns; semicolon delimiter; Windows-1252 encoding.</p>
+			<p><a href="https://datos.madrid.es/dataset/201132-0-museos">Official dataset and license declaration</a> · <a href="https://datos.madrid.es/dataset/201132-0-museos/resource/201132-1-museos-csv/download/201132-0-museos.csv">Official CSV download</a> · <a href="https://datos.madrid.es/dataset/201132-0-museos/resource/201132-5-museos/download/201132-5-museos.pdf">Official field documentation</a></p>
+			<h2>2. Requirement assessment</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Requirement</th>
+						<th>Libraries</th>
+						<th>Museums</th>
+						<th>Evidence and limitations</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>R1 · Smart-city domain</td>
+						<td>Yes: Smart community facilities / education</td>
+						<td>Yes: Smart community facilities / tourism</td>
+						<td>The course domain diagram (07.MGLD.pdf, PDF page 46 / slide 47) lists Smart community facilities, Smart education and Smart tourism. Libraries and museums are community facilities; libraries also support education and museums tourism.</td>
+					</tr>
+					<tr>
+						<td>R2 · CSV availability</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Both original CSV distributions were downloaded and parsed successfully; the files are included under csv/.</td>
+					</tr>
+					<tr>
+						<td>R3 · Open license</td>
+						<td>CC BY 4.0</td>
+						<td>CC BY 4.0</td>
+						<td>Each official dataset declares CC BY 4.0. Credit the publisher, link the source and license, and indicate transformations when publishing derived RDF.</td>
+					</tr>
+					<tr>
+						<td>R4 · Linkable real-world entities</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>LOCALIDAD, COD-DISTRITO / DISTRITO, COD-BARRIO / BARRIO, names, addresses and LATITUD / LONGITUD support reconciliation with cities, districts, neighborhoods and facilities.</td>
+					</tr>
+					<tr>
+						<td>R5 · Documentation (optional)</td>
+						<td>Substantially satisfied</td>
+						<td>Substantially satisfied</td>
+						<td>Official descriptions and a shared equipment data dictionary are available. The dictionary is dated May 2019 and uses some coordinate headings that differ from the actual CSV headers; use the inspected CSV schema.</td>
+					</tr>
+					<tr>
+						<td>R6 · Multiple sources (optional)</td>
+						<td colspan="2">Partially satisfied</td>
+						<td>Two distinct datasets, but one publishing portal and publisher. Wikidata is a planned external linking source; it is not included as a downloaded input dataset.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>3. External entities and linking plan</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Local entity / fields</th>
+						<th>External target</th>
+						<th>Matching method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>City: LOCALIDAD = MADRID</td>
+						<td><a href="https://www.wikidata.org/wiki/Q2807">Wikidata Madrid (Q2807)</a></td>
+						<td>Confirm that the locality denotes the city rather than the autonomous community; link a city resource and relate each facility to that city.</td>
+					</tr>
+					<tr>
+						<td>Museum: PK = 2058, NOMBRE = Museo del Prado; coordinates 40.414069291230945, -3.6922134558146453</td>
+						<td><a href="https://www.wikidata.org/wiki/Q160112">Wikidata Museo del Prado (Q160112)</a></td>
+						<td>Match the museum using its name, official website and coordinates.</td>
+					</tr>
+					<tr>
+						<td>Districts and neighborhoods: codes plus names</td>
+						<td>Wikidata administrative-area items; optionally DBpedia resources</td>
+						<td>Match by geographic codes and normalized names, using Madrid and the administrative-area type to disambiguate.</td>
+					</tr>
+					<tr>
+						<td>Libraries: NOMBRE, address, CONTENT-URL, coordinates</td>
+						<td>Wikidata library items where available</td>
+						<td>Use library names, official websites, addresses and coordinates to match available library items; city and area links also support R4.</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>Municipal PK values are local identifiers, not Wikidata IDs. Use owl:sameAs only for verified identical entities; a facility located in Madrid is not the same entity as Madrid. Identity links require matching the same real-world entity.</p>
+			<h2>4. License and attribution</h2>
+			<p>Both datasets are published by Ayuntamiento de Madrid under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. They may be shared and adapted with attribution, a license link and an indication of any changes. The submitted CSV files are unmodified downloads from 29 September 2026.</p>
+		</main>
+	</body>
+</html>
