@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Application requirements
+		</title>
+		<style>
+			body {
+				font:16px/1.6 system-ui,sans-serif;
+				color:#172d3c;
+				background:#f3f6f8;
+				margin:0
+			}
+			main {
+				max-width:1120px;
+				margin:auto;
+				padding:36px 24px
+			}
+			h1 {
+				font-size:38px;
+				line-height:1.15
+			}
+			h2 {
+				margin-top:36px
+			}
+			h3 {
+				margin-top:24px
+			}
+			a {
+				color:#006b75
+			}
+			table {
+				width:100%;
+				border-collapse:collapse;
+				background:white
+			}
+			th,td {
+				padding:12px;
+				text-align:left;
+				border:1px solid #d5dfe5;
+				vertical-align:top
+			}
+			th {
+				background:#e6eff1
+			}
+			code {
+				overflow-wrap:anywhere
+			}
+			.note {
+				padding:16px;
+				border-left:4px solid #d49b32;
+				background:#fff4da
+			}
+			.badge {
+				color:#006b60;
+				font-weight:700
+			}
+			.screens {
+				display:grid;
+				gap:24px
+			}
+			.screen {
+				background:white;
+				border:1px solid #b7cbd3;
+				border-radius:14px;
+				overflow:hidden
+			}
+			.bar {
+				background:#153d4a;
+				color:white;
+				padding:18px 24px;
+				font-weight:700
+			}
+			.panel {
+				padding:24px
+			}
+			.chips {
+				display:flex;
+				flex-wrap:wrap;
+				gap:10px
+			}
+			.chip {
+				border:1px solid #b3c9d0;
+				padding:8px 14px;
+				border-radius:8px
+			}
+			.layout {
+				display:grid;
+				grid-template-columns:1fr 1fr;
+				gap:18px;
+				margin-top:20px
+			}
+			.card {
+				border:1px solid #cbd7dc;
+				padding:16px;
+				border-radius:10px;
+				margin:12px 0
+			}
+			.map {
+				min-height:280px;
+				background:#e6eff0;
+				border-radius:10px;
+				padding:14px
+			}
+			.muted {
+				color:#5e707a;
+				font-size:14px
+			}
+			footer {
+				margin-top:32px;
+				border-top:1px solid #cbd7dc;
+				padding-top:16px
+			}
+			@media(max-width:700px) {
+				.layout {
+					grid-template-columns:1fr
+				}
+				h1 {
+					font-size:30px
+				}
+				table {
+					font-size:14px
+				}
+				th,td {
+					padding:7px
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p>Hands-on 1 · Group06 · 29 September 2026</p>
+			<h1>Application requirements</h1>
+			<p><strong>Madrid Culture Finder</strong> helps residents, students and visitors discover nearby libraries and museums, compare access information and consult authoritative facility pages. It will use both selected CSV datasets, later converted to RDF and linked to reviewed external entities.</p>
+			<p><a href="datasetRequirements.html">Dataset requirements</a></p>
+			<h2>1. Users and scope</h2>
+			<p>A student wants a library in a selected district. A visitor wants museums within a chosen radius. A resident wants facilities with a specific accessibility feature. The first version supports discovery and factual details; bookings, live occupancy, walking routes, real-time opening status and automatic accessibility certification are outside the planned scope.</p>
+			<h2>2. Functional requirements and acceptance criteria</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Requirement</th>
+						<th>Acceptance criterion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>FR01</td>
+						<td><strong>Unified search</strong><br>Search both datasets by facility name, ignoring case and accents for search only.</td>
+						<td>A name query returns every matching record in the selected facility types.</td>
+					</tr>
+					<tr>
+						<td>FR02</td>
+						<td><strong>Area and type filters</strong><br>Combine library/museum, district and neighborhood filters; offer an Unknown area option.</td>
+						<td>Every displayed record satisfies all active filters; resetting filters restores the full list.</td>
+					</tr>
+					<tr>
+						<td>FR03</td>
+						<td><strong>List and map</strong><br>Show map markers for valid coordinates and a synchronized result list.</td>
+						<td>Selecting a marker highlights its corresponding card; a missing-coordinate record remains in the list with Location unavailable.</td>
+					</tr>
+					<tr>
+						<td>FR04</td>
+						<td><strong>Nearby search</strong><br>Accept a manually entered latitude/longitude and radius (0.5, 1, 2 or 5 km); optionally request browser location after a user action.</td>
+						<td>Results have Haversine straight-line distance within the chosen radius, ordered by distance. Invalid input produces a clear validation message.</td>
+					</tr>
+					<tr>
+						<td>FR05</td>
+						<td><strong>Facility detail</strong><br>Display address, opening-hours text, transport text, contact, accessibility codes, publisher link and retrieval date.</td>
+						<td>Selecting a card opens the corresponding facility, including source text or Not provided for missing fields.</td>
+					</tr>
+					<tr>
+						<td>FR06</td>
+						<td><strong>Accessibility filter</strong><br>Filter by individual documented codes, distinguishing accessible, partial and unknown status.</td>
+						<td>A record containing 1,6 matches both code 1 and code 6; code 6 alone does not match the accessible filter.</td>
+					</tr>
+					<tr>
+						<td>FR07</td>
+						<td><strong>Linked-data context</strong><br>After RDF conversion and reconciliation, show reviewed links to city, administrative areas and facilities.</td>
+						<td>Only verified links appear; unresolved matches are labeled Not linked. Search and details still work without enrichment.</td>
+					</tr>
+					<tr>
+						<td>FR08</td>
+						<td><strong>Empty and error states</strong><br>Show No matching facilities when filters yield no result, and Data unavailable on load failure.</td>
+						<td>The user can clear filters or retry without confusing a load error with an empty dataset.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>3. Expected interfaces</h2>
+			<p>The following are static design mock-ups, not a working application. Values illustrate presentation; counts, distances and marker locations are illustrative. Controls show intended behavior and are deliberately non-interactive.</p>
+			<div class="screens">
+				<section class="screen" aria-label="Search and map mock-up">
+					<div class="bar">
+						MADRID CULTURA · Encuentra tu próximo lugar
+					</div>
+					<div class="panel">
+						<h3>Bibliotecas y museos cerca de ti</h3>
+						<div class="chips">
+							<span class="chip">Nombre: Prado</span>
+							<span class="chip">Tipo: Museos</span>
+							<span class="chip">Distrito: Todos</span>
+							<span class="chip">Accesibilidad: Todas</span>
+						</div>
+						<p class="muted">Ubicación manual: 40.4168, -3.7038 · Radio: 2 km · Distancia en línea recta</p>
+						<div class="layout">
+							<div>
+								<h3>Resultados · ejemplo</h3>
+								<article class="card">
+									<strong>Museo del Prado</strong>
+									<p>Museo · distrito no disponible en el conjunto de datos</p>
+									<p>Información de accesibilidad: consultar detalle</p>
+									<span class="chip">Ver detalle →</span>
+								</article>
+								<p class="muted">Sin resultados: “No hay centros que coincidan. Borra los filtros para ampliar la búsqueda.”</p>
+							</div>
+							<div class="map">
+								<svg viewBox="0 0 420 270" role="img" aria-label="Schematic map with a museum marker and an origin marker; not a geographic basemap">
+									<path d="M0 80H420M0 190H420M100 0V270M280 0V270" stroke="#fff" stroke-width="22"/>
+									<path d="M170 0Q120 140 200 270" stroke="#a6d1dc" stroke-width="18" fill="none"/>
+									<circle cx="220" cy="95" r="9" fill="#174354"/>
+									<text x="235" y="100" font-size="14">Origen</text>
+									<circle cx="290" cy="155" r="12" fill="#c77439"/>
+									<text x="250" y="185" font-size="14">Museo del Prado</text>
+								</svg>
+								<p class="muted">Mapa esquemático · marcadores ilustrativos</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="screen" aria-label="Facility detail mock-up">
+					<div class="bar">
+						MADRID CULTURA · ← Volver a resultados
+					</div>
+					<div class="panel">
+						<p class="muted">Museo · ficha de ejemplo</p>
+						<h3>Museo del Prado</h3>
+						<div class="layout">
+							<div>
+								<h4>Planifica tu visita</h4>
+								<p><strong>Dirección:</strong> No disponible en el conjunto de datos</p>
+								<p><strong>Horario:</strong> De lunes a sábado, de 10 a 20 horas. Domingos y festivos, de 10 a 19 horas. Cerrado los días 1 de enero, 1 de mayo y 25 de diciembre. Horario reducido, de 10 a 14 horas (6 de enero y 24 y 31 de diciembre).  Horario de gratuidad:  De lunes a sábado, de 18 a 20 horas. Domingos y festivos, de 17 a 19 horas.  Acceso al Museo hasta 30 minutos antes del cierre.</p>
+								<p><strong>Transporte:</strong> Metro: Estación del Arte (línea 1), Banco de España (línea 2).  Cercanías Renfe:  Atocha (líneas C1, C2, C3, C4, C5, C7 y C10).</p>
+								<p><strong>Accesibilidad:</strong> Accesible · Lengua de signos · Bucle de inducción magnético</p>
+								<span class="chip">Consultar ficha oficial ↗</span>
+							</div>
+							<div class="card">
+								<h4>Contexto enlazado</h4>
+								<p>Ciudad: Madrid → Wikidata Q2807</p>
+								<p>Institución: Museo del Prado → Wikidata Q160112</p>
+								<p>Enlaces externos en la interfaz propuesta</p>
+								<p class="muted">Origen: Ayuntamiento de Madrid<br>Datos consultados: 29/09/2026<br>Licencia: CC BY 4.0</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<h2>4. Interaction flow</h2>
+			<p>Search → apply filters → inspect list/map → select a facility → inspect source details and verified links → return with filters retained. Map and list share the selected record. At narrow widths the map follows the list; all results remain accessible without using a map.</p>
+		</main>
+	</body>
+</html>
