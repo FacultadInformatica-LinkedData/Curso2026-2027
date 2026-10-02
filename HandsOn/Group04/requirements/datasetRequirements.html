@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dataset Requirements - Group 04</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+        h1 { font-size: 24pt; }
+        .req { margin-bottom: 20px; }
+        .req b { display: block; margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<h1>Justification of the Datasets Used</h1>
+<p>Publisher: Ayuntamiento de Madrid, Dirección General de Sostenibilidad y Control Ambiental. The selected files are:</p>
+<ul>
+    <li><a href="../csv/212629-0-estaciones-control-aire-csv.csv">Station metadata CSV</a>: 24 stations and 25 columns. <a href="https://datos.madrid.es/dataset/212629-0-estaciones-control-aire">Official dataset page</a>.</li>
+    <li><a href="../csv/calair_tiemporeal.csv">Hourly measurements CSV</a>: 126 records and 56 columns, covering 1 October 2026. <a href="https://datos.madrid.es/dataset/212531-0-calidad-aire-tiempo-real">Official dataset page</a>. The local file is a static snapshot, not a continuously updated feed.</li>
+</ul>
+
+<div class="req">
+    <b>R1 – Satisfied.</b>
+    Both datasets belong to the environment domain within a Smart City context. The stations file provides locations and equipment metadata; its X indicators identify monitored pollutants, not concentrations. The measurement file provides hourly pollutant concentrations in Madrid. Together they support urban environmental monitoring and citizen information.
+</div>
+
+<div class="req">
+    <b>R2 – Satisfied.</b>
+    Both datasets are available in CSV format. They use semicolons (;) as delimiters, which is a standard convention in European CSV files.
+</div>
+
+<div class="req">
+    <b>R3 – Satisfied.</b>
+    Both official dataset pages linked above identify <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. This open license permits redistribution and adaptation, including publication of derived RDF. Publication will credit Ayuntamiento de Madrid, link to the source datasets and license, and indicate modifications such as RDF conversion. The CSV files retain the downloaded data; their exact download time was not recorded.
+</div>
+
+<div class="req">
+    <b>R4 – Satisfied.</b>
+    <p>The station dataset contains names, addresses and coordinates of real monitoring stations. The measurement dataset identifies their municipality through <code>PROVINCIA=28</code> and <code>MUNICIPIO=079</code>. Together these values form the municipality code <code>28079</code>, identifying Madrid.</p>
+    <p>The selected external linking target is the municipality of Madrid in Wikidata, with entity URI <a href="http://www.wikidata.org/entity/Q2807">http://www.wikidata.org/entity/Q2807</a>. Its <a href="https://www.wikidata.org/wiki/Q2807">Wikidata record</a> identifies Madrid as a municipality and gives INE code <code>28079</code> (property P772). This provides a concrete code-based match for our local Madrid municipality entity.</p>
+    <p>During RDF conversion, the local municipality entity can be linked to this external entity using <code>owl:sameAs</code>. Stations will be related to the municipality through a location relation, and observations through their monitoring station. A station or observation must not be declared identical to the city. This identifies the planned links; RDF links have not yet been generated.</p>
+    <p>The two local CSV files can be joined using <code>CODIGO_CORTO</code> in <code>212629-0-estaciones-control-aire-csv.csv</code> and <code>ESTACION</code> in <code>calair_tiemporeal.csv</code>, comparing the station codes numerically. For example, code <code>4</code> identifies the Plaza de España monitoring station. Alternatively, the station's <code>CODIGO</code> matches the prefix of <code>PUNTO_MUESTREO</code> before the first underscore: <code>28079004</code>. The <code>ESTACION</code> column in the stations CSV contains a name, not this numeric code.</p>
+    <p>Addresses and coordinates may support additional links to streets, parks or squares after individual verification. Such places must be distinguished from the monitoring stations themselves; no unverified station-level equivalences are claimed.</p>
+</div>
+
+<div class="req">
+    <b>R5 – Satisfied.</b>
+    Documentation is available for both datasets: <a href="https://datos.madrid.es/dataset/212629-0-estaciones-control-aire/resource/212629-2-estaciones-control-aire/download/212629-2-estaciones-control-aire.pdf">Station file structure</a> describes station fields and equipment indicators; <a href="https://datos.madrid.es/dataset/212531-0-calidad-aire-tiempo-real/resource/212531-4-calidad-aire-tiempo-real/download/212531-4-calidad-aire-tiempo-real.pdf">Air quality file interpreter</a> explains hourly records, station and magnitude codes, units and local time. Hourly values H01-H24 must be interpreted together with their corresponding V01-V24 indicators; unavailable or invalid observations must not be treated as zero concentrations. The official real-time source states that automatic readings are pending review and validation.
+</div>
+
+<div class="req">
+    <b>R6 – Not used (optional).</b>
+    Both selected CSV datasets come from one provider, the Madrid Open Data portal. Multiple source providers are therefore not used. The datasets are complementary and can be joined through station codes. Wikidata is a planned external linking target under R4, rather than a second source of the selected CSV data.
+</div>
+
+</body>
+</html>
