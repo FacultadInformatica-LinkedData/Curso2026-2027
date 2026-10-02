@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "ex": "https://github.com/jaimecalerooo/Curso2026-2027/Assignment2/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "name": "schema:name",
+    "age": { "@id": "schema:age", "@type": "xsd:integer" },
+    "hometown": "schema:homeLocation",
+    "almaMater": "schema:alumniOf",
+    "parents": { "@id": "schema:parent", "@type": "@id", "@container": "@set" },
+    "subjects": { "@id": "ex:hasSubject", "@type": "@id", "@container": "@set" },
+    "teachers": { "@id": "schema:teacher", "@type": "@id", "@container": "@set" },
+    "description": "schema:description",
+    "credits": { "@id": "ex:credits", "@type": "xsd:integer" },
+    "courseYear": { "@id": "ex:courseYear", "@type": "xsd:integer" },
+    "semester": { "@id": "ex:semester", "@type": "xsd:integer" },
+    "degreeProgram": "ex:degreeProgram"
+  },
+  "@graph": [
+    {
+      "@id": "ex:JaimeCaleroToledano",
+      "@type": "schema:Person",
+      "name": "Jaime Calero Toledano",
+      "age": 22,
+      "hometown": {
+        "@type": "schema:City",
+        "name": "Madrid"
+      },
+      "almaMater": {
+        "@type": "schema:CollegeOrUniversity",
+        "name": "Universidad Politécnica de Madrid"
+      },
+      "parents": ["ex:JavierCaleroParent", "ex:SusanaToledanoParent"],
+      "subjects": ["ex:IngenieriaDelSoftwareII", "ex:Nanotecnologia"]
+    },
+    {
+      "@id": "ex:JavierCaleroParent",
+      "@type": "schema:Person",
+      "name": "Javier"
+    },
+    {
+      "@id": "ex:SusanaToledanoParent",
+      "@type": "schema:Person",
+      "name": "Susana Toledano"
+    },
+    {
+      "@id": "ex:IngenieriaDelSoftwareII",
+      "@type": "schema:Course",
+      "name": "Ingeniería del Software II",
+      "teachers": ["ex:JoseACalvoManzanoVillalon"],
+      "description": "Asignatura centrada en aplicar aspectos de gestión al desarrollo de software mediante un proyecto en el que se aplican conocimientos previos y propios de la materia.",
+      "credits": 6,
+      "courseYear": 4,
+      "semester": 7,
+      "degreeProgram": "Grado en Ingeniería Informática y Doble Grado en Ingeniería Informática y ADE"
+    },
+    {
+      "@id": "ex:JoseACalvoManzanoVillalon",
+      "@type": "schema:Person",
+      "name": "Jose A. Calvo-Manzano Villalón"
+    },
+    {
+      "@id": "ex:Nanotecnologia",
+      "@type": "schema:Course",
+      "name": "Nanotecnología",
+      "teachers": ["ex:MariaEstibalizMartinezIzquierdo"],
+      "description": "Asignatura introductoria sobre investigaciones y aplicaciones de la nanotecnología en campos como el biomimetismo y la fabricación y caracterización de nuevos materiales."
+    },
+    {
+      "@id": "ex:MariaEstibalizMartinezIzquierdo",
+      "@type": "schema:Person",
+      "name": "Martínez Izquierdo, M. Estíbaliz"
+    }
+  ]
+}
