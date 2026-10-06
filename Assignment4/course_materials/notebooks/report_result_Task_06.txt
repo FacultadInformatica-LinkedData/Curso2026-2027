@@ -1,21 +1,7 @@
 TASK 6.1 OK
 TASK 6.2 OK
 TASK 6.3 OK
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Raul> <http://www.w3.org/2000/01/rdf-schema#label> "Raúl"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Raul> <http://oeg.fi.upm.es/def/people#hasHomePage> "http://oeg.fi.upm.es"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://www.w3.org/2000/01/rdf-schema#label> "Juan"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://oeg.fi.upm.es/def/people#hasName> "Juan Cano de Benito"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Sven> <http://www.w3.org/2000/01/rdf-schema#label> "Sven"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR IN TASK 6.4
 TASK 6.4 OK
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://xmlns.com/foaf/0.1/givenName> "Juan"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://xmlns.com/foaf/0.1/familyName> "Cano de Benito"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Juan needs foaf:mbox with juan.cano@upm.es
-ERROR IN TASK 6.5
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://xmlns.com/foaf/0.1/givenName> "Juan"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Missing statement: <http://oeg.fi.upm.es/resource/person/Juan> <http://xmlns.com/foaf/0.1/familyName> "Cano de Benito"^^<http://www.w3.org/2001/XMLSchema#string>
-ERROR: Juan needs foaf:mbox with juan.cano@upm.es
-ERROR IN TASK 6.5
 TASK 6.5 OK
 TASK 6.6 OK
 TASK 6.7 OK
