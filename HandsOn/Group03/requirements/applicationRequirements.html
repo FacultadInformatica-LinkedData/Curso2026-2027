@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application requirements – BiciMAD Explorer</title>
+<style>
+  :root { --ink:#1f2a33; --muted:#5b6770; --line:#d5dbe0; --accent:#0b6e69; --bg-soft:#f3f6f7; }
+  body { font-family:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.55;
+         max-width:56rem; margin:0 auto; padding:2rem 1.25rem 4rem; background:#fff; }
+  h1 { font-size:2rem; margin-bottom:.25rem; }
+  h2 { font-size:1.4rem; margin-top:2.5rem; border-bottom:2px solid var(--accent); padding-bottom:.2rem; }
+  h3 { font-size:1.1rem; margin-top:1.8rem; }
+  p.lead { color:var(--muted); margin-top:0; }
+  a { color:var(--accent); }
+  .table-wrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:.45rem .6rem; text-align:left; vertical-align:top; }
+  th { background:var(--bg-soft); }
+  figure { margin:1.2rem 0; }
+  figure img { max-width:100%; border:1px solid var(--line); border-radius:6px; }
+  figcaption { color:var(--muted); font-size:.9rem; margin-top:.4rem; }
+  .note { border-left:4px solid var(--accent); background:var(--bg-soft); padding:.6rem .9rem; margin:1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>Application requirements</h1>
+<p class="lead">BiciMAD Explorer – finding and understanding Madrid's public bike stations through linked data.</p>
+
+<h2>1. Overview</h2>
+<p>BiciMAD Explorer is a web application that helps people use Madrid's public bike sharing service (BiciMAD)
+in relation to the places they actually care about. Instead of browsing a list of 631 stations, users search
+for a place (a museum, a monument, a metro station, a square) and the application shows the BiciMAD
+stations around it, together with contextual information about each station and its surroundings.</p>
+<p>None of these features can be built with the BiciMAD CSV alone: the dataset only contains station names,
+addresses, coordinates and dock counts. The value of the application comes from linking the stations with
+external datasets (places of interest and districts).</p>
+
+<h2>2. Target users</h2>
+<p>Tourists and residents who want to know where to pick up or leave a bike when visiting a specific place,
+and what else is near a station.</p>
+
+<h2>3. Data sources</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>Dataset</th><th>Information used</th><th>How it is linked to the stations</th></tr>
+  <tr>
+    <td><strong>BiciMAD stations</strong> (our dataset, datos.madrid.es / EMT Madrid)</td>
+    <td>Station number, name, address, coordinates, number of docks, status</td>
+    <td>Main dataset</td>
+  </tr>
+  <tr>
+    <td><strong>Wikidata</strong></td>
+    <td>Places of interest in Madrid: label, type, description, image, coordinates, and a few facts
+      (e.g. inception, architect)</td>
+    <td>By distance between coordinates (stations near a place and places near a station), and by the landmark
+      part of the station name (e.g. station <em>283 - Museo Nacional del Prado</em> → Museo del Prado)</td>
+  </tr>
+  <tr>
+    <td><strong>Districts and neighbourhoods of Madrid</strong> (datos.madrid.es)</td>
+    <td>Names, codes and boundaries of the 21 districts and their neighbourhoods</td>
+    <td>Point in polygon: each station is assigned to the district and neighbourhood whose boundary contains its
+      coordinates. Alternatively, the latest version of the BiciMAD dataset already includes district and
+      neighbourhood codes for each station.</td>
+  </tr>
+</table>
+</div>
+
+<h3>Places of interest</h3>
+<p>The application only considers places of interest of the following types in Wikidata: museums, monuments,
+churches and other historic buildings, squares, parks and gardens, and metro and train stations. These are
+places that people typically travel to by bike and that are well covered in Wikidata. Businesses such as
+restaurants or shops are not included.</p>
+
+<h3>Distances</h3>
+<p>All distances are straight-line distances computed from the coordinates of the station and of the place.
+They do not consider the street network or the slope of the streets; for the short distances used in the
+application (up to 1 km) this is enough to find the nearest stations.</p>
+
+<h2>4. Functional requirements</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>ID</th><th>Requirement</th><th>User interface</th></tr>
+  <tr><td>FR1</td><td>The user can search by station name, address or place of interest in a single search box.</td><td>Search box in the top bar (Figures 1 and 2)</td></tr>
+  <tr><td>FR2</td><td>Given a place of interest, the application shows on a map and in a list the stations within a selectable radius (300 m, 500 m, 1 km), ordered by distance.</td><td>Map and search view (Figure 1)</td></tr>
+  <tr><td>FR3</td><td>The user can filter stations by status (in service or not) and by minimum number of docks.</td><td>Filter chips in the side panel (Figure 1)</td></tr>
+  <tr><td>FR4</td><td>The user can open the detail of a station, which shows the data from the BiciMAD dataset (address, docks, status, coordinates).</td><td>“Station” block of the detail panel (Figure 2)</td></tr>
+  <tr><td>FR5</td><td>The station detail shows the district and neighbourhood where the station is located.</td><td>“Location” block of the detail panel (Figure 2)</td></tr>
+  <tr><td>FR6</td><td>If the station is named after a landmark, the station detail shows information about that landmark obtained from Wikidata, with a link to its Wikidata page.</td><td>“Named after” block of the detail panel (Figure 2)</td></tr>
+  <tr><td>FR7</td><td>The station detail lists the nearest places of interest and the nearest other stations, with their distances.</td><td>“Nearby places” and “Nearest stations” blocks of the detail panel (Figure 2)</td></tr>
+  <tr><td>FR8</td><td>Every piece of information displayed indicates its source (BiciMAD dataset, Wikidata or datos.madrid.es).</td><td>Coloured source labels (Figures 1 and 2)</td></tr>
+</table>
+</div>
+
+<h2>5. User interface</h2>
+<p>The application has a single main view: an interactive map with a search box that is always visible in the
+top bar. Searching for a place shows the nearby stations in a side panel; selecting a station opens its
+detail panel.</p>
+<p>Each block of information carries a small coloured label with its source: green for the BiciMAD dataset,
+blue for Wikidata and orange for datos.madrid.es. This makes visible which information comes from
+linking our dataset with other datasets.</p>
+<div class="note">In the mock-ups, station names, addresses, docks, coordinates and distances between stations are
+real values from our CSV file. The positions of the places of interest and the district and neighbourhood of
+the station are approximate. The street map is only a sketch; the real application will use an interactive
+OpenStreetMap-based map.</div>
+
+<h3>5.1 Map and search view</h3>
+<figure>
+  <img src="mockups/mockup-1-map-search.png" alt="Map and search view: stations within 500 m of Museo del Prado">
+  <figcaption>Figure 1. Stations within 500 m of the Museo del Prado.</figcaption>
+</figure>
+<p>This is the start view of the application. The map shows all BiciMAD stations and, optionally, places of
+interest from Wikidata (blue diamonds). When the user searches for a place, the side panel shows:</p>
+<ul>
+  <li>A card with the place found in Wikidata (name, type, district).</li>
+  <li>Radius selector (300 m, 500 m, 1 km) and filter chips (only in service, 20+ docks, show places).</li>
+  <li>The list of stations within the radius, ordered by distance, with their number of docks and status.</li>
+</ul>
+<p>On the map, the search radius is drawn around the place, stations inside the radius are highlighted and the
+rest are faded. Clicking a station in the list or on the map opens the station detail.</p>
+
+<h3>5.2 Station detail view</h3>
+<figure>
+  <img src="mockups/mockup-2-station-detail.png" alt="Station detail view for station 283 - Museo Nacional del Prado">
+  <figcaption>Figure 2. Detail of station 283 - Museo Nacional del Prado.</figcaption>
+</figure>
+<p>The detail panel opens on the right and the map centres on the selected station. The panel combines
+information from the three data sources:</p>
+<ul>
+  <li><strong>Station</strong> (BiciMAD dataset): address, docks, coordinates and status.</li>
+  <li><strong>Location</strong> (datos.madrid.es): district and neighbourhood.</li>
+  <li><strong>Named after</strong> (Wikidata): the landmark the station is named after, with image, short description,
+    selected facts and a link to its Wikidata page. This block is only shown for stations whose name refers to a
+    landmark.</li>
+  <li><strong>Nearby places</strong> (Wikidata): places of interest near the station with their distance.</li>
+  <li><strong>Nearest stations</strong> (BiciMAD dataset): alternative stations in case this one is full or empty.</li>
+</ul>
+
+<h3>5.3 Example interaction</h3>
+<p>A tourist visiting the Prado:</p>
+<ol>
+  <li>The user types “Museo del Prado” in the search box and selects the place suggested from Wikidata.</li>
+  <li>The map zooms to the museum and shows the 7 stations within 500 m; the closest one is
+    <em>68 - Espalter - Ruiz de Alarcón</em>, at 130 m.</li>
+  <li>The user opens station <em>283 - Museo Nacional del Prado</em> and sees that it has 23 docks, that it is in
+    the Jerónimos neighbourhood, and that San Jerónimo el Real and the Thyssen-Bornemisza museum are also nearby.</li>
+</ol>
+
+<h2>6. Non-functional requirements</h2>
+<ul>
+  <li>The application is a web application usable in desktop and mobile browsers.</li>
+  <li>The map is an interactive web map based on OpenStreetMap.</li>
+  <li>The data displayed is obtained from the RDF generated from our dataset and its links, queried with SPARQL.</li>
+  <li>The sources and licenses of all datasets used are credited in the application (CC BY 4.0 for the Madrid
+    datasets, CC0 for Wikidata, ODbL for OpenStreetMap).</li>
+</ul>
+
+</body>
+</html>

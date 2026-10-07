@@ -1,0 +1,82 @@
+@prefix : <http://smartcity.linkeddata.es/bicis/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://smartcity.linkeddata.es/bicis/ontology#> a owl:Ontology ;
+    rdfs:label "Bicycle Parking Ontology for Madrid" ;
+    rdfs:comment "Ontology developed for the semantic representation of bicycle parking spots in Madrid." ;
+    owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+:BicycleParking a owl:Class ;
+    rdfs:label "Bicycle Parking" ;
+    rdfs:comment "A public fixture or designated space for parking bicycles." .
+
+:District a owl:Class ;
+    rdfs:label "District" ;
+    rdfs:comment "An administrative division of the city, linkable to external knowledge bases like Wikidata." .
+
+:Neighborhood a owl:Class ;
+    rdfs:label "Neighborhood" ;
+    rdfs:comment "A territorial sub-division of an administrative district." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:inDistrict a owl:ObjectProperty ;
+    rdfs:label "in district" ;
+    rdfs:comment "Relates a bicycle parking facility or neighborhood to its administrative district." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range :District .
+
+:inNeighborhood a owl:ObjectProperty ;
+    rdfs:label "in neighborhood" ;
+    rdfs:comment "Relates a bicycle parking facility to its neighborhood." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range :Neighborhood .
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:id a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:comment "Unique municipal inventory identifier." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:string .
+
+:hasModel a owl:DatatypeProperty ;
+    rdfs:label "has model" ;
+    rdfs:comment "The commercial or structural design model of the bike rack." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:string .
+
+:hasCapacity a owl:DatatypeProperty ;
+    rdfs:label "has capacity" ;
+    rdfs:comment "The total count of bicycle spaces provided by the rack fixture." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:integer .
+
+:streetAddress a owl:DatatypeProperty ;
+    rdfs:label "street address" ;
+    rdfs:comment "The full street address where the parking stand is located." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:string .
+
+:latitude a owl:DatatypeProperty ;
+    rdfs:label "latitude" ;
+    rdfs:comment "WGS84 geographic coordinate latitude." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:decimal .
+
+:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude" ;
+    rdfs:comment "WGS84 geographic coordinate longitude." ;
+    rdfs:domain :BicycleParking ;
+    rdfs:range xsd:decimal .

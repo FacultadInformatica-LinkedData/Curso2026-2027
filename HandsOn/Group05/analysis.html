@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>analysis.html – Hands-On 2 (Group05)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --ink:#0f172a; --muted:#475569; --line:#e5e7eb; --ok:#0b7; --warn:#c80; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:var(--ink)}
+    h1,h2{line-height:1.25}
+    h1{margin-bottom:.25rem}
+    h2{margin-top:2rem}
+    .grid{display:grid;gap:1rem}
+    .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{border:1px solid var(--line);border-radius:14px;padding:1rem}
+    .mini{font-size:.95rem;color:var(--muted)}
+    table{width:100%;border-collapse:collapse;font-size:.95rem}
+    th,td{border:1px solid var(--line);padding:.5rem .6rem;vertical-align:top}
+    th{background:#fafafa;text-align:left}
+    code,kbd{background:#f6f7f9;border:1px solid var(--line);border-radius:6px;padding:.1rem .35rem}
+    .ok{color:var(--ok)} .warn{color:var(--warn)}
+    ul{margin:.25rem 0 .75rem 1.25rem}
+    .mono{font-family:ui-monospace,SFMono-Regular,Consolas,Monaco,monospace}
+    details{border:1px dashed var(--line);border-radius:10px;padding:.6rem 1rem;margin:.5rem 0}
+    summary{cursor:pointer;font-weight:600}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hands-On 2 – Análisis & Estrategia</h1>
+  <p class="mini">Group05 · Dataset: Centros Deportivos Municipales (Polideportivos) de Madrid · Formato original: CSV</p>
+</header>
+
+<section class="card">
+  <h2>1. Análisis del conjunto de datos</h2>
+
+  <h3>1.1. Resumen</h3>
+  <ul>
+    <li><strong>Nº de registros:</strong> ~70 instalaciones deportivas</li>
+    <li><strong>Nº de columnas:</strong> 32</li>
+    <li><strong>Ámbito:</strong> Ciudad de Madrid</li>
+    <li><strong>Coordenadas:</strong> Latitud entre <code>40.3100</code> y <code>40.5000</code>; Longitud entre <code>-3.8300</code> y <code>-3.5800</code> (WGS84)</li>
+    <li><strong>Ubicabilidad:</strong> 100% de registros georreferenciados con coordenadas WGS84 y UTM</li>
+    <li><strong>Accesibilidad:</strong> Información codificada sobre movilidad reducida en la columna <code>ACCESIBILIDAD</code></li>
+  </ul>
+
+  <h3>1.2. Esquema (principales columnas)</h3>
+  <table>
+    <thead>
+      <tr><th>Columna</th><th>Tipo</th><th>Descripción / Uso RDF</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>PK</code></td><td>entero</td><td>Identificador único numérico de la instalación.</td></tr>
+      <tr><td><code>NOMBRE</code></td><td>texto</td><td>Nombre oficial del polideportivo.</td></tr>
+      <tr><td><code>DESCRIPCION-ENTIDAD</code>, <code>DESCRIPCION</code></td><td>texto</td><td>Descripción libre y tipo de gestión del centro.</td></tr>
+      <tr><td><code>HORARIO</code></td><td>texto</td><td>Franja horaria y días de apertura.</td></tr>
+      <tr><td><code>EQUIPAMIENTO</code></td><td>texto</td><td>Servicios e instalaciones (piscinas, campos, gimnasios, pádel).</td></tr>
+      <tr><td><code>TRANSPORTE</code></td><td>texto</td><td>Acceso mediante transporte público (Metro, EMT, Cercanías).</td></tr>
+      <tr><td><code>ACCESIBILIDAD</code></td><td>texto</td><td>Códigos de accesibilidad adaptada ("1", "1,6", etc.).</td></tr>
+      <tr><td><code>CONTENT-URL</code></td><td>URL</td><td>Página oficial del recurso en <code>madrid.es</code>.</td></tr>
+      <tr><td><code>CLASE-VIAL</code>, <code>NOMBRE-VIA</code>, <code>NUM</code>, <code>PLANTA</code>, etc.</td><td>mixto</td><td>Dirección postal física.</td></tr>
+      <tr><td><code>LOCALIDAD</code>, <code>PROVINCIA</code>, <code>CODIGO-POSTAL</code></td><td>texto/entero</td><td>Ubicación administrativa y código postal (CP 280XX).</td></tr>
+      <tr><td><code>COD-DISTRITO</code>, <code>DISTRITO</code>, <code>COD-BARRIO</code>, <code>BARRIO</code></td><td>mixto</td><td>Identificadores de distrito y barrio.</td></tr>
+      <tr><td><code>COORDENADA-X</code>, <code>COORDENADA-Y</code></td><td>entero</td><td>Coordenadas UTM ETRS89.</td></tr>
+      <tr><td><code>LATITUD</code>, <code>LONGITUD</code></td><td>decimal</td><td>Coordenadas geográficas decimales (WGS84).</td></tr>
+      <tr><td><code>TELEFONO</code>, <code>EMAIL</code></td><td>texto</td><td>Datos de contacto directo.</td></tr>
+    </tbody>
+  </table>
+
+  <details>
+    <summary>Lista de distritos detectados</summary>
+    <div class="mono">ARGANZUELA · BARAJAS · CARABANCHEL · CENTRO · CHAMARTIN · CHAMBERI · CIUDAD LINEAL ·
+    FUENCARRAL-EL PARDO · HORTALEZA · LATINA · MONCLOA-ARAVACA · MORATALAZ · PUENTE DE VALLECAS ·
+    RETIRO · SALAMANCA · SAN BLAS-CANILLEJAS · TETUAN · USERA · VICALVARO · VILLA DE VALLECAS · VILLAVERDE</div>
+  </details>
+
+  <h3>1.3. Calidad de datos (rápida)</h3>
+  <ul>
+    <li><strong>Geometría:</strong> Filas completas con latitud y longitud decimales válidas.</li>
+    <li><strong>Equipamientos:</strong> Presencia de términos clave para filtrado por disciplinas ("piscina", "pádel", "gimnasio").</li>
+    <li><strong>Direcciones:</strong> Estructuración adecuada para modelado mediante <em>schema:PostalAddress</em> o <em>vCard</em>.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>2. Análisis de licencia de la fuente</h2>
+  <p>El dataset procede del <strong>Ayuntamiento de Madrid</strong> (vía Portal de Datos Abiertos). Su reutilización se rige por las condiciones de la administración pública municipal.</p>
+
+  <h3>2.1. Reutilización por nuestro grupo</h3>
+  <ul>
+    <li><strong>Atribución:</strong> Citar “Ayuntamiento de Madrid – Portal de Datos Abiertos” como fuente original.</li>
+    <li><strong>Integridad:</strong> Garantizar el procesamiento fiel de la información al generar los grafos RDF.</li>
+  </ul>
+
+  <h3>2.2. Licencia propuesta para los datos generados</h3>
+  <p>Para los datos RDF y la ontología generados por nuestro grupo, utilizamos la licencia <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>.</p>
+</section>
+
+<section class="card">
+  <h2>3. Estrategia de nombrado de recursos (URIs)</h2>
+
+  <h3>3.1. Dominio y rutas</h3>
+  <ul>
+    <li><strong>Dominio:</strong> <code>http://smartcity.linkeddata.es/sports/</code></li>
+    <li><strong>Espacios:</strong> 
+      <code>/ontology/</code> para vocabulario (clases y propiedades) y 
+      <code>/resource/</code> para instancias.</li>
+  </ul>
+
+  <h3>3.2. Patrones</h3>
+  <table>
+    <thead><tr><th>Recurso</th><th>Patrón de URI</th><th>Ejemplo</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Ontología (clase)</td>
+        <td><code>http://smartcity.linkeddata.es/sports/ontology/SportsCenter</code></td>
+        <td><code>.../ontology/SportsCenter</code>, <code>.../ontology/District</code></td>
+      </tr>
+      <tr>
+        <td>Ontología (propiedad)</td>
+        <td><code>http://smartcity.linkeddata.es/sports/ontology/locatedInDistrict</code></td>
+        <td><code>.../ontology/locatedInDistrict</code>, <code>.../ontology/pk</code></td>
+      </tr>
+      <tr>
+        <td>Instancia polideportivo</td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}</code></td>
+        <td><code>.../resource/SportsCenter/184270</code></td>
+      </tr>
+      <tr>
+        <td>Instancia distrito</td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/District/{slug-distrito}</code></td>
+        <td><code>.../resource/District/arganzuela</code></td>
+      </tr>
+      <tr>
+        <td>Instancia barrio</td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/Barrio/{slug-barrio}</code></td>
+        <td><code>.../resource/Barrio/chopera</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="mini">Notas: <em>{PK}</em> toma el identificador numérico municipal del CSV; los <em>slugs</em> se generan en minúsculas, sin acentos ni espacios.</p>
+
+  <h3>3.3. Negociación de contenido</h3>
+  <p>Servir HTML por defecto para navegadores web y formatos RDF (Turtle/JSON-LD) mediante negociación de contenido HTTP para procesadores semánticos.</p>
+</section>
+
+<section class="card">
+  <h2>4. Ontología (bosquejo para Hands-On 2)</h2>
+  <p>Nuestra ontología ligera está codificada en sintaxis Turtle utilizando el prefijo <code>:</code> vinculado a <code>http://smartcity.linkeddata.es/sports/ontology/</code>.</p>
+  <div class="grid cols-2">
+    <div>
+      <h3>Clases</h3>
+      <ul>
+        <li><code>:SportsCenter</code></li>
+        <li><code>:District</code></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Propiedades (ejemplos)</h3>
+      <ul>
+        <li><code>:locatedInDistrict</code> (dom: <code>SportsCenter</code>, ran: <code>District</code>)</li>
+        <li><code>:pk</code> (dom: <code>SportsCenter</code>, ran: <code>xsd:integer</code>)</li>
+        <li><code>:equipmentDescription</code>, <code>:accessibilityInfo</code>, <code>:transportInfo</code> (ran: <code>xsd:string</code>)</li>
+        <li><code>:telephone</code>, <code>:email</code> (ran: <code>xsd:string</code>)</li>
+        <li><code>geo:lat</code>, <code>geo:long</code> (ran: <code>xsd:float</code>)</li>
+      </ul>
+    </div>
+  </div>
+  <p>Para maximizar la interoperabilidad semántica, reutilizamos vocabularios estándar de la W3C como WGS84 para geolocalización.</p>
+</section>
+
+<section class="card">
+  <h2>5. Trazabilidad</h2>
+  <ul>
+    <li><strong>Fuente original:</strong> Fichero CSV "Centros deportivos municipales (polideportivos) de Madrid".</li>
+    <li><strong>Extracción/Análisis:</strong> Clasificación por distritos, inspección de equipamientos deportivos y rangos geográficos.</li>
+  </ul>
+</section>
+
+<footer class="mini" style="margin-top:2rem">
+  <p>Hands-On 2 · Group05 · Universidad Politécnica de Madrid</p>
+</footer>
+
+</body>
+</html>

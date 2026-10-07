@@ -1,0 +1,35 @@
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://group10.org/air-quality-2026/resources/stations/station-28102001>
+    a ns:Station ;
+    rdfs:label "Monitoring station 1"@en ;
+    ns:hasStationCode "1"^^xsd:integer ;
+    ns:locatedIn <https://group10.org/air-quality-2026/resources/municipalities/municipality-102> .
+
+<https://group10.org/air-quality-2026/resources/municipalities/municipality-102>
+    a ns:Municipality ;
+    rdfs:label "Municipality 102"@en .
+
+<https://group10.org/air-quality-2026/resources/measurement-types/magnitude-81>
+    a ns:MeasurementType ;
+    rdfs:label "Measurement type 81"@en ;
+    ns:hasMeasurementCode "81"^^xsd:integer .
+
+<https://group10.org/air-quality-2026/resources/sample-points/28102001_81_89>
+    a ns:SamplePoint ;
+    rdfs:label "Sampling point 28102001_81_89"@en ;
+    ns:hasStation <https://group10.org/air-quality-2026/resources/stations/station-28102001> ;
+    ns:hasMeasurementType <https://group10.org/air-quality-2026/resources/measurement-types/magnitude-81> ;
+    ns:hasTechnique "89"^^xsd:integer .
+
+<https://group10.org/air-quality-2026/resources/observations/28102001-81-20260101-h01>
+    a ns:Obervation ;
+    rdfs:label "Hourly observation for 2026-01-01, hour 01"@en ;
+    ns:hasSamplePoint <https://group10.org/air-quality-2026/resources/sample-points/28102001_81_89> ;
+    ns:hasYear "2026"^^xsd:integer ;
+    ns:hasMonth "1"^^xsd:integer ;
+    ns:hasDay "1"^^xsd:integer ;
+    ns:hasValue "0.6"^^xsd:decimal ;
+    ns:isValidated "true"^^xsd:boolean .

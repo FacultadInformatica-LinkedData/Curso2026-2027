@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>analysis</title>
+</head>
+<body>
+  <h1> Dataset </h1>
+  <p> Description: The dataset <em>Red de Calidad del Aire. Datos meteorológicos
+        horarios desde 2020</em> is published by the Community of Madrid
+        Open Data Portal. The selected resource is <code>2026.csv</code>,
+        which contains hourly meteorological measurements collected by
+        the region's air-quality monitoring stations. The selected dataset has 47628 rows and 56 columns.</p>
+
+  <h1> Licensing </h1>
+  <p> License: Creative Commons Attribution <a href="https://creativecommons.org/licenses/by/4.0/legalcode.es"> link </a>.</p>
+  <p> Publisher: <a href="https://datos.comunidad.madrid/catalogos/#/dataset/calidad_aire_datos_meteo_historico/?view=info"> Comunidad de Madrid </a>.</p>
+  <p> Rightholder: Comunidad de Madrid.</p>
+  <p> The generated dataset will also use the CC BY licence, crediting the Community of Madrid as the original source and acknowledging any modifications made.</p>
+
+  <h1>Data fields</h1>
+  <p> · hxx: floating point numeric value. Includes the value measured for hour xx.</p>
+  <p> · vxx: includes whether the data for hour xx is validated (V) or not (N). 128 entries have N, 47439 have V</p>
+  <p> · provincia: includes the number for the province (Madrid). All entries use value 28.</p>
+  <p> · municipio: includes the number identifying the municipality in a province. Values from 5 to 180. With every value appearing having same frequency as every other value appearing.</p>
+  <p> · estacion: includes the number identifying the station. Values from 1 to 14.</p>
+  <p> · magnitud: includes the number identifying type of magnitude measured. Values from 81 to 89. Same frequency for all appearances.</p>
+  <p> · punto_muestreo: includes the full number that identifies province, municipality, station, magnitude and technique for the measurement.</p>
+  <p> · ano: year of the measurement.</p>
+  <p> · mes: month of the measurement.</p>
+  <p> · dia: day of the measurement.</p>
+
+  <h1> · Resource naming strategy </h1>
+  <p> · Domain: https://group10.org/air-quality-2026</p>
+  <p> · Classes: /ontology/classes/ (e.g., Municipality, Pronvince)</p>
+  <p> · Object and datatype properties: /ontology/properties/ (e.g., hasValue)</p>
+  <p> · Monitoring station individuals: /resources/stations/ </p>
+  <p> · Municipality individuals: /resources/municipalities/ </p>
+  <p> · Measurement type individuals: /resources/measurements/ </p>
+  <p> · Observation individuals: /resources/observations/ </p>
+  <p> This strategy ensures that each resource has a unique and consistent URI, that individuals belonging to different classes use separate paths, and that property URIs are defined independently of class URIs.</p>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analysis - Group 08</title>
+<style>
+ body{font-family:system-ui,sans-serif;max-width:1000px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#222}
+ table{border-collapse:collapse;width:100%;margin:1rem 0}
+ th,td{border:1px solid #ccc;padding:.35rem .55rem;text-align:left;vertical-align:top;font-size:.9rem}
+ th{background:#f0f3f7} td.num{text-align:right;white-space:nowrap}
+ code{background:#f3f3f3;padding:0 .25rem} h2{border-bottom:2px solid #dde;padding-bottom:.2rem;margin-top:2.2rem}
+ .note{background:#fff8e1;border-left:4px solid #e0a800;padding:.5rem .8rem;margin:1rem 0}
+</style>
+</head>
+<body>
+<h1>Analysis of the data sources: Madrid sports facilities</h1>
+<p>Group 08 &middot; Hands-on 2. This document contains (1) the analysis of the data, (2) the analysis of the licensing, and (3) the resource naming strategy. The datasets are the three CSV files in <code>csv/</code>, all published on the Madrid City Council open data portal.</p>
+
+<h2>1. Analysis of the data sets</h2>
+
+<h3>1.1 Overview</h3>
+<table>
+<tr><th>File</th><th>Dataset (portal)</th><th>Rows</th><th>Columns</th><th>Size</th></tr>
+<tr><td><code>instalaciones_deportivas_basicas.csv</code></td><td><a href="https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas">Deportes. Instalaciones deportivas básicas municipales</a></td><td class="num">607</td><td class="num">32</td><td class="num">351 KB</td></tr>
+<tr><td><code>polideportivos.csv</code></td><td><a href="https://datos.madrid.es/dataset/200186-0-polideportivos">Deportes. Centros deportivos municipales (polideportivos)</a></td><td class="num">82</td><td class="num">32</td><td class="num">158 KB</td></tr>
+<tr><td><code>piscinas_publicas.csv</code></td><td><a href="https://datos.madrid.es/dataset/210227-0-piscinas-publicas">Deportes: Piscinas municipales en la ciudad de Madrid</a></td><td class="num">56</td><td class="num">32</td><td class="num">114 KB</td></tr>
+</table>
+<p>Format: CSV, semicolon-separated, ISO-8859-1 (Latin-1) encoding, one header row. All three files have exactly the same 32 columns, because they come from the same generic structure the City Council uses for all datasets coming from <code>madrid.es</code>. In total there are 745 rows. The portal updates the datasets daily; our copies are the ones downloaded in October 2026.</p>
+<p>Each row is one facility, with its own <code>PK</code>. The <code>PK</code> is unique in each file (607, 82 and 56 distinct values). The basic facilities are outdoor, single-sport spaces (football pitches, futsal courts, skating rinks, petanque courts, calisthenics areas...) and are usually free to use. The sports centres (polideportivos) are large multi-sport complexes. The swimming pools file lists municipal centres that have pools.</p>
+
+<h3>1.2 Schema</h3>
+<p>The description of each column comes from the portal documentation (<a href="https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas/resource/200215-5-instalaciones-deportivas/download/200215-5-instalaciones-deportivas.pdf">"Equipamientos. Contenido y estructura del fichero"</a>, updated May 2019). The last three columns show how many rows have a non-empty value.</p>
+<table>
+<tr><th>Column</th><th>Type</th><th>Meaning</th><th>Basic (607)</th><th>Centres (82)</th><th>Pools (56)</th></tr>
+<tr><td><code>PK</code></td><td>integer code</td><td>Internal key in the municipal web (integer)</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>NOMBRE</code></td><td>text</td><td>Name of the facility</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>DESCRIPCION-ENTIDAD</code></td><td>text</td><td>Not described in the portal documentation (free text, almost always empty)</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><code>HORARIO</code></td><td>text</td><td>Opening hours (free text, HTML removed)</td><td class="num">9</td><td class="num">82</td><td class="num">55</td></tr>
+<tr><td><code>EQUIPAMIENTO</code></td><td>text</td><td>Internal spaces and equipment (free text, HTML removed)</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>TRANSPORTE</code></td><td>text</td><td>Metro, bus and Renfe stations and lines (free text)</td><td class="num">604</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>DESCRIPCION</code></td><td>text</td><td>Additional information (free text)</td><td class="num">4</td><td class="num">10</td><td class="num">8</td></tr>
+<tr><td><code>ACCESIBILIDAD</code></td><td>code list (comma-separated)</td><td>Accessibility codes 0-6 (see 1.5)</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>CONTENT-URL</code></td><td>URL</td><td>URL of the facility page on madrid.es</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>NOMBRE-VIA</code></td><td>text</td><td>Street name</td><td class="num">601</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>CLASE-VIAL</code></td><td>text</td><td>Street type (calle, avenida, paseo...)</td><td class="num">600</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>TIPO-NUM</code></td><td>text</td><td>Number type: V, S/N or KM</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>NUM</code></td><td>text</td><td>Street number</td><td class="num">557</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>PLANTA</code></td><td>text</td><td>Floor</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><code>PUERTA</code></td><td>text</td><td>Door</td><td class="num">3</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><code>ESCALERAS</code></td><td>text</td><td>Staircase</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td><code>ORIENTACION</code></td><td>text</td><td>Descriptive details of the address (&quot;frente a&quot;, &quot;acceso por&quot;...)</td><td class="num">87</td><td class="num">6</td><td class="num">3</td></tr>
+<tr><td><code>LOCALIDAD</code></td><td>text</td><td>Locality (always Madrid)</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>PROVINCIA</code></td><td>text</td><td>Province (always Madrid)</td><td class="num">607</td><td class="num">81</td><td class="num">56</td></tr>
+<tr><td><code>CODIGO-POSTAL</code></td><td>integer code</td><td>Postal code</td><td class="num">580</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>COD-BARRIO</code></td><td>integer code</td><td>Neighbourhood code</td><td class="num">572</td><td class="num">80</td><td class="num">54</td></tr>
+<tr><td><code>BARRIO</code></td><td>text</td><td>Neighbourhood name</td><td class="num">581</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>COD-DISTRITO</code></td><td>integer code</td><td>District code</td><td class="num">575</td><td class="num">80</td><td class="num">54</td></tr>
+<tr><td><code>DISTRITO</code></td><td>text</td><td>District name</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>COORDENADA-X</code></td><td>integer (metres)</td><td>UTM zone 30 X, ETRS89</td><td class="num">600</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>COORDENADA-Y</code></td><td>integer (metres)</td><td>UTM zone 30 Y, ETRS89</td><td class="num">600</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>LATITUD</code></td><td>decimal (degrees)</td><td>Latitude, WGS84</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>LONGITUD</code></td><td>decimal (degrees)</td><td>Longitude, WGS84</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+<tr><td><code>TELEFONO</code></td><td>text</td><td>Phone</td><td class="num">14</td><td class="num">80</td><td class="num">55</td></tr>
+<tr><td><code>FAX</code></td><td>text</td><td>Fax</td><td class="num">0</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td><code>EMAIL</code></td><td>text</td><td>E-mail</td><td class="num">6</td><td class="num">79</td><td class="num">54</td></tr>
+<tr><td><code>TIPO</code></td><td>path string</td><td>Facility typology, as the last segment of a path</td><td class="num">607</td><td class="num">82</td><td class="num">56</td></tr>
+</table>
+<p>Observations on the schema:</p>
+<ul>
+ <li>Four columns (<code>HORARIO</code>, <code>EQUIPAMIENTO</code>, <code>TRANSPORTE</code>, <code>DESCRIPCION</code>) contain unstructured text, originally HTML with the tags removed. In the sports centres and pools the equipment text is long (about 815 characters on average in the centres file) and describes classes, surfaces and indoor and outdoor units. In the basic facilities it is a short phrase (about 58 characters), for example "Pista de fútbol sala. Acceso libre.".</li>
+ <li><code>PLANTA</code>, <code>ESCALERAS</code> and <code>FAX</code> are empty in the basic facilities; <code>PLANTA</code>, <code>PUERTA</code>, <code>ESCALERAS</code> are empty or almost empty in all files. They carry no information for our application.</li>
+ <li>The address is split into street type (<code>CLASE-VIAL</code>), street name, number type and number. The postal code, neighbourhood and district are given as codes and names.</li>
+ <li><code>LOCALIDAD</code> and <code>PROVINCIA</code> always contain "Madrid" (one centre has "Madrid" with different capitalisation and an empty province). They add no information per row.</li>
+ <li>Locations are given twice: UTM zone 30 (ETRS89) in <code>COORDENADA-X/Y</code> and WGS84 in <code>LATITUD/LONGITUD</code>. We will use the WGS84 pair for RDF.</li>
+ <li>The <code>TIPO</code> value is a path such as <code>/contenido/entidadesYorganismos/CentrosEspaciosDeporte/PistaFutbolSala</code>; only the last segment is meaningful.</li>
+</ul>
+
+<h3>1.3 Value ranges</h3>
+<table>
+<tr><th>Dataset</th><th>Latitude</th><th>Longitude</th><th>UTM X (m)</th><th>UTM Y (m)</th></tr>
+<tr><td>Basic municipal sports facilities</td><td class="num">40.3338 to 40.5352</td><td class="num">-3.7922 to -3.5575</td><td class="num">432,826 to 452,659</td><td class="num">4,465,039 to 4,487,462</td></tr><tr><td>Municipal sports centres</td><td class="num">40.3427 to 40.4981</td><td class="num">-3.7833 to -3.5877</td><td class="num">433,581 to 450,176</td><td class="num">4,466,022 to 4,483,276</td></tr><tr><td>Municipal swimming pools</td><td class="num">40.3462 to 40.4844</td><td class="num">-3.7833 to -3.5877</td><td class="num">433,581 to 450,176</td><td class="num">4,466,411 to 4,481,771</td></tr>
+</table>
+<p>All coordinates fall inside the municipality of Madrid (latitude about 40.33 to 40.54, longitude about -3.79 to -3.59), once the error described in section 1.8 is excluded. 21 districts, 119 neighbourhoods and 50 postal codes appear in the basic facilities; 21 districts, 64 neighbourhoods and 39 postal codes in the sports centres; 21 districts, 52 neighbourhoods and 39 postal codes in the pools. The values of <code>PK</code> range from 4852 to 50337915 in the basic facilities; they are internal identifiers, not consecutive.</p>
+
+<h3>1.4 Facility types</h3>
+<p>The <code>TIPO</code> column has 24 different values in the basic facilities, 15 in the sports centres and 13 in the pools file. They are mostly stable names of facility classes that we can turn into a controlled list.</p>
+<table>
+<tr><th>Type (last segment of <code>TIPO</code>)</th><th>Basic</th><th>Centres</th><th>Pools</th></tr>
+<tr><td><code>InstalacionesDeportivasBasicas</code></td><td class="num">182</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>CamposEstadiosFutbol</code></td><td class="num">97</td><td class="num">25</td><td class="num">12</td></tr>
+<tr><td><code>PistaFutbolSala</code></td><td class="num">75</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistasPatinaje</code></td><td class="num">68</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistaBolosPetancaCalvaChito</code></td><td class="num">63</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>Calistenia</code></td><td class="num">35</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistasTenisBadminton</code></td><td class="num">11</td><td class="num">8</td><td class="num">6</td></tr>
+<tr><td><code>PiscinaVerano</code></td><td class="num"></td><td class="num">14</td><td class="num">5</td></tr>
+<tr><td><code>TenisMesa</code></td><td class="num">3</td><td class="num"></td><td class="num">11</td></tr>
+<tr><td><code>PistasPadel</code></td><td class="num">8</td><td class="num">2</td><td class="num">2</td></tr>
+<tr><td><code>Pabellon</code></td><td class="num"></td><td class="num">8</td><td class="num">4</td></tr>
+<tr><td><code>CircuitoBMX</code></td><td class="num">10</td><td class="num">1</td><td class="num"></td></tr>
+<tr><td><code>CircuitoVida</code></td><td class="num">10</td><td class="num">1</td><td class="num"></td></tr>
+<tr><td><code>SalaCiclo</code></td><td class="num"></td><td class="num">5</td><td class="num">5</td></tr>
+<tr><td><code>Frontones</code></td><td class="num">8</td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><code>PistaVoleibol</code></td><td class="num">9</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>Sauna</code></td><td class="num"></td><td class="num">5</td><td class="num">3</td></tr>
+<tr><td><code>SalaMusculacion</code></td><td class="num"></td><td class="num">4</td><td class="num">3</td></tr>
+<tr><td><code>CuboGym</code></td><td class="num">1</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td><code>CircuitosFooting</code></td><td class="num">5</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>CamposHockey</code></td><td class="num">5</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistasAtletismo</code></td><td class="num">5</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>Embarcaderos</code></td><td class="num">3</td><td class="num">2</td><td class="num"></td></tr>
+<tr><td><code>CentrosEspaciosDeporte</code></td><td class="num">3</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>SalaArmas</code></td><td class="num"></td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td><code>CircuitosCiclismo</code></td><td class="num">2</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistasSquash</code></td><td class="num"></td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><code>PistaPickleball</code></td><td class="num">1</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>PistaPolideportiva</code></td><td class="num">1</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>CanchasBaloncesto</code></td><td class="num">1</td><td class="num"></td><td class="num"></td></tr>
+<tr><td><code>CamposGolf</code></td><td class="num">1</td><td class="num"></td><td class="num"></td></tr>
+</table>
+<p>In the sports centres and pools files the <code>TIPO</code> value is the type of one of the units inside the centre (for example football pitch or summer pool), not the type of the centre, so it cannot be used to classify those rows. The same centre appears with a type that depends on the file, which will need care when modelling.</p>
+
+<h3>1.5 Accessibility</h3>
+<p>The documentation defines <code>ACCESIBILIDAD</code> as a list of codes: <b>0</b> = not accessible, <b>1</b> = accessible, <b>2</b> = partially accessible for people with reduced mobility, <b>3</b> = no information on accessibility for people with reduced mobility, <b>4</b> = sign language, <b>5</b> = tactile paving, <b>6</b> = magnetic induction loop. Codes 0 to 3 describe mobility; codes 4 to 6 add features. In the data one cell can hold several codes separated by a comma, for example <code>1,5,6</code>.</p>
+<table>
+<tr><th>Dataset</th><th>Values in the file (value: number of rows)</th></tr>
+<tr><td>Basic municipal sports facilities</td><td><code>0</code>: 410, <code>2</code>: 152, <code>1</code>: 39, <code>3</code>: 6</td></tr><tr><td>Municipal sports centres</td><td><code>1</code>: 62, <code>1,5,6</code>: 6, <code>0</code>: 5, <code>1,5</code>: 3, <code>2</code>: 3, <code>2,4</code>: 1, <code>0,5,6</code>: 1, <code>2,5,6</code>: 1</td></tr><tr><td>Municipal swimming pools</td><td><code>1</code>: 42, <code>1,5,6</code>: 6, <code>1,5</code>: 3, <code>0</code>: 1, <code>2,4</code>: 1, <code>2,5,6</code>: 1, <code>2</code>: 1, <code>3</code>: 1</td></tr>
+</table>
+<p>In the basic facilities, 410 of 607 rows (67%) are marked as not accessible. The ontology will store the mobility level and the extra features separately.</p>
+
+<h3>1.6 Distribution by district</h3>
+<table>
+<tr><th>District</th><th>Basic</th><th>Centres</th><th>Pools</th></tr>
+<tr><td>HORTALEZA</td><td class="num">72</td><td class="num">3</td><td class="num">3</td></tr>
+<tr><td>USERA</td><td class="num">53</td><td class="num">4</td><td class="num">3</td></tr>
+<tr><td>FUENCARRAL-EL PARDO</td><td class="num">50</td><td class="num">5</td><td class="num">4</td></tr>
+<tr><td>CARABANCHEL</td><td class="num">46</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td>PUENTE DE VALLECAS</td><td class="num">41</td><td class="num">5</td><td class="num">4</td></tr>
+<tr><td>VILLA DE VALLECAS</td><td class="num">37</td><td class="num">3</td><td class="num">2</td></tr>
+<tr><td>LATINA</td><td class="num">35</td><td class="num">4</td><td class="num">3</td></tr>
+<tr><td>VILLAVERDE</td><td class="num">34</td><td class="num">5</td><td class="num">3</td></tr>
+<tr><td>CIUDAD LINEAL</td><td class="num">31</td><td class="num">4</td><td class="num">4</td></tr>
+<tr><td>MORATALAZ</td><td class="num">27</td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td>SAN BLAS-CANILLEJAS</td><td class="num">27</td><td class="num">4</td><td class="num">2</td></tr>
+<tr><td>BARAJAS</td><td class="num">24</td><td class="num">3</td><td class="num">1</td></tr>
+<tr><td>MONCLOA-ARAVACA</td><td class="num">23</td><td class="num">9</td><td class="num">5</td></tr>
+<tr><td>ARGANZUELA</td><td class="num">20</td><td class="num">5</td><td class="num">2</td></tr>
+<tr><td>CHAMARTIN</td><td class="num">16</td><td class="num">2</td><td class="num">2</td></tr>
+<tr><td>RETIRO</td><td class="num">13</td><td class="num">4</td><td class="num">1</td></tr>
+<tr><td>VICALVARO</td><td class="num">11</td><td class="num">2</td><td class="num">2</td></tr>
+<tr><td>TETUAN</td><td class="num">10</td><td class="num">5</td><td class="num">4</td></tr>
+<tr><td>CENTRO</td><td class="num">8</td><td class="num">4</td><td class="num">3</td></tr>
+<tr><td>SALAMANCA</td><td class="num">6</td><td class="num">3</td><td class="num">3</td></tr>
+<tr><td>CHAMBERI</td><td class="num">2</td><td class="num">3</td><td class="num">2</td></tr>
+</table>
+
+<h3>1.7 Relation between the files</h3>
+<ul>
+ <li><b>Basic facilities are disjoint from the others:</b> no <code>PK</code> in common with the sports centres or pools.</li>
+ <li><b>Pools and sports centres are largely the same entities:</b> 55 of the 56 <code>PK</code> values in the pools file also appear in the sports centres file, and 38 of those rows are completely identical. The remaining 17 differ in some columns, mainly <code>TIPO</code> and the text fields. Only 1 pool, <i>Club de Campo Villa de Madrid</i> (<code>PK 72028</code>), is not in the sports centres file. In the RDF we will therefore model one individual per <code>PK</code> and mark the centres that have a pool, instead of creating two individuals for the same place.</li>
+</ul>
+
+<h3>1.8 Data quality issues</h3>
+<table>
+<tr><th>Issue</th><th>Where</th><th>Treatment</th></tr>
+<tr><td>Wrong sign in the longitude: <code>3.6410178</code> instead of a negative value. The UTM X coordinate () confirms the point is in Madrid.</td><td>Basic facilities, <code>PK 50334831</code> (Instalación Deportiva Municipal Básica Parque Forestal Valdebebas Patinaje)</td><td>Correct the sign (or recompute from UTM) before generating RDF</td></tr>
+<tr><td>The district name column contains the literal text "DISTRITO" instead of a district. <code>COD-DISTRITO</code> and <code>BARRIO</code> are empty in the same rows. These facilities are mostly located in parks and squares (for example Casa de Campo, Pradolongo, Cerro Almodóvar).</td><td>Basic facilities, 21 rows</td><td>Do not create a district for these rows; assign it later from coordinates if needed</td></tr>
+<tr><td><code>COD-DISTRITO</code> missing (32 rows in total, 11 of them with a real district name)</td><td>Basic facilities</td><td>Derive the code from the district name</td></tr>
+<tr><td><code>COD-BARRIO</code> is the number of the neighbourhood inside its district, not a city-wide code: the same value (1 to 9) appears in every district. In a few cases the same district and number carry two spellings or two different names (for example <code>LA CONCEPCION</code> and <code>CONCEPCION</code>, <code>ANGELES</code> and <code>LOS ANGELES</code>).</td><td>All</td><td>Build the neighbourhood URI from district code and number (see 3.3); keep the name in the source spelling</td></tr>
+<tr><td>Three rows have a <code>COD-DISTRITO</code> that does not match the district name: <code>PK 50315352</code> (code 2, CENTRO), <code>PK 5567512</code> (code 1, USERA) and <code>PK 11350896</code> (code 19, VILLA DE VALLECAS)</td><td>Basic facilities</td><td>Trust the district name and use its official number</td></tr>
+<tr><td>Opening hours present in only 9 of 607 rows</td><td>Basic facilities</td><td>Optional property; no value when missing</td></tr>
+<tr><td>Phone present in 14 rows and e-mail in 6 rows</td><td>Basic facilities</td><td>Optional properties</td></tr>
+<tr><td>Postal code missing in 27 rows, street name in 6, number in 50</td><td>Basic facilities</td><td>Optional properties</td></tr>
+<tr><td>Free-text fields mix several kinds of information</td><td>All</td><td>Keep as literals; do not try to parse them</td></tr>
+<tr><td>Latin-1 encoding</td><td>All</td><td>Convert to UTF-8 before the RDF generation</td></tr>
+<tr><td>Names in upper case without accents (street, district, neighbourhood)</td><td>All</td><td>Keep as in the source for traceability; use codes to build URIs</td></tr>
+</table>
+
+<h2>2. Analysis of the licensing</h2>
+<table>
+<tr><th>Aspect</th><th>Finding</th></tr>
+<tr><td>Publisher</td><td>Ayuntamiento de Madrid, through its open data portal <a href="https://datos.madrid.es">datos.madrid.es</a>. The responsible unit shown on the dataset pages is the <i>Dirección General de Deporte</i>.</td></tr>
+<tr><td>Rights holder</td><td>Ayuntamiento de Madrid. The portal does not name a different rights holder: the data comes from the municipal website <code>madrid.es</code> and is published by the City Council itself under its open licence. We therefore take the Ayuntamiento de Madrid as rights holder.</td></tr>
+<tr><td>Licence of the datasets</td><td><a href="https://creativecommons.org/licenses/by/4.0/legalcode.es">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. It is stated on the page of the basic facilities, the sports centres and the swimming pools datasets.</td></tr>
+<tr><td>What the licence allows</td><td>Copy, redistribute, adapt and use the data for any purpose, including commercial use, as long as attribution is given.</td></tr>
+<tr><td>What it requires</td><td>(1) Give credit to the Ayuntamiento de Madrid as the source; (2) provide a link to the licence; (3) indicate if changes were made.</td></tr>
+<tr><td>Warning from the publisher</td><td>The documentation says the information is the one available at the City Council and may contain errors or inaccuracies, which can be reported through the form on each dataset page.</td></tr>
+</table>
+
+<h3>Licence for the generated dataset</h3>
+<p>We will publish the RDF dataset and the ontology under <a href="https://creativecommons.org/licenses/by/4.0/"><b>CC BY 4.0</b></a>. Reasons:</p>
+<ul>
+ <li>It is the same licence as the source, so the requirement to attribute the City Council is passed on to everybody who reuses our data, and the source terms are not made stricter or looser than needed.</li>
+ <li>It allows republishing, linking and commercial reuse, which fits an open linked dataset.</li>
+ <li>The transformation to RDF, the URL minting, the cleaning described in 1.8 and the links to other datasets are changes. The licence requires us to say so; the dataset description will state that it is derived from the Ayuntamiento de Madrid datasets and has been modified.</li>
+</ul>
+<p>The licence will be declared in the data with <code>dcterms:license &lt;https://creativecommons.org/licenses/by/4.0/&gt;</code> and the source with <code>dcterms:source</code> pointing to each original dataset page. A short attribution text will be included in the dataset description: <i>"Contains data of the Ayuntamiento de Madrid (datos.madrid.es), licensed under CC BY 4.0. Transformed to RDF by Group 08."</i></p>
+
+<h2>3. Resource naming strategy</h2>
+<p>This section defines how the ontology and the individuals will be named. The ontology and the data are published under our own namespace, not under the default Protégé one (<code>http://www.semanticweb.org/...</code>). The domain used below is a placeholder under the reserved <code>example.org</code> domain: it is not deployed during this hands-on, so the redirections in 3.4 describe the design for the moment of publication.</p>
+
+<h3>3.1 Principles</h3>
+<ul>
+ <li><b>Ontology and data have different paths:</b> terms of the ontology live under <code>/ontology/</code> and individuals under <code>/resource/</code>.</li>
+ <li><b>Each class of individuals has its own path</b> (<code>facility</code>, <code>district</code>, <code>neighbourhood</code>...), so two individuals of different classes can never collide.</li>
+ <li><b>Individual URIs do not contain the URI of their class.</b> The URI is built only from the key of the source data, so it does not change if we later reclassify the individual.</li>
+ <li><b>Identifiers come from the source codes, never from names.</b> The names in the CSV are in upper case, without accents and can change; the codes (<code>PK</code>, <code>COD-DISTRITO</code>, <code>COD-BARRIO</code>, last segment of <code>TIPO</code>) are stable and need no escaping.</li>
+ <li>No file extensions, query strings or spaces in URIs. Path segments in lower camel case, class names in upper camel case, property names in lower camel case, all in English.</li>
+</ul>
+
+<h3>3.2 Namespaces</h3>
+<table>
+<tr><th>Prefix</th><th>Namespace</th><th>Use</th></tr>
+<tr><td><code>ms:</code></td><td><code>http://madridsports.example.org/ontology/madridsports#</code></td><td>Classes and properties of our ontology (hash URIs, because the ontology is a small single file)</td></tr>
+<tr><td><code>msr:</code></td><td><code>http://madridsports.example.org/resource/</code></td><td>All individuals (slash URIs)</td></tr>
+</table>
+
+<h3>3.3 URI patterns for individuals</h3>
+<table>
+<tr><th>Individuals of</th><th>Pattern</th><th>Built from</th><th>Example</th></tr>
+<tr><td>Sports facility</td><td><code>msr:facility/{PK}</code></td><td><code>PK</code> (unique in each file)</td><td><code>http://madridsports.example.org/resource/facility/72028</code></td></tr>
+<tr><td>District</td><td><code>msr:district/{COD-DISTRITO}</code></td><td>District code (1 to 21). It is taken from the district name when the code is missing or does not match the name (see 1.8)</td><td><code>.../resource/district/16</code></td></tr>
+<tr><td>Neighbourhood</td><td><code>msr:neighbourhood/{COD-DISTRITO}-{COD-BARRIO}</code></td><td>District code and neighbourhood number. <code>COD-BARRIO</code> is only the number of the neighbourhood inside its district (1 to 9), so it is not unique in the city and cannot be used alone</td><td><code>.../resource/neighbourhood/4-2</code></td></tr>
+<tr><td>Facility type</td><td><code>msr:facilityType/{TIPO}</code></td><td>Last segment of <code>TIPO</code> (31 distinct values in the three files, see 1.4)</td><td><code>.../resource/facilityType/PistaFutbolSala</code></td></tr>
+<tr><td>Accessibility level (codes 0 to 3)</td><td><code>msr:accessibilityLevel/{code}</code></td><td>Code in <code>ACCESIBILIDAD</code></td><td><code>.../resource/accessibilityLevel/2</code></td></tr>
+<tr><td>Accessibility feature (codes 4 to 6)</td><td><code>msr:accessibilityFeature/{code}</code></td><td>Code in <code>ACCESIBILIDAD</code></td><td><code>.../resource/accessibilityFeature/5</code></td></tr>
+<tr><td>City</td><td><code>msr:city/{name}</code></td><td>Lower-case name; used to link the districts with DBpedia and Wikidata</td><td><code>.../resource/city/madrid</code></td></tr>
+<tr><td>Dataset</td><td><code>msr:dataset/{name}</code></td><td>Description of the generated dataset (licence, sources, attribution)</td><td><code>.../resource/dataset/madridSports</code></td></tr>
+</table>
+<p>The examples use real values of the CSV files. The sample instantiation is in <code>ontology/madridsports-example.ttl</code>.</p>
+
+<h3>3.4 Content negotiation</h3>
+<p>Individuals use slash URIs that identify the thing itself (a facility, a district), so they are not served directly. A request to the URI is answered with a <code>303 See Other</code> redirect to a document about it, chosen with the <code>Accept</code> header:</p>
+<table>
+<tr><th>Request to</th><th><code>Accept</code> header</th><th>Redirects to</th></tr>
+<tr><td rowspan="3"><code>/resource/facility/72028</code></td><td><code>text/html</code></td><td><code>/page/facility/72028</code></td></tr>
+<tr><td><code>text/turtle</code></td><td><code>/data/facility/72028.ttl</code></td></tr>
+<tr><td><code>application/rdf+xml</code></td><td><code>/data/facility/72028.rdf</code></td></tr>
+<tr><td rowspan="2"><code>/ontology/madridsports</code></td><td><code>text/html</code></td><td>HTML documentation of the ontology</td></tr>
+<tr><td><code>text/turtle</code></td><td><code>madridsports.ttl</code></td></tr>
+</table>
+<p>The same rule applies to the other resource types (<code>district</code>, <code>neighbourhood</code>, ...). Terms of the ontology use hash URIs, so a request to <code>ms:SportsFacility</code> retrieves the whole ontology document and needs no per-term redirect.</p>
+
+<h3>3.5 Modelling decisions that affect the URIs</h3>
+<ul>
+ <li><b>One individual per <code>PK</code>, one path for all facilities.</b> As described in 1.7, 55 of the 56 pools are also in the sports centres file. If the URI contained the type (for example <code>/basicFacility/</code> or <code>/pool/</code>), the same place could get two URIs. With <code>/facility/{PK}</code> the type is given by the data (<code>rdf:type</code>), not by the URI.</li>
+ <li><b>Facility types, districts and accessibility values are individuals, not strings,</b> so that several facilities point to the same URI and the districts can later be linked to Wikidata and DBpedia.</li>
+ <li><b>The original page is kept as a link,</b> not as the identifier: <code>CONTENT-URL</code> will be stored with <code>dcterms:source</code> or <code>rdfs:seeAlso</code>.</li>
+ <li><b>Risk:</b> <code>PK</code> is an internal key of the municipal website, so if the City Council renumbers it our URIs would stop matching its data. We accept it because the key is the only identifier the source gives; the original codes are kept as literals.</li>
+</ul>
+
+<h3>3.6 Check against the rules</h3>
+<table>
+<tr><th>Rule</th><th>How it is met</th></tr>
+<tr><td>Do not use the default Protégé domain</td><td>Own namespace <code>madridsports.example.org</code></td></tr>
+<tr><td>Different paths for ontology resources and individuals</td><td><code>/ontology/</code> versus <code>/resource/</code></td></tr>
+<tr><td>Different paths for individuals of different classes</td><td><code>facility</code>, <code>district</code>, <code>neighbourhood</code>, <code>facilityType</code>, <code>accessibilityLevel</code>, <code>accessibilityFeature</code></td></tr>
+<tr><td>Individual URIs independent of class URIs</td><td>Only the source key is used in the URI; the class URI never appears in it</td></tr>
+</table>
+
+</body>
+</html>

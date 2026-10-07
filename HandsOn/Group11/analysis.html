@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hands-on 2 Analysis</title>
+</head>
+
+<body>
+
+<h1>Hands-on 2 Analysis</h1>
+
+<h2>1. Analysis of the Data Source</h2>
+
+<h3>1.1 Dataset Description</h3>
+
+<p>
+The dataset selected for this project contains information about the
+BiciMAD public bicycle stations located in the city of Madrid.
+</p>
+
+<p>
+Each row of the dataset represents one BiciMAD station and contains
+information such as its identifier, name, address, geographic coordinates,
+number of docking bases and current state.
+</p>
+
+<p>
+The dataset contains a total of 631 records and 12 columns.
+No missing values were found in any of the columns.
+</p>
+
+<h3>1.2 Dataset Schema</h3>
+
+<table border="1">
+    <tr>
+        <th>Field</th>
+        <th>Data Type</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>OBJECTID</td>
+        <td>Integer</td>
+        <td>Internal identifier of the record.</td>
+    </tr>
+
+    <tr>
+        <td>Activate</td>
+        <td>Integer</td>
+        <td>Activation indicator. Its possible values are 0 and 1.</td>
+    </tr>
+
+    <tr>
+        <td>Address</td>
+        <td>String</td>
+        <td>Postal address of the BiciMAD station.</td>
+    </tr>
+
+    <tr>
+        <td>PosicionSTR</td>
+        <td>String</td>
+        <td>Geographic position represented as a text value.</td>
+    </tr>
+
+    <tr>
+        <td>Ligth</td>
+        <td>Integer</td>
+        <td>Numeric attribute with values between 0 and 3.</td>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td>String</td>
+        <td>Name of the BiciMAD station.</td>
+    </tr>
+
+    <tr>
+        <td>NoAvailable</td>
+        <td>Integer</td>
+        <td>Availability indicator. Its possible values are 0 and 1.</td>
+    </tr>
+
+    <tr>
+        <td>number</td>
+        <td>String</td>
+        <td>
+            Unique station code. It is treated as a string because some
+            identifiers contain letters or other characters, such as
+            25A, 25B or 508-old.
+        </td>
+    </tr>
+
+    <tr>
+        <td>TotalBases</td>
+        <td>Integer</td>
+        <td>Total number of docking bases of the station.</td>
+    </tr>
+
+    <tr>
+        <td>State</td>
+        <td>String</td>
+        <td>Current operational state of the station.</td>
+    </tr>
+
+    <tr>
+        <td>POINT_X</td>
+        <td>Decimal</td>
+        <td>Longitude of the station.</td>
+    </tr>
+
+    <tr>
+        <td>POINT_Y</td>
+        <td>Decimal</td>
+        <td>Latitude of the station.</td>
+    </tr>
+</table>
+
+<h3>1.3 Data Analysis</h3>
+
+<p>
+The OBJECTID field contains values from 1 to 631.
+The number field uniquely identifies each station and contains
+631 different values.
+</p>
+
+<p>
+The TotalBases field ranges from 0 to 43 docking bases.
+</p>
+
+<p>
+The geographic coordinates are represented using the POINT_X and POINT_Y
+fields. POINT_X, corresponding to longitude, ranges approximately from
+-3.784627 to -3.548534, while POINT_Y, corresponding to latitude,
+ranges approximately from 40.3325463 to 40.5157202.
+</p>
+
+<p>
+The State field contains four possible values:
+</p>
+
+<ul>
+    <li>IN_SERVICE: 626 stations</li>
+    <li>NOT_IN_SERVICE: 3 stations</li>
+    <li>END_OF_LIFE: 1 station</li>
+    <li>PLANNED: 1 station</li>
+</ul>
+
+<p>
+The Activate and NoAvailable fields contain binary values (0 or 1).
+</p>
+
+<p>
+The Ligth field contains values between 0 and 3.
+The dataset does not explain the exact meaning of these values,
+so only the observed range is described.
+</p>
+
+<p>
+No null or missing values were found in the dataset.
+</p>
+
+<h2>2. Licensing Analysis</h2>
+
+<h3>2.1 Publisher and Data Source</h3>
+
+<p>
+The dataset used in this project is the BiciMAD stations dataset.
+It is published through the Madrid Open Data Portal and its original
+source is the EMT Madrid Open Data Portal.
+</p>
+
+<p>
+The organization responsible for the dataset is
+Empresa Municipal de Transportes, S.A. (EMT Madrid).
+</p>
+
+<p>
+The dataset was published on June 27, 2014.
+</p>
+
+<h3>2.2 Rightsholder</h3>
+
+<p>
+The dataset information page identifies Empresa Municipal de Transportes,
+S.A. (EMT Madrid) as the organization responsible for the dataset.
+The dataset page does not mention a different organization as the
+rightsholder.
+</p>
+
+<h3>2.3 Original Dataset License</h3>
+
+<p>
+The original dataset is published under the
+Creative Commons Attribution 4.0 International (CC BY 4.0) license.
+</p>
+
+<p>
+This license allows the data to be shared and adapted for any purpose,
+as long as the original source is properly credited.
+</p>
+
+<h3>2.4 Potential License for the Generated Dataset</h3>
+
+<p>
+We will use the same Creative Commons Attribution 4.0 International
+(CC BY 4.0) license for the generated dataset, because it allows reuse
+of the data while keeping attribution to the original source.
+</p>
+
+<p>
+Original data source:
+<a href="https://datos.madrid.es/dataset/208327-0-transporte-bicicletas-bicimad">
+BiciMAD Stations - Madrid Open Data Portal
+</a>
+</p>
+
+<p>
+License:
+<a href="https://creativecommons.org/licenses/by/4.0/">
+Creative Commons Attribution 4.0 International
+</a>
+</p>
+
+<h2>3. Resource Naming Strategy</h2>
+
+<h3>3.1 Base Domain</h3>
+
+<p>
+The following base domain will be used for the resources generated
+in this project:
+</p>
+
+<p>
+http://www.example.org/bicimad/
+</p>
+
+<p>
+Different paths will be used for ontology resources and individuals.
+</p>
+
+<h3>3.2 Ontology Resources</h3>
+
+<p>
+Classes and properties of the ontology will use the following base URI:
+</p>
+
+<p>
+http://www.example.org/bicimad/ontology/
+</p>
+
+<p>Examples of classes:</p>
+
+<ul>
+    <li>http://www.example.org/bicimad/ontology/Station</li>
+    <li>http://www.example.org/bicimad/ontology/Location</li>
+    <li>http://www.example.org/bicimad/ontology/StationStatus</li>
+</ul>
+
+<p>Examples of properties:</p>
+
+<ul>
+    <li>http://www.example.org/bicimad/ontology/name</li>
+    <li>http://www.example.org/bicimad/ontology/address</li>
+    <li>http://www.example.org/bicimad/ontology/totalBases</li>
+    <li>http://www.example.org/bicimad/ontology/hasLocation</li>
+    <li>http://www.example.org/bicimad/ontology/hasStatus</li>
+</ul>
+
+<h3>3.3 Individuals</h3>
+
+<p>
+Individuals will use a different path from ontology resources:
+</p>
+
+<p>
+http://www.example.org/bicimad/resource/
+</p>
+
+<p>
+Different classes of individuals will also use different paths.
+</p>
+
+<p>Station URI pattern:</p>
+
+<p>
+http://www.example.org/bicimad/resource/station/{stationNumber}
+</p>
+
+<p>Example:</p>
+
+<p>
+http://www.example.org/bicimad/resource/station/25A
+</p>
+
+<p>Location URI pattern:</p>
+
+<p>
+http://www.example.org/bicimad/resource/location/{stationNumber}
+</p>
+
+<p>Example:</p>
+
+<p>
+http://www.example.org/bicimad/resource/location/25A
+</p>
+
+<p>Station status URI pattern:</p>
+
+<p>
+http://www.example.org/bicimad/resource/status/{status}
+</p>
+
+<p>Example:</p>
+
+<p>
+http://www.example.org/bicimad/resource/status/in-service
+</p>
+
+<h3>3.4 URI Patterns</h3>
+
+<table border="1">
+    <tr>
+        <th>Resource</th>
+        <th>URI Pattern</th>
+    </tr>
+
+    <tr>
+        <td>Ontology class or property</td>
+        <td>http://www.example.org/bicimad/ontology/{name}</td>
+    </tr>
+
+    <tr>
+        <td>Station</td>
+        <td>http://www.example.org/bicimad/resource/station/{stationNumber}</td>
+    </tr>
+
+    <tr>
+        <td>Location</td>
+        <td>http://www.example.org/bicimad/resource/location/{stationNumber}</td>
+    </tr>
+
+    <tr>
+        <td>Station Status</td>
+        <td>http://www.example.org/bicimad/resource/status/{status}</td>
+    </tr>
+</table>
+
+<p>
+The Location class can be used in the future to link BiciMAD stations
+with other geographic resources.
+</p>
+
+<h3>3.5 Content Negotiation</h3>
+
+<p>
+The same resource can have different representations.
+For example, a web browser could receive an HTML representation,
+while a Semantic Web client could receive the data in Turtle format.
+</p>
+
+</body>
+
+</html>
