@@ -1,0 +1,18 @@
+@prefix demo: <https://w3id.org/smartinfra-galicia/ontology/Demographics#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/smartinfra-galicia/resource/municipality/15006>
+    a demo:Municipality ;
+    demo:hasINECode "15006" ;
+    demo:hasName "Arzúa" ;
+    demo:hasDemographicInformation
+        <https://w3id.org/smartinfra-galicia/resource/demographicinformation/15006-2025> .
+
+<https://w3id.org/smartinfra-galicia/resource/demographicinformation/15006-2025>
+    a demo:DemographicObservation ;
+    demo:hasYear "2025"^^xsd:gYear ;
+    demo:hasPopulationPercentage "37.87"^^xsd:decimal ;
+    demo:hasPopulationDensity "38.1"^^xsd:decimal ;
+    demo:hasPopulationPercentageUnder20 "13.45"^^xsd:decimal ;
+    demo:hasPopulationPercentage20To64 "55.15"^^xsd:decimal ;
+    demo:hasPopulationPercentage65Plus "31.39"^^xsd:decimal .

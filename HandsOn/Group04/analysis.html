@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dataset analysis - Group 04</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 960px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #bbb; padding: 10px; text-align: left; vertical-align: top; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <h1>Dataset analysis - Group 04</h1>
+  <section id="data-analysis">
+  <h2>1. Data and schema analysis</h2>
+
+  <h3>1.1 Real-time air quality dataset</h3>
+
+  <p>
+    The real-time air quality dataset contains measurements collected by
+    Madrid's air quality monitoring stations. The analysed CSV contains
+    <strong>126 rows and 56 columns</strong>.
+  </p>
+
+  <p>
+    All records in the analysed snapshot correspond to Madrid
+    (<strong>PROVINCIA = 28</strong>,
+    <strong>MUNICIPIO = 079</strong>)
+    and to the same date:
+    <strong>1 October 2026</strong>.
+  </p>
+
+  <p>
+    This file represents a snapshot of the real-time data source.
+    The application is intended to work with periodically updated versions
+    of the same dataset and is not limited to this specific date.
+  </p>
+
+  <h4>Schema</h4>
+
+  <ul>
+    <li><strong>PROVINCIA</strong>: province identifier.</li>
+    <li><strong>MUNICIPIO</strong>: municipality identifier.</li>
+    <li><strong>ESTACION</strong>: monitoring station identifier.</li>
+    <li><strong>MAGNITUD</strong>: code identifying the measured pollutant.</li>
+    <li>
+      <strong>PUNTO_MUESTREO</strong>: sampling point identifier combining
+      the station code, pollutant magnitude and measurement technique.
+    </li>
+    <li><strong>ANO, MES, DIA</strong>: date of the measurements.</li>
+    <li><strong>H01-H24</strong>: hourly measurement values.</li>
+    <li>
+      <strong>V01-V24</strong>: validation codes associated with each
+      hourly measurement.
+    </li>
+  </ul>
+
+  <p>
+    Each row represents one pollutant measured at one monitoring station
+    during one day. Therefore, a row is not a single measurement:
+    it may contain up to 24 hourly measurements, each one together with
+    its corresponding validation code.
+  </p>
+
+  <h4>Data characteristics</h4>
+
+  <ul>
+    <li><strong>126</strong> station-pollutant records.</li>
+    <li><strong>23</strong> different monitoring stations.</li>
+    <li><strong>11</strong> different pollutant magnitudes.</li>
+    <li>
+      The dataset contains up to <strong>3,024 hourly values</strong>
+      (126 rows × 24 hourly fields).
+    </li>
+  </ul>
+
+  <p>
+    A monitoring station can appear in several rows because the same
+    station may measure several pollutants. For example, a row with
+    ESTACION = 11 and MAGNITUD = 8 represents the NO2 measurements
+    collected by station 11 during that day.
+  </p>
+
+  <h4>Pollutants</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Pollutant</th>
+        <th>Unit</th>
+        <th>Rows</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>01</td><td>SO2</td><td>µg/m³</td><td>3</td></tr>
+      <tr><td>06</td><td>CO</td><td>mg/m³</td><td>4</td></tr>
+      <tr><td>07</td><td>NO</td><td>µg/m³</td><td>23</td></tr>
+      <tr><td>08</td><td>NO2</td><td>µg/m³</td><td>23</td></tr>
+      <tr><td>09</td><td>PM2.5</td><td>µg/m³</td><td>11</td></tr>
+      <tr><td>10</td><td>PM10</td><td>µg/m³</td><td>14</td></tr>
+      <tr><td>12</td><td>NOx</td><td>µg/m³</td><td>23</td></tr>
+      <tr><td>14</td><td>O3</td><td>µg/m³</td><td>13</td></tr>
+      <tr><td>20</td><td>Toluene</td><td>µg/m³</td><td>4</td></tr>
+      <tr><td>30</td><td>Benzene</td><td>µg/m³</td><td>4</td></tr>
+      <tr><td>35</td><td>Ethylbenzene</td><td>µg/m³</td><td>4</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Measurements belonging to different pollutants cannot always be
+    directly compared because they may use different units. For example,
+    CO is expressed in mg/m³ while most of the other pollutants are
+    expressed in µg/m³.
+  </p>
+
+  <h4>Validation of hourly measurements</h4>
+
+  <p>
+    Every hourly value must be interpreted together with its corresponding
+    validation field. For example, H01 must be considered together with V01.
+  </p>
+
+  <p>
+    A facet over V01 showed 124 records marked as valid (V) and
+    2 records marked as not valid (N). The invalid records correspond
+    to station 47 for PM10 and PM2.5. In both cases H01 = 0 and V01 = N,
+    so the zero value must not be interpreted as a valid pollutant
+    concentration.
+  </p>
+
+  <p>
+    As an example of a valid high value, the maximum actual value found
+    in H01 was <strong>91</strong>, corresponding to station 27,
+    MAGNITUD = 12 (NOx), with V01 = V.
+  </p>
+
+
+  <h3>1.2 Air quality monitoring stations dataset</h3>
+
+  <p>
+    The monitoring stations dataset contains metadata and geographic
+    information about Madrid's air quality monitoring network.
+    It contains <strong>24 rows and 25 columns</strong>,
+    with one row per station.
+  </p>
+
+  <h4>Schema</h4>
+
+  <ul>
+    <li>
+      <strong>Station identification:</strong>
+      CODIGO, CODIGO_CORTO and ESTACION.
+    </li>
+    <li>
+      <strong>Location:</strong>
+      DIRECCION, LONGITUD_ETRS89, LATITUD_ETRS89,
+      ALTITUD, LONGITUD and LATITUD.
+    </li>
+    <li>
+      <strong>Projected coordinates:</strong>
+      COORDENADA_X_ETRS89 and COORDENADA_Y_ETRS89.
+    </li>
+    <li>
+      <strong>Station type:</strong>
+      COD_TIPO and NOM_TIPO.
+    </li>
+    <li>
+      <strong>Pollutants monitored:</strong>
+      NO2, SO2, CO, PM10, PM2_5, O3 and BTX.
+    </li>
+    <li>
+      <strong>Street information:</strong>
+      COD_VIA, VIA_CLASE, VIA_PAR and VIA_NOMBRE.
+    </li>
+  </ul>
+
+  <h4>Data characteristics</h4>
+
+  <p>
+    A text facet over CODIGO_CORTO produced 24 different values,
+    and every identifier appears exactly once. Therefore, the dataset
+    contains <strong>24 unique monitoring stations</strong>.
+  </p>
+
+  <p>The stations are classified into three categories:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Station type</th>
+        <th>Number of stations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Urbana fondo</td><td>12</td></tr>
+      <tr><td>Urbana tráfico</td><td>9</td></tr>
+      <tr><td>Suburbana</td><td>3</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Station altitude ranges from <strong>600 to 730 metres</strong>.
+    The decimal geographic coordinates have the following ranges:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Attribute</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Latitude</td>
+        <td>40.347147</td>
+        <td>40.5180701</td>
+      </tr>
+      <tr>
+        <td>Longitude</td>
+        <td>-3.7746101</td>
+        <td>-3.5800258</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h3>1.3 Relationship between the datasets</h3>
+
+  <p>
+    The datasets can be related through the monitoring station identifier.
+    <strong>ESTACION</strong> in the real-time dataset corresponds to
+    <strong>CODIGO_CORTO</strong> in the station metadata dataset.
+  </p>
+
+  <p>
+    All 23 station identifiers present in the real-time snapshot have
+    a corresponding entry in the station metadata dataset.
+    The metadata dataset contains 24 stations in total.
+    Station code <strong>55</strong> appears in the metadata dataset
+    but does not appear in the analysed real-time snapshot.
+  </p>
+
+  <p>
+    This relationship makes it possible to enrich every air quality
+    measurement with information about its monitoring station,
+    such as its name, address, type, altitude, latitude and longitude.
+  </p>
+
+  <p>
+    In summary, the real-time dataset provides information about
+    <strong>what was measured and when</strong>, while the station
+    metadata dataset provides information about
+    <strong>where the measurement was taken</strong>.
+  </p>
+</section>
+  <section id="license-analysis">
+    <h2>2. Source and generated dataset licensing</h2>
+    <p>The selected sources are published by Ayuntamiento de Madrid through its Open Data portal. Both official records identify Dirección General de Sostenibilidad y Control Ambiental as the responsible department. The sources and license statements below were checked on 4 October 2026.</p>
+    <table>
+      <thead><tr><th>Source dataset</th><th>Local file</th><th>Source license</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://datos.madrid.es/dataset/212629-0-estaciones-control-aire">Calidad del aire. Estaciones de control</a></td><td><a href="csv/212629-0-estaciones-control-aire-csv.csv">212629-0-estaciones-control-aire-csv.csv</a></td><td>Creative Commons Attribution 4.0 International (CC BY 4.0)</td></tr>
+        <tr><td><a href="https://datos.madrid.es/dataset/212531-0-calidad-aire-tiempo-real">Calidad del aire. Datos en tiempo real</a></td><td><a href="csv/calair_tiemporeal.csv">calair_tiemporeal.csv</a></td><td>Creative Commons Attribution 4.0 International (CC BY 4.0)</td></tr>
+      </tbody>
+    </table>
+    <h3>Publisher and rights holder</h3>
+    <p>Ayuntamiento de Madrid is the publisher and the presumed source rights holder. The records do not identify a separate rights holder; this attribution is based on the municipal source and its <a href="https://datos.madrid.es/pages/condiciones-generales-ayuntamiento-de-madrid">general reuse conditions</a>.</p>
+    <h3>Source license and reuse</h3>
+    <p>Both datasets use <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, which permits redistribution and adaptation, including commercial use. RDF publication must credit the source, link the license and indicate changes, without implying municipal endorsement or imposing incompatible restrictions. Supplied update and reuse metadata will be retained. The exact download date of the local copies was not recorded.</p>
+    <h3>Potential license for the generated RDF dataset</h3>
+    <p>We propose <strong>CC BY 4.0</strong> for the generated RDF, allowing further reuse while preserving source attribution. Group 04 will be credited for the transformation and its original contributions; source rights remain with their holders. Publication will include links to both source records and a description of the changes made.</p>
+    <p>Suggested attribution: “Source: Ayuntamiento de Madrid, Dirección General de Sostenibilidad y Control Ambiental. Calidad del aire: Estaciones de control and Datos en tiempo real (CC BY 4.0). RDF transformation by Group 04.” This text will accompany the source and license links above.</p>
+  </section>
+  <section id="resource-naming">
+    <h2>3. Resource naming strategy</h2>
+
+    <h3>3.1 Domain</h3>
+    <p>The chosen domain is <code>breathemadrid.es</code>, named after the application BreatheMadrid. It is not the default domain provided by Protégé or Chowlk.</p>
+
+    <h3>3.2 Ontology URI pattern (classes and properties)</h3>
+    <p>Ontology resources use <strong>hash URIs</strong> under a single namespace:</p>
+    <pre>http://breathemadrid.es/ontology#{ClassName}
+http://breathemadrid.es/ontology#{propertyName}</pre>
+    <p>This allows the entire ontology to be served from a single document. Class names start with a capital letter and property names start with a lowercase letter.</p>
+    <p>Prefix used in Turtle files: <code>@prefix bm: &lt;http://breathemadrid.es/ontology#&gt; .</code></p>
+
+    <h3>3.3 Individual URI pattern (instances)</h3>
+    <p>Individuals use <strong>slash URIs</strong> under a separate path, ensuring a clear separation between the ontology schema and the instance data:</p>
+    <pre>http://breathemadrid.es/resource/{class-path}/{identifier}</pre>
+    <p>Prefix used in Turtle files: <code>@prefix bmr: &lt;http://breathemadrid.es/resource/&gt; .</code></p>
+
+    <p>Each class has its own path segment so that individuals of different classes never share the same URI pattern:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>URI pattern</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Municipality</td>
+          <td><code>resource/municipality/{code}</code></td>
+          <td><code>resource/municipality/28079</code></td>
+        </tr>
+        <tr>
+          <td>Station</td>
+          <td><code>resource/station/{code}</code></td>
+          <td><code>resource/station/28079004</code></td>
+        </tr>
+        <tr>
+          <td>StationType</td>
+          <td><code>resource/stationtype/{typeCode}</code></td>
+          <td><code>resource/stationtype/UT</code></td>
+        </tr>
+        <tr>
+          <td>Pollutant</td>
+          <td><code>resource/pollutant/{magnitudeCode}</code></td>
+          <td><code>resource/pollutant/8</code></td>
+        </tr>
+        <tr>
+          <td>Observation</td>
+          <td><code>resource/observation/{samplingPoint}/{date}/{hour}</code></td>
+          <td><code>resource/observation/28079004_10_A/2026-10-01/H01</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3.4 Linking to external entities</h3>
+    <p>Municipality individuals are linked to their Wikidata counterpart using <code>owl:sameAs</code>. For example, Madrid is linked to <code>http://www.wikidata.org/entity/Q2807</code>.</p>
+
+    <h3>3.5 Ontology reuse</h3>
+    <p>The ontology reuses existing vocabularies through <code>rdfs:subClassOf</code>:</p>
+    <ul>
+      <li><code>bm:Station rdfs:subClassOf sosa:Platform</code></li>
+      <li><code>bm:Observation rdfs:subClassOf sosa:Observation</code></li>
+      <li><code>bm:Pollutant rdfs:subClassOf sosa:ObservableProperty</code></li>
+      <li><code>bm:Municipality rdfs:subClassOf dbo:Municipality</code></li>
+    </ul>
+  </section>
+</body>
+</html>

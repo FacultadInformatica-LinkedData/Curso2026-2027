@@ -1,0 +1,84 @@
+@prefix ue:  <http://www.madridurbanenvironment.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# District
+#################################################################
+ue:District_01 a ue:District ;
+    ue:districtCode "01" .
+
+#################################################################
+# Neighborhood
+#################################################################
+ue:Neighborhood_011 a ue:Neighborhood ;
+    ue:code "011" ;
+    ue:belongsToDistrict ue:District_01 .
+
+#################################################################
+# DrinkingFountain
+#################################################################
+ue:Fountain_1001 a ue:DrinkingFountain ;
+    ue:identifier "1001" ;
+    ue:name "Fuente Plaza Mayor" ;
+    ue:model "Fuente tipo Madrid" ;
+    ue:status "Operativa" ;
+    ue:intendedUse "people and pets" ;
+    ue:installationDate "2015-06-12"^^xsd:date ;
+    ue:streetName "Plaza Mayor" ;
+    ue:streetNumber "1" ;
+    ue:postalCode "28012" ;
+    ue:latitude "40.41544"^^xsd:decimal ;
+    ue:longitude "-3.70743"^^xsd:decimal ;
+    ue:locatedInDistrict ue:District_01 ;
+    ue:locatedInNeighborhood ue:Neighborhood_011 .
+
+#################################################################
+# Bench
+#################################################################
+ue:Bench_5001 a ue:Bench ;
+    ue:identifier "5001" ;
+    ue:name "Banco Calle Mayor 10" ;
+    ue:model "Banco clásico de madera" ;
+    ue:status "Operativo" ;
+    ue:installationDate "2018-03-20"^^xsd:date ;
+    ue:streetName "Calle Mayor" ;
+    ue:streetNumber "10" ;
+    ue:postalCode "28013" ;
+    ue:latitude "40.41537"^^xsd:decimal ;
+    ue:longitude "-3.70812"^^xsd:decimal ;
+    ue:locatedInDistrict ue:District_01 ;
+    ue:locatedInNeighborhood ue:Neighborhood_011 .
+
+#################################################################
+# PublicToilet
+#################################################################
+ue:Toilet_300 a ue:PublicToilet ;
+    ue:identifier "300" ;
+    ue:name "Aseo público Plaza de Oriente" ;
+    ue:installationDate "2020-09-01"^^xsd:date ;
+    ue:streetName "Plaza de Oriente" ;
+    ue:streetNumber "s/n" ;
+    ue:postalCode "28013" ;
+    ue:latitude "40.41826"^^xsd:decimal ;
+    ue:longitude "-3.71140"^^xsd:decimal ;
+    ue:locatedInDistrict ue:District_01 ;
+    ue:locatedInNeighborhood ue:Neighborhood_011 .
+
+#################################################################
+# Park
+#################################################################
+ue:Park_200 a ue:Park ;
+    ue:identifier "200" ;
+    ue:name "Parque del Retiro" ;
+    ue:model "Jardín histórico" ;
+    ue:schedule "06:00-24:00" ;
+    ue:accessibilityLevel 1 ;
+    ue:webPage "https://www.madrid.es/retiro"^^xsd:anyURI ;
+    ue:streetName "Plaza de la Independencia" ;
+    ue:streetNumber "7" ;
+    ue:postalCode "28001" ;
+    ue:latitude "40.41531"^^xsd:decimal ;
+    ue:longitude "-3.68446"^^xsd:decimal ;
+    ue:locatedInDistrict ue:District_01 ;
+    ue:locatedInNeighborhood ue:Neighborhood_011 .
