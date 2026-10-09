@@ -106,6 +106,7 @@ English: Create the ontology:University class.
 
 #TODO
 g.add((ontology.University, RDF.type, RDFS.Class))
+g.add((ontology.University, RDFS.label, Literal("University", datatype=XSD.string)))
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
@@ -139,7 +140,7 @@ g.add((ontology.hasHomePage, RDFS.range, RDFS.Literal))
 
 g.add((ontology.affiliatedWith, RDF.type, RDF.Property))
 g.add((ontology.affiliatedWith, RDFS.label, Literal("affiliatedWith", datatype=XSD.string)))
-g.add((ontology.affiliatedWith, RDFS.domain, ontology.person))
+g.add((ontology.affiliatedWith, RDFS.domain, ontology.Person))
 g.add((ontology.affiliatedWith, RDFS.range, ontology.University))
 # Visualize the results
 for s, p, o in g:
