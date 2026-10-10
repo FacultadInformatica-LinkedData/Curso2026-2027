@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f6f8;--paper:#fff;--ink:#1b2430;--muted:#5b6674;--line:#d9dde3;--accent:#c8102e;--code:#eef0f4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+header{background:var(--ink);color:#fff;padding:3rem 1.5rem 2.5rem;border-bottom:6px solid var(--accent)}
+header div,main{max-width:860px;margin:0 auto}
+h1,h2{font-family:"IBM Plex Serif",Georgia,serif;line-height:1.2}
+h1{font-size:2.2rem;margin:0 0 .5rem}
+header p{margin:0;color:#c5ccd6}
+nav{max-width:860px;margin:1.2rem auto 0;padding:0 1.5rem;display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.95rem}
+nav a{color:var(--accent);text-decoration:none;font-weight:600}
+nav a:hover,nav a:focus-visible{text-decoration:underline}
+main{padding:0 1.5rem 4rem}
+section{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1.8rem 2rem;margin-top:1.5rem}
+h2{font-size:1.6rem;margin:0 0 1rem;padding-left:.8rem;border-left:4px solid var(--accent)}
+h3{font-size:1.05rem;margin:1.6rem 0 .5rem}
+ul{padding-left:1.3rem;margin:.4rem 0}
+li{margin:.25rem 0}
+ul ul{margin:.2rem 0}
+a{color:var(--accent);overflow-wrap:anywhere}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:var(--code);padding:.1em .35em;border-radius:3px}
+pre{background:var(--code);border:1px solid var(--line);border-radius:4px;padding:1rem;overflow-x:auto;margin:.5rem 0 1rem}
+pre code{background:none;padding:0;font-size:.85rem}
+.label{font-weight:600;margin:1rem 0 .2rem}
+table{width:100%;border-collapse:collapse;font-size:.93rem;margin:.5rem 0}
+th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{width:34%;color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:600px){section{padding:1.3rem 1.1rem}h1{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<header>
+<div>
+<h1>Analysys</h1>
+<p>Data analysis, licensing and resource naming for the linked dataset</p>
+</div>
+</header>
+<nav>
+<a href="#bicimad">Analysis Bicimad</a>
+<a href="#callejero">Analysis Callejero de Madrid</a>
+<a href="#naming">Resource Naming Strategy</a>
+</nav>
+<main>
+
+<section id="bicimad">
+<h2>Analysis Bicimad</h2>
+<p>Source: <a href="https://datos.emtmadrid.es/en/dataset/estaciones-de-bicimad">datos.emtmadrid.es – Estaciones de BiciMAD</a></p>
+
+<h3>Data Analysis</h3>
+<ul>
+<li>File format: CSV with UTF-8</li>
+<li>Dataset size: 631 rows and 13 columns</li>
+<li>Metrics extracted after analyzing the CSV in OpenRefine:
+<ul>
+<li><strong>Volume:</strong> The dataset contains 631 station records.</li>
+<li><strong>Numerical ranges:</strong> Total station capacity (<code>TotalBases</code>) ranges from 0 to 44.</li>
+<li><strong>Categories:</strong> The status (<code>State</code>) has 4 unique values: 626 operational (<code>IN_SERVICE</code>), 3 inactive (<code>NOT_IN_SERVICE</code>), 1 <code>PLANNED</code>, and 1 <code>END_OF_LIFE</code>.</li>
+<li><strong>Anomalies:</strong> The geospatial distribution is consistent, but noise was detected in the number column with 11 non-numeric records.</li>
+</ul></li>
+</ul>
+
+<h3>Licensing Analysis</h3>
+<p class="label">Data Origin</p>
+<ul>
+<li><strong>Rights holder:</strong> Madrid City Council.</li>
+<li><strong>Publisher:</strong> Madrid City Council (Ayuntamiento de Madrid, via its Open Data portal, datos.madrid.es).</li>
+<li><strong>Original license:</strong> Terms of use for Open Data of the Madrid City Council. This open-use license allows the reuse of information for both commercial and non-commercial purposes, with the primary condition of explicit attribution (citing the Madrid City Council as the source) and non-alteration of the original meaning of the data.</li>
+</ul>
+
+<h3>Data Cleansing Logic (OpenRefine GREL Expressions)</h3>
+<p class="label">POSITION X and Y columns</p>
+<pre><code>value.replace(",", ".")</code></pre>
+
+<h3>Potential License for the Generated Dataset</h3>
+<p>Since the original data comes from a public open source that only requires attribution, the resulting linked dataset (Linked Data) will be published under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+</section>
+
+<section id="callejero">
+<h2>Analysis Callejero de Madrid</h2>
+
+<h3>Data analysis</h3>
+<ul>
+<li>File format: CSV with ISO-8859-1 (latin1) encoding and semicolon (<code>;</code>) as delimiter.</li>
+<li>Dataset size: 214692 rows and 20 columns.</li>
+<li>Metrics extracted after analyzing the CSV in OpenRefine:
+<ul>
+<li><strong>Core entities &amp; volume:</strong>
+<ul>
+<li>Thoroughfares: 8,652 unique streets (<code>COD_VIA</code>).</li>
+<li>Street Classification: 25 unique street types (<code>VIA_CLASE</code>), with <code>CALLE</code> being the most frequent.</li>
+<li>Address Point Types: 5 distinct point categories (<code>TIPO_NDP</code>).</li>
+<li>Administrative Coverage: 21 municipal districts (<code>DISTRITO</code>).</li>
+</ul></li>
+<li><strong>Missing values and sparsity:</strong>
+<ul>
+<li><code>CALIFICADOR</code>: High sparsity with approximately 86% missing values. This field is optional and is used to provide additional information for the address number when applicable.</li>
+<li><code>VIA_PAR</code>: 3,798 missing values. This field contains optional particles/connectors that form part of a street name, such as DE or DEL.</li>
+<li>Core Identifiers: No missing values were found in the main identification and location fields.</li>
+</ul></li>
+<li><strong>Schema &amp; Datatype Analysis (Schema):</strong>
+<ul>
+<li>Fields like <code>DISTRITO</code>, <code>BARRIO</code>, <code>COD_VIA</code>, and <code>COD_NDP</code> are encoded as numbers in the raw CSV, but conceptually represent discrete codes/identifiers. Their arithmetic mean is therefore not meaningful so they are mapped to <code>xsd:string</code>.</li>
+<li><code>COD_POSTAL</code> is stored as an integer in raw format, but should be cast to <code>xsd:string</code> preserving its 5 digit format because it represents a categorical geographic code rather than a measurement.</li>
+</ul></li>
+<li><strong>UTM Coordinates</strong> (<code>UTMX_ETRS</code>, <code>UTMY_ETRS</code>): Stored as text strings using European decimal commas (<code>,</code>). They require character substitution to dots (<code>.</code>) to map to <code>xsd:decimal</code>.</li>
+<li><strong>Geographic Coordinates</strong> (<code>LATITUD</code>, <code>LONGITUD</code>): Stored as sexagesimal DMS (degrees, minutes, seconds) text strings. They require parsing and conversion to decimal degrees before being mapped to <code>xsd:decimal</code>, enabling numerical spatial analysis and mapping.</li>
+</ul></li>
+</ul>
+
+<h3>Data Cleansing Logic (OpenRefine GREL Expressions)</h3>
+<p class="label">Change comma (,) to dot (.) in UTMX_ETRS, UTMY_ETRS</p>
+<pre><code>value.replace(",", ".")</code></pre>
+
+<p class="label">Latitud</p>
+<pre><code>with(value.match(/(\d+)°(\d+)'([\d\.]+)''\s*([NSEW])/), m, 
+  if(m != null, 
+    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'S', -1, 1), 
+    null
+  )
+)</code></pre>
+
+<p class="label">Longitud</p>
+<pre><code>with(value.match(/(\d+)°(\d+)'([\d\.]+)''\s*([NSEW])/), m, 
+  if(m != null, 
+    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'W', -1, 1), 
+    null
+  )
+)</code></pre>
+
+<p class="label">COD_POSTAL</p>
+<pre><code>("00000" + value.toString()).slice(-5)</code></pre>
+
+<h3>Data source licensing</h3>
+<ul>
+<li><strong>Dataset name:</strong> Callejero Oficial del Ayuntamiento de Madrid</li>
+<li><strong>Dataset URL:</strong> <a href="https://datos.madrid.es/dataset/213605-0-callejero-oficial-madrid">https://datos.madrid.es/dataset/213605-0-callejero-oficial-madrid</a></li>
+<li><strong>Rightsholder:</strong> Ayuntamiento de Madrid</li>
+<li><strong>Publisher:</strong> Portal de Datos Abiertos de Madrid</li>
+<li><strong>License:</strong> Creative Commons Attribution 4.0 International (CC BY 4.0)</li>
+<li><strong>License URL:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></li>
+<li><strong>Permissions:</strong> The license permits sharing, adapting, and transforming the dataset for any purpose, including commercial uses.</li>
+<li><strong>Requirements:</strong> Credit/attribution must be given to the “Ayuntamiento de Madrid”, including a link to the license and an indication if changes were made.</li>
+<li><strong>Compatibility with Linked Open Data (LOD):</strong> The CC BY 4.0 license is fully open and compatible with Linked Data publication, allowing RDF transformation, ontology mapping, and integration with third-party datasets without restrictions.</li>
+<li><strong>License for the generated dataset:</strong> Creative Commons Attribution 4.0 International (CC BY 4.0)</li>
+</ul>
+</section>
+
+<section id="naming">
+<h2>Resource Naming Strategy</h2>
+<div class="scroll">
+<table>
+<tr><th>Base domain</th><td><code>https://bicismart.madrid.data.es/</code></td></tr>
+<tr><th>Content negotiation</th><td>Use of HTTP Code 303 (See Other) redirection</td></tr>
+<tr><th>Ontology URI</th><td><code>https://bicismart.madrid.data.es/ontology#</code></td></tr>
+<tr><th>Class pattern</th><td><code>https://bicismart.madrid.data.es/ontology#UpperCamelCase</code><br>Example: <code>https://bicismart.madrid.data.es/ontology#BikeStation</code></td></tr>
+<tr><th>Property and data-property pattern</th><td><code>https://bicismart.madrid.data.es/ontology#lowerCamelCase</code><br>Example: <code>https://bicismart.madrid.data.es/ontology#hasState</code></td></tr>
+<tr><th>Individual resource pattern</th><td><code>https://bicismart.madrid.data.es/resource/{entityType}/{id}</code></td></tr>
+<tr><th>Examples</th><td>BikeStation: <code>https://bicismart.madrid.data.es/resource/BikeStation/2</code><br>StationState: <code>https://bicismart.madrid.data.es/resource/StationState/2</code><br>Street: <code>https://bicismart.madrid.data.es/resource/Street/507100</code></td></tr>
+</table>
+</div>
+</section>
+
+</main>
+</body>
+</html>

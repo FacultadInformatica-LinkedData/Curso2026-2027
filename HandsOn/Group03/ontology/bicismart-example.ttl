@@ -1,0 +1,42 @@
+@prefix bm: <https://bicismart.madrid.data.es/ontology#> .
+@prefix bmres: <https://bicismart.madrid.data.es/resource/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfs:label a owl:AnnotationProperty ;
+    rdfs:label "label" .
+
+bm: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+bmres:station1 a owl:NamedIndividual,
+        bm:BikeStation ;
+    rdfs:label "2 - Metro Callao"^^xsd:string ;
+    bm:hasPoint bmres:geometryStation1 ;
+    bm:hasState bmres:stationState1 ;
+    bm:locatedOnStreet bmres:street507100 ;
+    bm:stationId "2"^^xsd:string ;
+    bm:totalCapacity 27 .
+
+bmres:geometryStation1 a owl:NamedIndividual,
+        bm:Point ;
+    geo1:lat 4.04204e+01 ;
+    geo1:long -3.70569e+00 .
+
+bmres:stationState1 a owl:NamedIndividual,
+        bm:StationState ;
+    bm:isActivated true ;
+    bm:operationalState "IN_SERVICE"^^xsd:string ;
+    bm:unavailableBases 0 .
+
+bmres:street507100 a owl:NamedIndividual,
+        bm:Street ;
+    bm:districtCode 1 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28004"^^xsd:string ;
+    bm:streetCode 507100 ;
+    bm:streetName "CALLE MIGUEL MOYA"^^xsd:string .
+

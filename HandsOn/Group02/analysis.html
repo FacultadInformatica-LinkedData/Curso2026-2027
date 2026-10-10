@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis – Main Municipal Parks and Gardens of Madrid</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 960px; margin: auto; padding: 0 15px; line-height: 1.5; }
+    h1 { border-bottom: 5px solid #3cb364; padding-bottom: 10px; }
+    .box { background:#f1f5f3; padding:15px; border-radius:5px; margin-bottom:20px; }
+    table { border-collapse: collapse; width:100%; margin-bottom: 15px; font-size: 14px; }
+    th, td { border:1px solid #c8d9c2; padding:5px 8px; text-align:left; vertical-align: top; }
+    th { background:#dcebd5; }
+    code { background:#f4f4f4; padding:1px 4px; }
+  </style>
+</head>
+<body>
+<h1>Analysis of the data source</h1>
+<p>Group 02 – Hands-on assignment 2. Dataset: <em>Main Municipal Parks and Gardens of Madrid</em> (Madrid City Council).</p>
+
+<h2>1. Data set analysis</h2>
+
+<h3>1.1 General description</h3>
+<div class="box">
+  <ul>
+    <li><strong>File:</strong> <code>200761-0-parques-jardines-csv.csv</code>, comma-separated, text fields in double quotes, header in the first row.</li>
+    <li><strong>Size:</strong> 208 records (one per park/garden) and 32 columns.</li>
+    <li><strong>Primary key:</strong> <code>PK</code> (numeric, 208 distinct values, no duplicates).</li>
+    <li><strong>Language:</strong> Spanish (column names and free text).</li>
+    <li><strong>Domain:</strong> Smart City / environment (green spaces).</li>
+  </ul>
+</div>
+
+<h3>1.2 Schema</h3>
+<table>
+  <tr><th>Column(s)</th><th>Meaning</th><th>Type</th><th>Value Range / Distinct Values</th></tr>
+  <tr><td>PK</td><td>Unique identifier of the park</td><td>integer</td><td>Unique IDs </td></tr>
+  <tr><td>NOMBRE</td><td>Name of the park</td><td>string</td><td>208 unique names</td></tr>
+  <tr><td>DESCRIPCION-ENTIDAD, DESCRIPCION</td><td>Long free-text description</td><td>string</td><td>Free text overview / historical summary</td></tr>
+  <tr><td>HORARIO</td><td>Opening hours (free text)</td><td>string</td><td>23 seasonal opening specifications</td></tr>
+  <tr><td>EQUIPAMIENTO</td><td>Facilities (free text)</td><td>string</td><td>Amenities (calisthenics, playgrounds, viewpoints)</td></tr>
+  <tr><td>TRANSPORTE</td><td>Public transport nearby (free text)</td><td>string</td><td>Metro, Bus, and Bicimad access notes</td></tr>
+  <tr><td>ACCESIBILIDAD</td><td>Accessibility code </td><td>integer code</td><td>Discrete values: 0, 1, 2</td></tr>
+  <tr><td>CONTENT-URL</td><td>Page of the park in madrid.es</td><td>URL</td><td>Official portal landing URLs</td></tr>
+  <tr><td>NOMBRE-VIA, CLASE-VIAL, TIPO-NUM, NUM, PLANTA, PUERTA, ESCALERAS, ORIENTACION</td><td>Street address (street name, type, number, ...)</td><td>string / integer</td><td>Calle, Paseo, Plaza, Avenida + street numbers</td></tr>
+  <tr><td>LOCALIDAD, PROVINCIA, CODIGO-POSTAL</td><td>Locality, province and postcode</td><td>string / integer</td><td>Madrid postal codes (28001 &ndash; 28055)</td></tr>
+  <tr><td>COD-BARRIO, BARRIO</td><td>Neighbourhood code (1&ndash;8, local to the district) and name</td><td>integer / string</td><td>94 unique neighbourhoods</td></tr>
+  <tr><td>COD-DISTRITO, DISTRITO</td><td>District code (1&ndash;21) and name</td><td>integer / string</td><td>21 municipal districts (plus 3 multi-district rows)</td></tr>
+  <tr><td>COORDENADA-X, COORDENADA-Y</td><td>Projected coordinates (UTM, ETRS89)</td><td>decimal</td><td>UTM ETRS89 projection</td></tr>
+  <tr><td>LATITUD, LONGITUD</td><td>WGS84 coordinates</td><td>decimal</td><td>Lat: [40.344, 40.582], Lon: [-3.785, -3.578]</td></tr>
+  <tr><td>TELEFONO, FAX, EMAIL</td><td>Contact data</td><td>string</td><td>Contact channels for historical parks</td></tr>
+  <tr><td>TIPO</td><td>Category path of the portal</td><td>string</td><td>ParquesHistoricos, ParquesForestales, etc.</td></tr>
+</table>
+
+
+<h2>2. Licensing analysis</h2>
+ <div class="box">
+    <h3>Original Data Source Licensing</h3>
+    <ul>
+      <li><strong>Data Publisher:</strong> Ayuntamiento de Madrid (Madrid City Council)</li>
+      <li><strong>Rightsholder:</strong> Ayuntamiento de Madrid <a href="https://datos.madrid.es/dataset/200761-0-parques-jardines">parques-jardines.csv</a ></li>
+      <li><strong>License:</strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</li>
+      <li><strong>Terms of Reuse:</strong> Allows commercial and non-commercial reuse, transformation, and distribution as long as original attribution is acknowledged.</li>
+    </ul>
+
+    <h3>Generated Linked Data Licensing</h3>
+    <ul>
+      <li><strong>Target License:</strong> Creative Commons Attribution 4.0 International (CC BY 4.0)</li>
+      <li><strong>Justification:</strong> Adopting CC BY 4.0 guarantees full license compatibility with the upstream source without restrictive copyleft lock-in, enabling frictionless federation with Wikidata, DBpedia, and European open data platforms while giving proper credit to the City Council.</li>
+    </ul>
+  </div>
+
+<h2>3. Resource naming strategy</h2>
+<div class="box">
+<p>Following W3C Best Practices for publishing Linked Data:</p >
+    <ul>
+      <li><strong>Base Domain:</strong> <code>https://parques-jardines.madrid.data.es/</code></li>
+      <li><strong>Content Negotiation:</strong> 303 See Other redirection separating non-information resources from document representations (HTML / Turtle / RDF-XML).</li>
+      <li><strong>Ontology URI:</strong> <code>https://parques-jardines.madrid.data.es/ontology#</code> (Hash namespace pattern)</li>
+      <li><strong>Class Pattern:</strong> <code>https://parques-jardines.madrid.data.es/ontology#UpperCamelCase</code></li>
+      <li><strong>Property Pattern:</strong> <code>https://parques-jardines.madrid.data.es/ontology#lowerCamelCase</code></li>
+      <li><strong>Individual Resource Pattern:</strong> <code>https://parques-jardines.madrid.data.es/resource/{entityType}/{id}</code> (Slash namespace pattern)
+        <ul>
+          <li>Park: <code>https://parques-jardines.madrid.data.es/resource/park/{PK}</code></li>
+          <li>District: <code>https://parques-jardines.madrid.data.es/resource/district/{COD-DISTRITO}</code></li>
+          <li>Neighborhood: <code>https://parques-jardines.madrid.data.es/resource/neighborhood/{COD-BARRIO}</code></li>
+          <li>Address: <code>https://parques-jardines.madrid.data.es/resource/address/{PK}</code></li>
+        </ul>
+      </li>
+    </ul>
+</div>
+</body>
+</html>

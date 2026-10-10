@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AireMAD – Application Requirements</title>
+<style>
+  :root{
+    --ink:#1d2433; --muted:#5b6475; --line:#d9dee7; --bg:#f6f7f9; --card:#fff;
+    --accent:#1f6feb;
+    --good:#2e9d5b; --fair:#9bc53d; --mod:#f2c12e; --poor:#f08a24; --vpoor:#d64541; --ext:#7a1f5c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  main{max-width:1100px;margin:0 auto;padding:32px 20px 64px}
+  h1{font-size:2rem;margin:0 0 4px}
+  h2{margin-top:48px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+  h3{margin-top:28px}
+  .sub{color:var(--muted);margin:0 0 24px}
+  table{width:100%;border-collapse:collapse;background:var(--card);margin:12px 0;font-size:.93rem}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#eef1f6}
+  code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:.88em}
+  .tag{display:inline-block;font-size:.75rem;padding:1px 7px;border-radius:10px;background:#e7effd;color:var(--accent);font-weight:600}
+  .must{background:#fde8e8;color:#b42318}
+  .should{background:#fff4e0;color:#a15c07}
+  .could{background:#e8f5ec;color:#1f7a45}
+
+  /* Mock-up container styling */
+  .mockup-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 36px;
+  }
+  .phone-frame {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 40px;
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.35), 0 0 0 10px #1e293b, 0 0 0 12px #475569;
+    overflow: hidden;
+    background: #0b1120;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>AireMAD – Interactive air-quality map of Madrid</h1>
+<p class="sub">Hands-on assignment 1 · Application requirements · Group02</p>
+
+<h2>1. Purpose and scope</h2>
+<p><strong>AireMAD</strong> is a mobile application that shows, on an interactive map, the air pollution measured at the monitoring locations in Madrid. Users can select a pollutant and a date, see which areas of the city are most affected, open the history of any location, and compare districts.</p>
+<p>The application will be built on top of the Linked Data generated in this course from the Madrid open-data air-quality datasets, which may be linked to other datasets to enrich the information shown.</p>
+<p>The application is aimed at citizens who want to check the air quality in their neighbourhood before outdoor activities and people with respiratory problems who need to avoid days or areas above recommended thresholds.</p>
+
+<h2>2. Application requirements</h2>
+<p>The application must:</p>
+<ul>
+  <li>Show a map of Madrid with every air-quality monitoring location.</li>
+  <li>Colour each location according to the pollution level of the selected pollutant.</li>
+  <li>Show the details of a location when clicked: name, address, type, value of the day and the evolution over the last 30 days compared with the reference value.</li>
+  <li>Show additional information about the area where the location is and about the pollutant, obtained from linked datasets.</li>
+  <li>Show a ranking of the most and least polluted locations.</li>
+  <li>Show average values per district and allow comparing several locations over a period.</li>
+  <li>Work on mobile devices.</li>
+</ul>
+
+<h2>3. User interface mock-ups</h2>
+
+<h3>3.1 Main Map View</h3>
+<p>Interactive map of Madrid displaying air-quality monitoring stations colour-coded according to current European AQI levels. Includes a top pollutant filter bar (NO₂, PM₂.₅, PM₁₀, O₃, SO₂), quick date selector, search functionality, and AQI reference legend.</p>
+<div class="mockup-wrapper">
+  <svg class="phone-frame" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 750">
+    <defs>
+      <linearGradient id="m1-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a"/>
+        <stop offset="100%" stop-color="#1e293b"/>
+      </linearGradient>
+      <filter id="m1-shadow" x="-10%" y="-10%" width="120%" height="130%">
+        <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+      </filter>
+    </defs>
+
+    <rect width="375" height="750" fill="#0b1120"/>
+
+    <!-- Status Bar & Notch -->
+    <path d="M120 0 H255 C255 14 245 22 232 22 H143 C130 22 120 14 120 0 Z" fill="#020617"/>
+    <text x="34" y="16" fill="#94a3b8" font-size="11" font-weight="600" font-family="sans-serif">09:41</text>
+    <circle cx="320" cy="12" r="2.5" fill="#94a3b8"/>
+    <circle cx="328" cy="12" r="2.5" fill="#94a3b8"/>
+    <rect x="338" y="7" width="18" height="10" rx="3" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="340" y="9" width="12" height="6" rx="1.5" fill="#10b981"/>
+
+    <!-- Header -->
+    <rect x="0" y="24" width="375" height="110" fill="url(#m1-grad-header)"/>
+    <text x="20" y="52" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1" font-family="sans-serif">AireMAD</text>
+    <text x="20" y="74" fill="#ffffff" font-size="18" font-weight="800" font-family="sans-serif">Air Quality</text>
+    
+    <g transform="translate(245, 48)">
+      <rect width="110" height="24" rx="12" fill="#334155"/>
+      <text x="55" y="16" fill="#e2e8f0" font-size="10" font-weight="600" text-anchor="middle" font-family="sans-serif">📅 Today, Oct 1</text>
+    </g>
+
+    <g transform="translate(20, 88)">
+      <rect width="335" height="34" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="22" fill="#64748b" font-size="12" font-family="sans-serif">🔍 Search station, neighbourhood or park...</text>
+    </g>
+
+    <!-- Pollutants -->
+    <g transform="translate(20, 144)" font-family="sans-serif">
+      <rect x="0" y="0" width="62" height="28" rx="14" fill="#2563eb"/>
+      <text x="31" y="18" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">NO₂</text>
+      <rect x="68" y="0" width="68" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="102" y="18" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">PM₂.₅</text>
+      <rect x="142" y="0" width="64" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="174" y="18" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">PM₁₀</text>
+      <rect x="212" y="0" width="58" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="241" y="18" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">O₃</text>
+      <rect x="276" y="0" width="58" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="305" y="18" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">SO₂</text>
+    </g>
+
+    <!-- Map Canvas -->
+    <g transform="translate(0, 184)" font-family="sans-serif">
+      <rect width="375" height="490" fill="#131c31"/>
+      <path d="M0 60 H375 M0 140 H375 M0 220 H375 M0 310 H375 M0 400 H375" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4"/>
+      <path d="M70 0 V490 M160 0 V490 M250 0 V490 M330 0 V490" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- Parks & River -->
+      <path d="M20 180 Q60 160 85 210 Q90 280 40 310 Q10 260 20 180 Z" fill="#064e3b" opacity="0.6"/>
+      <text x="46" y="245" fill="#34d399" font-size="9" font-weight="600" text-anchor="middle">Casa de Campo</text>
+
+      <rect x="220" y="180" width="55" height="75" rx="12" fill="#064e3b" opacity="0.6"/>
+      <text x="247" y="222" fill="#34d399" font-size="9" font-weight="600" text-anchor="middle">Retiro</text>
+
+      <path d="M95 0 Q105 130 90 230 Q70 330 110 490" fill="none" stroke="#0369a1" stroke-width="7" opacity="0.5"/>
+      <path d="M120 70 C280 60 310 140 310 260 C310 370 240 430 150 420 C80 410 70 340 75 250 C80 140 90 80 120 70 Z" fill="none" stroke="#334155" stroke-width="4"/>
+      <text x="315" y="160" fill="#64748b" font-size="8" font-weight="700">M-30</text>
+
+      <!-- Stations -->
+      <g transform="translate(60, 215)">
+        <circle cx="0" cy="0" r="14" fill="#059669" filter="url(#m1-shadow)"/>
+        <circle cx="0" cy="0" r="6" fill="#ecfdf5"/>
+        <rect x="-24" y="17" width="48" height="14" rx="7" fill="#022c22"/>
+        <text x="0" y="27" fill="#6ee7b7" font-size="8" font-weight="700" text-anchor="middle">12 µg/m³</text>
+      </g>
+
+      <g transform="translate(245, 205)">
+        <circle cx="0" cy="0" r="14" fill="#059669" filter="url(#m1-shadow)"/>
+        <circle cx="0" cy="0" r="6" fill="#ecfdf5"/>
+        <rect x="-24" y="17" width="48" height="14" rx="7" fill="#022c22"/>
+        <text x="0" y="27" fill="#6ee7b7" font-size="8" font-weight="700" text-anchor="middle">19 µg/m³</text>
+      </g>
+
+      <g transform="translate(175, 195)">
+        <circle cx="0" cy="0" r="22" fill="#ef4444" opacity="0.25"/>
+        <circle cx="0" cy="0" r="16" fill="#dc2626" filter="url(#m1-shadow)"/>
+        <circle cx="0" cy="0" r="7" fill="#fef2f2"/>
+        <path d="M0 -16 L-6 -22 H-45 C-50 -22 -54 -26 -54 -31 V-50 C-54 -55 -50 -59 -45 -59 H45 C50 -59 54 -55 54 -50 V-31 C54 -26 50 -22 45 -22 H6 Z" fill="#1e293b" stroke="#dc2626" stroke-width="1.5" filter="url(#m1-shadow)"/>
+        <text x="0" y="-44" fill="#f87171" font-size="8" font-weight="800" text-anchor="middle">🔴 PZA. DEL CARMEN</text>
+        <text x="0" y="-30" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">58 µg/m³ · Poor</text>
+      </g>
+
+      <g transform="translate(210, 320)">
+        <circle cx="0" cy="0" r="13" fill="#d97706" filter="url(#m1-shadow)"/>
+        <circle cx="0" cy="0" r="5" fill="#fef3c7"/>
+        <rect x="-24" y="16" width="48" height="14" rx="7" fill="#451a03"/>
+        <text x="0" y="26" fill="#fcd34d" font-size="8" font-weight="700" text-anchor="middle">34 µg/m³</text>
+      </g>
+
+      <g transform="translate(195, 110)">
+        <circle cx="0" cy="0" r="13" fill="#ea580c" filter="url(#m1-shadow)"/>
+        <circle cx="0" cy="0" r="5" fill="#ffedd5"/>
+        <rect x="-24" y="16" width="48" height="14" rx="7" fill="#431407"/>
+        <text x="0" y="26" fill="#fdba74" font-size="8" font-weight="700" text-anchor="middle">46 µg/m³</text>
+      </g>
+
+      <!-- Legend -->
+      <g transform="translate(15, 410)">
+        <rect width="345" height="52" rx="14" fill="#0f172a" opacity="0.95" stroke="#334155" stroke-width="1"/>
+        <text x="14" y="18" fill="#94a3b8" font-size="9" font-weight="700">AIR QUALITY INDEX (AQI - NO₂):</text>
+        <circle cx="18" cy="34" r="5" fill="#10b981"/>
+        <text x="27" y="37" fill="#e2e8f0" font-size="8.5">Good (&lt;20)</text>
+        <circle cx="95" cy="34" r="5" fill="#f59e0b"/>
+        <text x="104" y="37" fill="#e2e8f0" font-size="8.5">Mod (20-40)</text>
+        <circle cx="180" cy="34" r="5" fill="#f97316"/>
+        <text x="189" y="37" fill="#e2e8f0" font-size="8.5">Sensitive (41-50)</text>
+        <circle cx="282" cy="34" r="5" fill="#ef4444"/>
+        <text x="291" y="37" fill="#e2e8f0" font-size="8.5">Poor (&gt;50)</text>
+      </g>
+    </g>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="680" width="375" height="70" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <g transform="translate(63, 700)" font-family="sans-serif">
+      <circle cx="0" cy="8" r="16" fill="#1e3a8a"/>
+      <text x="0" y="12" fill="#60a5fa" font-size="14" text-anchor="middle">🗺️</text>
+      <text x="0" y="32" fill="#60a5fa" font-size="9" font-weight="700" text-anchor="middle">Map</text>
+    </g>
+    <g transform="translate(188, 700)" font-family="sans-serif">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🏆</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Rankings</text>
+    </g>
+    <g transform="translate(313, 700)" font-family="sans-serif">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">⚖️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Compare</text>
+    </g>
+  </svg>
+</div>
+
+<h3>3.2 Station Detail &amp; Linked Data View</h3>
+<p>Detailed station sheet showing real-time measurements, secondary pollutant levels, health recommendations, a 30-day temporal evolution chart against the EU binding limit (40 µg/m³), and Wikidata semantic enrichment (substance chemical formula/hazards and municipal district statistics).</p>
+<div class="mockup-wrapper">
+  <svg class="phone-frame" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 750" font-family="system-ui, -apple-system, sans-serif">
+    <rect width="375" height="750" fill="#0b1120"/>
+
+    <!-- Status Bar & Notch -->
+    <path d="M120 0 H255 C255 14 245 22 232 22 H143 C130 22 120 14 120 0 Z" fill="#020617"/>
+    <text x="32" y="16" fill="#94a3b8" font-size="11" font-weight="600">09:41</text>
+    <circle cx="316" cy="12" r="2.5" fill="#94a3b8"/>
+    <circle cx="324" cy="12" r="2.5" fill="#94a3b8"/>
+    <rect x="335" y="7" width="18" height="10" rx="3" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="337" y="9" width="12" height="6" rx="1.5" fill="#10b981"/>
+
+    <!-- Navigation Header -->
+    <g transform="translate(16, 32)">
+      <circle cx="14" cy="12" r="14" fill="#1e293b"/>
+      <text x="14" y="16" fill="#38bdf8" font-size="16" font-weight="800" text-anchor="middle">‹</text>
+      <text x="35" y="16" fill="#94a3b8" font-size="11.5" font-weight="600">Back to map</text>
+      <circle cx="305" cy="12" r="13" fill="#1e293b"/>
+      <text x="305" y="16" fill="#94a3b8" font-size="11" text-anchor="middle">↗</text>
+      <circle cx="335" cy="12" r="13" fill="#1e293b"/>
+      <text x="335" y="16" fill="#facc15" font-size="11" text-anchor="middle">★</text>
+    </g>
+
+    <!-- Station Info (Online pill removed) -->
+    <g transform="translate(16, 70)">
+      <text x="0" y="12" fill="#64748b" font-size="9" font-weight="600">Station #28079035 · Urban traffic</text>
+      <text x="0" y="34" fill="#ffffff" font-size="18" font-weight="800">Plaza del Carmen</text>
+      <text x="0" y="47" fill="#94a3b8" font-size="9.5">Centro District · 40.419° N, 3.703° W</text>
+    </g>
+
+    <!-- Hero Measurement Card -->
+    <g transform="translate(16, 126)">
+      <rect width="343" height="106" rx="14" fill="#111827" stroke="#1f2937" stroke-width="1.2"/>
+      <rect x="10" y="10" width="88" height="86" rx="10" fill="#1f1523" stroke="#ef4444" stroke-width="1.2"/>
+      <text x="54" y="28" fill="#f87171" font-size="8.5" font-weight="800" text-anchor="middle">CURRENT NO₂</text>
+      <text x="54" y="62" fill="#ffffff" font-size="30" font-weight="900" text-anchor="middle">58</text>
+      <text x="54" y="80" fill="#94a3b8" font-size="9.5" font-weight="600" text-anchor="middle">µg/m³</text>
+
+      <g transform="translate(108, 12)">
+        <rect x="0" y="0" width="70" height="20" rx="6" fill="#7f1d1d"/>
+        <circle cx="8" cy="10" r="3" fill="#ef4444"/>
+        <text x="40" y="13.5" fill="#fee2e2" font-size="8" font-weight="800" text-anchor="middle">POOR</text>
+        <text x="0" y="34" fill="#facc15" font-size="8.5" font-weight="700">⚠️ Health recommendation:</text>
+        <text x="0" y="47" fill="#cbd5e1" font-size="8">People with asthma or respiratory conditions:</text>
+        <text x="0" y="58" fill="#e2e8f0" font-size="8" font-weight="600">reduce intense outdoor exercise.</text>
+
+        <g transform="translate(0, 68)" font-size="8">
+          <rect x="0" y="0" width="68" height="16" rx="4" fill="#1e293b"/>
+          <text x="34" y="11.5" fill="#cbd5e1" text-anchor="middle">PM₂.₅: <tspan fill="#fbbf24" font-weight="700">19</tspan></text>
+          <rect x="73" y="0" width="68" height="16" rx="4" fill="#1e293b"/>
+          <text x="107" y="11.5" fill="#cbd5e1" text-anchor="middle">PM₁₀: <tspan fill="#34d399" font-weight="700">26</tspan></text>
+          <rect x="146" y="0" width="60" height="16" rx="4" fill="#1e293b"/>
+          <text x="176" y="11.5" fill="#cbd5e1" text-anchor="middle">O₃: <tspan fill="#34d399" font-weight="700">32</tspan></text>
+        </g>
+      </g>
+    </g>
+
+    <!-- 30-Day Chart (Wireframe Style) -->
+    <g transform="translate(16, 240)">
+      <rect width="343" height="170" rx="14" fill="#111827" stroke="#1f2937" stroke-width="1.2"/>
+      <text x="14" y="22" fill="#ffffff" font-size="11" font-weight="700">30-day evolution (NO₂)</text>
+      <rect x="233" y="10" width="98" height="18" rx="5" fill="#1e293b"/>
+      <text x="282" y="22.5" fill="#f87171" font-size="7.5" font-weight="700" text-anchor="middle">EU limit: 40 µg/m³</text>
+
+      <g fill="#64748b" font-size="7.5" text-anchor="end">
+        <text x="28" y="48">80</text>
+        <line x1="33" y1="45" x2="330" y2="45" stroke="#1f2937" stroke-width="0.7"/>
+        <text x="28" y="122">0</text>
+        <line x1="33" y1="119" x2="330" y2="119" stroke="#1f2937" stroke-width="0.7"/>
+      </g>
+      <line x1="33" y1="82" x2="330" y2="82" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="328" y="78" fill="#ef4444" font-size="7" font-weight="700" text-anchor="end">EU Binding Limit (40)</text>
+
+      <!-- Raw polyline -->
+      <polyline points="36,112 70,105 105,98 140,118 175,54 210,60 245,102 280,80 326,72" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <g fill="#64748b" font-size="8">
+        <text x="36" y="146">Oct 1</text>
+        <text x="175" y="146" text-anchor="middle">Oct 15</text>
+        <text x="326" y="146" text-anchor="end" fill="#38bdf8" font-weight="700">Oct 30</text>
+      </g>
+    </g>
+
+    <!-- Semantic Enrichment (Wireframe layout) -->
+    <g transform="translate(16, 418)">
+      <rect width="343" height="248" rx="14" fill="#111827" stroke="#1f2937" stroke-width="1.2"/>
+      <text x="14" y="20" fill="#94a3b8" font-size="9" font-weight="700" letter-spacing="0.5">🌐 SEMANTIC ENRICHMENT (WIKIDATA)</text>
+
+      <!-- Substance -->
+      <g transform="translate(10, 30)">
+        <rect width="323" height="94" rx="10" fill="#0d1527" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#cbd5e1" font-size="9.5" font-weight="700">SUBSTANCE: Nitrogen Dioxide</text>
+        <text x="310" y="20" fill="#38bdf8" font-size="8" font-weight="600" text-anchor="end">wd:Q207895 ↗</text>
+        <line x1="10" y1="28" x2="313" y2="28" stroke="#1e293b"/>
+        <text x="12" y="44" fill="#94a3b8" font-size="8.2">• CAS: 10102-44-0 · Formula: NO₂ (46 g/mol)</text>
+        <text x="12" y="58" fill="#94a3b8" font-size="8.2">• Primary source: Fossil fuels &amp; diesel exhaust</text>
+        <text x="12" y="74" fill="#f87171" font-size="8">• Health impact: Airway inflammation &amp; asthma triggers</text>
+      </g>
+
+      <!-- District -->
+      <g transform="translate(10, 134)">
+        <rect width="323" height="94" rx="10" fill="#0d1527" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#cbd5e1" font-size="9.5" font-weight="700">DISTRICT: Centro District (Madrid)</text>
+        <text x="310" y="20" fill="#38bdf8" font-size="8" font-weight="600" text-anchor="end">wd:Q1763376 ↗</text>
+        <line x1="10" y1="28" x2="313" y2="28" stroke="#1e293b"/>
+        <text x="12" y="44" fill="#94a3b8" font-size="8.2">• Population: 140,473 hab · Density: 26,850 hab/km²</text>
+        <text x="12" y="58" fill="#94a3b8" font-size="8.2">• Municipality: Madrid (wd:Q2807)</text>
+        <text x="12" y="74" fill="#34d399" font-size="8">• Environmental zone: Low Emission Zone (ZBE Centro)</text>
+      </g>
+    </g>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="680" width="375" height="70" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <g transform="translate(63, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🗺️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Map</text>
+    </g>
+    <g transform="translate(188, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🏆</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Rankings</text>
+    </g>
+    <g transform="translate(313, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">⚖️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Compare</text>
+    </g>
+  </svg>
+</div>
+
+<h3>3.3 Citywide Pollution Rankings</h3>
+<p>Municipal ranking contrasting the cleanest locations against pollution hotspots across the city, filterable by timeframe (Today, Past week, This month) and categorized by location type.</p>
+<div class="mockup-wrapper">
+  <svg class="phone-frame" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 750" font-family="sans-serif">
+    <rect width="375" height="750" fill="#0b1120"/>
+
+    <!-- Status Bar & Notch -->
+    <path d="M120 0 H255 C255 14 245 22 232 22 H143 C130 22 120 14 120 0 Z" fill="#020617"/>
+    <text x="34" y="16" fill="#94a3b8" font-size="11" font-weight="600">09:41</text>
+    <rect x="338" y="7" width="18" height="10" rx="3" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="340" y="9" width="12" height="6" rx="1.5" fill="#10b981"/>
+
+    <!-- Header -->
+    <g transform="translate(20, 40)">
+      <text x="0" y="0" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1">MUNICIPAL RANKING</text>
+      <text x="0" y="26" fill="#ffffff" font-size="20" font-weight="800">Air Quality Rankings</text>
+    </g>
+
+    <!-- Timeframe Filters -->
+    <g transform="translate(20, 84)">
+      <rect x="0" y="0" width="70" height="28" rx="14" fill="#2563eb"/>
+      <text x="35" y="18" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">Today</text>
+      <rect x="78" y="0" width="110" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="133" y="18" fill="#94a3b8" font-size="10" font-weight="600" text-anchor="middle">Past week</text>
+      <rect x="196" y="0" width="95" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+      <text x="243" y="18" fill="#94a3b8" font-size="10" font-weight="600" text-anchor="middle">This month</text>
+    </g>
+
+    <!-- Toggle Cleanest / Hotspots -->
+    <g transform="translate(20, 126)">
+      <rect width="335" height="40" rx="12" fill="#0f172a" stroke="#1e293b"/>
+      <rect x="4" y="4" width="160" height="32" rx="8" fill="#065f46"/>
+      <text x="84" y="24" fill="#a7f3d0" font-size="11" font-weight="700" text-anchor="middle">🟢 Cleanest (Top 5)</text>
+      <text x="248" y="24" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="middle">🔴 Hotspots</text>
+    </g>
+
+    <!-- Rankings List -->
+    <!-- #1 -->
+    <g transform="translate(20, 180)">
+      <rect width="335" height="66" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+      <rect x="12" y="16" width="34" height="34" rx="10" fill="#064e3b"/>
+      <text x="29" y="38" fill="#34d399" font-size="14" font-weight="800" text-anchor="middle">#1</text>
+      <text x="58" y="30" fill="#ffffff" font-size="13" font-weight="700">Casa de Campo</text>
+      <text x="58" y="46" fill="#64748b" font-size="10">Moncloa District · Urban background</text>
+      <rect x="245" y="18" width="76" height="30" rx="8" fill="#064e3b"/>
+      <text x="283" y="37" fill="#6ee7b7" font-size="11" font-weight="700" text-anchor="middle">12 µg/m³</text>
+    </g>
+
+    <!-- #2 -->
+    <g transform="translate(20, 254)">
+      <rect width="335" height="66" rx="14" fill="#0f172a" stroke="#1e293b"/>
+      <rect x="12" y="16" width="34" height="34" rx="10" fill="#1e293b"/>
+      <text x="29" y="38" fill="#94a3b8" font-size="14" font-weight="800" text-anchor="middle">#2</text>
+      <text x="58" y="30" fill="#ffffff" font-size="13" font-weight="700">El Pardo</text>
+      <text x="58" y="46" fill="#64748b" font-size="10">Fuencarral District · Periurban</text>
+      <rect x="245" y="18" width="76" height="30" rx="8" fill="#064e3b"/>
+      <text x="283" y="37" fill="#6ee7b7" font-size="11" font-weight="700" text-anchor="middle">14 µg/m³</text>
+    </g>
+
+    <!-- #3 -->
+    <g transform="translate(20, 328)">
+      <rect width="335" height="66" rx="14" fill="#0f172a" stroke="#1e293b"/>
+      <rect x="12" y="16" width="34" height="34" rx="10" fill="#1e293b"/>
+      <text x="29" y="38" fill="#94a3b8" font-size="14" font-weight="800" text-anchor="middle">#3</text>
+      <text x="58" y="30" fill="#ffffff" font-size="13" font-weight="700">Juan Carlos I</text>
+      <text x="58" y="46" fill="#64748b" font-size="10">Barajas District · Urban park</text>
+      <rect x="245" y="18" width="76" height="30" rx="8" fill="#064e3b"/>
+      <text x="283" y="37" fill="#6ee7b7" font-size="11" font-weight="700" text-anchor="middle">18 µg/m³</text>
+    </g>
+
+    <!-- #4 -->
+    <g transform="translate(20, 402)">
+      <rect width="335" height="66" rx="14" fill="#0f172a" stroke="#1e293b"/>
+      <rect x="12" y="16" width="34" height="34" rx="10" fill="#1e293b"/>
+      <text x="29" y="38" fill="#94a3b8" font-size="14" font-weight="800" text-anchor="middle">#4</text>
+      <text x="58" y="30" fill="#ffffff" font-size="13" font-weight="700">Tres Olivos</text>
+      <text x="58" y="46" fill="#64748b" font-size="10">Fuencarral District · Urban background</text>
+      <rect x="245" y="18" width="76" height="30" rx="8" fill="#451a03"/>
+      <text x="283" y="37" fill="#fcd34d" font-size="11" font-weight="700" text-anchor="middle">21 µg/m³</text>
+    </g>
+
+    <!-- #5 -->
+    <g transform="translate(20, 476)">
+      <rect width="335" height="66" rx="14" fill="#0f172a" stroke="#1e293b"/>
+      <rect x="12" y="16" width="34" height="34" rx="10" fill="#1e293b"/>
+      <text x="29" y="38" fill="#94a3b8" font-size="14" font-weight="800" text-anchor="middle">#5</text>
+      <text x="58" y="30" fill="#ffffff" font-size="13" font-weight="700">El Retiro</text>
+      <text x="58" y="46" fill="#64748b" font-size="10">Retiro District · Historic gardens</text>
+      <rect x="245" y="18" width="76" height="30" rx="8" fill="#451a03"/>
+      <text x="283" y="37" fill="#fcd34d" font-size="11" font-weight="700" text-anchor="middle">24 µg/m³</text>
+    </g>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="680" width="375" height="70" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <g transform="translate(63, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🗺️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Map</text>
+    </g>
+    <g transform="translate(188, 700)">
+      <circle cx="0" cy="8" r="16" fill="#1e3a8a"/>
+      <text x="0" y="12" fill="#60a5fa" font-size="14" text-anchor="middle">🏆</text>
+      <text x="0" y="32" fill="#60a5fa" font-size="9" font-weight="700" text-anchor="middle">Rankings</text>
+    </g>
+    <g transform="translate(313, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">⚖️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Compare</text>
+    </g>
+  </svg>
+</div>
+
+<h3>3.4 Multi-Station Comparison &amp; Analytics</h3>
+<p>Comparative interface supporting 3 or more stations simultaneously. Features interactive station tags, overlaid time-series curves against the WHO regulatory threshold (40 µg/m³), and an aggregate statistical summary comparing averages, peak values, and station typologies.</p>
+<div class="mockup-wrapper">
+  <svg class="phone-frame" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 750" font-family="sans-serif">
+    <rect width="375" height="750" fill="#0b1120"/>
+
+    <!-- Status Bar & Notch -->
+    <path d="M120 0 H255 C255 14 245 22 232 22 H143 C130 22 120 14 120 0 Z" fill="#020617"/>
+    <text x="34" y="16" fill="#94a3b8" font-size="11" font-weight="600">09:41</text>
+    <rect x="338" y="7" width="18" height="10" rx="3" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="340" y="9" width="12" height="6" rx="1.5" fill="#10b981"/>
+
+    <!-- Top Header -->
+    <g transform="translate(20, 38)">
+      <text x="0" y="14" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1">MULTI-CRITERIA ANALYTICS</text>
+      <text x="0" y="36" fill="#ffffff" font-size="20" font-weight="800">Compare Stations</text>
+    </g>
+
+    <!-- Multi-Station Selectors (3 stations) -->
+    <g transform="translate(20, 78)">
+      <rect width="335" height="28" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+      <circle cx="16" cy="14" r="5" fill="#3b82f6"/>
+      <text x="28" y="17.5" fill="#93c5fd" font-size="9" font-weight="800">A</text>
+      <text x="44" y="17.5" fill="#ffffff" font-size="10.5" font-weight="600">Plaza del Carmen (Centro)</text>
+      <text x="318" y="18" fill="#64748b" font-size="11" text-anchor="middle">✕</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <rect width="335" height="28" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+      <circle cx="16" cy="14" r="5" fill="#10b981"/>
+      <text x="28" y="17.5" fill="#a7f3d0" font-size="9" font-weight="800">B</text>
+      <text x="44" y="17.5" fill="#ffffff" font-size="10.5" font-weight="600">Casa de Campo (Moncloa)</text>
+      <text x="318" y="18" fill="#64748b" font-size="11" text-anchor="middle">✕</text>
+    </g>
+
+    <g transform="translate(20, 142)">
+      <rect width="335" height="28" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2"/>
+      <circle cx="16" cy="14" r="5" fill="#f59e0b"/>
+      <text x="28" y="17.5" fill="#fde68a" font-size="9" font-weight="800">C</text>
+      <text x="44" y="17.5" fill="#ffffff" font-size="10.5" font-weight="600">Escuelas Aguirre (Salamanca)</text>
+      <text x="318" y="18" fill="#64748b" font-size="11" text-anchor="middle">✕</text>
+    </g>
+
+    <!-- Add station action button -->
+    <g transform="translate(20, 174)">
+      <rect width="335" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-dasharray="3 3"/>
+      <text x="167.5" y="16" fill="#94a3b8" font-size="9.5" font-weight="600" text-anchor="middle">+ Add another station (up to 4)</text>
+    </g>
+
+    <!-- Multi-Series Chart (Rudimentary Wireframe) -->
+    <g transform="translate(20, 206)">
+      <rect width="335" height="190" rx="16" fill="#0f172a" stroke="#1e293b"/>
+      <text x="14" y="20" fill="#ffffff" font-size="11" font-weight="700">Time-series comparison (NO₂)</text>
+
+      <circle cx="18" cy="34" r="3.5" fill="#3b82f6"/>
+      <text x="26" y="37" fill="#93c5fd" font-size="8" font-weight="600">Pza. Carmen</text>
+      <circle cx="120" cy="34" r="3.5" fill="#10b981"/>
+      <text x="128" y="37" fill="#a7f3d0" font-size="8" font-weight="600">Casa Campo</text>
+      <circle cx="220" cy="34" r="3.5" fill="#f59e0b"/>
+      <text x="228" y="37" fill="#fde68a" font-size="8" font-weight="600">Esc. Aguirre</text>
+
+      <g fill="#64748b" font-size="8" text-anchor="end">
+        <text x="28" y="58">80</text>
+        <line x1="34" y1="55" x2="315" y2="55" stroke="#1e293b"/>
+        <text x="28" y="150">0</text>
+        <line x1="34" y1="147" x2="315" y2="147" stroke="#1e293b"/>
+      </g>
+      <line x1="34" y1="101" x2="315" y2="101" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="315" y="97" fill="#ef4444" font-size="7.5" text-anchor="end">WHO Limit (40)</text>
+
+      <!-- Raw Polylines -->
+      <polyline points="40,118 80,68 120,58 160,88 200,88 240,48 280,60 315,78" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="40,146 80,140 120,144 160,136 200,140 240,148 280,142 315,140" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="40,130 80,95 120,84 160,110 200,105 240,70 280,85 315,100" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <g fill="#64748b" font-size="8.5">
+        <text x="40" y="172">Day 1</text>
+        <text x="175" y="172" text-anchor="middle">Day 15</text>
+        <text x="315" y="172" text-anchor="end">Day 30</text>
+      </g>
+    </g>
+
+    <!-- Statistical Table -->
+    <g transform="translate(20, 408)">
+      <rect width="335" height="152" rx="16" fill="#0f172a" stroke="#1e293b"/>
+      <text x="14" y="20" fill="#ffffff" font-size="11" font-weight="700">Period Statistical Summary</text>
+      <line x1="14" y1="30" x2="321" y2="30" stroke="#334155"/>
+      <text x="14" y="44" fill="#64748b" font-size="8.5" font-weight="600">METRIC</text>
+      <text x="135" y="44" fill="#60a5fa" font-size="8" font-weight="700" text-anchor="middle">PZA. CARMEN</text>
+      <text x="212" y="44" fill="#34d399" font-size="8" font-weight="700" text-anchor="middle">CASA CAMPO</text>
+      <text x="282" y="44" fill="#fbbf24" font-size="8" font-weight="700" text-anchor="middle">ESC. AGUIRRE</text>
+      <line x1="14" y1="52" x2="321" y2="52" stroke="#1e293b"/>
+
+      <text x="14" y="70" fill="#94a3b8" font-size="9">Monthly average</text>
+      <text x="135" y="70" fill="#60a5fa" font-size="9" font-weight="700" text-anchor="middle">48 µg/m³</text>
+      <text x="212" y="70" fill="#34d399" font-size="9" font-weight="700" text-anchor="middle">14 µg/m³</text>
+      <text x="282" y="70" fill="#fbbf24" font-size="9" font-weight="700" text-anchor="middle">41 µg/m³</text>
+      <line x1="14" y1="80" x2="321" y2="80" stroke="#1e293b"/>
+
+      <text x="14" y="100" fill="#94a3b8" font-size="9">Peak reading</text>
+      <text x="135" y="100" fill="#60a5fa" font-size="9" font-weight="700" text-anchor="middle">74 µg/m³</text>
+      <text x="212" y="100" fill="#6ee7b7" font-size="9" font-weight="700" text-anchor="middle">22 µg/m³</text>
+      <text x="282" y="100" fill="#f59e0b" font-size="9" font-weight="700" text-anchor="middle">68 µg/m³</text>
+      <line x1="14" y1="110" x2="321" y2="110" stroke="#1e293b"/>
+
+      <text x="14" y="130" fill="#94a3b8" font-size="9">Station type</text>
+      <text x="135" y="130" fill="#cbd5e1" font-size="8.5" text-anchor="middle">Traffic</text>
+      <text x="212" y="130" fill="#cbd5e1" font-size="8.5" text-anchor="middle">Background</text>
+      <text x="282" y="130" fill="#cbd5e1" font-size="8.5" text-anchor="middle">Traffic</text>
+    </g>
+
+    <!-- Bottom Nav -->
+    <rect x="0" y="680" width="375" height="70" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <g transform="translate(63, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🗺️</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Map</text>
+    </g>
+    <g transform="translate(188, 700)">
+      <text x="0" y="12" fill="#64748b" font-size="14" text-anchor="middle">🏆</text>
+      <text x="0" y="32" fill="#64748b" font-size="9" font-weight="600" text-anchor="middle">Rankings</text>
+    </g>
+    <g transform="translate(313, 700)">
+      <circle cx="0" cy="8" r="16" fill="#1e3a8a"/>
+      <text x="0" y="12" fill="#60a5fa" font-size="14" text-anchor="middle">⚖️</text>
+      <text x="0" y="32" fill="#60a5fa" font-size="9" font-weight="700" text-anchor="middle">Compare</text>
+    </g>
+  </svg>
+</div>
+
+<p style="margin-top:40px;font-size:.8rem;color:var(--muted)">Data: Ayuntamiento de Madrid (CC BY 4.0) · Wikidata (CC0).</p>
+</main>
+</body>
+</html>

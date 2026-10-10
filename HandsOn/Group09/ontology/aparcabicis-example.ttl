@@ -1,0 +1,27 @@
+@prefix ont: <http://smartcity.linkeddata.es/bicis/ontology#> .
+@prefix res: <http://smartcity.linkeddata.es/bicis/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+res:District/Centro a ont:District .
+
+res:Neighborhood/Justicia a ont:Neighborhood .
+
+res:BicycleParking/10001 a ont:BicycleParking ;
+    ont:id "10001" ;
+    ont:hasModel "U INVERTIDA" ;
+    ont:hasCapacity 10 ;
+    ont:streetAddress "CALLE DE ALCALA, 42" ;
+    ont:latitude "40.419142"^^xsd:decimal ;
+    ont:longitude "-3.696120"^^xsd:decimal ;
+    ont:inDistrict res:District/Centro ;
+    ont:inNeighborhood res:Neighborhood/Justicia .
+
+res:BicycleParking/10002 a ont:BicycleParking ;
+    ont:id "10002" ;
+    ont:hasModel "MUPIS" ;
+    ont:hasCapacity 6 ;
+    ont:streetAddress "PASEO DE LA CASTELLANA, 15" ;
+    ont:latitude "40.428510"^^xsd:decimal ;
+    ont:longitude "-3.689740"^^xsd:decimal ;
+    ont:inDistrict res:District/Centro ;
+    ont:inNeighborhood res:Neighborhood/Justicia .

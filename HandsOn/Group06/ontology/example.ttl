@@ -1,0 +1,47 @@
+@prefix : <https://w3id.org/madrid-culture/ontology/> .
+@prefix res: <https://w3id.org/madrid-culture/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+###################################################################################################
+# Example of a data represented using the ontology (It is the same for both museum and library)
+###################################################################################################
+
+res:library/1757 a :Library ;
+    rdfs:label "Biblioteca Pública Municipal Aluche (Latina)" ;
+    schema:name "Biblioteca Pública Municipal Aluche (Latina)" ;
+    schema:description "La Biblioteca Pública de Aluche se inauguró el 22 de junio de 1992 con la asistencia del entonces alcalde Don José María Alvarez del Manzano. Se sitúa en la primera planta del Centro Cultural Fernando de los Ríos, diseñado por el arquitecto José María Guijarro. Desde 1986 y hasta la fecha de su inauguración oficial, se encontraba situada en este mismo centro cultural y planta pero en el ala derecha del edificio y con la mitad de superficie. La ubicación de la biblioteca en el centro cultural en la década de los 80  se decidió porque éste era considerado un elemento aglutinador de la vida asociativa y cultural de los distritos." ;
+    schema:openingHours "Apertura de lunes a viernes.  Horario: de 8:30 a 21 horas.  Verano (del 15 de junio al 15 de septiembre): de 8:30 a 20 horas.  Cerrado: festivos y los días 24 y 31 de diciembre."
+    :transport "Metro: Laguna (línea 6),  Aluche (línea 5) Cercanías Renfe: Laguna, Aluche (línea C5)" ;
+    :hasAccessibility res:accessibility/1757 ;
+    schema:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7f0e3d0b5e71c010VgnVCM1000000b205a0aRCRD/> ;
+    :hasAddress res:address/1757 ;
+    schema:latitude "40.39597072367931"^^xsd:decimal ;
+    schema:longitude "-3.7562716852987847"^^xsd:decimal ;
+    schema:telephone "91 719 89 96" ;
+    :email "bpaluche@madrid.es" ;
+    :type "BibliotecasPublicas" .
+
+res:accessibility/1757 a :Accessibility ;
+    :accessible true ;
+    :partiallyAccessible false ;
+    :noInfoAccessibility false ;
+    :signLanguage false ;
+    :tactilePaving true ;
+    :magneticInductionLoop true .
+
+res:address/1757 a :Address ;
+    :streetAddress "CALLE CAMARENA, 10" ;
+    :postalCode "28047" ;
+    :locatedInDistrict res:district/10;
+    :locatedInNeighborhood res:neighborhood/10-4 .
+
+res:district/10 a :District ;
+    schema:name "LATINA" .
+
+res:neighborhood/10-4 a :Neighborhood;
+    schema:name "ALUCHE" .
+

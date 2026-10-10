@@ -1,0 +1,82 @@
+@prefix parks: <https://parques-jardines.madrid.data.es/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+parks: a owl:Ontology ;
+    dcterms:title "Ontology for the Municipal Parks and Gardens of Madrid"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
+parks:Park a owl:Class ;
+    rdfs:label "Park"@en .
+
+parks:District a owl:Class ;
+    rdfs:label "District"@en .
+
+parks:Neighborhood a owl:Class ;
+    rdfs:label "Neighborhood"@en .
+
+parks:Address a owl:Class ;
+    rdfs:label "Address"@en .
+
+parks:parkName a owl:DatatypeProperty ;
+    rdfs:label "park name"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:string .
+
+parks:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:string .
+
+parks:openingHours a owl:DatatypeProperty ;
+    rdfs:label "opening hours"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:string .
+
+parks:facilities a owl:DatatypeProperty ;
+    rdfs:label "facilities"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:string .
+
+parks:publicTransport a owl:DatatypeProperty ;
+    rdfs:label "public transport"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:string .
+
+parks:accessibility a owl:DatatypeProperty ;
+    rdfs:label "accessibility"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:integer .
+
+parks:contentUrl a owl:DatatypeProperty ;
+    rdfs:label "content URL"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:anyURI .
+
+parks:latitude a owl:DatatypeProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:decimal .
+
+parks:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range xsd:decimal .
+
+parks:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range parks:Address .
+
+parks:locatedInDistrict a owl:ObjectProperty ;
+    rdfs:label "located in district"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range parks:District .
+
+parks:locatedInNeighborhood a owl:ObjectProperty ;
+    rdfs:label "located in neighborhood"@en ;
+    rdfs:domain parks:Park ;
+    rdfs:range parks:Neighborhood .

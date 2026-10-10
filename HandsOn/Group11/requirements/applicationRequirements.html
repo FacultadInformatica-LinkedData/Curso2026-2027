@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Requirements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .mockup {
+            border: 2px dashed #3498db;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .mockup-header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Application Requirements</h1>
+
+    <h2>Application description</h2>
+    <p>
+        The application will allow users to explore BiciMAD stations in Madrid.
+        Users will be able to search for stations, view their location and access
+        information such as the station name, address, number of total bases
+        and current state.
+    </p>
+    
+    <h2>Main functionalities</h2>
+    <ul>
+        <li>Display BiciMAD stations on a map.</li>
+        <li>Search stations by name or address.</li>
+        <li>View detailed information about each station.</li>
+        <li>Filter stations by location or area.</li>
+        <li>Show the number of total bases and the station status.</li>
+    </ul>
+    
+    <h2>User interface</h2>
+    <p>
+        The main interface will include a map of Madrid with markers for each
+        BiciMAD station. A search bar and filters will allow users to find
+        specific stations. When a station is selected, a panel will display
+        its detailed information.
+    </p>
+
+    <h2>User Interface Mock-ups</h2>
+    <p>Below is a visual representation of how the application interface is expected to look:</p>
+
+    <div class="mockup">
+        <div class="mockup-header">BiciMAD Map Interface Mock-up</div>
+        <div style="margin-bottom: 15px;">
+    <input
+        type="text"
+        placeholder="Search station or address..."
+        style="width: 80%; padding: 10px;"
+    >
+    <button style="padding: 10px 15px;">Search</button>
+        </div>
+        <div style="background: #e0e0e0; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 3px; margin-bottom: 15px;">
+            <p style="color: #555; text-align: center;">[ Interactive Map with BiciMAD Station Markers ]</p>
+        </div>
+        <div>
+            <p><strong>Selected Station Panel:</strong></p>
+            <ul>
+                <li><strong>Name:</strong> 33 - Puerta del Sol</li>
+                <li><strong>Address:</strong> Calle Carretas nº 3</li>
+                <li><strong>Station Number:</strong> 33</li>
+                <li><strong>Total Bases:</strong> 23</li>
+                <li><strong>Status:</strong> IN_SERVICE</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+
