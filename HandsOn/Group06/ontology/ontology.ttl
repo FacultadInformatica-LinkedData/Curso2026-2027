@@ -1,0 +1,153 @@
+@prefix : <https://w3id.org/madrid-culture/ontology/> .
+@prefix res: <https://w3id.org/madrid-culture/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+# Ontology Metadata
+#################################################################
+
+: a owl:Ontology ;
+    dcterms:title "Ontología para Madrid Culture Finder"@es, "Ontology for Madrid Culture Finder"@en ;
+    dcterms:creator "Group06" ;
+    owl:versionInfo "1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+:CulturalSite a owl:Class ;
+    rdfs:subClassOf schema:CivicStructure ;
+    rdfs:label "Centro cultural"@es, "Cultural Site"@en .
+
+:Museum a owl:Class ;
+    rdfs:subClassOf :CulturalSite ;
+    rdfs:label "Museo"@es, "Museum"@en .
+
+:Library a owl:Class ;
+    rdfs:subClassOf :CulturalSite ;
+    rdfs:label "Biblioteca"@es, "Library"@en .
+
+:Accessibility a owl:Class ;
+    rdfs:label "Accesibilidad"@es, "Accessibility"@en .
+
+:Address a owl:Class ;
+    rdfs:label "Dirección"@es, "Address"@en .
+
+:District a owl:Class ;
+    rdfs:label "Distrito"@es, "District"@en .
+
+:Neighborhood a owl:Class ;
+    rdfs:label "Barrio"@es, "Neighborhood"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:hasAccessibility a owl:ObjectProperty ;
+    rdfs:domain :CulturalSite;
+    rdfs:range :Accessibility ;
+    rdfs:label "Tiene accesibilidad"@es, "Has accessibility"@en .
+
+:hasAddress a owl:ObjectProperty ;
+    rdfs:domain :CulturalSite;
+    rdfs:range :Address ;
+    rdfs:label "Tiene dirección"@es, "Has address"@en .
+
+:hasTransport a owl:ObjectProperty ;
+    rdfs:domain :CulturalSite ;
+    rdfs:range :Transport ;
+    rdfs:label "Tiene transporte"@es, "Has transport"@en .
+
+:locatedInDistrict a owl:ObjectProperty ;
+    rdfs:domain :Address ;
+    rdfs:range :District ;
+    rdfs:label  "Localizado en el distrito"@es, "Located in the district"@en .
+
+:locatedInNeighborhood a owl:ObjectProperty ;
+    rdfs:domain :Address ;
+    rdfs:range :Neighborhood ;
+    rdfs:label  "Localizado en el barrio"@es, "Located in the neighborhood"@en .
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+#################### Data type for CulturalSite #################
+
+:email a owl:DatatypeProperty ;
+    rdfs:domain :CulturalSite ;
+    rdfs:range xsd:string ;
+    rdfs:label "Email"@es, "Email"@en .
+
+:type a owl:DatatypeProperty ;
+    rdfs:domain :CulturalSite ;
+    rdfs:range xsd:string ;
+    rdfs:label "Tipo"@es, "Type"@en .
+
+:transport a owl:DatatypeProperty ;
+    rdfs:domain :CulturalSite ;
+    rdfs:range xsd:string ;
+    rdfs:label "Transporte"@es, "Transport"@en .
+
+#################### Data type for Accessibility ################
+
+:accessible a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Accesible"@es, "Accessible"@en .
+
+:partiallyAccessible a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Parcialmente accesible"@es, "Partially accessible"@en .
+
+:noInfoAccessibility a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "No hay información de accesibilidad"@es, "No information about accessibility"@en .
+
+:signLanguage a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Lengua de signos"@es, "Sign language"@en .
+
+:tactilePaving a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Señalización podotáctil"@es, "Tactile paving"@en .
+
+:magneticInductionLoop a owl:DatatypeProperty ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Bucle de inducción magnético"@es, "Magnetic induction loop"@en .
+
+#################### Data type for Address ######################
+
+:streetAddress a owl:DatatypeProperty ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string ;
+    rdfs:label "Dirección de la calle"@es, "Street address"@en .
+
+:postalCode a owl:DatatypeProperty ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string ;
+    rdfs:label "Código postal"@es, "Postal code"@en .
+
+#################################################################
+#    Reusing External Properties
+#################################################################
+
+# We will reuse the following properties from well-known vocabularies:
+# - schema:name (for the names of the libraries, museums, district and neighborhood)
+# - schema:description (for the descriptions of the museums and libraries)
+# - schema:openingHours (for the days and hours in which the libraries and museums open)
+# - schema:sameAs (for linking entities)
+# - schema:url (for the official website url of the libraries and museums)
+# - schema:longitude (for the longitude of the libraries and museums)
+# - schema:latitude (for the latitude of the libraries and museums)
+# - schema:telephone (for the telephone number of the libraries and museums)
+# - schema:faxNumber (for the fax number of the libraries and museums)

@@ -1,0 +1,122 @@
+@prefix ontology: <http://educamadrid.linkeddata.es/ontology/CentroEducativo#> .
+@prefix res: <http://educamadrid.linkeddata.es/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+#################################################################
+#    Sample Educational Center / School Instances
+#################################################################
+
+# Instance 1: ABC Schule (Alemán)
+res:School/4916066 a ontology:School , owl:NamedIndividual ;
+    rdfs:label "ABC Schule (German)"@en ;
+    ontology:pk 4916066 ;
+    ontology:centerName "ABC Schule (Alemán)" ;
+    ontology:description "EDUCATION: Early Childhood First and second cycle LANGUAGE: German"@en ;
+    ontology:transportation "BUS: 7, 16, 19, 29, 51, 52 METRO: Cruz del Rayo, Príncipe de Vergara"@en ;
+    ontology:telephone "915 613 086" ;
+    ontology:contentUrl <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=d167e229b31f9110VgnVCM2000000c205a0aRCRD> ;
+    ontology:hasAddress res:Address/4916066 ;
+    ontology:hasAccessibility res:Accessibility/0 .
+
+# Instance 2: Academia Darío Estudio
+res:School/167390 a ontology:School , owl:NamedIndividual ;
+    rdfs:label "Academia Darío Estudio"@en ;
+    ontology:pk 167390 ;
+    ontology:centerName "Academia Darío Estudio" ;
+    ontology:centerType "/contenido/entidadesYorganismos/CentrosEducacion/ColegiosPrivadosConcertados" ;
+    ontology:description "EDUCATION: HIGH SCHOOL (Humanities and Social Sciences - Science and Technology)"@en ;
+    ontology:transportation "METRO: Santo Domingo, Plaza España BUS: 1 , 2 , 44 , 46 , 74 , 75 , 133 , 148 , 202"@en ;
+    ontology:telephone "915 411 515 - 915 474 084" ;
+    ontology:email "info@darioestudio.es" ;
+    ontology:contentUrl <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=bfb1ff632081c010VgnVCM1000000b205a0aRCRD> ;
+    ontology:hasAddress res:Address/167390 ;
+    ontology:hasAccessibility res:Accessibility/0 .
+
+# Instance 3: Agencia Estatal CSIC
+res:School/6803 a ontology:School , owl:NamedIndividual ;
+    rdfs:label "State Agency Spanish National Research Council (CSIC)"@en ;
+    ontology:pk 6803 ;
+    ontology:centerName "Agencia Estatal Consejo Superior de Investigaciones Científicas (CSIC)" ;
+    ontology:centerType "/contenido/entidadesYorganismos/AdministracionCentral" ;
+    ontology:transportation "Check the following links"@en ;
+    ontology:telephone "915 681 400" ;
+    ontology:email "comunicacion@csic.es" ;
+    ontology:contentUrl <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=ec7f42be9971c010VgnVCM1000000b205a0aRCRD> ;
+    ontology:hasAddress res:Address/6803 ;
+    ontology:hasAccessibility res:Accessibility/3 .
+
+
+#################################################################
+#    Sample Address Instances
+#################################################################
+
+res:Address/4916066 a ontology:Address , owl:NamedIndividual ;
+    rdfs:label "27 Leizaran Street, Madrid"@en ;
+    ontology:streetType "CALLE" ;
+    ontology:streetName "LEIZARAN" ;
+    ontology:streetNumber "27" ;
+    ontology:postalCode "28002" ;
+    ontology:latitude "40.447932"^^xsd:double ;
+    ontology:longitude "-3.681382"^^xsd:double ;
+    ontology:inDistrict res:District/chamartin ;
+    ontology:inNeighborhood res:Neighborhood/el-viso .
+
+res:Address/167390 a ontology:Address , owl:NamedIndividual ;
+    rdfs:label "63 Gran Via Street, Madrid"@en ;
+    ontology:streetType "CALLE" ;
+    ontology:streetName "GRAN VIA" ;
+    ontology:streetNumber "63" ;
+    ontology:postalCode "28013" ;
+    ontology:latitude "40.422491"^^xsd:double ;
+    ontology:longitude "-3.709818"^^xsd:double ;
+    ontology:inDistrict res:District/centro ;
+    ontology:inNeighborhood res:Neighborhood/palacio .
+
+res:Address/6803 a ontology:Address , owl:NamedIndividual ;
+    rdfs:label "117 Serrano Street, Madrid"@en ;
+    ontology:streetType "CALLE" ;
+    ontology:streetName "SERRANO" ;
+    ontology:streetNumber "117" ;
+    ontology:postalCode "28006" ;
+    ontology:latitude "40.440884"^^xsd:double ;
+    ontology:longitude "-3.687026"^^xsd:double ;
+    ontology:inDistrict res:District/chamartin ;
+    ontology:inNeighborhood res:Neighborhood/el-viso .
+
+
+#################################################################
+#    Sample Administrative Division Instances
+#################################################################
+
+# Districts
+res:District/chamartin a ontology:District , owl:NamedIndividual ;
+    rdfs:label "Chamartín"@en .
+
+res:District/centro a ontology:District , owl:NamedIndividual ;
+    rdfs:label "Centro"@en .
+
+# Neighborhoods
+res:Neighborhood/el-viso a ontology:Neighborhood , owl:NamedIndividual ;
+    rdfs:label "El Viso"@en ;
+    ontology:belongsToDistrict res:District/chamartin .
+
+res:Neighborhood/palacio a ontology:Neighborhood , owl:NamedIndividual ;
+    rdfs:label "Palacio"@en ;
+    ontology:belongsToDistrict res:District/centro .
+
+
+#################################################################
+#    Sample Accessibility Status Instances
+#################################################################
+
+res:Accessibility/0 a ontology:Accessibility , owl:NamedIndividual ;
+    rdfs:label "Non-accessible / No information"@en ;
+    ontology:accessibilityCode "0" .
+
+res:Accessibility/3 a ontology:Accessibility , owl:NamedIndividual ;
+    rdfs:label "Accessible / Adapted"@en ;
+    ontology:accessibilityCode "3" .

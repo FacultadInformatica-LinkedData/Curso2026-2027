@@ -1,0 +1,19 @@
+@prefix ont: <http://smartcity.linkeddata.es/touristaccommodation/ontology/> .
+@prefix res: <http://smartcity.linkeddata.es/touristaccommodation/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# City Instance
+res:City/Madrid a ont:City .
+
+# Address Instance
+res:Address/HM-127 a ont:Address ;
+    ont:hasStreet "PASEO de la Chopera 71"^^xsd:string ;
+    ont:postalCode 28045 ;
+    ont:inCity res:City/Madrid .
+
+# Accommodation Instance
+res:Accommodation/HM-127 a ont:Accommodation ;
+    ont:hasName "GRAN LEGAZPI"^^xsd:string ;
+    ont:hasType "HOTEL"^^xsd:string ;
+    ont:hasCategory "3-HOTEL"^^xsd:string ;
+    ont:hasAddress res:Address/HM-127 .

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis - Group 13</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.4rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .meta {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #0645ad;
+        }
+
+        p {
+            margin: 0.5rem 0 0.75rem;
+        }
+
+        ul {
+            margin: 0.5rem 0 1rem;
+            padding-left: 1.4rem;
+        }
+
+        li {
+            margin-bottom: 0.35rem;
+        }
+
+        code,
+        .uri {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+            background: #f4f4f4;
+            padding: 0.1em 0.35em;
+            word-break: break-all;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 0.55rem 0.75rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        dl {
+            margin: 0.75rem 0 1rem;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 0.75rem;
+        }
+
+        dd {
+            margin-left: 1.25rem;
+            margin-bottom: 0.35rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dataset Analysis</h1>
+
+    <p class="meta">
+        <strong>Group:</strong> 13<br>
+        <strong>Dataset:</strong> <code>300614-1-centros-educativos-csv.csv</code>
+    </p>
+
+    <p>
+        After cleaning the dataset and using OpenRefine, we have analyzed the schema
+        and characteristics of our dataset
+        <code>300614-1-centros-educativos-csv.csv</code>.
+    </p>
+
+    <h2>1.1. Data Schema</h2>
+    <p>
+        The original file consists of 32 columns, of which we kept a main subset of
+        18 columns, removing those that did not provide relevant information for the
+        final goal and those with a large number of null values.
+    </p>
+
+    <ul>
+        <li><strong>Number of records:</strong> 1620 educational centers</li>
+        <li><strong>Number of columns analyzed:</strong> 20</li>
+    </ul>
+
+    <p>These final columns are:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Columns</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Identification</td>
+                <td><code>PK</code>, <code>NOMBRE</code></td>
+            </tr>
+            <tr>
+                <td>Classification</td>
+                <td><code>DESCRIPCION</code>, <code>TIPO</code>, <code>ACCESIBILIDAD</code>, <code>EQUIPAMIENTO</code>
+                </td>
+            </tr>
+            <tr>
+                <td>Location and Geometry</td>
+                <td>
+                    <code>LATITUD</code>, <code>LONGITUD</code>, <code>BARRIO</code>,
+                    <code>DISTRITO</code>, <code>CLASE-VIAL</code>, <code>NOMBRE-VIA</code>,
+                    <code>NUM</code>, <code>CODIGO-POSTAL</code>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact and Logistics</td>
+                <td>
+                    <code>TELEFONO</code>, <code>EMAIL</code>, <code>CONTENT-URL</code>,
+                    <code>TRANSPORTE</code>, <code>HORARIO</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Column details and RDF usage:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Description / RDF use</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>PK</code></td>
+                <td>integer</td>
+                <td>Unique numeric identifier of the educational center. It will be used as the instance ID.</td>
+            </tr>
+            <tr>
+                <td><code>NOMBRE</code></td>
+                <td>text</td>
+                <td>Official name of the center (school, secondary school, etc.).</td>
+            </tr>
+            <tr>
+                <td><code>DESCRIPCION</code>, <code>TIPO</code></td>
+                <td>text</td>
+                <td>Categorization of the center (special education, nursery, upper secondary education).</td>
+            </tr>
+            <tr>
+                <td><code>ACCESIBILIDAD</code></td>
+                <td>text/integer</td>
+                <td>Accessibility level codes of the center (<code>0</code>, <code>1</code>, <code>2</code>,
+                    <code>3</code>, ...).</td>
+            </tr>
+            <tr>
+                <td><code>EQUIPAMIENTO</code></td>
+                <td>text</td>
+                <td>Specific services and facilities of the center (cafeteria, gym).</td>
+            </tr>
+            <tr>
+                <td><code>TRANSPORTE</code></td>
+                <td>text</td>
+                <td>Access via public transport (Metro, EMT, Renfe).</td>
+            </tr>
+            <tr>
+                <td><code>LATITUD</code>, <code>LONGITUD</code></td>
+                <td>decimal</td>
+                <td>Decimal geographic coordinates (WGS84).</td>
+            </tr>
+            <tr>
+                <td><code>BARRIO</code>, <code>DISTRITO</code></td>
+                <td>text</td>
+                <td>District and neighborhood identifiers. Key for linking (Linked Data).</td>
+            </tr>
+            <tr>
+                <td><code>CLASE-VIAL</code>, <code>NOMBRE-VIA</code>, <code>NUM</code></td>
+                <td>mixed</td>
+                <td>Components of the physical postal address.</td>
+            </tr>
+            <tr>
+                <td><code>CODIGO-POSTAL</code></td>
+                <td>integer</td>
+                <td>Postal code (CP 280XX) for geographic searches.</td>
+            </tr>
+            <tr>
+                <td><code>TELEFONO</code>, <code>EMAIL</code>, <code>CONTENT-URL</code></td>
+                <td>text/URL</td>
+                <td>Direct contact data and official website.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>1.2. Data Characteristics and Ranges</h2>
+    <p>The following properties have been identified in the data:</p>
+
+    <h3>Unique accessibility values</h3>
+    <p>
+        The data are structured with the values <code>0</code>, <code>1</code>,
+        <code>2</code>, <code>3</code>, <code>4</code>, and <code>5</code>, which represent
+        different levels of physical adaptation of the center.
+    </p>
+
+    <h3>Geographic coordinates</h3>
+    <p>
+        <code>LATITUD</code> ranges approximately from
+        <code>40.33280700850064</code> to <code>40.548576667037935</code>, while
+        <code>LONGITUD</code> ranges from <code>-3.539053333504962</code> to
+        <code>-3.835524056513188</code>. All points fall within the Madrid area,
+        and all entries are unique.
+    </p>
+
+    <h3>Completeness</h3>
+    <p>
+        Critical attributes such as the identifier, the name, and accessibility have
+        0% null values. Other attributes that are very useful for the application, such as
+        transport, have 27 empty entries.
+    </p>
+
+    <h2>2. Source License Analysis</h2>
+
+    <dl>
+        <dt>Source</dt>
+        <dd><a href="https://www.madrid.es" target="_blank" rel="noopener noreferrer">www.madrid.es</a></dd>
+
+        <dt>Dataset owner</dt>
+        <dd>Dirección General de Atención a la Ciudadanía (Madrid City Council)</dd>
+
+        <dt>URL</dt>
+        <dd>
+            <a href="https://datos.madrid.es/dataset/300614-0-centros-educativos" target="_blank"
+                rel="noopener noreferrer">
+                https://datos.madrid.es/dataset/300614-0-centros-educativos
+            </a>
+        </dd>
+
+        <dt>License</dt>
+        <dd>Creative Commons Attribution 4.0 International (CC BY 4.0)</dd>
+    </dl>
+
+    <p>
+        For the generated RDF data and ontology, we follow the Creative Commons
+        Attribution 4.0 International (CC BY 4.0) license, giving attribution to the
+        Dirección General de Atención a la Ciudadanía of the Madrid City Council as
+        the provider of the data used.
+    </p>
+
+    <h2>3. Identifier Design and Strategy (URIs)</h2>
+    <p>
+        The base namespace for the entire project will be
+        <code>http://educamadrid.linkeddata.es/</code>.
+    </p>
+
+    <h3>Ontological model</h3>
+    <p>
+        The concepts and properties that make up the ontology will be under the
+        <code>/ontology/</code> subdirectory.
+    </p>
+    <ul>
+        <li>
+            <strong>Base path:</strong>
+            <code>http://educamadrid.linkeddata.es/ontology/CentroEducativo#</code>
+        </li>
+        <li>
+            <strong>Class example:</strong>
+            <code>http://educamadrid.linkeddata.es/ontology/CentroEducativo#EscuelaInfantil</code>
+        </li>
+        <li>
+            <strong>Property example:</strong>
+            <code>http://educamadrid.linkeddata.es/ontology/CentroEducativo#nivelAccesibilidad</code>
+        </li>
+    </ul>
+
+    <h3>Resources and instances</h3>
+    <p>
+        Individual entities will be placed under <code>/resource/</code>.
+        The primary key (<code>PK</code>) from the original dataset is used as the
+        unique identifier for each school.
+    </p>
+    <ul>
+        <li>
+            <strong>Pattern:</strong>
+            <code>http://educamadrid.linkeddata.es/resource/{OntologicalClass}/{UniqueIdentifier}</code>
+        </li>
+        <li>
+            <strong>Educational center example:</strong>
+            <code>http://educamadrid.linkeddata.es/resource/School/4916066</code>
+        </li>
+        <li>
+            <strong>Neighborhood example:</strong>
+            <code>http://educamadrid.linkeddata.es/resource/Neighborhood/el-viso</code>
+        </li>
+    </ul>
+
+    <h2>4. Ontology (Model Summary)</h2>
+    <p>
+        The ontological structure developed for the EducaMadrid project has been encoded
+        in Turtle syntax. All terms in the model operate under the <code>:</code> prefix,
+        which is directly bound to the namespace
+        <a href="http://educamadrid.linkeddata.es/ontology/CentroEducativo#" target="_blank" rel="noopener noreferrer">
+            <code>http://educamadrid.linkeddata.es/ontology/CentroEducativo#</code>
+        </a>.
+    </p>
+
+    <h3>Main Classes</h3>
+    <ul>
+        <li><code>:EducationalCenter</code></li>
+        <li><code>:Address</code></li>
+        <li><code>:District</code></li>
+        <li><code>:Neighborhood</code></li>
+        <li><code>:Accessibility</code></li>
+    </ul>
+
+    <h3>Key Properties</h3>
+    <ul>
+        <li><code>:hasAddress</code> (dom: <code>:EducationalCenter</code>, ran: <code>:Address</code>)</li>
+        <li><code>:inDistrict</code> (dom: <code>:Address</code>, ran: <code>:District</code>)</li>
+        <li><code>:pk</code> (dom: <code>:EducationalCenter</code>, ran: <code>xsd:integer</code>)</li>
+        <li><code>:equipment</code>, <code>:transportation</code> (ran: <code>xsd:string</code>)</li>
+        <li><code>:latitude</code>, <code>:longitude</code> (ran: <code>xsd:double</code>)</li>
+    </ul>
+
+    <p>
+        Regarding the modeling strategy, we have used a modular architecture that
+        directly inherits from schema.org.
+    </p>
+
+</body>
+
+</html>

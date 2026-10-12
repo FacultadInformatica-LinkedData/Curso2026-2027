@@ -1,0 +1,26 @@
+@prefix parks: <https://parques-jardines.madrid.data.es/ontology#> .
+@prefix park: <https://parques-jardines.madrid.data.es/resource/park/> .
+@prefix district: <https://parques-jardines.madrid.data.es/resource/district/> .
+@prefix neighborhood: <https://parques-jardines.madrid.data.es/resource/neighborhood/> .
+@prefix address: <https://parques-jardines.madrid.data.es/resource/address/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+park:5896013 a parks:Park ;
+    parks:parkName "Jardines de El Buen Retiro"^^xsd:string ;
+    parks:description "Los jardines de El Buen Retiro, conocidos simplemente como El Retiro, son uno de los lugares más emblemáticos de Madrid y un oasis verde en el corazón de la ciudad."^^xsd:string ;
+    parks:openingHours "Primavera y verano: de 6:00 a 24:00. Otoño e invierno: de 6:00 a 22:00."^^xsd:string ;
+    parks:facilities "Zonas infantiles, zonas para mayores, zonas caninas, instalaciones deportivas y puntos de información ambiental."^^xsd:string ;
+    parks:publicTransport "Metro: Retiro, Príncipe de Vergara, Ibiza y Atocha. También dispone de autobuses y servicio Bicimad."^^xsd:string ;
+    parks:accessibility "2"^^xsd:integer ;
+    parks:contentUrl "http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=499561945d9ec210VgnVCM2000000c205a0aRCRD"^^xsd:anyURI ;
+    parks:latitude "40.41964087412762"^^xsd:decimal ;
+    parks:longitude "-3.68793370943788"^^xsd:decimal ;
+    parks:hasAddress address:5896013 ;
+    parks:locatedInDistrict district:3 ;
+    parks:locatedInNeighborhood neighborhood:5 .
+
+address:5896013 a parks:Address .
+
+district:3 a parks:District .
+
+neighborhood:5 a parks:Neighborhood .

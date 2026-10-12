@@ -1,0 +1,55 @@
+@prefix : <http://smartcity.linkeddata.es/sports/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://smartcity.linkeddata.es/sports/ontology/> a owl:Ontology ;
+    rdfs:label "Madrid Municipal Sports Centers Ontology"@en ;
+    rdfs:comment "Lightweight ontology for representing municipal sports facilities and equipment in Madrid."@en .
+
+### Classes
+:SportsCenter a owl:Class ;
+    rdfs:label "Sports Center"@en ;
+    rdfs:comment "Public municipal sports facility."@en .
+
+:District a owl:Class ;
+    rdfs:label "District"@en ;
+    rdfs:comment "Administrative division within a city."@en .
+
+### Object Properties
+:locatedInDistrict a owl:ObjectProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range :District ;
+    rdfs:label "located in district"@en .
+
+### Datatype Properties
+:pk a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:integer ;
+    rdfs:label "primary key"@en .
+
+:equipmentDescription a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:string ;
+    rdfs:label "equipment description"@en .
+
+:accessibilityInfo a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:string ;
+    rdfs:label "accessibility info"@en .
+
+:transportInfo a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:string ;
+    rdfs:label "transport info"@en .
+
+:telephone a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:string ;
+    rdfs:label "telephone"@en .
+
+:email a owl:DatatypeProperty ;
+    rdfs:domain :SportsCenter ;
+    rdfs:range xsd:string ;
+    rdfs:label "email"@en .

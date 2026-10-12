@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data analysis and resource naming strategy</title>
+  <style>
+    body {
+      max-width: 1050px;
+      margin: 32px auto;
+      padding: 0 22px 40px;
+      font: 16px/1.55 Arial, sans-serif;
+      color: #222;
+    }
+    h1, h2, h3 { color: #222; }
+    h1 { border-bottom: 2px solid #555; padding-bottom: 10px; }
+    h2 { margin-top: 34px; border-bottom: 1px solid #bbb; padding-bottom: 5px; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; }
+    th, td { border: 1px solid #bbb; padding: 8px; text-align: left; vertical-align: top; }
+    th { background: #eee; }
+    code { overflow-wrap: anywhere; }
+    .note { background: #f5f5f5; border-left: 4px solid #777; padding: 10px 14px; }
+    .small { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Hands-on Assignment 2: analysis</h1>
+  <p><strong>Group:</strong> Group06</p>
+  <p><strong>Datasets:</strong>Libraries and museums of Madrid.</p>
+
+  <h2>1. Data source analysis</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>Records</th>
+        <th>Columns</th>
+        <th>Format</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="csv/libraries.csv">libraries.csv</a></td>
+        <td>52</td>
+        <td>32</td>
+        <td>CSV</td>
+        <td><a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas">Ayuntamiento de Madrid</a></td>
+      </tr>
+      <tr>
+        <td><a href="csv/museums.csv">museums.csv</a></td>
+        <td>68</td>
+        <td>32</td>
+        <td>CSV</td>
+        <td><a href="https://datos.madrid.es/dataset/201132-0-museos">Ayuntamiento de Madrid</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The two files use the same schema. This allows libraries and museums to share a general <code>CulturalSite</code> model while keeping separate classes for each type.</p>
+
+  <h3>1.2 Schema</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Column</th>
+        <th>Type</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PK</td>
+        <td>string</td>
+        <td>Identifier for each museum and library.</td>
+      </tr>
+      <tr>
+        <td>NOMBRE</td>
+        <td>string</td>
+        <td>Name for each museum and library.</td>
+      </tr>
+      <tr>
+        <td>DESCRIPCION-ENTIDAD</td>
+        <td>string</td>
+        <td>Brief description for each museum and library (Some of them have no description).</td>
+      </tr>
+      <tr>
+        <td>HORARIO</td>
+        <td>string</td>
+        <td>Days and hours of opening for each museum and library.</td>
+      </tr>
+      <tr>
+        <td>TRANSPORTE</td>
+        <td>string</td>
+        <td>Transport methods that are nearby each museum and library.</td>
+      </tr>
+      <tr>
+        <td>ACCESIBILIDAD</td>
+        <td>boolean</td>
+        <td>The accessibility of each museum and library. As it can be a combination of numbers from 0 to 6 divided by a comma, each number having a meaning, this column will be separated into 6 columns and each one will have assigned a boolean value depending of the numbers that were in the original column.</td>
+      </tr>
+      <tr>
+        <td>CONTENT-URL</td>
+        <td>url</td>
+        <td>Official website containing information of each museum and library.</td>
+      </tr>
+      <tr>
+        <td>NOMBRE-VIA, CLASE-VIAL, NUM</td>
+        <td>string</td>
+        <td>Street address of each museum and library. These three columns will be combined into a single one.</td>
+      </tr>
+      <tr>
+        <td>CODIGO-POSTAL</td>
+        <td>string</td>
+        <td>Postal code for each museum and library.</td>
+      </tr>
+      <tr>
+        <td>COD-BARRIO</td>
+        <td>string</td>
+        <td>Identifier for each neighborhood.</td>
+      </tr>
+      <tr>
+        <td>BARRIO</td>
+        <td>string</td>
+        <td>Name of the neighborhood each museum and library is located in.</td>
+      </tr>
+      <tr>
+        <td>COD-DISTRITO</td>
+        <td>string</td>
+        <td>Identifier for each district.</td>
+      </tr>
+      <tr>
+        <td>DISTRICT</td>
+        <td>string</td>
+        <td>Name of the district each museum and library is located in.</td>
+      </tr>
+      <tr>
+        <td>LATITUD</td>
+        <td>decimal</td>
+        <td>The latitude of each museum and library.</td>
+      </tr>
+      <tr>
+        <td>LONGITUD</td>
+        <td>decimal</td>
+        <td>The longitude of each museum and library.</td>
+      </tr>
+      <tr>
+        <td>TELEFONO</td>
+        <td>string</td>
+        <td>The telephone of each museum and library (Some have to be cleaned as they containg text).</td>
+      </tr>
+      <tr>
+        <td>FAX</td>
+        <td>string</td>
+        <td>The fax number of each museum and library (Some have no fax number).</td>
+      </tr>
+      <tr>
+        <td>EMAIL</td>
+        <td>string</td>
+        <td>The email of each museum and library.</td>
+      </tr>
+      <tr>
+        <td>TIPO</td>
+        <td>string</td>
+        <td>Type of establishment (The data in the column needs to be modified to only get the last word in the text). Only useful in museums as the libraries all have the same type</td>
+      </tr>
+    </tbody>
+  </table>  
+
+  <p>Some of the columns have not been included in the schema because they contain almost no values or are not necessary.</p>
+
+  <h2>2. Licensing analysis</h2>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>Publisher</th>
+        <td>Ayuntamiento de Madrid, through its Open Data Portal.</td>
+      </tr>
+      <tr>
+        <th>Responsible unit</th>
+        <td>Dirección General de Bibliotecas, Archivos y Museos.</td>
+      </tr>
+      <tr>
+        <th>Rightsholder / licensor</th>
+        <td>The dataset pages identify Ayuntamiento de Madrid as publisher and source. It is therefore treated as the rightsholder and licensor for this assignment.</td>
+      </tr>
+      <tr>
+        <th>Source licence</th>
+        <td><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> for both datasets.</td>
+      </tr>
+      <tr>
+        <th>Licence for the generated RDF dataset</th>
+        <td>CC BY 4.0.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Resource naming strategy</h2>
+
+  <h3>3.1 Base domain and namespaces</h3>
+  <p>The project will use the persistent HTTPS domain <code>https://w3id.org/madrid-culture/</code>. This is different from the default namespace generated by Protégé. The group must register the redirect with w3id.org before public deployment.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Purpose</th>
+        <th>Namespace</th>
+        <th>Prefix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ontology</td>
+        <td><code>https://w3id.org/madrid-culture/ontology/</code></td>
+        <td><code>mc:</code></td>
+      </tr>
+      <tr>
+        <td>Individuals</td>
+        <td><code>https://w3id.org/madrid-culture/resource/</code></td>
+        <td><code>res:</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Ontology terms and individuals use different paths. Classes and properties are defined directly under <code>/ontology/</code>. Property URIs are not placed below a class URI.</p>
+
+  <h3>3.2 Ontology term patterns</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Pattern</th>
+        <th>Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Class</td>
+        <td><code>https://w3id.org/madrid-culture/ontology/{ClassName}</code></td>
+        <td><code>:Facility</code>, <code>:Library</code>, <code>:Museum</code>, <code>:District</code></td>
+      </tr>
+      <tr>
+        <td>Property</td>
+        <td><code>https://w3id.org/madrid-culture/ontology/{propertyName}</code></td>
+        <td><code>:locatedInDistrict</code>, <code>:locatedInNeighborhood</code>, <code>:email</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Class local names start with a capital letter. Property local names start with a lower-case letter and use lower camel case.</p>
+
+  <h3>3.3 Individual patterns</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Resource type</th>
+        <th>Pattern</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Museum</td>
+        <td><code>/resource/museum/{PK}</code></td>
+        <td><code>res:museum/2058</code></td>
+      </tr>
+      <tr>
+        <td>Library</td>
+        <td><code>/resource/library/{PK}</code></td>
+        <td><code>res:library/25526</code></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><code>/resource/address/{PK}</code></td>
+        <td><code>res:address/1757</code></td>
+      </tr>
+      <tr>
+        <td>Accesibility</td>
+        <td><code>/resource/accessibility/{PK}</code></td>
+        <td><code>res:accessibility/1757</code></td>
+      </tr>
+      <tr>
+        <td>District</td>
+        <td><code>/resource/district/{COD-DISTRITO}</code></td>
+        <td><code>res:district/10</code></td>
+      </tr>
+      <tr>
+        <td>Neighborhood</td>
+        <td><code>/resource/neighborhood/{COD-DISTRITO}-{COD-BARRIO}</code></td>
+        <td><code>res:neighborhood/10-4</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Different classes use different paths, for example <code>/museum/</code> and <code>/library/</code>. Facility names are not used in URIs because names may change. The municipal <code>PK</code> is stable and unique inside each source file. A neighbourhood URI contains both district and neighbourhood code because neighbourhood codes may repeat in different districts.</p>
+
+  <h3>3.4 URI and publication rules</h3>
+  <ul>
+    <li>Use HTTPS slash URIs.</li>
+    <li>Use lower-case path segments and ASCII characters.</li>
+    <li>Do not include spaces, accents, file extensions or query parameters in canonical resource URIs.</li>
+    <li>Do not change an existing URI when a name or description changes.</li>
+    <li>When an ontology term is replaced, keep its URI and mark it as deprecated instead of reusing it for another meaning.</li>
+  </ul>
+
+</body>
+</html>

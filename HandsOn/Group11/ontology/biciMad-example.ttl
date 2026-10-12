@@ -1,0 +1,26 @@
+@prefix bici: <http://www.example.org/bicimad/ontology/> .
+@prefix station: <http://www.example.org/bicimad/resource/station/> .
+@prefix location: <http://www.example.org/bicimad/resource/location/> .
+@prefix status: <http://www.example.org/bicimad/resource/status/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+station:2 a bici:Station ;
+    bici:objectId 1 ;
+    bici:stationNumber "2" ;
+    bici:name "2 - Metro Callao" ;
+    bici:activate 1 ;
+    bici:noAvailable 0 ;
+    bici:ligth 0 ;
+    bici:totalBases 27 ;
+    bici:hasLocation location:2 ;
+    bici:hasStatus status:in-service .
+
+location:2 a bici:Location ;
+    bici:address "Calle Miguel Moya nº 1," ;
+    bici:positionText "-3.7056899999999997 40.4204" ;
+    bici:longitude "-3.70569"^^xsd:decimal ;
+    bici:latitude "40.4204"^^xsd:decimal .
+
+status:in-service a bici:StationStatus ;
+    rdfs:label "IN_SERVICE" .
