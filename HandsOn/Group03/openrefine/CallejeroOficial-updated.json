@@ -1,0 +1,804 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UTMX_ETRS",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMX_ETRS usando la expresión grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UTMY_ETRS",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMY_ETRS usando la expresión grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "grel:with(value.match(/(\\d+)°(\\d+)'([\\d\\.]+)''\\s*([NSEW])/), m, \n  if(m != null, \n    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'S', -1, 1), \n    null\n  )\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LATITUD usando la expresión grel:with(value.match(/(\\d+)°(\\d+)'([\\d\\.]+)''\\s*([NSEW])/), m, \n  if(m != null, \n    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'S', -1, 1), \n    null\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:with(value.match(/(\\d+)°(\\d+)'([\\d\\.]+)''\\s*([NSEW])/), m, \n  if(m != null, \n    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'W', -1, 1), \n    null\n  )\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LONGITUD usando la expresión grel:with(value.match(/(\\d+)°(\\d+)'([\\d\\.]+)''\\s*([NSEW])/), m, \n  if(m != null, \n    (m[0].toNumber() + m[1].toNumber()/60 + m[2].toNumber()/3600) * if(m[3] == 'W', -1, 1), \n    null\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD_POSTAL",
+    "expression": "grel:(\"00000\" + value.toString()).slice(-5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD_POSTAL usando la expresión grel:(\"00000\" + value.toString()).slice(-5)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD_NDP",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD_NDP usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRITO usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE_APP",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna CLASE_APP usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UTMX_ETRS",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMX_ETRS usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UTMY_ETRS",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMY_ETRS usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UTMX_ED",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMX_ED usando la expresión grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UTMY_ED",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMY_ED usando la expresión grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UTMY_ED",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMY_ED usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UTMX_ED",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna UTMX_ED usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna BARRIO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna BARRIO usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COD_POSTAL",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD_POSTAL usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "VIA_NOMBRE_ACENTOS",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SAGRADOS CORAZONES",
+          "SAGRADOS CORAZÓNES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAGRADOS CORAZONES"
+      },
+      {
+        "from": [
+          "MONTANA",
+          "MONTAÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MONTAÑA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna VIA_NOMBRE_ACENTOS"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "VIA_PAR",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DE",
+          "DE "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna VIA_PAR"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "VIA_NOMBRE",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MONTANA",
+          "MONTAÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MONTAÑA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna VIA_NOMBRE"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "CALIFICADOR",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          " ",
+          "  "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": " "
+      }
+    ],
+    "description": "Editar celdas en masa en columna CALIFICADOR"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ANGULO_ROTULACION",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ANGULO_ROTULACION usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NUMERO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NUMERO usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna BARRIO usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "VIA_CLASE",
+          "columnName": "VIA_CLASE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "COD_POSTAL",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD_POSTAL usando la expresión value.toString()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "VIA_CLASE",
+          "expression": "value",
+          "columnName": "VIA_CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "AUTOPISTA",
+                "l": "AUTOPISTA"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "VIA_CLASE",
+          "expression": "value",
+          "columnName": "VIA_CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "AUTOVÍA",
+                "l": "AUTOVÍA"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "VIA_CLASE",
+          "expression": "value",
+          "columnName": "VIA_CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PUENTE",
+                "l": "PUENTE"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "VIA_CLASE",
+          "expression": "value",
+          "columnName": "VIA_CLASE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PLAZUELA",
+                "l": "PLAZUELA"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "CLASE_APP",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NUMERO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NÚMERO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna CLASE_APP"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_VIA",
+    "newColumnName": "COD_VIA(SI)",
+    "description": "Renombra la columna COD_VIA a COD_VIA(SI)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_VIA(SI)",
+    "newColumnName": "COD_VIA",
+    "description": "Renombra la columna COD_VIA(SI) a COD_VIA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_VIA",
+    "newColumnName": "streetCode",
+    "description": "Renombra la columna COD_VIA a streetCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "VIA_NOMBRE",
+    "newColumnName": "streetName",
+    "description": "Renombra la columna VIA_NOMBRE a streetName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRITO",
+    "newColumnName": "districtCode",
+    "description": "Renombra la columna DISTRITO a districtCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "BARRIO",
+    "newColumnName": "neighborhoodcode",
+    "description": "Renombra la columna BARRIO a neighborhoodcode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighborhoodcode",
+    "newColumnName": "neighborhoodCode",
+    "description": "Renombra la columna neighborhoodcode a neighborhoodCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_POSTAL",
+    "newColumnName": "postalCode",
+    "description": "Renombra la columna COD_POSTAL a postalCode"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "streetName",
+    "expression": "jython:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna streetName usando la expresión jython:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "streetName",
+    "expression": "grel:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna streetName usando la expresión grel:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "streetName",
+          "columnName": "streetName",
+          "query": "MONTE CAR",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "streetCode",
+    "expression": "grel:forEach(cell.cross(\"NOMBRE_PROYECTO\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().length()",
+    "onError": "set-to-blank",
+    "newColumnName": "numNombres",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna numNombres en el índice 1 basada en la columna streetCode usando la expresión grel:forEach(cell.cross(\"NOMBRE_PROYECTO\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().length()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "numNombres",
+    "description": "Eliminar columna numNombres"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "streetCode",
+    "expression": "grel:forEach(cell.cross(\"CallejeroOficial\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().length()",
+    "onError": "set-to-blank",
+    "newColumnName": "numNombres",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna numNombres en el índice 1 basada en la columna streetCode usando la expresión grel:forEach(cell.cross(\"CallejeroOficial\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().length()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "streetName",
+          "columnName": "streetName",
+          "query": "MONTE CAR",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "streetCode",
+    "expression": "grel:forEach(cell.cross(\"CallejeroOficial\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().join(\" | \")",
+    "onError": "set-to-blank",
+    "newColumnName": "nombres",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna nombres en el índice 1 basada en la columna streetCode usando la expresión grel:forEach(cell.cross(\"CallejeroOficial\", \"streetCode\"), r, r.cells[\"streetName\"].value).uniques().join(\" | \")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "VIA_CLASE",
+    "newColumnName": "streetType",
+    "description": "Renombra la columna VIA_CLASE a streetType"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nombres",
+    "description": "Eliminar columna nombres"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "numNombres",
+    "description": "Eliminar columna numNombres"
+  }
+]

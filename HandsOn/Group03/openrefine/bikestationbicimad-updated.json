@@ -1,0 +1,660 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_X",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_X usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_Y",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_Y usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:value.toUppercase()",
+    "onError": "set-to-blank",
+    "newColumnName": "ADDRESS",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna ADDRESS en el índice 3 basada en la columna Address usando la expresión grel:value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_Y usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_X usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS",
+    "expression": "grel:value.replace(\",\", \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "ADDRESS_NOCOMMA",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna ADDRESS_NOCOMMA en el índice 4 basada en la columna ADDRESS usando la expresión grel:value.replace(\",\", \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:value.toLowercase()\n     .replace(/^\\d+[\\s\\-\\.]*/, \"\")\n     .replace(/^c\\/\\s*/, \"calle \")\n     .replace(/^avda\\.\\s*/, \"avenida \")\n     .replace(/^av\\.\\s*/, \"avenida \")\n     .replace(/^pº\\s*/, \"paseo \")\n     .replace(/n[º#\\.]?\\s*\\d+.*/, \"\")\n     .replace(/,\\s*\\d+.*/, \"\")\n     .replace(/\\b\\d+\\b.*/, \"\")\n     .replace(\"á\",\"a\").replace(\"é\",\"e\").replace(\"í\",\"i\").replace(\"ó\",\"o\").replace(\"ú\",\"u\").replace(\"ñ\",\"n\")\n     .replace(/[^a-z0-9\\s]/, \"\")\n     .trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "ADRESS_CLEAN",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna ADRESS_CLEAN en el índice 3 basada en la columna Address usando la expresión grel:value.toLowercase()\n     .replace(/^\\d+[\\s\\-\\.]*/, \"\")\n     .replace(/^c\\/\\s*/, \"calle \")\n     .replace(/^avda\\.\\s*/, \"avenida \")\n     .replace(/^av\\.\\s*/, \"avenida \")\n     .replace(/^pº\\s*/, \"paseo \")\n     .replace(/n[º#\\.]?\\s*\\d+.*/, \"\")\n     .replace(/,\\s*\\d+.*/, \"\")\n     .replace(/\\b\\d+\\b.*/, \"\")\n     .replace(\"á\",\"a\").replace(\"é\",\"e\").replace(\"í\",\"i\").replace(\"ó\",\"o\").replace(\"ú\",\"u\").replace(\"ñ\",\"n\")\n     .replace(/[^a-z0-9\\s]/, \"\")\n     .trim()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS",
+    "newColumnName": "address_uppercase",
+    "description": "Renombra la columna ADDRESS a address_uppercase"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NoAvailable",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NoAvailable usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ligth",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ligth usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Activate",
+    "newColumnName": "isActivated",
+    "description": "Renombra la columna Activate a isActivated"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "isActivated",
+    "expression": "grel:if(value==\"1\",true,false)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna isActivated usando la expresión grel:if(value==\"1\",true,false)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TotalBases",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TotalBases usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OBJECTID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna OBJECTID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Address",
+    "description": "Eliminar columna Address"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "address_uppercase",
+    "description": "Eliminar columna address_uppercase"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS_NOCOMMA",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS_NOCOMMA usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADRESS_CLEAN",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADRESS_CLEAN usando la expresión value.trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS_NOCOMMA",
+    "expression": "grel:value.replace(/^(CALLE|PLAZA|PASEO|AVENIDA|GLORIETA|CARRERA DE|CARRERA|RONDA|CUESTA)\\s+/i, \"\").split(\",\")[0].split(/ Nº| N°| NUMERO/i)[0].split(\"(\")[0].replace(/\\s+\\d+[a-zA-Z]?$/, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "STREET_NAME",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna STREET_NAME en el índice 4 basada en la columna ADDRESS_NOCOMMA usando la expresión grel:value.replace(/^(CALLE|PLAZA|PASEO|AVENIDA|GLORIETA|CARRERA DE|CARRERA|RONDA|CUESTA)\\s+/i, \"\").split(\",\")[0].split(/ Nº| N°| NUMERO/i)[0].split(\"(\")[0].replace(/\\s+\\d+[a-zA-Z]?$/, \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS_NOCOMMA",
+    "expression": "grel:value.trim().split(\" \")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "STREET_TYPE",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna STREET_TYPE en el índice 4 basada en la columna ADDRESS_NOCOMMA usando la expresión grel:value.trim().split(\" \")[0]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PosicionSTR",
+    "description": "Eliminar columna PosicionSTR"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna State usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna State usando la expresión value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "STREET_NAME",
+    "expression": "jython:partes=value.split()\nif len(partes)>1 and partes[0]==\"DE\" and partes[1] in [\"LA\", \"LAS\", \"EL\", \"LOS\"]:\n return partes[0]+\" \"+partes[1]\nelif partes[0] in [\"DE\", \"DEL\", \"LA\", \"LAS\", \"EL\", \"LOS\"]:\n        return partes[0]\nelse:\n return \"\"",
+    "onError": "set-to-blank",
+    "newColumnName": "STREET_PREPOSITION",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna STREET_PREPOSITION en el índice 6 basada en la columna STREET_NAME usando la expresión jython:partes=value.split()\nif len(partes)>1 and partes[0]==\"DE\" and partes[1] in [\"LA\", \"LAS\", \"EL\", \"LOS\"]:\n return partes[0]+\" \"+partes[1]\nelif partes[0] in [\"DE\", \"DEL\", \"LA\", \"LAS\", \"EL\", \"LOS\"]:\n        return partes[0]\nelse:\n return \"\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/^(DE LA |DE LOS |DE LAS |DEL |DE |LA |EL |LOS |LAS )/i, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/^(DE LA |DE LOS |DE LAS |DEL |DE |LA |EL |LOS |LAS )/i, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "STREET_TYPE",
+          "columnName": "STREET_TYPE",
+          "query": "AV",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_TYPE",
+    "expression": "jython:if value==\"AVENIDA\": \n return \"AVENIDA\"\nif value==\"AV.\" or value==\"AV/\" or value==\"AVDA.\":\n return \"AVENIDA\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_TYPE usando la expresión jython:if value==\"AVENIDA\": \n return \"AVENIDA\"\nif value==\"AV.\" or value==\"AV/\" or value==\"AVDA.\":\n return \"AVENIDA\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "STREET_NAME",
+          "columnName": "STREET_NAME",
+          "query": "AV",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/^AV.\\.?\\s+/i, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/^AV.\\.?\\s+/i, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "STREET_NAME",
+          "columnName": "STREET_NAME",
+          "query": "AV",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/^(AVENIDA|AVDA\\.?|AV\\.?)\\s+(DE LA |DE LOS |DE LAS |DEL |DE )?/i, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/^(AVENIDA|AVDA\\.?|AV\\.?)\\s+(DE LA |DE LOS |DE LAS |DEL |DE )?/i, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "STREET_TYPE",
+          "expression": "value",
+          "columnName": "STREET_TYPE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "C/",
+                "l": "C/"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_TYPE",
+    "expression": "value.replace(\"C/\",\"CALLE\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_TYPE usando la expresión value.replace(\"C/\",\"CALLE\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "STREET_TYPE",
+          "expression": "value",
+          "columnName": "STREET_TYPE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CAMINO",
+                "l": "CAMINO"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/\\s+\\d+.*$/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/\\s+\\d+.*$/, \"\").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_TYPE",
+    "expression": "jython:validos = [\"AVENIDA\", \"CALLE\", \"CAMINO\", \"CARRERA\", \"CARRETERA\", \"CIUDAD\", \"FACULTAD\", \"GLORIETA\", \"INTERCAMBIADOR\", \"PARQUE\", \"PASEO\", \"PLAZA\", \"PLAZUELA\", \"RONDA\"]\n\nif value is not None and value in validos:\n    return value\nelse:\n    return \"CALLE\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_TYPE usando la expresión jython:validos = [\"AVENIDA\", \"CALLE\", \"CAMINO\", \"CARRERA\", \"CARRETERA\", \"CIUDAD\", \"FACULTAD\", \"GLORIETA\", \"INTERCAMBIADOR\", \"PARQUE\", \"PASEO\", \"PLAZA\", \"PLAZUELA\", \"RONDA\"]\n\nif value is not None and value in validos:\n    return value\nelse:\n    return \"CALLE\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "STREET_NAME",
+          "columnName": "STREET_NAME",
+          "query": "frente",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/\\s+(ENFRENTE|FRENTE|ESQUINA).*$/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/\\s+(ENFRENTE|FRENTE|ESQUINA).*$/, \"\").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/\\[.*?\\]/, \"\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/\\[.*?\\]/, \"\").replace(/\\s+/, \" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "grel:value.replace(/^\\d+\\s*-\\s*/, \"\").replace(/\\d+$/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión grel:value.replace(/^\\d+\\s*-\\s*/, \"\").replace(/\\d+$/, \"\").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "STREET_NAME",
+          "columnName": "STREET_NAME",
+          "query": "c/",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "STREET_NAME",
+    "expression": "jython:Valor=value.split()\nif (Valor[0]==\"C/\"):\n return value.replace(\"C/\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET_NAME usando la expresión jython:Valor=value.split()\nif (Valor[0]==\"C/\"):\n return value.replace(\"C/\",\"\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADRESS_CLEAN",
+    "newColumnName": "ADDRESS_CLEAN",
+    "description": "Renombra la columna ADRESS_CLEAN a ADDRESS_CLEAN"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "OBJECTID",
+    "newColumnName": "OBJECTID(D)",
+    "description": "Renombra la columna OBJECTID a OBJECTID(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_CLEAN",
+    "newColumnName": "ADDRESS_CLEAN(D)",
+    "description": "Renombra la columna ADDRESS_CLEAN a ADDRESS_CLEAN(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_NOCOMMA",
+    "newColumnName": "ADDRESS_NOCOMMA(D)",
+    "description": "Renombra la columna ADDRESS_NOCOMMA a ADDRESS_NOCOMMA(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_TYPE",
+    "newColumnName": "STREET_TYPE(D)",
+    "description": "Renombra la columna STREET_TYPE a STREET_TYPE(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_PREPOSITION",
+    "newColumnName": "STREET_PREPOSITION(D)",
+    "description": "Renombra la columna STREET_PREPOSITION a STREET_PREPOSITION(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ligth",
+    "newColumnName": "Ligth(D)",
+    "description": "Renombra la columna Ligth a Ligth(D)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_NOCOMMA(D)",
+    "newColumnName": "ADDRESS_NOCOMMA",
+    "description": "Renombra la columna ADDRESS_NOCOMMA(D) a ADDRESS_NOCOMMA"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "POINT_X",
+    "newColumnName": "longitude",
+    "description": "Renombra la columna POINT_X a longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "POINT_Y",
+    "newColumnName": "latitude",
+    "description": "Renombra la columna POINT_Y a latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "State",
+    "newColumnName": "operationalState",
+    "description": "Renombra la columna State a operationalState"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TotalBases",
+    "newColumnName": "totalBases",
+    "description": "Renombra la columna TotalBases a totalBases"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "number",
+    "newColumnName": "stationId",
+    "description": "Renombra la columna number a stationId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NoAvailable",
+    "newColumnName": "unavailableBases",
+    "description": "Renombra la columna NoAvailable a unavailableBases"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Name",
+    "newColumnName": "name",
+    "description": "Renombra la columna Name a name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_NAME",
+    "newColumnName": "streetName",
+    "description": "Renombra la columna STREET_NAME a streetName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_TYPE(D)",
+    "newColumnName": "STREET_TYPE",
+    "description": "Renombra la columna STREET_TYPE(D) a STREET_TYPE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_PREPOSITION(D)",
+    "newColumnName": "STREET_PREPOSITION",
+    "description": "Renombra la columna STREET_PREPOSITION(D) a STREET_PREPOSITION"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_CLEAN(D)",
+    "newColumnName": "ADDRESS_CLEAN",
+    "description": "Renombra la columna ADDRESS_CLEAN(D) a ADDRESS_CLEAN"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ligth(D)",
+    "newColumnName": "Ligth",
+    "description": "Renombra la columna Ligth(D) a Ligth"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_NOCOMMA",
+    "newColumnName": "fullAddress",
+    "description": "Renombra la columna ADDRESS_NOCOMMA a fullAddress"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "OBJECTID(D)",
+    "newColumnName": "OBJECTID",
+    "description": "Renombra la columna OBJECTID(D) a OBJECTID"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "streetName",
+    "expression": "grel:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna streetName usando la expresión grel:value.replaceChars(\"ÁÉÍÓÚÜáéíóúü\", \"AEIOUUaeiouu\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "STREET_TYPE",
+    "newColumnName": "streetType",
+    "description": "Renombra la columna STREET_TYPE a streetType"
+  }
+]

@@ -1,0 +1,79 @@
+PREFIX bm: <https://bicismart.madrid.data.es/ontology#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# -------------------------------------------------------
+# Query 1: Listar estaciones de BiciMAD y su capacidad total
+# Comprobando que las instancias de BikeStation tienen bien asignado su ID, nombre y capacidad.
+# ---------------------------------------------------------
+SELECT ?stationId ?label ?capacity
+WHERE {
+  ?station a bm:BikeStation ;
+	bm:stationId ?stationId ;
+  	rdfs:label ?label ;
+  	bm:totalCapacity ?capacity .
+}
+LIMIT 20
+
+# -------------------------------------------------------
+# Query 2: Obtener las estaciones y el nombre de la calle exacta donde están ubicadas 
+# Verificando que la relación (ObjectProperty) 'locatedOnStreet' enlaza correctamente con la clase Street.
+# --------------------------------------------------------
+SELECT ?stationLabel ?streetName
+WHERE {
+  ?station a bm:BikeStation ;
+           rdfs:label ?stationLabel ;
+           bm:locatedOnStreet ?street .
+           
+  ?street bm:streetName ?streetName .
+}
+LIMIT 20
+
+# -----------------------------------------------------
+# Query 3:Buscar las calles que pertenecen al distrito 11 y mostrar su codigo postal validando los datos estructurados dentro de la clase Street.
+# -------------------------------------------------
+SELECT ?streetName ?postalCode
+WHERE {
+  ?street a bm:Street ;
+          bm:streetName ?streetName ;
+          bm:districtCode 11 ;
+          bm:postalCode ?postalCode .
+}
+LIMIT 20
+
+# --------------------------------------------------------
+# Query 4: Comprobar el estado operativo y las coordenadas geograficas de una estación específica (Ejemplo: Estación ID "100") verificando las relaciones 'hasState' y hasPoint' y extraer los datos de latitud, longitud y estado.
+# ---------------------------------------------------------
+SELECT ?lat ?long ?operationalState ?isActivated
+WHERE {
+  ?station bm:stationId "100" ;
+        bm:hasPoint ?point ;
+        bm:hasState ?state .
+           
+  ?point geo:lat ?lat ;
+         geo:long ?long .
+  ?state bm:operationalState ?operationalState ;
+        bm:isActivated ?isActivated .
+}
+
+# ---------------------------------
+# Query 5: Contar el numero total de estaciones de bicicletas en el dataset obteniendo un recuento global para comprobar que se han mapeado todas las filas del CSV original.
+# ---------------------------------------
+SELECT (COUNT(?station) AS ?totalStations)
+WHERE {
+  ?station a bm:BikeStation .
+}
+
+# ---------------------------------------------------------
+# Query 6: Obtener las 10 estaciones con mayor capacidad de bicicletas demostrando el uso de ordenación (ORDER BY DESC) usando el atributo totalCapacity.
+# ---------------------------------------------------------
+SELECT ?stationLabel ?capacity
+WHERE {
+  ?station a bm:BikeStation ;
+	rdfs:label ?stationLabel ;
+	bm:totalCapacity ?capacity .
+}
+ORDER BY DESC(?capacity)
+LIMIT 10
+
