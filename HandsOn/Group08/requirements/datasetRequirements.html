@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dataset Requirements - Group 08</title>
+<style>
+ body{font-family:system-ui,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#222}
+ table{border-collapse:collapse;width:100%;margin:1rem 0}
+ th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;vertical-align:top;font-size:.92rem}
+ th{background:#f0f3f7}
+ code{background:#f3f3f3;padding:0 .25rem}
+ .ok{color:#116611;font-weight:600}.part{color:#996600;font-weight:600}
+</style>
+</head>
+<body>
+<h1>Dataset Requirements: Sports facilities of Madrid</h1>
+<p>Group 08. We selected three datasets about sports places in Madrid, all published by the Madrid City Council open data portal. They form one topic: where people can practise sport in Madrid.</p>
+
+<h2>1. Selected datasets</h2>
+<table>
+<tr><th>File (csv/)</th><th>Dataset</th><th>Publisher / source</th><th>Rows</th><th>Licence</th></tr>
+<tr><td><code>instalaciones_deportivas_basicas.csv</code></td><td><a href="https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas">Deportes. Instalaciones deportivas básicas municipales</a> (basic municipal sports facilities: pitches, courts, rinks)</td><td>Ayuntamiento de Madrid, datos.madrid.es</td><td>607</td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
+<tr><td><code>polideportivos.csv</code></td><td><a href="https://datos.madrid.es/dataset/200186-0-polideportivos">Deportes. Centros deportivos municipales (polideportivos)</a> (municipal sports centres)</td><td>Ayuntamiento de Madrid, datos.madrid.es</td><td>82</td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
+<tr><td><code>piscinas_publicas.csv</code></td><td><a href="https://datos.madrid.es/dataset/210227-0-piscinas-publicas">Deportes: Piscinas municipales en la ciudad de Madrid</a> (municipal swimming pools)</td><td>Ayuntamiento de Madrid, datos.madrid.es</td><td>56</td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
+</table>
+
+<h2>2. Requirements</h2>
+
+<h3>R1. Data are in one of the selected smart city domains <span class="ok"></span></h3>
+<p>The datasets describe urban sports and leisure facilities (pitches, courts, sports centres, pools) and the sports entities that use them. They belong to the leisure/sport and urban facilities domain of a smart city, and relate to citizens' health and well-being.</p>
+
+<h3>R2. Data are available as a CSV file <span class="ok"></span></h3>
+<p>All three datasets are downloadable as CSV and are stored in the <code>csv</code> directory. The files are semicolon-separated and encoded in ISO-8859-1. Conversion to UTF-8 will be needed before RDF generation.</p>
+
+<h3>R3. Data have an open licence <span class="ok"></span></h3>
+<p>All three datasets are published under Creative Commons Attribution 4.0 International (CC BY 4.0). It allows copying, adapting and republishing, including in RDF form, as long as the original source is credited. We will credit the Ayuntamiento de Madrid in the published data.</p>
+
+<h3>R4. Data can be easily linked with generic real-world entities <span class="ok"></span></h3>
+<p>The three datasets share the same 32 columns. Entities that can be linked:</p>
+<table>
+<tr><th>Entity in our data</th><th>Column(s)</th><th>Can be linked with</th></tr>
+<tr><td>Location of each facility</td><td><code>LATITUD</code>, <code>LONGITUD</code> (filled in all rows of all three files), <code>COORDENADA-X/Y</code></td><td>GeoNames, OpenStreetMap, Wikidata (geographic coordinates and nearby places); GeoSPARQL points</td></tr>
+<tr><td>District (22 values, <code>COD-DISTRITO</code>, <code>DISTRITO</code>)</td><td><code>DISTRITO</code></td><td>Wikidata and DBpedia entities for the districts of Madrid; the Madrid City Council's own RDF/linked data</td></tr>
+<tr><td>Neighbourhood (barrio)</td><td><code>COD-BARRIO</code>, <code>BARRIO</code></td><td>Wikidata and DBpedia neighbourhoods; INE census sections</td></tr>
+<tr><td>City, province</td><td><code>LOCALIDAD</code>, <code>PROVINCIA</code></td><td>DBpedia / Wikidata "Madrid"</td></tr>
+<tr><td>Street and postal code</td><td><code>NOMBRE-VIA</code>, <code>CODIGO-POSTAL</code></td><td>Madrid street directory (callejero), GeoNames postal codes</td></tr>
+<tr><td>Facility types (football pitch, futsal court, skating rink, swimming pool, ...)</td><td><code>TIPO</code></td><td>Wikidata sport and venue classes; DBpedia sports</td></tr>
+</table>
+<p>Other sources that could be linked with ours: Madrid metro and bus stops (to describe transport access to a facility) and other open datasets on the same portal, such as municipal parks or BiciMAD stations. The three datasets can also be linked with each other: a swimming pool is often located in a sports centre.</p>
+<h3>R5. Documentation exists (optional) <span class="part"></span></h3>
+<p>Each dataset has a description page on the Madrid open data portal with the update frequency, the unit that publishes it and the licence. The column names are mostly self-explanatory, but we did not find an explanation for some codes, for example what the values 0, 1, 2 and 3 mean in <code>ACCESIBILIDAD</code>.</p>
+
+<h3>R6. Data can come from multiple data sources (optional) <span class="part"></h3>
+<p>All three datasets come from the same portal and the same publisher (Ayuntamiento de Madrid), so on their own they are one source, not several. The other sources come when we link the data: Wikidata, DBpedia and GeoNames for districts, neighbourhoods and the city, and possibly Madrid transport stops.</p>
+
+<h2>3. Data quality notes</h2>
+<table>
+<tr><th>Dataset</th><th>Observations</th></tr>
+<tr><td>Basic facilities (607 rows)</td><td>Latitude, longitude, district, accessibility and equipment are filled in all rows. Neighbourhood code is missing in 35 rows and postal code in 27. Opening hours are given in only 9 rows, and phone and email almost never. <code>TIPO</code> is a path (for example <code>.../CamposEstadiosFutbol</code>) and needs cleaning to get 24 facility types.</td></tr>
+<tr><td>Sports centres (82 rows)</td><td>Coordinates and opening hours are filled in all rows.</td></tr>
+<tr><td>Swimming pools (56 rows)</td><td>Coordinates are filled in all rows; opening hours in 55.</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Requirements</title>
+  <style>
+    h1 {
+            color: #000100;
+            border-bottom: 5px solid #72b33c;
+            padding-bottom: 10px;
+        }
+    .cuadro {
+            background-color:#ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+  </style>
+</head>
+<body>
+  <h1>Application Requirements</h1>
+
+  <h2>1. Application description</h2>
+    <div class="cuadro">
+  <p>
+    Madrid Green Spaces is a web application that allows users
+    to explore the main municipal parks and gardens of Madrid.
+    The application will display parks on a map and provide
+    information about their location, district and characteristics.
+  </p>
+    </div>
+
+  <h2>2. Functional requirements</h2>
+    <div class="cuadro">
+  <ul>
+    <li>The user can view the parks and gardens of Madrid on a map.</li>
+    <li>The user can search for a park by name.</li>
+    <li>The user can filter parks by district.</li>
+    <li>The user can select a park to view its details.</li>
+    <li>The user can view the address and geographical location
+        of each park, when available.</li>
+    <li>The application can link park information with other
+        geographical open datasets.</li>
+  </ul>
+    </div>
+  <h2>3. Data requirements</h2>
+    <div class="cuadro">
+  <p>
+    The application will use the Main Municipal Parks and Gardens
+    dataset published by the Madrid City Council. The data will
+    be transformed into RDF and linked to other relevant datasets
+    during the course.
+  </p>
+  <p>
+  The application will use the NOMBRE, DISTRITO, BARRIO, LATITUD,
+  LONGITUD and CONTENT-URL fields. LATITUD and LONGITUD will be used
+  to display the parks on a map. The park names, districts and
+  neighbourhoods will be linked with geographic entities from
+  Wikidata, DBpedia or GeoNames.
+  </p>
+    </div>
+
+  <h2>4. User interface mockup</h2>
+<div style="max-width:600px; margin:auto; padding:15px; background:#f1f7ed; border:1px solid #c8d9c2; border-radius:10px; font-family:Arial,sans-serif;">
+  <h3 style="text-align:center; color:#246b45;">Madrid Green Spaces</h3>
+
+  <p style="margin-bottom:5px;">Search park:</p>
+  <div style="background:white; border:1px solid #ccc; padding:9px; border-radius:5px; color:#888;">
+    Enter park name...
+  </div>
+
+  <p style="margin-bottom:5px;">District: All districts</p>
+
+  <div style="height:280px; background:#e6eddf; border:1px solid #c5d3bb; border-radius:8px; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:40px; left:20px; background:#b5d5a8; width:120px; height:90px; border-radius:50%;"></div>
+    <div style="position:absolute; bottom:20px; right:25px; background:#b5d5a8; width:160px; height:100px; border-radius:50%;"></div>
+    <div style="position:absolute; top:15px; right:20px; background:#b5d5a8; width:90px; height:70px; border-radius:50%;"></div>
+    <div style="position:absolute; top:50%; left:-10%; width:120%; height:15px; background:#fffdf5; transform:rotate(-15deg);"></div>
+    <div style="position:absolute; top:-10%; left:50%; width:13px; height:120%; background:#fffdf5; transform:rotate(15deg);"></div>
+    <div style="position:absolute; top:30%; left:5%; background:#246b45; color:white; padding:6px 10px; border-radius:15px; font-size:12px;">📍 Casa Campo</div>
+    <div style="position:absolute; top:20%; right:3%; background:#246b45; color:white; padding:6px 10px; border-radius:15px; font-size:12px;">📍 Parque Oeste</div>
+    <div style="position:absolute; bottom:20%; left:73%; background:#246b45; color:white; padding:6px 10px; border-radius:15px; font-size:12px;">📍 Retiro</div>
+  </div>
+
+  <div style="background:white; padding:10px; margin-top:12px; border-left:4px solid #246b45; border-radius:5px;">
+    <strong style="color:#246b45;">Selected park: Retiro</strong>
+    <p style="margin:5px 0;">District: Retiro</p>
+    <p style="margin:5px 0;">Location: Madrid</p>
+  </div>
+</div>
+  
+
+  <h2>5. Expected outcome</h2>
+    <div class="cuadro">
+  <p>
+    The expected outcome is a web application that makes it
+    easier for citizens to discover and explore green spaces
+    in Madrid using open and linked data.
+  </p>
+    </div>
+</body>
+</html>

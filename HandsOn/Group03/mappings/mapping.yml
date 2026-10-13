@@ -1,0 +1,76 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rev: http://purl.org/stuff/rev#
+  schema: http://schema.org/
+  dct: http://purl.org/dc/terms/
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  vocab: http://example.org#
+  bm: https://bicismart.madrid.data.es/ontology#
+  bmres: https://bicismart.madrid.data.es/resource/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  
+mappings:
+  BikeStationMap:
+    sources:
+      - [csv/bikestationbicimad-updated.csv~csv]
+    s: https://bicismart.madrid.data.es/resource/BikeStation/$(stationId)
+    po:
+      - [a, bm:BikeStation]
+      - [rdfs:label, $(name), xsd:string]
+      - [bm:stationId, $(stationId), xsd:string]
+      - [bm:totalCapacity, $(totalBases), xsd:integer]
+      - p: bm:hasPoint
+        o:
+          mapping: PointMap
+      - p: bm:hasState
+        o:
+          mapping: StateMap
+      - p: bm:locatedOnStreet
+        o:
+          mapping: StreetMap
+          condition:
+            - function: equal
+              parameters:
+                - [str1, $(streetName), s]
+                - [str2, $(streetName), o]
+            - function: equal
+              parameters:
+                - [str1, $(streetType), s]
+                - [str2, $(streetType), o]
+
+  PointMap:
+    sources:
+      - [csv/bikestationbicimad-updated.csv~csv]
+    s: https://bicismart.madrid.data.es/resource/Point/$(stationId)
+    po:
+      - [a, geo:Point]
+      - [geo:lat, $(latitude), xsd:double]
+      - [geo:long, $(longitude), xsd:double]
+
+  StateMap:
+    sources:
+      - [csv/bikestationbicimad-updated.csv~csv]
+    s: https://bicismart.madrid.data.es/resource/StationState/$(stationId)
+    po:
+      - [a, bm:StationState]
+      - [bm:isActivated, $(isActivated), xsd:boolean]
+      - [bm:operationalState, $(operationalState), xsd:string]
+      - [bm:unavailableBases, $(unavailableBases), xsd:integer]
+
+  StreetMap:
+    sources:
+      - [csv/CallejeroOficial-updated.csv~csv]
+    s: https://bicismart.madrid.data.es/resource/Street/$(streetCode)
+    po:
+      - [a, bm:Street]
+      - [rdfs:label, $(streetName), xsd:string]
+      - [bm:streetCode, $(streetCode), xsd:integer]
+      - [bm:streetName, $(streetName), xsd:string]
+      - [bm:districtCode, $(districtCode), xsd:integer]
+      - [bm:neighborhoodCode, $(neighborhoodCode), xsd:integer]
+      - [bm:postalCode, $(postalCode), xsd:string]

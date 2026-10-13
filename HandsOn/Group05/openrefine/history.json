@@ -1,0 +1,259 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Trim and collapse whitespace in NOMBRE"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.trim().toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Titlecase district names for normalization"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PK",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Convert PK to number"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Convert LATITUD to number"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Convert LONGITUD to number"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORARIO",
+    "expression": "value.unescape(\"html\").unescape(\"html\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Decode HTML entities and collapse whitespace in HORARIO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value.unescape(\"html\").unescape(\"html\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Decode HTML entities and collapse whitespace in EQUIPAMIENTO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TRANSPORTE",
+    "expression": "value.unescape(\"html\").unescape(\"html\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Decode HTML entities and collapse whitespace in TRANSPORTE"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DESCRIPCION",
+    "expression": "value.unescape(\"html\").unescape(\"html\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Decode HTML entities and collapse whitespace in DESCRIPCION"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DESCRIPCION-ENTIDAD",
+    "expression": "value.unescape(\"html\").unescape(\"html\").replace(/\\s+/, \" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Decode HTML entities and collapse whitespace in DESCRIPCION-ENTIDAD"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "expression": "value.trim().toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Normalize LOCALIDAD to uppercase (Madrid -> MADRID)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PROVINCIA",
+    "expression": "if(isBlank(value), \"MADRID\", value.trim().toUppercase())",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Fill missing PROVINCIA with MADRID"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "if(and(isBlank(value), contains(coalesce(cells[\"FAX\"].value, \"\"), \"@\")), cells[\"FAX\"].value.trim(), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Move e-mail addresses wrongly stored in FAX to EMAIL"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "value.find(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}/).join(\";\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Keep only valid e-mail addresses in EMAIL (remove notes), multiple separated by ;"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FAX",
+    "expression": "if(contains(coalesce(value, \"\"), \"@\"), null, value.replace(/\\s/, \"\").find(/\\d{9}/).join(\";\"))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Remove e-mails from FAX and extract 9-digit fax numbers"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "if(isBlank(value), value, value.replace(/\\s/, \"\").find(/\\d{9}/).join(\";\"))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Extract 9-digit phone numbers (removing labels, notes and e-mails), separated by ;"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "if(isBlank(value), if(cells[\"BARRIO\"].value == \"AMBROZ\", 19, if(cells[\"BARRIO\"].value == \"SAN ANDRES\", 17, value)), value.toNumber())",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Fill missing district codes (Vicalvaro = 19, Villaverde = 17) and convert to integer"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-BARRIO",
+    "expression": "if(and(isBlank(value), cells[\"BARRIO\"].value == \"SAN ANDRES\"), 1, value.toNumber())",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Fill missing neighbourhood code for San Andres (Villaverde, 1) and convert to integer"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "value.replace(\"/contenido/entidadesYorganismos/CentrosEspaciosDeporte/\", \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Keep only the facility type (last path segment) in TIPO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Remove empty column PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Remove empty column ESCALERAS"
+  }
+]

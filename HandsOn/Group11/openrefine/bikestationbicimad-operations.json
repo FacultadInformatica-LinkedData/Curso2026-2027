@@ -1,0 +1,132 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "grel:value.trim().replace(/\\s+/, \" \").replace(/,\\s*$/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Address usando la expresión grel:value.trim().replace(/\\s+/, \" \").replace(/,\\s*$/, \"\").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name",
+    "expression": "grel:value.trim().replace(/\\s+/, \" \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Name usando la expresión grel:value.trim().replace(/\\s+/, \" \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_X",
+    "expression": "grel:value.replace(\",\", \".\").toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_X usando la expresión grel:value.replace(\",\", \".\").toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "POINT_Y",
+    "expression": "grel:value.replace(\",\", \".\").toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna POINT_Y usando la expresión grel:value.replace(\",\", \".\").toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PosicionSTR",
+    "expression": "grel:cells[\"POINT_X\"].value.toString() + \" \" + cells[\"POINT_Y\"].value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna PosicionSTR usando la expresión grel:cells[\"POINT_X\"].value.toString() + \" \" + cells[\"POINT_Y\"].value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OBJECTID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna OBJECTID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Activate",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Activate usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ligth",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ligth usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NoAvailable",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NoAvailable usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TotalBases",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TotalBases usando la expresión value.toNumber()"
+  }
+]

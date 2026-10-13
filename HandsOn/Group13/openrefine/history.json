@@ -1,0 +1,279 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE-VIAL",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CALLE",
+          "Calle",
+          "calle"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALLE"
+      },
+      {
+        "from": [
+          "AVENIDA",
+          "Avenida"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA"
+      },
+      {
+        "from": [
+          "CARRETERA",
+          "carretera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRETERA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna CLASE-VIAL"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "NUM",
+          "expression": "isBlank(value)",
+          "columnName": "NUM",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NUM",
+    "expression": "grel:if(isBlank(value), \"s/n\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NUM usando la expresión grel:if(isBlank(value), \"s/n\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "913 863 098 - 913 863 973",
+          "913 863 098 / 913 863 973"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 863 098 - 913 863 973"
+      },
+      {
+        "from": [
+          "914 116 979 - 914 110 571",
+          "914 116 979 / 914 110 571"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 116 979 - 914 110 571"
+      },
+      {
+        "from": [
+          "913 178 441 /  913 178 442",
+          "913 178 441 / 913 178 442"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 178 441 - 913 178 442"
+      },
+      {
+        "from": [
+          "913 572 667   \n913 572 668",
+          "913 572 667 - 913 572 668"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 572 667 - 913 572 668"
+      }
+    ],
+    "description": "Editar celdas en masa en columna TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CASCO H.VICALVARO",
+          "CASCO H.VICÁLVARO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CASCO H.VICALVARO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna BARRIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-VIA",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "COLMENAR VIEJO",
+          "colmenar viejo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLMENAR VIEJO"
+      },
+      {
+        "from": [
+          "ALCALA",
+          "ALCALÁ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALCALA"
+      },
+      {
+        "from": [
+          "SANTUARIO DE VALVERDE",
+          "Santuario de Valverde."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SANTUARIO DE VALVERDE"
+      },
+      {
+        "from": [
+          "FRANCISCO Y JACINTO ALCANTARA",
+          "FRANCISCO Y JACINTO ALCÁNTARA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRANCISCO Y JACINTO ALCANTARA"
+      },
+      {
+        "from": [
+          "FRANCISCO TOMAS Y VALIENTE",
+          "Francisco Tomás y Valiente"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRANCISCO TOMAS Y VALIENTE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna NOMBRE-VIA"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "grel:value.trim().replace(/\\s*;\\s*$/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna EMAIL usando la expresión grel:value.trim().replace(/\\s*;\\s*$/, \"\")"
+  }
+]

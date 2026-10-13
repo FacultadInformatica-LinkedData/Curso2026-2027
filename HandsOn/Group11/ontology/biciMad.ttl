@@ -1,0 +1,68 @@
+@prefix bici: <http://www.example.org/bicimad/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bici: a owl:Ontology ;
+    rdfs:label "BiciMAD station ontology" .
+
+bici:Station a owl:Class ;
+    rdfs:label "Station" .
+
+bici:Location a owl:Class ;
+    rdfs:label "Location" .
+
+bici:StationStatus a owl:Class ;
+    rdfs:label "StationStatus" .
+
+bici:hasLocation a owl:ObjectProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range bici:Location .
+
+bici:hasStatus a owl:ObjectProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range bici:StationStatus .
+
+bici:objectId a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:integer .
+
+bici:stationNumber a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:string .
+
+bici:name a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:string .
+
+bici:activate a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:integer .
+
+bici:noAvailable a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:integer .
+
+bici:ligth a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:integer .
+
+bici:totalBases a owl:DatatypeProperty ;
+    rdfs:domain bici:Station ;
+    rdfs:range xsd:integer .
+
+bici:address a owl:DatatypeProperty ;
+    rdfs:domain bici:Location ;
+    rdfs:range xsd:string .
+
+bici:positionText a owl:DatatypeProperty ;
+    rdfs:domain bici:Location ;
+    rdfs:range xsd:string .
+
+bici:longitude a owl:DatatypeProperty ;
+    rdfs:domain bici:Location ;
+    rdfs:range xsd:decimal .
+
+bici:latitude a owl:DatatypeProperty ;
+    rdfs:domain bici:Location ;
+    rdfs:range xsd:decimal .

@@ -1,0 +1,80 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+ns:hasDay a owl:DatatypeProperty ;
+    rdfs:label "has day" ;
+    rdfs:range xsd:Integer .
+
+ns:hasId a owl:DatatypeProperty ;
+    rdfs:label "has id" ;
+    rdfs:range xsd:Integer .
+
+ns:hasMeasurementCode a owl:DatatypeProperty ;
+    rdfs:label "has measurement code" ;
+    rdfs:range xsd:Integer .
+
+ns:hasMeasurementType a owl:ObjectProperty ;
+    rdfs:label "has measurement type" ;
+    rdfs:domain ns:SamplePoint ;
+    rdfs:range ns:MeasurementType .
+
+ns:hasMonth a owl:DatatypeProperty ;
+    rdfs:label "has month" ;
+    rdfs:range xsd:Integer .
+
+ns:hasSamplePoint a owl:ObjectProperty ;
+    rdfs:label "has sample point" ;
+    rdfs:domain ns:Obervation ;
+    rdfs:range ns:SamplePoint .
+
+ns:hasStation a owl:ObjectProperty ;
+    rdfs:label "has station" ;
+    rdfs:domain ns:SamplePoint ;
+    rdfs:range ns:Station .
+
+ns:hasStationCode a owl:DatatypeProperty ;
+    rdfs:label "has station code" ;
+    rdfs:range xsd:Integer .
+
+ns:hasTechnique a owl:DatatypeProperty ;
+    rdfs:label "has technique" ;
+    rdfs:range xsd:Integer .
+
+ns:hasValue a owl:DatatypeProperty ;
+    rdfs:label "has value" ;
+    rdfs:range xsd:decimal .
+
+ns:hasYear a owl:DatatypeProperty ;
+    rdfs:label "has year" ;
+    rdfs:range xsd:Integer .
+
+ns:isValidated a owl:DatatypeProperty ;
+    rdfs:label "is validated" ;
+    rdfs:range xsd:Boolean .
+
+ns:locatedIn a owl:ObjectProperty ;
+    rdfs:label "located in" ;
+    rdfs:domain ns:Station ;
+    rdfs:range ns:Municipality .
+
+ns:MeasurementType a owl:Class ;
+    rdfs:label "Measurement Type" .
+
+ns:Municipality a owl:Class ;
+    rdfs:label "Municipality" .
+
+ns:Obervation a owl:Class ;
+    rdfs:label "Obervation" .
+
+ns:Station a owl:Class ;
+    rdfs:label "Station" .
+
+ns:SamplePoint a owl:Class ;
+    rdfs:label "Sample Point" .
+

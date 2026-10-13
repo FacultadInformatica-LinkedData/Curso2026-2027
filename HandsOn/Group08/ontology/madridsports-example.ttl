@@ -1,0 +1,233 @@
+@prefix ms: <http://madridsports.example.org/ontology/madridsports#> .
+@prefix facility: <http://madridsports.example.org/resource/facility/> .
+@prefix district: <http://madridsports.example.org/resource/district/> .
+@prefix neighbourhood: <http://madridsports.example.org/resource/neighbourhood/> .
+@prefix facilityType: <http://madridsports.example.org/resource/facilityType/> .
+@prefix accessibilityLevel: <http://madridsports.example.org/resource/accessibilityLevel/> .
+@prefix accessibilityFeature: <http://madridsports.example.org/resource/accessibilityFeature/> .
+@prefix city: <http://madridsports.example.org/resource/city/> .
+@prefix dataset: <http://madridsports.example.org/resource/dataset/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+# Sample instantiation of the Madrid sports facilities ontology.
+# Facilities are real rows of the three source CSV files (PK in the URI).
+
+# ---- Dataset description (licence and attribution) -------------------------
+
+dataset:madridSports a dcat:Dataset ;
+    dcterms:title "Madrid municipal sports facilities (RDF)"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:source <https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas> ,
+        <https://datos.madrid.es/dataset/200186-0-polideportivos> ,
+        <https://datos.madrid.es/dataset/210227-0-piscinas-publicas> ;
+    dcterms:description "Contains data of the Ayuntamiento de Madrid (datos.madrid.es), licensed under CC BY 4.0. Derived from those datasets and modified: transformed to RDF."@en .
+
+# ---- City ------------------------------------------------------------------
+
+city:madrid a ms:City ;
+    rdfs:label "Madrid"@es ;
+    owl:sameAs <http://dbpedia.org/resource/Madrid> ,
+        <http://www.wikidata.org/entity/Q2807> .
+
+# ---- Districts -------------------------------------------------------------
+
+district:4 a ms:District ;
+    rdfs:label "SALAMANCA"@es ;
+    ms:districtCode 4 ;
+    ms:partOfCity city:madrid .
+
+district:9 a ms:District ;
+    rdfs:label "MONCLOA-ARAVACA"@es ;
+    ms:districtCode 9 ;
+    ms:partOfCity city:madrid .
+
+district:11 a ms:District ;
+    rdfs:label "CARABANCHEL"@es ;
+    ms:districtCode 11 ;
+    ms:partOfCity city:madrid .
+
+district:12 a ms:District ;
+    rdfs:label "USERA"@es ;
+    ms:districtCode 12 ;
+    ms:partOfCity city:madrid .
+
+district:18 a ms:District ;
+    rdfs:label "VILLA DE VALLECAS"@es ;
+    ms:districtCode 18 ;
+    ms:partOfCity city:madrid .
+
+# ---- Neighbourhoods (URI = district code - neighbourhood number) ----------------
+
+neighbourhood:4-2 a ms:Neighbourhood ;
+    rdfs:label "GOYA"@es ;
+    ms:neighbourhoodNumber 2 ;
+    ms:belongsToDistrict district:4 .
+
+neighbourhood:9-3 a ms:Neighbourhood ;
+    rdfs:label "CIUDAD UNIVERSITARIA"@es ;
+    ms:neighbourhoodNumber 3 ;
+    ms:belongsToDistrict district:9 .
+
+neighbourhood:11-3 a ms:Neighbourhood ;
+    rdfs:label "SAN ISIDRO"@es ;
+    ms:neighbourhoodNumber 3 ;
+    ms:belongsToDistrict district:11 .
+
+neighbourhood:12-2 a ms:Neighbourhood ;
+    rdfs:label "ORCASUR"@es ;
+    ms:neighbourhoodNumber 2 ;
+    ms:belongsToDistrict district:12 .
+
+neighbourhood:18-3 a ms:Neighbourhood ;
+    rdfs:label "ENSANCHE DE VALLECAS"@es ;
+    ms:neighbourhoodNumber 3 ;
+    ms:belongsToDistrict district:18 .
+
+# ---- Facility types ----------------------------------------------------------
+
+facilityType:Calistenia a ms:FacilityType ;
+    rdfs:label "Calistenia"@es .
+
+facilityType:CamposEstadiosFutbol a ms:FacilityType ;
+    rdfs:label "CamposEstadiosFutbol"@es .
+
+facilityType:PistasPatinaje a ms:FacilityType ;
+    rdfs:label "PistasPatinaje"@es .
+
+facilityType:PistasTenisBadminton a ms:FacilityType ;
+    rdfs:label "PistasTenisBadminton"@es .
+
+facilityType:Sauna a ms:FacilityType ;
+    rdfs:label "Sauna"@es .
+
+# ---- Accessibility values (code list of the ACCESIBILIDAD column) ------------
+
+accessibilityLevel:0 a ms:AccessibilityLevel ;
+    rdfs:label "Not accessible"@en ;
+    ms:accessibilityCode 0 .
+
+accessibilityLevel:1 a ms:AccessibilityLevel ;
+    rdfs:label "Accessible"@en ;
+    ms:accessibilityCode 1 .
+
+accessibilityLevel:2 a ms:AccessibilityLevel ;
+    rdfs:label "Partially accessible for people with reduced mobility"@en ;
+    ms:accessibilityCode 2 .
+
+accessibilityLevel:3 a ms:AccessibilityLevel ;
+    rdfs:label "No information on accessibility for people with reduced mobility"@en ;
+    ms:accessibilityCode 3 .
+
+accessibilityFeature:4 a ms:AccessibilityFeature ;
+    rdfs:label "Sign language"@en ;
+    ms:accessibilityCode 4 .
+
+accessibilityFeature:5 a ms:AccessibilityFeature ;
+    rdfs:label "Tactile paving"@en ;
+    ms:accessibilityCode 5 .
+
+accessibilityFeature:6 a ms:AccessibilityFeature ;
+    rdfs:label "Magnetic induction loop"@en ;
+    ms:accessibilityCode 6 .
+
+# ---- Sports facilities -------------------------------------------------------
+
+facility:4557041 a ms:BasicSportsFacility ;
+    rdfs:label "Instalación Deportiva Municipal Básica Albaicín"@es ;
+    ms:sourceKey 4557041 ;
+    ms:equipment "Pista de fútbol sala Pista de patinaje Acceso libre."@es ;
+    ms:transport "Consulta los siguientes enlaces."@es ;
+    ms:streetType "CALLE"@es ;
+    ms:streetName "ALBAICIN"@es ;
+    ms:streetNumber "11" ;
+    ms:postalCode "28041" ;
+    ms:latitude "40.36836562084534"^^xsd:decimal ;
+    ms:longitude "-3.7021875351971816"^^xsd:decimal ;
+    ms:locatedInDistrict district:12 ;
+    ms:locatedInNeighbourhood neighbourhood:12-2 ;
+    ms:hasFacilityType facilityType:PistasPatinaje ;
+    ms:hasAccessibilityLevel accessibilityLevel:2 ;
+    dcterms:source <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=6e518d498a5e1110VgnVCM1000000b205a0aRCRD> .
+
+facility:6344681 a ms:BasicSportsFacility ;
+    rdfs:label "Instalación Deportiva Municipal Básica Alto del Retiro"@es ;
+    ms:sourceKey 6344681 ;
+    ms:equipment "Pista baloncesto Pista calistenia Pista polideportiva Acceso libre."@es ;
+    ms:transport "Metro: Las Suertes (línea 1)."@es ;
+    ms:streetType "CALLE"@es ;
+    ms:streetName "ALTO DEL RETIRO"@es ;
+    ms:streetNumber "7" ;
+    ms:postalCode "28051" ;
+    ms:latitude "40.368540424916404"^^xsd:decimal ;
+    ms:longitude "-3.591695083849996"^^xsd:decimal ;
+    ms:locatedInDistrict district:18 ;
+    ms:locatedInNeighbourhood neighbourhood:18-3 ;
+    ms:hasFacilityType facilityType:Calistenia ;
+    ms:hasAccessibilityLevel accessibilityLevel:2 ;
+    dcterms:source <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=5a7c2150461f5310VgnVCM1000000b205a0aRCRD> .
+
+facility:10183549 a ms:SportsCentre ;
+    rdfs:label "Centro Deportivo Municipal Alcántara"@es ;
+    ms:sourceKey 10183549 ;
+    ms:openingHours "Horario de uso de las instalaciones deportivas Para saber el horario de apertura de las distintas instalaciones del centro deportivo, les rogamos lo consulten con el propio centro. Horario de taquilla De lunes a viernes: de 7 a 23 horas. Sábados: de 9 a 20 horas. Domingos y festivos: de 9 a 15 horas. Cierre completo del centro Los días 1 de enero, 1 de mayo y 25 de diciembre."@es ;
+    ms:equipment "Clases y escuelas deportivas Pre-infantiles: matronatación. Escuelas infantiles: bailes, defensa personal y natación. Jóvenes y personas adultas: natación. Mayores de 65 años: natación. Personas con discapacidad: natación. Equipamientos Superficie total de las instalaciones: 3.725 metros cuadrados. Unidades deportivas cubiertas: piscina (vaso de 25 metros y vaso de enseñanza), sala ciclo, 5 salas multiusos, sauna y spa. Unidades deportivas al aire libre: piscina recreo. Acceso controlado."@es ;
+    ms:transport "Metro: Lista (línea 4), Manuel Becerra (líneas 2 y 6). Bicicletas: El centro dispone de aparca bicicletas exterior con capacidad para 12 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."@es ;
+    ms:streetType "CALLE"@es ;
+    ms:streetName "ALCANTARA"@es ;
+    ms:streetNumber "26" ;
+    ms:postalCode "28006" ;
+    ms:latitude "40.42810291538114"^^xsd:decimal ;
+    ms:longitude "-3.6737317205040503"^^xsd:decimal ;
+    ms:phone "917 373 641" ;
+    ms:email "alcantara@viding.es" ;
+    ms:locatedInDistrict district:4 ;
+    ms:locatedInNeighbourhood neighbourhood:4-2 ;
+    ms:hasFacilityType facilityType:Sauna ;
+    ms:hasAccessibilityLevel accessibilityLevel:1 ;
+    ms:hasSwimmingPool true ;
+    dcterms:source <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=a949235892f28510VgnVCM1000001d4a900aRCRD> .
+
+facility:72028 a ms:SportsCentre ;
+    rdfs:label "Club de Campo Villa de Madrid"@es ;
+    ms:sourceKey 72028 ;
+    ms:equipment "El Club de Campo Villa de Madrid cuenta dentro de sus instalaciones con varios servicios destinados al uso y disfrute de sus abonados. Nuestro objetivo es proporcionar a los abonados servicios para su utilidad y para el esparcimiento personal. Somos mucho más que un Club Deportivo. Ajedrez, bridge, croquet, fitness, golf, hockey, hípica, gimnasio, pádel, patinaje, piscimas, sauna, squash, tenis, tenis de mesa, triatlon."@es ;
+    ms:transport "Bus: 160, 161, A. Acceso vehículos por la carretera de Castilla, km 2."@es ;
+    ms:streetType "CARRETERA"@es ;
+    ms:streetName "CASTILLA"@es ;
+    ms:streetNumber "12" ;
+    ms:postalCode "28040" ;
+    ms:latitude "40.43882337027629"^^xsd:decimal ;
+    ms:longitude "-3.7426495421854256"^^xsd:decimal ;
+    ms:phone "915 502 010" ;
+    ms:email "abonados@ccvm.es" ;
+    ms:locatedInDistrict district:9 ;
+    ms:locatedInNeighbourhood neighbourhood:9-3 ;
+    ms:hasFacilityType facilityType:PistasTenisBadminton ;
+    ms:hasAccessibilityLevel accessibilityLevel:3 ;
+    ms:hasSwimmingPool true ;
+    dcterms:source <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=ef93827a9e41c010VgnVCM2000000c205a0aRCRD> .
+
+facility:4617960 a ms:SportsCentre ;
+    rdfs:label "Centro Deportivo Municipal Antiguo Canódromo"@es ;
+    ms:sourceKey 4617960 ;
+    ms:openingHours "Horario de uso en las instalaciones deportivas: Para saber el horario de apertura de las distintas instalaciones del centro deportivo, les rogamos lo consulten con el propio centro."@es ;
+    ms:equipment "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie: 9.000 metros cuadrados. Unidades deportivas cubiertas: fisio-hidroterápia y sala multiusos. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, campo de fútbol 7 césped artificial y mesa de teqball. Acceso controlado."@es ;
+    ms:transport "Consulta los siguientes enlaces."@es ;
+    ms:streetType "CALLE"@es ;
+    ms:streetName "VIA CARPETANA"@es ;
+    ms:streetNumber "61" ;
+    ms:postalCode "28047" ;
+    ms:latitude "40.39722719121027"^^xsd:decimal ;
+    ms:longitude "-3.736112026543592"^^xsd:decimal ;
+    ms:phone "618439332" ;
+    ms:email "cdmantiguocanodromo@madrid.es" ;
+    ms:locatedInDistrict district:11 ;
+    ms:locatedInNeighbourhood neighbourhood:11-3 ;
+    ms:hasFacilityType facilityType:CamposEstadiosFutbol ;
+    ms:hasAccessibilityLevel accessibilityLevel:1 ;
+    ms:hasSwimmingPool false ;
+    dcterms:source <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=dd6426521e7f3110VgnVCM1000000b205a0aRCRD> .

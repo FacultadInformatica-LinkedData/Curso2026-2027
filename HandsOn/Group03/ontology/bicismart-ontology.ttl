@@ -1,0 +1,104 @@
+@prefix bm: <https://bicismart.madrid.data.es/ontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dc:creator a owl:AnnotationProperty .
+
+geo1:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain bm:Point ;
+    rdfs:range xsd:double .
+
+geo1:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain bm:Point ;
+    rdfs:range xsd:double .
+
+bm: a owl:Ontology ;
+    dc:creator "Alejandro Martínez",
+        "Kailin Dai",
+        "Lin Wang",
+        "Rodrigo Najar",
+        "Shuyi Zhuang" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+bm:districtCode a owl:DatatypeProperty ;
+    rdfs:label "district code" ;
+    rdfs:domain bm:Street ;
+    rdfs:range xsd:integer .
+
+bm:hasPoint a owl:ObjectProperty ;
+    rdfs:label "has point" ;
+    rdfs:domain bm:BikeStation ;
+    rdfs:range geo1:Point .
+
+bm:hasState a owl:ObjectProperty ;
+    rdfs:label "has state" ;
+    rdfs:domain bm:BikeStation ;
+    rdfs:range bm:StationState .
+
+bm:isActivated a owl:DatatypeProperty ;
+    rdfs:label "is activated" ;
+    rdfs:domain bm:StationState ;
+    rdfs:range xsd:boolean .
+
+bm:locatedOnStreet a owl:ObjectProperty ;
+    rdfs:label "located on street" ;
+    rdfs:domain bm:BikeStation ;
+    rdfs:range bm:Street .
+
+bm:neighborhoodCode a owl:DatatypeProperty ;
+    rdfs:label "neighborhood code" ;
+    rdfs:domain bm:Street ;
+    rdfs:range xsd:integer .
+
+bm:operationalState a owl:DatatypeProperty ;
+    rdfs:label "operational state" ;
+    rdfs:domain bm:StationState ;
+    rdfs:range xsd:string .
+
+bm:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code" ;
+    rdfs:domain bm:Street ;
+    rdfs:range xsd:string .
+
+bm:stationId a owl:DatatypeProperty ;
+    rdfs:label "station id" ;
+    rdfs:domain bm:BikeStation ;
+    rdfs:range xsd:string .
+
+bm:streetCode a owl:DatatypeProperty ;
+    rdfs:label "street code" ;
+    rdfs:domain bm:Street ;
+    rdfs:range xsd:integer .
+
+bm:streetName a owl:DatatypeProperty ;
+    rdfs:label "street name" ;
+    rdfs:domain bm:StationState ;
+    rdfs:range xsd:string .
+
+bm:totalCapacity a owl:DatatypeProperty ;
+    rdfs:label "total capacity" ;
+    rdfs:domain bm:BikeStation ;
+    rdfs:range xsd:integer .
+
+bm:unavailableBases a owl:DatatypeProperty ;
+    rdfs:label "unavailable bases" ;
+    rdfs:domain bm:StationState ;
+    rdfs:range xsd:integer .
+
+geo1:Point a owl:Class ;
+    rdfs:label "Point" .
+
+bm:Street a owl:Class ;
+    rdfs:label "Street" .
+
+bm:BikeStation a owl:Class ;
+    rdfs:label "Bike Station" .
+
+bm:StationState a owl:Class ;
+    rdfs:label "Station State" .
+

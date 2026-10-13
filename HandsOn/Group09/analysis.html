@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hands-on 2: Analysis & Resource Naming Strategy</title>
+</head>
+<body>
+    <h1>Data Source and Licensing Analysis - Group09</h1>
+
+    <h2>1. Data Source Analysis</h2>
+    <p><strong>Dataset:</strong> Aparcabicis (Aparcamientos para bicicletas en la vía pública)</p>
+    <p><strong>Source URL:</strong> <a href="https://datos.madrid.es/dataset/205099-0-aparca-bicis/information" target="_blank">datos.madrid.es - Aparcabicis</a></p>
+
+    <h3>Statistical Summary & Data Characteristics</h3>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr bgcolor="#f0f0f0">
+                <th>Column Name</th>
+                <th>Inferred Type</th>
+                <th>Value Range / Unique Samples</th>
+                <th>Comments & Null Handling</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ID</strong> / <strong>identificador</strong></td>
+                <td>Integer / String</td>
+                <td>Sequential numeric IDs (e.g., 10001, 10002)</td>
+                <td>Primary key for each bicycle parking spot. No nulls.</td>
+            </tr>
+            <tr>
+                <td><strong>DESC_CLASE</strong></td>
+                <td>String</td>
+                <td>"APARCABICIS"</td>
+                <td>Constant value describing the municipal asset class.</td>
+            </tr>
+            <tr>
+                <td><strong>MODELO</strong></td>
+                <td>String</td>
+                <td>"MUPIS", "U INVERTIDA", "ROMA", "RECTANGULAR"</td>
+                <td>Physical model/design of the rack stand.</td>
+            </tr>
+            <tr>
+                <td><strong>NUM_PLAZAS</strong> / <strong>CANTIDAD</strong></td>
+                <td>Integer</td>
+                <td>Range: [2 - 30] (Typical: 4 to 10)</td>
+                <td>Number of available bike spaces per rack fixture.</td>
+            </tr>
+            <tr>
+                <td><strong>DIRECCION</strong> / <strong>CALLE</strong></td>
+                <td>String</td>
+                <td>"CALLE DE ALCALA", "PASEO DE LA CASTELLANA"</td>
+                <td>Textual street location name.</td>
+            </tr>
+            <tr>
+                <td><strong>NUMERO</strong></td>
+                <td>Integer / String</td>
+                <td>Range: [1 - 800], "S/N"</td>
+                <td>Civic street building number; "S/N" if unnumbered.</td>
+            </tr>
+            <tr>
+                <td><strong>DISTRITO</strong></td>
+                <td>String</td>
+                <td>"CENTRO", "CHAMBERI", "RETIRO", "SALAMANCA" (21 districts)</td>
+                <td>Administrative district name, target for external linking.</td>
+            </tr>
+            <tr>
+                <td><strong>BARRIO</strong></td>
+                <td>String</td>
+                <td>"JUSTICIA", "UNIVERSIDAD", "ALMAGRO" (131 neighborhoods)</td>
+                <td>Municipal neighborhood area name.</td>
+            </tr>
+            <tr>
+                <td><strong>LONGITUD</strong> (X)</td>
+                <td>Float / Decimal</td>
+                <td>Range: [-3.84, -3.53] (WGS84 degrees)</td>
+                <td>Geographic coordinate longitude.</td>
+            </tr>
+            <tr>
+                <td><strong>LATITUD</strong> (Y)</td>
+                <td>Float / Decimal</td>
+                <td>Range: [40.32, 40.54] (WGS84 degrees)</td>
+                <td>Geographic coordinate latitude.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Licensing Analysis</h2>
+    <ul>
+        <li><strong>Original Publisher:</strong> Ayuntamiento de Madrid (Subdirección General de Innovación e Información Urbana).</li>
+        <li><strong>Rightsholder:</strong> Ayuntamiento de Madrid.</li>
+        <li><strong>Original License:</strong> Terms of Open Government Data of Madrid City Council, compatible with <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>. It authorizes reproduction, distribution, public communication, and transformation for commercial and non-commercial purposes with mandatory attribution.</li>
+        <li><strong>Potential License for Generated Linked Data:</strong> <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>, ensuring legal downstream compatibility with the original municipal data source while enforcing proper source attribution.</li>
+    </ul>
+
+    <h2>3. Resource Naming Strategy</h2>
+    <p>Following Linked Data best practices and the course guidelines:</p>
+    <ul>
+        <li><strong>Domain:</strong> <code>http://smartcity.linkeddata.es/bicis/</code> (independent from Protégé default namespaces).</li>
+        <li><strong>URI form:</strong> <strong>Hash URIs (<code>#</code>)</strong> for ontological definitions (classes and properties) and <strong>Slash URIs (<code>/</code>)</strong> for dataset individuals/resources.</li>
+        <li><strong>Ontology terms URI:</strong> <code>http://smartcity.linkeddata.es/bicis/ontology#</code></li>
+        <li><strong>Resource individuals base path:</strong> <code>http://smartcity.linkeddata.es/bicis/resource/</code></li>
+    </ul>
+
+    <h3>URI Patterns for Individuals & Terms</h3>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr bgcolor="#f0f0f0">
+                <th>Element</th>
+                <th>Pattern</th>
+                <th>Concrete Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Ontology Class</strong></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/ontology#[ClassName]</code></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/ontology#BicycleParking</code></td>
+            </tr>
+            <tr>
+                <td><strong>Ontology Property</strong></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/ontology#[propertyName]</code></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/ontology#hasCapacity</code></td>
+            </tr>
+            <tr>
+                <td><strong>Bicycle Parking Resource</strong></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/BicycleParking/[id]</code></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/BicycleParking/10001</code></td>
+            </tr>
+            <tr>
+                <td><strong>District Resource</strong></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/District/[districtName]</code></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/District/Centro</code></td>
+            </tr>
+            <tr>
+                <td><strong>Neighborhood Resource</strong></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/Neighborhood/[neighborhoodName]</code></td>
+                <td><code>http://smartcity.linkeddata.es/bicis/resource/Neighborhood/Justicia</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

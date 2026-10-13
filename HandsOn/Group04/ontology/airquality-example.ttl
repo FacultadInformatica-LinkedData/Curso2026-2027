@@ -1,0 +1,59 @@
+@prefix bm: <http://breathemadrid.es/ontology#> .
+@prefix bmr: <http://breathemadrid.es/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Municipality
+
+bmr:municipality/28079 a bm:Municipality ;
+    bm:municipalityName "Madrid" ;
+    bm:municipalityCode "28079" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2807> .
+
+# Station types
+
+bmr:stationtype/UT a bm:StationType ;
+    bm:typeCode "UT" ;
+    bm:typeName "Urbana trafico" .
+
+# Pollutants
+
+bmr:pollutant/8 a bm:Pollutant ;
+    bm:pollutantName "NO2" ;
+    bm:pollutantCode "8" ;
+    bm:unit "ug/m3" .
+
+bmr:pollutant/10 a bm:Pollutant ;
+    bm:pollutantName "PM10" ;
+    bm:pollutantCode "10" ;
+    bm:unit "ug/m3" .
+
+# Stations
+
+bmr:station/28079004 a bm:Station ;
+    bm:stationCode "28079004" ;
+    bm:stationName "Plaza de Espana" ;
+    bm:address "Plaza de Espana" ;
+    bm:latitude "40.4238823"^^xsd:float ;
+    bm:longitude "-3.7122567"^^xsd:float ;
+    bm:altitude 637 ;
+    bm:locatedIn bmr:municipality/28079 ;
+    bm:hasStationType bmr:stationtype/UT ;
+    bm:measuresPollutant bmr:pollutant/8 ;
+    bm:measuresPollutant bmr:pollutant/10 .
+
+# Observations
+
+bmr:observation/28079004_10_A/2026-10-01/H01 a bm:Observation ;
+    bm:observedAt bmr:station/28079004 ;
+    bm:observesPollutant bmr:pollutant/10 ;
+    bm:value "42.0"^^xsd:float ;
+    bm:dateTime "2026-10-01T01:00:00"^^xsd:dateTime ;
+    bm:isValid "true"^^xsd:boolean .
+
+bmr:observation/28079004_10_A/2026-10-01/H02 a bm:Observation ;
+    bm:observedAt bmr:station/28079004 ;
+    bm:observesPollutant bmr:pollutant/10 ;
+    bm:value "44.0"^^xsd:float ;
+    bm:dateTime "2026-10-01T02:00:00"^^xsd:dateTime ;
+    bm:isValid "true"^^xsd:boolean .

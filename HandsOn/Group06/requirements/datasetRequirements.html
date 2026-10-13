@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Dataset requirements
+		</title>
+		<style>
+			body {
+				font:16px/1.6 system-ui,sans-serif;
+				color:#172d3c;
+				background:#f3f6f8;
+				margin:0
+			}
+			main {
+				max-width:1120px;
+				margin:auto;
+				padding:36px 24px
+			}
+			h1 {
+				font-size:38px;
+				line-height:1.15
+			}
+			h2 {
+				margin-top:36px
+			}
+			h3 {
+				margin-top:24px
+			}
+			a {
+				color:#006b75
+			}
+			table {
+				width:100%;
+				border-collapse:collapse;
+				background:white
+			}
+			th,td {
+				padding:12px;
+				text-align:left;
+				border:1px solid #d5dfe5;
+				vertical-align:top
+			}
+			th {
+				background:#e6eff1
+			}
+			code {
+				overflow-wrap:anywhere
+			}
+			.note {
+				padding:16px;
+				border-left:4px solid #d49b32;
+				background:#fff4da
+			}
+			.badge {
+				color:#006b60;
+				font-weight:700
+			}
+			.screens {
+				display:grid;
+				gap:24px
+			}
+			.screen {
+				background:white;
+				border:1px solid #b7cbd3;
+				border-radius:14px;
+				overflow:hidden
+			}
+			.bar {
+				background:#153d4a;
+				color:white;
+				padding:18px 24px;
+				font-weight:700
+			}
+			.panel {
+				padding:24px
+			}
+			.chips {
+				display:flex;
+				flex-wrap:wrap;
+				gap:10px
+			}
+			.chip {
+				border:1px solid #b3c9d0;
+				padding:8px 14px;
+				border-radius:8px
+			}
+			.layout {
+				display:grid;
+				grid-template-columns:1fr 1fr;
+				gap:18px;
+				margin-top:20px
+			}
+			.card {
+				border:1px solid #cbd7dc;
+				padding:16px;
+				border-radius:10px;
+				margin:12px 0
+			}
+			.map {
+				min-height:280px;
+				background:#e6eff0;
+				border-radius:10px;
+				padding:14px
+			}
+			.muted {
+				color:#5e707a;
+				font-size:14px
+			}
+			footer {
+				margin-top:32px;
+				border-top:1px solid #cbd7dc;
+				padding-top:16px
+			}
+			@media(max-width:700px) {
+				.layout {
+					grid-template-columns:1fr
+				}
+				h1 {
+					font-size:30px
+				}
+				table {
+					font-size:14px
+				}
+				th,td {
+					padding:7px
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p>Hands-on 1 · Group02 · 29 September 2026</p>
+			<h1>Dataset requirements</h1>
+			<h2>1. Datasets selected</h2>
+			<h3>Bibliotecas de Madrid</h3>
+			<p>Publisher: Ayuntamiento de Madrid.</p>
+			<p>Local snapshot: <a href="../csv/libraries.csv">libraries.csv</a>, downloaded on the 29 September 2026.</p>
+			<p><a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas">Official dataset website</a> · <a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas/resource/201747-1-bibliobuses-bibliotecas-csv/download/201747-0-bibliobuses-bibliotecas.csv">Official CSV download</a> · <a href="https://datos.madrid.es/dataset/201747-0-bibliobuses-bibliotecas/resource/201747-4-bibliobuses-bibliotecas/download/201747-4-bibliobuses-bibliotecas.pdf">Official documentation</a></p>
+			<h3>Museos de la ciudad de Madrid</h3>
+			<p>Publisher: Ayuntamiento de Madrid.</p>
+			<p>Local snapshot: <a href="../csv/museums.csv">museums.csv</a>, downloaded on the 29 September 2026.</p>
+			<p><a href="https://datos.madrid.es/dataset/201132-0-museos">Official dataset website</a> · <a href="https://datos.madrid.es/dataset/201132-0-museos/resource/201132-1-museos-csv/download/201132-0-museos.csv">Official CSV download</a> · <a href="https://datos.madrid.es/dataset/201132-0-museos/resource/201132-5-museos/download/201132-5-museos.pdf">Official documentation</a></p>
+			<h2>2. Requirement assessment</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Requirements</th>
+						<th>Bibiliotecas de Madrid</th>
+						<th>Museos de la ciudad de Madrid</th>
+						<th>Evidence and limitations</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>R1 · Smart-city domain</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Both data are part of the smart community facilities. Futhermore, libraries  data can also be included in smart education and museums data in smart tourism.</td>
+					</tr>
+					<tr>
+						<td>R2 · CSV availability</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Both datasets are available and have been downloaded in CSV format as it can be seen from the csv folder.</td>
+					</tr>
+					<tr>
+						<td>R3 · Open license</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Both datasets are under de <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license, which gives freedom to share and adapt the material as long appropiate attribution is given.</td>
+					</tr>
+					<tr>
+						<td>R4 · Linkable real-world entities</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>LOCALIDAD, COD-DISTRITO / DISTRITO, COD-BARRIO / BARRIO, names, addresses and LATITUD / LONGITUD, which are columns from the datasets, support reconciliation with cities, districts, neighborhoods and facilities.</td>
+					</tr>
+					<tr>
+						<td>R5 · Documentation (optional)</td>
+						<td>Fully satisfied</td>
+						<td>Fully satisfied</td>
+						<td>Documentation is available as it is shown in the previous section and can also be download at the bottom of the website from both datasets</td>
+					</tr>
+					<tr>
+						<td>R6 · Multiple sources (optional)</td>
+						<td colspan="2"; style="text-align: center">Partially satisfied</td>
+						<td>Two distinct datasets, but one publishing portal and publisher. Wikidata is a planned external linking source; it is not included as a downloaded input dataset.</td>
+					</tr>
+				</tbody>
+			</table>
+						<h2>3. External entities and linking plan</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Local entity / fields</th>
+						<th>External target</th>
+						<th>Matching method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>City: LOCALIDAD = MADRID</td>
+						<td><a href="https://www.wikidata.org/wiki/Q2807">Wikidata Madrid (Q2807)</a></td>
+						<td>Confirm that the locality denotes the city rather than the autonomous community; link a city resource and relate each facility to that city.</td>
+					</tr>
+					<tr>
+						<td>Museum: PK = 2058, NOMBRE = Museo del Prado; coordinates 40.414069291230945, -3.6922134558146453</td>
+						<td><a href="https://www.wikidata.org/wiki/Q160112">Wikidata Museo del Prado (Q160112)</a></td>
+						<td>Match the museum using its name, official website and coordinates.</td>
+					</tr>
+					<tr>
+						<td>Districts and neighborhoods: codes plus names</td>
+						<td>Wikidata administrative-area items; optionally DBpedia resources</td>
+						<td>Match by geographic codes and normalized names, using Madrid and the administrative-area type to disambiguate.</td>
+					</tr>
+					<tr>
+						<td>Libraries: NOMBRE, address, CONTENT-URL, coordinates</td>
+						<td>Wikidata library items where available</td>
+						<td>Use library names, official websites, addresses and coordinates to match available library items.</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+	</body>
+</html>

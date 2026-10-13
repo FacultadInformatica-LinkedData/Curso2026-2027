@@ -1,0 +1,59 @@
+@prefix : <https://w3id.org/smartinfra-galicia/ontology/Demographics#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/smartinfra-galicia/ontology/Demographics>
+    a owl:Ontology .
+
+:Municipality
+    a owl:Class .
+
+:DemographicObservation
+    a owl:Class .
+
+:hasINECode
+    a owl:DatatypeProperty ;
+    rdfs:domain :Municipality ;
+    rdfs:range xsd:string .
+
+:hasName
+    a owl:DatatypeProperty ;
+    rdfs:domain :Municipality ;
+    rdfs:range xsd:string .
+
+:hasDemographicInformation
+    a owl:ObjectProperty ;
+    rdfs:domain :Municipality ;
+    rdfs:range :DemographicObservation .
+
+:hasYear
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:gYear .
+
+:hasPopulationPercentage
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:decimal .
+
+:hasPopulationDensity
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:decimal .
+
+:hasPopulationPercentageUnder20
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:decimal .
+
+:hasPopulationPercentage20To64
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:decimal .
+
+:hasPopulationPercentage65Plus
+    a owl:DatatypeProperty ;
+    rdfs:domain :DemographicObservation ;
+    rdfs:range xsd:decimal .

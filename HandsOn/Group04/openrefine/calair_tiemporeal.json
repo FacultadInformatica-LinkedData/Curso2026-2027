@@ -1,0 +1,168 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DIA",
+    "expression": "grel:cells[\"ANO\"].value.toString() + \"-\" + if(cells[\"MES\"].value < 10, \"0\", \"\") + cells[\"MES\"].value.toString() + \"-\" +if(cells[\"DIA\"].value < 10, \"0\", \"\") + cells[\"DIA\"].value.toString()",
+    "onError": "set-to-blank",
+    "newColumnName": "FECHA",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna FECHA en el índice 8 basada en la columna DIA usando la expresión grel:cells[\"ANO\"].value.toString() + \"-\" + if(cells[\"MES\"].value < 10, \"0\", \"\") + cells[\"MES\"].value.toString() + \"-\" +if(cells[\"DIA\"].value < 10, \"0\", \"\") + cells[\"DIA\"].value.toString()"
+  },
+  {
+    "op": "core/transpose-columns-into-rows",
+    "startColumnName": "H01",
+    "columnCount": 48,
+    "ignoreBlankCells": true,
+    "fillDown": true,
+    "separator": null,
+    "keyColumnName": "CAMPO_HORARIO",
+    "valueColumnName": "VALOR_CAMPO",
+    "description": "Transponer celdas en 48 columna(s) empezando por H01 en filas en dos nuevas columnas llamadas CAMPO_HORARIO y VALOR_CAMPO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CAMPO_HORARIO",
+    "expression": "grel:value.substring(1)",
+    "onError": "set-to-blank",
+    "newColumnName": "HORA",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna HORA en el índice 10 basada en la columna CAMPO_HORARIO usando la expresión grel:value.substring(1)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CAMPO_HORARIO",
+    "expression": "grel:if(value.substring(0,1) == \"H\", \"MEDICION\", \"VALIDEZ\")",
+    "onError": "set-to-blank",
+    "newColumnName": "TIPO_DATO",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna TIPO_DATO en el índice 10 basada en la columna CAMPO_HORARIO usando la expresión grel:if(value.substring(0,1) == \"H\", \"MEDICION\", \"VALIDEZ\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CAMPO_HORARIO",
+    "description": "Eliminar columna CAMPO_HORARIO"
+  },
+  {
+    "op": "core/key-value-columnize",
+    "keyColumnName": "TIPO_DATO",
+    "valueColumnName": "VALOR_CAMPO",
+    "noteColumnName": "",
+    "description": "Columnar por la columna de clave TIPO_DATO y la columna de valor VALOR_CAMPO con la columna de nota "
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MEDICION",
+    "newColumnName": "VALOR_MEDICION",
+    "description": "Renombra la columna MEDICION a VALOR_MEDICION"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "VALIDEZ",
+    "expression": "grel:value == \"V\"",
+    "onError": "set-to-blank",
+    "newColumnName": "ES_VALIDA",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna ES_VALIDA en el índice 12 basada en la columna VALIDEZ usando la expresión grel:value == \"V\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "HORA",
+    "expression": "grel:cells[\"PUNTO_MUESTREO\"].value.toString() + \"_\" + cells[\"FECHA\"].value.toString() + \"_H\" + cells[\"HORA\"].value.toString()",
+    "onError": "set-to-blank",
+    "newColumnName": "ID_OBSERVACION",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna ID_OBSERVACION en el índice 10 basada en la columna HORA usando la expresión grel:cells[\"PUNTO_MUESTREO\"].value.toString() + \"_\" + cells[\"FECHA\"].value.toString() + \"_H\" + cells[\"HORA\"].value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ES_VALIDA",
+    "expression": "grel:if(cells[\"VALIDEZ\"].value == \"V\", \"true\", \"false\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ES_VALIDA usando la expresión grel:if(cells[\"VALIDEZ\"].value == \"V\", \"true\", \"false\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ES_VALIDA",
+          "expression": "value",
+          "columnName": "ES_VALIDA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "false",
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "VALOR_MEDICION",
+    "expression": "grel:null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna VALOR_MEDICION usando la expresión grel:null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VALOR_MEDICION",
+    "expression": "grel:if(isBlank(value), null, value.toNumber())",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna VALOR_MEDICION usando la expresión grel:if(isBlank(value), null, value.toNumber())"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACION",
+    "expression": "grel:if(value.toNumber() < 10,\"00\" + value.toString(),if(value.toNumber() < 100, \"0\" + value.toString(), value.toString()))",
+    "onError": "set-to-blank",
+    "newColumnName": "COD_ESTACION",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna COD_ESTACION en el índice 3 basada en la columna ESTACION usando la expresión grel:if(value.toNumber() < 10,\"00\" + value.toString(),if(value.toNumber() < 100, \"0\" + value.toString(), value.toString()))"
+  }
+]

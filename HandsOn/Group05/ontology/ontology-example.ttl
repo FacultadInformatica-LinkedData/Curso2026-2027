@@ -1,0 +1,24 @@
+@prefix : <http://smartcity.linkeddata.es/sports/ontology/> .
+@prefix res: <http://smartcity.linkeddata.es/sports/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<http://smartcity.linkeddata.es/sports/resource/> a owl:Ontology ;
+    owl:imports <http://smartcity.linkeddata.es/sports/ontology/> .
+
+res:District/arganzuela a :District ;
+    rdfs:label "Arganzuela"@en .
+
+res:SportsCenter/184270 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Marques de Samaranch"@en ;
+    :pk 184270 ;
+    :locatedInDistrict res:District/arganzuela ;
+    :equipmentDescription "Indoor pool, weight room, paddle courts."@en ;
+    :accessibilityInfo "Accessible for reduced mobility."@en ;
+    :transportInfo "Metro: Legazpi. Bus: 6, 18, 62."@en ;
+    :telephone "915288800" ;
+    :email "cdmsamaranch@madrid.es" ;
+    geo:lat "40.3951"^^xsd:float ;
+    geo:long "-3.6932"^^xsd:float .

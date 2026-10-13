@@ -1,0 +1,208 @@
+@prefix : <http://madridsports.example.org/ontology/madridsports#> .
+@prefix ms: <http://madridsports.example.org/ontology/madridsports#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ---------------------------------------------------------------------------
+# Ontology header
+# ---------------------------------------------------------------------------
+
+<http://madridsports.example.org/ontology/madridsports> a owl:Ontology ;
+    dcterms:title "Madrid sports facilities ontology"@en ;
+    dcterms:description "Lightweight ontology to describe the municipal sports facilities of Madrid (basic facilities, sports centres and swimming pools), their location and their accessibility."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:source <https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas> ,
+        <https://datos.madrid.es/dataset/200186-0-polideportivos> ,
+        <https://datos.madrid.es/dataset/210227-0-piscinas-publicas> ;
+    rdfs:comment "Derived from datasets of the Ayuntamiento de Madrid (datos.madrid.es), licensed under CC BY 4.0. Modified: transformed to RDF."@en .
+
+# ---------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------
+
+ms:SportsFacility a owl:Class ;
+    rdfs:label "Sports facility"@en ;
+    rdfs:comment "A municipal place where sport can be practised. One individual per PK of the source data."@en .
+
+ms:BasicSportsFacility a owl:Class ;
+    rdfs:subClassOf ms:SportsFacility ;
+    owl:disjointWith ms:SportsCentre ;
+    rdfs:label "Basic sports facility"@en ;
+    rdfs:comment "Outdoor, usually free-access space for one sport (pitch, court, rink, calisthenics area...)."@en .
+
+ms:SportsCentre a owl:Class ;
+    rdfs:subClassOf ms:SportsFacility ;
+    rdfs:label "Sports centre"@en ;
+    rdfs:comment "Municipal multi-sport complex (polideportivo). Some of them have swimming pools."@en .
+
+ms:City a owl:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A city, used to link the districts with external datasets."@en .
+
+ms:District a owl:Class ;
+    rdfs:label "District"@en ;
+    rdfs:comment "Administrative district of the city of Madrid (21 in total)."@en .
+
+ms:Neighbourhood a owl:Class ;
+    rdfs:label "Neighbourhood"@en ;
+    rdfs:comment "Neighbourhood (barrio) inside a district."@en .
+
+ms:FacilityType a owl:Class ;
+    rdfs:label "Facility type"@en ;
+    rdfs:comment "Typology of a facility, taken from the last segment of the TIPO column (for example PistaFutbolSala)."@en .
+
+ms:AccessibilityValue a owl:Class ;
+    rdfs:label "Accessibility value"@en ;
+    rdfs:comment "Any value of the ACCESIBILIDAD code list of the source data."@en .
+
+ms:AccessibilityLevel a owl:Class ;
+    rdfs:subClassOf ms:AccessibilityValue ;
+    owl:disjointWith ms:AccessibilityFeature ;
+    rdfs:label "Accessibility level"@en ;
+    rdfs:comment "Mobility accessibility, codes 0 to 3 of the source data."@en .
+
+ms:AccessibilityFeature a owl:Class ;
+    rdfs:subClassOf ms:AccessibilityValue ;
+    rdfs:label "Accessibility feature"@en ;
+    rdfs:comment "Additional accessibility feature, codes 4 to 6 of the source data."@en .
+
+# ---------------------------------------------------------------------------
+# Object properties
+# ---------------------------------------------------------------------------
+
+ms:locatedInDistrict a owl:ObjectProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range ms:District ;
+    rdfs:label "located in district"@en .
+
+ms:locatedInNeighbourhood a owl:ObjectProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range ms:Neighbourhood ;
+    rdfs:label "located in neighbourhood"@en .
+
+ms:belongsToDistrict a owl:ObjectProperty ;
+    rdfs:domain ms:Neighbourhood ;
+    rdfs:range ms:District ;
+    rdfs:label "belongs to district"@en .
+
+ms:partOfCity a owl:ObjectProperty ;
+    rdfs:domain ms:District ;
+    rdfs:range ms:City ;
+    rdfs:label "part of city"@en .
+
+ms:hasFacilityType a owl:ObjectProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range ms:FacilityType ;
+    rdfs:label "has facility type"@en ;
+    rdfs:comment "A facility can have more than one type, because in sports centres the type of the source rows is the type of one of its units."@en .
+
+ms:hasAccessibilityLevel a owl:ObjectProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range ms:AccessibilityLevel ;
+    rdfs:label "has accessibility level"@en .
+
+ms:hasAccessibilityFeature a owl:ObjectProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range ms:AccessibilityFeature ;
+    rdfs:label "has accessibility feature"@en .
+
+# ---------------------------------------------------------------------------
+# Datatype properties
+# ---------------------------------------------------------------------------
+
+ms:sourceKey a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:integer ;
+    rdfs:label "source key"@en ;
+    rdfs:comment "Value of the PK column of the source data."@en .
+
+ms:hasSwimmingPool a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsCentre ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "has swimming pool"@en ;
+    rdfs:comment "True if the centre appears in the swimming pools dataset."@en .
+
+ms:openingHours a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "opening hours"@en .
+
+ms:equipment a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "equipment"@en ;
+    rdfs:comment "Free text with the spaces and equipment of the facility."@en .
+
+ms:transport a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "transport"@en ;
+    rdfs:comment "Free text with the metro, bus and train connections."@en .
+
+ms:description a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "description"@en .
+
+ms:streetType a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "street type"@en .
+
+ms:streetName a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "street name"@en .
+
+ms:streetNumber a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "street number"@en .
+
+ms:postalCode a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "postal code"@en .
+
+ms:latitude a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "WGS84 latitude in degrees."@en .
+
+ms:longitude a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "WGS84 longitude in degrees."@en .
+
+ms:phone a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "phone"@en .
+
+ms:email a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:string ;
+    rdfs:label "e-mail"@en .
+
+ms:districtCode a owl:DatatypeProperty ;
+    rdfs:domain ms:District ;
+    rdfs:range xsd:integer ;
+    rdfs:label "district code"@en ;
+    rdfs:comment "Official district number (1 to 21), as in COD-DISTRITO."@en .
+
+ms:neighbourhoodNumber a owl:DatatypeProperty ;
+    rdfs:domain ms:Neighbourhood ;
+    rdfs:range xsd:integer ;
+    rdfs:label "neighbourhood number"@en ;
+    rdfs:comment "Number of the neighbourhood inside its district, as in COD-BARRIO. It is not unique in the city."@en .
+
+ms:accessibilityCode a owl:DatatypeProperty ;
+    rdfs:domain ms:AccessibilityValue ;
+    rdfs:range xsd:integer ;
+    rdfs:label "accessibility code"@en ;
+    rdfs:comment "Code (0 to 6) of the ACCESIBILIDAD list."@en .

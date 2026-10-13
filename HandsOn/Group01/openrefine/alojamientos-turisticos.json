@@ -1,0 +1,1475 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alojamiento_tipo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna alojamiento_tipo usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "categoria",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna categoria usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "denominacion",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna denominacion usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_tipo usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_tipo usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_nombre",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_nombre usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "numero",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna numero usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bloque",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna bloque usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "portal",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna portal usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "escalera",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna escalera usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "planta",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna planta usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "puerta",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna puerta usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cdpostal",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna cdpostal usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna localidad usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "signatura",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna signatura usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cdpostal",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna cdpostal usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AUTOVIA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BARRO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BARRIO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BULEV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BULEVAR"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CLLJA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALLEJA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CLLON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALLEJON"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CMNO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAMINO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "COL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLONIA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRERA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CSTAN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COSTANILLA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CTRA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRETERA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CUSTA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CUESTA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DISEM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DISEMINADO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "EXTRR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EXTRARRADIO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GTA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GLORIETA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "POLIG"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POLIGONO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PRAJE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARAJE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PSAJE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASAJE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RTDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ROTONDA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SECT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SECTOR"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TRVA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TRAVESIA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "URB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "URBANIZACION"
+      }
+    ],
+    "description": "Editar celdas en masa en columna via_tipo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_nombre",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_nombre usando la expresión value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alojamiento_tipo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna alojamiento_tipo usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "categoria",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna categoria usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "denominacion",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna denominacion usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna via_tipo usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_nombre",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna via_nombre usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "numero",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna numero usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "bloque",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna bloque usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "portal",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna portal usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "escalera",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna escalera usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "planta",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna planta usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "puerta",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna puerta usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cdpostal",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna cdpostal usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna localidad usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "signatura",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna signatura usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "planta",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna planta usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_nombre",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_nombre usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "planta",
+    "expression": "grel:value.toString().replace(\"º\", \"\").replace(\"ª\", \"\").replace(\" \", \"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna planta usando la expresión grel:value.toString().replace(\"º\", \"\").replace(\"ª\", \"\").replace(\" \", \"-\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "puerta",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna puerta usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "puerta",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna puerta usando la expresión value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "puerta",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-",
+          ".",
+          "",
+          "--",
+          "---"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "-"
+      },
+      {
+        "from": [
+          "C IZQ.",
+          "C IZQ",
+          "IZQ C",
+          "IZQ. C"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ C"
+      },
+      {
+        "from": [
+          "IZQ. A",
+          "IZQ A",
+          "A IZQ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ A"
+      },
+      {
+        "from": [
+          "DCHA.",
+          "DCHA",
+          "DCHA,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DCHA"
+      },
+      {
+        "from": [
+          "2 IZQ",
+          "2 IZQ.",
+          "IZQ. 2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ 2"
+      },
+      {
+        "from": [
+          "EXT.IZ",
+          "EXT-IZ",
+          "EXT_IZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EXT IZQ"
+      },
+      {
+        "from": [
+          "PTA.",
+          "PTA.,",
+          "PTA.."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PUERTA"
+      },
+      {
+        "from": [
+          "L-50",
+          "L50"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L-50"
+      },
+      {
+        "from": [
+          "ATICO",
+          "ÁTICO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ATICO"
+      },
+      {
+        "from": [
+          "B1",
+          "B-1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B1"
+      },
+      {
+        "from": [
+          "DER",
+          "DER."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DCHA"
+      },
+      {
+        "from": [
+          "B2",
+          "B-2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B2"
+      },
+      {
+        "from": [
+          "B3",
+          "B-3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B3"
+      },
+      {
+        "from": [
+          "B-4",
+          "B4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B4"
+      },
+      {
+        "from": [
+          "A-B",
+          "AB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "A-B"
+      },
+      {
+        "from": [
+          "EX DR",
+          "EX. DR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EXT DCHA"
+      },
+      {
+        "from": [
+          "B-C",
+          "BC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B-C"
+      },
+      {
+        "from": [
+          "3 INT",
+          "INT. 3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INT 3"
+      },
+      {
+        "from": [
+          "CD",
+          "C-D"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "C-D"
+      },
+      {
+        "from": [
+          "A,BC,D",
+          "ABCD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ABCD"
+      },
+      {
+        "from": [
+          "IZ DCH",
+          "DCH IZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ DCHA"
+      },
+      {
+        "from": [
+          "IZD",
+          "IZD."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ"
+      },
+      {
+        "from": [
+          "IZDA",
+          "IZDA."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ"
+      },
+      {
+        "from": [
+          "IZQ.",
+          "IZQ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ"
+      },
+      {
+        "from": [
+          "IZ B",
+          "IZ. B"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ B"
+      },
+      {
+        "from": [
+          "PTA F",
+          "PTA. F"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PUERTA F"
+      },
+      {
+        "from": [
+          "A BIS",
+          "BIS A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BIS A"
+      },
+      {
+        "from": [
+          "N/A",
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      },
+      {
+        "from": [
+          "DCHA 1",
+          "1 DCHA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DCHA 1"
+      },
+      {
+        "from": [
+          "IZQ. B",
+          "B IZQ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ B"
+      },
+      {
+        "from": [
+          "EXT.",
+          "EXT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EXT"
+      },
+      {
+        "from": [
+          "D IZQ.",
+          "IZQ. D"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IZQ D"
+      },
+      {
+        "from": [
+          "CTRO.",
+          "CTRO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO"
+      },
+      {
+        "from": [
+          "1B",
+          "1-B"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1B"
+      },
+      {
+        "from": [
+          "3-1",
+          "3.1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3-1"
+      },
+      {
+        "from": [
+          "3-2",
+          "3.2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3-2"
+      },
+      {
+        "from": [
+          "2A",
+          "2-A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2A"
+      },
+      {
+        "from": [
+          "4A",
+          "4-A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4A"
+      },
+      {
+        "from": [
+          "INT A",
+          "INT. A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INT A"
+      },
+      {
+        "from": [
+          "A DCH",
+          "DCH. A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DCHA A"
+      },
+      {
+        "from": [
+          "5 INT",
+          "INT 5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INT 5"
+      },
+      {
+        "from": [
+          "L-10",
+          "L10"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L-10"
+      },
+      {
+        "from": [
+          "INT. D",
+          "INT D"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INT D"
+      },
+      {
+        "from": [
+          "L-20",
+          "L20"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L-20"
+      },
+      {
+        "from": [
+          "ESC 1",
+          "ESC. 1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESC 1"
+      },
+      {
+        "from": [
+          "L-30",
+          "L30"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L-30"
+      },
+      {
+        "from": [
+          "L-40",
+          "L40"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "L-40"
+      },
+      {
+        "from": [
+          "INT.",
+          "INT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INT"
+      }
+    ],
+    "description": "Editar celdas en masa en columna puerta"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna localidad usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alojamiento_tipo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VIVIENDAS DE USO TU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VIVIENDAS DE USO TURISTICO"
+      }
+    ],
+    "description": "Editar celdas en masa en columna alojamiento_tipo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "denominacion",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna denominacion usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_nombre",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_nombre usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna localidad usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "via_tipo",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna via_tipo usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "categoria",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna categoria usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alojamiento_tipo",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna alojamiento_tipo usando la expresión value.toTitlecase()"
+  }
+]

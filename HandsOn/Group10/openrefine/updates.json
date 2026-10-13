@@ -1,0 +1,1799 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v01",
+          "expression": "value",
+          "columnName": "v01",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v03",
+          "expression": "value",
+          "columnName": "v03",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v04",
+          "expression": "value",
+          "columnName": "v04",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v06",
+          "expression": "value",
+          "columnName": "v06",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v07",
+          "expression": "value",
+          "columnName": "v07",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v08",
+          "expression": "value",
+          "columnName": "v08",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v09",
+          "expression": "value",
+          "columnName": "v09",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v10",
+          "expression": "value",
+          "columnName": "v10",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v11",
+          "expression": "value",
+          "columnName": "v11",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h01",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h01 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v12",
+          "expression": "value",
+          "columnName": "v12",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v13",
+          "expression": "value",
+          "columnName": "v13",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v14",
+          "expression": "value",
+          "columnName": "v14",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v15",
+          "expression": "value",
+          "columnName": "v15",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v16",
+          "expression": "value",
+          "columnName": "v16",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v17",
+          "expression": "value",
+          "columnName": "v17",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v18",
+          "expression": "value",
+          "columnName": "v18",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v20",
+          "expression": "value",
+          "columnName": "v20",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v21",
+          "expression": "value",
+          "columnName": "v21",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v22",
+          "expression": "value",
+          "columnName": "v22",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v23",
+          "expression": "value",
+          "columnName": "v23",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "v24",
+          "expression": "value",
+          "columnName": "v24",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "N",
+                "l": "N"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h01",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h01 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h02",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h02 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h02",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h02 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h02",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h02 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h03",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h03 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h04",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h04 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h05",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h05 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h06",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h06 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h07",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h07 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "magnitud",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna magnitud usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h01",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h01 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v01",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v01 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dia",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna dia usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "mes",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna mes usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ano",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ano usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h03",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h03 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v02",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v02 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h02",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h02 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v05",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v05 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h05",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h05 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v04",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v04 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h04",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h04 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v03",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v03 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h07",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h07 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v06",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v06 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h06",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h06 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v08",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v08 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h08",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h08 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v07",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v07 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v10",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v10 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h10",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h10 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v09",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v09 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h09",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h09 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h13",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h13 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v12",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v12 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h12",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h12 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v11",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v11 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h11",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h11 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v15",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v15 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h15",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h15 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v14",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v14 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h14",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h14 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v13",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v13 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v17",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v17 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h17",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h17 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v16",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v16 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h16",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h16 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h20",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h20 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v19",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v19 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h19",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h19 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v18",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v18 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h18",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h18 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v22",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v22 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h22",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h22 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v21",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v21 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h21",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h21 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v20",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v20 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v24",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v24 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h24",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h24 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "v23",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna v23 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h23",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna h23 usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "provincia",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna provincia usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "municipio",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna municipio usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "estacion",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna estacion usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "magnitud",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna magnitud usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ano",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna ano usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "mes",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna mes usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dia",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna dia usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h01",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h01 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h02",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h02 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h03",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h03 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h04",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h04 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h05",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h05 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h06",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h06 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h07",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h07 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h08",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h08 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h09",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h09 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h10",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h10 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h11",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h11 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h12",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h12 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h13",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h13 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h14",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h14 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h15",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h15 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h16",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h16 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h17",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h17 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h18",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h18 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h19",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h19 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h20",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h20 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h21",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h21 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h22",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h22 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h23",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h23 usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "h24",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna h24 usando la expresión value.toNumber()"
+  }
+]

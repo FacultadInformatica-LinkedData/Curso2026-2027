@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Analysis of Our Data Set and its licensing </title>
+    </head>
+
+    <body style="margin: 2cm; font-family: Calibri;"> 
+
+        <h1>Data Set Analysis</h1>
+        <hr>
+        <br>
+
+        <p>
+            The dataset contains metadata in the first few rows;
+            with actual data starting after the year row (row 7). 
+            All information from this file refers to the year 2025. 
+            Each Galician municipality starts with a five digit INE 
+            code, such as 15006 Arzúa. This is the Espazo column which will be depicted as <i>rdf type: string/Resource</i>. We will be splitting this 
+            information into the following: 
+                <ul>
+                    <li>INE code: 15006</li>
+                    <li>Municipality name: Arzúa</li>
+                </ul>
+
+        The file contains five indicators in total:
+                <ol>
+                    <li>
+                        <dd><b> Porcentaxe de poboación segundo ámbito xeográfico </b></dd>
+                            <dt> This indicates the percentage of the population that
+                                corresponds to the municipality. <i>(rdf type: decimal).</i> 
+                                Below are some of the important values for this indicator: </dt>
+                                <ul>
+                                    <li>Minimum - 0.38</li>
+                                    <li>Maximum - 88.77</li>
+                                    <li>Average - 16.93</li>
+                                </ul>
+                    </li>       
+
+                    <li>
+                        <dd><b> Densidade de poboación  </b></dd>
+                            <dt>  this indicates the population density, measured 
+                                in inhabitants per km2. <i>(rdf type: decimal).</i> 
+                                Below are some of the important values for this indicator: </dt>
+                                <ul>
+                                    <li>Minimum - 2.5</li>
+                                    <li>Maximum - 6642.3</li>
+                                    <li>Average -144.93</li>
+                                </ul>
+                    </li>
+
+                    <li>
+                        <dd><b> Porcentaxe de poboación menor de 20 anos </b></dd>
+                            <dt> this indicates the percentage of the population of
+                                 the municipality that’s under 20. <i>(rdf type: decimal).</i> imal) 
+                                 Below are some of the important values for this indicator:</dt>
+                                <ul>
+                                    <li>Minimum - 3.25%</li>
+                                    <li>Maximum - 20.44%</li>
+                                    <li>Average - 11.70%</li>
+                                </ul>
+                    </li>
+
+                    <li>
+                        <dd><b>Porcentaxe de poboación entre 20 e 64 anos</b></dd>
+                            <dt>  this indicates the percentage of the population of 
+                                the municipality that’s between 20 and 64, inclusive.  
+                                <i>(rdf type: decimal).</i>  Below are some of the important 
+                                values for this indicator: </dt>
+                                <ul>
+                                    <li>Minimum - 40.18%</li>
+                                    <li>Maximum - 64.91%</li>
+                                    <li>Average - 53.60%</li>
+                                </ul>
+                    </li>
+
+                    <li>
+                        <dd> And lastly, <b>Porcentaxe de poboación de 65 e máis anos </b></dd>
+                            <dt> this indicates the percentage of the population 
+                                that’s 65 and older. <i>(rdf type: decimal).</i> 
+                                Below are some of the important values for this indicator: </dt>
+                                <ul>
+                                    <li>Minimum - 14.91%</li>
+                                    <li>Maximum - 55.86%</li>
+                                    <li>Average - 34.70%</li>
+                                </ul>
+                    </li>
+
+                </ol>
+
+                This file uses the semicolon (;) as an indicator for column separation, 
+                while the comma (,) is used for the decimal place. Some columns have 
+                empty values (-).This dataset can be represented in RDF type by depicting 
+                municipalities as resources and its indicators—the demographic information—as 
+                decimal properties.
+
+
+        </p>
+
+         <br>
+        <h1>Schema</h1>
+        <hr>
+        <br>
+        <p>
+            Municipality    
+                <ul>
+                    <li>Has INE code</li>
+                    <li>Has name</li>
+                    <li>Has demographic information</li>
+                </ul>
+
+            Demographic information
+                <ul>
+                    <li>Has year</li>
+                    <li>Has population percentage</li>
+                    <li>Has population density</li>
+                    <li>Has population percentage under 20 </li>
+                    <li>Has population percentage betwen 20 and 64</li>
+                    <li>Has population percentage over 65</li>
+                </ul>
+        </p>
+
+        <br>
+        <h1>Data Set licensing</h1>
+        <hr>
+        <br>
+
+        <p>
+            This  <a href="https://abertos.xunta.gal/catalogo/territorio-vivienda-transporte/-/dataset/0184/indicadores-poboacion"
+            target="_blank"
+            title="Data set official page">
+                data set
+            </a> was originally published with the license
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+                target="_blank"
+                title="license">
+                Creative Commons Attribution-ShareAlike 4.0 International ( CC BY-SA 4.0).
+            </a> 
+             
+            <br>
+            <br>
+            This license allows the copying and redistribution of all data, 
+            as well as the remix (adaptation), and transformation of the data
+            for any purpose, including that which is commercial. 
+            <br>
+            <br>
+            By using this dataset, we are required to provide appropriate 
+            credit by providing a link to the official license and inform of 
+            any and all changes made to the data set.
+            <br>
+            <br>
+            And to conclude, to distribute any changes and contributions made 
+            by us to the data set must be published under the same license as 
+            the original data set, namely Creative Commons Attribution-ShareAlike 4.0 International ( CC BY-SA 4.0).
+
+        </p>
+
+        <br>
+        <h1>Resource Naming Strategy</h1>
+        <hr>
+        <br>
+
+        <p>
+            For the generation of the ontology and linked data, a URI naming strategy has been defined to conceptually separate the conceptual model from the instantiated data, using a custom base domain (<code>https://w3id.org/smartinfra-galicia/</code>).
+        </p>
+        <ul>
+            <li><b>Ontology (Classes and Properties):</b> We use the <code>ontology/</code> path followed by the model name and a hash (<code>#</code>). Properties are defined independently of class URIs.<br>
+            <i>Example:</i> <code>https://w3id.org/smartinfra-galicia/ontology/Demographics#Municipality</code></li>
+            <li><b>Individuals / Data (Resources):</b> Instantiated data uses the <code>resource/</code> path, ensuring that paths for ontology resources and individuals are completely different.</li>
+            <li><b>Independent paths per class:</b> We ensure that paths for individuals of different classes are not the same to avoid collisions.
+                <ul>
+                    <li>For municipalities: <code>.../resource/municipality/&lt;INE_code&gt;</code> (e.g., 15006)</li>
+                    <li>For demographic observations: <code>.../resource/demographicinformation/&lt;INE_code&gt;-&lt;year&gt;</code> (e.g., 15006-2025)</li>
+                </ul>
+            </li>
+        </ul>
+
+    </body>
+
+</html>

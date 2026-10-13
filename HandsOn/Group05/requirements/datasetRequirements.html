@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Requirements Analysis - Group05</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        header { background-color: #003366; color: white; padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+        h1 { margin: 0 0 10px 0; font-size: 26px; }
+        h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #e9ecef; color: #495057; font-weight: bold; }
+        .badge-success { background-color: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+        .badge-optional { background-color: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+        .badge-no { background-color: #dc3545; color: white; padding: 4px 8px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+        .card { background: white; padding: 20px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        code { background: #f1f1f1; padding: 2px 5px; border-radius: 3px; font-family: Consolas, monospace; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Análisis de Requisitos del Dataset: Centros Deportivos Municipales (Polideportivos)</h1>
+    <p><strong>Curso:</strong> Web Semántica y Datos Enlazados | <strong>Grupo:</strong> Group05</p>
+</header>
+
+<div class="card">
+    <h2>Resumen del Dataset Seleccionado</h2>
+    <p><strong>Nombre del Dataset:</strong> Centros deportivos municipales (polideportivos) de la ciudad de Madrid</p>
+    <p><strong>URL de Origen:</strong> <a href="https://datos.madrid.es/dataset/200186-0-polideportivos" target="_blank">https://datos.madrid.es/dataset/200186-0-polideportivos</a></p>
+    <p><strong>Descripción:</strong> Catálogo oficial que incluye la ubicación exacta, vías de acceso, equipamientos deportivos (piscinas, campos de fútbol, pistas de pádel), horarios, accesibilidad física y medios de transporte público para llegar a cada polideportivo municipal de Madrid.</p>
+</div>
+
+<h2>Tabla Resumen de Cumplimiento de Requisitos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Requisito</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Grado de Satisfacción / Evidencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>R1</strong></td>
+            <td>Dominio Smart City</td>
+            <td><span class="badge-success">Cumplido</span></td>
+            <td>Infraestructuras Deportivas, Salud Pública y Accesibilidad Urbana.</td>
+        </tr>
+        <tr>
+            <td><strong>R2</strong></td>
+            <td>Formato CSV</td>
+            <td><span class="badge-success">Cumplido</span></td>
+            <td>Fichero estructurado separado por punto y coma (<code>;</code>) con codificación UTF-8.</td>
+        </tr>
+        <tr>
+            <td><strong>R3</strong></td>
+            <td>Licencia Abierta</td>
+            <td><span class="badge-success">Cumplido</span></td>
+            <td>Licencia de Reutilización de Datos Abiertos del Ayuntamiento de Madrid.</td>
+        </tr>
+        <tr>
+            <td><strong>R4</strong></td>
+            <td>Capacidad de Enlazado (Linkability)</td>
+            <td><span class="badge-success">Cumplido</span></td>
+            <td>Contiene geocoordenadas (Lat/Long, UTM X/Y), códigos de barrio/distrito, direcciones y transporte.</td>
+        </tr>
+        <tr>
+            <td><strong>R5</strong></td>
+            <td>Documentación existente (Opcional)</td>
+            <td><span class="badge-optional">Alto</span></td>
+            <td>Estructura y metadatos documentados en el Portal de Datos Abiertos del Ayuntamiento de Madrid.</td>
+        </tr>
+        <tr>
+            <td><strong>R6</strong></td>
+            <td>Múltiples fuentes de datos (Opcional)</td>
+            <td><span class="badge-no">No Satisfecho</span></td>
+            <td>El dataset proviene de una única fuente oficial (Ayuntamiento de Madrid).</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Análisis Detallado de Requisitos</h2>
+
+<div class="card">
+    <h3>R1. Dominio Smart City</h3>
+    <p>El dataset se ubica plenamente en el dominio de <strong>Smart Cities (Infraestructura Deportiva, Salud Pública y Calidad de Vida)</strong>. Permite monitorear la distribución territorial de los servicios públicos deportivos, la accesibilidad de las instalaciones y la integración con la red de movilidad sostenible.</p>
+</div>
+
+<div class="card">
+    <h3>R2. Disponibilidad en CSV</h3>
+    <p>Se encuentra disponible para su descarga en formato CSV con campos estandarizados (<code>PK</code>, <code>NOMBRE</code>, <code>EQUIPAMIENTO</code>, <code>ACCESIBILIDAD</code>, <code>LATITUD</code>, <code>LONGITUD</code>, <code>DISTRITO</code>, etc.), lo que facilita su procesamiento en herramientas semánticas como OpenRefine.</p>
+</div>
+
+<div class="card">
+    <h3>R3. Licencia Abierta</h3>
+    <p>Publicado bajo las condiciones de la <strong>Aclaración sobre la Licencia de Uso de los Datos Abiertos del Ayuntamiento de Madrid</strong>. Esta licencia otorga el derecho de libre reutilización, transformación, enlazado y republicación con el único requisito de citar la fuente pública original.</p>
+</div>
+
+<div class="card">
+    <h3>R4. Enlazado con Entidades del Mundo Real (Linkability)</h3>
+    <p>El dataset ofrece un alto potencial para ser enriquecido e interconectado con la Web de Datos Enlazados (Linked Open Data):</p>
+    <ul>
+        <li><strong>Geolocalización:</strong> Coordenadas expresadas en <code>LATITUD</code>, <code>LONGITUD</code> y ETRS89 (<code>COORDENADA-X</code>, <code>COORDENADA-Y</code>), vinculables con GeoSPARQL, OpenStreetMap y DBpedia.</li>
+        <li><strong>División Administrativa:</strong> Los campos <code>DISTRITO</code>, <code>COD-DISTRITO</code>, <code>BARRIO</code> y <code>COD-BARRIO</code> permiten establecer enlaces explícitos con recursos territoriales de Wikidata y DBpedia (ej. <code>http://es.dbpedia.org/resource/Carabanchel</code>).</li>
+        <li><strong>Transporte Urbano:</strong> La columna <code>TRANSPORTE</code> incluye referencias a líneas y estaciones de Metro, EMT y Cercanías, enlazables con datos abiertos de transporte del CRTM.</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>R5. Documentación para los Datos (Opcional)</h3>
+    <p><strong>Grado de satisfacción: Alto.</strong> La ficha del dataset en el portal municipal incluye la descripción de la estructura del fichero, codificación de caracteres (UTF-8), tipo de campos y catálogo explicativo de códigos de accesibilidad y distritos.</p>
+</div>
+
+<div class="card">
+    <h3>R6. Origen de Múltiples Fuentes (Opcional)</h3>
+    <p><strong>Grado de satisfacción: No.</strong> El dataset procede de una única fuente administrativa (Servicio de Datos Abiertos del Ayuntamiento de Madrid).</p>
+</div>
+
+</body>
+</html>

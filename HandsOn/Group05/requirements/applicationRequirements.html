@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Requirements & Mock-ups - Group05</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        header { background-color: #003366; color: white; padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+        h1 { margin: 0 0 10px 0; font-size: 26px; }
+        h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px; margin-top: 30px; }
+        .card { background: white; padding: 20px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .req-list { list-style-type: none; padding-left: 0; }
+        .req-list li { background: #fff; padding: 12px; margin-bottom: 10px; border-left: 4px solid #003366; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .req-code { font-weight: bold; color: #003366; }
+        
+        /* Estilos Mockup */
+        .mockup-container { border: 2px dashed #999; padding: 20px; background: #fff; border-radius: 8px; margin-top: 15px; }
+        .mockup-header { background: #003366; color: white; padding: 10px 15px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+        .mockup-nav span { margin-left: 15px; font-size: 14px; }
+        .mockup-body { display: flex; gap: 20px; margin-top: 15px; }
+        .mockup-sidebar { width: 30%; background: #e9ecef; padding: 15px; border-radius: 4px; font-size: 13px; }
+        .mockup-content { width: 70%; background: #f1f3f5; padding: 15px; border-radius: 4px; }
+        .mockup-card-item { background: white; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ced4da; }
+        .mockup-btn { background: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; }
+        .mockup-tag { background: #e2e3e5; padding: 2px 6px; border-radius: 3px; font-size: 11px; margin-right: 4px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Especificación de Requisitos de la Aplicación y Mock-ups</h1>
+    <p><strong>Proyecto:</strong> SmartSport Madrid - Portal Semántico de Instalaciones Deportivas</p>
+    <p><strong>Grupo:</strong> Group05</p>
+</header>
+
+<div class="card">
+    <h2>1. Visión General de la Aplicación</h2>
+    <p><strong>SmartSport Madrid</strong> es una plataforma web semántica diseñada para ayudar a los ciudadanos a encontrar centros deportivos municipales y polideportivos en la ciudad de Madrid filtrados según sus disciplinas deportivas de interés (piscina cubierta, pistas de pádel, salas de musculación), grado de accesibilidad adaptada y proximidad a transporte público.</p>
+</div>
+
+<h2>2. Requisitos Funcionales</h2>
+<ul class="req-list">
+    <li><span class="req-code">RF-01: Filtrado Multicriterio:</span> Permitir la búsqueda por distrito/barrio, tipo de instalación (piscina, pabellón, pistas exteriores) y grado de accesibilidad para personas con movilidad reducida.</li>
+    <li><span class="req-code">RF-02: Mapas Interactivos Georreferenciados:</span> Mapear las instalaciones polideportivas mediante sus coordenadas geográficas expresadas en el dataset.</li>
+    <li><span class="req-code">RF-03: Consulta de Transporte de Acceso:</span> Mostrar las líneas de Metro, Autobuses EMT y Renfe Cercanías más cercanas a cada complejo deportivo.</li>
+    <li><span class="req-code">RF-04: Ficha Enriquecida Semánticamente:</span> Integración SPARQL para obtener información contextualmente relevante sobre el distrito/barrio (población, ubicación) desde DBpedia y Wikidata.</li>
+</ul>
+
+<h2>3. Requisitos No Funcionales</h2>
+<ul class="req-list">
+    <li><span class="req-code">RNF-01: Interoperabilidad LOD:</span> Exposición de los datos de las instalaciones mediante estándar RDF (Turtle/JSON-LD).</li>
+    <li><span class="req-code">RNF-02: Diseño Responsivo y Accesible:</span> Cumplimiento de las pautas WAI-ARIA para asegurar la navegabilidad a usuarios con discapacidad.</li>
+</ul>
+
+<h2>4. Mock-ups de Interfaz de Usuario</h2>
+
+<div class="card">
+    <h3>Mock-up 1: Búsqueda y Visualización en Mapa</h3>
+    <div class="mockup-container">
+        <div class="mockup-header">
+            <strong>SmartSport Madrid</strong>
+            <div class="mockup-nav">
+                <span>Inicio</span>
+                <span>Buscador</span>
+                <span>Punto SPARQL</span>
+            </div>
+        </div>
+        <div class="mockup-body">
+            <div class="mockup-sidebar">
+                <h4>Filtros Deportivos</h4>
+                <p><strong>Distrito:</strong><br><select style="width:100%;"><option>Todos los distritos</option><option>Arganzuela</option><option>Moncloa-Aravaca</option></select></p>
+                <p><strong>Instalaciones:</strong><br>
+                    <input type="checkbox" checked> Piscina Cubierta<br>
+                    <input type="checkbox"> Pistas de Pádel<br>
+                    <input type="checkbox"> Gimnasio / Musculación
+                </p>
+                <p><strong>Accesibilidad:</strong><br>
+                    <input type="checkbox" checked> Accesible 100%
+                </p>
+                <button class="mockup-btn" style="width:100%;">Buscar Polideportivos</button>
+            </div>
+            <div class="mockup-content">
+                <div style="background:#ddd; height:120px; border-radius:4px; text-align:center; line-height:120px; color:#666; margin-bottom:15px;">
+                    [ Visor de Mapa - Ubicación de Polideportivos ]
+                </div>
+                <h4>Centros Encontrados</h4>
+                <div class="mockup-card-item">
+                    <strong>Centro Deportivo Municipal Marqués de Samaranch</strong><br>
+                    <small>Paseo de la Chopera, 10 | Metro: Legazpi / Palos de la Frontera</small><br>
+                    <span class="mockup-tag">Piscina</span><span class="mockup-tag">Pádel</span><span class="mockup-tag">Accesible</span>
+                    <button class="mockup-btn" style="float:right;">Ver Ficha Completa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Mock-up 2: Detalle de Instalación y Datos Enlazados</h3>
+    <div class="mockup-container">
+        <div class="mockup-header">
+            <strong>SmartSport Madrid - Detalle Polideportivo</strong>
+            <button class="mockup-btn">← Volver</button>
+        </div>
+        <div style="padding:15px;">
+            <h2>Centro Deportivo Municipal Gallur</h2>
+            <p><strong>Dirección:</strong> Calle Gallur, 2 | <strong>Distrito:</strong> Latina (28047)</p>
+            <hr>
+            <div style="display:flex; gap:20px;">
+                <div style="width:50%;">
+                    <h4>Equipamiento e Instalaciones</h4>
+                    <ul>
+                        <li>Pista cubierta de atletismo, piscinas, campos de fútbol y pistas de tenis.</li>
+                        <li>Horario: Lunes a Domingo de 8:30 a 21:00h.</li>
+                        <li>Transporte: Metro Laguna (L6), Bus 17, 25, 138.</li>
+                    </ul>
+                </div>
+                <div style="width:50%; background:#f8f9fa; padding:10px; border-left:3px solid #003366;">
+                    <h4>Datos Enlazados Semánticamente (LOD)</h4>
+                    <p><strong>Entidad Distrito (DBpedia):</strong> <code>http://es.dbpedia.org/resource/Latina_(Madrid)</code></p>
+                    <p><strong>Población del Distrito:</strong> ~233.000 habitantes</p>
+                    <p><strong>Coordenadas RDF:</strong> <code>geo:lat "40.395..."</code> | <code>geo:long "-3.741..."</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
