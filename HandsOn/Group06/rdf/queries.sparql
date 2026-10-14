@@ -1,0 +1,103 @@
+PREFIX mc: <https://w3id.org/madrid-culture/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Q1. Count generated resources by class.
+# Expected: 52 libraries, 68 museums, 120 addresses, 21 districts and 66 neighborhoods.
+SELECT ?class (COUNT(DISTINCT ?resource) AS ?count)
+WHERE {
+  VALUES ?class { mc:Library mc:Museum mc:Address mc:District mc:Neighborhood }
+  ?resource a ?class .
+}
+GROUP BY ?class
+ORDER BY ?class
+
+# Q2. Show cultural sites with their address, district and neighborhood.
+SELECT ?site ?name ?address ?districtName ?neighborhoodName
+WHERE {
+  ?site a ?siteClass ;
+        rdfs:label ?name ;
+        mc:hasAddress ?address .
+  VALUES ?siteClass { mc:Library mc:Museum }
+  OPTIONAL {
+    ?address mc:locatedInDistrict/rdfs:label ?districtName .
+  }
+  OPTIONAL {
+    ?address mc:locatedInNeighborhood/rdfs:label ?neighborhoodName .
+  }
+}
+ORDER BY ?name
+
+# Q3. Count libraries and museums in each district.
+SELECT ?district ?districtName ?siteClass (COUNT(DISTINCT ?site) AS ?count)
+WHERE {
+  ?site a ?siteClass ; mc:hasAddress ?address .
+  VALUES ?siteClass { mc:Library mc:Museum }
+  ?address mc:locatedInDistrict ?district .
+  ?district rdfs:label ?districtName .
+}
+GROUP BY ?district ?districtName ?siteClass
+ORDER BY ?districtName ?siteClass
+
+# Q4. Integrity check: every generated individual has a type and a label.
+# Expected: no rows.
+SELECT ?resource ("missing label" AS ?problem)
+WHERE {
+  VALUES ?class { mc:Library mc:Museum mc:Address mc:District mc:Neighborhood }
+  ?resource a ?class .
+  FILTER NOT EXISTS { ?resource rdfs:label ?label }
+}
+
+# Q5. Integrity check: every linked address, district and neighborhood exists.
+# Expected: no rows.
+SELECT ?source ?predicate ?target
+WHERE {
+  VALUES (?predicate ?expectedClass) {
+    (mc:hasAddress mc:Address)
+    (mc:locatedInDistrict mc:District)
+    (mc:locatedInNeighborhood mc:Neighborhood)
+  }
+  ?source ?predicate ?target .
+  FILTER NOT EXISTS { ?target a ?expectedClass }
+}
+
+# Q6. Datatype check for coordinates and postal codes.
+# Expected: no rows.
+SELECT ?resource ?value ?expectedDatatype
+WHERE {
+  {
+    ?resource schema:latitude ?value .
+    BIND(xsd:decimal AS ?expectedDatatype)
+  }
+  UNION
+  {
+    ?resource schema:longitude ?value .
+    BIND(xsd:decimal AS ?expectedDatatype)
+  }
+  UNION
+  {
+    ?resource mc:postalCode ?value .
+    BIND(xsd:string AS ?expectedDatatype)
+  }
+  FILTER(DATATYPE(?value) != ?expectedDatatype)
+}
+
+# Q7. URI and empty-literal check.
+# Expected: no rows.
+SELECT DISTINCT ?resource ?problem
+WHERE {
+  {
+    ?resource ?predicate ?object .
+    FILTER(isIRI(?resource))
+    FILTER(CONTAINS(STR(?resource), " ") ||
+           CONTAINS(STRAFTER(STR(?resource), "://"), "//"))
+    BIND("malformed resource URI" AS ?problem)
+  }
+  UNION
+  {
+    ?resource ?predicate ?object .
+    FILTER(isLiteral(?object) && STRLEN(STR(?object)) = 0)
+    BIND("empty literal" AS ?problem)
+  }
+}
