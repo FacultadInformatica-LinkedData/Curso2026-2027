@@ -199,6 +199,7 @@
     rdfs:label "118 - OFICINA DEL SER, APR Y BICIREGISTRO" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/118> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/118> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/414850> ;
     bm:stationId "118" ;
     bm:totalCapacity 23 .
 
@@ -438,6 +439,7 @@
     rdfs:label "145 - Ortega y Gasset 87" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/145> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/145> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/405300> ;
     bm:stationId "145" ;
     bm:totalCapacity 23 .
 
@@ -469,6 +471,7 @@
     rdfs:label "149 - Plaza de Quito" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/149> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/149> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/353200> ;
     bm:stationId "149" ;
     bm:totalCapacity 22 .
 
@@ -556,6 +559,7 @@
     rdfs:label "159 - Paseo de la Habana 63" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/159> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/159> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/353200> ;
     bm:stationId "159" ;
     bm:totalCapacity 23 .
 
@@ -771,6 +775,7 @@
     rdfs:label "184 - Marqués de Zafra, 24" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/184> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/184> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/488600> ;
     bm:stationId "184" ;
     bm:totalCapacity 24 .
 
@@ -834,6 +839,7 @@
     rdfs:label "191 - Metro Diego de León" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/191> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/191> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/35200> ;
     bm:stationId "191" ;
     bm:totalCapacity 19 .
 
@@ -1009,6 +1015,7 @@
     rdfs:label "211 - Desengaño - Valverde" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/211> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/211> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/235800> ;
     bm:stationId "211" ;
     bm:totalCapacity 23 .
 
@@ -1064,6 +1071,7 @@
     rdfs:label "218 - Camino de los Vinateros A" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/218> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/218> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/790100> ;
     bm:stationId "218" ;
     bm:totalCapacity 23 .
 
@@ -1071,6 +1079,7 @@
     rdfs:label "219 - Camino de los Vinateros B" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/219> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/219> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/790100> ;
     bm:stationId "219" ;
     bm:totalCapacity 18 .
 
@@ -1134,6 +1143,7 @@
     rdfs:label "226 - Sierra Toledana - Camino de Valderribas" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/226> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/226> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/764000> ;
     bm:stationId "226" ;
     bm:totalCapacity 23 .
 
@@ -1173,6 +1183,7 @@
     rdfs:label "230 - Carlota O´Neill - Agastia" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/230> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/230> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/330300> ;
     bm:stationId "230" ;
     bm:totalCapacity 24 .
 
@@ -1196,6 +1207,7 @@
     rdfs:label "233 - El dragón de La Elipa" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/233> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/233> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/484400> ;
     bm:stationId "233" ;
     bm:totalCapacity 24 .
 
@@ -1394,6 +1406,7 @@
     rdfs:label "257 - Ciudad Universitaria - INEF" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/257> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/257> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/413000> ;
     bm:stationId "257" ;
     bm:totalCapacity 23 .
 
@@ -1957,6 +1970,7 @@
     rdfs:label "321 - Metro Casa de Campo" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/321> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/321> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/905164> ;
     bm:stationId "321" ;
     bm:totalCapacity 27 .
 
@@ -1996,6 +2010,7 @@
     rdfs:label "326 - Metro Alto de Extremadura" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/326> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/326> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/310400> ;
     bm:stationId "326" ;
     bm:totalCapacity 24 .
 
@@ -2003,6 +2018,7 @@
     rdfs:label "327 - El Greco, 27 - C. Cultural El Greco" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/327> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/327> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/344100> ;
     bm:stationId "327" ;
     bm:totalCapacity 24 .
 
@@ -2050,6 +2066,7 @@
     rdfs:label "332 - Los Yébenes, 159" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/332> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/332> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/800700> ;
     bm:stationId "332" ;
     bm:totalCapacity 23 .
 
@@ -2073,6 +2090,7 @@
     rdfs:label "335 - Cardaño, 10" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/335> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/335> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/682200> ;
     bm:stationId "335" ;
     bm:totalCapacity 24 .
 
@@ -2104,6 +2122,7 @@
     rdfs:label "339 - Estación de tren Las Águilas" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/339> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/339> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/329500> ;
     bm:stationId "339" ;
     bm:totalCapacity 24 .
 
@@ -2175,6 +2194,7 @@
     rdfs:label "347 - Est. tren Mtra Justa Freire-Poli Aluche" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/347> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/347> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/329500> ;
     bm:stationId "347" ;
     bm:totalCapacity 24 .
 
@@ -2198,6 +2218,7 @@
     rdfs:label "35 - Doctor Letamendi, 3" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/35> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/35> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/242700> ;
     bm:stationId "35" ;
     bm:totalCapacity 23 .
 
@@ -2477,6 +2498,7 @@
     rdfs:label "382 -Parque Eugenia de Montijo, 2" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/382> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/382> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/282500> ;
     bm:stationId "382" ;
     bm:totalCapacity 24 .
 
@@ -2828,6 +2850,7 @@
     rdfs:label "422 - Travesia de Palomeras, 7" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/422> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/422> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/560400> ;
     bm:stationId "422" ;
     bm:totalCapacity 24 .
 
@@ -2843,6 +2866,7 @@
     rdfs:label "424 - Camino de Valderribas, 47" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/424> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/424> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/763900> ;
     bm:stationId "424" ;
     bm:totalCapacity 24 .
 
@@ -2906,6 +2930,7 @@
     rdfs:label "431 - Puerto Canfranc, 18" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/431> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/431> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/616200> ;
     bm:stationId "431" ;
     bm:totalCapacity 24 .
 
@@ -2969,6 +2994,7 @@
     rdfs:label "439 - Cabeza Mesada - Parque de Valdeperdices" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/439> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/439> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/2248> ;
     bm:stationId "439" ;
     bm:totalCapacity 27 .
 
@@ -2999,6 +3025,7 @@
     rdfs:label "442 - Santa Eugenia - Zazuar" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/442> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/442> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/694650> ;
     bm:stationId "442" ;
     bm:totalCapacity 27 .
 
@@ -3062,6 +3089,7 @@
     rdfs:label "45 - Metro Puerta de Toledo" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/45> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/45> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/615000> ;
     bm:stationId "45" ;
     bm:totalCapacity 19 .
 
@@ -3076,6 +3104,7 @@
     rdfs:label "451 -  La Granja de San Ildefonso, 14" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/451> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/451> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31000633> ;
     bm:stationId "451" ;
     bm:totalCapacity 27 .
 
@@ -3083,6 +3112,7 @@
     rdfs:label "452 - Las Suertes, 15" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/452> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/452> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31000503> ;
     bm:stationId "452" ;
     bm:totalCapacity 23 .
 
@@ -3098,6 +3128,7 @@
     rdfs:label "454 - Gran Vía del Sureste - Las Suertes" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/454> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/454> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31000471> ;
     bm:stationId "454" ;
     bm:totalCapacity 27 .
 
@@ -3208,6 +3239,7 @@
     rdfs:label "467 - Univ. Rey Juan Carlos - Facultad  CJS" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/467> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/467> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/788100> ;
     bm:stationId "467" ;
     bm:totalCapacity 24 .
 
@@ -3263,6 +3295,7 @@
     rdfs:label "473 - Villablanca - Parque Forestal Vicálvaro" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/473> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/473> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/785400> ;
     bm:stationId "473" ;
     bm:totalCapacity 27 .
 
@@ -3302,6 +3335,7 @@
     rdfs:label "478 - José del Hierro - Misterios" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/478> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/478> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/401600> ;
     bm:stationId "478" ;
     bm:totalCapacity 23 .
 
@@ -3412,6 +3446,7 @@
     rdfs:label "490 - Hnos.García Noblejas-FcoLargo Caballero" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/490> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/490> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/357000> ;
     bm:stationId "490" ;
     bm:totalCapacity 24 .
 
@@ -3682,6 +3717,7 @@
     rdfs:label "520 - Niza - Plaza de Grecia" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/520> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/520> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/2539> ;
     bm:stationId "520" ;
     bm:totalCapacity 23 .
 
@@ -3704,6 +3740,7 @@
     rdfs:label "523 - Carretera de Canillas" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/523> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/523> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/133455> ;
     bm:stationId "523" ;
     bm:totalCapacity 23 .
 
@@ -3765,6 +3802,7 @@
     rdfs:label "530 - Metro Mar de Cristal" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/530> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/530> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/262550> ;
     bm:stationId "530" ;
     bm:totalCapacity 27 .
 
@@ -3868,6 +3906,7 @@
     rdfs:label "542 - Intercambiador de Valdebebas" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/542> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/542> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31001595> ;
     bm:stationId "542" ;
     bm:totalCapacity 23 .
 
@@ -4034,6 +4073,7 @@
     rdfs:label "561 - Plaza Nuestra Señora de Loreto" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/561> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/561> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/393300> ;
     bm:stationId "561" ;
     bm:totalCapacity 23 .
 
@@ -4105,6 +4145,7 @@
     rdfs:label "57 - Santa Cruz de Marcenado" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/57> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/57> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/694000> ;
     bm:stationId "57" ;
     bm:totalCapacity 23 .
 
@@ -4160,6 +4201,7 @@
     rdfs:label "576 - El Ferrol, 18" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/576> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/576> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/296250> ;
     bm:stationId "576" ;
     bm:totalCapacity 24 .
 
@@ -4207,6 +4249,7 @@
     rdfs:label "581 - Metro Peñagrande" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/581> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/581> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/322600> ;
     bm:stationId "581" ;
     bm:totalCapacity 24 .
 
@@ -4262,6 +4305,7 @@
     rdfs:label "588 - Campo Calatrava - Rda Ingenioso Hidalgo" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/588> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/588> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/1431> ;
     bm:stationId "588" ;
     bm:totalCapacity 27 .
 
@@ -4357,6 +4401,7 @@
     rdfs:label "599 - Instalación Deportiva La Cabrera" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/599> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/599> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/1935> ;
     bm:stationId "599" ;
     bm:totalCapacity 27 .
 
@@ -4380,6 +4425,7 @@
     rdfs:label "600 - Centro Deportivo Municipal La Masó" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/600> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/600> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/792250> ;
     bm:stationId "600" ;
     bm:totalCapacity 24 .
 
@@ -4459,6 +4505,7 @@
     rdfs:label "61 - O Donnell - Narváez" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/61> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/61> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/544600> ;
     bm:stationId "61" ;
     bm:totalCapacity 27 .
 
@@ -4490,6 +4537,7 @@
     rdfs:label "613 - Facultad de informática" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/613> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/613> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31000571> ;
     bm:stationId "613" ;
     bm:totalCapacity 23 .
 
@@ -4502,9 +4550,10 @@
     bm:totalCapacity 23 .
 
 <https://bicismart.madrid.data.es/resource/BikeStation/615> a bm:BikeStation ;
-    rdfs:label "615 - Avenida Juan de Andrés 21" ;
+    rdfs:label "615 - Avenida de Juan Andrés 21" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/615> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/615> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/410200> ;
     bm:stationId "615" ;
     bm:totalCapacity 23 .
 
@@ -4544,6 +4593,7 @@
     rdfs:label "62 - Hospital M. Infantil Gregorio Marañón" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/62> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/62> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/544600> ;
     bm:stationId "62" ;
     bm:totalCapacity 27 .
 
@@ -4595,9 +4645,10 @@
     bm:totalCapacity 23 .
 
 <https://bicismart.madrid.data.es/resource/BikeStation/626> a bm:BikeStation ;
-    rdfs:label "626 - Avenida Victoria Kent 9" ;
+    rdfs:label "626 - Calle Victoria Kent 9" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/626> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/626> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/31001775> ;
     bm:stationId "626" ;
     bm:totalCapacity 23 .
 
@@ -4621,6 +4672,7 @@
     rdfs:label "629 - Avda de Fermina Sevillano 23" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/629> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/629> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/292100> ;
     bm:stationId "629" ;
     bm:totalCapacity 23 .
 
@@ -4644,6 +4696,7 @@
     rdfs:label "631 -  CAMPUS SUR 2" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/631> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/631> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/778950> ;
     bm:stationId "631" ;
     bm:totalCapacity 19 .
 
@@ -4691,6 +4744,7 @@
     rdfs:label "69 - Parque del Retiro - Puerta Ángel Caído" ;
     bm:hasPoint <https://bicismart.madrid.data.es/resource/Point/69> ;
     bm:hasState <https://bicismart.madrid.data.es/resource/StationState/69> ;
+    bm:locatedOnStreet <https://bicismart.madrid.data.es/resource/Street/27500> ;
     bm:stationId "69" ;
     bm:totalCapacity 27 .
 
@@ -8338,14 +8392,6 @@
     bm:streetCode 133450 ;
     bm:streetName "CANILLAS" .
 
-<https://bicismart.madrid.data.es/resource/Street/133455> a bm:Street ;
-    rdfs:label "CANILLAS" ;
-    bm:districtCode 16 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28043" ;
-    bm:streetCode 133455 ;
-    bm:streetName "CANILLAS" .
-
 <https://bicismart.madrid.data.es/resource/Street/133800> a bm:Street ;
     rdfs:label "CANOA" ;
     bm:districtCode 21 ;
@@ -9342,14 +9388,6 @@
     bm:postalCode "28004" ;
     bm:streetCode 143000 ;
     bm:streetName "CARLOS CAMBRONERO" .
-
-<https://bicismart.madrid.data.es/resource/Street/1431> a bm:Street ;
-    rdfs:label "CAMPO DE CALATRAVA" ;
-    bm:districtCode 8 ;
-    bm:neighborhoodCode 6 ;
-    bm:postalCode "28034" ;
-    bm:streetCode 1431 ;
-    bm:streetName "CAMPO DE CALATRAVA" .
 
 <https://bicismart.madrid.data.es/resource/Street/143100> a bm:Street ;
     rdfs:label "CARLOS DABAN" ;
@@ -12938,14 +12976,6 @@
     bm:streetCode 1934 ;
     bm:streetName "BUITRAGO DEL LOZOYA" .
 
-<https://bicismart.madrid.data.es/resource/Street/1935> a bm:Street ;
-    rdfs:label "LA CABRERA" ;
-    bm:districtCode 8 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28035" ;
-    bm:streetCode 1935 ;
-    bm:streetName "LA CABRERA" .
-
 <https://bicismart.madrid.data.es/resource/Street/1936> a bm:Street ;
     rdfs:label "CABANILLAS DE LA SIERRA" ;
     bm:districtCode 8 ;
@@ -15101,15 +15131,6 @@
     bm:streetCode 2246 ;
     bm:streetName "FUENTIDUEÑA" .
 
-<https://bicismart.madrid.data.es/resource/Street/2248> a bm:Street ;
-    rdfs:label "CABEZA MESADA" ;
-    bm:districtCode 18 ;
-    bm:neighborhoodCode 1,
-        3 ;
-    bm:postalCode "28031" ;
-    bm:streetCode 2248 ;
-    bm:streetName "CABEZA MESADA" .
-
 <https://bicismart.madrid.data.es/resource/Street/224800> a bm:Street ;
     rdfs:label "CUELGAMUROS" ;
     bm:districtCode 13 ;
@@ -16392,14 +16413,6 @@
     bm:streetCode 235700 ;
     bm:streetName "DESCARGAS" .
 
-<https://bicismart.madrid.data.es/resource/Street/235800> a bm:Street ;
-    rdfs:label "DESENGAÑO" ;
-    bm:districtCode 1 ;
-    bm:neighborhoodCode 5 ;
-    bm:postalCode "28004" ;
-    bm:streetCode 235800 ;
-    bm:streetName "DESENGAÑO" .
-
 <https://bicismart.madrid.data.es/resource/Street/236000> a bm:Street ;
     rdfs:label "DESTILERIAS" ;
     bm:districtCode 20 ;
@@ -17135,14 +17148,6 @@
     bm:postalCode "28030" ;
     bm:streetCode 2427 ;
     bm:streetName "VILLACONEJOS" .
-
-<https://bicismart.madrid.data.es/resource/Street/242700> a bm:Street ;
-    rdfs:label "DOCTOR LETAMENDI" ;
-    bm:districtCode 1 ;
-    bm:neighborhoodCode 1 ;
-    bm:postalCode "28005" ;
-    bm:streetCode 242700 ;
-    bm:streetName "DOCTOR LETAMENDI" .
 
 <https://bicismart.madrid.data.es/resource/Street/2428> a bm:Street ;
     rdfs:label "AMBITE" ;
@@ -19689,14 +19694,6 @@
     bm:streetCode 262500 ;
     bm:streetName "EMETERIO CASTAÑOS" .
 
-<https://bicismart.madrid.data.es/resource/Street/262550> a bm:Street ;
-    rdfs:label "LOS EMIGRANTES" ;
-    bm:districtCode 16 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28043" ;
-    bm:streetCode 262550 ;
-    bm:streetName "LOS EMIGRANTES" .
-
 <https://bicismart.madrid.data.es/resource/Street/2626> a bm:Street ;
     rdfs:label "EL CAIRO" ;
     bm:districtCode 14 ;
@@ -21291,15 +21288,6 @@
     bm:streetCode 274900 ;
     bm:streetName "ESPERANZA GARCIA" .
 
-<https://bicismart.madrid.data.es/resource/Street/27500> a bm:Street ;
-    rdfs:label "ALFONSO XII" ;
-    bm:districtCode 3 ;
-    bm:neighborhoodCode 5 ;
-    bm:postalCode "28009",
-        "28014" ;
-    bm:streetCode 27500 ;
-    bm:streetName "ALFONSO XII" .
-
 <https://bicismart.madrid.data.es/resource/Street/275000> a bm:Street ;
     rdfs:label "ESPERANZA MACARENA" ;
     bm:districtCode 17 ;
@@ -22011,14 +21999,6 @@
     bm:postalCode "28049" ;
     bm:streetCode 2825 ;
     bm:streetName "BERCIANOS DEL REAL CAMINO" .
-
-<https://bicismart.madrid.data.es/resource/Street/282500> a bm:Street ;
-    rdfs:label "PARQUE EUGENIA DE MONTIJO" ;
-    bm:districtCode 11 ;
-    bm:neighborhoodCode 4 ;
-    bm:postalCode "28047" ;
-    bm:streetCode 282500 ;
-    bm:streetName "PARQUE EUGENIA DE MONTIJO" .
 
 <https://bicismart.madrid.data.es/resource/Street/2826> a bm:Street ;
     rdfs:label "AGES" ;
@@ -23273,14 +23253,6 @@
     bm:streetCode 2921 ;
     bm:streetName "MUÑOPEDRO" .
 
-<https://bicismart.madrid.data.es/resource/Street/292100> a bm:Street ;
-    rdfs:label "FERMINA SEVILLANO" ;
-    bm:districtCode 20 ;
-    bm:neighborhoodCode 6 ;
-    bm:postalCode "28022" ;
-    bm:streetCode 292100 ;
-    bm:streetName "FERMINA SEVILLANO" .
-
 <https://bicismart.madrid.data.es/resource/Street/2922> a bm:Street ;
     rdfs:label "VILLOSLADA" ;
     bm:districtCode 2 ;
@@ -23564,14 +23536,6 @@
     bm:postalCode "28041" ;
     bm:streetCode 2962 ;
     bm:streetName "MAGACELA" .
-
-<https://bicismart.madrid.data.es/resource/Street/296250> a bm:Street ;
-    rdfs:label "EL FERROL" ;
-    bm:districtCode 8 ;
-    bm:neighborhoodCode 4 ;
-    bm:postalCode "28029" ;
-    bm:streetCode 296250 ;
-    bm:streetName "EL FERROL" .
 
 <https://bicismart.madrid.data.es/resource/Street/2963> a bm:Street ;
     rdfs:label "PINTOR ANTONIO SAURA" ;
@@ -26957,15 +26921,6 @@
     bm:streetCode 31000463 ;
     bm:streetName "CERLER" .
 
-<https://bicismart.madrid.data.es/resource/Street/31000471> a bm:Street ;
-    rdfs:label "GRAN VIA DEL SURESTE" ;
-    bm:districtCode 18 ;
-    bm:neighborhoodCode 1,
-        3 ;
-    bm:postalCode "28051" ;
-    bm:streetCode 31000471 ;
-    bm:streetName "GRAN VIA DEL SURESTE" .
-
 <https://bicismart.madrid.data.es/resource/Street/31000472> a bm:Street ;
     rdfs:label "CARDENAL VICENTE ENRIQUE Y TARANCON" ;
     bm:districtCode 18 ;
@@ -27085,14 +27040,6 @@
     bm:postalCode "28051" ;
     bm:streetCode 31000502 ;
     bm:streetName "PILAR DE MADARIAGA ROJO" .
-
-<https://bicismart.madrid.data.es/resource/Street/31000503> a bm:Street ;
-    rdfs:label "LAS SUERTES" ;
-    bm:districtCode 18 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28051" ;
-    bm:streetCode 31000503 ;
-    bm:streetName "LAS SUERTES" .
 
 <https://bicismart.madrid.data.es/resource/Street/31000504> a bm:Street ;
     rdfs:label "VILLAMANTA" ;
@@ -27406,14 +27353,6 @@
     bm:postalCode "28052" ;
     bm:streetCode 31000565 ;
     bm:streetName "BERNARDA GARCIA" .
-
-<https://bicismart.madrid.data.es/resource/Street/31000571> a bm:Street ;
-    rdfs:label "PROFESOR JOSE GARCIA SANTESMASES" ;
-    bm:districtCode 9 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28040" ;
-    bm:streetCode 31000571 ;
-    bm:streetName "PROFESOR JOSE GARCIA SANTESMASES" .
 
 <https://bicismart.madrid.data.es/resource/Street/31000572> a bm:Street ;
     rdfs:label "CONIL" ;
@@ -27758,14 +27697,6 @@
     bm:postalCode "28051" ;
     bm:streetCode 31000632 ;
     bm:streetName "ZORITA DE LA FRONTERA" .
-
-<https://bicismart.madrid.data.es/resource/Street/31000633> a bm:Street ;
-    rdfs:label "LA GRANJA DE SAN ILDEFONSO" ;
-    bm:districtCode 18 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28051" ;
-    bm:streetCode 31000633 ;
-    bm:streetName "LA GRANJA DE SAN ILDEFONSO" .
 
 <https://bicismart.madrid.data.es/resource/Street/31000634> a bm:Street ;
     rdfs:label "CINCOVILLAS" ;
@@ -28624,16 +28555,6 @@
     bm:streetCode 31001594 ;
     bm:streetName "JULIO CANO LASSO" .
 
-<https://bicismart.madrid.data.es/resource/Street/31001595> a bm:Street ;
-    rdfs:label "JUAN ANTONIO SAMARANCH" ;
-    bm:districtCode 16,
-        21 ;
-    bm:neighborhoodCode 4,
-        6 ;
-    bm:postalCode "28055" ;
-    bm:streetCode 31001595 ;
-    bm:streetName "JUAN ANTONIO SAMARANCH" .
-
 <https://bicismart.madrid.data.es/resource/Street/31001596> a bm:Street ;
     rdfs:label "JOSE ANTONIO CORRALES" ;
     bm:districtCode 16,
@@ -28960,14 +28881,6 @@
     bm:postalCode "28052" ;
     bm:streetCode 31001774 ;
     bm:streetName "FRANCISCO GRANDE COVIAN" .
-
-<https://bicismart.madrid.data.es/resource/Street/31001775> a bm:Street ;
-    rdfs:label "VICTORIA KENT" ;
-    bm:districtCode 19 ;
-    bm:neighborhoodCode 4 ;
-    bm:postalCode "28052" ;
-    bm:streetCode 31001775 ;
-    bm:streetName "VICTORIA KENT" .
 
 <https://bicismart.madrid.data.es/resource/Street/31001776> a bm:Street ;
     rdfs:label "CONCHITA MONTENEGRO" ;
@@ -31668,14 +31581,6 @@
     bm:streetCode 31006368 ;
     bm:streetName "PROVISIONAL ATLETICO DE MADRID DOS" .
 
-<https://bicismart.madrid.data.es/resource/Street/310400> a bm:Street ;
-    rdfs:label "FRANCISCO DE TEJADA" ;
-    bm:districtCode 10 ;
-    bm:neighborhoodCode 2 ;
-    bm:postalCode "28011" ;
-    bm:streetCode 310400 ;
-    bm:streetName "FRANCISCO DE TEJADA" .
-
 <https://bicismart.madrid.data.es/resource/Street/310600> a bm:Street ;
     rdfs:label "FRANCISCO VITORIA" ;
     bm:districtCode 3 ;
@@ -32565,17 +32470,6 @@
     bm:streetCode 322575 ;
     bm:streetName "GALVEZ" .
 
-<https://bicismart.madrid.data.es/resource/Street/322600> a bm:Street ;
-    rdfs:label "GANAPANES" ;
-    bm:districtCode 8 ;
-    bm:neighborhoodCode 3,
-        4 ;
-    bm:postalCode "28029",
-        "28035",
-        "28039" ;
-    bm:streetCode 322600 ;
-    bm:streetName "GANAPANES" .
-
 <https://bicismart.madrid.data.es/resource/Street/322800> a bm:Street ;
     rdfs:label "GANDARA DE ORO" ;
     bm:districtCode 11 ;
@@ -33097,14 +32991,6 @@
     bm:streetCode 329450 ;
     bm:streetName "GENERAL DIAZ PORLIER" .
 
-<https://bicismart.madrid.data.es/resource/Street/329500> a bm:Street ;
-    rdfs:label "LAS AGUILAS" ;
-    bm:districtCode 10 ;
-    bm:neighborhoodCode 7 ;
-    bm:postalCode "28044" ;
-    bm:streetCode 329500 ;
-    bm:streetName "LAS AGUILAS" .
-
 <https://bicismart.madrid.data.es/resource/Street/329600> a bm:Street ;
     rdfs:label "CARABANCHEL ALTO" ;
     bm:districtCode 11 ;
@@ -33169,14 +33055,6 @@
     bm:postalCode "28040" ;
     bm:streetCode 33025 ;
     bm:streetName "ARQUITECTO SANCHEZ ARCAS" .
-
-<https://bicismart.madrid.data.es/resource/Street/330300> a bm:Street ;
-    rdfs:label "CARLOTA O'NEILL" ;
-    bm:districtCode 15 ;
-    bm:neighborhoodCode 5 ;
-    bm:postalCode "28027" ;
-    bm:streetCode 330300 ;
-    bm:streetName "CARLOTA O'NEILL" .
 
 <https://bicismart.madrid.data.es/resource/Street/330400> a bm:Street ;
     rdfs:label "GENERAL LACY" ;
@@ -34193,14 +34071,6 @@
     bm:streetCode 344000 ;
     bm:streetName "GRAVINA" .
 
-<https://bicismart.madrid.data.es/resource/Street/344100> a bm:Street ;
-    rdfs:label "EL GRECO" ;
-    bm:districtCode 10 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28011" ;
-    bm:streetCode 344100 ;
-    bm:streetName "EL GRECO" .
-
 <https://bicismart.madrid.data.es/resource/Street/344150> a bm:Street ;
     rdfs:label "PINTOR EL GRECO" ;
     bm:districtCode 9 ;
@@ -34733,14 +34603,6 @@
     bm:streetCode 351800 ;
     bm:streetName "GUNDEMARO" .
 
-<https://bicismart.madrid.data.es/resource/Street/35200> a bm:Street ;
-    rdfs:label "ALONSO HEREDIA" ;
-    bm:districtCode 4 ;
-    bm:neighborhoodCode 4 ;
-    bm:postalCode "28028" ;
-    bm:streetCode 35200 ;
-    bm:streetName "ALONSO HEREDIA" .
-
 <https://bicismart.madrid.data.es/resource/Street/352000> a bm:Street ;
     rdfs:label "GURTUBAY" ;
     bm:districtCode 4 ;
@@ -34791,19 +34653,6 @@
     bm:postalCode "28036" ;
     bm:streetCode 352600 ;
     bm:streetName "GUTIERREZ SOLANA" .
-
-<https://bicismart.madrid.data.es/resource/Street/353200> a bm:Street ;
-    rdfs:label "LA HABANA" ;
-    bm:districtCode 5 ;
-    bm:neighborhoodCode 1,
-        4,
-        5 ;
-    bm:postalCode "28002",
-        "28016",
-        "28036",
-        "28046" ;
-    bm:streetCode 353200 ;
-    bm:streetName "LA HABANA" .
 
 <https://bicismart.madrid.data.es/resource/Street/353300> a bm:Street ;
     rdfs:label "HACHERO" ;
@@ -37342,15 +37191,6 @@
     bm:streetCode 393200 ;
     bm:streetName "JESUS GOLDERO" .
 
-<https://bicismart.madrid.data.es/resource/Street/393300> a bm:Street ;
-    rdfs:label "JESUS DEL GRAN PODER" ;
-    bm:districtCode 12 ;
-    bm:neighborhoodCode 4,
-        5 ;
-    bm:postalCode "28026" ;
-    bm:streetCode 393300 ;
-    bm:streetName "JESUS DEL GRAN PODER" .
-
 <https://bicismart.madrid.data.es/resource/Street/393500> a bm:Street ;
     rdfs:label "JESUS JIMENEZ" ;
     bm:districtCode 13 ;
@@ -38388,14 +38228,6 @@
     bm:streetCode 410150 ;
     bm:streetName "JUAN ALVAREZ MENDIZABAL" .
 
-<https://bicismart.madrid.data.es/resource/Street/410200> a bm:Street ;
-    rdfs:label "JUAN ANDRES" ;
-    bm:districtCode 9 ;
-    bm:neighborhoodCode 4 ;
-    bm:postalCode "28035" ;
-    bm:streetCode 410200 ;
-    bm:streetName "JUAN ANDRES" .
-
 <https://bicismart.madrid.data.es/resource/Street/410300> a bm:Street ;
     rdfs:label "JUAN ANTON" ;
     bm:districtCode 10 ;
@@ -38574,14 +38406,6 @@
     bm:streetCode 412900 ;
     bm:streetName "JUAN DE HERRERA" .
 
-<https://bicismart.madrid.data.es/resource/Street/413000> a bm:Street ;
-    rdfs:label "JUAN DE HERRERA" ;
-    bm:districtCode 9 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28040" ;
-    bm:streetCode 413000 ;
-    bm:streetName "JUAN DE HERRERA" .
-
 <https://bicismart.madrid.data.es/resource/Street/413100> a bm:Street ;
     rdfs:label "JUAN DE LA HOZ" ;
     bm:districtCode 4 ;
@@ -38678,15 +38502,6 @@
     bm:postalCode "28045" ;
     bm:streetCode 414800 ;
     bm:streetName "JUAN DE MARIANA" .
-
-<https://bicismart.madrid.data.es/resource/Street/414850> a bm:Street ;
-    rdfs:label "JUAN MARTIN EL EMPECINADO" ;
-    bm:districtCode 2 ;
-    bm:neighborhoodCode 5,
-        6 ;
-    bm:postalCode "28045" ;
-    bm:streetCode 414850 ;
-    bm:streetName "JUAN MARTIN EL EMPECINADO" .
 
 <https://bicismart.madrid.data.es/resource/Street/41500> a bm:Street ;
     rdfs:label "AMAZONAS" ;
@@ -43872,14 +43687,6 @@
     bm:streetCode 488500 ;
     bm:streetName "MARQUES DE ZAFRA" .
 
-<https://bicismart.madrid.data.es/resource/Street/488600> a bm:Street ;
-    rdfs:label "MARQUES DE ZAFRA" ;
-    bm:districtCode 4 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28028" ;
-    bm:streetCode 488600 ;
-    bm:streetName "MARQUES DE ZAFRA" .
-
 <https://bicismart.madrid.data.es/resource/Street/488650> a bm:Street ;
     rdfs:label "MARQUES DE ZURGENA" ;
     bm:districtCode 4 ;
@@ -47695,21 +47502,6 @@
     bm:streetCode 544400 ;
     bm:streetName "OCTUBRE" .
 
-<https://bicismart.madrid.data.es/resource/Street/544600> a bm:Street ;
-    rdfs:label "O'DONNELL" ;
-    bm:districtCode 3,
-        4 ;
-    bm:neighborhoodCode 1,
-        2,
-        3,
-        4,
-        5 ;
-    bm:postalCode "28007",
-        "28009",
-        "28028" ;
-    bm:streetCode 544600 ;
-    bm:streetName "O'DONNELL" .
-
 <https://bicismart.madrid.data.es/resource/Street/54500> a bm:Street ;
     rdfs:label "ANTOLIN DOMPABLO" ;
     bm:districtCode 9 ;
@@ -48898,14 +48690,6 @@
         5 ;
     bm:postalCode "28018" ;
     bm:streetCode 560000 ;
-    bm:streetName "PALOMERAS" .
-
-<https://bicismart.madrid.data.es/resource/Street/560400> a bm:Street ;
-    rdfs:label "PALOMERAS" ;
-    bm:districtCode 13 ;
-    bm:neighborhoodCode 2 ;
-    bm:postalCode "28053" ;
-    bm:streetCode 560400 ;
     bm:streetName "PALOMERAS" .
 
 <https://bicismart.madrid.data.es/resource/Street/560700> a bm:Street ;
@@ -52664,16 +52448,6 @@
     bm:streetCode 61500 ;
     bm:streetName "ANTONIO SANFIZ" .
 
-<https://bicismart.madrid.data.es/resource/Street/615000> a bm:Street ;
-    rdfs:label "PUERTA DE TOLEDO" ;
-    bm:districtCode 1,
-        2 ;
-    bm:neighborhoodCode 1,
-        2 ;
-    bm:postalCode "28005" ;
-    bm:streetCode 615000 ;
-    bm:streetName "PUERTA DE TOLEDO" .
-
 <https://bicismart.madrid.data.es/resource/Street/615100> a bm:Street ;
     rdfs:label "PUERTO DE ALAZORES" ;
     bm:districtCode 18 ;
@@ -52763,14 +52537,6 @@
     bm:postalCode "28038" ;
     bm:streetCode 616187 ;
     bm:streetName "PUERTO DE CANENCIA" .
-
-<https://bicismart.madrid.data.es/resource/Street/616200> a bm:Street ;
-    rdfs:label "PUERTO DE CANFRANC" ;
-    bm:districtCode 13 ;
-    bm:neighborhoodCode 6 ;
-    bm:postalCode "28038" ;
-    bm:streetCode 616200 ;
-    bm:streetName "PUERTO DE CANFRANC" .
 
 <https://bicismart.madrid.data.es/resource/Street/616300> a bm:Street ;
     rdfs:label "PUERTO DE CARDOSO" ;
@@ -57761,14 +57527,6 @@
     bm:streetCode 682000 ;
     bm:streetName "SAN PASCUAL" .
 
-<https://bicismart.madrid.data.es/resource/Street/682200> a bm:Street ;
-    rdfs:label "SAN PATRICIO" ;
-    bm:districtCode 11 ;
-    bm:neighborhoodCode 2 ;
-    bm:postalCode "28019" ;
-    bm:streetCode 682200 ;
-    bm:streetName "SAN PATRICIO" .
-
 <https://bicismart.madrid.data.es/resource/Street/68225> a bm:Street ;
     rdfs:label "ARECHAVALETA" ;
     bm:districtCode 17 ;
@@ -58697,14 +58455,6 @@
     bm:postalCode "28012" ;
     bm:streetCode 693900 ;
     bm:streetName "SANTA CRUZ" .
-
-<https://bicismart.madrid.data.es/resource/Street/694000> a bm:Street ;
-    rdfs:label "SANTA CRUZ DE MARCENADO" ;
-    bm:districtCode 1 ;
-    bm:neighborhoodCode 5 ;
-    bm:postalCode "28015" ;
-    bm:streetCode 694000 ;
-    bm:streetName "SANTA CRUZ DE MARCENADO" .
 
 <https://bicismart.madrid.data.es/resource/Street/694100> a bm:Street ;
     rdfs:label "SANTA CRUZ DE MUDELA" ;
@@ -64112,15 +63862,6 @@
     bm:streetCode 763850 ;
     bm:streetName "VALDERREY" .
 
-<https://bicismart.madrid.data.es/resource/Street/763900> a bm:Street ;
-    rdfs:label "VALDERRIBAS" ;
-    bm:districtCode 3 ;
-    bm:neighborhoodCode 1,
-        2 ;
-    bm:postalCode "28007" ;
-    bm:streetCode 763900 ;
-    bm:streetName "VALDERRIBAS" .
-
 <https://bicismart.madrid.data.es/resource/Street/764> a bm:Street ;
     rdfs:label "LOMA DE LOS BAILANDEROS" ;
     bm:districtCode 9 ;
@@ -64136,14 +63877,6 @@
     bm:postalCode "28043" ;
     bm:streetCode 76400 ;
     bm:streetName "ARROYO DEL QUINTO" .
-
-<https://bicismart.madrid.data.es/resource/Street/764000> a bm:Street ;
-    rdfs:label "VALDERRIBAS" ;
-    bm:districtCode 13 ;
-    bm:neighborhoodCode 6 ;
-    bm:postalCode "28038" ;
-    bm:streetCode 764000 ;
-    bm:streetName "VALDERRIBAS" .
 
 <https://bicismart.madrid.data.es/resource/Street/764500> a bm:Street ;
     rdfs:label "VALDERROBRES" ;
@@ -65122,19 +64855,6 @@
     bm:streetCode 778910 ;
     bm:streetName "CANILLEJAS A VICALVARO" .
 
-<https://bicismart.madrid.data.es/resource/Street/778950> a bm:Street ;
-    rdfs:label "DEMOCRACIA" ;
-    bm:districtCode 13,
-        18,
-        19 ;
-    bm:neighborhoodCode 2,
-        4 ;
-    bm:postalCode "28030",
-        "28031",
-        "28032" ;
-    bm:streetCode 778950 ;
-    bm:streetName "DEMOCRACIA" .
-
 <https://bicismart.madrid.data.es/resource/Street/779> a bm:Street ;
     rdfs:label "DOÑA JUANA I DE CASTILLA" ;
     bm:districtCode 20 ;
@@ -65907,14 +65627,6 @@
     bm:streetCode 78800 ;
     bm:streetName "ARZOBISPO COS" .
 
-<https://bicismart.madrid.data.es/resource/Street/788100> a bm:Street ;
-    rdfs:label "VILLARDONDIEGO" ;
-    bm:districtCode 19 ;
-    bm:neighborhoodCode 1 ;
-    bm:postalCode "28032" ;
-    bm:streetCode 788100 ;
-    bm:streetName "VILLARDONDIEGO" .
-
 <https://bicismart.madrid.data.es/resource/Street/788300> a bm:Street ;
     rdfs:label "VILLAREJOS" ;
     bm:districtCode 8 ;
@@ -66097,16 +65809,6 @@
     bm:streetCode 790000 ;
     bm:streetName "VINAROZ" .
 
-<https://bicismart.madrid.data.es/resource/Street/790100> a bm:Street ;
-    rdfs:label "CAMINO DE LOS VINATEROS" ;
-    bm:districtCode 14 ;
-    bm:neighborhoodCode 3,
-        4,
-        6 ;
-    bm:postalCode "28030" ;
-    bm:streetCode 790100 ;
-    bm:streetName "CAMINO DE LOS VINATEROS" .
-
 <https://bicismart.madrid.data.es/resource/Street/790200> a bm:Street ;
     rdfs:label "VINCA" ;
     bm:districtCode 6 ;
@@ -66260,14 +65962,6 @@
     bm:postalCode "28027" ;
     bm:streetCode 792200 ;
     bm:streetName "VIRGEN DEL CANTO" .
-
-<https://bicismart.madrid.data.es/resource/Street/792250> a bm:Street ;
-    rdfs:label "VIRGEN DE LA CAPILLA" ;
-    bm:districtCode 8 ;
-    bm:neighborhoodCode 3 ;
-    bm:postalCode "28034" ;
-    bm:streetCode 792250 ;
-    bm:streetName "VIRGEN DE LA CAPILLA" .
 
 <https://bicismart.madrid.data.es/resource/Street/792400> a bm:Street ;
     rdfs:label "VIRGEN DEL CARMEN" ;
@@ -66976,15 +66670,6 @@
     bm:postalCode "28033" ;
     bm:streetCode 800600 ;
     bm:streetName "YARUMAL" .
-
-<https://bicismart.madrid.data.es/resource/Street/800700> a bm:Street ;
-    rdfs:label "LOS YEBENES" ;
-    bm:districtCode 10 ;
-    bm:neighborhoodCode 3,
-        4 ;
-    bm:postalCode "28047" ;
-    bm:streetCode 800700 ;
-    bm:streetName "LOS YEBENES" .
 
 <https://bicismart.madrid.data.es/resource/Street/800800> a bm:Street ;
     rdfs:label "YECLA" ;
@@ -69012,14 +68697,6 @@
     bm:postalCode "28011" ;
     bm:streetCode 905163 ;
     bm:streetName "ZARZON" .
-
-<https://bicismart.madrid.data.es/resource/Street/905164> a bm:Street ;
-    rdfs:label "ZOO" ;
-    bm:districtCode 9 ;
-    bm:neighborhoodCode 1 ;
-    bm:postalCode "28011" ;
-    bm:streetCode 905164 ;
-    bm:streetName "ZOO" .
 
 <https://bicismart.madrid.data.es/resource/Street/905179> a bm:Street ;
     rdfs:label "PRINCIPAL DE PROVINCIAS" ;
@@ -76991,6 +76668,14 @@
     bm:streetCode 130400 ;
     bm:streetName "CAMPUZANO" .
 
+<https://bicismart.madrid.data.es/resource/Street/133455> a bm:Street ;
+    rdfs:label "CANILLAS" ;
+    bm:districtCode 16 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28043" ;
+    bm:streetCode 133455 ;
+    bm:streetName "CANILLAS" .
+
 <https://bicismart.madrid.data.es/resource/Street/134000> a bm:Street ;
     rdfs:label "CANTABRIA" ;
     bm:districtCode 21 ;
@@ -77054,6 +76739,14 @@
         "28055" ;
     bm:streetCode 140900 ;
     bm:streetName "GREGORIO SANCHEZ HERRAEZ" .
+
+<https://bicismart.madrid.data.es/resource/Street/1431> a bm:Street ;
+    rdfs:label "CAMPO DE CALATRAVA" ;
+    bm:districtCode 8 ;
+    bm:neighborhoodCode 6 ;
+    bm:postalCode "28034" ;
+    bm:streetCode 1431 ;
+    bm:streetName "CAMPO DE CALATRAVA" .
 
 <https://bicismart.madrid.data.es/resource/Street/144000> a bm:Street ;
     rdfs:label "CARLOS MARTIN ALVAREZ" ;
@@ -77313,6 +77006,14 @@
     bm:streetCode 19300 ;
     bm:streetName "ALCALDE SAINZ DE BARANDA" .
 
+<https://bicismart.madrid.data.es/resource/Street/1935> a bm:Street ;
+    rdfs:label "CABRERA" ;
+    bm:districtCode 8 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28035" ;
+    bm:streetCode 1935 ;
+    bm:streetName "CABRERA" .
+
 <https://bicismart.madrid.data.es/resource/Street/19400> a bm:Street ;
     rdfs:label "ALCANTARA" ;
     bm:districtCode 4 ;
@@ -77443,6 +77144,15 @@
     bm:streetCode 2232 ;
     bm:streetName "ROMEO Y JULIETA" .
 
+<https://bicismart.madrid.data.es/resource/Street/2248> a bm:Street ;
+    rdfs:label "CABEZA MESADA" ;
+    bm:districtCode 18 ;
+    bm:neighborhoodCode 1,
+        3 ;
+    bm:postalCode "28031" ;
+    bm:streetCode 2248 ;
+    bm:streetName "CABEZA MESADA" .
+
 <https://bicismart.madrid.data.es/resource/Street/2251> a bm:Street ;
     rdfs:label "VALDERREBOLLO" ;
     bm:districtCode 18 ;
@@ -77494,6 +77204,14 @@
     bm:postalCode "28027" ;
     bm:streetCode 235350 ;
     bm:streetName "DERECHOS HUMANOS" .
+
+<https://bicismart.madrid.data.es/resource/Street/235800> a bm:Street ;
+    rdfs:label "DESENGAÑO" ;
+    bm:districtCode 1 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28004" ;
+    bm:streetCode 235800 ;
+    bm:streetName "DESENGAÑO" .
 
 <https://bicismart.madrid.data.es/resource/Street/23600> a bm:Street ;
     rdfs:label "ALEJANDRO GONZALEZ" ;
@@ -77573,6 +77291,14 @@
     bm:streetCode 2425 ;
     bm:streetName "HAENDEL" .
 
+<https://bicismart.madrid.data.es/resource/Street/242700> a bm:Street ;
+    rdfs:label "DOCTOR LETAMENDI" ;
+    bm:districtCode 1 ;
+    bm:neighborhoodCode 1 ;
+    bm:postalCode "28005" ;
+    bm:streetCode 242700 ;
+    bm:streetName "DOCTOR LETAMENDI" .
+
 <https://bicismart.madrid.data.es/resource/Street/243300> a bm:Street ;
     rdfs:label "DOCTOR MARTIN AREVALO" ;
     bm:districtCode 17 ;
@@ -77644,14 +77370,6 @@
     bm:postalCode "28029" ;
     bm:streetCode 2528 ;
     bm:streetName "COSTA VERDE" .
-
-<https://bicismart.madrid.data.es/resource/Street/2539> a bm:Street ;
-    rdfs:label "NIZA" ;
-    bm:districtCode 20 ;
-    bm:neighborhoodCode 5 ;
-    bm:postalCode "28022" ;
-    bm:streetCode 2539 ;
-    bm:streetName "NIZA" .
 
 <https://bicismart.madrid.data.es/resource/Street/253900> a bm:Street ;
     rdfs:label "DUQUE DE PASTRANA" ;
@@ -77729,6 +77447,14 @@
     bm:postalCode "28012" ;
     bm:streetCode 262100 ;
     bm:streetName "EMBAJADORES" .
+
+<https://bicismart.madrid.data.es/resource/Street/262550> a bm:Street ;
+    rdfs:label "EMIGRANTES" ;
+    bm:districtCode 16 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28043" ;
+    bm:streetCode 262550 ;
+    bm:streetName "EMIGRANTES" .
 
 <https://bicismart.madrid.data.es/resource/Street/266300> a bm:Street ;
     rdfs:label "ENCOMIENDA DE PALACIOS" ;
@@ -77815,6 +77541,15 @@
     bm:streetCode 273500 ;
     bm:streetName "ESPALTER" .
 
+<https://bicismart.madrid.data.es/resource/Street/27500> a bm:Street ;
+    rdfs:label "ALFONSO XII" ;
+    bm:districtCode 3 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28009",
+        "28014" ;
+    bm:streetCode 27500 ;
+    bm:streetName "ALFONSO XII" .
+
 <https://bicismart.madrid.data.es/resource/Street/275700> a bm:Street ;
     rdfs:label "ESPIRITU SANTO" ;
     bm:districtCode 1 ;
@@ -77889,6 +77624,14 @@
     bm:postalCode "28050" ;
     bm:streetCode 2798 ;
     bm:streetName "CAMINO DE SANTIAGO" .
+
+<https://bicismart.madrid.data.es/resource/Street/282500> a bm:Street ;
+    rdfs:label "PARQUE EUGENIA DE MONTIJO" ;
+    bm:districtCode 11 ;
+    bm:neighborhoodCode 4 ;
+    bm:postalCode "28047" ;
+    bm:streetCode 282500 ;
+    bm:streetName "PARQUE EUGENIA DE MONTIJO" .
 
 <https://bicismart.madrid.data.es/resource/Street/282700> a bm:Street ;
     rdfs:label "EUGENIO CAXES" ;
@@ -77975,6 +77718,14 @@
     bm:streetCode 291650 ;
     bm:streetName "FERMIN CABALLERO" .
 
+<https://bicismart.madrid.data.es/resource/Street/292100> a bm:Street ;
+    rdfs:label "FERMINA SEVILLANO" ;
+    bm:districtCode 20 ;
+    bm:neighborhoodCode 6 ;
+    bm:postalCode "28022" ;
+    bm:streetCode 292100 ;
+    bm:streetName "FERMINA SEVILLANO" .
+
 <https://bicismart.madrid.data.es/resource/Street/29300> a bm:Street ;
     rdfs:label "ALGORTA" ;
     bm:districtCode 11 ;
@@ -78000,6 +77751,14 @@
     bm:postalCode "28017" ;
     bm:streetCode 294200 ;
     bm:streetName "FERNANDO GABRIEL" .
+
+<https://bicismart.madrid.data.es/resource/Street/296250> a bm:Street ;
+    rdfs:label "EL FERROL" ;
+    bm:districtCode 8 ;
+    bm:neighborhoodCode 4 ;
+    bm:postalCode "28029" ;
+    bm:streetCode 296250 ;
+    bm:streetName "EL FERROL" .
 
 <https://bicismart.madrid.data.es/resource/Street/29650> a bm:Street ;
     rdfs:label "ALHAMBRA" ;
@@ -78162,6 +77921,15 @@
     bm:streetCode 31000470 ;
     bm:streetName "DULCE CHACON" .
 
+<https://bicismart.madrid.data.es/resource/Street/31000471> a bm:Street ;
+    rdfs:label "GRAN VIA DEL SURESTE" ;
+    bm:districtCode 18 ;
+    bm:neighborhoodCode 1,
+        3 ;
+    bm:postalCode "28051" ;
+    bm:streetCode 31000471 ;
+    bm:streetName "GRAN VIA DEL SURESTE" .
+
 <https://bicismart.madrid.data.es/resource/Street/31000494> a bm:Street ;
     rdfs:label "JOSE GUTIERREZ MAROTO" ;
     bm:districtCode 18 ;
@@ -78177,6 +77945,14 @@
     bm:postalCode "28051" ;
     bm:streetCode 31000496 ;
     bm:streetName "ADOLFO BIOY CASARES" .
+
+<https://bicismart.madrid.data.es/resource/Street/31000503> a bm:Street ;
+    rdfs:label "SUERTES" ;
+    bm:districtCode 18 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28051" ;
+    bm:streetCode 31000503 ;
+    bm:streetName "SUERTES" .
 
 <https://bicismart.madrid.data.es/resource/Street/31000535> a bm:Street ;
     rdfs:label "HILARIO HERRANZ ESTABLOS" ;
@@ -78201,6 +77977,14 @@
     bm:postalCode "28054" ;
     bm:streetCode 31000548 ;
     bm:streetName "SALVADOR ALLENDE" .
+
+<https://bicismart.madrid.data.es/resource/Street/31000571> a bm:Street ;
+    rdfs:label "PROFESOR JOSE GARCIA SANTESMASES" ;
+    bm:districtCode 9 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28040" ;
+    bm:streetCode 31000571 ;
+    bm:streetName "PROFESOR JOSE GARCIA SANTESMASES" .
 
 <https://bicismart.madrid.data.es/resource/Street/31000584> a bm:Street ;
     rdfs:label "GLORIA FUERTES" ;
@@ -78230,6 +78014,14 @@
     bm:streetCode 31000608 ;
     bm:streetName "AUÑON" .
 
+<https://bicismart.madrid.data.es/resource/Street/31000633> a bm:Street ;
+    rdfs:label "GRANJA DE SAN ILDEFONSO" ;
+    bm:districtCode 18 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28051" ;
+    bm:streetCode 31000633 ;
+    bm:streetName "GRANJA DE SAN ILDEFONSO" .
+
 <https://bicismart.madrid.data.es/resource/Street/31001238> a bm:Street ;
     rdfs:label "CAMPUS SUR" ;
     bm:districtCode 13 ;
@@ -78254,6 +78046,16 @@
     bm:streetCode 31001245 ;
     bm:streetName "COMUNICACION" .
 
+<https://bicismart.madrid.data.es/resource/Street/31001595> a bm:Street ;
+    rdfs:label "JUAN ANTONIO SAMARANCH" ;
+    bm:districtCode 16,
+        21 ;
+    bm:neighborhoodCode 4,
+        6 ;
+    bm:postalCode "28055" ;
+    bm:streetCode 31001595 ;
+    bm:streetName "JUAN ANTONIO SAMARANCH" .
+
 <https://bicismart.madrid.data.es/resource/Street/31001764> a bm:Street ;
     rdfs:label "MIGUEL DELIBES" ;
     bm:districtCode 19 ;
@@ -78269,6 +78071,14 @@
     bm:postalCode "28052" ;
     bm:streetCode 31001765 ;
     bm:streetName "BLAS DE LEZO" .
+
+<https://bicismart.madrid.data.es/resource/Street/31001775> a bm:Street ;
+    rdfs:label "VICTORIA KENT" ;
+    bm:districtCode 19 ;
+    bm:neighborhoodCode 4 ;
+    bm:postalCode "28052" ;
+    bm:streetCode 31001775 ;
+    bm:streetName "VICTORIA KENT" .
 
 <https://bicismart.madrid.data.es/resource/Street/31001811> a bm:Street ;
     rdfs:label "ALCALDE ANDRES MADRID DAVILA" ;
@@ -78299,6 +78109,14 @@
     bm:postalCode "28036" ;
     bm:streetCode 310300 ;
     bm:streetName "FRANCISCO SUAREZ" .
+
+<https://bicismart.madrid.data.es/resource/Street/310400> a bm:Street ;
+    rdfs:label "FRANCISCO DE TEJADA" ;
+    bm:districtCode 10 ;
+    bm:neighborhoodCode 2 ;
+    bm:postalCode "28011" ;
+    bm:streetCode 310400 ;
+    bm:streetName "FRANCISCO DE TEJADA" .
 
 <https://bicismart.madrid.data.es/resource/Street/310500> a bm:Street ;
     rdfs:label "FRANCISCO VILLAESPESA" ;
@@ -78404,6 +78222,17 @@
     bm:streetCode 322550 ;
     bm:streetName "GALLUR" .
 
+<https://bicismart.madrid.data.es/resource/Street/322600> a bm:Street ;
+    rdfs:label "GANAPANES" ;
+    bm:districtCode 8 ;
+    bm:neighborhoodCode 3,
+        4 ;
+    bm:postalCode "28029",
+        "28035",
+        "28039" ;
+    bm:streetCode 322600 ;
+    bm:streetName "GANAPANES" .
+
 <https://bicismart.madrid.data.es/resource/Street/328400> a bm:Street ;
     rdfs:label "GENERAL ALVAREZ DE CASTRO" ;
     bm:districtCode 7 ;
@@ -78419,6 +78248,14 @@
     bm:postalCode "28003" ;
     bm:streetCode 328600 ;
     bm:streetName "GENERAL AMPUDIA" .
+
+<https://bicismart.madrid.data.es/resource/Street/330300> a bm:Street ;
+    rdfs:label "CARLOTA O'NEILL" ;
+    bm:districtCode 15 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28027" ;
+    bm:streetCode 330300 ;
+    bm:streetName "CARLOTA O'NEILL" .
 
 <https://bicismart.madrid.data.es/resource/Street/330500> a bm:Street ;
     rdfs:label "GENERAL LOPEZ POZAS" ;
@@ -78465,6 +78302,14 @@
     bm:streetCode 342700 ;
     bm:streetName "GRAN AVENIDA" .
 
+<https://bicismart.madrid.data.es/resource/Street/344100> a bm:Street ;
+    rdfs:label "EL GRECO" ;
+    bm:districtCode 10 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28011" ;
+    bm:streetCode 344100 ;
+    bm:streetName "EL GRECO" .
+
 <https://bicismart.madrid.data.es/resource/Street/346750> a bm:Street ;
     rdfs:label "GUADALAJARA" ;
     bm:districtCode 20 ;
@@ -78483,6 +78328,14 @@
     bm:postalCode "28041" ;
     bm:streetCode 349700 ;
     bm:streetName "GUETARIA" .
+
+<https://bicismart.madrid.data.es/resource/Street/35200> a bm:Street ;
+    rdfs:label "ALONSO HEREDIA" ;
+    bm:districtCode 4 ;
+    bm:neighborhoodCode 4 ;
+    bm:postalCode "28028" ;
+    bm:streetCode 35200 ;
+    bm:streetName "ALONSO HEREDIA" .
 
 <https://bicismart.madrid.data.es/resource/Street/352300> a bm:Street ;
     rdfs:label "GUTIERRE DE CETINA" ;
@@ -78527,20 +78380,6 @@
     bm:postalCode "28042" ;
     bm:streetCode 356700 ;
     bm:streetName "MAYOR DE BARAJAS" .
-
-<https://bicismart.madrid.data.es/resource/Street/357000> a bm:Street ;
-    rdfs:label "HERMANOS GARCIA NOBLEJAS" ;
-    bm:districtCode 15,
-        20 ;
-    bm:neighborhoodCode 1,
-        2,
-        3,
-        4 ;
-    bm:postalCode "28017",
-        "28032",
-        "28037" ;
-    bm:streetCode 357000 ;
-    bm:streetName "HERMANOS GARCIA NOBLEJAS" .
 
 <https://bicismart.madrid.data.es/resource/Street/360700> a bm:Street ;
     rdfs:label "HERNANI" ;
@@ -78679,6 +78518,15 @@
     bm:streetCode 392400 ;
     bm:streetName "JESUS" .
 
+<https://bicismart.madrid.data.es/resource/Street/393300> a bm:Street ;
+    rdfs:label "JESUS DEL GRAN PODER" ;
+    bm:districtCode 12 ;
+    bm:neighborhoodCode 4,
+        5 ;
+    bm:postalCode "28026" ;
+    bm:streetCode 393300 ;
+    bm:streetName "JESUS DEL GRAN PODER" .
+
 <https://bicismart.madrid.data.es/resource/Street/393700> a bm:Street ;
     rdfs:label "JESUS Y MARIA" ;
     bm:districtCode 1 ;
@@ -78707,15 +78555,6 @@
     bm:streetCode 399800 ;
     bm:streetName "JOSE DE CADALSO" .
 
-<https://bicismart.madrid.data.es/resource/Street/401600> a bm:Street ;
-    rdfs:label "JOSE DEL HIERRO" ;
-    bm:districtCode 15 ;
-    bm:neighborhoodCode 3,
-        4 ;
-    bm:postalCode "28027" ;
-    bm:streetCode 401600 ;
-    bm:streetName "JOSE DEL HIERRO" .
-
 <https://bicismart.madrid.data.es/resource/Street/404000> a bm:Street ;
     rdfs:label "JOSE MARIA PEREDA" ;
     bm:districtCode 15 ;
@@ -78723,6 +78562,14 @@
     bm:postalCode "28017" ;
     bm:streetCode 404000 ;
     bm:streetName "JOSE MARIA PEREDA" .
+
+<https://bicismart.madrid.data.es/resource/Street/410200> a bm:Street ;
+    rdfs:label "JUAN ANDRES" ;
+    bm:districtCode 9 ;
+    bm:neighborhoodCode 4 ;
+    bm:postalCode "28035" ;
+    bm:streetCode 410200 ;
+    bm:streetName "JUAN ANDRES" .
 
 <https://bicismart.madrid.data.es/resource/Street/411300> a bm:Street ;
     rdfs:label "JUAN BRAVO" ;
@@ -78732,6 +78579,23 @@
     bm:postalCode "28006" ;
     bm:streetCode 411300 ;
     bm:streetName "JUAN BRAVO" .
+
+<https://bicismart.madrid.data.es/resource/Street/413000> a bm:Street ;
+    rdfs:label "JUAN DE HERRERA" ;
+    bm:districtCode 9 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28040" ;
+    bm:streetCode 413000 ;
+    bm:streetName "JUAN DE HERRERA" .
+
+<https://bicismart.madrid.data.es/resource/Street/414850> a bm:Street ;
+    rdfs:label "JUAN MARTIN EL EMPECINADO" ;
+    bm:districtCode 2 ;
+    bm:neighborhoodCode 5,
+        6 ;
+    bm:postalCode "28045" ;
+    bm:streetCode 414850 ;
+    bm:streetName "JUAN MARTIN EL EMPECINADO" .
 
 <https://bicismart.madrid.data.es/resource/Street/419700> a bm:Street ;
     rdfs:label "JUAN XXIII" ;
@@ -78940,14 +78804,6 @@
     bm:streetCode 478850 ;
     bm:streetName "MARIA SEVILLA DIAGO" .
 
-<https://bicismart.madrid.data.es/resource/Street/484400> a bm:Street ;
-    rdfs:label "MARQUES DE CORBERA" ;
-    bm:districtCode 15 ;
-    bm:neighborhoodCode 1 ;
-    bm:postalCode "28017" ;
-    bm:streetCode 484400 ;
-    bm:streetName "MARQUES DE CORBERA" .
-
 <https://bicismart.madrid.data.es/resource/Street/484600> a bm:Street ;
     rdfs:label "MARQUES DE CUBAS" ;
     bm:districtCode 1 ;
@@ -78973,6 +78829,14 @@
     bm:postalCode "28019" ;
     bm:streetCode 487500 ;
     bm:streetName "MARQUES DE VADILLO" .
+
+<https://bicismart.madrid.data.es/resource/Street/488600> a bm:Street ;
+    rdfs:label "MARQUES DE ZAFRA" ;
+    bm:districtCode 4 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28028" ;
+    bm:streetCode 488600 ;
+    bm:streetName "MARQUES DE ZAFRA" .
 
 <https://bicismart.madrid.data.es/resource/Street/492200> a bm:Street ;
     rdfs:label "MARTIRES CONCEPCIONISTAS" ;
@@ -79257,6 +79121,14 @@
     bm:streetCode 55700 ;
     bm:streetName "ANTONIA RODRIGUEZ SACRISTAN" .
 
+<https://bicismart.madrid.data.es/resource/Street/560400> a bm:Street ;
+    rdfs:label "PALOMERAS" ;
+    bm:districtCode 13 ;
+    bm:neighborhoodCode 2 ;
+    bm:postalCode "28053" ;
+    bm:streetCode 560400 ;
+    bm:streetName "PALOMERAS" .
+
 <https://bicismart.madrid.data.es/resource/Street/560600> a bm:Street ;
     rdfs:label "PALOS DE LA FRONTERA" ;
     bm:districtCode 2 ;
@@ -79442,6 +79314,16 @@
     bm:streetCode 614100 ;
     bm:streetName "PUERTA DEL ANGEL" .
 
+<https://bicismart.madrid.data.es/resource/Street/615000> a bm:Street ;
+    rdfs:label "PUERTA DE TOLEDO" ;
+    bm:districtCode 1,
+        2 ;
+    bm:neighborhoodCode 1,
+        2 ;
+    bm:postalCode "28005" ;
+    bm:streetCode 615000 ;
+    bm:streetName "PUERTA DE TOLEDO" .
+
 <https://bicismart.madrid.data.es/resource/Street/615600> a bm:Street ;
     rdfs:label "PUERTO DE ARLABAN" ;
     bm:districtCode 13 ;
@@ -79459,6 +79341,14 @@
         "28053" ;
     bm:streetCode 615800 ;
     bm:streetName "PUERTO DE BALBARAN" .
+
+<https://bicismart.madrid.data.es/resource/Street/616200> a bm:Street ;
+    rdfs:label "PUERTO DE CANFRANC" ;
+    bm:districtCode 13 ;
+    bm:neighborhoodCode 6 ;
+    bm:postalCode "28038" ;
+    bm:streetCode 616200 ;
+    bm:streetName "PUERTO DE CANFRANC" .
 
 <https://bicismart.madrid.data.es/resource/Street/618800> a bm:Street ;
     rdfs:label "PUERTO DE PORZUNA" ;
@@ -79765,6 +79655,14 @@
     bm:streetCode 679900 ;
     bm:streetName "SAN MODESTO" .
 
+<https://bicismart.madrid.data.es/resource/Street/682200> a bm:Street ;
+    rdfs:label "SAN PATRICIO" ;
+    bm:districtCode 11 ;
+    bm:neighborhoodCode 2 ;
+    bm:postalCode "28019" ;
+    bm:streetCode 682200 ;
+    bm:streetName "SAN PATRICIO" .
+
 <https://bicismart.madrid.data.es/resource/Street/684250> a bm:Street ;
     rdfs:label "SAN RESTITUTO" ;
     bm:districtCode 9 ;
@@ -79797,13 +79695,13 @@
     bm:streetCode 691700 ;
     bm:streetName "SANTA ANA" .
 
-<https://bicismart.madrid.data.es/resource/Street/694650> a bm:Street ;
-    rdfs:label "SANTA EUGENIA" ;
-    bm:districtCode 18 ;
-    bm:neighborhoodCode 2 ;
-    bm:postalCode "28031" ;
-    bm:streetCode 694650 ;
-    bm:streetName "SANTA EUGENIA" .
+<https://bicismart.madrid.data.es/resource/Street/694000> a bm:Street ;
+    rdfs:label "SANTA CRUZ DE MARCENADO" ;
+    bm:districtCode 1 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28015" ;
+    bm:streetCode 694000 ;
+    bm:streetName "SANTA CRUZ DE MARCENADO" .
 
 <https://bicismart.madrid.data.es/resource/Street/695500> a bm:Street ;
     rdfs:label "SANTA HORTENSIA" ;
@@ -80117,6 +80015,23 @@
     bm:streetCode 76000 ;
     bm:streetName "ARROYO DE LAS PILILLAS" .
 
+<https://bicismart.madrid.data.es/resource/Street/763900> a bm:Street ;
+    rdfs:label "VALDERRIBAS" ;
+    bm:districtCode 3 ;
+    bm:neighborhoodCode 1,
+        2 ;
+    bm:postalCode "28007" ;
+    bm:streetCode 763900 ;
+    bm:streetName "VALDERRIBAS" .
+
+<https://bicismart.madrid.data.es/resource/Street/764000> a bm:Street ;
+    rdfs:label "VALDERRIBAS" ;
+    bm:districtCode 13 ;
+    bm:neighborhoodCode 6 ;
+    bm:postalCode "28038" ;
+    bm:streetCode 764000 ;
+    bm:streetName "VALDERRIBAS" .
+
 <https://bicismart.madrid.data.es/resource/Street/764585> a bm:Street ;
     rdfs:label "VALDESANGIL" ;
     bm:districtCode 9 ;
@@ -80173,6 +80088,19 @@
     bm:streetCode 777800 ;
     bm:streetName "VIA" .
 
+<https://bicismart.madrid.data.es/resource/Street/778950> a bm:Street ;
+    rdfs:label "DEMOCRACIA" ;
+    bm:districtCode 13,
+        18,
+        19 ;
+    bm:neighborhoodCode 2,
+        4 ;
+    bm:postalCode "28030",
+        "28031",
+        "28032" ;
+    bm:streetCode 778950 ;
+    bm:streetName "DEMOCRACIA" .
+
 <https://bicismart.madrid.data.es/resource/Street/781200> a bm:Street ;
     rdfs:label "VICENTE MUZAS" ;
     bm:districtCode 15 ;
@@ -80181,15 +80109,6 @@
     bm:streetCode 781200 ;
     bm:streetName "VICENTE MUZAS" .
 
-<https://bicismart.madrid.data.es/resource/Street/785400> a bm:Street ;
-    rdfs:label "VILLABLANCA" ;
-    bm:districtCode 19 ;
-    bm:neighborhoodCode 1,
-        3 ;
-    bm:postalCode "28032" ;
-    bm:streetCode 785400 ;
-    bm:streetName "VILLABLANCA" .
-
 <https://bicismart.madrid.data.es/resource/Street/787250> a bm:Street ;
     rdfs:label "VILLALOBOS" ;
     bm:districtCode 13 ;
@@ -80197,6 +80116,14 @@
     bm:postalCode "28018" ;
     bm:streetCode 787250 ;
     bm:streetName "VILLALOBOS" .
+
+<https://bicismart.madrid.data.es/resource/Street/788100> a bm:Street ;
+    rdfs:label "VILLARDONDIEGO" ;
+    bm:districtCode 19 ;
+    bm:neighborhoodCode 1 ;
+    bm:postalCode "28032" ;
+    bm:streetCode 788100 ;
+    bm:streetName "VILLARDONDIEGO" .
 
 <https://bicismart.madrid.data.es/resource/Street/78850> a bm:Street ;
     rdfs:label "ARZOBISPO MORCILLO" ;
@@ -80213,6 +80140,14 @@
     bm:postalCode "28027" ;
     bm:streetCode 791400 ;
     bm:streetName "VIRGEN DE LA ALEGRIA" .
+
+<https://bicismart.madrid.data.es/resource/Street/792250> a bm:Street ;
+    rdfs:label "VIRGEN DE LA CAPILLA" ;
+    bm:districtCode 8 ;
+    bm:neighborhoodCode 3 ;
+    bm:postalCode "28034" ;
+    bm:streetCode 792250 ;
+    bm:streetName "VIRGEN DE LA CAPILLA" .
 
 <https://bicismart.madrid.data.es/resource/Street/793500> a bm:Street ;
     rdfs:label "COOPERATIVA ELECTRICA" ;
@@ -80239,6 +80174,15 @@
     bm:postalCode "28007" ;
     bm:streetCode 79700 ;
     bm:streetName "ASTROS" .
+
+<https://bicismart.madrid.data.es/resource/Street/800700> a bm:Street ;
+    rdfs:label "YEBENES" ;
+    bm:districtCode 10 ;
+    bm:neighborhoodCode 3,
+        4 ;
+    bm:postalCode "28047" ;
+    bm:streetCode 800700 ;
+    bm:streetName "YEBENES" .
 
 <https://bicismart.madrid.data.es/resource/Street/801600> a bm:Street ;
     rdfs:label "YUCA" ;
@@ -80360,6 +80304,14 @@
         "28039" ;
     bm:streetCode 889 ;
     bm:streetName "VALLE DE MENA" .
+
+<https://bicismart.madrid.data.es/resource/Street/905164> a bm:Street ;
+    rdfs:label "ZOO" ;
+    bm:districtCode 9 ;
+    bm:neighborhoodCode 1 ;
+    bm:postalCode "28011" ;
+    bm:streetCode 905164 ;
+    bm:streetName "ZOO" .
 
 <https://bicismart.madrid.data.es/resource/Street/905191> a bm:Street ;
     rdfs:label "VENTA" ;
@@ -80544,6 +80496,14 @@
     bm:streetCode 241300 ;
     bm:streetName "DOCTOR ESQUERDO" .
 
+<https://bicismart.madrid.data.es/resource/Street/2539> a bm:Street ;
+    rdfs:label "NIZA" ;
+    bm:districtCode 20 ;
+    bm:neighborhoodCode 5 ;
+    bm:postalCode "28022" ;
+    bm:streetCode 2539 ;
+    bm:streetName "NIZA" .
+
 <https://bicismart.madrid.data.es/resource/Street/273600> a bm:Street ;
     rdfs:label "ESPAÑA" ;
     bm:districtCode 1,
@@ -80611,6 +80571,14 @@
     bm:streetCode 31001593 ;
     bm:streetName "MARIA DE LAS MERCEDES DE BORBON" .
 
+<https://bicismart.madrid.data.es/resource/Street/329500> a bm:Street ;
+    rdfs:label "AGUILAS" ;
+    bm:districtCode 10 ;
+    bm:neighborhoodCode 7 ;
+    bm:postalCode "28044" ;
+    bm:streetCode 329500 ;
+    bm:streetName "AGUILAS" .
+
 <https://bicismart.madrid.data.es/resource/Street/332100> a bm:Street ;
     rdfs:label "GENERAL PERON" ;
     bm:districtCode 6 ;
@@ -80640,6 +80608,19 @@
     bm:streetCode 337350 ;
     bm:streetName "GINZO DE LIMIA" .
 
+<https://bicismart.madrid.data.es/resource/Street/353200> a bm:Street ;
+    rdfs:label "HABANA" ;
+    bm:districtCode 5 ;
+    bm:neighborhoodCode 1,
+        4,
+        5 ;
+    bm:postalCode "28002",
+        "28016",
+        "28036",
+        "28046" ;
+    bm:streetCode 353200 ;
+    bm:streetName "HABANA" .
+
 <https://bicismart.madrid.data.es/resource/Street/353500> a bm:Street ;
     rdfs:label "HACIENDA DE PAVONES" ;
     bm:districtCode 14,
@@ -80652,6 +80633,20 @@
         "28032" ;
     bm:streetCode 353500 ;
     bm:streetName "HACIENDA DE PAVONES" .
+
+<https://bicismart.madrid.data.es/resource/Street/357000> a bm:Street ;
+    rdfs:label "HERMANOS GARCIA NOBLEJAS" ;
+    bm:districtCode 15,
+        20 ;
+    bm:neighborhoodCode 1,
+        2,
+        3,
+        4 ;
+    bm:postalCode "28017",
+        "28032",
+        "28037" ;
+    bm:streetCode 357000 ;
+    bm:streetName "HERMANOS GARCIA NOBLEJAS" .
 
 <https://bicismart.madrid.data.es/resource/Street/360000> a bm:Street ;
     rdfs:label "HERMOSILLA" ;
@@ -80709,15 +80704,22 @@
     bm:streetCode 397700 ;
     bm:streetName "JOSE ABASCAL" .
 
-<https://bicismart.madrid.data.es/resource/Street/405300> a bm:Street ;
-    rdfs:label "JOSE ORTEGA Y GASSET" ;
-    bm:districtCode 4 ;
-    bm:neighborhoodCode 5,
-        6 ;
-    bm:postalCode "28006",
-        "28028" ;
-    bm:streetCode 405300 ;
-    bm:streetName "JOSE ORTEGA Y GASSET" .
+<https://bicismart.madrid.data.es/resource/Street/401600> a bm:Street ;
+    rdfs:label "JOSE DEL HIERRO" ;
+    bm:districtCode 15 ;
+    bm:neighborhoodCode 3,
+        4 ;
+    bm:postalCode "28027" ;
+    bm:streetCode 401600 ;
+    bm:streetName "JOSE DEL HIERRO" .
+
+<https://bicismart.madrid.data.es/resource/Street/484400> a bm:Street ;
+    rdfs:label "MARQUES DE CORBERA" ;
+    bm:districtCode 15 ;
+    bm:neighborhoodCode 1 ;
+    bm:postalCode "28017" ;
+    bm:streetCode 484400 ;
+    bm:streetName "MARQUES DE CORBERA" .
 
 <https://bicismart.madrid.data.es/resource/Street/488000> a bm:Street ;
     rdfs:label "MARQUES DE VIANA" ;
@@ -80777,6 +80779,21 @@
     bm:postalCode "28008" ;
     bm:streetCode 523800 ;
     bm:streetName "MORET" .
+
+<https://bicismart.madrid.data.es/resource/Street/544600> a bm:Street ;
+    rdfs:label "O'DONNELL" ;
+    bm:districtCode 3,
+        4 ;
+    bm:neighborhoodCode 1,
+        2,
+        3,
+        4,
+        5 ;
+    bm:postalCode "28007",
+        "28009",
+        "28028" ;
+    bm:streetCode 544600 ;
+    bm:streetName "O'DONNELL" .
 
 <https://bicismart.madrid.data.es/resource/Street/549100> a bm:Street ;
     rdfs:label "OPORTO" ;
@@ -80850,6 +80867,14 @@
     bm:streetCode 67500 ;
     bm:streetName "ARCIPRESTE DE HITA" .
 
+<https://bicismart.madrid.data.es/resource/Street/694650> a bm:Street ;
+    rdfs:label "SANTA EUGENIA" ;
+    bm:districtCode 18 ;
+    bm:neighborhoodCode 2 ;
+    bm:postalCode "28031" ;
+    bm:streetCode 694650 ;
+    bm:streetName "SANTA EUGENIA" .
+
 <https://bicismart.madrid.data.es/resource/Street/697200> a bm:Street ;
     rdfs:label "SANTA MARIA DE LA CABEZA" ;
     bm:districtCode 2,
@@ -80913,6 +80938,15 @@
     bm:streetCode 769300 ;
     bm:streetName "VALMOJADO" .
 
+<https://bicismart.madrid.data.es/resource/Street/785400> a bm:Street ;
+    rdfs:label "VILLABLANCA" ;
+    bm:districtCode 19 ;
+    bm:neighborhoodCode 1,
+        3 ;
+    bm:postalCode "28032" ;
+    bm:streetCode 785400 ;
+    bm:streetName "VILLABLANCA" .
+
 <https://bicismart.madrid.data.es/resource/Street/78700> a bm:Street ;
     rdfs:label "ARTURO SORIA" ;
     bm:districtCode 15 ;
@@ -80939,6 +80973,16 @@
     bm:postalCode "28041" ;
     bm:streetCode 789100 ;
     bm:streetName "EDUARDO BARREIROS" .
+
+<https://bicismart.madrid.data.es/resource/Street/790100> a bm:Street ;
+    rdfs:label "CAMINO DE LOS VINATEROS" ;
+    bm:districtCode 14 ;
+    bm:neighborhoodCode 3,
+        4,
+        6 ;
+    bm:postalCode "28030" ;
+    bm:streetCode 790100 ;
+    bm:streetName "CAMINO DE LOS VINATEROS" .
 
 <https://bicismart.madrid.data.es/resource/Street/801200> a bm:Street ;
     rdfs:label "YESERIAS" ;
@@ -80987,6 +81031,16 @@
         "28009" ;
     bm:streetCode 341900 ;
     bm:streetName "GOYA" .
+
+<https://bicismart.madrid.data.es/resource/Street/405300> a bm:Street ;
+    rdfs:label "JOSE ORTEGA Y GASSET" ;
+    bm:districtCode 4 ;
+    bm:neighborhoodCode 5,
+        6 ;
+    bm:postalCode "28006",
+        "28028" ;
+    bm:streetCode 405300 ;
+    bm:streetName "JOSE ORTEGA Y GASSET" .
 
 <https://bicismart.madrid.data.es/resource/Street/514425> a bm:Street ;
     rdfs:label "MONFORTE DE LEMOS" ;
