@@ -1,9 +1,36 @@
-# Autoevaluación Entrega 3 Práctica – Grupo05
+# Hands-on assignment 3 – Self assessment (Group05)
 
-## Resumen del trabajo realizado.
+## Checklist
+
+**Every resource described in the CSV file:**
+
+- [x] Has a unique identifier in a column (not an auto-increased integer)
+- [x] Is related to a class in the ontology
+
+**Every class in the ontology:**
+
+- [x] Is related to a resource described in the CSV file
+
+**Every column in the CSV file:**
+
+- [x] Is trimmed
+- [x] Is properly encoded (e.g., dates, booleans)
+- [ ] Is related to a property in the ontology
+
+**Every property in the ontology:**
+
+- [x] Is related to a column in the CSV file
+
+## Comments on the self-assessment
+
+- Cada fila del CSV es un centro deportivo (`:SportsCenter`) identificado por la columna `PK`, que es el identificador municipal del Ayuntamiento y no un entero autoincremental. La columna `DISTRITO` da lugar a la clase `:District`.
+- Propiedades de la ontología y columnas relacionadas: `:pk` → `PK`, `:equipmentDescription` → `EQUIPAMIENTO`, `:accessibilityInfo` → `ACCESIBILIDAD`, `:transportInfo` → `TRANSPORTE`, `:telephone` → `TELEFONO`, `:email` → `EMAIL`, `:locatedInDistrict` → `DISTRITO`. Además se reutilizan `rdfs:label` (`NOMBRE`, `DISTRITO`) y `geo:lat`/`geo:long` (`LATITUD`, `LONGITUD`).
+- No todas las columnas tienen todavía una propiedad en la ontología (`HORARIO`, `DESCRIPCION`, `DESCRIPCION-ENTIDAD`, la dirección postal, `BARRIO`, `COD-BARRIO`, `COD-DISTRITO`, `COORDENADA-X/Y`, `CONTENT-URL`, `FAX`, `TIPO`...). Se mantienen en el CSV limpio para poder incorporarlas si se amplía la ontología.
+
+### Resumen del trabajo realizado.
 En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar el dataset de polideportivos (centros deportivos municipales) del Ayuntamiento de Madrid para facilitar la posterior generación de RDF. Para ello hemos corregido errores de codificación y de formato, normalizado valores, separado información mezclada en algunas celdas y eliminado columnas sin contenido. Todo el proceso se ha realizado con la herramienta OpenRefine.
 
-## Acciones detalladas
+### Acciones detalladas
 1.- Importación: el CSV original (200186-0-polideportivos-csv.csv) se ha importado en OpenRefine con codificación ISO-8859-1 y separador punto y coma (;). Estos ajustes no quedan registrados en el JSON, pero son necesarios para que tildes y eñes se lean correctamente (por ejemplo, "Barceló" o "PEÑA GRANDE").
 
 2.- El texto en NOMBRE ha sido limpiado eliminando los espacios extra (con trim y sustituyendo espacios múltiples por uno solo). La columna DISTRITO se ha normalizado a formato título (con toTitlecase), por ejemplo "MONCLOA-ARAVACA" pasa a "Moncloa-Aravaca".
@@ -26,12 +53,12 @@ En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar 
 
 11.- Se han eliminado las columnas PUERTA y ESCALERAS, que estaban completamente vacías.
 
-## Problemas conocidos
+### Problemas conocidos
 - El código de barrio de Ambroz (COD-BARRIO) sigue vacío porque no hemos podido confirmar su valor en el callejero oficial.
 - En TELEFONO se pierden las etiquetas informativas ("Taquilla", "Oficina", "Por ahora solo WhatsApp"); solo se conservan los números.
 - En los textos largos hay palabras partidas que vienen así del original ("p istas", "s ala"). Se han mantenido porque son texto descriptivo y no afectan a la generación de RDF.
 - NOMBRE-VIA mezcla nombres con y sin tilde ("DAOÍZ Y VELARDE" frente a "ALCANTARA"), y en un caso TIPO-NUM vale "S/N" aunque hay número. Se han dejado tal como vienen en el dataset original.
 - ACCESIBILIDAD puede contener varios códigos separados por comas ("1,5,6"). Se mantiene así y se separará en el mapping RDF.
 
-## Conclusión
+### Conclusión
 Todos los cambios realizados han sido guardados en un nuevo csv: csv/200186-0-polideportivos-updated.csv; y las operaciones han sido almacenadas en un documento JSON: openrefine/history.json. Aplicando ese JSON al CSV original (importado con la codificación y el separador indicados) se obtiene exactamente el CSV entregado. El dataset queda limpio y preparado para la generación de RDF, salvo los problemas conocidos indicados arriba.
