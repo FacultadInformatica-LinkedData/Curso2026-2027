@@ -1,0 +1,628 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACION",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "ESTACION_RECON",
+    "columnInsertIndex": 18,
+    "description": "Crear la columna ESTACION_RECON en el índice 18 basada en la columna ESTACION usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079004",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q1326261",
+      "name": "plaza de España",
+      "types": [
+        "Q174782"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento plaza de España (Q1326261) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079008",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q5397501",
+      "name": "Escuelas Aguirre",
+      "types": [
+        "Q3914",
+        "Q41176"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Escuelas Aguirre (Q5397501) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079011",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q30467128",
+      "name": "avenida de Ramón y Cajal",
+      "types": [
+        "Q7543083"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento avenida de Ramón y Cajal (Q30467128) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079016",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q8255504",
+      "name": "calle de Arturo Soria",
+      "types": [
+        "Q79007"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento calle de Arturo Soria (Q8255504) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079017",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q919536",
+      "name": "Villaverde",
+      "types": [
+        "Q3032114"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Villaverde (Q919536) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079024",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q1046524",
+      "name": "Casa de Campo",
+      "types": [
+        "Q22698",
+        "Q1081138"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Casa de Campo (Q1046524) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079027",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q9701730",
+      "name": "Casco Histórico de Barajas",
+      "types": [
+        "Q10267336"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Casco Histórico de Barajas (Q9701730) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079035",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q6080406",
+      "name": "Plaza del Carmen",
+      "types": [
+        "Q174782"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Plaza del Carmen (Q6080406) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079036",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q2076109",
+      "name": "Moratalaz",
+      "types": [
+        "Q3032114"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Moratalaz (Q2076109) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079038",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q28045035",
+      "name": "avenida de Pablo Iglesias",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento avenida de Pablo Iglesias (Q28045035) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079039",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q3773964",
+      "name": "El Pilar",
+      "types": [
+        "Q10267336"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento El Pilar (Q3773964) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079040",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q2003054",
+      "name": "Puente de Vallecas",
+      "types": [
+        "Q3032114"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Puente de Vallecas (Q2003054) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079047",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q118644768",
+      "name": "calle de Juan de Mariana",
+      "types": [
+        "Q79007"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento calle de Juan de Mariana (Q118644768) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079049",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q1131807",
+      "name": "Parque del Retiro",
+      "types": [
+        "Q22746",
+        "Q1200957",
+        "Q14946335",
+        "Q1329623"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Parque del Retiro (Q1131807) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079050",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q786291",
+      "name": "plaza de Castilla",
+      "types": [
+        "Q174782"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento plaza de Castilla (Q786291) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079054",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q3847485",
+      "name": "Ensanche de Vallecas",
+      "types": [
+        "Q10267336"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Ensanche de Vallecas (Q3847485) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079056",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q16619985",
+      "name": "Plaza Elíptica",
+      "types": [
+        "Q174782"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Plaza Elíptica (Q16619985) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079057",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q3076623",
+      "name": "Sanchinarro",
+      "types": [
+        "Q123705"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Sanchinarro (Q3076623) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079058",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q3314337",
+      "name": "El Pardo",
+      "types": [
+        "Q10267336"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento El Pardo (Q3314337) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079059",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q1583169",
+      "name": "Parque Juan Carlos I",
+      "types": [
+        "Q1759852",
+        "Q22652"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Parque Juan Carlos I (Q1583169) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/recon-match-specific-topic-to-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "CODIGO",
+          "columnName": "CODIGO",
+          "query": "28079060",
+          "mode": "text",
+          "caseSensitive": true,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTACION_RECON",
+    "match": {
+      "id": "Q5795544",
+      "name": "Tres Olivos",
+      "types": [
+        "Q674950"
+      ]
+    },
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "description": "Emparejar el elemento Tres Olivos (Q5795544) con las celdas de la columna ESTACION_RECON"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ESTACION_RECON",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_LUGAR",
+    "columnInsertIndex": 19,
+    "description": "Crear la columna WIKIDATA_LUGAR en el índice 19 basada en la columna ESTACION_RECON usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESTACION_RECON",
+    "description": "Eliminar columna ESTACION_RECON"
+  }
+]

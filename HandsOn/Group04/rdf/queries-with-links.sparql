@@ -1,0 +1,105 @@
+PREFIX bm: <http://breathemadrid.es/ontology#>
+PREFIX bmr: <http://breathemadrid.es/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# Hands-on 5: queries to verify the links with Wikidata (11 pollutants and 21 of 24 stations linked).
+# The queries over the H04 data (queries.sparql) are not repeated here.
+
+# Q1. Total number of triples (expected: 20817 = 20785 from H04 + 11 + 21)
+SELECT (COUNT(*) AS ?triples)
+WHERE { ?s ?p ?o }
+
+# Q2. Number of owl:sameAs links per class (expected: Municipality 1, Pollutant 11; no stations or observations)
+SELECT ?class (COUNT(?s) AS ?links)
+WHERE {
+  ?s owl:sameAs ?o ;
+     a ?class .
+}
+GROUP BY ?class
+ORDER BY ?class
+
+# Q3. Number of stations with rdfs:seeAlso to a Wikidata place (expected: 21 of 24)
+SELECT (COUNT(DISTINCT ?station) AS ?linkedStations)
+WHERE {
+  ?station a bm:Station ;
+           rdfs:seeAlso ?place .
+  FILTER(STRSTARTS(STR(?place), STR(wd:)))
+}
+
+# Q4. Stations with the Wikidata place they point to (expected: 21 rows)
+SELECT ?stationName ?place
+WHERE {
+  ?station a bm:Station ;
+           bm:stationName ?stationName ;
+           rdfs:seeAlso ?place .
+}
+ORDER BY ?stationName
+
+# Q5. Stations without link, to be matched with the list of task B (expected: 3 rows: Farolillo, Castellana, Urb. Embajada)
+SELECT ?station ?stationName
+WHERE {
+  ?station a bm:Station ;
+           bm:stationName ?stationName .
+  FILTER NOT EXISTS { ?station rdfs:seeAlso ?place }
+}
+ORDER BY ?station
+
+# Q6. Pollutants without owl:sameAs, to be matched with the list of task A (expected: no rows, all 11 are linked)
+SELECT ?pollutant ?pollutantName
+WHERE {
+  ?pollutant a bm:Pollutant ;
+             bm:pollutantName ?pollutantName .
+  FILTER NOT EXISTS { ?pollutant owl:sameAs ?wd }
+}
+ORDER BY ?pollutant
+
+# Q7. Sanity check: Wikidata links with a wrong form, i.e. not http://www.wikidata.org/entity/Q<number> (expected: no rows)
+SELECT ?s ?p ?o
+WHERE {
+  ?s ?p ?o .
+  FILTER(?p IN (owl:sameAs, rdfs:seeAlso))
+  FILTER(CONTAINS(STR(?o), "wikidata.org"))
+  FILTER(!REGEX(STR(?o), "^http://www\\.wikidata\\.org/entity/Q[0-9]+$"))
+}
+
+# Q8. Sanity check: the same Wikidata item used by more than one of our resources (expected: no rows)
+SELECT ?wd (COUNT(?s) AS ?uses) (GROUP_CONCAT(STR(?s); separator=" | ") AS ?resources)
+WHERE {
+  ?s (owl:sameAs|rdfs:seeAlso) ?wd .
+  FILTER(STRSTARTS(STR(?wd), STR(wd:)))
+}
+GROUP BY ?wd
+HAVING (COUNT(?s) > 1)
+
+# Q9. FEDERATED (needs internet): chemical formula (P274) in Wikidata of each linked pollutant
+# (expected: 8 rows: SO2, CO, NO, NO2, O3, C7H8 toluene, C6H6 benzene, C8H10 ethylbenzene; PM2.5, PM10 and NOx have no formula in Wikidata)
+SELECT ?pollutant ?pollutantName ?formula
+WHERE {
+  ?pollutant a bm:Pollutant ;
+             bm:pollutantName ?pollutantName ;
+             owl:sameAs ?wd .
+  FILTER(STRSTARTS(STR(?wd), STR(wd:)))
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wd wdt:P274 ?formula .
+  }
+}
+ORDER BY ?pollutant
+
+# Q10. FEDERATED (needs internet): Spanish name in Wikidata of the place linked to each station, to review the links by hand
+# (expected: 21 rows, all places of Madrid consistent with the station: square, park, street, neighbourhood or district)
+SELECT ?stationName ?place ?placeLabel
+WHERE {
+  ?station a bm:Station ;
+           bm:stationName ?stationName ;
+           rdfs:seeAlso ?place .
+  FILTER(STRSTARTS(STR(?place), STR(wd:)))
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?place rdfs:label ?placeLabel .
+    FILTER(LANG(?placeLabel) = "es")
+  }
+}
+ORDER BY ?stationName
