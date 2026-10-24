@@ -1,0 +1,92 @@
+PREFIX parks: <https://parques-jardines.madrid.data.es/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Q1. ASK: is there at least one owl:sameAs link to another dataset?
+ASK {
+  ?s owl:sameAs ?external .
+  FILTER(!STRSTARTS(STR(?external), "https://parques-jardines.madrid.data.es/"))
+}
+
+# Q2. Total number of owl:sameAs links
+SELECT (COUNT(*) AS ?numberOfLinks)
+WHERE {
+  ?s owl:sameAs ?external .
+}
+
+# Q3. Number of links per class
+SELECT ?class (COUNT(DISTINCT ?s) AS ?linkedEntities)
+WHERE {
+  ?s a ?class ;
+     owl:sameAs ?external .
+}
+GROUP BY ?class
+ORDER BY DESC(?linkedEntities)
+
+# Q4. Districts with their Wikidata link
+SELECT ?district ?label ?wikidata
+WHERE {
+  ?district a parks:District ;
+            rdfs:label ?label ;
+            owl:sameAs ?wikidata .
+}
+ORDER BY ?label
+
+# Q5. Neighborhoods linked to Wikidata
+SELECT ?neighborhood ?label ?wikidata
+WHERE {
+  ?neighborhood a parks:Neighborhood ;
+                rdfs:label ?label ;
+                owl:sameAs ?wikidata .
+}
+ORDER BY ?label
+
+# Q6. Parks linked to Wikidata
+SELECT ?park ?name ?wikidata
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name ;
+        owl:sameAs ?wikidata .
+}
+ORDER BY ?name
+
+# Q7. Parks together with the Wikidata link of the district where they are located
+SELECT ?name ?districtLabel ?districtWikidata
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name ;
+        parks:locatedInDistrict ?district .
+  ?district rdfs:label ?districtLabel ;
+            owl:sameAs ?districtWikidata .
+}
+ORDER BY ?districtLabel ?name
+LIMIT 50
+
+# Q8. Parks in the Retiro district, with the link of that district
+SELECT ?park ?name ?districtWikidata
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name ;
+        parks:locatedInDistrict ?district .
+  ?district rdfs:label ?label ;
+            owl:sameAs ?districtWikidata .
+  FILTER(LCASE(STR(?label)) = "retiro")
+}
+ORDER BY ?name
+
+# Q9. Check that every link points to Wikidata 
+SELECT ?s ?external
+WHERE {
+  ?s owl:sameAs ?external .
+  FILTER(!STRSTARTS(STR(?external), "http://www.wikidata.org/entity/Q"))
+}
+
+# Q10. Coverage: parks WITHOUT any external link
+SELECT ?park ?name
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name .
+  FILTER NOT EXISTS { ?park owl:sameAs ?external }
+}
+ORDER BY ?name
+LIMIT 20
