@@ -1,0 +1,320 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q33506",
+        "name": "museum"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q33506"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo Naval",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1815235",
+      "name": "Naval Museum of Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Naval Museum of Madrid (Q1815235) para las celdas que contienen \"Museo Naval\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10267336",
+        "name": "neighborhood of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BARRIO to type Q10267336"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3032114",
+        "name": "district of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column DISTRITO to type Q3032114"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Casita Museo de Ratón Pérez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q107291466",
+      "name": "Casita-Museo del Ratón Pérez",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Casita-Museo del Ratón Pérez (Q107291466) para las celdas que contienen \"Casita Museo de Ratón Pérez\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Frontón Beti Jai",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8962895",
+      "name": "Beti Jai fronton",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Beti Jai fronton (Q8962895) para las celdas que contienen \"Frontón Beti Jai\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Galería de la Colecciones Reales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6033986",
+      "name": "Royal Collections Gallery",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Royal Collections Gallery (Q6033986) para las celdas que contienen \"Galería de la Colecciones Reales\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "La Casa Encendida de la Fundación Montemadrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5962732",
+      "name": "La Casa Encendida",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento La Casa Encendida (Q5962732) para las celdas que contienen \"La Casa Encendida de la Fundación Montemadrid\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo del Traje. Centro de Investigación del Patrimonio Etnológico (CIPE)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9047135",
+      "name": "Museo del Traje",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Museo del Traje (Q9047135) para las celdas que contienen \"Museo del Traje. Centro de Investigación del Patrimonio Etnológico (CIPE)\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo de Cera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q15121263",
+      "name": "Madrid Wax Museum",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Madrid Wax Museum (Q15121263) para las celdas que contienen \"Museo de Cera\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo Taurino de la Comunidad de Madrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27500479",
+      "name": "Museo Taurino de Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Museo Taurino de Madrid (Q27500479) para las celdas que contienen \"Museo Taurino de la Comunidad de Madrid\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo Africano Misioneros Combonianos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q134406426",
+      "name": "Museo Africano Mundo Negro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Museo Africano Mundo Negro (Q134406426) para las celdas que contienen \"Museo Africano Misioneros Combonianos\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Museo Banksy Madrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q139673758",
+      "name": "Banksy Museum",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Banksy Museum (Q139673758) para las celdas que contienen \"Museo Banksy Madrid\" en la columna NOMBRE"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "SAME-AS-NOMBRE",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna SAME-AS-NOMBRE en el índice 2 basada en la columna NOMBRE usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BARRIO",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "SAME-AS-BARRIO",
+    "columnInsertIndex": 16,
+    "description": "Crear la columna SAME-AS-BARRIO en el índice 16 basada en la columna BARRIO usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "SAME-AS-DISTRITO",
+    "columnInsertIndex": 19,
+    "description": "Crear la columna SAME-AS-DISTRITO en el índice 19 basada en la columna DISTRITO usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna NOMBRE"
+  }
+]
