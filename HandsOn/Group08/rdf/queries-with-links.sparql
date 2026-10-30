@@ -1,0 +1,37 @@
+PREFIX ms: <http://madridsports.example.org/ontology/madridsports#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# 1. Districts linked to Wikidata
+SELECT ?district ?label ?wikidata WHERE {
+  ?district a ms:District ; rdfs:label ?label ; owl:sameAs ?wikidata .
+} ORDER BY ?label
+
+# 2. Neighbourhoods linked to Wikidata, with their district
+SELECT ?nLabel ?dLabel ?wikidata WHERE {
+  ?n a ms:Neighbourhood ; rdfs:label ?nLabel ; ms:belongsToDistrict ?d ; owl:sameAs ?wikidata .
+  ?d rdfs:label ?dLabel .
+} ORDER BY ?dLabel ?nLabel
+
+# 3. Neighbourhoods WITHOUT a Wikidata link
+SELECT ?n ?label WHERE {
+  ?n a ms:Neighbourhood ; rdfs:label ?label .
+  FILTER NOT EXISTS { ?n owl:sameAs ?w }
+} ORDER BY ?label
+
+# 4. Linked vs. total neighbourhoods per district
+SELECT ?dLabel (COUNT(DISTINCT ?n) AS ?total) (COUNT(DISTINCT ?w) AS ?linked) WHERE {
+  ?n a ms:Neighbourhood ; ms:belongsToDistrict ?d .
+  ?d rdfs:label ?dLabel .
+  OPTIONAL { ?n owl:sameAs ?w }
+} GROUP BY ?dLabel ORDER BY ?dLabel
+
+# 5. Every sameAs target of districts/neighbourhoods must be a Wikidata entity (expected: no results)
+SELECT ?s ?w WHERE {
+  ?s a ?c ; owl:sameAs ?w .
+  FILTER(?c IN (ms:District, ms:Neighbourhood))
+  FILTER(!STRSTARTS(STR(?w), "http://www.wikidata.org/entity/Q"))
+}
+
+# 6. City linked to DBpedia and Wikidata
+SELECT ?link WHERE { <http://madridsports.example.org/resource/city/madrid> owl:sameAs ?link }

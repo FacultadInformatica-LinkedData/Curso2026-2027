@@ -1,0 +1,37 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Q1 - Mostrar recursos enlazados con Wikidata
+SELECT ?resource ?externalResource
+WHERE {
+    ?resource owl:sameAs ?externalResource .
+}
+LIMIT 50
+
+
+# Q2 - Contar enlaces owl:sameAs
+SELECT (COUNT(?externalResource) AS ?numberOfLinks)
+WHERE {
+    ?resource owl:sameAs ?externalResource .
+}
+
+
+# Q3 - Mostrar estaciones de metro enlazadas con Wikidata
+SELECT ?metro ?label ?wikidata
+WHERE {
+    ?metro rdfs:label ?label ;
+           owl:sameAs ?wikidata .
+
+    FILTER(CONTAINS(STR(?metro), "/metro/"))
+}
+ORDER BY ?label
+
+
+# Q4 - Verificar el enlace de la ciudad de Madrid
+SELECT ?city ?label ?wikidata
+WHERE {
+    ?city rdfs:label ?label ;
+          owl:sameAs ?wikidata .
+
+    FILTER(CONTAINS(STR(?city), "/city/"))
+}

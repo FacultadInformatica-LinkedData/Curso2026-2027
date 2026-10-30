@@ -1,0 +1,194 @@
+@prefix rml: <http://w3id.org/rml/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix morph-kgc: <https://github.com/morph-kgc/morph-kgc/function/built-in.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://smartcity.linkeddata.es/sports/ontology/> .
+@base <http://smartcity.linkeddata.es/sports/mapping/> .
+
+#####################################################################
+# Hands-On 5 - Group05 (mappings actualizados con enlaces a Wikidata)
+# Polideportivos (Centros Deportivos Municipales) del Ayuntamiento de Madrid
+#
+# Fuente: csv/polideportivos-with-links.csv = CSV limpio del Hands-On 3 + columnas WIKIDATA-DISTRITO
+#         y WIKIDATA-CENTRO obtenidas reconciliando con Wikidata en OpenRefine
+#         (openrefine/polideportivos-with-links.json).
+# Enlaces: owl:sameAs de :District (21/21) y :SportsCenter (24/82) a entidades de Wikidata.
+# Sintaxis: RML (http://w3id.org/rml/) + RML-FNML (funciones GREL).
+# Ejecutado con morph-kgc 2.10 desde HandsOn/Group05 (ruta del CSV relativa a ese directorio)
+#
+# Estrategia de nombrado (analysis.html):
+#   Ontologia : http://smartcity.linkeddata.es/sports/ontology/
+#   Centros   : http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}
+#   Distritos : http://smartcity.linkeddata.es/sports/resource/District/{slug}
+#               slug = DISTRITO en minusculas y con "-" en lugar de espacios
+#               (los valores ya vienen sin tildes tras la limpieza del Hands-On 3)
+#####################################################################
+
+#####################################################################
+# Centros deportivos municipales  (:SportsCenter)
+#####################################################################
+<#SportsCenterMap> a rml:TriplesMap ;
+  rml:logicalSource [
+    a rml:LogicalSource ;
+    rml:source "csv/polideportivos-with-links.csv" ;
+    rml:referenceFormulation rml:CSV
+  ] ;
+
+  rml:subjectMap [
+    rml:template "http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}" ;
+    rml:class :SportsCenter
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate rdfs:label ;
+    rml:objectMap [ rml:reference "NOMBRE" ; rml:language "es" ]
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate :pk ;
+    rml:objectMap [ rml:reference "PK" ; rml:datatype xsd:integer ]
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate :equipmentDescription ;
+    rml:objectMap [ rml:reference "EQUIPAMIENTO" ; rml:datatype xsd:string ]
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate :transportInfo ;
+    rml:objectMap [ rml:reference "TRANSPORTE" ; rml:datatype xsd:string ]
+  ] ;
+
+  # ACCESIBILIDAD puede traer varios codigos separados por comas ("1,5,6"):
+  # se genera un literal por codigo.
+  rml:predicateObjectMap [
+    rml:predicate :accessibilityInfo ;
+    rml:objectMap [
+      rml:functionExecution [
+        rml:function grel:string_split ;
+        rml:input [ rml:parameter grel:valueParameter ;
+                    rml:inputValueMap [ rml:reference "ACCESIBILIDAD" ] ] ,
+                  [ rml:parameter grel:p_string_sep ;
+                    rml:inputValueMap [ rml:constant "," ] ]
+      ] ;
+      rml:datatype xsd:string
+    ]
+  ] ;
+
+  # TELEFONO puede contener varios numeros separados por ";" (Hands-On 3).
+  rml:predicateObjectMap [
+    rml:predicate :telephone ;
+    rml:objectMap [
+      rml:functionExecution [
+        rml:function grel:string_split ;
+        rml:input [ rml:parameter grel:valueParameter ;
+                    rml:inputValueMap [ rml:reference "TELEFONO" ] ] ,
+                  [ rml:parameter grel:p_string_sep ;
+                    rml:inputValueMap [ rml:constant ";" ] ]
+      ] ;
+      rml:datatype xsd:string
+    ]
+  ] ;
+
+  # EMAIL puede contener varias direcciones separadas por ";" (Hands-On 3).
+  rml:predicateObjectMap [
+    rml:predicate :email ;
+    rml:objectMap [
+      rml:functionExecution [
+        rml:function grel:string_split ;
+        rml:input [ rml:parameter grel:valueParameter ;
+                    rml:inputValueMap [ rml:reference "EMAIL" ] ] ,
+                  [ rml:parameter grel:p_string_sep ;
+                    rml:inputValueMap [ rml:constant ";" ] ]
+      ] ;
+      rml:datatype xsd:string
+    ]
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate geo:lat ;
+    rml:objectMap [ rml:reference "LATITUD" ; rml:datatype xsd:float ]
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate geo:long ;
+    rml:objectMap [ rml:reference "LONGITUD" ; rml:datatype xsd:float ]
+  ] ;
+
+  # Enlace a Wikidata (solo los centros reconciliados; celda vacia -> sin tripleta)
+  rml:predicateObjectMap [
+    rml:predicate owl:sameAs ;
+    rml:objectMap [ rml:reference "WIKIDATA-CENTRO" ; rml:termType rml:IRI ]
+  ] ;
+
+  # Enlace con el distrito. Se usa la misma funcion que genera la URI del
+  # distrito en <#DistrictMap> (equivale a un join por DISTRITO, ya que ambos
+  # maps comparten la misma fuente).
+  rml:predicateObjectMap [
+    rml:predicate :locatedInDistrict ;
+    rml:objectMap [
+      rml:functionExecution <#DistrictIRIFunction> ;
+      rml:termType rml:IRI
+    ]
+  ] .
+
+#####################################################################
+# Distritos  (:District)
+#####################################################################
+<#DistrictMap> a rml:TriplesMap ;
+  rml:logicalSource [
+    a rml:LogicalSource ;
+    rml:source "csv/polideportivos-with-links.csv" ;
+    rml:referenceFormulation rml:CSV
+  ] ;
+
+  rml:subjectMap [
+    rml:functionExecution <#DistrictIRIFunction> ;
+    rml:termType rml:IRI ;
+    rml:class :District
+  ] ;
+
+  rml:predicateObjectMap [
+    rml:predicate rdfs:label ;
+    rml:objectMap [ rml:reference "DISTRITO" ; rml:language "es" ]
+  ] ;
+
+  # Enlace a Wikidata (los 21 distritos estan reconciliados)
+  rml:predicateObjectMap [
+    rml:predicate owl:sameAs ;
+    rml:objectMap [ rml:reference "WIKIDATA-DISTRITO" ; rml:termType rml:IRI ]
+  ] .
+
+#####################################################################
+# Funcion compartida que construye la URI de un distrito:
+#   concat("http://smartcity.linkeddata.es/sports/resource/District/",
+#          replace(toLowerCase(DISTRITO), " ", "-"))
+#   p.ej. "Puente De Vallecas" -> .../resource/District/puente-de-vallecas
+#####################################################################
+<#DistrictIRIFunction>
+  rml:function morph-kgc:concat ;
+  rml:input
+    [ rml:parameter grel:valueParameter1 ;
+      rml:inputValueMap [ rml:constant "http://smartcity.linkeddata.es/sports/resource/District/" ] ] ,
+    [ rml:parameter grel:valueParameter2 ;
+      rml:inputValueMap [
+        rml:functionExecution [
+          rml:function grel:string_replace ;
+          rml:input
+            [ rml:parameter grel:valueParameter ;
+              rml:inputValueMap [
+                rml:functionExecution [
+                  rml:function grel:toLowerCase ;
+                  rml:input [ rml:parameter grel:valueParameter ;
+                              rml:inputValueMap [ rml:reference "DISTRITO" ] ]
+                ]
+              ] ] ,
+            [ rml:parameter grel:p_string_find ;
+              rml:inputValueMap [ rml:constant " " ] ] ,
+            [ rml:parameter grel:p_string_replace ;
+              rml:inputValueMap [ rml:constant "-" ] ]
+        ]
+      ] ] .

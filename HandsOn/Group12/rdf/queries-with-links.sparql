@@ -1,0 +1,32 @@
+PREFIX vocab: <https://w3id.org/smartinfra-galicia/ontology/Demographics#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Listar municipios con sus enlaces a Wikidata
+SELECT ?municipality ?name ?wikidata
+WHERE {
+    ?municipality a vocab:Municipality ;
+                  vocab:hasName ?name ;
+                  owl:sameAs ?wikidata .
+}
+LIMIT 10
+
+
+# Listar municipios con densidad de población y enlaces a Wikidata
+SELECT ?name ?density ?wikidata
+WHERE {
+    ?municipality a vocab:Municipality ;
+                  vocab:hasName ?name ;
+                  owl:sameAs ?wikidata ;
+                  vocab:hasDemographicInformation ?observation .
+
+    ?observation vocab:hasPopulationDensity ?density .
+}
+LIMIT 10
+
+
+# Contar municipios enlazados con Wikidata
+SELECT (COUNT(DISTINCT ?municipality) AS ?totalLinks)
+WHERE {
+    ?municipality a vocab:Municipality ;
+                  owl:sameAs ?wikidata .
+}

@@ -1,0 +1,658 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "grel:if(isBlank(value),\n     with(cells[\"DISTRITO\"].value, d,\n       if(d==\"VICALVARO\",\"19\",\n       if(d==\"MONCLOA-ARAVACA\",\"9\",\n       if(d==\"VILLAVERDE\",\"17\",\n       if(d==\"CARABANCHEL\",\"11\",\n       if(d==\"RETIRO\",\"3\", value)))))),\n     value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-DISTRITO using expression grel:if(isBlank(value),\n     with(cells[\"DISTRITO\"].value, d,\n       if(d==\"VICALVARO\",\"19\",\n       if(d==\"MONCLOA-ARAVACA\",\"9\",\n       if(d==\"VILLAVERDE\",\"17\",\n       if(d==\"CARABANCHEL\",\"11\",\n       if(d==\"RETIRO\",\"3\", value)))))),\n     value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BARRIO using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NI�O JESUS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NIÑO JESUS"
+      }
+    ],
+    "description": "Mass edit cells in column BARRIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NUEVA ESPA�A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NUEVA ESPAÑA"
+      }
+    ],
+    "description": "Mass edit cells in column BARRIO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PE�A GRANDE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEÑA GRANDE"
+      }
+    ],
+    "description": "Mass edit cells in column BARRIO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO",
+          "expression": "value",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PEÑA GRANDE",
+                "l": "PEÑA GRANDE"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:value.replace(\"TETUAN\",\"Tetuán\").replace(\"CHAMBERI\",\"Chamberí\").replace(\"CHAMARTIN\",\"Chamartín\").replace(\"VICALVARO\",\"Vicálvaro\").toTitlecase()",
+    "onError": "set-to-blank",
+    "newColumnName": "DISTRITO-TILDE",
+    "columnInsertIndex": 28,
+    "description": "Create column DISTRITO-TILDE at index 28 based on column DISTRITO using expression grel:value.replace(\"TETUAN\",\"Tetuán\").replace(\"CHAMBERI\",\"Chamberí\").replace(\"CHAMARTIN\",\"Chamartín\").replace(\"VICALVARO\",\"Vicálvaro\").toTitlecase()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DISTRITO-TILDE",
+    "description": "Remove column DISTRITO-TILDE"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3032114",
+        "name": "district of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column DISTRITO to type Q3032114"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:if(cell.recon.match != null, cell.recon.match.name, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "DISTRITO-DATA",
+    "columnInsertIndex": 28,
+    "description": "Create column DISTRITO-DATA at index 28 based on column DISTRITO using expression grel:if(cell.recon.match != null, cell.recon.match.name, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "DISTRITO-DATA",
+          "expression": "value",
+          "columnName": "DISTRITO-DATA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Vicálvaro",
+                "l": "Vicálvaro"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "DISTRITO-WD",
+    "columnInsertIndex": 28,
+    "description": "Create column DISTRITO-WD at index 28 based on column DISTRITO using expression grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "DISTRITO-DATA",
+          "expression": "value",
+          "columnName": "DISTRITO-DATA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Vicálvaro",
+                "l": "Vicálvaro"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10267336",
+        "name": "neighborhood of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BARRIO to type Q10267336"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "BARRIO",
+          "columnName": "BARRIO",
+          "query": "AMBROZ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BARRIO",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "BARRIO-WD",
+    "columnInsertIndex": 26,
+    "description": "Create column BARRIO-WD at index 26 based on column BARRIO using expression grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "BARRIO",
+          "columnName": "BARRIO",
+          "query": "AMBROZ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22746",
+        "name": "urban park"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22746"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10267336",
+        "name": "neighborhood of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BARRIO to type Q10267336"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BARRIO-WD",
+    "description": "Remove column BARRIO-WD"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BARRIO",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "BARRIO-WD",
+    "columnInsertIndex": 26,
+    "description": "Create column BARRIO-WD at index 26 based on column BARRIO using expression grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DISTRITO-WD",
+    "description": "Remove column DISTRITO-WD"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "DISTRITO-WD",
+    "columnInsertIndex": 29,
+    "description": "Create column DISTRITO-WD at index 29 based on column DISTRITO using expression grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRITO-DATA",
+    "newColumnName": "DISTRITO-WD-LABEL",
+    "description": "Rename column DISTRITO-DATA to DISTRITO-WD-LABEL"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22746",
+        "name": "urban park"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22746"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22746",
+        "name": "urban park"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22746"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Parque Juan Pablo II",
+    "judgment": "matched",
+    "match": {
+      "id": "Q89488172",
+      "name": "Parque Juan Pablo II (Madrid)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Parque Juan Pablo II (Madrid) (Q89488172) for cells containing \"Parque Juan Pablo II\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22746",
+        "name": "urban park"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22746"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22746",
+        "name": "urban park"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22746"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "Saba",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Jardines de Sabatini",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2419365",
+      "name": "Sabatini Gardens",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Sabatini Gardens (Q2419365) for cells containing \"Jardines de Sabatini\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "NOMBRE",
+          "columnName": "NOMBRE",
+          "query": "Oes",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Rosaleda de Madrid. Parque del Oeste",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16626568",
+      "name": "Rosaleda Gardens",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Rosaleda Gardens (Q16626568) for cells containing \"Rosaleda de Madrid. Parque del Oeste\" in column NOMBRE"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "NOMBRE-WD",
+    "columnInsertIndex": 2,
+    "description": "Create column NOMBRE-WD at index 2 based on column NOMBRE using expression grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "grel:if(value==\"El Retiro Park\",\"Jardines de El Buen Retiro\",\nif(value==\"Sabatini Gardens\",\"Jardines de Sabatini\",\nif(value==\"Lineal de Palomeras Park\",\"Parque Lineal de Palomeras\",\nif(value==\"Quinta de los Molinos Park\",\"Parque Quinta de los Molinos\",\nif(value==\"Cascada de la Osera\",\"Parque Segura\",\nif(value==\"Category:Parque de Arriaga, Vitoria-Gasteiz\",\"Parque de Arriaga\",\nif(value==\"Yacimiento epipaleolítico de parque Darwin\",\"Parque de Darwin\",\nif(value==\"Rosaleda Gardens\",\"Rosaleda de Madrid. Parque del Oeste\",\nvalue))))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE using expression grel:if(value==\"El Retiro Park\",\"Jardines de El Buen Retiro\",\nif(value==\"Sabatini Gardens\",\"Jardines de Sabatini\",\nif(value==\"Lineal de Palomeras Park\",\"Parque Lineal de Palomeras\",\nif(value==\"Quinta de los Molinos Park\",\"Parque Quinta de los Molinos\",\nif(value==\"Cascada de la Osera\",\"Parque Segura\",\nif(value==\"Category:Parque de Arriaga, Vitoria-Gasteiz\",\"Parque de Arriaga\",\nif(value==\"Yacimiento epipaleolítico de parque Darwin\",\"Parque de Darwin\",\nif(value==\"Rosaleda Gardens\",\"Rosaleda de Madrid. Parque del Oeste\",\nvalue))))))))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-WD",
+    "expression": "grel:if(or(toString(cells[\"PK\"].value)==\"5994605\", toString(cells[\"PK\"].value)==\"5983453\", toString(cells[\"PK\"].value)==\"5981170\"), \"\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE-WD using expression grel:if(or(toString(cells[\"PK\"].value)==\"5994605\", toString(cells[\"PK\"].value)==\"5983453\", toString(cells[\"PK\"].value)==\"5981170\"), \"\", value)"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "clearData": true,
+    "description": "Discard recon judgments and clear recon data for cells in column NOMBRE"
+  }
+]

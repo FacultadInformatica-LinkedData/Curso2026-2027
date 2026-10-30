@@ -1,0 +1,87 @@
+# Hands-On 5 - Group05
+# Consultas SPARQL para verificar los enlaces owl:sameAs con Wikidata
+# Datos: rdf/polideportivos-with-links.ttl
+
+PREFIX :     <http://smartcity.linkeddata.es/sports/ontology/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+# Q1. Numero de recursos enlazados con Wikidata por clase (esperado: 21 District y 24 SportsCenter)
+SELECT ?class (COUNT(DISTINCT ?resource) AS ?linked)
+WHERE {
+  ?resource a ?class ;
+            owl:sameAs ?wikidata .
+  FILTER (STRSTARTS(STR(?wikidata), "http://www.wikidata.org/entity/"))
+}
+GROUP BY ?class
+
+# Q2. Distritos con su entidad equivalente en Wikidata
+SELECT ?district ?name ?wikidata
+WHERE {
+  ?district a :District ;
+            rdfs:label ?name ;
+            owl:sameAs ?wikidata .
+}
+ORDER BY ?name
+
+# Q3. Centros deportivos con el distrito en el que se encuentran y la entidad Wikidata de ese distrito
+#     (ficha de la aplicacion: enlace a datos de contexto del distrito)
+SELECT ?name ?districtName ?districtWikidata
+WHERE {
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          :locatedInDistrict ?district .
+  ?district rdfs:label ?districtName ;
+            owl:sameAs ?districtWikidata .
+}
+ORDER BY ?districtName ?name
+
+# Q4. Centros deportivos enlazados con Wikidata, con sus coordenadas (mapa de la aplicacion)
+SELECT ?name ?wikidata ?lat ?long
+WHERE {
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          owl:sameAs ?wikidata ;
+          geo:lat ?lat ;
+          geo:long ?long .
+}
+ORDER BY ?name
+
+# Q5. Numero de centros deportivos por distrito, identificando el distrito por su URI de Wikidata
+SELECT ?districtWikidata ?districtName (COUNT(?center) AS ?centers)
+WHERE {
+  ?center a :SportsCenter ;
+          :locatedInDistrict ?district .
+  ?district rdfs:label ?districtName ;
+            owl:sameAs ?districtWikidata .
+}
+GROUP BY ?districtWikidata ?districtName
+ORDER BY DESC(?centers)
+
+# Q6. Centros con piscina enlazados con Wikidata, con su distrito (tambien enlazado)
+SELECT ?name ?centerWikidata ?districtName ?districtWikidata
+WHERE {
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          :equipmentDescription ?equipment ;
+          owl:sameAs ?centerWikidata ;
+          :locatedInDistrict ?district .
+  ?district rdfs:label ?districtName ;
+            owl:sameAs ?districtWikidata .
+  FILTER (CONTAINS(LCASE(?equipment), "piscina"))
+}
+ORDER BY ?name
+
+# Q7. Centros de un distrito concreto buscandolo por su entidad de Wikidata (Latina, wd:Q794954)
+SELECT ?name ?telephone ?centerWikidata
+WHERE {
+  ?district a :District ;
+            owl:sameAs <http://www.wikidata.org/entity/Q794954> .
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          :locatedInDistrict ?district .
+  OPTIONAL { ?center :telephone ?telephone }
+  OPTIONAL { ?center owl:sameAs ?centerWikidata }
+}
+ORDER BY ?name

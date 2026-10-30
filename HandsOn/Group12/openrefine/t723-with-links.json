@@ -1,0 +1,15 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "INE_Code",
+    "expression": "grel:with(\n  cell.cross(\"Wikidata_Galicia_reference\", \"INE_Code\"),\n  matches,\n  if(\n    matches.length() == 1,\n    matches[0].cells[\"Wikidata_URI\"].value,\n    null\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Wikidata_URI",
+    "columnInsertIndex": 1,
+    "description": "Create column Wikidata_URI at index 1 based on column INE_Code using expression grel:with(\n  cell.cross(\"Wikidata_Galicia_reference\", \"INE_Code\"),\n  matches,\n  if(\n    matches.length() == 1,\n    matches[0].cells[\"Wikidata_URI\"].value,\n    null\n  )\n)"
+  }
+]

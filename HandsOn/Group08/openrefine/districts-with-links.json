@@ -1,0 +1,47 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": null,
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NAME to Wikidata"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NAME",
+    "expression": "grel:if(cell.recon.match != null, \"http://www.wikidata.org/entity/\" + cell.recon.match.id, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_URI",
+    "columnInsertIndex": null,
+    "description": "Create column WIKIDATA_URI from reconciled NAME"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NAME",
+    "expression": "grel:if(cell.recon.match != null, cell.recon.match.name, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_LABEL",
+    "columnInsertIndex": null,
+    "description": "Create column WIKIDATA_LABEL from reconciled NAME"
+  }
+]

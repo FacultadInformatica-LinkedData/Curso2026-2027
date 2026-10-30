@@ -1,0 +1,25 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX vocab: <http://smartcity.linkeddata.es/touristaccommodation/ontology/>
+
+# mostras municipios y enlaces a wikidata
+SELECT DISTINCT ?city ?wikidata
+WHERE {
+    ?city a vocab:City .
+    ?city owl:sameAs ?wikidata .
+}
+
+# mostrar cuantos municipios tienen enlaces diferentes
+SELECT (COUNT(DISTINCT ?city) AS ?total)
+WHERE {
+    ?city a vocab:City .
+    ?city owl:sameAs ?wikidata .
+}
+
+# mostrar alojamientos y sus enlaces a wikidata
+SELECT DISTINCT ?accommodation ?city ?wikidata
+WHERE {
+    ?accommodation a vocab:Accommodation .
+    ?accommodation vocab:hasAddress ?address .
+    ?address vocab:inCity ?city .
+    ?city owl:sameAs ?wikidata .
+}

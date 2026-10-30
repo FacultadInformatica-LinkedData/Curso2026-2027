@@ -1,0 +1,1136 @@
+@prefix : <http://smartcity.linkeddata.es/sports/ontology/> .
+@prefix district: <http://smartcity.linkeddata.es/sports/resource/District/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <http://smartcity.linkeddata.es/sports/resource/SportsCenter/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sc:10051058 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Barceló"@es ;
+    :accessibilityInfo "0"^^xsd:string ;
+    :email "infobarcelo@forus.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 4.000 metros cuadrados. Unidades deportivas cubiertas: 2 salas multiusos y pabellón. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:centro ;
+    :pk 10051058 ;
+    :telephone "910285389"^^xsd:string ;
+    :transportInfo "Metro: Tribunal, Alonso Martínez, Bilbao (líneas 1, 4, 5 y 10). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.42681346329592"^^xsd:float ;
+    geo:long "-3.699267137265155"^^xsd:float .
+
+sc:10183549 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Alcántara"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "alcantara@viding.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Pre-infantiles: matronatación. Escuelas infantiles: bailes, defensa personal y natación. Jóvenes y personas adultas: natación. Mayores de 65 años: natación. Personas con discapacidad: natación. Equipamientos Superficie total de las instalaciones: 3.725 metros cuadrados. Unidades deportivas cubiertas: piscina (vaso de 25 metros y vaso de enseñanza), sala ciclo, 5 salas multiusos, sauna y spa. Unidades deportivas al aire libre: piscina recreo. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:salamanca ;
+    :pk 10183549 ;
+    :telephone "917373641"^^xsd:string ;
+    :transportInfo "Metro: Lista (línea 4), Manuel Becerra (líneas 2 y 6). Bicicletas: El centro dispone de aparca bicicletas exterior con capacidad para 12 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.42810291538114"^^xsd:float ;
+    geo:long "-3.6737317205040503"^^xsd:float .
+
+sc:104235 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Masó - Luis de la Fuente"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmlamaso@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 41.700 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón, sala multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 de césped artificial, Cubo Gym, p ista polideportiva, r ocódromo y p arque de calistenia . Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Servicio de medicina deportiva: fisioterapia del deporte. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:fuencarral-el-pardo ;
+    :pk 104235 ;
+    :telephone "917397555"^^xsd:string ;
+    :transportInfo "Metro: Herrera Oria (línea 9), Lacoma (línea 7), Avenida de la Ilustración (línea 7). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones . Parking público gratuito."^^xsd:string ;
+    geo:lat "40.48442599932086"^^xsd:float ;
+    geo:long "-3.7144222564719858"^^xsd:float .
+
+sc:106242 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Raúl González"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmrgonzalez@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 33.900 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón y 2 salas multiusos. Ayudas técnicas para la accesibilidad: 1 montacargas y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villaverde ;
+    :pk 106242 ;
+    :telephone "917953792"^^xsd:string ;
+    :transportInfo "Renfe: San Cristóbal (línea C3). Metro: San Cristóbal (línea 3). Bicicleta:El centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q63191257 ;
+    geo:lat "40.346220026067044"^^xsd:float ;
+    geo:long "-3.684337728806363"^^xsd:float .
+
+sc:10630252 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Peñagrande GoFit"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "fuencarral@go-fit.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Más información en el centro deportivo municipal. Equipamientos Superficie total de las instalaciones: 16.000 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, sala ciclo, 4 salas multiusos, sala de musculación, sauna y spa. Unidades deportivas al aire libre: piscina al aire libre (vaso recreo), 6 pistas de pádel cubiertas y 4 pistas de tenis. Ayudas técnicas para la accesibilidad: rampas, ascensor, vestuarios, duchas y aseos adaptados. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:fuencarral-el-pardo ;
+    :pk 10630252 ;
+    :telephone "910884262"^^xsd:string ;
+    :transportInfo "Metro: Peñagrande (línea 7)."^^xsd:string ;
+    owl:sameAs wd:Q63191222 ;
+    geo:lat "40.476792184653526"^^xsd:float ;
+    geo:long "-3.717566523014736"^^xsd:float .
+
+sc:10663007 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Estadio de Atletismo Vallehermoso (Dirección General de Deporte)"@es ;
+    :accessibilityInfo "0"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "estadiovallehermoso@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Instalaciones deportivas cubiertas: pista de atletismo de calentamiento cubierta. Instalaciones deportivas al aire libre: pista de atletismo y Cubo Gym. Cuenta con 9 calles en la recta de tribuna, una recta de 110 metros y 2 colas sobresaliendo del anillo; “calle 10” de césped artificial, exterior al anillo de la pista, para rodadores de fondo; dotación de pasillos dobles para concurso de saltos, pasillos y círculos de lanzamientos sobre un campo interior de césped natural y, como es lógico, control de accesos, oficinas, vestuarios, almacenes, salas técnicas y aseos y demás equipamientos para la práctica de la competición de atletismo al aire libre. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:chamberi ;
+    :pk 10663007 ;
+    :telephone "914804751"^^xsd:string,
+        "915132774"^^xsd:string ;
+    :transportInfo "Metro: Canal (líneas 2 y 7), Guzmán el Bueno (líneas 6 y 7), Islas Filipinas (línea 7), Ríos Rosas (línea 1). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones"^^xsd:string ;
+    geo:lat "40.441913031255396"^^xsd:float ;
+    geo:long "-3.710700237505622"^^xsd:float .
+
+sc:114782 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Alfredo Goyeneche"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmagoyeneche@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 13.505 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, 2 salas multiusos y sala musculación. Unidades deportivas al aire libre: parque de calistenia, 5 pistas de pádel y 2 pistas de tenis. Ayudas técnicas para la accesibilidad: 1 ascensor, 1 plataforma y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 114782 ;
+    :telephone "913571228"^^xsd:string ;
+    :transportInfo "Renfe: Aravaca (líneas C7 y C10). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas."^^xsd:string ;
+    geo:lat "40.45212135012858"^^xsd:float ;
+    geo:long "-3.783283203719198"^^xsd:float .
+
+sc:11580683 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Juan de Dios Román"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string ;
+    :email "idmjdroman@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 15.673 metros cuadrados. Unidades deportivas cubiertas, piscina cubierta 25 metros y vaso de enseñanza, sala de musculación, sala multiusos y sala ciclo. Unidades deportivas al aire libre, 4 pistas de pádel, 4 pistas de padel cubiertas y 2 pistas polideportivas cubiertas. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardiaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villa-de-vallecas ;
+    :pk 11580683 ;
+    :telephone "914801231"^^xsd:string ;
+    :transportInfo "Metro: Las Suertes (línea 1). Bicicleta: el centro dispone de aparca bicicletas dentro del recinto de la instalación con capacidad para 6 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.36391581480007"^^xsd:float ;
+    geo:long "-3.60518607500416"^^xsd:float .
+
+sc:11820127 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Cebada"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string ;
+    :email "info@cdmlacebada.com"^^xsd:string ;
+    :equipmentDescription "Servicio de asesoramiento técnico personalizado Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 7.720 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón, 2 salas multiusos y sala musculación. Unidades deportivas exteriores: rocódromo y atletismo calles. Ayudas técnicas para la accesibilidad: una grúa móvil para personas con movilidad reducida, ascensores para todas las plantas y vestuarios adaptados a personas con discapacidad. Columna de rescate cardíaco: disponibilidad de desfibriladores semiautomáticos en el recinto deportivo. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:centro ;
+    :pk 11820127 ;
+    :telephone "697121149"^^xsd:string ;
+    :transportInfo "Metro: La Latina (línea 5). Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.410546084176566"^^xsd:float ;
+    geo:long "-3.70940146763504"^^xsd:float .
+
+sc:12022187 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Cea Bermúdez"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string ;
+    :email "info@cdmceabermudez.com"^^xsd:string ;
+    :equipmentDescription "Servicio de Asesoriamiento Técnico Personalizado Clases y escuelas deportivas Pre-infantil: predeporte. Infantiles (edad, según modalidades): polideportiva. Jóvenes y personas adultas: acondicionamiento físico, baile, ciclo sala, gimnasia acuática (aquagym). Mayores 65 años: acondicionamiento físico y baile. Personas con discapacidad: natación. Equipamientos Superficie total de las instalaciones: 4.808,30 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), sala ciclo, pabellón, 2 salas multiusos y sala de musculación. Ayudas técnicas para la accesibilidad: una grúa móvil para personas con movilidad reducida, 1 ascensor y vestuarios adaptados a personas con discapacidad. Columna de rescate cardíaco: disponibilidad de desfibriladores semiautomáticos en el recinto deportivo. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:chamberi ;
+    :pk 12022187 ;
+    :telephone "918314312"^^xsd:string ;
+    :transportInfo "Metro: Canal (línea 2 y 7) y Ríos Rosas (línea 1). Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.43857964605446"^^xsd:float ;
+    geo:long "-3.706107413184514"^^xsd:float .
+
+sc:120275 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Faustina Valladolid"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmvaldebernardo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 47.000 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, sala de artes marciales, sala multiusos, sala de armas y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, 2 campos de fútbol 7 césped artificial, 10 pistas de pádel, 2 pistas polideportivas (tenis y pickleball) y 7 pistas de tenis. Ayuda técnica para la accesibilidad: 1 ascensor y 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:vicalvaro ;
+    :pk 120275 ;
+    :telephone "917723591"^^xsd:string ;
+    :transportInfo "Metro: Valdebernardo (línea 9). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.40418961057298"^^xsd:float ;
+    geo:long "-3.622901144863193"^^xsd:float .
+
+sc:121729 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Marqués de Samaranch"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmmsamaranch@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón, 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: campo fútbol 11 césped artificial, 6 pistas de pádel cubiertas, 4 pistas de tenis cubiertas y Cubo Gym. Ayuda técnicas para la accesibilidad: 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:arganzuela ;
+    :pk 121729 ;
+    :telephone "914220344"^^xsd:string ;
+    :transportInfo "Metro: Puerta de Toledo , Pirámides (línea 5). Renfe: Pirámides (líneas C1 y C10). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q30540859 ;
+    geo:lat "40.40761501410649"^^xsd:float ;
+    geo:long "-3.7173807221939192"^^xsd:float .
+
+sc:12346116 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Mistral"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmmistral@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas Deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas al aire libre: piscina polivalente (25x25 metros) y piscina infantil (49 metros cuadrados). Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:barajas ;
+    :pk 12346116 ;
+    :telephone "914801875"^^xsd:string ;
+    :transportInfo "Metro: Barajas (línea 8). Bicicleta: el centro dispone de aparca bicicletas exteriores con capacidad para 6 bicicletas."^^xsd:string ;
+    geo:lat "40.473321985273365"^^xsd:float ;
+    geo:long "-3.597297143178447"^^xsd:float .
+
+sc:124194 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Félix Rubio"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmfrubio@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas y deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 8.630 metros cuadrados. Unidades deportivas cubiertas: pabellón y sala de musculación. Unidades deportivas al aire libre: 2 pistas de baloncesto 3x3, bloque de escalada, campo de fútbol 11 césped artifcial, campo minipitch césped artificial, frontón corto, 3 mini frontones, 2 pistas de pana 1x1, pista polideportiva y rocodromo cubierto. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villaverde ;
+    :pk 124194 ;
+    :telephone "913180435"^^xsd:string ;
+    :transportInfo "Metro: Ciudad de los Angeles (línea 3). Renfe: Villaverde Bajo (líneas C3 y C4)."^^xsd:string ;
+    owl:sameAs wd:Q63191223 ;
+    geo:lat "40.357429678675295"^^xsd:float ;
+    geo:long "-3.691528804696943"^^xsd:float .
+
+sc:12453713 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Paseo de la Dirección"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "cdmpaseodireccion@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas al aire libre: piscina aire libre (vaso de recreo y vaso infantil). Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:tetuan ;
+    :pk 12453713 ;
+    :telephone "919246717"^^xsd:string ;
+    :transportInfo "Metro: Francos Rodríguez (línea 7), Valdeacederas (línea 1), Valdezarza (línea 7), Tetuán (línea 1). Bicicleta: el centro dispone de aparca bicicletas interiores con capacidad para 6 bicicletas."^^xsd:string ;
+    geo:lat "40.462319557096045"^^xsd:float ;
+    geo:long "-3.706806505404298"^^xsd:float .
+
+sc:12724992 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Cuatro Caminos"@es ;
+    :accessibilityInfo "2"^^xsd:string,
+        "4"^^xsd:string ;
+    :email "info@sportrade.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Pre-infantiles (0 a 3 años) y de (3 a 5 años): matronatación, natación peques. Infantiles (de 6 a 14 años): natación, calistenia y baile K-Pop. Polideportiva (Family gym, Gym Kid y Play Kid) Jóvenes y personas adultas: (De 15 a 26 años): aeróbic (zumba, dance), ciclo sala, fitness (body combat) tonificación (body pump), gimnasia suave (body balance, Pilates, Yoga, fuerza general (Total Training), gimnasia acuática (aquafit) y Escuelas deportivas natación. Actividades de sala (Bootcamp Ceremony, Calistenia, CrossTraining, Fuerza+HBX, Myrox, Pilates Club, Pilates Implementos, Pilates Reformer, Yoga Club, Yoga Vinyasa). (De 21 a 64 años): aeróbic (zumba, dance), ciclo sala, fitness (body combat) tonificación (body pump), gimnasia suave (body balance, Pilates, Yoga, fuerza general (Total Training), gimnasia acuática (aquafit) y Escuelas deportivas natación. Actividades de sala (Bootcamp Ceremony, Calistenia, CrossTraining, Fuerza+HBX, Myrox, Pilates Club, Pilates Implementos, Pilates Reformer, Yoga Club, Yoga Vinyasa). Mayores de 65 años: acondicionamiento físico (Gimnasia activa, movilidad activa) y gimnasia acuática (aquagym y aquapilates), escuela de natación. Actividades para personas con discapacidad: natación. Equipamientos Superficie total de las instalaciones: 9.200 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), s ala ciclo, 6 s alas multiusos y s ala de musculación. Otros equipamientos: zona de fisioterapia. Ayudas técnicas para la accesibilidad: ascensor y grúa móvil piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:tetuan ;
+    :pk 12724992 ;
+    :telephone "911177107"^^xsd:string ;
+    :transportInfo "Metro: Cuatro Caminos (líneas 1, 2 y 6), Guzmán el Bueno (líneas 6 y 7), Islas Filipinas (línea 7), Alvarado (línea 1) Canal (líneas 2 y 7). Bicicleta: Servicio Bicimad: Estación 132 de calle Santa Engracia 168 y estación 204 de calle Doctor Santero 1.para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.44793969377676"^^xsd:float ;
+    geo:long "-3.7040303744815635"^^xsd:float .
+
+sc:134059 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Daoíz y Velarde 1"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmdvelarde@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 9.496 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio, pabellón, sala ciclo, 2 salas multiusos y sala musculación. Unidades deportivas al aire libre: pista de padel. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Servicio de Medicina Deportiva: acondicionamiento cardiovascular, fisioterapia deportiva, reconocimientos médicos deportivos y servicio de fisioterapia. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. C olumna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:retiro ;
+    :pk 134059 ;
+    :telephone "914338770"^^xsd:string,
+        "914338950"^^xsd:string ;
+    :transportInfo "Metro: Pacífico (líneas 1 y 6), Menéndez Pelayo (línea 1). Renfe: Méndez Alvaro, Atocha (todas las líneas de cercanías). Bicicleta: el centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.40236990974131"^^xsd:float ;
+    geo:long "-3.6772808932293217"^^xsd:float .
+
+sc:140197 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal El Espinillo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmespinillo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 11.350 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza) y 2 salas multiusos. Unidades deportivas al aire libre: Cubo Gym. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Servicio deportivo sanitario: enfermería deportiva. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villaverde ;
+    :pk 140197 ;
+    :telephone "913603265"^^xsd:string ;
+    :transportInfo "Metro: Villaverde Bajo Cruce (línea 3). Renfe: Villaverde Bajo (líneas C3 y C4). Bicicleta: el centro dispone de aparca bicicletas interior con capacidad para 4 bicicletas."^^xsd:string ;
+    geo:lat "40.35634193991933"^^xsd:float ;
+    geo:long "-3.686595141820635"^^xsd:float .
+
+sc:28525 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Tenis Casa de Campo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmteniscc@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 12.000 metros cuadrados. Unidades deportivas al aire libre: 15 pistas de tenis y 7 tenis de mesa. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 28525 ;
+    :telephone "914649617"^^xsd:string ;
+    :transportInfo "Metro: Lago (línea 10). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones"^^xsd:string ;
+    geo:lat "40.421436625700565"^^xsd:float ;
+    geo:long "-3.735739625664774"^^xsd:float .
+
+sc:4538574 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Las Cruces"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlascruces@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 31.529,58 metros cuadrados. Unidades deportivas cubiertas: pabellón polideportivo, piscina (vaso de 25 m y vaso de enseñanza), sala de ciclo, 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 (césped artificial), 2 campos de fútbol 7 (césped artificial), 8 pistas de pádel, 5 pistas de tenis y Cubo Gym. Solárium (no disponible). Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:latina ;
+    :pk 4538574 ;
+    :telephone "915888600"^^xsd:string ;
+    :transportInfo "Metro: Aluche, Eugenia de Montijo (línea 5). Renfe: Aluche (línea C5). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.3788548435727"^^xsd:float ;
+    geo:long "-3.7562612113384777"^^xsd:float .
+
+sc:4617960 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Antiguo Canódromo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "cdmantiguocanodromo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie: 9.000 metros cuadrados. Unidades deportivas cubiertas: fisio-hidroterápia y sala multiusos. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, campo de fútbol 7 césped artificial y mesa de teqball. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:carabanchel ;
+    :pk 4617960 ;
+    :telephone "618439332"^^xsd:string ;
+    :transportInfo "Consulta los siguientes enlaces."^^xsd:string ;
+    geo:lat "40.39722719121027"^^xsd:float ;
+    geo:long "-3.736112026543592"^^xsd:float .
+
+sc:4619937 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Los Prunos"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "recepcion@aqalosprunos.com"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Cardiovascular, tonificación, combinado tono y cardio, cuerpo y mente, y pádel. Equipamientos Unidades deportivas cubiertas: piscina (vaso de 25 metros y vaso de enseñanza), fisio-hidroterapia, 4 salas multiusos, sala de musculación, 2 saunas y spa. Unidades deportivas al aire libre: pista de baloncesto, pista de fútbol sala y 8 pistas de pádel y 4 pistas de pádel cubiertas. Ayudas técnicas para la accesibilidad: con 1 ascensor. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:hortaleza ;
+    :pk 4619937 ;
+    :telephone "917432001"^^xsd:string ;
+    :transportInfo "Metro: Feria de Madrid (línea 8). Bicicleta: El centro dispones de aparcabicicletas exterior con capacidad para 6 bicicletas."^^xsd:string ;
+    geo:lat "40.453257453448046"^^xsd:float ;
+    geo:long "-3.6186956428199863"^^xsd:float .
+
+sc:4622862 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Fabián Roncero"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "recepcionfr@thinkingup.fitness"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 4.400 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: circuito de entrenamiento (cross training) 14m x 9m (126 m2). Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:san-blas-canillejas ;
+    :pk 4622862 ;
+    :telephone "917462995"^^xsd:string ;
+    :transportInfo "Metro: Canillejas (línea 5). Bicicleta: El centro dispone de aparcabicicletas exterior con capacidad para 25 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.44965684114441"^^xsd:float ;
+    geo:long "-3.597577201182505"^^xsd:float .
+
+sc:4622991 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Pepu Hernández"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "atencionalcliente.pepuhernandez@agoramsp.com"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 4.966.29 metros cuadrados. Unidades deportivas cubiertas: pabellón, 5 salas multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, 4 pistas de pádel y 3 pistas de tenis. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:san-blas-canillejas ;
+    :pk 4622991 ;
+    :telephone "671356014"^^xsd:string,
+        "912794565"^^xsd:string ;
+    :transportInfo "Metro: Las Musas (línea 7). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 7bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.42763842661562"^^xsd:float ;
+    geo:long "-3.606311072744069"^^xsd:float .
+
+sc:4623547 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Francisco Fernández Ochoa"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmffochoa@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 7.706,41 metros cuadrados Unidades deportivas cubiertas: piscina cubierta (vaso de 50 m, y vaso de enseñanza), pabellón, 3 salas multiusos, sala de musculación y spa. Unidades deportivas al aire libre: 2 campos de fútbol 7 césped artificial, 8 pistas de pádel, pista de patinaje cubierta, 6 pistas de tenis, 2 tenis mesa y CuboGym. Ayudas técnicas para la accesibilidad: 2 ascensores y 2 grúas de piscina. Servicio de Medicina Deportiva: fisioterapia del deporte. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:carabanchel ;
+    :pk 4623547 ;
+    :telephone "915883623"^^xsd:string,
+        "915883731"^^xsd:string ;
+    :transportInfo "Metro: La Peseta , San Francisco (línea 11). Bicicleta: El centro dispone de aparcabicicletas interior con capacidad para 15 bicicletas."^^xsd:string ;
+    owl:sameAs wd:Q63191262 ;
+    geo:lat "40.36581776978113"^^xsd:float ;
+    geo:long "-3.740893980533789"^^xsd:float .
+
+sc:4623697 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Fuente del Berro"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmfuentedelberro@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 2.845,79 metros cuadrados. Unidades deportivas cubiertas: piscina (vaso de 25 metros), sala multiusos y sala de musculación. Solarium. Accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:salamanca ;
+    :pk 4623697 ;
+    :telephone "915881369"^^xsd:string ;
+    :transportInfo "Metro: O'Donnell (línea 6). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 8 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.42171956854877"^^xsd:float ;
+    geo:long "-3.6652515154670167"^^xsd:float .
+
+sc:4623700 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Almudena"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmalmudena@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 6.903,80 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 metros y vaso de enseñanza), sala de fisio-hidroterapia y 2 salas multiusos. Unidades deportivas al aire libre: 2 pistas de pádel. Programas médico-deportivos: fisioterapia deportiva y escuela de espalda. Accesibilidad: 1 grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:ciudad-lineal ;
+    :pk 4623700 ;
+    :telephone "915133745"^^xsd:string,
+        "915882355"^^xsd:string ;
+    :transportInfo "Metro: Alsacia (línea 2). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191226 ;
+    geo:lat "40.42060649869604"^^xsd:float ;
+    geo:long "-3.6324237307227616"^^xsd:float .
+
+sc:4624404 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Antonio Díaz Miguel"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmadm@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie: 8.455,41 metros cuadrados Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, sala ciclo, 3 salas multiusos y sala de musculación. Accesibilidad: instalación adaptada con 2 ascensores y 1 grúa de piscina Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:tetuan ;
+    :pk 4624404 ;
+    :telephone "913145437"^^xsd:string ;
+    :transportInfo "Metro: Ventilla (línea 9)."^^xsd:string ;
+    owl:sameAs wd:Q63191265 ;
+    geo:lat "40.471254265861454"^^xsd:float ;
+    geo:long "-3.6953256978963807"^^xsd:float .
+
+sc:4672 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Concepción"@es ;
+    :accessibilityInfo "0"^^xsd:string ;
+    :email "idmconcepcion@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 36.277 metros cuadrados. Unidades deportivas cubiertas: pabellón polideportivo, piscina cubierta (vaso de 25 metros) y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, 2 frontones cortos, piscina aire libre (vaso de 25 metros y vaso infantil), pista de atletismo, 2 pistas de pádel, pista de patinaje, 2 pistas polideportivas, 4 pistas de tenis y 3 tenis de mesa. Oficina de Promoción Deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos municipales y Copas de Primavera. Además, ofrece información sobre Escuelas de Promoción Deportiva. Servicio de Medicina deportiva:acondicionamiento cardio-vascular y reconocimiento médico. Ayudas técnicas para la accesibilidad: 1 ascensor, 1 montacargas, 2 plataformas y 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:ciudad-lineal ;
+    :pk 4672 ;
+    :telephone "914039020"^^xsd:string,
+        "914039021"^^xsd:string,
+        "914058719"^^xsd:string ;
+    :transportInfo "Metro: Barrio de la Concepción (línea 7), Pueblo Nuevo (líneas 5 y 7), Quintana (línea 5). Bicicleta: el centro dispone de aparca bicicletas, exterior con capacidad para 11 bicicletas. interior con capacidad para 6 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q63191273 ;
+    geo:lat "40.43725652047252"^^xsd:float ;
+    geo:long "-3.6484498132292025"^^xsd:float .
+
+sc:4673 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Moratalaz"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmmoratalaz@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 108.300 metros cuadrados. Unidades deportivas cubiertas: pabellón, piscina (vaso de 25 metros), sala de musculación, sala de artes marciales y 2 salas multiusos. Unidades deportivas al aire libre: piscina (2 vasos de 50 metros, vaso de recreo y vaso infantil), pista de atletismo, pista de baloncesto,campo de fútbol 11 césped artificial, pista de fútbol sala y pista de fútbol sala césped artificial, 2 frontones largos, 4 pistas de pádel, campo de tiro con arco, pista de patinaje cubierta, 4 pistas de pickleball, pista polideportiva cubierta, 6 pistas de tenis, pista de vóley playa y Cubo Gym. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Servicio de medicina deportiva: reconocimientos médicos deportivos y acondicionamiento cardiovascular. Unidades con servicios auxiliares: sala de reconocimientos médicos. Ayudas técnicas para la accesibilidad: 1 ascensor y 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moratalaz ;
+    :pk 4673 ;
+    :telephone "917727100"^^xsd:string,
+        "917727121"^^xsd:string ;
+    :transportInfo "Metro: Pavones (línea 9). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para interior (10), exterior (8) bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.39885854572339"^^xsd:float ;
+    geo:long "-3.632432290214539"^^xsd:float .
+
+sc:4674 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Elipa"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlaelipa@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total en las instalaciones: 159.000 metros cuadrados. Unidades deportivas cubiertas: frontón cubierto, pabellón polideportivo, rocódromo cubierto, 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: piscina (vaso de 50 metros, vaso gemelas y vaso infantil), 2 pistas de automodelismo (radiocontrol de asfalto / radiocontrol), campo de béisbol (de césped artificial), campo de softball de tierra, 2 campos de fútbol 11 césped artificial, 2 campos de fútbol 7 césped artificial, 6 pistas de pádel, 3 pistas de pickleball cubierta, pista polideportiva cubierta, 9 pistas de tenis, pista de tenis polivalente ó 4 pistas de pickleball, 10 tenis mesa y zona nudista. Unidades auxiliares: aula . Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moratalaz ;
+    :pk 4674 ;
+    :telephone "914303511"^^xsd:string ;
+    :transportInfo "Metro: Estrella (línea 9). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 30 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191248 ;
+    geo:lat "40.41433123768487"^^xsd:float ;
+    geo:long "-3.6559498758522833"^^xsd:float .
+
+sc:4675 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Palomeras"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmpalomeras@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 97.300 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón (3 pistas), sala de artes marciales, 3 salas multiusos, sala de musculación, sala de ciclo y sala boulder cubierto. Unidades deportivas al aire libre: piscina aire libre (vaso de 50 m, 2 vasos de recreo y vaso infantil chapoteo), pista de atletismo, 2 campos de fútbol 11 césped artificial, frontón corto, 4 pistas de pádel cubierta, 4 pistas polideportivas, 2 pistas polideportivas cubiertas, rocódromo, 3 pistas de tenis, 2 pista de tenis cubiertas y 2 tenis de mesa. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Unidades con servicios auxiliares: aula, sala de acondicionamiento cardiovascular y reconocimiento médico. Ayuda técnica para la accesibilidad : instalación convertible, con 1 ascensor y 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:puente-de-vallecas ;
+    :pk 4675 ;
+    :telephone "917774901"^^xsd:string ;
+    :transportInfo "Metro: Miguel Hernández, Sierra de Guadalupe (línea 1). Renfe: Vallecas (líneas C2, C7 y C8). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas."^^xsd:string ;
+    owl:sameAs wd:Q63191260 ;
+    geo:lat "40.38260362230282"^^xsd:float ;
+    geo:long "-3.6337151808372496"^^xsd:float .
+
+sc:4676 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Entrevías"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmentrevias@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 41.800 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, 2 pistas de pádel, pista polideportiva cubierta, rocódromo, 2 pistas de tenis y CuboGym. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayuda técnica para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:puente-de-vallecas ;
+    :pk 4676 ;
+    :telephone "917854214"^^xsd:string ;
+    :transportInfo "Renfe: Asamblea de Madrid - Entrevías (líneas C2, C7 y C8). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191249 ;
+    geo:lat "40.378413212706285"^^xsd:float ;
+    geo:long "-3.674532317137481"^^xsd:float .
+
+sc:4677 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Vallecas Verano"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmvallecas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Programa deportivo-recreativo de verano: consultar en el propio centro. Equipamientos Superficie total de las instalaciones: 4.500 metros cuadrados. Unidades deportivas al aire libre: piscina aire libre (vaso de recreo y vaso infantil). Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco."^^xsd:string ;
+    :locatedInDistrict district:puente-de-vallecas ;
+    :pk 4677 ;
+    :telephone "915133623"^^xsd:string ;
+    :transportInfo "Metro: Portazgo (línea 1)."^^xsd:string ;
+    geo:lat "40.390368919782446"^^xsd:float ;
+    geo:long "-3.657213682860775"^^xsd:float .
+
+sc:4678 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Ángel Nieto"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmpvallecas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 1.565 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, 2 salas multiusos, sala de musculación y 4 pistas de squash. Ayuda técnica para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:puente-de-vallecas ;
+    :pk 4678 ;
+    :telephone "914781492"^^xsd:string ;
+    :transportInfo "Metro: Portazgo (línea 1). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.39146194707861"^^xsd:float ;
+    geo:long "-3.6598636029775866"^^xsd:float .
+
+sc:4679 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal San Juan Bautista"@es ;
+    :accessibilityInfo "2"^^xsd:string ;
+    :email "idmsjbautista@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 11.000 metros cuadrados. Unidades deportivas cubiertas: piscina (vaso de 25 metros y vaso de enseñanza), sala multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, 2 pistas de pádel y 3 pistas de tenis. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:ciudad-lineal ;
+    :pk 4679 ;
+    :telephone "914164259"^^xsd:string ;
+    :transportInfo "Metro: Avenida de la Paz (línea 4). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 3 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.44864976316054"^^xsd:float ;
+    geo:long "-3.6585711797466836"^^xsd:float .
+
+sc:4680 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Hortaleza"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmhortaleza@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 46.956 metros cuadrados. Unidades deportivas cubiertas: pabellón, piscina cubierta (vaso de 25 metros), sala ciclo, 2 salas multiusos y 2 salas de musculación. Unidades deportivas al aire libre: piscina aire libre (2 vasos de 50 metros y vaso infantil), 4 pistas de pádel, pista fútbol sala césped artificial, pista de tenis y Cubo Gym Accesibilidad: 2 grúas de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:hortaleza ;
+    :pk 4680 ;
+    :telephone "913818260"^^xsd:string ;
+    :transportInfo "Metro: Parque de Santa María (línea 4), Hortaleza (línea 4). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q110749268 ;
+    geo:lat "40.4787279264401"^^xsd:float ;
+    geo:long "-3.6527183525553006"^^xsd:float .
+
+sc:4681 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Luis Aragonés"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmlaragones@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 61.500 metros cuadrados. Unidades deportivas cubiertas: piscina (vaso de 25 metros y vaso de enseñanza), sala de artes marciales, sala multiusos y sala de musculación. Unidades deportivas al aire libre: 2 campos de fútbol 11 de césped artificial, 2 campos de fútbol 7 de césped artificial, piscina (vaso 50 metros, 2 vasos de recreo y 1 vaso infantil), 4 pistas de pádel, pista de vóley playa, 3 pistas de tenis, 4 tenis de mesa, rocódromo y Cubo Gym. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:hortaleza ;
+    :pk 4681 ;
+    :telephone "913003612"^^xsd:string ;
+    :transportInfo "Metro: Canillas (línea 4). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para10 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.464650948053816"^^xsd:float ;
+    geo:long "-3.6275877145025817"^^xsd:float .
+
+sc:4684 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Triángulo de Oro"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmtoro@madrid.es"^^xsd:string ;
+    :equipmentDescription "Superficie 4.150 m2 Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), frontón cubierto, pabellón, 2 salas multiusos y sala de musculación. Accesibilidad: instalación adaptada, con 1 ascensor y 1 grúa de piscina Aparcabicicletas: exterior (5) Este centro deportivo dispone de columna de rescate cardíaco Servicios Deportes practicables Baloncesto - Balonmano - Deportes de pelota - Fútbol sala - Musculación - Natación - Voleibol Uso de espacios deportivos Frontón - Pabellón - Piscina - Pista polideportiva - Sala de musculación-Tres Salas Polivalentes. Enseñanzas deportivas:Escuelas pre-infantiles (4 y 5 años): Natación peques Escuelas infantiles (6 a 14 años, según modalidades): Baloncesto – Vóley - Natación. Clases para jóvenes y adultos (15 a 64 años): Aerofitness – Ciclo sala – Circuito fitness – Combinada piscina – Combinada sala – Cross Training – Entrenamiento en suspensión – Entrenamiento funcional – Estiramientos relajación – Fitness Acuático – Fitness – Fuerza CORE – Fuerza en sala multitrabajo – Fuerza GAP – Fuerza general – Gimnasia acuática – Natación acondicionamiento – Pilates. Actividades para mayores de 65 años: Natación – Gimnasia acuática –Acondicionamiento físico - Pilates. Actividades para personas con discapacidad física: Natación (infantil y adulto) Oficina de Promoción Deportiva Juegos Deportivos Municipales - Torneos y Circuitos Municipales - Copas de Primavera - Información sobre Escuelas de Promoción Deportiva Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:tetuan ;
+    :pk 4684 ;
+    :telephone "915714117"^^xsd:string ;
+    :transportInfo "Metro: Plaza de Castilla (líneas 1, 9 y 10), Valdeacederas (línea 1). Renfe: Chamartín (lineas C1, C2, C3, C4, C7, C8 y C10)."^^xsd:string ;
+    geo:lat "40.46512519238624"^^xsd:float ;
+    geo:long "-3.6928208378255807"^^xsd:float .
+
+sc:4684794 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Pabellón Villa de Madrid"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmbarajas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Equipamientos Unidades deportivas cubiertas: pabellón y sala de armas. Ayudas ténicas para la accesibilidad: ascensor. Columna de rescate cardíaco Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:barajas ;
+    :pk 4684794 ;
+    :telephone "913294219"^^xsd:string ;
+    :transportInfo "Consulta los siguientes enlaces."^^xsd:string ;
+    geo:lat "40.46145708324958"^^xsd:float ;
+    geo:long "-3.5891069291726105"^^xsd:float .
+
+sc:4685 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal El Quijote"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmelquijote@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 11.500 metros cuadrados. Unidades deportivas cubiertas: 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: piscina al aire libre (vaso de recreo y vaso infantil), 4 pistas de pádel y Cubo Gym. Ayudas técnicas a la accesibilidad: instalación practicable. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4685 ;
+    :telephone "914599871"^^xsd:string ;
+    :transportInfo "Metro: Francos Rodríguez (línea 7). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones"^^xsd:string ;
+    geo:lat "40.45357807068047"^^xsd:float ;
+    geo:long "-3.7130529027048587"^^xsd:float .
+
+sc:4686 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal San Cristóbal"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmsancristobal@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 1000 metros cuadrados. Unidades deportivas cubiertas: 2 salas multiusos, s ala de musculación y s auna . Servicio de medicina deportiva Ayuda técnica para la accesibilidad: instalación convertible. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villaverde ;
+    :pk 4686 ;
+    :telephone "917950911"^^xsd:string ;
+    :transportInfo "Metro: San Cristóbal (línea 3). Renfe: San Cristóbal (línea C3). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.34267317099495"^^xsd:float ;
+    geo:long "-3.6914487380508842"^^xsd:float .
+
+sc:4687 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Cerro Almodóvar"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmcalmodovar@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 61.600 metros cuadrados. Unidades deportivas cubiertas: pabellón, piscina (vaso de 25 m y vaso de enseñanza), sala de halterofilia, 2 salas multiusos, sala de musculación y 2 pistas cubiertas de voley playa. Unidades deportivas al aire libre: frontón corto, piscina (vaso de 46 metros, vaso de recreo y vaso infantil), 4 pistas de pádel cubiertas, pista polideportiva, pista de tenis, 2 tenis de mesa y 2 pistas de voley playa. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villa-de-vallecas ;
+    :pk 4687 ;
+    :telephone "913314047"^^xsd:string ;
+    :transportInfo "Renfe: Santa Eugenia (líneas C2, C7 y C8)."^^xsd:string ;
+    owl:sameAs wd:Q63191254 ;
+    geo:lat "40.38168820146643"^^xsd:float ;
+    geo:long "-3.602327770076511"^^xsd:float .
+
+sc:4688 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Margot Moles"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmvicalvaro@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones:82.400 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 my vaso de enseñanza) y pabellón. Unidades deportivas al aire libre: piscina al aire libre (vaso de 50 m y vaso infantil), pista de atletismo, campo de fútbol 11 césped artificial, 2 campos de fútbol 7 césped artificial, Cubo Gym, 2 pistas de fútbol sala, pista de hockey patines, 4 pistas de pádel cubiertas, 2 pistas de tenis y 4 tenis de mesa. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Servicio de Medicina Deportiva: psicomotricidad infantil. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:vicalvaro ;
+    :pk 4688 ;
+    :telephone "917769874"^^xsd:string ;
+    :transportInfo "Metro: San Cipriano, Puerta de Arganda (línea 9). Renfe: Vicálvaro (líneas C1, C2, C7 y C8). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q63191268 ;
+    geo:lat "40.40914061858403"^^xsd:float ;
+    geo:long "-3.603264732850392"^^xsd:float .
+
+sc:4689 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal San Blas"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmsanblas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 46.041 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), CuboGym, 2 pabellones, sala ciclo, sala multiusos y sala de musculación. Unidades deportivas al aire libre: piscina al aire libre (2 vasos de 50 m y vaso infantil), 2 pistas de baloncesto, 4 pistas de pádel, 2 pistas polideportivas, 3 tenis de mesa y CuboGym. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayuda técnica para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:san-blas-canillejas ;
+    :pk 4689 ;
+    :telephone "913209818"^^xsd:string ;
+    :transportInfo "Metro: San Blas (línea 7). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 6 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q63191258 ;
+    geo:lat "40.428933838154435"^^xsd:float ;
+    geo:long "-3.615229739080561"^^xsd:float .
+
+sc:4690 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Orcasur"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmorcasur@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 22.500 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), pabellón, sala multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 césped artificial, frontón largo, 6 pistas de pádel, pista polideportiva cubierta, pista de tenis y 4 tenis mesa. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:usera ;
+    :pk 4690 ;
+    :telephone "913171062"^^xsd:string ;
+    :transportInfo "Renfe: Orcasitas (línea C5). Metro: San Fermín - Orcasur (línea 3). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas."^^xsd:string ;
+    geo:lat "40.37021993373859"^^xsd:float ;
+    geo:long "-3.6994689006077444"^^xsd:float .
+
+sc:4691 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Moscardó"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmmoscardo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 13.800 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), sala multiusos y sala de musculación. Unidades deportivas al aire libre: piscina aire libre (vaso de 50 m y vaso infantil), 3 pistas de pádel y pista de voley playa. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:usera ;
+    :pk 4691 ;
+    :telephone "919241472"^^xsd:string ;
+    :transportInfo "Metro: Usera (línea 6)."^^xsd:string ;
+    geo:lat "40.38850290426967"^^xsd:float ;
+    geo:long "-3.706303079808029"^^xsd:float .
+
+sc:4692 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal San Fermín"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmsanfermin@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas Programa deportivo-recreativo de verano: consultar en el propio centro. Equipamientos Superficie total de la instalación: 10.000 metros cuadrados. Unidades deportivas al aire libre: piscina aire libre (vaso de 50 m y vaso infantil). Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:usera ;
+    :pk 4692 ;
+    :telephone "914550721"^^xsd:string ;
+    :transportInfo "Metro: Hospital 12 de Octubre (línea 3), San Fermín (línea 3)."^^xsd:string ;
+    geo:lat "40.37530577421291"^^xsd:float ;
+    geo:long "-3.6927010241442946"^^xsd:float .
+
+sc:4693 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Orcasitas"@es ;
+    :accessibilityInfo "2"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmorcasitas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 10.200 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón, 3 salas multiusos y 2 salas de musculación. Unidades deportivas al aire libre: piscina aire libre (2 vasos de 50 m y vaso infantil), p ista de atletismo, 3 c ampos de fútbol 11 césped artficial, c ampo de fútbol 7 césped artificial, 5 p istas de pádel, 2 p istas polideportivas, 8 p istas de tenis y Cubo Gym . Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas a la accesibilidad: instalación practicable, con 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:usera ;
+    :pk 4693 ;
+    :telephone "914692374"^^xsd:string ;
+    :transportInfo "Metro: Plaza Elíptica (líneas 6 y 11). Renfe: Doce de Octubre, Orcasitas. Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.37558213858424"^^xsd:float ;
+    geo:long "-3.71245854352948"^^xsd:float .
+
+sc:4694 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Fundi"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlafundi@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 11.866 metros cuadrados. Unidades deportivas cubiertas: pabellón, sala musculación y 2 salas multiusos. Unidades deportivas al aire libre: 2 pistas de pádel, 2 pistas polideportivas, 2 pistas de tenis y Cubo Gym. Oficina de Promoción Deportiva: responsable de la coordinaciónde Juegos Deportivos Municipales, Torneos y Circuitos municipales y Copas de Primavera. Además, ofrece información sobre Escuelas de Promoción Deportiva. Ayudas técnicas para la accesibilidad: 1 plataforma. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:arganzuela ;
+    :pk 4694 ;
+    :telephone "914305871"^^xsd:string,
+        "915288879"^^xsd:string ;
+    :transportInfo "Metro: Legazpi, Arganzuela - Planetario (líneas 3 y 6). Bicicleta: El centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191213 ;
+    geo:lat "40.39437715885103"^^xsd:float ;
+    geo:long "-3.691341060146108"^^xsd:float .
+
+sc:4695 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Blanca Fernández Ochoa"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmblancafo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 33.295 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, sala multiusos, sala de musculación y 4 pistas de squash. Unidades deportivas al aire libre: piscina al aire libre (vaso de 50 m, vaso de recreo y vaso infantil), frontón corto, pista de fútbol sala, 2 pistas de pádel, pista polideportiva cubierta y Cubo Gym. Oficina de promoción deportiva: juegos deportivos municipales, torneos y circuitos municipales, copas de primavera, información sobre escuelas de promoción deportiva. Ayudas técnicas de la accesibilidad: instalación adaptada, con grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:carabanchel ;
+    :pk 4695 ;
+    :telephone "914661278"^^xsd:string,
+        "914661732"^^xsd:string ;
+    :transportInfo "Metro: Carabanchel , Eugenia de Montijo (línea 5). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.38238220944523"^^xsd:float ;
+    geo:long "-3.746452142917399"^^xsd:float .
+
+sc:4696 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Aluche"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmaluche@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 13.960 metros cuadrados Unidades deportivas cubiertas: pabellón, piscina (vaso de 50 metros y vaso de 25 metros), sala de artes marciales, salas multiusos, sala de musculación y 2 saunas. Unidades deportivas al aire libre: 2 frontones cortos, campo de fútbol de césped artificial, circuito de seguridad vial, piscina (vaso de gemelas y vaso infantil), pista de atletismo, pista de baloncesto, pista de hockey patines cubierta, 6 pistas de fútbol sala, 4 pistas de pádel, pista de patinaje cubierta, pista de patinódromo, pista polideportiva, 9 pistas de tenis, 2 pistas de voley playa, 10 tenis de mesa y Cubo Gym. Servicio de medicina deportiva: Acondicionamiento cardiovascular, reconocimientos médicos para deportistas. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Oficina de promoción deportiva: responsable de la coordinación de Juegos deportivos municipales, torneos y circuitos municipales, copas de primavera, información en las escuelas de promoción deportiva. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:latina ;
+    :pk 4696 ;
+    :telephone "917062868"^^xsd:string ;
+    :transportInfo "Metro: Aluche (línea 5). Cercanías Renfe: Maestra Justa Freire - Polideportivo Aluche (línea C5). Bicicletas: el centro dispone de aparca bicicletas exterior con capacidad para 6 bicicletas."^^xsd:string ;
+    owl:sameAs wd:Q63191263 ;
+    geo:lat "40.382720517194784"^^xsd:float ;
+    geo:long "-3.773653600881568"^^xsd:float .
+
+sc:4697 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Chopera"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlachopera@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 13.350 metros cuadrados. Unidades deportivas cubiertas: sala multiusos y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 11 de césped artificial, c ircuito de vida, 3 p istas de pádel, 3 p istas polideportivas y 3 p istas de tenis . Ayudas técnicas para la accesibilidad: 1 plataforma. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:retiro ;
+    :pk 4697 ;
+    :telephone "914201154"^^xsd:string ;
+    :transportInfo "Metro: Atocha (línea 1), Retiro (línea 2). Renfe: Atocha (todas las líneas de cercanías). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 12bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q135957017 ;
+    geo:lat "40.412290927416464"^^xsd:float ;
+    geo:long "-3.686209227175977"^^xsd:float .
+
+sc:4698 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Gallur"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmgallur@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 63.896 metros cuadrados. Unidades deportivas cubiertas: pabellón polideportivo, piscina (vaso de 25 metros y vaso de enseñanza), sala de ciclo, sala de musculación y pista de atletismo cubierta. Unidades deportivas al aire libre: frontón largo, 10 pistas de tenis, 12 pistas de padel, 14 pistas de pickleball, campo de futbol 11 césped artificial, pista de fútbol sala, pista de fútbol sala de césped artificial, pista de vóley playa, mesas de teqball. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas a la accesibilidad: 2 ascensores y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:latina ;
+    :pk 4698 ;
+    :telephone "915089401"^^xsd:string,
+        "915251059"^^xsd:string ;
+    :transportInfo "Metro: Carpetana, Laguna (línea 6). Renfe: Laguna (línea C5). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 8 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191274 ;
+    geo:lat "40.398474762124025"^^xsd:float ;
+    geo:long "-3.735371180736436"^^xsd:float .
+
+sc:4699 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Vicente del Bosque"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmvicentedelbosque@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 87.768 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), pabellón, sala de artes marciales y sala de musculación. Unidades deportivas al aire libre: piscina al aire libre (2 vasos de 50 m y vaso infantil), 2 p istas de baloncesto, c ampo de fútbol 11 de césped artifcial, Cubo Gym, 6 p istas de pádel, p ista de patinaje, 2 p istas polideportivas, 6 p istas de tenis, 2 t enis de mesa y p ista de voley playa . Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ubicada en el Departamento de Deportes de la junta municipal de distrito. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:fuencarral-el-pardo ;
+    :pk 4699 ;
+    :telephone "917767502"^^xsd:string ;
+    :transportInfo "Metro: Begoña (línea 10), Barrio del Pilar (línea 9). Renfe: Chamartín (líneas C1, C2, C3, C4, C7, C8 y C10). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191252 ;
+    geo:lat "40.4789135943213"^^xsd:float ;
+    geo:long "-3.693540659747283"^^xsd:float .
+
+sc:4700 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Chamartín"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "infochamartin@forus.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 6.172 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 50 m), p abellón, 4 s alas multiusos y 3 s alas de musculación. Servicio de medicina deportiva: fisioterapia deportiva y escuela de espalda. Ayudas técnicas para la accesibilidad: instalación adaptada, con 1 ascensor y 1 grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:chamartin ;
+    :pk 4700 ;
+    :telephone "913593339"^^xsd:string ;
+    :transportInfo "Metro: Pío XII (línea 9). Bicicleta: El centro dispone de aparcabicicletas interior con capacidad para 12 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.46113349830694"^^xsd:float ;
+    geo:long "-3.676208246061129"^^xsd:float .
+
+sc:4701 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Pradillo"@es ;
+    :accessibilityInfo "1"^^xsd:string,
+        "5"^^xsd:string,
+        "6"^^xsd:string ;
+    :email "idmpradillo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 12.350 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, sala ciclo, 3 salas multiusos, sala de musculación y sauna. Unidades deportivas al aire libre: campo de fútbol 7 de césped artifcial, 8 pistas de padel (4 cubiertas) y 2 pistas polideportivas. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las Escuelas de Promoción Deportiva. Ayudas técnicas para la accesibilidad: 1 ascensor, 1 plataforma y 1 grúa de piscina. Servicio de Medicina Deportiva: con cita previa, fisioterapia del deporte, y reconocimientos médicos para deportistas. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:chamartin ;
+    :pk 4701 ;
+    :telephone "914137105"^^xsd:string ;
+    :transportInfo "Metro: Alfonso XIII, Concha Espina (líneas 4 y 9). Bicicleta: El centro dispone de aparcabicicletas exterior con capacidad para 25 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    owl:sameAs wd:Q63191256 ;
+    geo:lat "40.44910622626739"^^xsd:float ;
+    geo:long "-3.671618277009419"^^xsd:float .
+
+sc:4701827 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Miguel Guillén Prim"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmmguillen@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 8.400 metros cuadrados. Unidades deportivas cubiertas: pabellón y sala de musculación. Unidades deportivas al aire libre: campo de fútbol 7 de césped artificial. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas para la accesibilidad: instalación adaptada. Columna rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villa-de-vallecas ;
+    :pk 4701827 ;
+    :telephone "913053451"^^xsd:string ;
+    :transportInfo "Metro: Congosto (línea 1). Renfe: Vallecas (líneas C2, C7 y C8). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.37381855452167"^^xsd:float ;
+    geo:long "-3.623151468598157"^^xsd:float .
+
+sc:4702 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Ciudad de los Poetas"@es ;
+    :accessibilityInfo "0"^^xsd:string ;
+    :email "idmcpoetas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 1.700 metros cuadrados. Unidades deportivas : pabellón. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4702 ;
+    :telephone "913732739"^^xsd:string ;
+    :transportInfo "Metro: Antonio Machado, Valdezarza (línea 7). Bicicleta:el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.465920678080856"^^xsd:float ;
+    geo:long "-3.7189325594658573"^^xsd:float .
+
+sc:4703 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Fernando Martín"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmfmartin@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 11.200 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), pabellón, sala multiusos y sala de musculación. Unidades deportivas al aire libre: 4 pistas de pádel y 2 p istas de tenis. Oficina de promoción deportiva: juegos deportivos municipales, torneos y circuitos municipales y copas de primavera información sobre escuelas de promoción deportiva. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4703 ;
+    :telephone "914505530"^^xsd:string,
+        "914507344"^^xsd:string ;
+    :transportInfo "Metro: Francos Rodríguez (línea 7)."^^xsd:string ;
+    owl:sameAs wd:Q56086641 ;
+    geo:lat "40.460935404623164"^^xsd:float ;
+    geo:long "-3.7121918299288628"^^xsd:float .
+
+sc:4704 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal José María Cagigal"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmjmcagigal@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de instalaciones: 18.850 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón, 4 salas multiusos y sala de musculación. Unidades deportivas al aire libre: piscina al aire libre (vaso de 50 m, vaso de recreo y vaso infantil), 3 pistas de pádel y 3 pistas de tenis. Servicio de medicina deportiva: reconocimientos médicos y rehabilitación cardiaca. Servicio de fisioterapia: sala de fisioterapia e hidroterapia deportiva. Unidades auxiliares: auditorio y sala de lectura (gestión Junta Municipal). Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las escuelas de promoción deportiva. Ayudas técnicas para la accesibilidad: 3 ascensores, rampas de acceso y grúa de piscinas. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4704 ;
+    :telephone "608268794"^^xsd:string ;
+    :transportInfo "Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.43214955342785"^^xsd:float ;
+    geo:long "-3.7369645992831364"^^xsd:float .
+
+sc:4705 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Casa de Campo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmccampo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 24.800 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), sala multiusos y sala de musculación. Unidades deportivas al aire libre: piscinas al aire libre (2 vasos de recreo y vaso infantil) y Cubo Gym . Ayudas técnicas para la accesibilidad: 2 grúas de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4705 ;
+    :telephone "914630050"^^xsd:string,
+        "914649889"^^xsd:string ;
+    :transportInfo "Metro: Lago (línea 10), Puerta del Ángel (línea 6). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones"^^xsd:string ;
+    geo:lat "40.41612628789201"^^xsd:float ;
+    geo:long "-3.733536573641621"^^xsd:float .
+
+sc:4706 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Santa Ana"@es ;
+    :accessibilityInfo "2"^^xsd:string ;
+    :email "idmsantaana@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Programa deportivo-recreativo de verano: consultar en el propio centro. Equipamientos Unidades deportivas al aire libre: piscina al aire libre (vaso gemelas y vaso infantil), 2 pistas polideportivas y 4 tenis de mesa. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:fuencarral-el-pardo ;
+    :pk 4706 ;
+    :telephone "919241481"^^xsd:string ;
+    :transportInfo "Metro: Fuencarral, Tres Olivos (línea 10). Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.49809469315447"^^xsd:float ;
+    geo:long "-3.696358010199944"^^xsd:float .
+
+sc:4707 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal María Jesús Rosa"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlavaguada@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 2.075 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza) y sala de musculación. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales, Copas de Primavera. Además, ofrece información sobre las Escuelas de Promoción Deportiva. Ayudas técnicas para la accesibilidad: 1 grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:fuencarral-el-pardo ;
+    :pk 4707 ;
+    :telephone "914800476"^^xsd:string ;
+    :transportInfo "Metro: Barrio del Pilar (linea 9), Peñagrande (línea 7)."^^xsd:string ;
+    geo:lat "40.47876758357458"^^xsd:float ;
+    geo:long "-3.7086993281311904"^^xsd:float .
+
+sc:4718 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Playa Victoria"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmpvictoria@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 5.640 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m), sala multiusos y sala de musculación. Unidades deportivas al aire libre: Cubo Gym y 2 p istas de pádel (1 cubierta). Ayudas técnicas para la accesibilidad: 1 plataforma y 1 ascensor. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:tetuan ;
+    :pk 4718 ;
+    :telephone "915701841"^^xsd:string ;
+    :transportInfo "Metro: Tetuán (línea 1). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.4592763472204"^^xsd:float ;
+    geo:long "-3.7021136988422567"^^xsd:float .
+
+sc:4719 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Plata y Castañar"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmpcastanar@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 66.013 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), fisio-hidroterapia, pabellón y sala multiusos. Unidades deportivas al aire libre: piscina aire libre (vaso de 50 m, vaso de recreo y vaso infantil), pista BMX pump track, pista BMX flatland, campo de fútbol 11 césped artificial, campo de fútbol 7 césped artificial, 2 pistas de fútbol sala, pista de hockey patines cubierta, 4 pistas de pádel, pista de parkour, pista de skate bowl, 6 pistas de tenis, parque de calistenia y Cubo Gym. Unidades con servicios auxiliares : sala de físico e hidroterapia. Servicio de medicina deportiva: acondicionamiento cardiovascular, fisioterapia del deporte y reconocimientos médicos. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:villaverde ;
+    :pk 4719 ;
+    :telephone "915051195"^^xsd:string,
+        "915051532"^^xsd:string ;
+    :transportInfo "Renfe: Puente Alcocer (línea C5)."^^xsd:string ;
+    geo:lat "40.34998997348078"^^xsd:float ;
+    geo:long "-3.7178413073202856"^^xsd:float .
+
+sc:4720 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Pueblo Nuevo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmpnuevo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 3.300 metros cuadrados. Unidades deportivas cubiertas: piscina (1 vaso de 25 metros y 1 vaso de enseñanza), sala multiusos, sala de musculación, sala ciclo y sauna. Unidades deportivas aire libre: 3 tenis de mesa. Ayuda técnica para la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:ciudad-lineal ;
+    :pk 4720 ;
+    :telephone "913770251"^^xsd:string ;
+    :transportInfo "Metro: Ascao (línea 7)."^^xsd:string ;
+    owl:sameAs wd:Q63191253 ;
+    geo:lat "40.43003240158625"^^xsd:float ;
+    geo:long "-3.638536354805483"^^xsd:float .
+
+sc:4722 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal La Bombilla"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlabombilla@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamiento Superficie total de las instalaciones: 8.061 metros cuadrados. Unidades deportivas al aire libre: 4 pistas de pádel, 5 p istas de tenis y 1 t enis de mesa . Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4722 ;
+    :telephone "649841445"^^xsd:string,
+        "915592090"^^xsd:string,
+        "917588677"^^xsd:string ;
+    :transportInfo "Metro: Príncipe Pío (líneas 6, 10 y R). Renfe: Príncipe Pío (líneas C1, C7 y C10). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 14 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.43267260040589"^^xsd:float ;
+    geo:long "-3.731936574991669"^^xsd:float .
+
+sc:4726 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Daoíz y Velarde 2"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "secretaria@fmkarate.com"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 9.420 metros cuadrados. Unidades deportivas cubiertas: sala artes marciales, 4 salas multiusos y sala de musculación. Ayuda técnica para la accesibilidad: 1 ascensor. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:retiro ;
+    :pk 4726 ;
+    :telephone "914332758"^^xsd:string ;
+    :transportInfo "Metro: Pacífico (líneas 1 y 6). Renfe: Méndez Álvaro (C1, C5 y C10). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.400799189712316"^^xsd:float ;
+    geo:long "-3.6778902970366896"^^xsd:float .
+
+sc:4727 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Peñuelas"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmarganzuela@madrid.es"^^xsd:string,
+        "idmpenuelas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas Programa deportivo-recreativo de verano: consultar con el propio centro. Equipamientos Superficie total de las instalaciones: 7.000 metros cuadrados. Unidades deportivas al aire libre: piscina de verano (vaso de recreo, vaso infantil y vaso gemelas). Ayudas técnicas a la accesibilidad: 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:arganzuela ;
+    :pk 4727 ;
+    :telephone "915883465"^^xsd:string,
+        "917791205"^^xsd:string ;
+    :transportInfo "Metro: Acacias, Embajadores, Pirámides (líneas 3 y 5). Renfe: Pirámides (líneas C1 y C10). Bicicleta: El centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    owl:sameAs wd:Q63191214 ;
+    geo:lat "40.39865532340664"^^xsd:float ;
+    geo:long "-3.704959759845779"^^xsd:float .
+
+sc:4728 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Estanque del Retiro"@es ;
+    :accessibilityInfo "2"^^xsd:string ;
+    :email "idmretiro@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 37.000 metros cuadrados. Unidades deportivas al aire libre: lago y piragüismo. Ayudas técnicas para la accesibilidad: instalación adaptada. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:retiro ;
+    :pk 4728 ;
+    :telephone "915744024"^^xsd:string ;
+    :transportInfo "Metro: Retiro (línea 2) e Ibiza (línea 9). Renfe: Recoletos (C1, C2, C3, C4, C7, C8 y C10). Bicicleta: servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.41840451709118"^^xsd:float ;
+    geo:long "-3.68434349797176"^^xsd:float .
+
+sc:4834 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Lago Casa de Campo"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmlagocc@madrid.es"^^xsd:string ;
+    :equipmentDescription "E scuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 80.100 metros cuadrados. Unidades deportivas al aire libre: lago - piragüismo. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:moncloa-aravaca ;
+    :pk 4834 ;
+    :telephone "914644610"^^xsd:string ;
+    :transportInfo "Metro: Lago (línea 10), Puerta del Ángel (línea 6). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.417013097503705"^^xsd:float ;
+    geo:long "-3.7314952685679943"^^xsd:float .
+
+sc:49338 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Wilfred Agbonavbare"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "cdmwilfreda@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanaza), pabellón, sala multiusos y sala de musculación. Unidades deportivas al aire libre: pista de baloncesto, campo de fútbol 11 césped artificial, campo de fútbol 7 césped artificial, pista de fútbol sala, pista de hockey patines, 4 pistas de pádel, 3 pistas de pickleball cubiertas, 2 pistas de tenis y Cubo Gym. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Aparcabicicletas exterior: capacidad para 10 bicicletas. Columna de rescate cardíaco Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:puente-de-vallecas ;
+    :pk 49338 ;
+    :telephone "917854751"^^xsd:string ;
+    :transportInfo "Renfe: El Pozo (líneas C2, C7 y C8). Bicicleta: el centro dispone de aparcabicicletas exterior con capacidad para 10 bicicletas."^^xsd:string ;
+    geo:lat "40.371917325246514"^^xsd:float ;
+    geo:long "-3.657159610241785"^^xsd:float .
+
+sc:50257984 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Fúcar"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :equipmentDescription "Equipamientos Superficie total de las instalaciones: 7.190 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón y 2 salas multiusos. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:centro ;
+    :pk 50257984 ;
+    :transportInfo "Metro: Antón Martín (línea 1). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.41190656538047"^^xsd:float ;
+    geo:long "-3.6956829307125605"^^xsd:float .
+
+sc:50264232 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Fernando Carro - Las Rosas"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas cubiertas: pabellón, sala de artes marciales y sala multiusos. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:san-blas-canillejas ;
+    :pk 50264232 ;
+    :transportInfo "Metro: Estadio Metropolitano, Las Musas (línea 7). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 6 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.43122820533847"^^xsd:float ;
+    geo:long "-3.6033257844130344"^^xsd:float .
+
+sc:51661 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Gimnasio Moscardó"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmgmoscardo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie: 4.650 metros cuadrados. Unidades deportivas cubiertas: 2 piscinas de 25 metros y 1 vaso de enseñanza, sala de fisio-hidroterapia, 2 pabellones, 2 salas multiusos y sala de musculación. Unidades deportivas al aire libre: pista de pádel, pista de tenis y pista de mini tenis. Ayudas técnicas para la accesibilidad: 2 ascensores, 1 plataforma y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:salamanca ;
+    :pk 51661 ;
+    :telephone "913553201"^^xsd:string,
+        "919246793"^^xsd:string ;
+    :transportInfo "Metro: Avenida de América (líneas 4, 6, 7 y 9), Cartagena (línea 7), Diego de León (líneas 4, 5 y 6). Bicicleta: El centro dispone de aparcabicicletas exterior con capacidad para 25 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.437945289676996"^^xsd:float ;
+    geo:long "-3.674502029997267"^^xsd:float .
+
+sc:6208448 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Circuito Internacional BMX (Dirección General de Deporte)"@es ;
+    :accessibilityInfo "0"^^xsd:string ;
+    :email "idmcircuitobmx@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Unidades deportivas al aire libre: circuito de BMX. Accesibilidad: instalación adaptada. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:arganzuela ;
+    :pk 6208448 ;
+    :telephone "915279704"^^xsd:string ;
+    :transportInfo "Metro: Legazpi (líneas 3 y 6)."^^xsd:string ;
+    geo:lat "40.38474761528872"^^xsd:float ;
+    geo:long "-3.6894583122113422"^^xsd:float .
+
+sc:6486044 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Escuelas de San Antón"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "info@cdmescuelassananton.com"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: Planta tercera: 971,29 metros cuadrados. Planta cuarta: 976,21 metros cuadrados. Entreplanta cuarta: 291,28 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), sala multiusos, sala de musculación, sauna y spa. Solárium. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:centro ;
+    :pk 6486044 ;
+    :telephone "918289006"^^xsd:string ;
+    :transportInfo "Metro: Chueca y Tribunal (líneas 1, 5 y 10). Bicicleta: Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones."^^xsd:string ;
+    geo:lat "40.42382670120857"^^xsd:float ;
+    geo:long "-3.699010103263697"^^xsd:float .
+
+sc:7411340 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Vallehermoso GoFit"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "vallehermoso@go-fit.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Pre-infantiles (0 a 3 años) y de (3 a 5 años): matronatación, natación y educación física de base (polideportiva). Infantiles (de 6 a 14 años): bádminton, bailes, baloncesto, boxeo, gimnasia artística, gimnasia rítmica, judo, natación, pádel, polideportiva, taekwondo y voleibol. Jóvenes y personas adultas: (De 15 a 20 años): aeróbic (adaptivo aeróbic, adaptivo box y baile moderno), baloncesto, fútbol sala, judo, natación, pádel, y taekwondo. (De 21 a 64 años): aeróbic (adaptivo aeróbic, adaptivo box, adaptivo stop, baile moderno, kango boot, kangoo power, latino y zumba), bailes de salón, boxeo, capoeira, carrera acuática (acuagim adaptivo aqua), fitness (adaptivo gofit cros, coreba, judo, natación, natación embarazadas, pádel, pilates (adaptivo pilates, fitball), thai chí, tonificación (adaptativo strength) y yoga (adaptivo yoga). Mayores de 65 años : acondicionamiento físico deportivo (activo), aeróbic (adaptivo aeróbic / latino), carrera acuática (aquagim, adaptivo aqua), ciclo sala (adaptivo bike), natación, pilates (adaptivo pilates, fitball) y yoga (adaptivo yoga). Actividades para personas con discapacidad : natación. Equipamientos Superficie total de las instalaciones: 26.724 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), pabellón, sala ciclo, sala de armas, 4 salas multiusos, sala de musculación, sauna y spa. Unidades deportivas al aire libre: piscina al aire libre (vaso de recreo) y 3 pistas de pádel. Otros equipamientos: aparcamiento gratuito para 200 plazas. Ayuda técnica para la accesibilidad: ascensor y grúa de piscina. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:chamberi ;
+    :pk 7411340 ;
+    :telephone "915902959"^^xsd:string ;
+    :transportInfo "Metro: Islas Filipinas (línea 7), Canal (líneas 2 y 7). Bicicleta: El centro dispone de aparca bicicletas exterior. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.44064843863945"^^xsd:float ;
+    geo:long "-3.709053489027435"^^xsd:float .
+
+sc:78960 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Centro Integrado Arganzuela"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmestacionsur@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de todas las instalaciones: 4.900 metros cuadrados. Unidades deportivas cubiertas: piscina cubierta (vaso de 25 m y vaso de enseñanza), f isio-hidroterapia, p abellón, s ala multiusos y s ala de musculación. Unidades deportivas al aire libre: 4 pistas de pádel. Columna de rescate cardíaco: 2. Servicio de Medicina Deportiva: enfermería (turno de mañana) y fisioterapia (turno de mañana). Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:arganzuela ;
+    :pk 78960 ;
+    :telephone "915273938"^^xsd:string ;
+    :transportInfo "Metro: Palos de la Frontera (línea 3). Renfe: Delicias (líneas C1 y C10). Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 6 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones ."^^xsd:string ;
+    geo:lat "40.40298456819409"^^xsd:float ;
+    geo:long "-3.695392618470702"^^xsd:float .
+
+sc:84661 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal El Olivillo"@es ;
+    :accessibilityInfo "0"^^xsd:string ;
+    :email "idmolivillo@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie total de las instalaciones: 2.660 metros cuadrados. Unidades deportivas cubiertas: pabellón polideportivo. Deportes practicables: baloncesto y fútbol sala. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:latina ;
+    :pk 84661 ;
+    :telephone "914790212"^^xsd:string ;
+    :transportInfo "Metro: Lucero (línea 6)."^^xsd:string ;
+    geo:lat "40.40652470221465"^^xsd:float ;
+    geo:long "-3.745889233801086"^^xsd:float .
+
+sc:99578 a :SportsCenter ;
+    rdfs:label "Centro Deportivo Municipal Barajas"@es ;
+    :accessibilityInfo "1"^^xsd:string ;
+    :email "idmbarajas@madrid.es"^^xsd:string ;
+    :equipmentDescription "Clases y escuelas deportivas Estas son las modalidades deportivas que se ofrecen en los Centros Deportivos Municipales. Dichas modalidades pueden sufrir modificaciones a lo largo del curso. Le rogamos que consulte con su Centro Deportivo Municipal para confirmar si se ha producido algún cambio. Equipamientos Superficie: 17.346 metros cuadrados. Unidades deportivas cubiertas: pabellón deportivo, piscina cubierta (vaso de 25 m y vaso de enseñanza), sala multiusos y sala de musculación. Unidades deportivas al aire libre: Cubo Gym, pista de hockey patines cubierta, 4 pistas de pádel cubiertas, parque de calistenia y 4 pistas de tenis cubiertas. Oficina de promoción deportiva: responsable de la coordinación de Juegos Deportivos Municipales, Torneos y Circuitos Municipales y Copas de Primavera. Además, ofrece información sobre las Escuelas de Promoción Deportiva. Ayudas técnicas para la accesibilidad: 1 ascensor y 1 grúa de piscina. Columna de rescate cardíaco. Acceso controlado."^^xsd:string ;
+    :locatedInDistrict district:barajas ;
+    :pk 99578 ;
+    :telephone "913290602"^^xsd:string ;
+    :transportInfo "Metro: Barajas (línea 8), Alameda de Osuna (línea 5). Bicicleta: el centro dispone de aparcabicicletas exterior con capacidad para 6 bicicletas."^^xsd:string ;
+    geo:lat "40.46301382809657"^^xsd:float ;
+    geo:long "-3.587693324074623"^^xsd:float .
+
+district:chamartin a :District ;
+    rdfs:label "Chamartin"@es ;
+    owl:sameAs wd:Q1766348 .
+
+district:moratalaz a :District ;
+    rdfs:label "Moratalaz"@es ;
+    owl:sameAs wd:Q2076109 .
+
+district:vicalvaro a :District ;
+    rdfs:label "Vicalvaro"@es ;
+    owl:sameAs wd:Q589403 .
+
+district:barajas a :District ;
+    rdfs:label "Barajas"@es ;
+    owl:sameAs wd:Q807230 .
+
+district:carabanchel a :District ;
+    rdfs:label "Carabanchel"@es ;
+    owl:sameAs wd:Q1001991 .
+
+district:chamberi a :District ;
+    rdfs:label "Chamberi"@es ;
+    owl:sameAs wd:Q1763370 .
+
+district:hortaleza a :District ;
+    rdfs:label "Hortaleza"@es ;
+    owl:sameAs wd:Q1928529 .
+
+district:salamanca a :District ;
+    rdfs:label "Salamanca"@es ;
+    owl:sameAs wd:Q1773521 .
+
+district:villa-de-vallecas a :District ;
+    rdfs:label "Villa De Vallecas"@es ;
+    owl:sameAs wd:Q1947988 .
+
+district:centro a :District ;
+    rdfs:label "Centro"@es ;
+    owl:sameAs wd:Q1763376 .
+
+district:ciudad-lineal a :District ;
+    rdfs:label "Ciudad Lineal"@es ;
+    owl:sameAs wd:Q1763694 .
+
+district:latina a :District ;
+    rdfs:label "Latina"@es ;
+    owl:sameAs wd:Q794954 .
+
+district:retiro a :District ;
+    rdfs:label "Retiro"@es ;
+    owl:sameAs wd:Q2002296 .
+
+district:san-blas-canillejas a :District ;
+    rdfs:label "San Blas-Canillejas"@es ;
+    owl:sameAs wd:Q2001937 .
+
+district:usera a :District ;
+    rdfs:label "Usera"@es ;
+    owl:sameAs wd:Q953368 .
+
+district:arganzuela a :District ;
+    rdfs:label "Arganzuela"@es ;
+    owl:sameAs wd:Q2000929 .
+
+district:fuencarral-el-pardo a :District ;
+    rdfs:label "Fuencarral-El Pardo"@es ;
+    owl:sameAs wd:Q656196 .
+
+district:puente-de-vallecas a :District ;
+    rdfs:label "Puente De Vallecas"@es ;
+    owl:sameAs wd:Q2003054 .
+
+district:tetuan a :District ;
+    rdfs:label "Tetuan"@es ;
+    owl:sameAs wd:Q1773540 .
+
+district:villaverde a :District ;
+    rdfs:label "Villaverde"@es ;
+    owl:sameAs wd:Q919536 .
+
+district:moncloa-aravaca a :District ;
+    rdfs:label "Moncloa-Aravaca"@es ;
+    owl:sameAs wd:Q2017682 .
+
