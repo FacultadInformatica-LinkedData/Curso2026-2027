@@ -12,7 +12,7 @@
 
 - Giovanni Bolotchi Kot  - [@GIOVANNI-GAMER](https://github.com/GIOVANNI-GAMER)
 
-- Ester Alvarez  - [@esteralvarez1](https://github.com/esteralvarez1)
+- Ester Alvarez García  - [@esteralvarez1](https://github.com/esteralvarez1)
 
 
 
