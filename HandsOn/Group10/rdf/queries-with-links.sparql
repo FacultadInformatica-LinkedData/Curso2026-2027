@@ -1,0 +1,63 @@
+PREFIX cls: <https://group10.org/air-quality-2026/ontology/classes/>
+PREFIX prop: <https://group10.org/air-quality-2026/ontology/properties/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+#Q1. Municipalities with their INE code and their link to Wikidata
+SELECT ?code ?name ?wikidata
+WHERE {
+  ?municipality a cls:Municipality;
+    rdfs:label ?name ;
+    prop:hasMunicipalityCode ?code ;
+    owl:sameAs ?wikidata .
+}
+ORDER BY ?code
+
+#Q2. Check: number of municipalities and number of them linked to Wikidata
+SELECT (COUNT(?municipality) AS ?total) (COUNT(?wikidata) AS ?linked)
+WHERE {
+  ?municipality a cls:Municipality .
+  OPTIONAL { ?municipality owl:sameAs ?wikidata . }
+}
+
+#Q3. Stations with the name and the Wikidata entity of their municipality
+SELECT ?stationName ?municipalityName ?wikidata
+WHERE {
+  ?station a cls:Station;
+    rdfs:label ?stationName;
+    prop:locatedIn ?municipality .
+  ?municipality rdfs:label ?municipalityName;
+    owl:sameAs ?wikidata .
+}
+ORDER BY ?municipalityName
+
+#Q4. Hourly values of measurement type 83 on 1 January 2026 in the municipality wd:Q520988 (Orusco de Tajuña)
+SELECT ?hour ?value
+WHERE {
+  ?municipality owl:sameAs wd:Q520988 .
+  ?station prop:locatedIn ?municipality .
+  ?sp prop:hasStation ?station ;
+    prop:hasMeasurementType ?type .
+  ?type prop:hasMeasurementCode 83 .
+  ?obs prop:hasSamplePoint ?sp ;
+    prop:hasDay 1;
+    prop:hasHour ?hour;
+    prop:hasValue ?value .
+}
+ORDER BY ?hour
+
+#Q5. Average, minimum and maximum value of measurement type 83 per Wikidata municipality (1-7 January 2026)
+SELECT ?wikidata ?name (AVG(?value) AS ?avg) (MIN(?value) AS ?min) (MAX(?value) AS ?max)
+WHERE {
+  ?municipality owl:sameAs ?wikidata;
+    rdfs:label ?name .
+  ?station prop:locatedIn ?municipality .
+  ?sp prop:hasStation ?station;
+    prop:hasMeasurementType ?type .
+  ?type prop:hasMeasurementCode 83 .
+  ?obs prop:hasSamplePoint ?sp;
+    prop:hasValue ?value .
+}
+GROUP BY ?wikidata ?name
+ORDER BY DESC(?avg)
