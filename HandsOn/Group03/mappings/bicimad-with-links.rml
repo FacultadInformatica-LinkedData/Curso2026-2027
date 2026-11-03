@@ -17,7 +17,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "https://bicismart.madrid.data.es/resource/BikeStation/{stationId}";
+    rr:template "https://bicismart.madrid.data.es/resource/BikeStation/{stationUriName}";
     rr:class bm:BikeStation
   ];
 
@@ -81,7 +81,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "https://bicismart.madrid.data.es/resource/Point/{stationId}";
+    rr:template "https://bicismart.madrid.data.es/resource/Point/{stationUriName}";
     rr:class geo:Point
   ];
 
@@ -109,7 +109,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "https://bicismart.madrid.data.es/resource/StationState/{stationId}";
+    rr:template "https://bicismart.madrid.data.es/resource/StationState/{stationUriName}";
     rr:class bm:StationState
   ];
 
@@ -146,7 +146,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "https://bicismart.madrid.data.es/resource/Street/{streetCode}";
+    rr:template "https://bicismart.madrid.data.es/resource/Street/{streetUriName}";
     rr:class bm:Street
   ];
 
