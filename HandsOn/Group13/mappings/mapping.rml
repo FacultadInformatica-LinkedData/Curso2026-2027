@@ -15,7 +15,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "http://educamadrid.linkeddata.es/resource/School/{PK}";
+    rr:template "http://educamadrid.linkeddata.es/resource/EducationalOrganization/CentroEducativo/Madrid/{NOMBRE}-{PK}";
     rr:class :EducationalCenter
   ];
 
@@ -108,17 +108,17 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate :hasAddress;
+    rr:predicate :accessibilityCode;
     rr:objectMap [
-      rr:template "http://educamadrid.linkeddata.es/resource/Address/{PK}";
-      rr:termType rr:IRI
+      rml:reference "ACCESIBILIDAD";
+      rr:datatype xsd:string
     ]
   ];
 
   rr:predicateObjectMap [
-    rr:predicate :hasAccessibility;
+    rr:predicate :hasAddress;
     rr:objectMap [
-      rr:template "http://educamadrid.linkeddata.es/resource/Accessibility/{ACCESIBILIDAD}";
+      rr:template "http://educamadrid.linkeddata.es/resource/Address/Madrid/{CLASE-VIAL}/{NOMBRE-VIA}/{NUM}";
       rr:termType rr:IRI
     ]
   ] .
@@ -133,7 +133,7 @@
     rml:referenceFormulation ql:CSV 
   ];
   rr:subjectMap [
-    rr:template "http://educamadrid.linkeddata.es/resource/Address/{PK}";
+    rr:template "http://educamadrid.linkeddata.es/resource/Address/Madrid/{CLASE-VIAL}/{NOMBRE-VIA}/{NUM}";
     rr:class :Address
   ];
 
@@ -233,37 +233,7 @@
 
 
 #################################################################
-# 4. TriplesMap para Accesibilidad (Accessibility)
-#################################################################
-<#TriplesMapAccessibility> a rr:TriplesMap;
-  rml:logicalSource [
-    rml:source "../csv/300614-1-centros-educativos-csv-updated.csv" ;
-    rml:referenceFormulation ql:CSV 
-  ];
-  rr:subjectMap [
-    rr:template "http://educamadrid.linkeddata.es/resource/Accessibility/{ACCESIBILIDAD}";
-    rr:class :Accessibility
-  ];
-
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label;
-    rr:objectMap [
-      rml:reference "ACCESIBILIDAD";
-      rr:datatype xsd:string
-    ]
-  ];
-
-  rr:predicateObjectMap [
-    rr:predicate :accessibilityCode;
-    rr:objectMap [
-      rml:reference "ACCESIBILIDAD";
-      rr:datatype xsd:string
-    ]
-  ] .
-
-
-#################################################################
-# 5. TriplesMap para Barrios (Neighborhood)
+# 4. TriplesMap para Barrios (Neighborhood)
 #################################################################
 <#TriplesMapNeighborhood> a rr:TriplesMap;
   rml:logicalSource [
