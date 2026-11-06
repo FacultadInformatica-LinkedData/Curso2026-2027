@@ -1,0 +1,12 @@
+MAGNITUD,FORMULA,NOMBRE,UNIDAD,WIKIDATA_ID,UNIDAD_QUDT
+1,SO2,Dióxido de azufre,µg/m3,Q5282,MicroGM-PER-M3
+6,CO,Monóxido de carbono,mg/m3,Q2025,MilliGM-PER-M3
+7,NO,Monóxido de nitrógeno,µg/m3,Q207843,MicroGM-PER-M3
+8,NO2,Dióxido de nitrógeno,µg/m3,Q207895,MicroGM-PER-M3
+9,PM2.5,Partículas en suspensión menores de 2.5 µm,µg/m3,Q48035814,MicroGM-PER-M3
+10,PM10,Partículas en suspensión menores de 10 µm,µg/m3,Q1056863,MicroGM-PER-M3
+12,NOx,Óxidos de nitrógeno,µg/m3,Q424418,MicroGM-PER-M3
+14,O3,Ozono,µg/m3,Q36933,MicroGM-PER-M3
+20,TOL,Tolueno,µg/m3,Q15779,MicroGM-PER-M3
+30,BEN,Benceno,µg/m3,Q2270,MicroGM-PER-M3
+35,EBE,Etilbenceno,µg/m3,Q409184,MicroGM-PER-M3
