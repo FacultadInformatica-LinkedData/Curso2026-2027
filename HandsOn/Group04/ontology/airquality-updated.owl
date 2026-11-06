@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b5">
+    <rdf:first rdf:resource="http://breathemadrid.es/ontology#Municipality"/>
+    <rdf:rest rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">latitude</rdfs:label>
+    <rdfs:comment xml:lang="en">Station latitude in WGS84 (replaces bm:latitude).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#Observation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Observation</rdfs:label>
+    <rdfs:comment xml:lang="en">Air quality measurement.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">result time</rdfs:label>
+    <rdfs:comment xml:lang="en">Date and time of the observation (replaces bm:dateTime).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/municipality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">municipality</rdfs:label>
+    <rdfs:comment xml:lang="en">Municipality where a station is located (replaces bm:locatedIn).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
+    <rdfs:comment xml:lang="en">Unit in which a pollutant is measured, as a QUDT unit (replaces bm:unit).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#isValid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">is valid</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the observation was validated by the city council.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://breathemadrid.es/ontology#Observation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#Pollutant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Pollutant</rdfs:label>
+    <rdfs:comment xml:lang="en">Air pollutant being measured.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">Breathe Madrid ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">Ontology for the air quality stations and measurements of Madrid. This version reuses terms from SOSA, WGS84, schema.org, Dublin Core, DBpedia, QUDT and SKOS.</rdfs:comment>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <owl:versionInfo>2.0</owl:versionInfo>
+    <owl:priorVersion rdf:resource="http://breathemadrid.es/ontology/1.0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Municipality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Municipality</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/ontology/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#StationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Station Type</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of monitoring station (urban traffic, urban background, suburban).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">longitude</rdfs:label>
+    <rdfs:comment xml:lang="en">Station longitude in WGS84 (replaces bm:longitude).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has simple result</rdfs:label>
+    <rdfs:comment xml:lang="en">Observed value (replaces bm:value).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Observation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">notation</rdfs:label>
+    <rdfs:comment xml:lang="en">Code of a station type (replaces bm:typeCode).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/alternateName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">alternate name</rdfs:label>
+    <rdfs:comment xml:lang="en">Chemical formula or short name of a pollutant (replaces bm:pollutantName).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b4">
+    <rdf:first rdf:resource="http://breathemadrid.es/ontology#Pollutant"/>
+    <rdf:rest rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#measuresPollutant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">measures pollutant</rdfs:label>
+    <rdfs:comment xml:lang="en">Pollutant measured by a station.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://breathemadrid.es/ontology#Station"/>
+    <rdfs:range rdf:resource="http://breathemadrid.es/ontology#Pollutant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">altitude</rdfs:label>
+    <rdfs:comment xml:lang="en">Station altitude in metres (replaces bm:altitude).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#observedAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">observed at</rdfs:label>
+    <rdfs:comment xml:lang="en">Station where the observation was made.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://breathemadrid.es/ontology#Observation"/>
+    <rdfs:range rdf:resource="http://breathemadrid.es/ontology#Station"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">observed property</rdfs:label>
+    <rdfs:comment xml:lang="en">Pollutant observed in an observation (replaces bm:observesPollutant).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Platform</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#Station">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Station</rdfs:label>
+    <rdfs:comment xml:lang="en">Air quality monitoring station.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <rdfs:comment xml:lang="en">Station address (replaces bm:address).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">Code of a station, pollutant or municipality (replaces bm:stationCode, bm:pollutantCode and bm:municipalityCode).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Spatial Thing</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">preferred label</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of a station type (replaces bm:typeName).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#hasStationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has station type</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of a station.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://breathemadrid.es/ontology#Station"/>
+    <rdfs:range rdf:resource="http://breathemadrid.es/ontology#StationType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of a station, pollutant or municipality (replaces bm:stationName and bm:municipalityName).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Observable Property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b3">
+    <rdf:first rdf:resource="http://breathemadrid.es/ontology#Observation"/>
+    <rdf:rest rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Concept</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b2">
+    <rdf:first rdf:resource="http://breathemadrid.es/ontology#Station"/>
+    <rdf:rest rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://breathemadrid.es/ontology#Municipality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Municipality</rdfs:label>
+    <rdfs:comment xml:lang="en">Municipality containing a station.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Municipality"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neeaeed7a9241463cb1fce48af9c4d678b6">
+    <rdf:first rdf:resource="http://breathemadrid.es/ontology#StationType"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>
