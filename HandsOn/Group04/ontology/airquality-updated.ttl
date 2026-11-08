@@ -15,14 +15,18 @@ bm: a owl:Ontology ;
     rdfs:label "Breathe Madrid ontology"@en ;
     rdfs:comment "Ontology for the air quality stations and measurements of Madrid. This version reuses terms from SOSA, WGS84, schema.org, Dublin Core, DBpedia, QUDT and SKOS."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:versionInfo "2.0" ;
-    owl:priorVersion <http://breathemadrid.es/ontology/1.0> .
+    owl:versionInfo "2.0" .
 
 #################################################################
 #   Annotation properties
 #################################################################
 
 dct:license a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty ;
+    rdfs:label "preferred label"@en ;
+    rdfs:comment "Name of a station type (replaces bm:typeName)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
 #   Classes
@@ -118,8 +122,8 @@ dbo:municipality a owl:ObjectProperty ;
     rdfs:comment "Municipality where a station is located (replaces bm:locatedIn)."@en ;
     rdfs:isDefinedBy <http://dbpedia.org/ontology/> .
 
-qudt:unit a owl:ObjectProperty ;
-    rdfs:label "unit"@en ;
+qudt:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
     rdfs:comment "Unit in which a pollutant is measured, as a QUDT unit (replaces bm:unit)."@en ;
     rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
 
@@ -185,9 +189,4 @@ dct:identifier a owl:DatatypeProperty ;
 skos:notation a owl:DatatypeProperty ;
     rdfs:label "notation"@en ;
     rdfs:comment "Code of a station type (replaces bm:typeCode)."@en ;
-    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
-
-skos:prefLabel a owl:DatatypeProperty ;
-    rdfs:label "preferred label"@en ;
-    rdfs:comment "Name of a station type (replaces bm:typeName)."@en ;
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .

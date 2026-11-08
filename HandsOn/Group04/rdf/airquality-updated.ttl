@@ -23397,7 +23397,7 @@
 
 <http://breathemadrid.es/resource/pollutant/1> a bm:Pollutant;
   dct:identifier "1";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Dióxido de azufre";
   owl:sameAs <http://www.wikidata.org/entity/Q5282>;
   schema:alternateName "SO2";
@@ -23405,7 +23405,7 @@
 
 <http://breathemadrid.es/resource/pollutant/10> a bm:Pollutant;
   dct:identifier "10";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Partículas en suspensión menores de 10 µm";
   owl:sameAs <http://www.wikidata.org/entity/Q1056863>;
   schema:alternateName "PM10";
@@ -23413,7 +23413,7 @@
 
 <http://breathemadrid.es/resource/pollutant/12> a bm:Pollutant;
   dct:identifier "12";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Óxidos de nitrógeno";
   owl:sameAs <http://www.wikidata.org/entity/Q424418>;
   schema:alternateName "NOx";
@@ -23421,7 +23421,7 @@
 
 <http://breathemadrid.es/resource/pollutant/14> a bm:Pollutant;
   dct:identifier "14";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Ozono";
   owl:sameAs <http://www.wikidata.org/entity/Q36933>;
   schema:alternateName "O3";
@@ -23429,7 +23429,7 @@
 
 <http://breathemadrid.es/resource/pollutant/20> a bm:Pollutant;
   dct:identifier "20";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Tolueno";
   owl:sameAs <http://www.wikidata.org/entity/Q15779>;
   schema:alternateName "TOL";
@@ -23437,7 +23437,7 @@
 
 <http://breathemadrid.es/resource/pollutant/30> a bm:Pollutant;
   dct:identifier "30";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Benceno";
   owl:sameAs <http://www.wikidata.org/entity/Q2270>;
   schema:alternateName "BEN";
@@ -23445,7 +23445,7 @@
 
 <http://breathemadrid.es/resource/pollutant/35> a bm:Pollutant;
   dct:identifier "35";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Etilbenceno";
   owl:sameAs <http://www.wikidata.org/entity/Q409184>;
   schema:alternateName "EBE";
@@ -23453,7 +23453,7 @@
 
 <http://breathemadrid.es/resource/pollutant/6> a bm:Pollutant;
   dct:identifier "6";
-  qudt:unit <http://qudt.org/vocab/unit/MilliGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-M3>;
   rdfs:label "Monóxido de carbono";
   owl:sameAs <http://www.wikidata.org/entity/Q2025>;
   schema:alternateName "CO";
@@ -23461,7 +23461,7 @@
 
 <http://breathemadrid.es/resource/pollutant/7> a bm:Pollutant;
   dct:identifier "7";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Monóxido de nitrógeno";
   owl:sameAs <http://www.wikidata.org/entity/Q207843>;
   schema:alternateName "NO";
@@ -23469,7 +23469,7 @@
 
 <http://breathemadrid.es/resource/pollutant/8> a bm:Pollutant;
   dct:identifier "8";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Dióxido de nitrógeno";
   owl:sameAs <http://www.wikidata.org/entity/Q207895>;
   schema:alternateName "NO2";
@@ -23477,7 +23477,7 @@
 
 <http://breathemadrid.es/resource/pollutant/9> a bm:Pollutant;
   dct:identifier "9";
-  qudt:unit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
+  qudt:hasUnit <http://qudt.org/vocab/unit/MicroGM-PER-M3>;
   rdfs:label "Partículas en suspensión menores de 2.5 µm";
   owl:sameAs <http://www.wikidata.org/entity/Q48035814>;
   schema:alternateName "PM2.5";

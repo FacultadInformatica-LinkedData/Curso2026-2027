@@ -126,7 +126,7 @@
     rr:objectMap [ rml:reference "NOMBRE" ; rr:language "es" ] ] ;
   rr:predicateObjectMap [ rr:predicate schema:alternateName ;
     rr:objectMap [ rml:reference "FORMULA" ; rr:datatype xsd:string ] ] ;
-  rr:predicateObjectMap [ rr:predicate qudt:unit ;
+  rr:predicateObjectMap [ rr:predicate qudt:hasUnit ;
     rr:objectMap [ rr:template "http://qudt.org/vocab/unit/{UNIDAD_QUDT}" ; rr:termType rr:IRI ] ] ;
   rr:predicateObjectMap [ rr:predicate owl:sameAs ;
     rr:objectMap [ rr:template "http://www.wikidata.org/entity/{WIKIDATA_ID}" ; rr:termType rr:IRI ] ] .
