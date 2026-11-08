@@ -1,0 +1,192 @@
+@prefix bm: <http://breathemadrid.es/ontology#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bm: a owl:Ontology ;
+    rdfs:label "Breathe Madrid ontology"@en ;
+    rdfs:comment "Ontology for the air quality stations and measurements of Madrid. This version reuses terms from SOSA, WGS84, schema.org, Dublin Core, DBpedia, QUDT and SKOS."@en ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "2.0" .
+
+#################################################################
+#   Annotation properties
+#################################################################
+
+dct:license a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty ;
+    rdfs:label "preferred label"@en ;
+    rdfs:comment "Name of a station type (replaces bm:typeName)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+#   Classes
+#################################################################
+
+bm:Station a owl:Class ;
+    rdfs:label "Station"@en ;
+    rdfs:comment "Air quality monitoring station."@en ;
+    rdfs:subClassOf sosa:Platform , geo:SpatialThing .
+
+bm:Observation a owl:Class ;
+    rdfs:label "Observation"@en ;
+    rdfs:comment "Air quality measurement."@en ;
+    rdfs:subClassOf sosa:Observation .
+
+bm:Pollutant a owl:Class ;
+    rdfs:label "Pollutant"@en ;
+    rdfs:comment "Air pollutant being measured."@en ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+bm:Municipality a owl:Class ;
+    rdfs:label "Municipality"@en ;
+    rdfs:comment "Municipality containing a station."@en ;
+    rdfs:subClassOf dbo:Municipality .
+
+bm:StationType a owl:Class ;
+    rdfs:label "Station Type"@en ;
+    rdfs:comment "Type of monitoring station (urban traffic, urban background, suburban)."@en ;
+    rdfs:subClassOf skos:Concept .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( bm:Station bm:Observation bm:Pollutant bm:Municipality bm:StationType ) .
+
+# Reused classes
+
+sosa:Platform a owl:Class ;
+    rdfs:label "Platform"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:Observation a owl:Class ;
+    rdfs:label "Observation"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:ObservableProperty a owl:Class ;
+    rdfs:label "Observable Property"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+geo:SpatialThing a owl:Class ;
+    rdfs:label "Spatial Thing"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+dbo:Municipality a owl:Class ;
+    rdfs:label "Municipality"@en ;
+    rdfs:isDefinedBy <http://dbpedia.org/ontology/> .
+
+skos:Concept a owl:Class ;
+    rdfs:label "Concept"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+#   Object properties
+#################################################################
+
+# Own properties (no suitable equivalent found)
+
+bm:observedAt a owl:ObjectProperty ;
+    rdfs:label "observed at"@en ;
+    rdfs:comment "Station where the observation was made."@en ;
+    rdfs:domain bm:Observation ;
+    rdfs:range bm:Station .
+
+bm:measuresPollutant a owl:ObjectProperty ;
+    rdfs:label "measures pollutant"@en ;
+    rdfs:comment "Pollutant measured by a station."@en ;
+    rdfs:domain bm:Station ;
+    rdfs:range bm:Pollutant .
+
+bm:hasStationType a owl:ObjectProperty ;
+    rdfs:label "has station type"@en ;
+    rdfs:comment "Type of a station."@en ;
+    rdfs:domain bm:Station ;
+    rdfs:range bm:StationType .
+
+# Reused properties
+
+sosa:observedProperty a owl:ObjectProperty ;
+    rdfs:label "observed property"@en ;
+    rdfs:comment "Pollutant observed in an observation (replaces bm:observesPollutant)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+dbo:municipality a owl:ObjectProperty ;
+    rdfs:label "municipality"@en ;
+    rdfs:comment "Municipality where a station is located (replaces bm:locatedIn)."@en ;
+    rdfs:isDefinedBy <http://dbpedia.org/ontology/> .
+
+qudt:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    rdfs:comment "Unit in which a pollutant is measured, as a QUDT unit (replaces bm:unit)."@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
+
+#################################################################
+#   Datatype properties
+#################################################################
+
+# Own properties (no suitable equivalent found)
+
+bm:isValid a owl:DatatypeProperty ;
+    rdfs:label "is valid"@en ;
+    rdfs:comment "Whether the observation was validated by the city council."@en ;
+    rdfs:domain bm:Observation ;
+    rdfs:range xsd:boolean .
+
+# Reused properties
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:label "result time"@en ;
+    rdfs:comment "Date and time of the observation (replaces bm:dateTime)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:hasSimpleResult a owl:DatatypeProperty ;
+    rdfs:label "has simple result"@en ;
+    rdfs:comment "Observed value (replaces bm:value)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+geo:lat a owl:DatatypeProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "Station latitude in WGS84 (replaces bm:latitude)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+geo:long a owl:DatatypeProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "Station longitude in WGS84 (replaces bm:longitude)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+geo:alt a owl:DatatypeProperty ;
+    rdfs:label "altitude"@en ;
+    rdfs:comment "Station altitude in metres (replaces bm:altitude)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:comment "Name of a station, pollutant or municipality (replaces bm:stationName and bm:municipalityName)."@en ;
+    rdfs:isDefinedBy <https://schema.org/> .
+
+schema:alternateName a owl:DatatypeProperty ;
+    rdfs:label "alternate name"@en ;
+    rdfs:comment "Chemical formula or short name of a pollutant (replaces bm:pollutantName)."@en ;
+    rdfs:isDefinedBy <https://schema.org/> .
+
+schema:address a owl:DatatypeProperty ;
+    rdfs:label "address"@en ;
+    rdfs:comment "Station address (replaces bm:address)."@en ;
+    rdfs:isDefinedBy <https://schema.org/> .
+
+dct:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier"@en ;
+    rdfs:comment "Code of a station, pollutant or municipality (replaces bm:stationCode, bm:pollutantCode and bm:municipalityCode)."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+skos:notation a owl:DatatypeProperty ;
+    rdfs:label "notation"@en ;
+    rdfs:comment "Code of a station type (replaces bm:typeCode)."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
