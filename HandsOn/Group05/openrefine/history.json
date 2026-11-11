@@ -19,7 +19,7 @@
       "mode": "row-based"
     },
     "columnName": "DISTRITO",
-    "expression": "value.trim().toTitlecase()",
+    "expression": "value.trim().toTitlecase(\" -\")",
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,

@@ -33,7 +33,7 @@ En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar 
 ### Acciones detalladas
 1.- Importación: el CSV original (200186-0-polideportivos-csv.csv) se ha importado en OpenRefine con codificación ISO-8859-1 y separador punto y coma (;). Estos ajustes no quedan registrados en el JSON, pero son necesarios para que tildes y eñes se lean correctamente (por ejemplo, "Barceló" o "PEÑA GRANDE").
 
-2.- El texto en NOMBRE ha sido limpiado eliminando los espacios extra (con trim y sustituyendo espacios múltiples por uno solo). La columna DISTRITO se ha normalizado a formato título (con toTitlecase), por ejemplo "MONCLOA-ARAVACA" pasa a "Moncloa-Aravaca".
+2.- El texto en NOMBRE ha sido limpiado eliminando los espacios extra (con trim y sustituyendo espacios múltiples por uno solo). La columna DISTRITO se ha normalizado a formato título (con toTitlecase(" -"), usando el espacio y el guion como separadores de palabra), por ejemplo "MONCLOA-ARAVACA" pasa a "Moncloa-Aravaca".
 
 3.- Las columnas de texto largo (HORARIO, EQUIPAMIENTO, TRANSPORTE, DESCRIPCION y DESCRIPCION-ENTIDAD) contenían entidades HTML doblemente codificadas, como "&amp;iexcl;" o "&amp;ldquo;". Se han decodificado (con unescape("html") aplicado dos veces) y se han eliminado los espacios y saltos de línea sobrantes.
 
