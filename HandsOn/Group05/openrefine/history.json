@@ -255,5 +255,31 @@
     "op": "core/column-removal",
     "columnName": "ESCALERAS",
     "description": "Remove empty column ESCALERAS"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:forEach(value.replace(\"Centro Deportivo Municipal \", \"\").replace(/\\s*\\(.*\\)/, \"\").replace(/[áà]/, \"a\").replace(/[éè]/, \"e\").replace(/[íì]/, \"i\").replace(/[óò]/, \"o\").replace(/[úùü]/, \"u\").replace(\"ñ\", \"n\").replace(\"Á\", \"A\").replace(\"É\", \"E\").replace(\"Í\", \"I\").replace(\"Ó\", \"O\").replace(\"Ú\", \"U\").replace(\"Ñ\", \"N\").split(/[^A-Za-z0-9]+/), w, w.substring(0, 1).toUppercase() + w.substring(1)).join(\"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "URI-CENTRO",
+    "columnInsertIndex": 30,
+    "description": "Create column URI-CENTRO at index 30 based on column NOMBRE: human-readable identifier for SportsCenter URIs (UpperCamelCase, no accents, without the 'Centro Deportivo Municipal' prefix)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:forEach(value.replace(/[áà]/, \"a\").replace(/[éè]/, \"e\").replace(/[íì]/, \"i\").replace(/[óò]/, \"o\").replace(/[úùü]/, \"u\").replace(\"ñ\", \"n\").replace(\"Á\", \"A\").replace(\"É\", \"E\").replace(\"Í\", \"I\").replace(\"Ó\", \"O\").replace(\"Ú\", \"U\").replace(\"Ñ\", \"N\").split(/[^A-Za-z0-9]+/), w, w.substring(0, 1).toUppercase() + w.substring(1)).join(\"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "URI-DISTRITO",
+    "columnInsertIndex": 31,
+    "description": "Create column URI-DISTRITO at index 31 based on column DISTRITO: human-readable identifier for District URIs (UpperCamelCase, no accents)"
   }
 ]

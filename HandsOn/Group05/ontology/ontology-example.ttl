@@ -9,13 +9,13 @@
 <http://smartcity.linkeddata.es/sports/resource/> a owl:Ontology ;
     owl:imports <http://smartcity.linkeddata.es/sports/ontology/> .
 
-district:arganzuela a :District ;
+district:Arganzuela a :District ;
     rdfs:label "Arganzuela"@es .
 
-sc:184270 a :SportsCenter ;
+sc:MarquesDeSamaranch a :SportsCenter ;
     rdfs:label "Centro Deportivo Municipal Marques de Samaranch"@es ;
     :pk "184270"^^xsd:integer ;
-    :locatedInDistrict district:arganzuela ;
+    :locatedInDistrict district:Arganzuela ;
     :equipmentDescription "Indoor pool, weight room, paddle courts."^^xsd:string ;
     :accessibilityInfo "Accessible for reduced mobility."^^xsd:string ;
     :transportInfo "Metro: Legazpi. Bus: 6, 18, 62."^^xsd:string ;

@@ -53,6 +53,8 @@ En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar 
 
 11.- Se han eliminado las columnas PUERTA y ESCALERAS, que estaban completamente vacías.
 
+12.- (Añadido tras el feedback de `HO_evaluation_1.md`) Se han creado las columnas URI-CENTRO y URI-DISTRITO con identificadores legibles para las URIs de los individuos: sin tildes, sin espacios ni signos y en UpperCamelCase (por ejemplo, "Centro Deportivo Municipal Marqués de Samaranch" → MarquesDeSamaranch y "Moncloa-Aravaca" → MoncloaAravaca). En los centros se omite el prefijo común "Centro Deportivo Municipal" y lo que va entre paréntesis. Los 82 identificadores de centros y los 21 de distritos son únicos.
+
 ### Problemas conocidos
 - El código de barrio de Ambroz (COD-BARRIO) sigue vacío porque no hemos podido confirmar su valor en el callejero oficial.
 - En TELEFONO se pierden las etiquetas informativas ("Taquilla", "Oficina", "Por ahora solo WhatsApp"); solo se conservan los números.
