@@ -37,7 +37,7 @@
 
   <h3>1.1. Resumen</h3>
   <ul>
-    <li><strong>Nº de registros:</strong> ~70 instalaciones deportivas</li>
+    <li><strong>Nº de registros:</strong> 82 instalaciones deportivas</li>
     <li><strong>Nº de columnas:</strong> 32</li>
     <li><strong>Ámbito:</strong> Ciudad de Madrid</li>
     <li><strong>Coordenadas:</strong> Latitud entre <code>40.3100</code> y <code>40.5000</code>; Longitud entre <code>-3.8300</code> y <code>-3.5800</code> (WGS84)</li>
@@ -124,22 +124,22 @@
       </tr>
       <tr>
         <td>Instancia polideportivo</td>
-        <td><code>http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}</code></td>
-        <td><code>.../resource/SportsCenter/184270</code></td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/SportsCenter/{URI-CENTRO}</code></td>
+        <td><code>.../resource/SportsCenter/MarquesDeSamaranch</code></td>
       </tr>
       <tr>
         <td>Instancia distrito</td>
-        <td><code>http://smartcity.linkeddata.es/sports/resource/District/{slug-distrito}</code></td>
-        <td><code>.../resource/District/arganzuela</code></td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/District/{URI-DISTRITO}</code></td>
+        <td><code>.../resource/District/MoncloaAravaca</code></td>
       </tr>
       <tr>
         <td>Instancia barrio</td>
-        <td><code>http://smartcity.linkeddata.es/sports/resource/Barrio/{slug-barrio}</code></td>
-        <td><code>.../resource/Barrio/chopera</code></td>
+        <td><code>http://smartcity.linkeddata.es/sports/resource/Barrio/{URI-BARRIO}</code></td>
+        <td><code>.../resource/Barrio/Chopera</code></td>
       </tr>
     </tbody>
   </table>
-  <p class="mini">Notas: <em>{PK}</em> toma el identificador numérico municipal del CSV; los <em>slugs</em> se generan en minúsculas, sin acentos ni espacios.</p>
+  <p class="mini">Notas: los identificadores de las instancias son legibles y empiezan por mayúscula. Se generan en OpenRefine (columnas <code>URI-CENTRO</code> y <code>URI-DISTRITO</code>) a partir del nombre: sin tildes, sin espacios ni signos y en UpperCamelCase. En los centros se omite el prefijo común "Centro Deportivo Municipal" y lo que va entre paréntesis (p. ej. "Centro Deportivo Municipal Marqués de Samaranch" → <code>MarquesDeSamaranch</code>; "Moncloa-Aravaca" → <code>MoncloaAravaca</code>). El identificador municipal (<code>PK</code>) se conserva como dato mediante la propiedad <code>:pk</code>. La URI de barrio queda reservada para cuando la ontología incluya esa clase.</p>
 
   <h3>3.3. Negociación de contenido</h3>
   <p>Servir HTML por defecto para navegadores web y formatos RDF (Turtle/JSON-LD) mediante negociación de contenido HTTP para procesadores semánticos.</p>

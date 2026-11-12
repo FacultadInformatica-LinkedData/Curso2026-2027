@@ -1,6 +1,5 @@
 @prefix rml: <http://w3id.org/rml/> .
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
-@prefix morph-kgc: <https://github.com/morph-kgc/morph-kgc/function/built-in.ttl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -21,10 +20,11 @@
 #
 # Estrategia de nombrado (analysis.html):
 #   Ontologia : http://smartcity.linkeddata.es/sports/ontology/
-#   Centros   : http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}
-#   Distritos : http://smartcity.linkeddata.es/sports/resource/District/{slug}
-#               slug = DISTRITO en minusculas y con "-" en lugar de espacios
-#               (los valores ya vienen sin tildes tras la limpieza del Hands-On 3)
+#   Centros   : http://smartcity.linkeddata.es/sports/resource/SportsCenter/{URI-CENTRO}
+#   Distritos : http://smartcity.linkeddata.es/sports/resource/District/{URI-DISTRITO}
+#   URI-CENTRO y URI-DISTRITO se generan en OpenRefine (openrefine/history.json):
+#   identificadores legibles en UpperCamelCase y sin tildes, p.ej.
+#   .../SportsCenter/MarquesDeSamaranch y .../District/MoncloaAravaca
 #####################################################################
 
 #####################################################################
@@ -38,7 +38,7 @@
   ] ;
 
   rml:subjectMap [
-    rml:template "http://smartcity.linkeddata.es/sports/resource/SportsCenter/{PK}" ;
+    rml:template "http://smartcity.linkeddata.es/sports/resource/SportsCenter/{URI-CENTRO}" ;
     rml:class :SportsCenter
   ] ;
 
@@ -124,14 +124,12 @@
     rml:objectMap [ rml:reference "WIKIDATA-CENTRO" ; rml:termType rml:IRI ]
   ] ;
 
-  # Enlace con el distrito. Se usa la misma funcion que genera la URI del
-  # distrito en <#DistrictMap> (equivale a un join por DISTRITO, ya que ambos
-  # maps comparten la misma fuente).
+  # Enlace con el distrito: misma plantilla de URI que el sujeto de <#DistrictMap>
+  # (ambos maps comparten la misma fuente).
   rml:predicateObjectMap [
     rml:predicate :locatedInDistrict ;
     rml:objectMap [
-      rml:functionExecution <#DistrictIRIFunction> ;
-      rml:termType rml:IRI
+      rml:template "http://smartcity.linkeddata.es/sports/resource/District/{URI-DISTRITO}"
     ]
   ] .
 
@@ -146,8 +144,7 @@
   ] ;
 
   rml:subjectMap [
-    rml:functionExecution <#DistrictIRIFunction> ;
-    rml:termType rml:IRI ;
+    rml:template "http://smartcity.linkeddata.es/sports/resource/District/{URI-DISTRITO}" ;
     rml:class :District
   ] ;
 
@@ -161,34 +158,3 @@
     rml:predicate owl:sameAs ;
     rml:objectMap [ rml:reference "WIKIDATA-DISTRITO" ; rml:termType rml:IRI ]
   ] .
-
-#####################################################################
-# Funcion compartida que construye la URI de un distrito:
-#   concat("http://smartcity.linkeddata.es/sports/resource/District/",
-#          replace(toLowerCase(DISTRITO), " ", "-"))
-#   p.ej. "Puente De Vallecas" -> .../resource/District/puente-de-vallecas
-#####################################################################
-<#DistrictIRIFunction>
-  rml:function morph-kgc:concat ;
-  rml:input
-    [ rml:parameter grel:valueParameter1 ;
-      rml:inputValueMap [ rml:constant "http://smartcity.linkeddata.es/sports/resource/District/" ] ] ,
-    [ rml:parameter grel:valueParameter2 ;
-      rml:inputValueMap [
-        rml:functionExecution [
-          rml:function grel:string_replace ;
-          rml:input
-            [ rml:parameter grel:valueParameter ;
-              rml:inputValueMap [
-                rml:functionExecution [
-                  rml:function grel:toLowerCase ;
-                  rml:input [ rml:parameter grel:valueParameter ;
-                              rml:inputValueMap [ rml:reference "DISTRITO" ] ]
-                ]
-              ] ] ,
-            [ rml:parameter grel:p_string_find ;
-              rml:inputValueMap [ rml:constant " " ] ] ,
-            [ rml:parameter grel:p_string_replace ;
-              rml:inputValueMap [ rml:constant "-" ] ]
-        ]
-      ] ] .
