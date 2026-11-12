@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ruff_cache/
+
+# Virtual environments
+.venv
+
+# Caché de Wikidata generada por la app
+data/
+
+# Copias locales de la entrega del grupo; la app solo usa lo copiado en graph/
+Group03/
+Group03-actualizado/
+.claude/

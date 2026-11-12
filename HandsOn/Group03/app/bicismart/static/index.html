@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BiciSmart</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside class="panel">
+    <header class="brand">
+      <h1>BiciSmart</h1>
+      <p>Rutas en BiciMAD sobre el grafo RDF de BiciMAD, el Callejero y Wikidata</p>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Modo">
+      <button type="button" role="tab" id="tab-route" data-mode="route" aria-controls="route-form" aria-selected="true">Ruta</button>
+      <button type="button" role="tab" id="tab-explore" data-mode="explore" aria-controls="explore-form" aria-selected="false" tabindex="-1">Explorar</button>
+    </nav>
+
+    <form class="trip" id="route-form" role="tabpanel" aria-labelledby="tab-route" autocomplete="off">
+      <div class="field" data-role="from">
+        <label for="from-input">Desde</label>
+        <div class="input-row">
+          <input id="from-input" type="text" placeholder="Calle, lugar o estación">
+          <button type="button" class="icon-btn" id="locate" title="Usar mi ubicación" aria-label="Usar mi ubicación">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+        <ul class="suggestions" role="listbox" hidden></ul>
+      </div>
+      <div class="field" data-role="to">
+        <div class="label-row">
+          <label for="to-input">Hasta</label>
+          <button type="button" class="swap" id="swap" title="Intercambiar origen y destino">⇅ Intercambiar</button>
+        </div>
+        <div class="input-row">
+          <input id="to-input" type="text" placeholder="Bravo Murillo 120, Museo del Prado, un parque…">
+        </div>
+        <ul class="suggestions" role="listbox" hidden></ul>
+      </div>
+      <p class="hint">También puedes hacer clic en el mapa o en una estación.</p>
+    </form>
+
+    <form class="trip" id="explore-form" role="tabpanel" aria-labelledby="tab-explore" autocomplete="off" hidden>
+      <div class="field" data-role="center">
+        <label for="center-input">Estaciones cerca de</label>
+        <div class="input-row">
+          <input id="center-input" type="text" placeholder="Museo del Prado, Alcalá, un parque…">
+        </div>
+        <ul class="suggestions" role="listbox" hidden></ul>
+      </div>
+      <fieldset class="radius">
+        <legend>Radio</legend>
+        <div class="segmented">
+          <label><input type="radio" name="radius" value="300"><span>300 m</span></label>
+          <label><input type="radio" name="radius" value="500" checked><span>500 m</span></label>
+          <label><input type="radio" name="radius" value="1000"><span>1 km</span></label>
+        </div>
+      </fieldset>
+      <p class="hint">También puedes hacer clic en el mapa o en una estación.</p>
+    </form>
+
+    <p class="status" id="status" hidden></p>
+
+    <section id="results" aria-live="polite"></section>
+
+    <footer class="credits">
+      Datos: BiciMAD y Callejero (Ayuntamiento de Madrid, CC BY 4.0) ·
+      <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a> (CC0) ·
+      Mapa y rutas: © colaboradores de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> (ODbL), OSRM/FOSSGIS
+    </footer>
+  </aside>
+  <main id="map" aria-label="Mapa"></main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

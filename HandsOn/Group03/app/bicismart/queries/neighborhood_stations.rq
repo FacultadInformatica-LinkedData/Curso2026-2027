@@ -1,0 +1,21 @@
+PREFIX bm:   <https://bicismart.madrid.data.es/ontology#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Estaciones utilizables en calles que comparten distrito y barrio con la calle dada.
+# Sirve para situar de forma aproximada una calle sin estaciones ni coordenadas en Wikidata.
+# Solo cuentan las calles que están enteras en ese distrito y barrio: las largas, que cruzan
+# varios, desplazarían el centro.
+SELECT DISTINCT ?station ?id ?name ?lat ?lon ?capacity ?unavailable
+WHERE {
+  VALUES ?street { $street }
+  ?street bm:districtCode ?district ;
+          bm:neighborhoodCode ?neighborhood .
+  ?other bm:districtCode ?district ;
+         bm:neighborhoodCode ?neighborhood .
+  FILTER NOT EXISTS { ?other bm:districtCode ?otherDistrict FILTER (?otherDistrict != ?district) }
+  FILTER NOT EXISTS { ?other bm:neighborhoodCode ?otherHood FILTER (?otherHood != ?neighborhood) }
+  ?station bm:locatedOnStreet ?other .
+  #include _station
+  FILTER (?usable)
+}

@@ -1,0 +1,30 @@
+[project]
+name = "bicismart"
+version = "0.1.0"
+description = "BiciSmart: rutas BiciMAD sobre el grafo RDF de BiciMAD, el Callejero y Wikidata"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "pyoxigraph>=0.5.13",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+# El código aún no está formateado con `ruff format`: cambiaría unas 400 líneas, sobre todo por
+# abrir los corchetes que aquí se escriben juntos (`[{ … }]`, `.append({ … })`). Si se adopta,
+# mejor en un PR que solo haga eso.
+quote-style = "double"

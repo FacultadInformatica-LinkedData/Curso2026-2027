@@ -1,0 +1,9 @@
+PREFIX bm:  <https://bicismart.madrid.data.es/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Calles enlazadas con Wikidata (owl:sameAs).
+SELECT ?street ?wikidata
+WHERE {
+  ?street a bm:Street ;
+          owl:sameAs ?wikidata .
+}
