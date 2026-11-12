@@ -1,0 +1,10 @@
+PREFIX bm:  <https://bicismart.madrid.data.es/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Nombre de una calle del Callejero y su enlace a Wikidata.
+SELECT ?street ?name ?wikidata
+WHERE {
+  VALUES ?street { $street }
+  ?street bm:streetName ?name .
+  OPTIONAL { ?street owl:sameAs ?wikidata }
+}

@@ -1,0 +1,14 @@
+# Estación BiciMAD con su posición, sus bases y su estado. ?usable dice si se puede usar:
+# activada, en servicio y con alguna base útil.
+?station a bm:BikeStation ;
+         bm:stationId ?id ;
+         rdfs:label ?name ;
+         bm:totalCapacity ?capacity ;
+         bm:hasPoint ?point ;
+         bm:hasState ?stationState .
+?point geo:lat ?lat ;
+       geo:long ?lon .
+?stationState bm:isActivated ?activated ;
+              bm:operationalState ?state ;
+              bm:unavailableBases ?unavailable .
+BIND (?activated && ?state = "IN_SERVICE" && ?capacity - ?unavailable > 0 AS ?usable)

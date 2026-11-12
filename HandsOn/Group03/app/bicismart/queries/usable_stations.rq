@@ -1,0 +1,10 @@
+PREFIX bm:   <https://bicismart.madrid.data.es/ontology#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Estaciones que se pueden usar: activadas, en servicio y con alguna base útil.
+SELECT ?station ?id ?name ?lat ?lon ?capacity ?unavailable ?usable
+WHERE {
+  #include _station
+  FILTER (?usable)
+}
