@@ -13,14 +13,14 @@ WHERE {
 SELECT (COUNT(?parking) AS ?totalCentro)
 WHERE {
   ?parking a ont:BicycleParking ;
-           ont:inDistrict res:District/CENTRO .
+           ont:inDistrict <http://smartcity.linkeddata.es/bicis/resource/District/CENTRO> .
 }
 
 # Query 3: Obtener la latitud y longitud del aparcabicis con ID 10037979
 SELECT ?lat ?long
 WHERE {
-  res:BicycleParking/10037979 ont:latitude ?lat ;
-                              ont:longitude ?long .
+  <http://smartcity.linkeddata.es/bicis/resource/BicycleParking/10037979> ont:latitude ?lat ;
+                                                                          ont:longitude ?long .
 }
 
 # Query 4: Listar 10 aparcabicis con su capacidad y dirección
