@@ -163,8 +163,11 @@ th{width:34%;color:var(--muted);font-weight:600}
 <tr><th>Ontology URI</th><td><code>https://bicismart.madrid.data.es/ontology#</code></td></tr>
 <tr><th>Class pattern</th><td><code>https://bicismart.madrid.data.es/ontology#UpperCamelCase</code><br>Example: <code>https://bicismart.madrid.data.es/ontology#BikeStation</code></td></tr>
 <tr><th>Property and data-property pattern</th><td><code>https://bicismart.madrid.data.es/ontology#lowerCamelCase</code><br>Example: <code>https://bicismart.madrid.data.es/ontology#hasState</code></td></tr>
-<tr><th>Individual resource pattern</th><td><code>https://bicismart.madrid.data.es/resource/{entityType}/{id}</code></td></tr>
-<tr><th>Examples</th><td>BikeStation: <code>https://bicismart.madrid.data.es/resource/BikeStation/2</code><br>StationState: <code>https://bicismart.madrid.data.es/resource/StationState/2</code><br>Street: <code>https://bicismart.madrid.data.es/resource/Street/507100</code></td></tr>
+<tr><th>Individual resource pattern</th><td><code>https://bicismart.madrid.data.es/resource/{entityType}/{name}</code><br>The last part is a human-readable name built from the data, not a number. Each class has its own path.</td></tr>
+<tr><th>Examples</th><td>BikeStation: <code>https://bicismart.madrid.data.es/resource/BikeStation/MetroCallao</code><br>Point: <code>https://bicismart.madrid.data.es/resource/Point/MetroCallao</code>StationState: <code>https://bicismart.madrid.data.es/resource/StationState/MetroCallao</code><br>Street: <code>https://bicismart.madrid.data.es/resource/Street/Calle_MiguelMoya</code></td></tr>
+<tr><th>Name construction</th><td>BikeStation, Point and StationState: station name without its number (<code>2 - Metro Callao</code> → <code>MetroCallao</code>).<br>Street: street type + <code>_</code> + street name (<code>CALLE</code> + <code>MIGUEL MOYA</code> → <code>Calle_MiguelMoya</code>). The type is needed because many names are repeated with different types (e.g. Calle Toledo and Ronda Toledo).<br>Accents are removed, Ñ becomes N, spaces and symbols are removed, and each word starts with a capital letter, so URIs contain no <code>%20</code>.</td></tr>
+<tr><th>Disambiguation</th><td>If two different resources get the same name, a distinguishing part is added: the district for streets (<code>Calle_CalvoSotelo_Distrito9</code> / <code>Calle_CalvoSotelo_Distrito16</code>) and the street for stations (<code>MetroDiegoDeLeon_JuanBravo</code> / <code>MetroDiegoDeLeon_AlonsoHeredia</code>).</td></tr>
+<tr><th>Original identifiers</th><td>Numeric codes are kept as data properties (<code>bm:stationId</code>, <code>bm:streetCode</code>) and the original text is kept in <code>rdfs:label</code>.</td></tr>
 </table>
 </div>
 </section>
