@@ -7,67 +7,101 @@
 <http://smartcity.linkeddata.es/touristaccommodation/ontology/> a owl:Ontology ;
     rdfs:label "Tourist Accommodation Ontology"@en .
 
-
-# Clases
+# Classes
 
 :Accommodation a owl:Class ;
-    owl:disjointWith :Address, :City ;
-    rdfs:comment "A place providing lodging to tourists or travelers."@en ;
     rdfs:label "Accommodation"@en .
 
 :Address a owl:Class ;
-    owl:disjointWith :City ;
-    rdfs:comment "The physical location details (such as street and postal code) of an accommodation."@en ;
     rdfs:label "Address"@en .
 
 :City a owl:Class ;
-    rdfs:comment "A large or important town or municipality where accommodations are located."@en ;
     rdfs:label "City"@en .
 
-# Object Properties
+# Accommodation type hierarchy (one subclass per value of the source column alojamiento_tipo)
 
+:Hotel a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Hotel"@en .
+
+:Hostel a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Hostel"@en .
+
+:Pension a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Pension"@en .
+
+:BoardingHouse a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Boarding house"@en .
+
+:TouristApartment a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Tourist apartment"@en .
+
+:ApartHotel a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Apart-hotel"@en .
+
+:Inn a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Inn"@en .
+
+:Camping a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Camping"@en .
+
+:TouristHome a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Tourist home"@en .
+
+:RuralAccommodation a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Rural accommodation"@en .
+
+:RuralHouse a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation ;
+    rdfs:label "Rural house"@en .
+
+:RuralApartment a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation ;
+    rdfs:label "Rural apartment"@en .
+
+:RuralHotel a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation ;
+    rdfs:label "Rural hotel"@en .
+
+# Object Properties
 
 :hasAddress a owl:ObjectProperty ;
     rdfs:domain :Accommodation ;
     rdfs:range :Address ;
-    rdfs:comment "Links an accommodation entity to its specific physical address."@en ;
     rdfs:label "has address"@en .
 
 :inCity a owl:ObjectProperty ;
     rdfs:domain :Address ;
     rdfs:range :City ;
-    rdfs:comment "Links a physical address to the city or municipality where it is located."@en ;
     rdfs:label "in city"@en .
-
 
 # Data Properties
 
 :hasName a owl:DatatypeProperty ;
     rdfs:domain :Accommodation ;
     rdfs:range xsd:string ;
-    rdfs:comment "The official or commercial name of the accommodation."@en ;
     rdfs:label "has name"@en .
 
-:hasType a owl:DatatypeProperty ;
+:categoryLevel a owl:DatatypeProperty ;
     rdfs:domain :Accommodation ;
-    rdfs:range xsd:string ;
-    rdfs:comment "The specific classification or type of the accommodation (e.g., Hotel, Hostel, Apartment)."@en ;
-    rdfs:label "has type"@en .
-
-:hasCategory a owl:DatatypeProperty ;
-    rdfs:domain :Accommodation ;
-    rdfs:range xsd:string ;
-    rdfs:comment "The rating or category assigned to the accommodation, usually representing its quality or services."@en ;
-    rdfs:label "has category"@en .
+    rdfs:range xsd:integer ;
+    rdfs:label "category level"@en .
 
 :hasStreet a owl:DatatypeProperty ;
     rdfs:domain :Address ;
     rdfs:range xsd:string ;
-    rdfs:comment "The name and number of the street or road as part of a physical address."@en ;
     rdfs:label "has street"@en .
 
 :postalCode a owl:DatatypeProperty ;
     rdfs:domain :Address ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "The numeric postal code associated with the physical address."@en ;
+    rdfs:range xsd:string ;
     rdfs:label "postal code"@en .

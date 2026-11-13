@@ -1,20 +1,28 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vocab: <http://smartcity.linkeddata.es/touristaccommodation/ontology/>
+
+# NOTE: these queries must be run over ontology/ontology.ttl + rdf/data.ttl loaded together.
+# Every accommodation is typed only with its concrete class (vocab:Hotel, vocab:RuralHouse...),
+# so "all accommodations" is obtained with the property path a/rdfs:subClassOf* vocab:Accommodation.
+# This works with or without RDFS inference (e.g. GraphDB with the RDFS ruleset).
 
 # Query 1: Count accommodations created
 SELECT (COUNT(DISTINCT ?accommodation) AS ?totalAccommodations)
 WHERE {
-  ?accommodation a vocab:Accommodation .
+  ?accommodation a/rdfs:subClassOf* vocab:Accommodation .
 }
 
-# Query 2: List sample accommodations with their name and type
-SELECT ?accommodation ?name ?type
+# Query 2: List sample accommodations with their label and type (class)
+SELECT ?accommodation ?label ?type ?typeLabel
 WHERE {
-  ?accommodation a vocab:Accommodation ;
-                 vocab:hasName ?name ;
-                 vocab:hasType ?type .
+  ?accommodation a ?type ;
+                 rdfs:label ?label .
+  ?type rdfs:subClassOf* vocab:Accommodation ;
+        rdfs:label ?typeLabel .
 }
+ORDER BY ?label
 LIMIT 20
 
 # Query 3: Count cities
@@ -24,10 +32,10 @@ WHERE {
 }
 
 # Query 4: Retrieve accommodations with a postal code and city
-SELECT ?name ?postalCode ?cityName
+SELECT ?label ?postalCode ?cityName
 WHERE {
-  ?accommodation a vocab:Accommodation ;
-                 vocab:hasName ?name ;
+  ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                 rdfs:label ?label ;
                  vocab:hasAddress ?address .
   ?address vocab:postalCode ?postalCode ;
            vocab:inCity ?city .
@@ -35,11 +43,87 @@ WHERE {
 }
 LIMIT 20
 
-# Query 5: Count accommodations by accommodation type
-SELECT ?type (COUNT(?accommodation) AS ?total)
+# Query 5: Count accommodations by accommodation type (class)
+SELECT ?type ?typeLabel (COUNT(?accommodation) AS ?total)
 WHERE {
-  ?accommodation a vocab:Accommodation ;
-                 vocab:hasType ?type .
+  ?accommodation a ?type .
+  ?type rdfs:subClassOf* vocab:Accommodation ;
+        rdfs:label ?typeLabel .
 }
-GROUP BY ?type
+GROUP BY ?type ?typeLabel
 ORDER BY DESC(?total)
+
+# Query 6: Rural accommodations (any subclass of vocab:RuralAccommodation) with their type and city
+SELECT ?label ?typeLabel ?cityName
+WHERE {
+  ?accommodation a ?type ;
+                 rdfs:label ?label ;
+                 vocab:hasAddress/vocab:inCity ?city .
+  ?type rdfs:subClassOf* vocab:RuralAccommodation ;
+        rdfs:label ?typeLabel .
+  ?city rdfs:label ?cityName .
+}
+ORDER BY ?cityName ?label
+
+# Query 7: Hotels with 4 or 5 stars and the city where they are located
+SELECT ?name ?level ?cityName
+WHERE {
+  ?hotel a vocab:Hotel ;
+         vocab:hasName ?name ;
+         vocab:categoryLevel ?level ;
+         vocab:hasAddress/vocab:inCity/rdfs:label ?cityName .
+  FILTER (?level >= 4)
+}
+ORDER BY DESC(?level) ?cityName ?name
+
+# Query 8: Top 10 municipalities by number of accommodations
+SELECT ?city ?cityName (COUNT(?accommodation) AS ?total)
+WHERE {
+  ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                 vocab:hasAddress/vocab:inCity ?city .
+  ?city rdfs:label ?cityName .
+}
+GROUP BY ?city ?cityName
+ORDER BY DESC(?total)
+LIMIT 10
+
+# Query 9: Average category level per accommodation type (only types that have levels)
+SELECT ?typeLabel (COUNT(?level) AS ?withLevel) (ROUND(AVG(?level) * 100) / 100 AS ?avgLevel)
+WHERE {
+  ?accommodation a ?type ;
+                 vocab:categoryLevel ?level .
+  ?type rdfs:subClassOf* vocab:Accommodation ;
+        rdfs:label ?typeLabel .
+}
+GROUP BY ?typeLabel
+ORDER BY DESC(?avgLevel)
+
+# Query 10: Accommodations whose address has no city (data quality check with FILTER NOT EXISTS)
+SELECT ?accommodation ?label ?postalCode
+WHERE {
+  ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                 rdfs:label ?label ;
+                 vocab:hasAddress ?address .
+  OPTIONAL { ?address vocab:postalCode ?postalCode . }
+  FILTER NOT EXISTS { ?address vocab:inCity ?city . }
+}
+ORDER BY ?accommodation
+
+# Query 11: Is there any 5-star hotel in Madrid? (ASK)
+ASK {
+  ?hotel a vocab:Hotel ;
+         vocab:categoryLevel 5 ;
+         vocab:hasAddress/vocab:inCity <http://smartcity.linkeddata.es/touristaccommodation/resource/City/madrid> .
+}
+
+# Query 12: Simplified graph linking each 5-star accommodation directly to its city (CONSTRUCT)
+CONSTRUCT {
+  ?accommodation rdfs:label ?label ;
+                 vocab:inCity ?city .
+}
+WHERE {
+  ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                 rdfs:label ?label ;
+                 vocab:categoryLevel 5 ;
+                 vocab:hasAddress/vocab:inCity ?city .
+}

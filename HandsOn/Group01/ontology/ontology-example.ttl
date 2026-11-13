@@ -1,19 +1,20 @@
-@prefix ont: <http://smartcity.linkeddata.es/touristaccommodation/ontology/> .
-@prefix res: <http://smartcity.linkeddata.es/touristaccommodation/resource/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont:  <http://smartcity.linkeddata.es/touristaccommodation/ontology/> .
+@prefix acc:  <http://smartcity.linkeddata.es/touristaccommodation/resource/Accommodation/> .
+@prefix addr: <http://smartcity.linkeddata.es/touristaccommodation/resource/Address/> .
+@prefix city: <http://smartcity.linkeddata.es/touristaccommodation/resource/City/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-# City Instance
-res:City/Madrid a ont:City .
+city:madrid a ont:City ;
+    rdfs:label "Madrid" .
 
-# Address Instance
-res:Address/HM-127 a ont:Address ;
-    ont:hasStreet "PASEO de la Chopera 71"^^xsd:string ;
-    ont:postalCode 28045 ;
-    ont:inCity res:City/Madrid .
+addr:HM-127 a ont:Address ;
+    rdfs:label "Paseo De La Chopera" ;
+    ont:hasStreet "De La Chopera" ;
+    ont:postalCode "28045" ;
+    ont:inCity city:madrid .
 
-# Accommodation Instance
-res:Accommodation/HM-127 a ont:Accommodation ;
-    ont:hasName "GRAN LEGAZPI"^^xsd:string ;
-    ont:hasType "HOTEL"^^xsd:string ;
-    ont:hasCategory "3-HOTEL"^^xsd:string ;
-    ont:hasAddress res:Address/HM-127 .
+acc:HM-127 a ont:Hotel ;
+    rdfs:label "Gran Legazpi" ;
+    ont:hasName "Gran Legazpi" ;
+    ont:categoryLevel 3 ;
+    ont:hasAddress addr:HM-127 .
