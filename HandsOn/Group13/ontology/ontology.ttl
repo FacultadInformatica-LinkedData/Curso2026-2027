@@ -45,11 +45,6 @@
     rdfs:comment "A localized subdivision within an administrative district of Madrid."@en ;
     rdfs:subClassOf schema:AdministrativeArea .
 
-###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#Accessibility
-:Accessibility a owl:Class ;
-    rdfs:label "Accessibility"@en ;
-    rdfs:comment "Information representing the physical accessibility status of a location."@en .
-
 
 #################################################################
 #    Object Properties
@@ -82,13 +77,6 @@
     rdfs:comment "Relates a neighborhood to the administrative district it belongs to."@en ;
     rdfs:domain :Neighborhood ;
     rdfs:range :District .
-
-###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#hasAccessibility
-:hasAccessibility a owl:ObjectProperty ;
-    rdfs:label "has accessibility"@en ;
-    rdfs:comment "Relates an educational center to its accessibility level classification."@en ;
-    rdfs:domain :EducationalCenter ;
-    rdfs:range :Accessibility .
 
 
 #################################################################
@@ -210,6 +198,6 @@
 ###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#accessibilityCode
 :accessibilityCode a owl:DatatypeProperty ;
     rdfs:label "accessibility code"@en ;
-    rdfs:comment "Numerical code representing the accessibility rating."@en ;
-    rdfs:domain :Accessibility ;
+    rdfs:comment "Code representing the physical accessibility rating of the educational center."@en ;
+    rdfs:domain :EducationalCenter ;
     rdfs:range xsd:string .
