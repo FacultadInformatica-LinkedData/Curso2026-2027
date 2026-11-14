@@ -181,7 +181,7 @@
     <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">notation</rdfs:label>
     <rdfs:comment xml:lang="en">Original category code on a station subclass.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>

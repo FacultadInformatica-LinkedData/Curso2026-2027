@@ -322,14 +322,14 @@ http://breathemadrid.es/ontology#{propertyName}</pre>
         </tr>
         <tr>
           <td>Observation</td>
-          <td><code>resource/observation/{station-slug}/{pollutant-slug}/{technique}/{date}/{hour}</code></td>
-          <td><code>resource/observation/plaza-de-espana/pm10/A/2026-10-01/H01</code></td>
+          <td><code>resource/observation/{station-slug}/{pollutant-slug}/{date}/{hour}</code></td>
+          <td><code>resource/observation/plaza-de-espana/pm10/2026-10-01/H01</code></td>
         </tr>
       </tbody>
     </table>
 
     <p>Identifiers are human-readable Spanish slugs selected from fixed mappings of the official source codes, rather than auto-incremented integers or slugs generated from display labels. The municipality code <code>28079</code>, station <code>CODIGO</code>, and pollutant <code>MAGNITUD</code> remain available as RDF properties. Station category codes (<code>UT</code>, <code>UF</code>, <code>S</code>) are recorded as <code>skos:notation</code> on the corresponding ontology classes, rather than as individuals or station property values. The fixed mappings are defined in <code>scripts/prepare_uri_csv.py</code>, which enriches transformed CSVs in <code>csv/uri/</code> without changing the original source files. The same code always resolves to the same URI across all three RML mappings.</p>
-    <p>Observation URIs combine the station and pollutant slugs, sampling technique extracted from <code>PUNTO_MUESTREO</code>, date and hour. The full original sampling point identifier is retained in <code>bm:samplingPointCode</code>. Including the technique distinguishes observations that otherwise share a station, pollutant and time. All 3,024 observations in the current dataset have distinct URIs. As a stable identifier policy, an established slug must remain mapped to its official code even if a display name changes.</p>
+    <p>Observation URIs combine the station and pollutant slugs, date and hour. This combination uniquely identifies all 3,024 observations in the current dataset. The full original <code>PUNTO_MUESTREO</code> identifier, including the sampling technique, is retained in <code>bm:samplingPointCode</code>. If future data contain more than one technique for the same station, pollutant, date and hour, the naming strategy will need an additional distinguishing component. As a stable identifier policy, an established slug must remain mapped to its official code even if a display name changes.</p>
 
     <h3>3.4 Linking to external entities</h3>
     <p>Municipality individuals are linked to their Wikidata counterpart using <code>owl:sameAs</code>. For example, Madrid is linked to <code>http://www.wikidata.org/entity/Q2807</code>.</p>

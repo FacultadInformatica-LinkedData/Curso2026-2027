@@ -45,7 +45,7 @@ bm:UrbanTrafficStation a owl:Class ;
 
 # Observations
 
-<http://breathemadrid.es/resource/observation/plaza-de-espana/pm10/A/2026-10-01/H01> a bm:Observation ;
+<http://breathemadrid.es/resource/observation/plaza-de-espana/pm10/2026-10-01/H01> a bm:Observation ;
     bm:observedAt <http://breathemadrid.es/resource/station/plaza-de-espana> ;
     bm:observesPollutant <http://breathemadrid.es/resource/pollutant/pm10> ;
     bm:samplingPointCode "28079004_10_A" ;
@@ -53,7 +53,7 @@ bm:UrbanTrafficStation a owl:Class ;
     bm:dateTime "2026-10-01T01:00:00"^^xsd:dateTime ;
     bm:isValid "true"^^xsd:boolean .
 
-<http://breathemadrid.es/resource/observation/plaza-de-espana/pm10/A/2026-10-01/H02> a bm:Observation ;
+<http://breathemadrid.es/resource/observation/plaza-de-espana/pm10/2026-10-01/H02> a bm:Observation ;
     bm:observedAt <http://breathemadrid.es/resource/station/plaza-de-espana> ;
     bm:observesPollutant <http://breathemadrid.es/resource/pollutant/pm10> ;
     bm:samplingPointCode "28079004_10_A" ;

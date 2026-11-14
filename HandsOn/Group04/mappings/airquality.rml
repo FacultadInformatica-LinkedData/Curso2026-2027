@@ -69,7 +69,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://breathemadrid.es/resource/observation/{STATION_SLUG}/{POLLUTANT_SLUG}/{TECHNIQUE}/{FECHA}/H{HORA}" ;
+        rr:template "http://breathemadrid.es/resource/observation/{STATION_SLUG}/{POLLUTANT_SLUG}/{FECHA}/H{HORA}" ;
         rr:class bm:Observation
     ] ;
 

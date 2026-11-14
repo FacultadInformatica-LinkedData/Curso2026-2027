@@ -39,7 +39,7 @@ We also considered GeoSPARQL and vCard. We did not use them because the WGS84 pr
 
 New superclasses: bm:Station is also a geo:SpatialThing. Urban traffic, urban background and suburban stations are subclasses of bm:Station.
 
-The reused terms are declared with the same OWL type they have in their original vocabulary. For example, skos:prefLabel is an owl:AnnotationProperty and qudt:hasUnit is an owl:ObjectProperty.
+The reused terms are declared with the same OWL type they have in their original vocabulary. For example, skos:prefLabel is an owl:AnnotationProperty, skos:notation is an owl:DatatypeProperty and qudt:hasUnit is an owl:ObjectProperty.
 
 We kept bm:observedAt, bm:measuresPollutant and bm:isValid. SOSA links observations to sensors, not to platforms, and we do not have sensor data, so there is no direct property for "observation made at a station". We found nothing for the validity flag either. The former `bm:StationType` individuals and `bm:hasStationType` links were replaced by explicit `rdf:type` assertions to `bm:UrbanTrafficStation`, `bm:UrbanBackgroundStation` and `bm:SuburbanStation`. The source codes UT, UF and S are preserved as class metadata with `skos:notation`.
 
@@ -51,7 +51,7 @@ Before running any mapping, prepare the URI columns from the existing OpenRefine
 python scripts/prepare_uri_csv.py
 ```
 
-This deterministic step uses fixed official-code-to-slug tables for the 24 stations and 11 pollutants, and a fixed code-to-class mapping for the three station categories. It writes six staged CSV files under `csv/uri/`; it does not alter the source CSVs or OpenRefine outputs. All three RML mappings use these staged files, so references to the same individual always receive the same URI. Observation identifiers include the technique from `PUNTO_MUESTREO`, and the complete original sampling point is retained as `bm:samplingPointCode` (`bm:Observation` domain, `xsd:string` range). Official station, pollutant and municipality codes remain in their existing RDF properties; category codes are metadata on classes.
+This deterministic step uses fixed official-code-to-slug tables for the 24 stations and 11 pollutants, and a fixed code-to-class mapping for the three station categories. It writes six staged CSV files under `csv/uri/`; it does not alter the source CSVs or OpenRefine outputs. All three RML mappings use these staged files, so references to the same individual always receive the same URI. Observation identifiers combine station, pollutant, date and hour; this is unique for all 3,024 current observations. The complete original sampling point, including its technique, is retained as `bm:samplingPointCode` (`bm:Observation` domain, `xsd:string` range). If future source data contain several techniques for the same combination, the URI strategy must be extended. Official station, pollutant and municipality codes remain in their existing RDF properties; category codes are metadata on classes.
 
 Regenerate the five RDF files from `HandsOn/Group04` with RMLMapper:
 
@@ -75,4 +75,4 @@ java -jar rmlmapper-8.1.0-r380-all.jar -m mappings/airquality-updated.rml -s tur
 
 `csv/contaminantes-updated.csv` is `csv/contaminantes-with-links.csv` with one extra column, `UNIDAD_QUDT`, which holds the QUDT unit for each pollutant.
 
-Before the URI migration, the updated RDF had 20,828 triples: the 20,817 of Hands-on 5 plus 11 `qudt:hasUnit` triples. The URI migration added 3,024 triples, one original sampling point code per observation, yielding 23,852. Replacing the three station-type individuals with explicit station subclass types yields 23,840 triples: 12 triples describing the old individuals and 24 `bm:hasStationType` links are removed, while 24 subclass `rdf:type` triples are added. The 33 links to Wikidata are unchanged. 821 observations have no value because they are hours that were not measured yet or not valid (`ES_VALIDA` is false); this was already the case in Hands-on 5.
+Before the URI migration, the updated RDF had 20,828 triples: the 20,817 of Hands-on 5 plus 11 `qudt:hasUnit` triples. The URI migration added 3,024 triples, one original sampling point code per observation, yielding 23,852. Replacing the three station-type individuals with explicit station subclass types yields 23,840 triples: 12 triples describing the old individuals and 24 `bm:hasStationType` links are removed, while 24 subclass `rdf:type` triples are added. Removing the redundant technique segment from observation URIs changes no triple or individual counts. The 33 links to Wikidata are unchanged. 821 observations have no value because they are hours that were not measured yet or not valid (`ES_VALIDA` is false); this was already the case in Hands-on 5.

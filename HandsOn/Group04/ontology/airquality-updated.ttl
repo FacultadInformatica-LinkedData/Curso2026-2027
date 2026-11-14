@@ -198,7 +198,7 @@ dct:identifier a owl:DatatypeProperty ;
     rdfs:comment "Code of a station, pollutant or municipality (replaces bm:stationCode, bm:pollutantCode and bm:municipalityCode)."@en ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
-skos:notation a owl:AnnotationProperty ;
+skos:notation a owl:DatatypeProperty ;
     rdfs:label "notation"@en ;
     rdfs:comment "Original category code on a station subclass."@en ;
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .

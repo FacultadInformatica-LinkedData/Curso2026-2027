@@ -89,18 +89,16 @@ def main():
         point = row['PUNTO_MUESTREO']
         prefix = f"{code}_{row['MAGNITUD']}_"
         assert point.startswith(prefix), row
-        technique = point[len(prefix):]
-        assert technique and '/' not in technique, row
+        assert point[len(prefix):], row
         key = (STATIONS[code], POLLUTANTS[row['MAGNITUD']],
-               technique, row['FECHA'], row['HORA'])
+               row['FECHA'], row['HORA'])
         assert key not in keys, key
         keys.add(key)
         points.add(point)
-        return {'STATION_SLUG': key[0], 'POLLUTANT_SLUG': key[1],
-                'TECHNIQUE': technique}
+        return {'STATION_SLUG': key[0], 'POLLUTANT_SLUG': key[1]}
 
     stage('calair_tiemporeal-updated.csv', 'observations.csv',
-          ['STATION_SLUG', 'POLLUTANT_SLUG', 'TECHNIQUE'], observation, 3024)
+          ['STATION_SLUG', 'POLLUTANT_SLUG'], observation, 3024)
     assert len(keys) == 3024
     print(f'Staged 24 stations, 11 pollutants, 3 station categories, '
           f'{len(points)} sampling points and {len(keys)} unique observations.')

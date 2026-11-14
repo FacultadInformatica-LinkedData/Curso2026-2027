@@ -187,4 +187,4 @@ bm:Station a owl:Class ;
 [] a owl:AllDisjointClasses ;
     owl:members ( bm:UrbanTrafficStation bm:UrbanBackgroundStation bm:SuburbanStation ) .
 
-skos:notation a owl:AnnotationProperty .
+skos:notation a owl:DatatypeProperty .
