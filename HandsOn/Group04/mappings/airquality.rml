@@ -6,19 +6,23 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix bm: <http://breathemadrid.es/ontology#> .
 @prefix bmr: <http://breathemadrid.es/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @base <http://breathemadrid.es/mappings/> .
 
 # Run with HandsOn/Group04 as the working directory.
 
-# Stations, station types and municipality
-# Source: csv/212629-0-estaciones-control-aire-updated.csv
+# Stations and municipality
+# Source: csv/uri/stations.csv
 
 <#StationMap> a rr:TriplesMap ;
-  rml:logicalSource [ rml:source "csv/212629-0-estaciones-control-aire-updated.csv" ; rml:referenceFormulation ql:CSV ] ;
+  rml:logicalSource [ rml:source "csv/uri/stations.csv" ; rml:referenceFormulation ql:CSV ] ;
   rr:subjectMap [
-    rr:template "http://breathemadrid.es/resource/station/{CODIGO}" ;
+    rr:template "http://breathemadrid.es/resource/station/{STATION_SLUG}" ;
     rr:class bm:Station
   ] ;
+  rr:predicateObjectMap [ rr:predicate rdf:type ;
+    rr:objectMap [ rr:template "http://breathemadrid.es/ontology#{STATION_CLASS}" ;
+      rr:termType rr:IRI ] ] ;
   rr:predicateObjectMap [ rr:predicate rdfs:label ;
     rr:objectMap [ rml:reference "ESTACION" ; rr:datatype xsd:string ] ] ;
   rr:predicateObjectMap [ rr:predicate bm:stationCode ;
@@ -33,29 +37,13 @@
     rr:objectMap [ rml:reference "LONGITUD" ; rr:datatype xsd:float ] ] ;
   rr:predicateObjectMap [ rr:predicate bm:altitude ;
     rr:objectMap [ rml:reference "ALTITUD" ; rr:datatype xsd:integer ] ] ;
-  rr:predicateObjectMap [ rr:predicate bm:hasStationType ;
-    rr:objectMap [ rr:template "http://breathemadrid.es/resource/stationtype/{COD_TIPO}" ;
-      rr:termType rr:IRI ] ] ;
   rr:predicateObjectMap [ rr:predicate bm:locatedIn ;
-    rr:objectMap [ rr:constant <http://breathemadrid.es/resource/municipality/28079> ] ] .
-
-<#StationTypeMap> a rr:TriplesMap ;
-  rml:logicalSource [ rml:source "csv/212629-0-estaciones-control-aire-updated.csv" ; rml:referenceFormulation ql:CSV ] ;
-  rr:subjectMap [
-    rr:template "http://breathemadrid.es/resource/stationtype/{COD_TIPO}" ;
-    rr:class bm:StationType
-  ] ;
-  rr:predicateObjectMap [ rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "NOM_TIPO" ; rr:datatype xsd:string ] ] ;
-  rr:predicateObjectMap [ rr:predicate bm:typeCode ;
-    rr:objectMap [ rml:reference "COD_TIPO" ; rr:datatype xsd:string ] ] ;
-  rr:predicateObjectMap [ rr:predicate bm:typeName ;
-    rr:objectMap [ rml:reference "NOM_TIPO" ; rr:datatype xsd:string ] ] .
+    rr:objectMap [ rr:constant <http://breathemadrid.es/resource/municipality/madrid> ] ] .
 
 <#MunicipalityMap> a rr:TriplesMap ;
-  rml:logicalSource [ rml:source "csv/212629-0-estaciones-control-aire-updated.csv" ; rml:referenceFormulation ql:CSV ] ;
+  rml:logicalSource [ rml:source "csv/uri/stations.csv" ; rml:referenceFormulation ql:CSV ] ;
   rr:subjectMap [
-    rr:constant <http://breathemadrid.es/resource/municipality/28079> ;
+    rr:constant <http://breathemadrid.es/resource/municipality/madrid> ;
     rr:class bm:Municipality
   ] ;
   rr:predicateObjectMap [ rr:predicate rdfs:label ;
@@ -69,19 +57,19 @@
 
 
 # Observations and pollutants
-# Sources: csv/calair_tiemporeal-updated.csv, csv/contaminantes.csv
+# Sources: csv/uri/observations.csv, csv/uri/pollutants.csv
 
 
 <#ObservationMap>
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "csv/calair_tiemporeal-updated.csv" ;
+        rml:source "csv/uri/observations.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
 
     rr:subjectMap [
-        rr:template "http://breathemadrid.es/resource/observation/{PUNTO_MUESTREO}/{FECHA}/H{HORA}" ;
+        rr:template "http://breathemadrid.es/resource/observation/{STATION_SLUG}/{POLLUTANT_SLUG}/{TECHNIQUE}/{FECHA}/H{HORA}" ;
         rr:class bm:Observation
     ] ;
 
@@ -110,7 +98,9 @@
         ]
     ] ;
 
-    rr:predicateObjectMap [
+    rr:predicateObjectMap [ rr:predicate bm:samplingPointCode ;
+    rr:objectMap [ rml:reference "PUNTO_MUESTREO" ; rr:datatype xsd:string ] ] ;
+  rr:predicateObjectMap [
         rr:predicate bm:isValid ;
         rr:objectMap [
             rml:reference "ES_VALIDA" ;
@@ -121,7 +111,7 @@
     rr:predicateObjectMap [
         rr:predicate bm:observedAt ;
         rr:objectMap [
-            rr:template "http://breathemadrid.es/resource/station/{PROVINCIA}{MUNICIPIO}{COD_ESTACION}" ;
+            rr:template "http://breathemadrid.es/resource/station/{STATION_SLUG}" ;
             rr:termType rr:IRI
         ]
     ] ;
@@ -129,7 +119,7 @@
     rr:predicateObjectMap [
         rr:predicate bm:observesPollutant ;
         rr:objectMap [
-            rr:template "http://breathemadrid.es/resource/pollutant/{MAGNITUD}" ;
+            rr:template "http://breathemadrid.es/resource/pollutant/{POLLUTANT_SLUG}" ;
             rr:termType rr:IRI
         ]
     ] .
@@ -140,18 +130,18 @@
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "csv/calair_tiemporeal-updated.csv" ;
+        rml:source "csv/uri/observations.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
 
     rr:subjectMap [
-        rr:template "http://breathemadrid.es/resource/station/{PROVINCIA}{MUNICIPIO}{COD_ESTACION}"
+        rr:template "http://breathemadrid.es/resource/station/{STATION_SLUG}"
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate bm:measuresPollutant ;
         rr:objectMap [
-            rr:template "http://breathemadrid.es/resource/pollutant/{MAGNITUD}" ;
+            rr:template "http://breathemadrid.es/resource/pollutant/{POLLUTANT_SLUG}" ;
             rr:termType rr:IRI
         ]
     ] .
@@ -161,12 +151,12 @@
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "csv/contaminantes.csv" ;
+        rml:source "csv/uri/pollutants.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
 
     rr:subjectMap [
-        rr:template "http://breathemadrid.es/resource/pollutant/{MAGNITUD}" ;
+        rr:template "http://breathemadrid.es/resource/pollutant/{POLLUTANT_SLUG}" ;
         rr:class bm:Pollutant
     ] ;
 

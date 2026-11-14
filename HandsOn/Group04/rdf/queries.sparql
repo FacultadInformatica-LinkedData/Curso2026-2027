@@ -4,7 +4,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-# Q1. Number of individuals per class (expected: Observation 3024, Station 24, Pollutant 11, StationType 3, Municipality 1)
+# Q1. Explicit types (expected: Observation 3024, Station 24, Pollutant 11, Municipality 1; station subclasses: 9, 12, 3)
 SELECT ?class (COUNT(?s) AS ?individuals)
 WHERE { ?s a ?class }
 GROUP BY ?class
@@ -13,13 +13,16 @@ ORDER BY DESC(?individuals)
 # Q2. All stations with name, type, municipality and coordinates (expected: 24 rows)
 SELECT ?station ?name ?typeName ?municipality ?lat ?lon
 WHERE {
-  ?station a bm:Station ;
+  VALUES (?type ?typeName) {
+    (bm:UrbanTrafficStation "Urbana tráfico")
+    (bm:UrbanBackgroundStation "Urbana fondo")
+    (bm:SuburbanStation "Suburbana")
+  }
+  ?station a bm:Station, ?type ;
            bm:stationName ?name ;
-           bm:hasStationType ?type ;
            bm:locatedIn ?m ;
            bm:latitude ?lat ;
            bm:longitude ?lon .
-  ?type bm:typeName ?typeName .
   ?m bm:municipalityName ?municipality .
 }
 ORDER BY ?name
@@ -40,7 +43,7 @@ SELECT ?dateTime ?value
 WHERE {
   ?obs a bm:Observation ;
        bm:observedAt ?station ;
-       bm:observesPollutant <http://breathemadrid.es/resource/pollutant/10> ;
+       bm:observesPollutant <http://breathemadrid.es/resource/pollutant/pm10> ;
        bm:dateTime ?dateTime ;
        bm:isValid true ;
        bm:value ?value .
@@ -61,14 +64,19 @@ WHERE {
 GROUP BY ?pollutantName ?unit
 ORDER BY DESC(?average)
 
-# Q6. Average NO2 per station type (traffic vs background vs suburban)
+# Q6. Average NO2 per station subclass (traffic vs background vs suburban)
 SELECT ?typeName (AVG(?value) AS ?avgNO2)
 WHERE {
-  ?obs bm:observesPollutant <http://breathemadrid.es/resource/pollutant/8> ;
+  ?obs bm:observesPollutant <http://breathemadrid.es/resource/pollutant/dioxido-de-nitrogeno> ;
        bm:observedAt ?station ;
        bm:isValid true ;
        bm:value ?value .
-  ?station bm:hasStationType/bm:typeName ?typeName .
+  VALUES (?type ?typeName) {
+    (bm:UrbanTrafficStation "Urbana tráfico")
+    (bm:UrbanBackgroundStation "Urbana fondo")
+    (bm:SuburbanStation "Suburbana")
+  }
+  ?station a ?type .
 }
 GROUP BY ?typeName
 ORDER BY DESC(?avgNO2)

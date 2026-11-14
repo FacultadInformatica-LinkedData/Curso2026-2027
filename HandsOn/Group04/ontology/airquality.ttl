@@ -7,6 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 bm: a owl:Ontology ;
@@ -30,12 +31,6 @@ bm:dateTime a owl:DatatypeProperty ;
     rdfs:comment "Observation date and time."@en ;
     rdfs:domain bm:Observation ;
     rdfs:range xsd:dateTime .
-
-bm:hasStationType a owl:ObjectProperty ;
-    rdfs:label "has station type" ;
-    rdfs:comment "Type of a station."@en ;
-    rdfs:domain bm:Station ;
-    rdfs:range bm:StationType .
 
 bm:isValid a owl:DatatypeProperty ;
     rdfs:label "is valid" ;
@@ -115,18 +110,6 @@ bm:stationName a owl:DatatypeProperty ;
     rdfs:domain bm:Station ;
     rdfs:range xsd:string .
 
-bm:typeCode a owl:DatatypeProperty ;
-    rdfs:label "type code" ;
-    rdfs:comment "Station type identifier."@en ;
-    rdfs:domain bm:StationType ;
-    rdfs:range xsd:string .
-
-bm:typeName a owl:DatatypeProperty ;
-    rdfs:label "type name" ;
-    rdfs:comment "Station type name."@en ;
-    rdfs:domain bm:StationType ;
-    rdfs:range xsd:string .
-
 bm:unit a owl:DatatypeProperty ;
     rdfs:label "unit" ;
     rdfs:comment "Measurement unit."@en ;
@@ -162,9 +145,20 @@ bm:Municipality a owl:Class ;
     rdfs:comment "Municipality containing a station."@en ;
     rdfs:subClassOf dbo:Municipality .
 
-bm:StationType a owl:Class ;
-    rdfs:label "Station Type" ;
-    rdfs:comment "Type of monitoring station."@en .
+bm:UrbanTrafficStation a owl:Class ;
+    rdfs:label "Urban traffic station"@en ;
+    skos:notation "UT" ;
+    rdfs:subClassOf bm:Station .
+
+bm:UrbanBackgroundStation a owl:Class ;
+    rdfs:label "Urban background station"@en ;
+    skos:notation "UF" ;
+    rdfs:subClassOf bm:Station .
+
+bm:SuburbanStation a owl:Class ;
+    rdfs:label "Suburban station"@en ;
+    skos:notation "S" ;
+    rdfs:subClassOf bm:Station .
 
 bm:Observation a owl:Class ;
     rdfs:label "Observation" ;
@@ -176,10 +170,21 @@ bm:Pollutant a owl:Class ;
     rdfs:comment "Air pollutant being measured."@en ;
     rdfs:subClassOf sosa:ObservableProperty .
 
+bm:samplingPointCode a owl:DatatypeProperty ;
+    rdfs:label "sampling point code"@en ;
+    rdfs:comment "Original PUNTO_MUESTREO identifier from the source dataset."@en ;
+    rdfs:domain bm:Observation ;
+    rdfs:range xsd:string .
+
 bm:Station a owl:Class ;
     rdfs:label "Station" ;
     rdfs:comment "Air quality monitoring station."@en ;
     rdfs:subClassOf sosa:Platform .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( bm:Station bm:Observation bm:Pollutant bm:Municipality bm:StationType ) .
+    owl:members ( bm:Station bm:Observation bm:Pollutant bm:Municipality ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( bm:UrbanTrafficStation bm:UrbanBackgroundStation bm:SuburbanStation ) .
+
+skos:notation a owl:AnnotationProperty .

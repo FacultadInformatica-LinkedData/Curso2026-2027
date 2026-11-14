@@ -9,7 +9,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 # Hands-on 5: queries to verify the links with Wikidata (11 pollutants and 21 of 24 stations linked).
 # The queries over the H04 data (queries.sparql) are not repeated here.
 
-# Q1. Total number of triples (expected: 20817 = 20785 from H04 + 11 + 21)
+# Q1. Total number of triples after category hierarchy migration (expected: 23829 = 23797 from H04 + 11 + 21)
 SELECT (COUNT(*) AS ?triples)
 WHERE { ?s ?p ?o }
 

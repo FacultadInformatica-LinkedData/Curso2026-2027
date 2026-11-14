@@ -25,7 +25,7 @@ dct:license a owl:AnnotationProperty .
 
 skos:prefLabel a owl:AnnotationProperty ;
     rdfs:label "preferred label"@en ;
-    rdfs:comment "Name of a station type (replaces bm:typeName)."@en ;
+    rdfs:comment "Preferred label of a station category class."@en ;
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
@@ -52,13 +52,29 @@ bm:Municipality a owl:Class ;
     rdfs:comment "Municipality containing a station."@en ;
     rdfs:subClassOf dbo:Municipality .
 
-bm:StationType a owl:Class ;
-    rdfs:label "Station Type"@en ;
-    rdfs:comment "Type of monitoring station (urban traffic, urban background, suburban)."@en ;
-    rdfs:subClassOf skos:Concept .
+bm:UrbanTrafficStation a owl:Class ;
+    rdfs:label "Urban traffic station"@en ;
+    skos:prefLabel "Urbana tráfico"@es ;
+    skos:notation "UT" ;
+    rdfs:subClassOf bm:Station .
+
+bm:UrbanBackgroundStation a owl:Class ;
+    rdfs:label "Urban background station"@en ;
+    skos:prefLabel "Urbana fondo"@es ;
+    skos:notation "UF" ;
+    rdfs:subClassOf bm:Station .
+
+bm:SuburbanStation a owl:Class ;
+    rdfs:label "Suburban station"@en ;
+    skos:prefLabel "Suburbana"@es ;
+    skos:notation "S" ;
+    rdfs:subClassOf bm:Station .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( bm:Station bm:Observation bm:Pollutant bm:Municipality bm:StationType ) .
+    owl:members ( bm:Station bm:Observation bm:Pollutant bm:Municipality ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( bm:UrbanTrafficStation bm:UrbanBackgroundStation bm:SuburbanStation ) .
 
 # Reused classes
 
@@ -82,10 +98,6 @@ dbo:Municipality a owl:Class ;
     rdfs:label "Municipality"@en ;
     rdfs:isDefinedBy <http://dbpedia.org/ontology/> .
 
-skos:Concept a owl:Class ;
-    rdfs:label "Concept"@en ;
-    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .
-
 #################################################################
 #   Object properties
 #################################################################
@@ -103,12 +115,6 @@ bm:measuresPollutant a owl:ObjectProperty ;
     rdfs:comment "Pollutant measured by a station."@en ;
     rdfs:domain bm:Station ;
     rdfs:range bm:Pollutant .
-
-bm:hasStationType a owl:ObjectProperty ;
-    rdfs:label "has station type"@en ;
-    rdfs:comment "Type of a station."@en ;
-    rdfs:domain bm:Station ;
-    rdfs:range bm:StationType .
 
 # Reused properties
 
@@ -138,6 +144,12 @@ bm:isValid a owl:DatatypeProperty ;
     rdfs:comment "Whether the observation was validated by the city council."@en ;
     rdfs:domain bm:Observation ;
     rdfs:range xsd:boolean .
+
+bm:samplingPointCode a owl:DatatypeProperty ;
+    rdfs:label "sampling point code"@en ;
+    rdfs:comment "Original PUNTO_MUESTREO identifier from the source dataset."@en ;
+    rdfs:domain bm:Observation ;
+    rdfs:range xsd:string .
 
 # Reused properties
 
@@ -186,7 +198,7 @@ dct:identifier a owl:DatatypeProperty ;
     rdfs:comment "Code of a station, pollutant or municipality (replaces bm:stationCode, bm:pollutantCode and bm:municipalityCode)."@en ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
-skos:notation a owl:DatatypeProperty ;
+skos:notation a owl:AnnotationProperty ;
     rdfs:label "notation"@en ;
-    rdfs:comment "Code of a station type (replaces bm:typeCode)."@en ;
+    rdfs:comment "Original category code on a station subclass."@en ;
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> .

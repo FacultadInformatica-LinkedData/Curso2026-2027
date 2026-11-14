@@ -41,7 +41,7 @@
 
 **The RML mapping:**
 
-- [x] Maps station metadata, including station codes, names, addresses, coordinates, altitude and station types.
+- [x] Maps station metadata, including station codes, names, addresses, coordinates, altitude and explicit station subclass types.
 - [x] Links the municipality to Wikidata using `owl:sameAs`.
 - [x] Maps hourly air quality observations and links them to stations via `bm:observedAt`, and to pollutants via `bm:observesPollutant`.
 - [x] Links stations to monitored pollutants via `bm:measuresPollutant`.
@@ -57,8 +57,9 @@
 
 ## Comments on the self-assessment
 
-- **RDF files.** The assignment asks for a Turtle file and this checklist asks for N-Triples, so both are delivered: `rdf/airquality.ttl` and `rdf/airquality.nt` contain exactly the same 20,785 triples. Both were generated with RMLMapper v8.1.0 from `mappings/airquality.rml`, running from the `HandsOn/Group04` directory (`-s turtle` and `-s ntriples`).
-- **Readable URIs.** Some URIs contain numbers (e.g., `resource/station/28079004`, `resource/pollutant/8`). These are the official station and pollutant (magnitude) codes used by the Madrid City Council, not auto-increased integers. All URI patterns follow the resource naming strategy defined in `analysis.html`.
+- **RDF files.** The assignment asks for a Turtle file and this checklist asks for N-Triples, so both are delivered: `rdf/airquality.ttl` and `rdf/airquality.nt` contain exactly the same 23,797 triples after the URI and station category migrations. RMLMapper v8.1.0 generates the Turtle file from `mappings/airquality.rml`; `scripts/serialize_nt.py` serializes the same graph as N-Triples.
+- **Readable URIs.** Individuals use fixed Spanish slugs based on official codes (e.g., `resource/station/plaza-de-espana`, `resource/pollutant/dioxido-de-nitrogeno`). The official station and pollutant codes remain in RDF properties. Observation URIs include the sampling technique; the complete source sampling point is retained as `bm:samplingPointCode`. The URI strategy is documented in `analysis.html`.
+- **Station categories.** `UT`, `UF` and `S` are represented by the ontology subclasses `bm:UrbanTrafficStation`, `bm:UrbanBackgroundStation` and `bm:SuburbanStation`. All 24 station individuals have exactly one of these explicit types; the original codes are recorded as `skos:notation` on the classes.
 - **String datatypes.** Every literal has its datatype declared in the mapping (`rr:datatype`). Text literals appear without an explicit `^^xsd:string` in the output because, in RDF 1.1, a literal without a datatype is an `xsd:string`, and RMLMapper omits it.
 - **Invalid observations.** The 821 observations marked as not valid (`VALIDEZ = N`) have `bm:isValid false` and no `bm:value`: the original `0` was only a placeholder, so it was removed during data cleaning (Hands-on 3). Query Q11 checks this.
 - **Auxiliary data.** `csv/contaminantes.csv` contains the names and units of the 11 pollutant codes in the dataset, taken from the official data interpretation document of the Madrid air quality dataset. The hour `24` of the source data was converted into `00:00` of the following day (`FECHA_HORA` column) so that it is a valid `xsd:dateTime`.
