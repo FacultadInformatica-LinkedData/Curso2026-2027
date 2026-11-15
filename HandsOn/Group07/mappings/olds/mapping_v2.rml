@@ -1,0 +1,488 @@
+# mapping_v2.rml
+# -----------------------------------------------------------------------------
+# Mapping adapted to ontology/ontology.ttl:
+#   - District and Neighborhood are classes.
+#   - Facilities link to them through the object properties
+#     ue:district and ue:neighborhood.
+#   - districtCode belongs to District and neighborhoodCode to Neighborhood.
+#
+# This file is a draft for review. It does NOT replace mapping_new.rml yet.
+#
+# INPUT FILES (already present in csv/csv-updated):
+#
+#   districts.csv
+#       COD_DISTRITO, DISTRITO
+#
+#   neighborhoods.csv
+#       COD_BARRIO_FULL, BARRIO, COD_DISTRITO
+#
+#   benches / fountains / parks
+#       SLUG, LABEL, COD_BARRIO_FULL
+#
+#   public toilets
+#       SLUG, LABEL
+#
+#   All codes are normalised without leading zeros.
+#   For parks, COD_BARRIO_FULL = COD-DISTRITO * 10 + COD-BARRIO.
+#   For benches and fountains, COD_BARRIO_FULL is the existing COD_BARRIO.
+#
+# NOTES:
+#   - The pet-fountain CSV is intentionally not mapped. All 169 IDs are
+#     already present in the main fountain CSV, so a second TriplesMap would
+#     create duplicate individuals for the same physical fountain.
+#   - ue:district and ue:neighborhood use joins against DistrictMap and
+#     NeighborhoodMap instead of templates. If a facility has an empty code
+#     (some parks have no neighborhood), the join produces no triple and no
+#     invalid /district/ or /neighborhood/ IRI is created.
+#   - ue:belongsToDistrict is included: each neighborhood is linked to the
+#     district given by its COD_DISTRITO column.
+# -----------------------------------------------------------------------------
+
+@prefix rr:   <http://www.w3.org/ns/r2rml#> .
+@prefix rml:  <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:   <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ue:   <http://www.madridurbanenvironment.org/ontology/> .
+
+@base <http://www.madridurbanenvironment.org/> .
+
+
+#################################################################
+# Districts
+#################################################################
+
+<#DistrictMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/districts.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/district/{COD_DISTRITO}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:District
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "DISTRITO" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:districtCode ;
+        rr:objectMap [
+            rml:reference "COD_DISTRITO" ;
+            rr:datatype xsd:string
+        ]
+    ] .
+
+
+#################################################################
+# Neighborhoods
+#################################################################
+
+<#NeighborhoodMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/neighborhoods.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/neighborhood/{COD_BARRIO_FULL}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Neighborhood
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "BARRIO" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhoodCode ;
+        rr:objectMap [
+            rml:reference "COD_BARRIO_FULL" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:belongsToDistrict ;
+        rr:objectMap [
+            rr:template "http://www.madridurbanenvironment.org/resource/district/{COD_DISTRITO}" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+#################################################################
+# Benches
+#################################################################
+
+<#BenchMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/300095-0-mobiliario-bancos-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/bench/{SLUG}-{ID}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Bench
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "LABEL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "ID" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:classification ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:status ;
+        rr:objectMap [ rml:reference "ESTADO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "TIPO_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "COD_POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD_GIS_X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD_GIS_Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD_DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "COD_BARRIO_FULL" ;
+                rr:parent "COD_BARRIO_FULL"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Drinking fountains
+#################################################################
+
+<#FountainMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/300051-26-fuentes-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/drinking-fountain/{SLUG}-{ID}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:DrinkingFountain
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "LABEL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "ID" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:classification ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:status ;
+        rr:objectMap [ rml:reference "ESTADO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:intendedUse ;
+        rr:objectMap [ rml:reference "USO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "TIPO_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "COD_POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD_GIS_X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD_GIS_Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD_DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "COD_BARRIO_FULL" ;
+                rr:parent "COD_BARRIO_FULL"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Parks
+#################################################################
+
+<#ParkMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/200761-0-parques-jardines-updated-csv.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/park/{SLUG}-{PK}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Park
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "LABEL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "PK" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:name ;
+        rr:objectMap [ rml:reference "NOMBRE" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:description ;
+        rr:objectMap [ rml:reference "DESCRIPCION-ENTIDAD" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:schedule ;
+        rr:objectMap [ rml:reference "HORARIO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:accessibilityLevel ;
+        rr:objectMap [ rml:reference "ACCESIBILIDAD" ; rr:datatype xsd:integer ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:webPage ;
+        rr:objectMap [ rml:reference "CONTENT-URL" ; rr:datatype xsd:anyURI ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "CLASE-VIAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOMBRE-VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:locality ;
+        rr:objectMap [ rml:reference "LOCALIDAD" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:province ;
+        rr:objectMap [ rml:reference "PROVINCIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "CODIGO-POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORDENADA-X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORDENADA-Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD-DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "COD_BARRIO_FULL" ;
+                rr:parent "COD_BARRIO_FULL"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Public toilets
+#################################################################
+
+<#PublicToiletMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/csv-updated/300103-3-aseos-publicos-operativos-csv-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/public-toilet/{SLUG}-{CODIGO ASEO}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:PublicToilet
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "LABEL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "CODIGO ASEO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:name ;
+        rr:objectMap [ rml:reference "NOMBRE" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "VIAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "DIRECCION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUMERO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD UTM ETRS89 X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD UTM ETRS89 Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    # Public toilets only have a district, not a neighborhood.
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "CODIGO J.M." ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] .

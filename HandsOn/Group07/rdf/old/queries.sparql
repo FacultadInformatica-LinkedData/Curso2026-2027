@@ -1,0 +1,175 @@
+PREFIX ue:   <http://www.madridurbanenvironment.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+# Query 1: Numero de individuos por clase.
+SELECT ?class (COUNT(DISTINCT ?s) AS ?n)
+WHERE {
+    ?s a ?class
+}
+GROUP BY ?class
+ORDER BY DESC(?n)
+;
+
+# Query 2: Fuentes de beber operativas para mascotas y su calle.
+# Se filtra la etiqueta larga para no devolver tambien la etiqueta corta.
+SELECT ?label ?status ?use ?streetName
+WHERE {
+    ?f a ue:DrinkingFountain ;
+       rdfs:label ?label ;
+       ue:status ?status ;
+       ue:intendedUse ?use ;
+       ue:streetName ?streetName .
+    FILTER(?status = "OPERATIVO" && CONTAINS(?use, "MASCOTAS"))
+    FILTER(CONTAINS(STR(?label), " - "))
+}
+LIMIT 20
+;
+
+# Query 3: Fuentes por distrito.
+SELECT ?district (COUNT(DISTINCT ?f) AS ?fountains)
+WHERE {
+    ?f a ue:DrinkingFountain ;
+       ue:district ?districtIRI .
+    ?districtIRI rdfs:label ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?fountains)
+;
+
+# Query 4: Barrios del distrito 15 (Ciudad Lineal).
+SELECT DISTINCT ?neighborhood ?code
+WHERE {
+    ?n a ue:Neighborhood ;
+       rdfs:label ?neighborhood ;
+       ue:neighborhoodCode ?code ;
+       ue:belongsToDistrict ?d .
+    ?d ue:districtCode "15" .
+}
+ORDER BY ?code
+;
+
+# Query 5: Parques con nivel de accesibilidad y pagina web.
+SELECT ?name ?level ?web
+WHERE {
+    ?p a ue:Park ;
+       rdfs:label ?name ;
+       ue:accessibilityLevel ?level ;
+       ue:webPage ?web .
+}
+ORDER BY DESC(?level)
+LIMIT 20
+;
+
+# Query 6: Aseos publicos y su distrito.
+SELECT ?toilet ?district
+WHERE {
+    ?t a ue:PublicToilet ;
+       rdfs:label ?toilet ;
+       ue:district ?districtIRI .
+    ?districtIRI rdfs:label ?district .
+}
+LIMIT 20
+;
+
+# Query 7: Numero de bancos operativos por distrito.
+SELECT ?district (COUNT(DISTINCT ?b) AS ?benches)
+WHERE {
+    ?b a ue:Bench ;
+       ue:status "OPERATIVO" ;
+       ue:district ?districtIRI .
+    ?districtIRI rdfs:label ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?benches)
+;
+
+# Query 8: Comprueba que las coordenadas existentes sean xsd:decimal.
+SELECT ?s ?v
+WHERE {
+    { ?s ue:utmX ?v } UNION { ?s ue:utmY ?v }
+    FILTER(datatype(?v) != xsd:decimal)
+}
+;
+
+# Query 9: Valores de texto sin recortar o con espacios repetidos.
+SELECT ?s ?p ?v
+WHERE {
+    ?s ?p ?v .
+    FILTER(isLiteral(?v) && REGEX(STR(?v), "^\\s|\\s$|\\s{2,}"))
+}
+LIMIT 20
+;
+
+# Query 10: Individuos sin rdfs:label (deberia devolver 0 filas).
+SELECT ?s ?class
+WHERE {
+    ?s a ?class .
+    FILTER NOT EXISTS { ?s rdfs:label ?label }
+}
+;
+
+# Query 11: Parques sin distrito (deberia devolver 0 filas).
+SELECT ?park
+WHERE {
+    ?park a ue:Park .
+    FILTER NOT EXISTS { ?park ue:district ?district }
+}
+;
+
+# Query 12: Parques sin barrio (deberia devolver 0 filas).
+SELECT ?park
+WHERE {
+    ?park a ue:Park .
+    FILTER NOT EXISTS { ?park ue:neighborhood ?neighborhood }
+}
+;
+
+# Query 13: Distritos y barrios distintos cubiertos por cada clase.
+SELECT ?class
+       (COUNT(DISTINCT ?s) AS ?individuals)
+       (COUNT(DISTINCT ?district) AS ?districtsCovered)
+       (COUNT(DISTINCT ?neighborhood) AS ?neighborhoodsCovered)
+WHERE {
+    VALUES ?class { ue:Park ue:DrinkingFountain ue:Bench ue:PublicToilet }
+    ?s a ?class .
+    OPTIONAL { ?s ue:district ?district }
+    OPTIONAL { ?s ue:neighborhood ?neighborhood }
+}
+GROUP BY ?class
+ORDER BY DESC(?individuals)
+;
+
+# Query 14: Enlaces a Wikidata por clase.
+SELECT ?class (COUNT(DISTINCT ?s) AS ?withSameAs)
+WHERE {
+    ?s a ?class ;
+       owl:sameAs ?wikidata .
+}
+GROUP BY ?class
+ORDER BY DESC(?withSameAs)
+;
+
+# Query 15: Parques con su distrito y su barrio.
+SELECT ?park ?district ?neighborhood
+WHERE {
+    ?parkIRI a ue:Park ;
+             rdfs:label ?park ;
+             ue:district ?districtIRI ;
+             ue:neighborhood ?neighborhoodIRI .
+    ?districtIRI rdfs:label ?district .
+    ?neighborhoodIRI rdfs:label ?neighborhood .
+}
+ORDER BY ?park
+LIMIT 20
+;
+
+# Query 16: Fuentes sin nombre de calle (usan la etiqueta corta "Fuente {ID}").
+SELECT ?f ?label
+WHERE {
+    ?f a ue:DrinkingFountain ;
+       rdfs:label ?label .
+    FILTER NOT EXISTS { ?f ue:streetName ?street }
+}
+LIMIT 20
