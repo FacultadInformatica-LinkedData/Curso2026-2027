@@ -17,6 +17,14 @@
         rr:class mc:Library
     ];
 
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "NOMBRE";
+            rr:datatype xsd:string
+        ]
+    ];
+
     rr:predicateObjectMap [ 
         rr:predicate schema:name; 
         rr:objectMap [ 
@@ -113,6 +121,14 @@
     rr:subjectMap [
         rr:template "http://w3id.org/madrid-culture/resource/museum/{PK}" ;
         rr:class mc:Museum
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "NOMBRE";
+            rr:datatype xsd:string
+        ]
     ];
 
     rr:predicateObjectMap [ 
@@ -215,6 +231,14 @@
         rr:termType rr:IRI
     ];
 
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "Accesibilidad {PK}";
+            rr:language "es"
+        ]
+    ];
+
     rr:predicateObjectMap [ 
         rr:predicate mc:accessible; 
         rr:objectMap [ 
@@ -273,6 +297,14 @@
         rr:template "http://w3id.org/madrid-culture/resource/accessibility/{PK}";
         rr:class mc:Accessibility;
         rr:termType rr:IRI
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "Accesibilidad {PK}";
+            rr:language "es"
+        ]
     ];
 
     rr:predicateObjectMap [ 
@@ -335,6 +367,14 @@
         rr:termType rr:IRI
     ];
 
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "DIRECCION";
+            rr:datatype xsd:string
+        ]
+    ];
+
     rr:predicateObjectMap [ 
         rr:predicate mc:streetAddress; 
         rr:objectMap [ 
@@ -377,6 +417,14 @@
         rr:template "http://w3id.org/madrid-culture/resource/address/{PK}" ;
         rr:class mc:Address;
         rr:termType rr:IRI
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "DIRECCION";
+            rr:datatype xsd:string
+        ]
     ];
 
     rr:predicateObjectMap [ 
@@ -423,6 +471,14 @@
         rr:termType rr:IRI
     ];
 
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "DISTRITO";
+            rr:datatype xsd:string
+        ]
+    ];
+
     rr:predicateObjectMap [ 
         rr:predicate schema:name; 
         rr:objectMap [ 
@@ -441,6 +497,14 @@
         rr:template "http://w3id.org/madrid-culture/resource/district/{COD-DISTRITO}";
         rr:class mc:District;
         rr:termType rr:IRI
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "DISTRITO";
+            rr:datatype xsd:string
+        ]
     ];
 
     rr:predicateObjectMap [ 
@@ -463,6 +527,14 @@
         rr:termType rr:IRI
     ];
 
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "BARRIO";
+            rr:datatype xsd:string
+        ]
+    ];
+
     rr:predicateObjectMap [ 
         rr:predicate schema:name; 
         rr:objectMap [ 
@@ -481,6 +553,14 @@
         rr:template "http://w3id.org/madrid-culture/resource/neighborhood/{COD-DISTRITO}-{COD-BARRIO}";
         rr:class mc:Neighborhood;
         rr:termType rr:IRI
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rml:reference "BARRIO";
+            rr:datatype xsd:string
+        ]
     ];
 
     rr:predicateObjectMap [ 
