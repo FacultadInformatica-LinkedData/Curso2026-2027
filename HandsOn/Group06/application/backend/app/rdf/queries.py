@@ -109,8 +109,6 @@ FACILITY_DETAIL_QUERY = """
         ?accessibility mc:tactilePaving ?tactile_paving .
         ?accessibility mc:magneticInductionLoop ?magnetic_induction_loop .
 
-        FILTER(?facility = ?facility_uri)
-
         ?address mc:streetAddress ?street .
         ?address mc:postalCode ?postal_code .
 
@@ -379,7 +377,7 @@ def get_facility_by_id(
         FACILITY_DETAIL_QUERY,
         initNs=NAMESPACES,
         initBindings={
-            "facility_uri": URIRef(f"{RES}{facility_id}"),
+            "facility": URIRef(f"{RES}{facility_id}"),
         },
     )
 
