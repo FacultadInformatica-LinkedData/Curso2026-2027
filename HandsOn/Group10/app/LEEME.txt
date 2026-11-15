@@ -1,0 +1,11 @@
+Meteo Madrid KG - demo en local
+
+1. Descomprime la carpeta.
+2. Doble clic en "Iniciar demo.bat". Se abre el navegador en http://localhost:8000
+   (si no se abre solo, entra a esa direccion a mano).
+3. Deja abierta la ventana negra mientras presentas.
+
+Sin el .bat: abre una terminal en esta carpeta y ejecuta  py -m http.server 8000
+
+No abras index.html con doble clic: el navegador bloquea el motor SPARQL con file://.
+Requiere Python (el mismo que usasteis para Morph-KGC).
