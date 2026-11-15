@@ -37,9 +37,9 @@ export async function getFacilities(filters = {}) {
     }
 
     if (filters.latitude != null && filters.longitude != null) {
-        params.set("latitude", filters.latitude);
-        params.set("longitude", filters.longitude);
-        params.set("radius", filters.radius ?? 1);
+        params.set("latitude", String(filters.latitude));
+        params.set("longitude", String(filters.longitude));
+        params.set("radius", String(filters.radius ?? 1));
     }
 
     const response = await fetch(
@@ -57,15 +57,15 @@ export async function getFacilities(filters = {}) {
  * Obtiene los detalles de una instalación.
  */
 export async function getFacilityDetail(facilityId) {
-    const params = new URLSearchParams({
-        facility_id: facilityId,
-    });
-
     const response = await fetch(
-        `${API_URL}/facilities/detail?${params.toString()}`
+        `${API_URL}/facilities/${facilityId}`
     );
 
     if (!response.ok) {
+        if (response.status === 404) {
+            throw new Error("No se ha encontrado la instalación.");
+        }
+
         throw new Error("No se han podido obtener los detalles.");
     }
 

@@ -19,10 +19,3 @@ class NearbySearch(BaseModel):
     longitude: float = Field(ge=-180, le=180)
 
     radius: Annotated[float, AfterValidator(validate_radius)] = 1.0
-
-
-class NearbyFacility(BaseModel):
-    """Instalación acompañada de su distancia."""
-
-    facility: FacilitySummary
-    distance_km: float = Field(ge=0)

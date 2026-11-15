@@ -1,0 +1,205 @@
+
+.detail-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-page {
+  flex: 1;
+  width: 100%;
+  padding: 32px 24px 60px;
+}
+
+/* Header de la instalación */
+.detail-header {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 28px;
+
+  width: 75%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  align-items: start;
+}
+
+.facility-information,
+.wikidata-information {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .detail-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-header {
+  background-color: #173d35;
+  color: white;
+  padding: 36px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+}
+
+.detail-header h1 {
+  font-size: 2rem;
+  margin: 12px 0;
+}
+
+.detail-header p {
+  color: #e3d4a7;
+}
+
+.facility-type {
+  display: inline-block;
+  background-color: #267052;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.detail-section {
+  background-color: white;
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5dc;
+}
+
+.detail-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 22px;
+  color: #173d35;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.detail-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.detail-value {
+  overflow-wrap: anywhere;
+}
+
+.detail-info-item a {
+  color: #267052;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-info-item a:hover {
+  text-decoration: underline;
+}
+
+.accessibility-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.accessibility-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f7f7f2;
+  border-radius: 8px;
+}
+
+.available {
+  color: #267052;
+  font-weight: 600;
+}
+
+.unavailable {
+  color: #888;
+}
+
+.accessibility-note {
+  margin-top: 18px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.detail-message {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+@media (max-width: 650px) {
+  .detail-page {
+    padding: 24px 16px 40px;
+  }
+
+  .detail-header {
+    padding: 24px;
+  }
+
+  .detail-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .detail-grid,
+  .accessibility-list {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-section {
+    padding: 20px;
+  }
+}
+
+.wikidata-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wikidata-images img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.accessibility-status {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.partially-available {
+  color: #b7791f;
+}
+
+.detail-value {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.detail-grid-two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}

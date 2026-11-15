@@ -1,6 +1,4 @@
 
-from datetime import datetime
-
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -66,3 +64,19 @@ class FacilityDetail(FacilitySummary):
     contact: Contact
     publisher_url: str
     linked_data: LinkedData = Field(default_factory=LinkedData)
+    wikidata_information: WikidataInformation | None = None
+
+
+class WikidataInformation(BaseModel):
+    """Información complementaria obtenida de Wikidata."""
+
+    wikidata_id: str
+    name: str | None = None
+    description: str | None = None
+    image: str | None = None
+    logo: str | None = None
+    interior_image: str | None = None
+    inception: str | None = None
+    architect: list[str] = Field(default_factory=list)
+    founders: list[str] = Field(default_factory=list)
+    wikidata_uri: str

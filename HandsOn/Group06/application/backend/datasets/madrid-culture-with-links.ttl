@@ -34,7 +34,7 @@
 <http://w3id.org/madrid-culture/resource/library/11572165> a ns1:Library ;
     schema1:latitude 40.3711623444796 ;
     schema1:longitude -3.692742821990015 ;
-    schema1:name "Biblioteca Pública Municipal de San Fermín" ;
+    schema1:name "Biblioteca Pública Municipal San Fermín" ;
     schema1:openingHours "Apertura de lunes a domingo.   Horario: de lunes a viernes de 8:30 a 21 horas; sábados y domingos de 8:30 a 15 horas.   Verano (del 15 de junio al 15 de septiembre): de lunes a viernes de 8:30 a 20 horas; sábados y domingos de 8:30 a 14 horas.   Cerrado: festivos, Semana Santa (de jueves a domingo), los dos últimos fines de semana de julio y todos los fines de semana de agosto, 24 y 31 de diciembre." ;
     schema1:telephone "91 480 47 25" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=83e748aaf535e710VgnVCM1000001d4a900aRCRD> ;
@@ -42,7 +42,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/11572165> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/11572165> ;
     ns1:transport "Metro: San Fermín-Orcasur (línea 3)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q111257503> .
 
 <http://w3id.org/madrid-culture/resource/library/123303> a ns1:Library ;
     schema1:latitude 40.38188230129181 ;
@@ -327,7 +328,7 @@
 <http://w3id.org/madrid-culture/resource/library/1764> a ns1:Library ;
     schema1:latitude 40.435399621146054 ;
     schema1:longitude -3.69966592825407 ;
-    schema1:name "Biblioteca Pública Chamberí - José Luis Sampedro" ;
+    schema1:name "Biblioteca Pública José Luis Sampedro" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.   Días de cierre: sábados: 4 de abril, 16 de mayo y todos los sábados de julio, agosto y septiembre, 26 de diciembre Domingos: todos. Festivos: 1 de enero; 2 y 3 de abril; 1, 2 y 15 mayo; 12 de octubre; 2 y 9 de noviembre; 7, 8, 24, 25 y 31 de diciembre." ;
     schema1:telephone "914 459 782" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=5a2279262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -335,12 +336,13 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1764> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1764> ;
     ns1:transport "Metro: Iglesia (línea 1), Quevedo (línea 2), Alonso Cano (línea 7)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697863> .
 
 <http://w3id.org/madrid-culture/resource/library/1765> a ns1:Library ;
     schema1:latitude 40.4344013219248 ;
     schema1:longitude -3.6689700985764175 ;
-    schema1:name "Biblioteca Pública Manuel Alva" ;
+    schema1:name "Biblioteca Pública del Estado Manuel Alvar" ;
     schema1:openingHours "Cerrada temporalmente." ;
     schema1:telephone "917 263 701" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=d51979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -348,7 +350,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1765> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1765> ;
     ns1:transport "Metro: Diego de León (líneas 4, 5 y 6), Cartagena (línea 7), Parque de las Avenidas (línea 7)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q30453528> .
 
 <http://w3id.org/madrid-culture/resource/library/1770> a ns1:Library ;
     schema1:latitude 40.47719279779815 ;
@@ -395,7 +398,7 @@
 <http://w3id.org/madrid-culture/resource/library/1774> a ns1:Library ;
     schema1:latitude 40.403577814444176 ;
     schema1:longitude -3.6724086076957154 ;
-    schema1:name "Biblioteca Pública Retiro - Elena Fortún" ;
+    schema1:name "Biblioteca Pública Elena Fortún" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes, de 9 a 21 horas. Sábados, de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.    Días de cierre: Sábados : 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; Domingos: todos; Festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7, 8 y 25 de diciembre. otros: 24 y 31 de diciembre." ;
     schema1:telephone "915 019 146" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=44213d0b5e71c010VgnVCM1000000b205a0aRCRD> ;
@@ -403,7 +406,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1774> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1774> ;
     ns1:transport "Metro: Pacífico (líneas 1 y 6), Conde de Casal (línea 6)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697975> .
 
 <http://w3id.org/madrid-culture/resource/library/1777> a ns1:Library ;
     schema1:latitude 40.44660265004691 ;
@@ -464,7 +468,7 @@
 <http://w3id.org/madrid-culture/resource/library/1798> a ns1:Library ;
     schema1:latitude 40.407095978373384 ;
     schema1:longitude -3.7110439355238602 ;
-    schema1:name "Biblioteca Pública Centro - Pedro Salinas" ;
+    schema1:name "Biblioteca Pública Pedro Salinas" ;
     schema1:openingHours "Apertura de lunes a viernes.  De lunes a viernes de 9 a 21 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: Sábado y domingos; 1 de enero; 6 de enero; 2 y 3 de abril; 1, 2 y 15 de mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre 24, 25 y 31 de diciembre" ;
     schema1:telephone "913 665 407" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=67ed995a8bf5d010VgnVCM2000000c205a0aRCRD> ;
@@ -472,12 +476,13 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1798> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1798> ;
     ns1:transport "Metro: Puerta Toledo (línea 5)  Cercanías: Embajadores (C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697859> .
 
 <http://w3id.org/madrid-culture/resource/library/1800> a ns1:Library ;
     schema1:latitude 40.38449744232138 ;
     schema1:longitude -3.642917675006409 ;
-    schema1:name "Biblioteca Pública de Vallecas" ;
+    schema1:name "Biblioteca Pública Miguel Hernández" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: Sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; Domingos: todos; Festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre; 25 de diciembre. Otros: 24 y 31 de diciembre." ;
     schema1:telephone "913 033 195" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=535979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -485,12 +490,13 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1800> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1800> ;
     ns1:transport "Metro: Miguel Hernández (línea 1)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q18818698> .
 
 <http://w3id.org/madrid-culture/resource/library/181101> a ns1:Library ;
     schema1:latitude 40.38092043731836 ;
     schema1:longitude -3.6136725045662423 ;
-    schema1:name "Biblioteca Pública Villa de Vallecas - Luis Martín Santos" ;
+    schema1:name "Biblioteca Pública Luis Martín Santos" ;
     schema1:openingHours "Apertura de lunes a domingo.  De lunes a viernes de 9 a 21 horas. Fines de semana y festivos de 11 a 19 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: 1 y 6 de enero; 1 de mayo; fines de semana y festivos del mes de agosto; 24, 25 y 31 de diciembre." ;
     schema1:telephone "912 760 231" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=09ac38d60b41c010VgnVCM2000000c205a0aRCRD> ;
@@ -498,7 +504,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/181101> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/181101> ;
     ns1:transport "Metro: Villa de Vallecas (línea 1)  Renfe: Líneas C1, C2 Y C7." ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697979> .
 
 <http://w3id.org/madrid-culture/resource/library/185595> a ns1:Library ;
     schema1:latitude 40.45749513485957 ;
@@ -546,7 +553,7 @@
 <http://w3id.org/madrid-culture/resource/library/25526> a ns1:Library ;
     schema1:latitude 40.37944179159947 ;
     schema1:longitude -3.7694389972002424 ;
-    schema1:name "Biblioteca Pública Latina - Antonio Mingote" ;
+    schema1:name "Biblioteca Pública Antonio Mingote" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre:sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; domingos: todos; festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 ,8  y 25 de diciembre. otros: 24 y 31 de diciembre." ;
     schema1:telephone "915 093 625" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=c73e995a8bf5d010VgnVCM2000000c205a0aRCRD> ;
@@ -554,7 +561,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/25526> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/25526> ;
     ns1:transport "Metro: Aluche (línea 5)  Cercanías Renfe: Maestra Justa Freire - Polideportivo Aluche (antigua estación de Fanjul) (línea C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697873> .
 
 <http://w3id.org/madrid-culture/resource/library/50313490> a ns1:Library ;
     schema1:latitude 40.36691109856854 ;
@@ -613,7 +621,7 @@
 <http://w3id.org/madrid-culture/resource/library/5765642> a ns1:Library ;
     schema1:latitude 40.37342554545538 ;
     schema1:longitude -3.7480707331054375 ;
-    schema1:name "Biblioteca Pública de Carabanchel Luis Rosales" ;
+    schema1:name "Biblioteca Pública Luis Rosales" ;
     schema1:openingHours "Apertura de lunes a domingo.  De lunes a viernes de 9 a 21 horas. Fines de semana y festivos de 11 a 19 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: 1 y 6 de enero; 1 de mayo; fines de semana y festivos del mes de agosto; 24, 25 y 31 de diciembre." ;
     schema1:telephone "912 760 233" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7a73f884ad3f9210VgnVCM1000000b205a0aRCRD> ;
@@ -621,7 +629,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/5765642> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/5765642> ;
     ns1:transport "Metro: Carabanchel Alto (línea 11)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q5727787> .
 
 <http://w3id.org/madrid-culture/resource/library/5768564> a ns1:Library ;
     schema1:latitude 40.397074625115906 ;
@@ -710,7 +719,7 @@
 <http://w3id.org/madrid-culture/resource/library/86719> a ns1:Library ;
     schema1:latitude 40.34952488592754 ;
     schema1:longitude -3.7101159464904097 ;
-    schema1:name "Biblioteca Pública Villaverde - María Moliner" ;
+    schema1:name "Biblioteca Pública María Moliner" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes, de 9 a 21 horas. Sábados, de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; domingos: todos; festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre; 25 de diciembre. otros: 24 y 31 de diciembre. ." ;
     schema1:telephone "917 230 194" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=127979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -718,7 +727,8 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/86719> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/86719> ;
     ns1:transport "Metro: Villaverde Alto (línea 3)  Cercanías Renfe: Puente Alcocer (linea C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697984> .
 
 <http://w3id.org/madrid-culture/resource/museum/10091450> a ns1:Museum ;
     schema1:latitude 40.480173612860305 ;
@@ -2934,7 +2944,10 @@
     ns1:streetAddress "CALLE ALFONSO XII, 68" .
 
 <http://w3id.org/madrid-culture/resource/address/2058> a ns1:Address ;
-    ns1:streetAddress "MUSEO NACIONAL DEL PRADO," .
+    ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
+    ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
+    ns1:postalCode "28014" ;
+    ns1:streetAddress "MUSEO NACIONAL DEL PRADO, s/n" .
 
 <http://w3id.org/madrid-culture/resource/address/2059> a ns1:Address ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
@@ -3353,14 +3366,16 @@
     owl:sameAs <https://wikidata.org/entity/Q5191881> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/10-7> a ns1:Neighborhood ;
-    schema1:name "Las Águilas" .
+    schema1:name "Las Águilas" ;
+    owl:sameAs <https://wikidata.org/entity/Q5971372> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-3> a ns1:Neighborhood ;
     schema1:name "San Isidro" ;
     owl:sameAs <https://wikidata.org/entity/Q3813733> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-5> a ns1:Neighborhood ;
-    schema1:name "Puerta Bonita" .
+    schema1:name "Puerta Bonita" ;
+    owl:sameAs <https://wikidata.org/entity/Q3813762> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-6> a ns1:Neighborhood ;
     schema1:name "Buenavista" ;
@@ -3371,7 +3386,8 @@
     owl:sameAs <https://wikidata.org/entity/Q10341270> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/12-3> a ns1:Neighborhood ;
-    schema1:name "San Fermín" .
+    schema1:name "San Fermín" ;
+    owl:sameAs <https://wikidata.org/entity/Q71758> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/12-7> a ns1:Neighborhood ;
     schema1:name "Pradolongo" ;
@@ -3390,7 +3406,8 @@
     owl:sameAs <https://wikidata.org/entity/Q10343902> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-4> a ns1:Neighborhood ;
-    schema1:name "Palomeras Sureste" .
+    schema1:name "Palomeras Sureste" ;
+    owl:sameAs <https://wikidata.org/entity/Q10343901> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/14-4> a ns1:Neighborhood ;
     schema1:name "Media Legua" ;
@@ -3413,14 +3430,16 @@
     owl:sameAs <https://wikidata.org/entity/Q10388714> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/17-1> a ns1:Neighborhood ;
-    schema1:name "Villaverde Alto, Casco Histórico de Villaverde" .
+    schema1:name "Villaverde Alto, Casco Histórico de Villaverde" ;
+    owl:sameAs <https://wikidata.org/entity/Q390435> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/17-3> a ns1:Neighborhood ;
     schema1:name "Butarque" ;
     owl:sameAs <https://wikidata.org/entity/Q390453> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/18-2> a ns1:Neighborhood ;
-    schema1:name "Santa Eugenia" .
+    schema1:name "Santa Eugenia" ;
+    owl:sameAs <https://wikidata.org/entity/Q390463> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/18-3> a ns1:Neighborhood ;
     schema1:name "Ensanche de Vallecas" ;
@@ -3459,7 +3478,8 @@
     owl:sameAs <https://wikidata.org/entity/Q10260772> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/3-2> a ns1:Neighborhood ;
-    schema1:name "Adelfas" .
+    schema1:name "Adelfas" ;
+    owl:sameAs <https://wikidata.org/entity/Q3774001> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/4-1> a ns1:Neighborhood ;
     schema1:name "Recoletos" ;
@@ -3649,10 +3669,6 @@
     schema1:name "Sol" ;
     owl:sameAs <https://wikidata.org/entity/Q2465181> .
 
-<http://w3id.org/madrid-culture/resource/neighborhood/3-5> a ns1:Neighborhood ;
-    schema1:name "Jerónimos" ;
-    owl:sameAs <https://wikidata.org/entity/Q10306766> .
-
 <http://w3id.org/madrid-culture/resource/district/13> a ns1:District ;
     schema1:name "Puente de Vallecas" ;
     owl:sameAs <https://wikidata.org/entity/Q2003054> .
@@ -3661,17 +3677,21 @@
     schema1:name "Embajadores" ;
     owl:sameAs <https://wikidata.org/entity/Q2449844> .
 
+<http://w3id.org/madrid-culture/resource/neighborhood/3-5> a ns1:Neighborhood ;
+    schema1:name "Jerónimos" ;
+    owl:sameAs <https://wikidata.org/entity/Q10306766> .
+
 <http://w3id.org/madrid-culture/resource/district/4> a ns1:District ;
     schema1:name "Salamanca" ;
     owl:sameAs <https://wikidata.org/entity/Q1773521> .
 
-<http://w3id.org/madrid-culture/resource/district/3> a ns1:District ;
-    schema1:name "Retiro" ;
-    owl:sameAs <https://wikidata.org/entity/Q2002296> .
-
 <http://w3id.org/madrid-culture/resource/neighborhood/1-1> a ns1:Neighborhood ;
     schema1:name "Palacio" ;
     owl:sameAs <https://wikidata.org/entity/Q2136510> .
+
+<http://w3id.org/madrid-culture/resource/district/3> a ns1:District ;
+    schema1:name "Retiro" ;
+    owl:sameAs <https://wikidata.org/entity/Q2002296> .
 
 <http://w3id.org/madrid-culture/resource/district/7> a ns1:District ;
     schema1:name "Chamberí" ;

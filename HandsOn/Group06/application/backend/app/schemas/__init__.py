@@ -10,6 +10,7 @@ from app.schemas.facility import (
     FacilitySummary,
     Location,
     LinkedData,
+    WikidataInformation
 )
 
-from app.schemas.nearby import NearbySearch, NearbyFacility
+from app.schemas.nearby import NearbySearch

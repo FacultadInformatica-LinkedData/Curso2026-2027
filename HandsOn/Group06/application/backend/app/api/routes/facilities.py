@@ -2,6 +2,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, HTTPException, Query, Request
 
+import httpx
 from rdflib import Graph
 
 from app.rdf.queries import (
@@ -9,12 +10,14 @@ from app.rdf.queries import (
     get_facility_by_id,
 )
 
+from app.wikidata.client import get_wikidata_information
+
 from app.schemas import (
     FacilitySummary,
     FacilityDetail,
     FacilityFilters,
-    NearbySearch, 
-    NearbyFacility
+    NearbySearch,
+    WikidataInformation 
 )
 
 
@@ -24,7 +27,7 @@ router = APIRouter(
 )
 
 
-@router.get("", response_model=list[FacilitySummary] | list[NearbyFacility])
+@router.get("", response_model=list[FacilitySummary])
 def list_facilities(
     request: Request, 
     filters: Annotated[FacilityFilters, Query()],
@@ -57,7 +60,7 @@ def list_facilities(
 
 
 @router.get("/{facility_id:path}", response_model=FacilityDetail)
-def facility_detail(
+async def facility_detail(
     facility_id: str,
     request: Request,
 ):
@@ -75,5 +78,28 @@ def facility_detail(
             status_code=404,
             detail="Facility not found",
         )
+
+    # Consultar Wikidata si existe una URI vinculada.
+    wikidata_uri = facility.linked_data.wikidata_uri
+
+    print("URI de Wikidata:", wikidata_uri)
+
+    if wikidata_uri is not None:
+        try:
+            information = await get_wikidata_information(wikidata_uri)
+
+            print("Información recuperada:", information)
+
+            if information is not None:
+                facility = facility.model_copy(
+                    update={
+                        "wikidata_information": WikidataInformation(
+                            **information
+                        )
+                    }
+                )
+
+        except Exception as error:
+            print("Error consultando Wikidata:", repr(error))
 
     return facility

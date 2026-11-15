@@ -2,19 +2,29 @@
 import PropTypes from "prop-types";
 import "./FacilityCard.css";
 
+import { Link } from "react-router-dom";
+
 export default function FacilityCard({ facility }) {
+  const facilityId = facility.id.split("/").slice(-2).join("/");
+
   return (
-    <article className="facility-card">
-      <span className="facility-type">
-        {facility.facility_type === "library" ? "Biblioteca" : "Museo"}
-      </span>
+    <Link 
+      to={`/facilities/${facilityId}`}
+      className="facility-card-link"
+    >
+      <article className="facility-card">
+        <span className="facility-type">
+          {facility.facility_type === "library" ? "Biblioteca" : "Museo"}
+        </span>
 
-      <h2>{facility.name}</h2>
+        
+          <h2>{facility.name}</h2>
 
-      <p>Distrito: {facility.district.name}</p>
+        <p>Distrito: {facility.district.name}</p>
 
-      <p>Barrio: {facility.neighborhood.name}</p>
-    </article>
+        <p>Barrio: {facility.neighborhood.name}</p>
+      </article>
+    </Link>
   );
 }
 

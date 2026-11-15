@@ -1,3 +1,6 @@
+
+import { useEffect } from "react";
+
 import PropTypes from "prop-types";
 
 import {
@@ -10,44 +13,109 @@ import {
 
 import L from "leaflet";
 
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
-
 import "./FacilityMap.css";
 
 // Configuración del icono de los marcadores.
-const defaultIcon = L.icon({
-  iconUrl: markerIcon,
-  iconRetinaUrl: markerIcon2x,
-  shadowUrl: markerShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
+const libraryIcon = L.divIcon({
+  className: "custom-marker",
+  html: '<div class="marker-pin library-marker"></div>',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10],
+});
+
+const museumIcon = L.divIcon({
+  className: "custom-marker",
+  html: '<div class="marker-pin museum-marker"></div>',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10],
+});
+
+const userIcon = L.divIcon({
+  className: "custom-marker",
+  html: '<div class="marker-pin user-marker"></div>',
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -12],
 });
 
 // Coordenadas del centro de Madrid.
 const MADRID_CENTER = [40.4168, -3.7038];
 
-function MapBounds({ facilities }) {
+function MapBounds({ facilities, userLocation }) {
   const map = useMap();
 
-  const bounds = facilities.map((facility) => [
-    facility.location.latitude,
-    facility.location.longitude,
-  ]);
+  useEffect(() => {
+    const bounds = facilities.map((facility) => [
+      facility.location.latitude,
+      facility.location.longitude,
+    ]);
 
-  if (bounds.length > 0) {
-    map.fitBounds(bounds, {
-      padding: [30, 30],
-      maxZoom: 15,
-    });
-  }
+    // Añadir la ubicación del usuario si existe.
+    if (userLocation) {
+      bounds.push([
+        userLocation.latitude,
+        userLocation.longitude,
+      ]);
+    }
+
+    if (bounds.length > 1) {
+      map.fitBounds(bounds, {
+        padding: [30, 30],
+        maxZoom: 15,
+      });
+    } else if (bounds.length === 1) {
+      map.setView(bounds[0], 15);
+    }
+  }, [facilities, userLocation, map]);
 
   return null;
 }
 
-export default function FacilityMap({ facilities }) {
+function MapLegend() {
+  const map = useMap();
+
+  useEffect(() => {
+    const legend = L.control({
+      position: "bottomright",
+    });
+
+    legend.onAdd = () => {
+      const div = L.DomUtil.create("div", "map-legend");
+
+      div.innerHTML = `
+        <strong>Instalaciones</strong>
+        <div class="legend-item">
+          <span class="legend-color library-marker"></span>
+          <span>Bibliotecas</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color museum-marker"></span>
+          <span>Museos</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color user-marker"></span>
+          <span>Tu ubicación</span>
+        </div>
+      `;
+
+      L.DomEvent.disableClickPropagation(div);
+
+      return div;
+    };
+
+    legend.addTo(map);
+
+    return () => {
+      legend.remove();
+    };
+  }, [map]);
+
+  return null;
+}
+
+export default function FacilityMap({ facilities, userLocation }) {  
   // Nos quedamos únicamente con instalaciones
   // que tienen coordenadas válidas.
   const locatedFacilities = facilities.filter((facility) => {
@@ -76,7 +144,26 @@ export default function FacilityMap({ facilities }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <MapBounds facilities={locatedFacilities} />
+      <MapBounds
+        facilities={locatedFacilities}
+        userLocation={userLocation}
+      />
+
+      <MapLegend />
+
+      {userLocation && (
+        <Marker
+          position={[
+            userLocation.latitude,
+            userLocation.longitude,
+          ]}
+          icon={userIcon}
+        >
+          <Popup>
+            <strong>Tu ubicación</strong>
+          </Popup>
+        </Marker>
+      )}
 
       {locatedFacilities.map((facility) => (
         <Marker
@@ -85,7 +172,11 @@ export default function FacilityMap({ facilities }) {
             facility.location.latitude,
             facility.location.longitude,
           ]}
-          icon={defaultIcon}
+          icon={
+            facility.facility_type === "library"
+              ? libraryIcon
+              : museumIcon
+          }
         >
           <Popup>
             <strong>{facility.name}</strong>
@@ -118,4 +209,17 @@ FacilityMap.propTypes = {
       }),
     })
   ).isRequired,
+
+  userLocation: PropTypes.shape({
+    latitude: PropTypes.number.isRequired,
+    longitude: PropTypes.number.isRequired,
+  }),
+};
+
+MapBounds.propTypes = {
+  facilities: PropTypes.array.isRequired,
+  userLocation: PropTypes.shape({
+    latitude: PropTypes.number.isRequired,
+    longitude: PropTypes.number.isRequired,
+  }),
 };

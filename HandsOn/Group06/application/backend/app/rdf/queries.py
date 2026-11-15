@@ -1,10 +1,9 @@
 
-import unicodedata
 
-from rdflib import Graph, URIRef
+from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, OWL
 
-from app.rdf.namespaces import MC, SCHEMA
+from app.rdf.namespaces import MC, SCHEMA, RES
 from app.schemas import (
     Accessibility,
     Address,
@@ -15,7 +14,6 @@ from app.schemas import (
     Location,
     LinkedData,
     FacilityFilters,
-    NearbyFacility,
     NearbySearch
 )
 
@@ -55,37 +53,8 @@ FACILITY_COMMON_PATTERN = """
     ?accessibility mc:magneticInductionLoop ?magnetic_induction_loop .
 """
 
-
 # --------------------------------------------------
-# Consulta 1: listado de instalaciones
-# --------------------------------------------------
-
-FACILITIES_QUERY = """
-    SELECT DISTINCT
-        ?facility
-        ?facilityClass
-        ?name
-        ?latitude
-        ?longitude
-        ?district
-        ?district_name
-        ?neighborhood
-        ?neighborhood_name
-        ?accessible
-        ?partially_accessible
-        ?no_info_accessibility
-        ?sign_language
-        ?tactile_paving
-        ?magnetic_induction_loop
-
-    WHERE {
-""" + FACILITY_COMMON_PATTERN + """
-    }
-"""
-
-
-# --------------------------------------------------
-# Consulta 2: detalle de una instalación
+# Detalles de una instalación
 # --------------------------------------------------
 
 FACILITY_DETAIL_QUERY = """
@@ -116,7 +85,33 @@ FACILITY_DETAIL_QUERY = """
         ?magnetic_induction_loop
 
     WHERE {
-""" + FACILITY_COMMON_PATTERN + """
+        VALUES ?facilityClass {
+            mc:Library
+            mc:Museum
+        }
+
+        ?facility rdf:type ?facilityClass .
+
+        ?facility schema:name ?name .
+        ?facility schema:latitude ?latitude .
+        ?facility schema:longitude ?longitude .
+
+        ?facility mc:hasAddress ?address .
+
+        ?address mc:locatedInDistrict ?district .
+        ?district schema:name ?district_name .
+
+        ?address mc:locatedInNeighborhood ?neighborhood .
+        ?neighborhood schema:name ?neighborhood_name .
+
+        ?facility mc:hasAccessibility ?accessibility .
+
+        ?accessibility mc:accessible ?accessible .
+        ?accessibility mc:partiallyAccessible ?partially_accessible .
+        ?accessibility mc:noInfoAccessibility ?no_info_accessibility .
+        ?accessibility mc:signLanguage ?sign_language .
+        ?accessibility mc:tactilePaving ?tactile_paving .
+        ?accessibility mc:magneticInductionLoop ?magnetic_induction_loop .
 
         FILTER(?facility = ?facility_uri)
 
@@ -201,79 +196,112 @@ def _row_to_dict(row) -> dict:
     }
 
 
-def _normalize_text(value: str) -> str:
-    """Quita los acentos y mayúsculas a un texto"""
-    value = unicodedata.normalize("NFD", value)
-    value = "".join(
-        character
-        for character in value
-        if unicodedata.category(character) != "Mn"
-    )
+def build_facilities_query(
+    filters: FacilityFilters | None = None,
+) -> tuple[str, dict]:
+    """Construye la consulta SPARQL según los filtros seleccionados."""
 
-    return value.casefold().strip()
+    conditions = []
+    bindings = {}
 
+    facility_classes = [MC.Library, MC.Museum]
 
-def _matches_filters(
-    row: dict, 
-    filters: FacilityFilters
-) -> bool:
-    """Comprueba si una instalación cumple los filtros seleccionados."""
+    if filters is not None:
 
-    # Filtro por nombre
-    if filters.query:
-        name = str(_get_value(row, "name"))
+        # Filtro por tipo
+        if filters.facility_types:
+            facility_classes = [
+                MC.Library
+                if facility_type == "library"
+                else MC.Museum
+                for facility_type in filters.facility_types
+            ]
 
-        if _normalize_text(filters.query) not in _normalize_text(name):
-            return False
+        # Filtro por nombre
+        if filters.query:
+            conditions.append(
+                "FILTER(CONTAINS(LCASE(STR(?name)), LCASE(STR(?search))))"
+            )
+            bindings["search"] = Literal(filters.query)
 
-    # Filtro por tipo
-    facility_type = _get_facility_type(row["facilityClass"])
+        # Filtro por distrito
+        if filters.district:
+            conditions.append(
+                "FILTER(?district = ?selected_district)"
+            )
+            bindings["selected_district"] = URIRef(filters.district)
 
-    if filters.facility_types:
-        if facility_type not in filters.facility_types:
-            return False
+        # Filtro por barrio
+        if filters.neighborhood:
+            conditions.append(
+                "FILTER(?neighborhood = ?selected_neighborhood)"
+            )
+            bindings["selected_neighborhood"] = URIRef(
+                filters.neighborhood
+            )
 
-    # Filtro por distrito
-    if filters.district:
-        if str(row["district"]) != filters.district:
-            return False
+        # Filtro por estado de accesibilidad
+        if filters.accessibility_status:
+            status_conditions = []
 
-    # Filtro por barrio
-    if filters.neighborhood:
-        if str(row["neighborhood"]) != filters.neighborhood:
-            return False
+            if "accessible" in filters.accessibility_status:
+                status_conditions.append("?accessible = true")
 
-    # Filtro por estado de accesibilidad
-    if filters.accessibility_status:
-        status_values = {
-            "accessible": _get_value(row, "accessible"),
-            "partial": _get_value(row, "partially_accessible"),
+            if "partial" in filters.accessibility_status:
+                status_conditions.append(
+                    "?partially_accessible = true"
+                )
+
+            conditions.append(
+                "FILTER(" + " || ".join(status_conditions) + ")"
+            )
+
+        # Filtro por características de accesibilidad
+        if filters.accessibility_features:
+            feature_variables = {
+                "sign_language": "?sign_language",
+                "tactile_paving": "?tactile_paving",
+                "magnetic_induction_loop": "?magnetic_induction_loop",
+            }
+
+            for feature in filters.accessibility_features:
+                conditions.append(
+                    f"FILTER({feature_variables[feature]} = true)"
+                )
+
+    query = """
+        SELECT DISTINCT
+            ?facility
+            ?facilityClass
+            ?name
+            ?latitude
+            ?longitude
+            ?district
+            ?district_name
+            ?neighborhood
+            ?neighborhood_name
+            ?accessible
+            ?partially_accessible
+            ?no_info_accessibility
+            ?sign_language
+            ?tactile_paving
+            ?magnetic_induction_loop
+
+        WHERE {
+            VALUES ?facilityClass {
+                """ + " ".join(
+                    f"<{uri}>" for uri in facility_classes
+                ) + """
+            }
+
+    """ + FACILITY_COMMON_PATTERN + """
+
+    """ + "\n".join(conditions) + """
+
         }
+    """
 
-        if not any(
-            status_values[status]
-            for status in filters.accessibility_status
-        ):
-            return False
-
-    # Filtro por características de accesibilidad
-    if filters.accessibility_features:
-        feature_values = {
-            "sign_language": _get_value(row, "sign_language"),
-            "tactile_paving": _get_value(row, "tactile_paving"),
-            "magnetic_induction_loop": _get_value(
-                row,
-                "magnetic_induction_loop",
-            ),
-        }
-
-        if not all(
-            feature_values[feature]
-            for feature in filters.accessibility_features
-        ):
-            return False
-
-    return True
+    return query, bindings
 
 
 def _within_distance(
@@ -300,22 +328,21 @@ def get_facilities(
     graph: Graph, 
     filters: FacilityFilters | None = None, 
     nearby: NearbySearch | None = None
-) -> list[FacilitySummary] | list[NearbyFacility]:
+) -> list[FacilitySummary]:
     """Obtiene los datos básicos de bibliotecas y museos."""
 
+    query, bindings = build_facilities_query(filters)
+
     results = graph.query(
-        FACILITIES_QUERY,
+        query,
         initNs=NAMESPACES,
+        initBindings=bindings,
     )
 
     facilities = []
 
     for result in results:
         row = _row_to_dict(result)
-
-        # Aplicar filtros solamente si se ha proporcionado.
-        if filters is not None and not _matches_filters(row, filters):
-            continue
 
         facility = FacilitySummary(
             id=str(row["facility"]),
@@ -332,23 +359,12 @@ def get_facilities(
 
         # Aplicar filtro distancia solamente si se ha proporcionado
         if nearby is not None:
-            is_within_distance, distance = _within_distance(facility, nearby)
+            is_within_distance, _ = _within_distance(facility, nearby)
 
             if not is_within_distance:
                 continue
 
-            facilities.append(
-                NearbyFacility(
-                    facility=facility,
-                    distance_km=round(distance, 3)
-                )
-            )
-        else:
-            facilities.append(facility)
-
-    # Ordenar por distancia cuando se solicita cercanía.
-    if nearby is not None:
-        facilities.sort(key=lambda item: item.distance_km)
+        facilities.append(facility)
 
     return facilities
 
@@ -367,7 +383,7 @@ def get_facility_by_id(
         FACILITY_DETAIL_QUERY,
         initNs=NAMESPACES,
         initBindings={
-            "facility_uri": URIRef(facility_id),
+            "facility_uri": URIRef(f"{RES}{facility_id}"),
         },
     )
 
