@@ -15,41 +15,39 @@ export default function FacilityAccessibility({ facility }) {
           No hay información sobre accesibilidad disponible.
         </p>
       ) : (
-        <div className="accessibility-status">
-          {accessibility.accessible ? (
-            <span className="available">Accesible</span>
-          ) : accessibility.partially_accessible ? (
-            <span className="partially-available">
-              Parcialmente accesible
-            </span>
-          ) : (
-            <span className="unavailable">No accesible</span>
-          )}
-        </div>
+        <>
+          <div className="accessibility-status">
+            {accessibility.accessible ? (
+              <span className="available">Accesible</span>
+            ) : accessibility.partially_accessible ? (
+              <span className="partially-available">
+                Parcialmente accesible
+              </span>
+            ) : (
+              <span className="unavailable">No accesible</span>
+            )}
+          </div>
+
+          <div className="accessibility-list">
+            <AccessibilityItem
+              label="Lenguaje de signos"
+              available={accessibility.sign_language}
+            />
+
+            <AccessibilityItem
+              label="Pavimento táctil"
+              available={accessibility.tactile_paving}
+            />
+
+            <AccessibilityItem
+              label="Bucle de inducción magnética"
+              available={accessibility.magnetic_induction_loop}
+            />
+          </div>
+        </>
       )}
 
-      <div className="accessibility-list">
-        <AccessibilityItem
-          label="Lenguaje de signos"
-          available={accessibility.sign_language}
-        />
-
-        <AccessibilityItem
-          label="Pavimento táctil"
-          available={accessibility.tactile_paving}
-        />
-
-        <AccessibilityItem
-          label="Bucle de inducción magnética"
-          available={accessibility.magnetic_induction_loop}
-        />
-      </div>
-
-      {accessibility.no_info_accessibility && (
-        <p className="accessibility-note">
-          No hay información sobre accesibilidad disponible.
-        </p>
-      )}
+      
     </section>
   );
 }

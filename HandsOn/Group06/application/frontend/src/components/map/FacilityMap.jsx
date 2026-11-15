@@ -24,12 +24,28 @@ const libraryIcon = L.divIcon({
   popupAnchor: [0, -10],
 });
 
+const selectedLibraryIcon = L.divIcon({
+  className: "custom-marker",
+  html: '<div class="marker-pin library-marker selected-marker"></div>',
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14],
+});
+
 const museumIcon = L.divIcon({
   className: "custom-marker",
   html: '<div class="marker-pin museum-marker"></div>',
   iconSize: [20, 20],
   iconAnchor: [10, 10],
   popupAnchor: [0, -10],
+});
+
+const selectedMuseumIcon = L.divIcon({
+  className: "custom-marker",
+  html: '<div class="marker-pin museum-marker selected-marker"></div>',
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14],
 });
 
 const userIcon = L.divIcon({
@@ -115,7 +131,11 @@ function MapLegend() {
   return null;
 }
 
-export default function FacilityMap({ facilities, userLocation }) {  
+export default function FacilityMap({
+  facilities,
+  userLocation,
+  activeFacilityId
+}) {
   // Nos quedamos únicamente con instalaciones
   // que tienen coordenadas válidas.
   const locatedFacilities = facilities.filter((facility) => {
@@ -165,24 +185,29 @@ export default function FacilityMap({ facilities, userLocation }) {
         </Marker>
       )}
 
-      {locatedFacilities.map((facility) => (
-        <Marker
-          key={facility.id}
-          position={[
-            facility.location.latitude,
-            facility.location.longitude,
-          ]}
-          icon={
-            facility.facility_type === "library"
-              ? libraryIcon
-              : museumIcon
-          }
-        >
-          <Popup>
-            <strong>{facility.name}</strong>
-          </Popup>
-        </Marker>
-      ))}
+      {locatedFacilities.map((facility) => {
+        const isActive = facility.id === activeFacilityId;
+
+        const icon =
+          facility.facility_type === "library"
+            ? isActive ? selectedLibraryIcon : libraryIcon
+            : isActive ? selectedMuseumIcon : museumIcon;
+
+        return (
+          <Marker
+            key={facility.id}
+            position={[
+              facility.location.latitude,
+              facility.location.longitude,
+            ]}
+            icon={icon}
+          >
+            <Popup>
+              <strong>{facility.name}</strong>
+            </Popup>
+          </Marker>
+        );
+      })}
     </MapContainer>
   );
 }
@@ -214,6 +239,8 @@ FacilityMap.propTypes = {
     latitude: PropTypes.number.isRequired,
     longitude: PropTypes.number.isRequired,
   }),
+
+  activeFacilityId: PropTypes.string,
 };
 
 MapBounds.propTypes = {

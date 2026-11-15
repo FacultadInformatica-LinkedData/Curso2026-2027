@@ -24,10 +24,6 @@ from app.services.geo import _calculate_distance
 # --------------------------------------------------
 
 FACILITY_COMMON_PATTERN = """
-    VALUES ?facilityClass {
-        mc:Library
-        mc:Museum
-    }
 
     ?facility rdf:type ?facilityClass .
 

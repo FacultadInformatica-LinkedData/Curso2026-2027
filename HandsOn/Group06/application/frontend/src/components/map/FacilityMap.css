@@ -70,3 +70,9 @@
   height: 20px;
   box-shadow: 0 0 6px rgb(0 0 0 / 40%);
 }
+
+.selected-marker {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 5px rgb(38 112 82 / 25%);
+  z-index: 1000;
+}

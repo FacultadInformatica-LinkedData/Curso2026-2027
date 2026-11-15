@@ -25,11 +25,16 @@ def build_wikidata_query(entity_id: str) -> str:
         ?itemLabel
         ?itemDescription
         ?image
-        ?logo
         ?interiorImage
         ?inception
         ?architectLabel
         ?founderLabel
+        ?heritageDesignationLabel
+        ?area
+        ?areaUnitLabel
+        ?activityPolicyLabel
+        ?awardLabel
+        ?xUsername
     WHERE {{
         VALUES ?item {{ wd:{entity_id} }}
 
@@ -39,6 +44,18 @@ def build_wikidata_query(entity_id: str) -> str:
         OPTIONAL {{ ?item wdt:P571 ?inception . }}
         OPTIONAL {{ ?item wdt:P84 ?architect . }}
         OPTIONAL {{ ?item wdt:P112 ?founder . }}
+        OPTIONAL {{ ?item wdt:P1435 ?heritageDesignation . }}
+        OPTIONAL {{
+            ?item p:P2046 ?areaStatement .
+            ?areaStatement psv:P2046 ?areaValueNode .
+            ?areaValueNode wikibase:quantityAmount ?area .
+            OPTIONAL {{
+                ?areaValueNode wikibase:quantityUnit ?areaUnit .
+            }}
+        }}
+        OPTIONAL {{ ?item wdt:P5023 ?activityPolicy . }}
+        OPTIONAL {{ ?item wdt:P166 ?award . }}
+        OPTIONAL {{ ?item wdt:P2002 ?xUsername . }}
 
         SERVICE wikibase:label {{
             bd:serviceParam wikibase:language "es,en" .
@@ -83,11 +100,15 @@ async def get_wikidata_information(
         "name": None,
         "description": None,
         "image": None,
-        "logo": None,
         "interior_image": None,
         "inception": None,
         "architect": [],
         "founders": [],
+        "heritage_designations": [],
+        "area": [],
+        "activity_policies": [],
+        "awards": [],
+        "x_usernames": [],
         "wikidata_uri": wikidata_uri,
     }
 
@@ -103,12 +124,6 @@ async def get_wikidata_information(
             value = result.get("itemDescription")
             if value:
                 information["description"] = value["value"]
-
-        # Logo
-        if information["logo"] is None:
-            value = result.get("logo")
-            if value:
-                information["logo"] = value["value"]
 
         # Imagen interior
         if information["interior_image"] is None:
@@ -142,5 +157,51 @@ async def get_wikidata_information(
 
             if architect not in information["architect"]:
                 information["architect"].append(architect)
+
+        # Declaraciones de patrimonio
+        value = result.get("heritageDesignationLabel")
+        if value:
+            designation = value["value"]
+
+            if designation not in information["heritage_designations"]:
+                information["heritage_designations"].append(designation)
+
+
+        # Superficie
+        if "area" in result:
+            area = {
+                "value": float(result["area"]["value"]),
+                "unit": result.get("areaUnitLabel", {}).get("value"),
+            }
+
+            if area not in information["area"]:
+                information["area"].append(area)
+
+
+        # Políticas de actividades
+        value = result.get("activityPolicyLabel")
+        if value:
+            policy = value["value"]
+
+            if policy not in information["activity_policies"]:
+                information["activity_policies"].append(policy)
+
+
+        # Premios recibidos
+        value = result.get("awardLabel")
+        if value:
+            award = value["value"]
+
+            if award not in information["awards"]:
+                information["awards"].append(award)
+
+
+        # Usuarios de X
+        value = result.get("xUsername")
+        if value:
+            username = value["value"]
+
+            if username not in information["x_usernames"]:
+                information["x_usernames"].append(username)
 
     return information

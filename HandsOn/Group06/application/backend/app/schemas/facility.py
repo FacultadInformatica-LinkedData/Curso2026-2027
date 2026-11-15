@@ -67,6 +67,10 @@ class FacilityDetail(FacilitySummary):
     wikidata_information: WikidataInformation | None = None
 
 
+class WikidataArea(BaseModel):
+    value: float
+    unit: str | None = None
+
 class WikidataInformation(BaseModel):
     """Información complementaria obtenida de Wikidata."""
 
@@ -74,9 +78,13 @@ class WikidataInformation(BaseModel):
     name: str | None = None
     description: str | None = None
     image: str | None = None
-    logo: str | None = None
     interior_image: str | None = None
     inception: str | None = None
     architect: list[str] = Field(default_factory=list)
     founders: list[str] = Field(default_factory=list)
     wikidata_uri: str
+    heritage_designations: list[str] = Field(default_factory=list)
+    area: list[WikidataArea] = Field(default_factory=list)
+    activity_policies: list[str] = Field(default_factory=list)
+    awards: list[str] = Field(default_factory=list)
+    x_usernames: list[str] = Field(default_factory=list)

@@ -65,6 +65,63 @@ export default function WikidataSection({ information }) {
             values={information.architect}
           />
         )}
+
+        {information.heritage_designations?.length > 0 && (
+          <WikidataListItem
+            label="Declaraciones patrimoniales"
+            values={information.heritage_designations.map(
+              (designation) =>
+                designation.charAt(0).toUpperCase() + designation.slice(1)
+            )}
+          />
+        )}
+
+        {information.activity_policies?.length > 0 && (
+          <WikidataListItem
+            label="Políticas de actividad"
+            values={information.activity_policies.map(
+              (policy) => policy.charAt(0).toUpperCase() + policy.slice(1)
+            )}
+          />
+        )}
+
+        {information.awards?.length > 0 && (
+          <WikidataListItem
+            label="Premios y reconocimientos"
+            values={information.awards.map(
+              (award) => award.charAt(0).toUpperCase() + award.slice(1)
+            )}
+          />
+        )}
+
+        {information.area?.length > 0 && (
+          <WikidataListItem
+            label="Superficie"
+            values={information.area.map(
+              (item) =>
+                `${item.value.toLocaleString("es-ES")} ${
+                  item.unit || ""
+                }`.trim()
+            )}
+          />
+        )}
+
+        {information.x_usernames?.length > 0 && (
+          <div className="detail-info-item">
+            <span className="detail-label">X (Twitter)</span>
+
+            {information.x_usernames.map((username) => (
+              <a
+                key={username}
+                href={`https://x.com/${username.replace(/^@/, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @{username.replace(/^@/, "")}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -81,6 +138,16 @@ WikidataSection.propTypes = {
     founders: PropTypes.arrayOf(PropTypes.string),
     inception: PropTypes.string,
     architect: PropTypes.arrayOf(PropTypes.string),
+    heritage_designations: PropTypes.arrayOf(PropTypes.string),
+    activity_policies: PropTypes.arrayOf(PropTypes.string),
+    awards: PropTypes.arrayOf(PropTypes.string),
+    area: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.number.isRequired,
+        unit: PropTypes.string,
+      })
+    ),
+    x_usernames: PropTypes.arrayOf(PropTypes.string),
     country: PropTypes.arrayOf(PropTypes.string),
     located_in: PropTypes.arrayOf(PropTypes.string),
     architectural_style: PropTypes.arrayOf(PropTypes.string),

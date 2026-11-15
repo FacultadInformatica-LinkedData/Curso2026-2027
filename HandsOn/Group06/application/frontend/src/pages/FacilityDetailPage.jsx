@@ -48,7 +48,7 @@ export default function FacilityDetailPage() {
       <>
         <Header />
         <main className="detail-page">
-          <p className="detail-message">Loading facility...</p>
+          <p className="detail-message">Cargando instalación...</p>
         </main>
       </>
     );

@@ -22,6 +22,9 @@ export default function HomePage() {
   const [userLocation, setUserLocation] = useState(null);
   const [locationError, setLocationError] = useState(null);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [hoveredFacilityId, setHoveredFacilityId] = useState(null);
+
+  const activeFacilityId = hoveredFacilityId;
 
   const [filters, setFilters] = useState({
     facility_types: [],
@@ -186,13 +189,18 @@ export default function HomePage() {
                 <>
                   <div className="content-layout">
                     <div className="results-container">
-                      <FacilityList facilities={facilities} />
+                      <FacilityList
+                        facilities={facilities}
+                        activeFacilityId={activeFacilityId}
+                        onHoverFacility={setHoveredFacilityId}
+                      />
                     </div>
 
                     <div className="map-container">
-                      <FacilityMap 
-                        facilities={facilities} 
+                      <FacilityMap
+                        facilities={facilities}
                         userLocation={userLocation}
+                        activeFacilityId={activeFacilityId}
                       />
                     </div>
                   </div>
