@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://smartcity.linkeddata.es/bicis/ontology#"
+     xml:base="http://smartcity.linkeddata.es/bicis/ontology"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:ont="http://smartcity.linkeddata.es/bicis/ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://smartcity.linkeddata.es/bicis/ontology">
+        <rdfs:label xml:lang="es">Ontología de Aparcabicis de Madrid (Actualizada con vocabularios externos)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#inDistrict -->
+
+    <owl:ObjectProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#inDistrict">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/containedInPlace"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#District"/>
+        <rdfs:label xml:lang="es">en distrito</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#inNeighborhood -->
+
+    <owl:ObjectProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#inNeighborhood">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/containedInPlace"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#Neighborhood"/>
+        <rdfs:label xml:lang="es">en barrio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/containedInPlace -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/containedInPlace"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#hasCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#hasCapacity">
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="es">capacidad de plazas</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#hasModel">
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">modelo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#id">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">identificador</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="es">latitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="es">longitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://smartcity.linkeddata.es/bicis/ontology#streetAddress">
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/streetAddress"/>
+        <rdfs:domain rdf:resource="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">dirección postal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    
+
+
+    <!-- https://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/streetAddress"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#BicycleParking -->
+
+    <owl:Class rdf:about="http://smartcity.linkeddata.es/bicis/ontology#BicycleParking">
+        <rdfs:subClassOf rdf:resource="https://schema.org/ParkingFacility"/>
+        <rdfs:label xml:lang="es">Aparcabicis</rdfs:label>
+        <rdfs:label xml:lang="en">Bicycle Parking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#District -->
+
+    <owl:Class rdf:about="http://smartcity.linkeddata.es/bicis/ontology#District">
+        <rdfs:subClassOf rdf:resource="https://schema.org/AdministrativeArea"/>
+        <rdfs:label xml:lang="en">District</rdfs:label>
+        <rdfs:label xml:lang="es">Distrito</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://smartcity.linkeddata.es/bicis/ontology#Neighborhood -->
+
+    <owl:Class rdf:about="http://smartcity.linkeddata.es/bicis/ontology#Neighborhood">
+        <rdfs:subClassOf rdf:resource="https://schema.org/AdministrativeArea"/>
+        <rdfs:label xml:lang="es">Barrio</rdfs:label>
+        <rdfs:label xml:lang="en">Neighborhood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="https://schema.org/AdministrativeArea"/>
+    
+
+
+    <!-- https://schema.org/ParkingFacility -->
+
+    <owl:Class rdf:about="https://schema.org/ParkingFacility"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
