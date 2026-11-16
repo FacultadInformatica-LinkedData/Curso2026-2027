@@ -12,7 +12,7 @@
 
 - Giovanni Bolotchi Kot  - [@GIOVANNI-GAMER](https://github.com/GIOVANNI-GAMER)
 
-- Nombre  - [@UsuarioGitHub](https://github.com/UsuarioGitHub)
+- Ester Alvarez García  - [@esteralvarez1](https://github.com/esteralvarez1)
 
 
 

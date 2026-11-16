@@ -1,0 +1,28 @@
+PREFIX : <http://educamadrid.linkeddata.es/ontology/CentroEducativo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Consulta 1: Distritos locales y su enlace owl:sameAs a Wikidata
+SELECT ?district ?label ?wikidata WHERE {
+  ?district a :District ;
+            rdfs:label ?label ;
+            owl:sameAs ?wikidata .
+} LIMIT 10
+
+# Consulta 2: Barrios locales y su enlace owl:sameAs a Wikidata
+SELECT ?neighborhood ?label ?wikidata WHERE {
+  ?neighborhood a :Neighborhood ;
+                rdfs:label ?label ;
+                owl:sameAs ?wikidata .
+} LIMIT 10
+
+# Consulta 3: Centros educativos con el distrito y el enlace Wikidata de ese distrito
+SELECT ?name ?districtLabel ?wikidataDistrict WHERE {
+  ?school a :EducationalCenter ;
+          :centerName ?name ;
+          :hasAddress ?address .
+  ?address :inDistrict ?district .
+  ?district rdfs:label ?districtLabel ;
+            owl:sameAs ?wikidataDistrict .
+} LIMIT 10
