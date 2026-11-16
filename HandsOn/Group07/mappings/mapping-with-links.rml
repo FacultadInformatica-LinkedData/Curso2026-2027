@@ -1,0 +1,582 @@
+# mapping_final.rml
+# -----------------------------------------------------------------------------
+# Final RML mapping for the Madrid urban environment dataset.
+#
+# Source data: Group07/csv/Linked/*.csv
+#   - 200761-0-parques-jardines-updated-with-links.csv
+#   - 300051-26-fuentes-updated-with-links.csv
+#   - 300095-0-mobiliario-bancos-updated-with-links.csv
+#   - 300103-3-aseos-publicos-operativos-with-links.csv
+#   - 50055-1-fuentes-mascotas-with-links.csv  (merged, see below)
+#
+# Design notes
+# ------------
+# 1. Individual URIs are human-readable. Facilities use the "Label" column
+#    produced in OpenRefine (a lowercase, hyphenated slug; for fountains and
+#    benches it already ends with the dataset identifier). Districts and
+#    neighborhoods use their official name (DISTRITO / BARRIO) directly in an
+#    rr:template.
+# 2. rdfs:label always receives the value of the "Label" column of the
+#    corresponding CSV in csv/with-labels. Labels are never generated from the
+#    identifier, the street name or any other template. Districts and
+#    neighborhoods do not have a "Label" column, so their official name
+#    (DISTRITO / BARRIO) is used instead.
+# 3. District and neighborhood are object properties. They point to
+#    ue:District / ue:Neighborhood individuals, not to literals. Districts and
+#    neighborhoods are built once from the fountain file and shared by all
+#    facilities through joins.
+# 4. Parks and toilets are linked to their district and neighborhood through
+#    the official names (DISTRITO / BARRIO), which are shared by all source
+#    files. This avoids the code-padding differences between the park file
+#    (numbers without leading zeros) and the other files (official codes).
+#    A few park rows use non-canonical neighborhood names (for example
+#    "IMPERIAL" instead of "Imperial"), so those rows do not join.
+# 5. Pet fountains are not mapped as a separate class: all 169 pet-fountain
+#    IDs (and their labels) already exist in the main fountain file with the
+#    same USO value, so a second triples map would only duplicate individuals.
+# 6. The Wikidata links added in csv/with-labels are mapped as owl:sameAs.
+#    Districts and neighborhoods take their links from the fountain file
+#    (the canonical source for both), and parks take theirs from
+#    same_as_Wikidata_Name. Fountains and benches have no Wikidata entity of
+#    their own, so they are linked to the Wikidata entity of their
+#    neighborhood; toilets, which have no neighborhood, use their district.
+#    Park links in the source use the invalid prefix
+#    "https://wikidata/entity/", so the mapping rewrites them to
+#    "https://www.wikidata.org/entity/" with a GREL function.
+#
+# The source CSVs are never modified by this mapping.
+# -----------------------------------------------------------------------------
+
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno:     <https://w3id.org/function/ontology#> .
+@prefix grel:    <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix ue:      <http://www.madridurbanenvironment.org/ontology/> .
+
+@base <http://www.madridurbanenvironment.org/> .
+
+
+#################################################################
+# Districts
+#
+# One District per official district code. The fountain file is used as the
+# canonical reference because it contains every district code and name.
+#################################################################
+
+
+<#DistrictMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/300051-26-fuentes-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    # /resource/district/{district-name}
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/district/{DISTRITO}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:District
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "DISTRITO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:districtCode ;
+        rr:objectMap [ rml:reference "COD_DISTRITO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rml:reference "same_as_Wikidata_Distrito" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+#################################################################
+# Neighborhoods
+#
+# One Neighborhood per official neighborhood code. Each one is linked to its
+# district with ue:belongsToDistrict.
+#################################################################
+
+<#NeighborhoodMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/300051-26-fuentes-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    # /resource/neighborhood/{neighborhood-name}
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/neighborhood/{BARRIO}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Neighborhood
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "BARRIO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhoodCode ;
+        rr:objectMap [ rml:reference "COD_BARRIO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rml:reference "same_as_Wikidata_Barrio" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:belongsToDistrict ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD_DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Parks
+#################################################################
+
+<#ParkMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/200761-0-parques-jardines-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/park/{Label}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Park
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "Label" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "PK" ; rr:datatype xsd:string ]
+    ] ;
+
+    # The park Wikidata links use the invalid prefix "https://wikidata/entity/"
+    # in the source, so they are rewritten to the official Wikidata prefix.
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:objectMap [ rr:constant grel:string_replace ]
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:valueParameter ;
+                    rr:objectMap [ rml:reference "same_as_Wikidata_Name" ]
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_string_find ;
+                    rr:objectMap [ rr:constant "https://wikidata/entity/" ]
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_string_replace ;
+                    rr:objectMap [ rr:constant "https://www.wikidata.org/entity/" ]
+                ]
+            ] ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:name ;
+        rr:objectMap [ rml:reference "NOMBRE" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:description ;
+        rr:objectMap [ rml:reference "DESCRIPCION-ENTIDAD" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:schedule ;
+        rr:objectMap [ rml:reference "HORARIO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:accessibilityLevel ;
+        rr:objectMap [ rml:reference "ACCESIBILIDAD" ; rr:datatype xsd:integer ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:webPage ;
+        rr:objectMap [ rml:reference "CONTENT-URL" ; rr:datatype xsd:anyURI ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "CLASE-VIAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOMBRE-VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:locality ;
+        rr:objectMap [ rml:reference "LOCALIDAD" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:province ;
+        rr:objectMap [ rml:reference "PROVINCIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "CODIGO-POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORDENADA-X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORDENADA-Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "DISTRITO" ;
+                rr:parent "DISTRITO"
+            ]
+        ]
+    ] ;
+
+    # A few park rows use non-canonical neighborhood names, so they do not
+    # match the canonical neighborhood individuals created from the fountain
+    # file.
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "BARRIO" ;
+                rr:parent "BARRIO"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Drinking fountains (includes the 169 pet fountains)
+#################################################################
+
+<#FountainMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/300051-26-fuentes-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/drinking-fountain/{Label}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:DrinkingFountain
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "Label" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "ID" ; rr:datatype xsd:string ]
+    ] ;
+
+    # The source has no Wikidata entity for the fountain itself. As requested,
+    # the fountain is linked to the Wikidata entity of its neighborhood (the
+    # most specific location available in the row).
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rml:reference "same_as_Wikidata_Barrio" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:classification ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:status ;
+        rr:objectMap [ rml:reference "ESTADO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:intendedUse ;
+        rr:objectMap [ rml:reference "USO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "TIPO_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "COD_POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD_GIS_X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD_GIS_Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD_DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "COD_BARRIO" ;
+                rr:parent "COD_BARRIO"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Benches
+#################################################################
+
+<#BenchMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/300095-0-mobiliario-bancos-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/bench/{Label}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Bench
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "Label" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "ID" ; rr:datatype xsd:string ]
+    ] ;
+
+    # The source has no Wikidata entity for the bench itself. As requested,
+    # the bench is linked to the Wikidata entity of its neighborhood (the most
+    # specific location available in the row).
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rml:reference "same_as_Wikidata_Barrio" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:classification ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:status ;
+        rr:objectMap [ rml:reference "ESTADO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "TIPO_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "NOM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUM_VIA" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:postalCode ;
+        rr:objectMap [ rml:reference "COD_POSTAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD_GIS_X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD_GIS_Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "COD_DISTRITO" ;
+                rr:parent "COD_DISTRITO"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:neighborhood ;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodMap> ;
+            rr:joinCondition [
+                rr:child "COD_BARRIO" ;
+                rr:parent "COD_BARRIO"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# Public toilets
+#################################################################
+
+<#PublicToiletMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/Linked/300103-3-aseos-publicos-operativos-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    # The toilet label is not unique in the source (two labels are repeated),
+    # so the toilet code is appended to keep every subject unique.
+    rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/public-toilet/{Label}-{CODIGO ASEO}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:PublicToilet
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "Label" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:identifier ;
+        rr:objectMap [ rml:reference "CODIGO ASEO" ; rr:datatype xsd:string ]
+    ] ;
+
+    # The source has no Wikidata entity for the toilet itself. As requested,
+    # the toilet is linked to the Wikidata entity of its district (toilets have
+    # no neighborhood column).
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rml:reference "same_as_wikidata_distrito" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:name ;
+        rr:objectMap [ rml:reference "NOMBRE" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetType ;
+        rr:objectMap [ rml:reference "VIAL" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetName ;
+        rr:objectMap [ rml:reference "DIRECCION" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:streetNumber ;
+        rr:objectMap [ rml:reference "NUMERO" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmX ;
+        rr:objectMap [ rml:reference "COORD UTM ETRS89 X" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ue:utmY ;
+        rr:objectMap [ rml:reference "COORD UTM ETRS89 Y" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    # Public toilets have no neighborhood column.
+    rr:predicateObjectMap [
+        rr:predicate ue:district ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictMap> ;
+            rr:joinCondition [
+                rr:child "DISTRITO" ;
+                rr:parent "DISTRITO"
+            ]
+        ]
+    ] .
