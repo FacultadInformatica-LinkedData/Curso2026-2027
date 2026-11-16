@@ -1,0 +1,112 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ont: <http://smartcity.linkeddata.es/bicis/ontology#> .
+@prefix shapes: <http://smartcity.linkeddata.es/bicis/shapes#> .
+
+#################################################################
+#    SHAPE 1: Aparcabicis (ont:BicycleParking)
+#################################################################
+
+shapes:BicycleParkingShape a sh:NodeShape ;
+    sh:targetClass ont:BicycleParking ;
+
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Todo aparcabicis debe tener exactamente una etiqueta rdfs:label de tipo string."
+    ] ;
+
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Todo aparcabicis debe tener un único identificador (dcterms:identifier)."
+    ] ;
+
+    sh:property [
+        sh:path schema:streetAddress ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Todo aparcabicis debe tener una dirección postal (schema:streetAddress)."
+    ] ;
+
+    sh:property [
+        sh:path geo:lat ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 40.0 ;
+        sh:maxInclusive 41.0 ;
+        sh:message "La latitud (geo:lat) debe ser un decimal válido dentro de Madrid (40.0 - 41.0)."
+    ] ;
+
+    sh:property [
+        sh:path geo:long ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive -4.0 ;
+        sh:maxInclusive -3.0 ;
+        sh:message "La longitud (geo:long) debe ser un decimal válido dentro de Madrid (-4.0 a -3.0)."
+    ] ;
+
+    sh:property [
+        sh:path ont:inDistrict ;
+        sh:class ont:District ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Todo aparcabicis debe pertenecer a un único Distrito (IRI de clase ont:District)."
+    ] ;
+
+    sh:property [
+        sh:path ont:inNeighborhood ;
+        sh:class ont:Neighborhood ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Todo aparcabicis debe pertenecer a un único Barrio (IRI de clase ont:Neighborhood)."
+    ] .
+
+#################################################################
+#    SHAPE 2: Distrito (ont:District)
+#################################################################
+
+shapes:DistrictShape a sh:NodeShape ;
+    sh:targetClass ont:District ;
+
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Todo distrito debe tener una etiqueta rdfs:label."
+    ] ;
+
+    sh:property [
+        sh:path owl:sameAs ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "Todo distrito debe estar enlazado con Wikidata mediante owl:sameAs."
+    ] .
+
+#################################################################
+#    SHAPE 3: Barrio (ont:Neighborhood)
+#################################################################
+
+shapes:NeighborhoodShape a sh:NodeShape ;
+    sh:targetClass ont:Neighborhood ;
+
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Todo barrio debe tener una etiqueta rdfs:label."
+    ] .
