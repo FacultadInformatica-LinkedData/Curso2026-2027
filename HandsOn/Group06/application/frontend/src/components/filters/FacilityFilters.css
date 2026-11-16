@@ -1,0 +1,138 @@
+
+.facility-filters {
+  position: relative;
+  width: 100%;
+}
+
+/* Botón para abrir los filtros */
+.filters-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid #e5e5df;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #173d35;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters-toggle:hover {
+  background-color: #f7f7f2;
+}
+
+/* Panel desplegable */
+.filters-content {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 20px;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5df;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 12%);
+}
+.facility-filters h2 {
+  margin: 0;
+  color: #173d35;
+  font-size: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-group > label,
+.filter-group > p {
+  margin: 0;
+  color: #173d35;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5d5d0;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.filter-group select:focus {
+  outline: 1px solid #267052;
+  border-color: #267052;
+}
+
+.filter-group label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+  accent-color: #267052;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.location-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.toggle-indicator {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ccc;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle-indicator::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+
+.location-toggle.active .toggle-indicator {
+  background: #2e8b57;
+}
+
+.location-toggle.active .toggle-indicator::before {
+  transform: translateX(16px);
+}
