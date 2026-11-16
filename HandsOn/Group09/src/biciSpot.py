@@ -10,7 +10,22 @@ st.set_page_config(page_title="BiciSpot Madrid", page_icon="🚲", layout="wide"
 
 st.markdown("""
     <style>
-    h1, h2, h3 { color: #27cf27 !important; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    /* Importar fuente Pacifico desde Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    
+    /* Aplicar Pacifico solo al título principal */
+    h1 { 
+        font-family: 'Pacifico', cursive !important; 
+        color: #27cf27 !important; 
+        font-weight: normal;
+    }
+    
+    /* Títulos secundarios con fuente normal y color verde */
+    h2, h3 { 
+        color: #27cf27 !important; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    
     .subtitle { color: #a0a0a0; font-size: 1.1rem; margin-top: -15px; margin-bottom: 30px; }
     div[data-testid="metric-container"] { background-color: #1e1e1e; border: 1px solid #333; border-radius: 8px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid #27cf27; }
     div[data-testid="metric-container"] > div > div > div > p { color: #27cf27 !important; }
