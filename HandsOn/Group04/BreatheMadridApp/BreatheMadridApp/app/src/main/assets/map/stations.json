@@ -1,0 +1,993 @@
+{
+  "dates": [
+    "2026-10-01"
+  ],
+  "stations": [
+    {
+      "id": "4",
+      "name": "Plaza de España",
+      "address": "Plaza de España",
+      "district": "Moncloa - Aravaca",
+      "lat": 40.4238823,
+      "lon": -3.7122567,
+      "readings": {
+        "10": {
+          "value": "35",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "20",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "6": {
+          "value": "0.2",
+          "time": "2026-10-01T18:00:00",
+          "label": "CO",
+          "unit": "mg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "19",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "Escuelas Aguirre",
+      "address": "Entre C/ Alcalá y C/ O’ Donell",
+      "district": "Salamanca",
+      "lat": 40.4215533,
+      "lon": -3.6823158,
+      "readings": {
+        "1": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "SO2",
+          "unit": "µg/m³"
+        },
+        "10": {
+          "value": "23",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "6",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "87",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "20": {
+          "value": "2.8",
+          "time": "2026-10-01T18:00:00",
+          "label": "TOL",
+          "unit": "µg/m³"
+        },
+        "30": {
+          "value": "0.2",
+          "time": "2026-10-01T18:00:00",
+          "label": "BEN",
+          "unit": "µg/m³"
+        },
+        "35": {
+          "value": "0.4",
+          "time": "2026-10-01T18:00:00",
+          "label": "EBE",
+          "unit": "µg/m³"
+        },
+        "6": {
+          "value": "0.2",
+          "time": "2026-10-01T18:00:00",
+          "label": "CO",
+          "unit": "mg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "6",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "Ramón y Cajal",
+      "address": "Avda. Ramón y Cajal esq. C/ Príncipe de Vergara",
+      "district": "Chamartín",
+      "lat": 40.4514734,
+      "lon": -3.6773491,
+      "readings": {
+        "12": {
+          "value": "28",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "20": {
+          "value": "2.7",
+          "time": "2026-10-01T18:00:00",
+          "label": "TOL",
+          "unit": "µg/m³"
+        },
+        "30": {
+          "value": "0.3",
+          "time": "2026-10-01T18:00:00",
+          "label": "BEN",
+          "unit": "µg/m³"
+        },
+        "35": {
+          "value": "0.2",
+          "time": "2026-10-01T18:00:00",
+          "label": "EBE",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "21",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "name": "Arturo Soria",
+      "address": "C/ Arturo Soria esq. C/ Vizconde de los Asilos",
+      "district": "Ciudad Lineal",
+      "lat": 40.4400457,
+      "lon": -3.6392422,
+      "readings": {
+        "12": {
+          "value": "15",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "87",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "17",
+      "name": "Villaverde",
+      "address": "C/ Juan Peñalver",
+      "district": "Villaverde",
+      "lat": 40.347147,
+      "lon": -3.7133167,
+      "readings": {
+        "12": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "99",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "4",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "name": "Farolillo",
+      "address": "C/ Farolillo - C/ Ervigio",
+      "district": "Carabanchel",
+      "lat": 40.3947825,
+      "lon": -3.7318356,
+      "readings": {
+        "10": {
+          "value": "17",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "93",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "20": {
+          "value": "1.1",
+          "time": "2026-10-01T18:00:00",
+          "label": "TOL",
+          "unit": "µg/m³"
+        },
+        "30": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "BEN",
+          "unit": "µg/m³"
+        },
+        "35": {
+          "value": "0.1",
+          "time": "2026-10-01T18:00:00",
+          "label": "EBE",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "9",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "name": "Casa de Campo",
+      "address": "Casa de Campo (Terminal del Teleférico)",
+      "district": "Moncloa - Aravaca",
+      "lat": 40.4193577,
+      "lon": -3.7473445,
+      "readings": {
+        "10": {
+          "value": "18",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "8",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "100",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "7",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "3",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "27",
+      "name": "Barajas Pueblo",
+      "address": "C/ Júpiter, 21",
+      "district": "Barajas",
+      "lat": 40.4769179,
+      "lon": -3.5800258,
+      "readings": {
+        "12": {
+          "value": "18",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "81",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "3",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "14",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "35",
+      "name": "Plaza del Carmen",
+      "address": "Plaza del Carmen esq. Tres Cruces",
+      "district": "Centro",
+      "lat": 40.4192091,
+      "lon": -3.7031662,
+      "readings": {
+        "1": {
+          "value": "4",
+          "time": "2026-10-01T18:00:00",
+          "label": "SO2",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "27",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "84",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "6": {
+          "value": "0.3",
+          "time": "2026-10-01T18:00:00",
+          "label": "CO",
+          "unit": "mg/m³"
+        },
+        "7": {
+          "value": "6",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "18",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "36",
+      "name": "Moratalaz",
+      "address": "Avda. Moratalaz esq. Camino de los Vinateros",
+      "district": "Moratalaz",
+      "lat": 40.4079517,
+      "lon": -3.6453104,
+      "readings": {
+        "1": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "SO2",
+          "unit": "µg/m³"
+        },
+        "10": {
+          "value": "19",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "14",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "11",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "38",
+      "name": "Cuatro Caminos",
+      "address": "Avda. Pablo Iglesias esq. C/ Marqués de Lema",
+      "district": "Chamberí",
+      "lat": 40.4455439,
+      "lon": -3.7071303,
+      "readings": {
+        "10": {
+          "value": "33",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "25",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "20": {
+          "value": "1.6",
+          "time": "2026-10-01T18:00:00",
+          "label": "TOL",
+          "unit": "µg/m³"
+        },
+        "30": {
+          "value": "0.8",
+          "time": "2026-10-01T18:00:00",
+          "label": "BEN",
+          "unit": "µg/m³"
+        },
+        "35": {
+          "value": "0.1",
+          "time": "2026-10-01T18:00:00",
+          "label": "EBE",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "17",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "14",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "39",
+      "name": "Barrio del Pilar",
+      "address": "Avda. Betanzos esq. C/ Monforte de Lemos",
+      "district": "Fuencarral - El Pardo",
+      "lat": 40.4782322,
+      "lon": -3.7115364,
+      "readings": {
+        "12": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "84",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "40",
+      "name": "Vallecas",
+      "address": "C/ Arroyo del Olivar esq. C/ Río Grande",
+      "district": "Puente de Vallecas",
+      "lat": 40.3881478,
+      "lon": -3.6515286,
+      "readings": {
+        "10": {
+          "value": "53",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "15",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "47",
+      "name": "Méndez Álvaro",
+      "address": "C/ Juan de Mariana / Plaza Amanecer Méndez Álvaro",
+      "district": "Arganzuela",
+      "lat": 40.3980991,
+      "lon": -3.6868138,
+      "readings": {
+        "10": {
+          "value": "25",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "8",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "48",
+      "name": "Castellana",
+      "address": "C/ José Gutiérrez Abascal",
+      "district": "Chamartín",
+      "lat": 40.4398904,
+      "lon": -3.6903729,
+      "readings": {
+        "10": {
+          "value": "26",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "19",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "3",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "15",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "49",
+      "name": "Parque del Retiro",
+      "address": "Paseo Venezuela- Palacio de Velázquez",
+      "district": "Retiro",
+      "lat": 40.4144444,
+      "lon": -3.6824999,
+      "readings": {
+        "12": {
+          "value": "11",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "95",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "1",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "50",
+      "name": "Plaza Castilla",
+      "address": "Plaza Castilla (Canal)",
+      "district": "Chamartín",
+      "lat": 40.4655841,
+      "lon": -3.6887449,
+      "readings": {
+        "10": {
+          "value": "22",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "15",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "12",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "54",
+      "name": "Ensanche de Vallecas",
+      "address": "Avda. La Gavia / Avda. Las Suertes",
+      "district": "Villa de Vallecas",
+      "lat": 40.3730118,
+      "lon": -3.6121394,
+      "readings": {
+        "10": {
+          "value": "33",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "11",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "92",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "3",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "7",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "13",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "56",
+      "name": "Plaza Elíptica",
+      "address": "Plaza Elíptica - Avda. Oporto",
+      "district": "Carabanchel",
+      "lat": 40.3850336,
+      "lon": -3.7187679,
+      "readings": {
+        "10": {
+          "value": "40",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "51",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "6": {
+          "value": "0.2",
+          "time": "2026-10-01T18:00:00",
+          "label": "CO",
+          "unit": "mg/m³"
+        },
+        "7": {
+          "value": "16",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "26",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "14",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "57",
+      "name": "Sanchinarro",
+      "address": "C/ Princesa de Éboli esq. C/ María Tudor",
+      "district": "Hortaleza",
+      "lat": 40.4942012,
+      "lon": -3.6605173,
+      "readings": {
+        "10": {
+          "value": "19",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "7",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "4",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "58",
+      "name": "El Pardo",
+      "address": "Avda. La Guardia",
+      "district": "Fuencarral - El Pardo",
+      "lat": 40.5180701,
+      "lon": -3.7746101,
+      "readings": {
+        "12": {
+          "value": "5",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "94",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "4",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "59",
+      "name": "Juan Carlos I",
+      "address": "Parque Juan Carlos I (frente oficinas mantenimiento)",
+      "district": "Barajas",
+      "lat": 40.465144,
+      "lon": -3.609031,
+      "readings": {
+        "12": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "92",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "2",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "8",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        }
+      }
+    },
+    {
+      "id": "60",
+      "name": "Tres Olivos",
+      "address": "Plaza Tres Olivos",
+      "district": "Fuencarral - El Pardo",
+      "lat": 40.5005477,
+      "lon": -3.6897308,
+      "readings": {
+        "10": {
+          "value": "29",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM10",
+          "unit": "µg/m³"
+        },
+        "12": {
+          "value": "7",
+          "time": "2026-10-01T18:00:00",
+          "label": "NOx",
+          "unit": "µg/m³"
+        },
+        "14": {
+          "value": "91",
+          "time": "2026-10-01T18:00:00",
+          "label": "O3",
+          "unit": "µg/m³"
+        },
+        "7": {
+          "value": "0",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO",
+          "unit": "µg/m³"
+        },
+        "8": {
+          "value": "7",
+          "time": "2026-10-01T18:00:00",
+          "label": "NO2",
+          "unit": "µg/m³"
+        },
+        "9": {
+          "value": "10",
+          "time": "2026-10-01T18:00:00",
+          "label": "PM2.5",
+          "unit": "µg/m³"
+        }
+      }
+    }
+  ]
+}

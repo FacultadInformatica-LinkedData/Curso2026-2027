@@ -1,0 +1,10 @@
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /opt
+ADD --checksum=sha256:0c3e2dc55037ced325e3716bf86e91fdf20fb96e595fc3530232c05fae789a9e \
+    https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-6.2.0.zip /opt/fuseki.zip
+RUN jar xf fuseki.zip && mv apache-jena-fuseki-6.2.0 fuseki && rm fuseki.zip
+
+WORKDIR /opt/fuseki
+EXPOSE 3030
+ENTRYPOINT ["java", "-jar", "fuseki-server.jar"]
