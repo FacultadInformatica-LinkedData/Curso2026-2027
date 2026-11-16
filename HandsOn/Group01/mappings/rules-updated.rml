@@ -1,0 +1,108 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix schema: <http://schema.org/>.
+@prefix vocab: <http://smartcity.linkeddata.es/touristaccommodation/ontology/>.
+@prefix : <http://mapping.example.com/>.
+
+# ---------------------------------------------------------------
+# Accommodations: own class hierarchy (aligned with schema.org)
+# ---------------------------------------------------------------
+:accommodation_mapping a rr:TriplesMap;
+    rdfs:label "accommodation_mapping";
+    rml:logicalSource [
+        rml:source "../csv/alojamientos-turisticos-with-links.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/Accommodation/{signatura}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+            rr:template "http://smartcity.linkeddata.es/touristaccommodation/ontology/{clase}";
+            rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rml:reference "etiqueta_alojamiento"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:name;
+        rr:objectMap [ rml:reference "denominacion"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate vocab:categoryLevel;
+        rr:objectMap [ rml:reference "nivel_categoria"; rr:datatype xsd:integer ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:address;
+        rr:objectMap [
+            rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/Address/{signatura}";
+            rr:termType rr:IRI
+        ]
+    ].
+
+# ---------------------------------------------------------------
+# Addresses: schema:PostalAddress
+# ---------------------------------------------------------------
+:address_mapping a rr:TriplesMap;
+    rdfs:label "address_mapping";
+    rml:logicalSource [
+        rml:source "../csv/alojamientos-turisticos-with-links.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/Address/{signatura}";
+        rr:class schema:PostalAddress
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rml:reference "etiqueta_direccion"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:streetAddress;
+        rr:objectMap [ rr:template "{via_tipo} {via_nombre}"; rr:termType rr:Literal; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:postalCode;
+        rr:objectMap [ rml:reference "cdpostal"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:addressLocality;
+        rr:objectMap [ rml:reference "localidad"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate vocab:inCity;
+        rr:objectMap [
+            rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad_id}";
+            rr:termType rr:IRI
+        ]
+    ].
+
+# ---------------------------------------------------------------
+# Cities: schema:City, linked to Wikidata
+# ---------------------------------------------------------------
+:city_mapping a rr:TriplesMap;
+    rdfs:label "city_mapping";
+    rml:logicalSource [
+        rml:source "../csv/alojamientos-turisticos-with-links.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    rr:subjectMap [
+        rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad_id}";
+        rr:class schema:City
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rml:reference "localidad"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rml:reference "wikidata_uri"; rr:termType rr:IRI ]
+    ].

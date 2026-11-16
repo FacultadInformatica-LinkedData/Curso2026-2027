@@ -1,0 +1,129 @@
+@prefix : <http://smartcity.linkeddata.es/touristaccommodation/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+
+<http://smartcity.linkeddata.es/touristaccommodation/ontology/> a owl:Ontology ;
+    rdfs:label "Tourist Accommodation Ontology"@en ;
+    rdfs:comment "Ontology for the tourist accommodations of the Community of Madrid. Version 2 reuses classes and properties from Schema.org (http://schema.org/) and keeps its own terms only where Schema.org has no suitable equivalent."@en ;
+    owl:versionInfo "2.0" .
+
+#################################################################
+# Reused classes (Schema.org)
+#################################################################
+
+schema:PostalAddress a owl:Class ;
+    rdfs:label "Postal address"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+schema:City a owl:Class ;
+    rdfs:label "City"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+#################################################################
+# Own classes, aligned with Schema.org
+#################################################################
+
+:Accommodation a owl:Class ;
+    rdfs:subClassOf schema:LodgingBusiness ;
+    owl:disjointWith schema:PostalAddress , schema:City ;
+    rdfs:label "Accommodation"@en ;
+    rdfs:comment "Tourist accommodation registered in the Community of Madrid."@en .
+
+# Accommodation type hierarchy (one subclass per value of the source column alojamiento_tipo)
+
+:Hotel a owl:Class ;
+    rdfs:subClassOf :Accommodation , schema:Hotel ;
+    rdfs:label "Hotel"@en .
+
+:Hostel a owl:Class ;
+    rdfs:subClassOf :Accommodation , schema:Hostel ;
+    rdfs:label "Hostel"@en .
+
+:Pension a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Pension"@en .
+
+:BoardingHouse a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Boarding house"@en .
+
+:TouristApartment a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Tourist apartment"@en .
+
+:ApartHotel a owl:Class ;
+    rdfs:subClassOf :Accommodation , schema:Hotel ;
+    rdfs:label "Apart-hotel"@en .
+
+:Inn a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Inn"@en .
+
+:Camping a owl:Class ;
+    rdfs:subClassOf :Accommodation , schema:Campground ;
+    rdfs:label "Camping"@en .
+
+:TouristHome a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Tourist home"@en .
+
+:RuralAccommodation a owl:Class ;
+    rdfs:subClassOf :Accommodation ;
+    rdfs:label "Rural accommodation"@en .
+
+:RuralHouse a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation ;
+    rdfs:label "Rural house"@en .
+
+:RuralApartment a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation ;
+    rdfs:label "Rural apartment"@en .
+
+:RuralHotel a owl:Class ;
+    rdfs:subClassOf :RuralAccommodation , schema:Hotel ;
+    rdfs:label "Rural hotel"@en .
+
+#################################################################
+# Reused properties (Schema.org)
+#################################################################
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:label "address"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+schema:streetAddress a owl:DatatypeProperty ;
+    rdfs:label "street address"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+schema:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+schema:addressLocality a owl:DatatypeProperty ;
+    rdfs:label "address locality"@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
+
+#################################################################
+# Own properties (no suitable equivalent in Schema.org)
+#################################################################
+
+:inCity a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:City ;
+    rdfs:label "in city"@en ;
+    rdfs:comment "Links an address to the city resource where it is located. schema:addressLocality only admits text, so this property is kept to link to the City resource (which is linked to Wikidata)."@en ;
+    rdfs:seeAlso schema:addressLocality .
+
+:categoryLevel a owl:DatatypeProperty ;
+    rdfs:domain :Accommodation ;
+    rdfs:range xsd:integer ;
+    rdfs:label "category level"@en ;
+    rdfs:comment "Official category level of the accommodation (1-5 stars, or oak leaves for rural hotels). schema:starRating expects a Rating resource, so a plain integer property is kept."@en ;
+    rdfs:seeAlso schema:starRating .

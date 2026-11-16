@@ -236,8 +236,8 @@
     "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
     "onError": "set-to-blank",
     "newColumnName": "wikidata_uri",
-    "columnInsertIndex": 13,
-    "description": "Crear la columna wikidata_uri en el índice 13 basada en la columna localidad usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    "columnInsertIndex": 18,
+    "description": "Crear la columna wikidata_uri en el índice 18 basada en la columna localidad usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
   },
   {
     "op": "core/text-transform",
@@ -251,5 +251,31 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Transforma el texto de las celdas en la columna wikidata_uri usando la expresión grel:value.replace(\"https://www.wikidata.org/wiki/\", \"http://www.wikidata.org/entity/\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad",
+    "expression": "grel:if(cell.recon.match != null, cell.recon.match.name, value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna localidad usando la expresión grel:if(cell.recon.match != null, cell.recon.match.name, value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "localidad_id",
+    "expression": "grel:replace(replace(replace(replace(replace(replace(replace(cells[\"localidad\"].value.toLowercase().trim(),/[áàä]/,\"a\"),/[éèë]/,\"e\"),/[íìï]/,\"i\"),/[óòö]/,\"o\"),/[úùü]/,\"u\"),\"ñ\",\"n\"),/[^a-z0-9]+/,\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna localidad_id usando la expresión grel:replace(replace(replace(replace(replace(replace(replace(cells[\"localidad\"].value.toLowercase().trim(),/[áàä]/,\"a\"),/[éèë]/,\"e\"),/[íìï]/,\"i\"),/[óòö]/,\"o\"),/[úùü]/,\"u\"),\"ñ\",\"n\"),/[^a-z0-9]+/,\"-\")"
   }
 ]
