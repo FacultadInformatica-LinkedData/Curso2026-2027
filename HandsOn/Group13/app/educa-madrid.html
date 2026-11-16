@@ -771,7 +771,6 @@ footer { margin-top: 22px; font-size: 13px; }
 <div class="layout">
   <aside>
     <h2>Filtros</h2>
-    <p class="note">Buscan en los centros del grafo. Afectan a las fichas, el mapa, las estadísticas y la consulta generada.</p>
     <label for="f-distrito">Distrito</label>
     <select id="f-distrito"></select>
     <label for="f-barrio">Barrio</label>
@@ -813,13 +812,11 @@ footer { margin-top: 22px; font-size: 13px; }
       <div id="sparql-catalog">
         <label for="q-select">Pregunta</label>
         <select id="q-select"></select>
-        <p class="note">Resultado calculado sobre el grafo local al generar este archivo. Desde aquí no se lanzan consultas nuevas.</p>
         <pre id="q-sparql"></pre>
         <p id="q-count" class="count"></p>
         <div id="q-table"></div>
       </div>
       <div id="sparql-filters" hidden>
-        <p class="note">Esta consulta es la que corresponde a los filtros de la izquierda. La tabla son los centros del grafo que los cumplen.</p>
         <pre id="q-dyn"></pre>
         <p id="q-dyn-count" class="count"></p>
         <div id="q-dyn-table"></div>
@@ -856,7 +853,7 @@ footer { margin-top: 22px; font-size: 13px; }
   </main>
 </div>
 <footer>
-  <p>Fuente: Portal de Datos Abiertos del Ayuntamiento de Madrid, licencia CC BY 4.0. Los enlaces de distrito y barrio abren la entidad correspondiente en Wikidata. El plano del mapa procede de OpenStreetMap.</p>
+  <p>Datos del Ayuntamiento de Madrid (CC BY 4.0). Distritos y barrios enlazados con Wikidata.</p>
 </footer>
 <script>
 /**
@@ -1159,7 +1156,7 @@ function renderTable(container, columns, rows, page, setPage) {
   if (!rows.length) {
     const empty = document.createElement("p");
     empty.className = "empty";
-    empty.textContent = "Esta consulta no devuelve filas.";
+    empty.textContent = "Sin resultados.";
     container.appendChild(empty);
   }
   if (rows.length > PAGE) {
@@ -1223,14 +1220,12 @@ function renderList(rows) {
   const host = $("list-host");
   host.replaceChildren();
   if (!rows.length) {
-    $("list-note").textContent = "Ningún centro cumple todos los filtros.";
+    $("list-note").textContent = "Ningún centro con estos filtros.";
     return;
   }
   const ordered = rows.slice().sort((a, b) => (a.nombre || "").localeCompare(b.nombre || "", "es"));
   const shown = ordered.slice(0, 100);
-  $("list-note").textContent = rows.length > 100
-    ? "Mostrando las primeras 100 fichas, ordenadas por nombre. Acota con los filtros para ver el resto."
-    : "Ordenadas por nombre.";
+  $("list-note").textContent = rows.length > 100 ? "Primeras 100 fichas." : "";
   for (const center of shown) {
     const details = document.createElement("details");
     const summary = document.createElement("summary");
@@ -1257,7 +1252,7 @@ function renderBars(container, pairs) {
   if (!pairs.length) {
     const empty = document.createElement("p");
     empty.className = "empty";
-    empty.textContent = "No hay datos para este filtro.";
+    empty.textContent = "Sin datos.";
     container.appendChild(empty);
     return;
   }
@@ -1335,7 +1330,7 @@ function renderMapDetail(points) {
   if (!center) {
     const empty = document.createElement("p");
     empty.className = "empty";
-    empty.textContent = "Elige un centro en el mapa o en la lista.";
+    empty.textContent = "Selecciona un centro.";
     host.appendChild(empty);
     return;
   }
@@ -1363,8 +1358,8 @@ function renderMap(rows) {
   markers.clear();
   const points = rows.filter(hasCoord);
   $("map-caption").textContent = points.length
-    ? "Mostrando " + countCentros(points.length) + " con coordenadas. El plano se descarga de OpenStreetMap."
-    : "Ninguno de los centros filtrados tiene coordenadas.";
+    ? countCentros(points.length)
+    : "Sin coordenadas para estos centros.";
   if (!points.some(center => center.uri === selectedUri)) selectedUri = points[0] ? points[0].uri : null;
   fillMapSelect(points);
   const bounds = [];
@@ -1397,9 +1392,9 @@ function selectCenter(uri, pan) {
 function ensureMap() {
   if (!mapReady) {
     map = L.map("map", { preferCanvas: true }).setView([40.4168, -3.7038], 11);
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
+      maxZoom: 18,
+      attribution: "&copy; Esri, HERE, Garmin, USGS"
     }).addTo(map);
     layer = L.layerGroup().addTo(map);
     mapReady = true;
@@ -1442,7 +1437,7 @@ function update() {
 }
 
 function init() {
-  $("lead").textContent = "Buscador de los " + formatNumber(DATA.centers.length) + " centros educativos de Madrid. Los datos y las respuestas SPARQL van dentro de este archivo (" + formatNumber(DATA.triples) + " tripletas). El plano del mapa necesita internet; el resto, no.";
+  $("lead").textContent = formatNumber(DATA.centers.length) + " centros educativos de Madrid.";
   fillSelect($("f-distrito"), uniqSorted(DATA.centers.map(center => center.distrito)), "Todos");
   fillSelect($("f-tipo"), uniqSorted(DATA.centers.map(center => center.tipo)), "Todos");
   fillSelect($("f-cp"), uniqSorted(DATA.centers.map(center => center.cp), true), "Todos");
