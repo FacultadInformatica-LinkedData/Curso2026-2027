@@ -1,0 +1,82 @@
+@prefix : <http://smartcity.linkeddata.es/bicis/ontology#> .
+@prefix ont: <http://smartcity.linkeddata.es/bicis/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://smartcity.linkeddata.es/bicis/ontology> a owl:Ontology ;
+    rdfs:label "Ontología de Aparcabicis de Madrid (Actualizada con vocabularios externos)"@es .
+
+#################################################################
+#    CLASES (Alineadas con Schema.org)
+#################################################################
+
+ont:BicycleParking a owl:Class ;
+    rdfs:subClassOf schema:ParkingFacility ;
+    rdfs:label "Aparcabicis"@es , "Bicycle Parking"@en .
+
+ont:District a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea ;
+    rdfs:label "Distrito"@es , "District"@en .
+
+ont:Neighborhood a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea ;
+    rdfs:label "Barrio"@es , "Neighborhood"@en .
+
+#################################################################
+#    OBJECT PROPERTIES (Relaciones entre recursos)
+#################################################################
+
+ont:inDistrict a owl:ObjectProperty ;
+    rdfs:subPropertyOf schema:containedInPlace ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range ont:District ;
+    rdfs:label "en distrito"@es .
+
+ont:inNeighborhood a owl:ObjectProperty ;
+    rdfs:subPropertyOf schema:containedInPlace ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range ont:Neighborhood ;
+    rdfs:label "en barrio"@es .
+
+#################################################################
+#    DATATYPE PROPERTIES (Datos literales)
+#################################################################
+
+ont:id a owl:DatatypeProperty ;
+    rdfs:subPropertyOf dcterms:identifier ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:string ;
+    rdfs:label "identificador"@es .
+
+ont:streetAddress a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:streetAddress ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:string ;
+    rdfs:label "dirección postal"@es .
+
+ont:latitude a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geo:lat ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "latitud"@es .
+
+ont:longitude a owl:DatatypeProperty ;
+    rdfs:subPropertyOf geo:long ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "longitud"@es .
+
+ont:hasModel a owl:DatatypeProperty ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:string ;
+    rdfs:label "modelo"@es .
+
+ont:hasCapacity a owl:DatatypeProperty ;
+    rdfs:domain ont:BicycleParking ;
+    rdfs:range xsd:integer ;
+    rdfs:label "capacidad de plazas"@es .
