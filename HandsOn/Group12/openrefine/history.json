@@ -1,0 +1,799 @@
+[
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.3.6",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+      },
+      "subjectMappings": [
+        {
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "grel:row.index"
+          },
+          "typeMappings": [],
+          "propertyMappings": [
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Total"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Total"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column2"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column2"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column3"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column3"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column4"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column4"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column5"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column5"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "baseIRI": "http://127.0.0.1:3333/"
+    },
+    "description": "Save RDF Transform"
+  },
+  {
+    "op": "rdf-transform/save-rdf-transform",
+    "rdf-transform": {
+      "extension": "RDFTransform",
+      "version": "2.3.6",
+      "namespaces": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+      },
+      "subjectMappings": [
+        {
+          "valueSource": {
+            "source": "row_index"
+          },
+          "expression": {
+            "language": "grel",
+            "code": "grel:row.index"
+          },
+          "typeMappings": [],
+          "propertyMappings": [
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Total"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Total"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column2"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column2"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column3"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column3"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column4"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column4"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            },
+            {
+              "prefix": "",
+              "valueSource": {
+                "source": "constant",
+                "constant": "Column5"
+              },
+              "objectMappings": [
+                {
+                  "valueSource": {
+                    "source": "column",
+                    "columnName": "Column5"
+                  },
+                  "valueType": {
+                    "type": "literal"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "baseIRI": "http://127.0.0.1:3333/"
+    },
+    "description": "Save RDF Transform"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Total",
+          "expression": "value",
+          "columnName": "Total",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2025",
+                "l": "2025"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column",
+    "newColumnName": "Municipalities + INE Code",
+    "description": "Rename column Column to Municipalities + INE Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Total",
+    "newColumnName": "Population percentage",
+    "description": "Rename column Total to Population percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column2",
+    "newColumnName": "Population Density",
+    "description": "Rename column Column2 to Population Density"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column3",
+    "newColumnName": "Under 20 Percentage",
+    "description": "Rename column Column3 to Under 20 Percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column4",
+    "newColumnName": "From 20 to 64 Percentage",
+    "description": "Rename column Column4 to From 20 to 64 Percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column5",
+    "newColumnName": "65 And Over Percentage",
+    "description": "Rename column Column5 to 65 And Over Percentage"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Municipalities + INE Code",
+    "expression": "grel:2025",
+    "onError": "set-to-blank",
+    "newColumnName": "Year",
+    "columnInsertIndex": 1,
+    "description": "Create column Year at index 1 based on column Municipalities + INE Code using expression grel:2025"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Municipalities + INE Code",
+          "columnName": "Municipalities + INE Code",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Municipalities + INE Code",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column Municipalities + INE Code by separator"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Municipalities + INE Code",
+          "columnName": "Municipalities + INE Code",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Flagged rows",
+          "expression": "row.flagged",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Municipalities + INE Code",
+          "columnName": "Municipalities + INE Code",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Municipalities + INE Code 1",
+          "expression": "isBlank(value)",
+          "columnName": "Municipalities + INE Code 1",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Municipalities + INE Code 1",
+    "newColumnName": "INE Code",
+    "description": "Rename column Municipalities + INE Code 1 to INE Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Municipalities + INE Code 2",
+    "newColumnName": "Municipality",
+    "description": "Rename column Municipalities + INE Code 2 to Municipality"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Flagged rows",
+          "expression": "grel:row.flagged",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "-",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Population percentage",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "N/A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column Population percentage"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "N/A",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Population Density",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column Population Density"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "N/A",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Under 20 Percentage",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column Under 20 Percentage"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "N/A",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "From 20 to 64 Percentage",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column From 20 to 64 Percentage"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "N/A",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "65 And Over Percentage",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "-"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column 65 And Over Percentage"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Population percentage",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Population percentage using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Population Density",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Population Density using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Under 20 Percentage",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Under 20 Percentage using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "From 20 to 64 Percentage",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column From 20 to 64 Percentage using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Population percentage",
+          "columnName": "Population percentage",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "65 And Over Percentage",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 65 And Over Percentage using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "INE Code",
+    "newColumnName": "INE_Code",
+    "description": "Rename column INE Code to INE_Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Population percentage",
+    "newColumnName": "Population_percentage",
+    "description": "Rename column Population percentage to Population_percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Population Density",
+    "newColumnName": "Population_density",
+    "description": "Rename column Population Density to Population_density"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Under 20 Percentage",
+    "newColumnName": "Under_20_percentage",
+    "description": "Rename column Under 20 Percentage to Under_20_percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Under_20_percentage",
+    "newColumnName": "Population_under_20_percentage",
+    "description": "Rename column Under_20_percentage to Population_under_20_percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "From 20 to 64 Percentage",
+    "newColumnName": "Population_20_to_64_percentage",
+    "description": "Rename column From 20 to 64 Percentage to Population_20_to_64_percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "65 And Over Percentage",
+    "newColumnName": "Population_65_and_over_percentage",
+    "description": "Rename column 65 And Over Percentage to Population_65_and_over_percentage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Municipality",
+    "newColumnName": "Municipality_name",
+    "description": "Rename column Municipality to Municipality_name"
+  }
+]

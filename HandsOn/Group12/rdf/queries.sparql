@@ -1,0 +1,19 @@
+PREFIX vocab: <https://w3id.org/smartinfra-galicia/ontology/Demographics#>
+
+# Listar municipios con sus porcentajes de población
+SELECT ?name ?popPercentage
+WHERE {
+  ?municipality a vocab:Municipality ;
+                vocab:hasName ?name ;
+                vocab:hasDemographicInformation ?obs .
+                
+  ?obs a vocab:DemographicObservation ;
+       vocab:hasPopulationPercentage ?popPercentage .
+}
+LIMIT 10
+
+# Obtener todos los datos de un municipio + 15006
+SELECT ?property ?value
+WHERE {
+  <https://w3id.org/smartinfra-galicia/resource/Municipality/15006> ?property ?value .
+}

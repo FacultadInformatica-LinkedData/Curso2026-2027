@@ -1,0 +1,144 @@
+@prefix ex:   <http://example.org/tourism#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Place a owl:Class .
+
+ex:PointOfInterest
+    a owl:Class ;
+    rdfs:subClassOf ex:Place .
+
+ex:TouristicPlace
+    a owl:Class ;
+    rdfs:subClassOf ex:PointOfInterest ;
+    owl:disjointWith ex:AccommodationPlace .
+
+ex:AccommodationPlace
+    a owl:Class ;
+    rdfs:subClassOf ex:PointOfInterest .
+
+ex:Palace
+    a owl:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Church
+    a owl:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Cathedral
+    a owl:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Hotel
+    a owl:Class ;
+    rdfs:subClassOf ex:AccommodationPlace .
+
+ex:Hostel
+    a owl:Class ;
+    rdfs:subClassOf ex:AccommodationPlace .
+
+ex:Municipality a owl:Class .
+
+ex:Province a owl:Class .
+
+ex:AutonomousCommunity a owl:Class .
+
+ex:PostalAddress a owl:Class .
+
+ex:hasAddress
+    a owl:ObjectProperty ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:PostalAddress .
+
+ex:streetName
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range xsd:string .
+
+ex:streetNumber
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range xsd:string .
+
+ex:hasPopulation
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range xsd:integer .
+
+ex:belongsToProvince
+    a owl:ObjectProperty ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range ex:Province .
+
+ex:belongsToCommunity
+    a owl:ObjectProperty ;
+    rdfs:domain ex:Province ;
+    rdfs:range ex:AutonomousCommunity .
+
+ex:hasProvince
+    a owl:ObjectProperty ;
+    rdfs:domain ex:AutonomousCommunity ;
+    rdfs:range ex:Province ;
+    owl:inverseOf ex:belongsToCommunity .
+
+ex:bordersWith
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range ex:Municipality .
+
+ex:Place
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ex:hasAddress ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass ex:PostalAddress
+    ] .
+
+ex:AutonomousCommunity
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ex:hasProvince ;
+        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass ex:Province
+    ] .
+
+# OJO Literals part
+
+
+ex:Madrid
+    a ex:Municipality ;
+    rdfs:label "Madrid"@en ;
+    ex:hasPopulation 3166000 ;
+    ex:belongsToProvince ex:MadridProvince .
+
+ex:MadridProvince
+    a ex:Province ;
+    rdfs:label "Province of Madrid"@en ;
+    ex:belongsToCommunity ex:CommunityOfMadrid .
+
+ex:CommunityOfMadrid
+    a ex:AutonomousCommunity ;
+    rdfs:label "Community of Madrid"@en ;
+    ex:hasProvince ex:MadridProvince .
+
+ex:LaMirinda
+    a ex:Place ;
+    rdfs:label "La mirinda"@en ;
+    ex:hasAddress ex:LaMirindaAddress .
+
+ex:LaMirindaAddress
+    a ex:PostalAddress ;
+    ex:streetName "Plaza Dos de Mayo"@en ;
+    ex:streetNumber "4" .
+
+ex:ChurchInMadrid
+    a ex:Church ;
+    rdfs:label "Church in Madrid"@en ;
+    ex:hasAddress ex:ChurchAddress .
+
+ex:ChurchAddress
+    a ex:PostalAddress ;
+    ex:streetName "Calle Alcala"@en ;
+    ex:streetNumber "43" .

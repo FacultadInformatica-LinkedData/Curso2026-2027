@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madrid Sports Finder</title>
+<link rel="stylesheet" href="lib/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Madrid Sports Finder</h1>
+  <p id="status">Loading the knowledge graph…</p>
+</header>
+
+<main>
+  <aside id="panel">
+    <section>
+      <h2>Filters</h2>
+      <label>Search by name
+        <input id="f-text" type="search" placeholder="e.g. Vallehermoso">
+      </label>
+      <fieldset>
+        <legend>Category</legend>
+        <label class="check"><input type="checkbox" id="f-basic" checked><span class="dot basic"></span>Basic facility</label>
+        <label class="check"><input type="checkbox" id="f-centre" checked><span class="dot centre"></span>Sports centre</label>
+      </fieldset>
+      <label>District
+        <select id="f-district"><option value="">All districts</option></select>
+      </label>
+      <label>Facility type
+        <select id="f-type"><option value="">All types</option></select>
+      </label>
+      <label>Accessibility
+        <select id="f-access"><option value="">Any</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="f-pool">Has a swimming pool</label>
+      <button id="reset" type="button">Reset filters</button>
+    </section>
+
+    <section>
+      <h2>Nearest facilities</h2>
+      <button id="locate" type="button">Use my location</button>
+      <ol id="nearest"></ol>
+    </section>
+
+    <section>
+      <h2>Facilities per district</h2>
+      <p class="hint">Respects the filters above. Click a bar to select the district.</p>
+      <div id="chart"></div>
+    </section>
+  </aside>
+
+  <div id="mapwrap">
+    <div id="map"></div>
+    <div id="detail" hidden></div>
+  </div>
+</main>
+
+<footer>
+  Contains data of the Ayuntamiento de Madrid (datos.madrid.es), licensed under
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Transformed to RDF by Group 08.
+  Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+</footer>
+
+<script src="lib/leaflet.js"></script>
+<script src="lib/n3.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

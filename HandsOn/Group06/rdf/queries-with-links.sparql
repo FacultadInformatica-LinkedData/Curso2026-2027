@@ -1,0 +1,94 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX mc: <http://w3id.org/madrid-culture/ontology/>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Query1 Museos con su distrito y el identificador de Wikidata de ese distrito
+SELECT ?museumName ?districtName ?districtWikidata
+WHERE {
+  ?museum rdf:type mc:Museum ;
+          schema:name ?museumName ;
+          mc:hasAddress ?address .
+  ?address mc:locatedInDistrict ?district .
+  ?district schema:name ?districtName ;
+            owl:sameAs ?districtWikidata .
+}
+
+# Query2 Bibliotecas con su distrito y el identificador de Wikidata de ese distrito
+SELECT ?LibraryName ?districtName ?districtWikidata
+WHERE {
+  ?museum rdf:type mc:Library ;
+          schema:name ?LibraryName ;
+          mc:hasAddress ?address .
+  ?address mc:locatedInDistrict ?district .
+  ?district schema:name ?districtName ;
+            owl:sameAs ?districtWikidata .
+}
+
+# Query3 Número de bibliotecas y musueos por distrito y el identificador de Wikidata de ese distrito
+SELECT ?districtName ?districtWikidata
+       (COUNT(DISTINCT ?library) AS ?libraries)
+       (COUNT(DISTINCT ?museum) AS ?museums)
+WHERE {
+  ?district rdf:type mc:District ;
+            schema:name ?districtName ;
+            owl:sameAs ?districtWikidata .
+  OPTIONAL {
+    ?library rdf:type mc:Library ;
+             mc:hasAddress ?libraryAddress .
+    ?libraryAddress mc:locatedInDistrict ?district .
+  }
+  OPTIONAL {
+    ?museum rdf:type mc:Museum ;
+            mc:hasAddress ?museumAddress .
+    ?museumAddress mc:locatedInDistrict ?district .
+  }
+}
+GROUP BY ?districtName ?districtWikidata
+
+# Query4 Bibliotecas con aperturas también los fines de semana
+SELECT ?libraryName ?libraryWikidata ?openingHours
+WHERE {
+  ?library rdf:type mc:Library ;
+           schema:name ?libraryName ;
+           schema:openingHours ?openingHours ;
+           owl:sameAs ?libraryWikidata .
+  FILTER(REGEX(?openingHours, "lunes a domingo|sábados|sabados y domingos|domingos|sábado|domingo|sábado y domingo", "i"))
+}
+
+# Query5 museos accesibles que cuenten con lengua de signos
+SELECT ?museumName ?museumWikidata
+WHERE {
+  ?museum rdf:type mc:Museum ;
+          schema:name ?museumName ;
+          owl:sameAs ?museumWikidata ;
+          mc:hasAccessibility ?accessibility .
+  ?accessibility mc:accessible true ;
+  mc:signLanguage true .
+}
+
+# Query6 Top 10 barrios con más bibliotecas y museos
+SELECT ?neighborhoodName ?neighborhoodWikidata
+       (COUNT(DISTINCT ?facility) AS ?facilities)
+WHERE {
+  ?facility mc:hasAddress ?address .
+  ?address mc:locatedInNeighborhood ?neighborhood .
+  ?neighborhood schema:name ?neighborhoodName .
+  OPTIONAL { ?neighborhood owl:sameAs ?neighborhoodWikidata }
+}
+GROUP BY ?neighborhoodName ?neighborhoodWikidata
+ORDER BY DESC(?facilities)
+LIMIT 10
+
+# Query7 número de museos y bibliotecas accesibles y no accesibles
+SELECT ?resourceClass
+       (COUNT(?facility) AS ?total)
+       (SUM(IF(?isAccessible, 1, 0)) AS ?accessible)
+       (COUNT(?facility) - SUM(IF(?isAccessible, 1, 0)) AS ?notAccessible)
+WHERE {
+  VALUES ?resourceClass { mc:Library mc:Museum }
+  ?facility rdf:type ?resourceClass ;
+            mc:hasAccessibility ?accessibility .
+  ?accessibility mc:accessible ?isAccessible .
+}
+GROUP BY ?resourceClass

@@ -1,0 +1,121 @@
+@prefix ex: <http://example.org/assignment2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# ============================================================
+# CLASSES
+# ============================================================
+
+ex:Place a rdfs:Class .
+
+ex:PointOfInterest a rdfs:Class ;
+    rdfs:subClassOf ex:Place .
+
+ex:TouristicPlace a rdfs:Class ;
+    rdfs:subClassOf ex:PointOfInterest .
+
+ex:Accommodation a rdfs:Class ;
+    rdfs:subClassOf ex:PointOfInterest .
+
+ex:Palace a rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Church a rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Cathedral a rdfs:Class ;
+    rdfs:subClassOf ex:TouristicPlace .
+
+ex:Hotel a rdfs:Class ;
+    rdfs:subClassOf ex:Accommodation .
+
+ex:Hostel a rdfs:Class ;
+    rdfs:subClassOf ex:Accommodation .
+
+ex:Location a rdfs:Class .
+
+ex:Municipality a rdfs:Class .
+
+ex:City a rdfs:Class ;
+    rdfs:subClassOf ex:Municipality .
+
+ex:Province a rdfs:Class .
+
+ex:AutonomousCommunity a rdfs:Class .
+
+ex:Bar a rdfs:Class .
+
+
+# ============================================================
+# PROPERTIES
+# ============================================================
+
+ex:hasLocation a rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:Location .
+
+ex:streetName a rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range xsd:string .
+
+ex:number a rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range xsd:integer .
+
+ex:placedAt a rdf:Property ;
+    rdfs:domain ex:Location ;
+    rdfs:range ex:Municipality .
+
+ex:population a rdf:Property ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range xsd:integer .
+
+ex:belongsToProvince a rdf:Property ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range ex:Province .
+
+ex:belongsToCommunity a rdf:Property ;
+    rdfs:range ex:AutonomousCommunity .
+
+ex:hasProvince a rdf:Property ;
+    rdfs:domain ex:AutonomousCommunity ;
+    rdfs:range ex:Province .
+
+ex:hasBorderWith a rdf:Property ;
+    rdfs:domain ex:Municipality ;
+    rdfs:range ex:Municipality .
+
+
+# ============================================================
+# INSTANCES
+# ============================================================
+
+ex:Madrid a ex:City ;
+    ex:population 3166000 ;
+    ex:belongsToCommunity ex:MadridCommunity .
+
+ex:MadridCommunity a ex:AutonomousCommunity .
+
+
+# Bar "La Mirinda"
+
+ex:LaMirinda a ex:Bar ;
+    ex:hasLocation ex:LaMirindaLocation .
+
+ex:LaMirindaLocation a ex:Location ;
+    ex:streetName "Plaza Dos de Mayo"^^xsd:string ;
+    ex:number 4 ;
+    ex:placedAt ex:Madrid .
+
+
+# Church at Calle Alcalá 43
+
+ex:ChurchCalleAlcala43 a ex:Church ;
+    ex:hasLocation ex:ChurchCalleAlcala43Location .
+
+ex:ChurchCalleAlcala43Location a ex:Location ;
+    ex:streetName "Calle Alcalá"^^xsd:string ;
+    ex:number 43 ;
+    ex:placedAt ex:Madrid .

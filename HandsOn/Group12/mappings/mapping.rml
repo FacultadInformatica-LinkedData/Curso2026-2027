@@ -1,0 +1,101 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vocab: <https://w3id.org/smartinfra-galicia/ontology/Demographics#> .
+@base <https://w3id.org/smartinfra-galicia/resource/>.
+
+<#TriplesMapMunicipality> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "t723-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "https://w3id.org/smartinfra-galicia/resource/Municipality/{INE_Code}";
+    rr:class vocab:Municipality
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasINECode;
+    rr:objectMap [
+      rml:reference "INE_Code";
+      rr:datatype xsd:string
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasName;
+    rr:objectMap [
+      rml:reference "Municipality_name";
+      rr:datatype xsd:string
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasDemographicInformation;
+    rr:objectMap [
+      rr:template "https://w3id.org/smartinfra-galicia/resource/Observation/{INE_Code}-{Year}";
+      rr:termType rr:IRI
+    ]
+  ].
+
+
+<#TriplesMapObservation> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "t723-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ];
+  
+  rr:subjectMap [
+    rr:template "https://w3id.org/smartinfra-galicia/resource/Observation/{INE_Code}-{Year}";
+    rr:class vocab:DemographicObservation
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasYear;
+    rr:objectMap [
+      rml:reference "Year";
+      rr:datatype xsd:gYear
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasPopulationPercentage;
+    rr:objectMap [
+      rml:reference "Population_percentage";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasPopulationDensity;
+    rr:objectMap [
+      rml:reference "Population_density";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasPopulationPercentageUnder20;
+    rr:objectMap [
+      rml:reference "Population_under_20_percentage";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasPopulationPercentage20To64;
+    rr:objectMap [
+      rml:reference "Population_20_to_64_percentage";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate vocab:hasPopulationPercentage65Plus;
+    rr:objectMap [
+      rml:reference "Population_65_and_over_percentage";
+      rr:datatype xsd:decimal
+    ]
+  ].

@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <style>
+    text { font-family: Arial, sans-serif; fill: #222; }
+    .title { font-size: 26px; font-weight: bold; }
+    .subtitle { font-size: 16px; }
+    .classbox { fill: white; stroke: #333; stroke-width: 2; }
+    .instancebox { fill: #f7f7f7; stroke: #555; stroke-width: 2; }
+    .label { font-size: 16px; font-weight: bold; }
+    .small { font-size: 14px; }
+    .edge { stroke: #333; stroke-width: 2; fill: none; }
+    .subclass { stroke: #555; stroke-width: 2; fill: none; marker-end: url(#triangle); }
+    .property { stroke: #0066aa; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0066aa"/>
+    </marker>
+
+    <marker id="triangle" markerWidth="12" markerHeight="12" refX="10" refY="5"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L10,5 z" fill="white" stroke="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title">
+    Assignment 2a - RDF(S) Model
+  </text>
+  <text x="600" y="68" text-anchor="middle" class="subtitle">
+    Marcos Barral - maarcossbr
+  </text>
+
+  <!-- ===================================================== -->
+  <!-- CLASS HIERARCHY -->
+  <!-- ===================================================== -->
+
+  <text x="40" y="110" class="label">Class hierarchy</text>
+
+  <!-- Place -->
+  <rect x="90" y="130" width="150" height="45" class="classbox"/>
+  <text x="165" y="158" text-anchor="middle" class="label">Place</text>
+
+  <!-- PointOfInterest -->
+  <rect x="90" y="220" width="150" height="45" class="classbox"/>
+  <text x="165" y="248" text-anchor="middle" class="label">PointOfInterest</text>
+  <line x1="165" y1="220" x2="165" y2="175" class="subclass"/>
+
+  <!-- TouristicPlace -->
+  <rect x="20" y="310" width="150" height="45" class="classbox"/>
+  <text x="95" y="338" text-anchor="middle" class="label">TouristicPlace</text>
+
+  <!-- Accommodation -->
+  <rect x="200" y="310" width="150" height="45" class="classbox"/>
+  <text x="275" y="338" text-anchor="middle" class="label">Accommodation</text>
+
+  <line x1="95" y1="310" x2="145" y2="265" class="subclass"/>
+  <line x1="275" y1="310" x2="190" y2="265" class="subclass"/>
+
+  <!-- Touristic subclasses -->
+  <rect x="10" y="400" width="100" height="40" class="classbox"/>
+  <text x="60" y="425" text-anchor="middle" class="small">Cathedral</text>
+
+  <rect x="120" y="400" width="100" height="40" class="classbox"/>
+  <text x="170" y="425" text-anchor="middle" class="small">Palace</text>
+
+  <rect x="65" y="470" width="100" height="40" class="classbox"/>
+  <text x="115" y="495" text-anchor="middle" class="small">Church</text>
+
+  <line x1="60" y1="400" x2="80" y2="355" class="subclass"/>
+  <line x1="170" y1="400" x2="115" y2="355" class="subclass"/>
+  <line x1="115" y1="470" x2="100" y2="355" class="subclass"/>
+
+  <!-- Accommodation subclasses -->
+  <rect x="230" y="400" width="90" height="40" class="classbox"/>
+  <text x="275" y="425" text-anchor="middle" class="small">Hotel</text>
+
+  <rect x="330" y="400" width="90" height="40" class="classbox"/>
+  <text x="375" y="425" text-anchor="middle" class="small">Hostel</text>
+
+  <line x1="275" y1="400" x2="270" y2="355" class="subclass"/>
+  <line x1="375" y1="400" x2="300" y2="355" class="subclass"/>
+
+  <!-- Other classes -->
+  <rect x="470" y="130" width="140" height="45" class="classbox"/>
+  <text x="540" y="158" text-anchor="middle" class="label">Location</text>
+
+  <rect x="700" y="130" width="140" height="45" class="classbox"/>
+  <text x="770" y="158" text-anchor="middle" class="label">Municipality</text>
+
+  <rect x="700" y="220" width="140" height="45" class="classbox"/>
+  <text x="770" y="248" text-anchor="middle" class="label">City</text>
+  <line x1="770" y1="220" x2="770" y2="175" class="subclass"/>
+
+  <rect x="900" y="130" width="130" height="45" class="classbox"/>
+  <text x="965" y="158" text-anchor="middle" class="label">Province</text>
+
+  <rect x="1040" y="130" width="150" height="45" class="classbox"/>
+  <text x="1115" y="150" text-anchor="middle" class="small">Autonomous</text>
+  <text x="1115" y="166" text-anchor="middle" class="small">Community</text>
+
+  <rect x="470" y="220" width="100" height="45" class="classbox"/>
+  <text x="520" y="248" text-anchor="middle" class="label">Bar</text>
+
+  <!-- ===================================================== -->
+  <!-- PROPERTIES -->
+  <!-- ===================================================== -->
+
+  <text x="450" y="310" class="label">Main properties</text>
+
+  <line x1="240" y1="150" x2="470" y2="150" class="property"/>
+  <text x="355" y="140" text-anchor="middle" class="small">hasLocation</text>
+
+  <line x1="610" y1="165" x2="700" y2="165" class="property"/>
+  <text x="655" y="190" text-anchor="middle" class="small">placedAt</text>
+
+  <line x1="840" y1="150" x2="900" y2="150" class="property"/>
+  <text x="870" y="135" text-anchor="middle" class="small">belongsToProvince</text>
+
+  <line x1="1030" y1="150" x2="1040" y2="150" class="property"/>
+  <text x="1035" y="125" text-anchor="middle" class="small">belongsToCommunity</text>
+
+  <path d="M720 285 C650 330, 890 330, 820 285" class="property"/>
+  <text x="770" y="335" text-anchor="middle" class="small">hasBorderWith</text>
+
+  <text x="870" y="220" class="small">population : xsd:integer</text>
+  <text x="470" y="195" class="small">streetName : xsd:string</text>
+  <text x="470" y="212" class="small">number : xsd:integer</text>
+
+  <!-- ===================================================== -->
+  <!-- INSTANCES -->
+  <!-- ===================================================== -->
+
+  <text x="40" y="570" class="label">Example instances from the exercise</text>
+
+  <!-- Madrid -->
+  <rect x="40" y="610" width="180" height="70" class="instancebox"/>
+  <text x="130" y="635" text-anchor="middle" class="label">Madrid</text>
+  <text x="130" y="657" text-anchor="middle" class="small">a City</text>
+  <text x="130" y="675" text-anchor="middle" class="small">population: 3166000</text>
+
+  <!-- Madrid Community -->
+  <rect x="300" y="610" width="190" height="60" class="instancebox"/>
+  <text x="395" y="635" text-anchor="middle" class="label">MadridCommunity</text>
+  <text x="395" y="657" text-anchor="middle" class="small">a AutonomousCommunity</text>
+
+  <line x1="220" y1="640" x2="300" y2="640" class="property"/>
+  <text x="260" y="625" text-anchor="middle" class="small">belongsToCommunity</text>
+
+  <!-- La Mirinda -->
+  <rect x="550" y="600" width="140" height="55" class="instancebox"/>
+  <text x="620" y="625" text-anchor="middle" class="label">LaMirinda</text>
+  <text x="620" y="645" text-anchor="middle" class="small">a Bar</text>
+
+  <rect x="760" y="585" width="240" height="90" class="instancebox"/>
+  <text x="880" y="610" text-anchor="middle" class="label">LaMirindaLocation</text>
+  <text x="880" y="632" text-anchor="middle" class="small">Plaza Dos de Mayo</text>
+  <text x="880" y="650" text-anchor="middle" class="small">number 4</text>
+  <text x="880" y="668" text-anchor="middle" class="small">placedAt Madrid</text>
+
+  <line x1="690" y1="625" x2="760" y2="625" class="property"/>
+  <text x="725" y="612" text-anchor="middle" class="small">hasLocation</text>
+
+  <!-- Church -->
+  <rect x="550" y="715" width="190" height="55" class="instancebox"/>
+  <text x="645" y="738" text-anchor="middle" class="label">ChurchCalleAlcala43</text>
+  <text x="645" y="758" text-anchor="middle" class="small">a Church</text>
+
+  <rect x="790" y="700" width="260" height="90" class="instancebox"/>
+  <text x="920" y="725" text-anchor="middle" class="label">ChurchLocation</text>
+  <text x="920" y="747" text-anchor="middle" class="small">Calle Alcalá</text>
+  <text x="920" y="765" text-anchor="middle" class="small">number 43</text>
+  <text x="920" y="783" text-anchor="middle" class="small">placedAt Madrid</text>
+
+  <line x1="740" y1="742" x2="790" y2="742" class="property"/>
+  <text x="765" y="730" text-anchor="middle" class="small">hasLocation</text>
+</svg>

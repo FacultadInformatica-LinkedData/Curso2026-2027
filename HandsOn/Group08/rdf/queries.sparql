@@ -1,0 +1,139 @@
+# SPARQL queries to verify the RDF generated from the RML mappings (Group 08, Hands-on 4).
+# Data: rdf/madridsports.ttl. Expected results were obtained by running each query on that file.
+
+PREFIX ms: <http://madridsports.example.org/ontology/madridsports#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Q1. Number of individuals of each class.
+# Expected: 607 BasicSportsFacility, 83 SportsCentre, 21 District, 115 Neighbourhood,
+#           31 FacilityType, 4 AccessibilityLevel, 3 AccessibilityFeature, 1 City, 1 dcat:Dataset
+SELECT ?class (COUNT(?s) AS ?individuals)
+WHERE { ?s rdf:type ?class }
+GROUP BY ?class
+ORDER BY DESC(?individuals)
+
+# Q2. Every facility has exactly one sourceKey, one label and one location (no duplicated PKs).
+# Expected: no rows
+SELECT ?facility (COUNT(DISTINCT ?key) AS ?keys) (COUNT(DISTINCT ?lat) AS ?lats)
+WHERE {
+  { ?facility a ms:BasicSportsFacility } UNION { ?facility a ms:SportsCentre }
+  OPTIONAL { ?facility ms:sourceKey ?key }
+  OPTIONAL { ?facility ms:latitude ?lat }
+}
+GROUP BY ?facility
+HAVING (COUNT(DISTINCT ?key) != 1 || COUNT(DISTINCT ?lat) != 1)
+
+# Q3. Facilities that are both basic and sports centre (the classes are disjoint).
+# Expected: 0
+SELECT (COUNT(?f) AS ?inconsistent)
+WHERE { ?f a ms:BasicSportsFacility , ms:SportsCentre }
+
+# Q4. Links that point to a district or neighbourhood that does not exist in the data.
+# Expected: 0
+SELECT (COUNT(*) AS ?danglingLinks)
+WHERE {
+  { ?f ms:locatedInDistrict ?d . FILTER NOT EXISTS { ?d a ms:District } }
+  UNION
+  { ?f ms:locatedInNeighbourhood ?n . FILTER NOT EXISTS { ?n a ms:Neighbourhood } }
+  UNION
+  { ?n ms:belongsToDistrict ?d . FILTER NOT EXISTS { ?d a ms:District } }
+}
+
+# Q5. All coordinates are inside Madrid (checks the corrected longitude of PK 50334831).
+# Expected: 0
+SELECT (COUNT(?f) AS ?outside)
+WHERE {
+  ?f ms:latitude ?lat ; ms:longitude ?lon .
+  FILTER (?lat < 40.30 || ?lat > 40.60 || ?lon < -3.90 || ?lon > -3.50)
+}
+
+# Q6. Number of facilities per district (basic facilities and sports centres).
+# Expected: 21 rows, HORTALEZA first (72 basic, 3 centres)
+SELECT ?districtName
+       (SUM(IF(?basic, 1, 0)) AS ?basicFacilities)
+       (SUM(IF(?basic, 0, 1)) AS ?sportsCentres)
+WHERE {
+  ?f ms:locatedInDistrict ?d .
+  ?d rdfs:label ?districtName .
+  BIND (EXISTS { ?f a ms:BasicSportsFacility } AS ?basic)
+}
+GROUP BY ?districtName
+ORDER BY DESC(?basicFacilities)
+
+# Q7. Facilities without district (the 21 rows with "DISTRITO" as district name in the source).
+# Expected: 21
+SELECT (COUNT(?f) AS ?withoutDistrict)
+WHERE {
+  { ?f a ms:BasicSportsFacility } UNION { ?f a ms:SportsCentre }
+  FILTER NOT EXISTS { ?f ms:locatedInDistrict ?d }
+}
+
+# Q8. Sports centres with a swimming pool, with district and phone.
+# Expected: 56 centres (55 from polideportivos.csv + Club de Campo Villa de Madrid)
+SELECT ?name ?districtName ?phone
+WHERE {
+  ?f a ms:SportsCentre ;
+     ms:hasSwimmingPool true ;
+     rdfs:label ?name .
+  OPTIONAL { ?f ms:locatedInDistrict/rdfs:label ?districtName }
+  OPTIONAL { ?f ms:phone ?phone }
+}
+ORDER BY ?name
+
+# Q9. Accessibility: number of facilities per mobility level.
+# Expected: Not accessible 416, Partially accessible 157, Accessible 110, No information 7
+SELECT ?level (COUNT(?f) AS ?facilities)
+WHERE {
+  ?f ms:hasAccessibilityLevel ?l .
+  ?l rdfs:label ?level .
+}
+GROUP BY ?level
+ORDER BY DESC(?facilities)
+
+# Q10. Accessible facilities (level 1) that also have tactile paving (feature 5).
+SELECT ?name ?districtName
+WHERE {
+  ?f ms:hasAccessibilityLevel/ms:accessibilityCode 1 ;
+     ms:hasAccessibilityFeature/ms:accessibilityCode 5 ;
+     rdfs:label ?name .
+  OPTIONAL { ?f ms:locatedInDistrict/rdfs:label ?districtName }
+}
+ORDER BY ?name
+
+# Q11. Most common facility types.
+# Expected: InstalacionesDeportivasBasicas and CamposEstadiosFutbol at the top
+SELECT ?type (COUNT(DISTINCT ?f) AS ?facilities)
+WHERE {
+  ?f ms:hasFacilityType ?t .
+  ?t rdfs:label ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?facilities)
+LIMIT 10
+
+# Q12. Outdoor football and futsal facilities in a given district (example: USERA).
+SELECT ?name ?neighbourhood ?street ?number
+WHERE {
+  ?f a ms:BasicSportsFacility ;
+     rdfs:label ?name ;
+     ms:hasFacilityType ?t ;
+     ms:locatedInDistrict/rdfs:label "USERA"@es .
+  VALUES ?t { <http://madridsports.example.org/resource/facilityType/PistaFutbolSala>
+              <http://madridsports.example.org/resource/facilityType/CamposEstadiosFutbol> }
+  OPTIONAL { ?f ms:locatedInNeighbourhood/rdfs:label ?neighbourhood }
+  OPTIONAL { ?f ms:streetName ?street }
+  OPTIONAL { ?f ms:streetNumber ?number }
+}
+ORDER BY ?neighbourhood ?name
+
+# Q13. Licence and sources of the generated dataset, and the external links of the city.
+SELECT ?dataset ?license ?source ?sameAs
+WHERE {
+  ?dataset dcterms:license ?license ;
+           dcterms:source ?source .
+  ?city a ms:City ; owl:sameAs ?sameAs .
+}

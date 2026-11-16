@@ -1,0 +1,478 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql:   <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ue:   <http://www.madridurbanenvironment.org/ontology/> .
+<#PublicToilet> a rr:TriplesMap ;
+    rml:logicalSource [rml:source "../csv/300103-3-aseos-publicos-operativos-csv-updated.csv"; rml:referenceFormulation ql:CSV ];
+    rr:subjectMap [ rr:template "http://www.madridurbanenvironment.org/resource/public-toilet/{CODIGO ASEO}";
+    rr:termType rr:IRI; rr:class ue:PublicToilet];
+
+    rr:predicateObjectMap [
+        rr:predicateMap [rr:constant rdfs:label; rr:termType rr:IRI] ;
+        rr:objectMap [ rr:template "{NOMBRE}" ; rr:termType rr:Literal ; rr:datatype xsd:string ] 
+    ] ;
+
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:identifier; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "CODIGO ASEO" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:districtCode ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "CODIGO J.M."  ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:District ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "DISTRITO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:streetType; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "VIAL" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:streetName; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "DIRECCION" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:streetNumber; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "NUMERO" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:utmX; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "COORD UTM ETRS89 X" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:decimal ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:utmY; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "COORD UTM ETRS89 Y" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:decimal ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [rr:constant ue:name; rr:termType rr:IRI] ;
+                            rr:objectMap [ rml:reference "NOMBRE" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+.
+
+<#BenchMap> a rr:TriplesMap ;
+    rml:logicalSource [rml:source "../csv/300095-0-mobiliario-bancos-updated.csv";
+        rml:referenceFormulation ql:CSV];
+        
+    rr:subjectMap [ rr:template "http://www.madridurbanenvironment.org/resource/bench/{ID}" ;
+    rr:termType rr:IRI; rr:class ue:Bench ];
+
+    rr:predicateObjectMap [
+                            rr:predicateMap [rr:constant ue:identifier ;rr:termType rr:IRI] ; 
+                            rr:objectMap [rml:reference "ID" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap [rr:constant rdfs:label; rr:termType rr:IRI] ;
+        rr:objectMap [ rr:template "Banco {ID} - {NOM_VIA}" ; rr:termType rr:Literal ; rr:datatype xsd:string ]
+    ] ;
+        rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:code ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COD_BARRIO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:Neighborhood ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "BARRIO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:districtCode ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COD_DISTRITO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:District ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "DISTRITO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:classification; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:status; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "ESTADO" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:utmX; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COORD_GIS_X" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:decimal ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:utmY; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COORD_GIS_Y" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:decimal ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:streetType; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "TIPO_VIA" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:streetName; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "NOM_VIA" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:streetNumber; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "NUM_VIA" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+    rr:predicateObjectMap [ 
+                            rr:predicateMap [ rr:constant ue:postalCode; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COD_POSTAL" ; rr:termType rr:Literal; 
+                            rr:datatype xsd:string ] 
+                            ] ;
+                            
+.
+<#PetFountainMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/50055-1-fuentes-mascotas-updated.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ] ;
+    rr:subjectMap [rr:template "http://www.madridurbanenvironment.org/resource/pet-fountain/{ID}" ;
+    rr:termType rr:IRI ;rr:class ue:DrinkingFountain] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [rr:constant ue:identifier ;rr:termType rr:IRI] ; 
+                            rr:objectMap [rml:reference "ID" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap [rr:constant rdfs:label; rr:termType rr:IRI] ;
+        rr:objectMap [ rr:template "Fuente de mascotas {ID} - {NOM_VIA}" ; rr:termType rr:Literal ; rr:datatype xsd:string ] 
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[ rr:constant ue:description; rr:termType rr:IRI ] ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:termType rr:Literal;
+        rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:code; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_BARRIO" ; rr:termType rr:Literal;
+           rr:datatype xsd:integer 
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:Neighborhood; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "BARRIO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:districtCode; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_DISTRITO" ; rr:termType rr:Literal;
+           rr:datatype xsd:integer
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:District; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "DISTRITO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:status; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "ESTADO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:utmX; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COORD_GIS_X" ; rr:termType rr:Literal;
+           rr:datatype xsd:decimal
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:utmY; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COORD_GIS_Y" ; rr:termType rr:Literal;
+           rr:datatype xsd:decimal
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetType; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "TIPO_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetName; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "NOM_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetNumber; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "NUM_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:postalCode; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_POSTAL" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:intendedUse; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "USO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+.
+<#FountainMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/300051-26-fuentes-updated.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ] ;
+    rr:subjectMap [rr:template "http://www.madridurbanenvironment.org/resource/drinking-fountain/{ID}" ;
+    rr:termType rr:IRI ;rr:class ue:DrinkingFountain] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [rr:constant ue:identifier ;rr:termType rr:IRI] ; 
+                            rr:objectMap [rml:reference "ID" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap [rr:constant rdfs:label; rr:termType rr:IRI] ;
+        rr:objectMap [ rr:template "Fuente {ID} - {NOM_VIA}" ; rr:termType rr:Literal ; rr:datatype xsd:string ] 
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[ rr:constant ue:description; rr:termType rr:IRI ] ;
+        rr:objectMap [ rml:reference "DESC_CLASIFICACION" ; rr:termType rr:Literal;
+        rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:code; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_BARRIO" ; rr:termType rr:Literal;
+           rr:datatype xsd:integer 
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:Neighborhood; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "BARRIO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:districtCode; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_DISTRITO" ; rr:termType rr:Literal;
+           rr:datatype xsd:integer
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:District; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "DISTRITO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+        rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:status; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "ESTADO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:utmX; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COORD_GIS_X" ; rr:termType rr:Literal;
+           rr:datatype xsd:decimal
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:utmY; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COORD_GIS_Y" ; rr:termType rr:Literal;
+           rr:datatype xsd:decimal
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetType; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "TIPO_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetName; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "NOM_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:streetNumber; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "NUM_VIA" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:postalCode; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "COD_POSTAL" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap[
+          rr:constant ue:intendedUse; rr:termType rr:IRI ;
+         ] ;
+        rr:objectMap[
+           rml:reference "USO" ; rr:termType rr:Literal;
+           rr:datatype xsd:string
+        ] ] ;
+.
+<#ParkMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "../csv/200761-0-parques-jardines-updated-csv.csv" ;
+        rml:referenceFormulation ql:CSV 
+    ];  
+      rr:subjectMap [
+        rr:template "http://www.madridurbanenvironment.org/resource/park/{PK}" ;
+        rr:termType rr:IRI ;
+        rr:class ue:Park
+    ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:identifier ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "PK" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+        rr:predicateMap [rr:constant rdfs:label; rr:termType rr:IRI] ;
+        rr:objectMap [ rr:template "{NOMBRE}" ; rr:termType rr:Literal ; rr:datatype xsd:string ]
+    ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:name ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "NOMBRE" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:description ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "DESCRIPCION-ENTIDAD" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:schedule ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "HORARIO" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:accessibilityLevel ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "ACCESIBILIDAD" ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:webPage ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "CONTENT-URL" ; rr:termType rr:Literal;
+                            rr:datatype xsd:anyURI ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:streetName ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "NOMBRE-VIA" ; rr:termType rr:Literal ; rr:datatype xsd:string ]
+                            ];
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:streetType ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "CLASE-VIAL" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:locality ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "LOCALIDAD" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:province ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "PROVINCIA" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:postalCode ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "CODIGO-POSTAL" ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:code ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COD-BARRIO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:Neighborhood ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "BARRIO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:districtCode ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COD-DISTRITO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:integer ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:District ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "DISTRITO"  ; rr:termType rr:Literal;
+                            rr:datatype xsd:string ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:utmX ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COORDENADA-X" ; rr:termType rr:Literal;
+                            rr:datatype xsd:decimal ]
+                            ] ;
+    rr:predicateObjectMap [
+                            rr:predicateMap [ rr:constant ue:utmY ; rr:termType rr:IRI ] ;
+                            rr:objectMap [ rml:reference "COORDENADA-Y" ; rr:termType rr:Literal;
+                            rr:datatype xsd:decimal ]
+                            ] ;
+.

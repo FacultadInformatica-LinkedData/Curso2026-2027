@@ -1,0 +1,12 @@
+MAGNITUD,FORMULA,NOMBRE,UNIDAD
+1,SO2,Dióxido de azufre,µg/m3
+6,CO,Monóxido de carbono,mg/m3
+7,NO,Monóxido de nitrógeno,µg/m3
+8,NO2,Dióxido de nitrógeno,µg/m3
+9,PM2.5,Partículas en suspensión menores de 2.5 µm,µg/m3
+10,PM10,Partículas en suspensión menores de 10 µm,µg/m3
+12,NOx,Óxidos de nitrógeno,µg/m3
+14,O3,Ozono,µg/m3
+20,TOL,Tolueno,µg/m3
+30,BEN,Benceno,µg/m3
+35,EBE,Etilbenceno,µg/m3

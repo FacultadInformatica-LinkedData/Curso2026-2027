@@ -1,0 +1,27 @@
+PREFIX parks: <https://parques-jardines.madrid.data.es/ontology#>
+
+# Number of parks generated
+SELECT (COUNT(?park) AS ?numberOfParks)
+WHERE {
+  ?park a parks:Park .
+}
+
+# Parks with their names and coordinates
+SELECT ?park ?name ?latitude ?longitude
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name ;
+        parks:latitude ?latitude ;
+        parks:longitude ?longitude .
+}
+ORDER BY ?name
+LIMIT 20
+
+# Parks located in the Retiro district
+SELECT ?park ?name
+WHERE {
+  ?park a parks:Park ;
+        parks:parkName ?name ;
+        parks:locatedInDistrict ?district .
+  ?district <http://www.w3.org/2000/01/rdf-schema#label> "RETIRO"^^<http://www.w3.org/2001/XMLSchema#string> .
+}

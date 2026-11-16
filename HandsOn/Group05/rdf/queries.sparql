@@ -1,0 +1,93 @@
+# Hands-On 4 - Group05
+# Consultas SPARQL para verificar los datos de rdf/polideportivos.ttl
+
+PREFIX :     <http://smartcity.linkeddata.es/sports/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+# Q1. Numero de instancias por clase (esperado: 82 SportsCenter y 21 District)
+SELECT ?class (COUNT(DISTINCT ?s) AS ?instances)
+WHERE { ?s a ?class }
+GROUP BY ?class
+
+# Q2. Listado de centros deportivos con su distrito
+SELECT ?center ?name ?districtName
+WHERE {
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          :locatedInDistrict ?district .
+  ?district rdfs:label ?districtName .
+}
+ORDER BY ?districtName ?name
+
+# Q3. Numero de centros deportivos por distrito
+SELECT ?districtName (COUNT(?center) AS ?centers)
+WHERE {
+  ?center a :SportsCenter ;
+          :locatedInDistrict ?district .
+  ?district rdfs:label ?districtName .
+}
+GROUP BY ?districtName
+ORDER BY DESC(?centers)
+
+# Q4. Individuos sin etiqueta o sin tipo (esperado: ninguno)
+SELECT DISTINCT ?s
+WHERE {
+  ?s ?p ?o .
+  FILTER ( isIRI(?s) && ( NOT EXISTS { ?s rdfs:label ?label } || NOT EXISTS { ?s a ?type } ) )
+}
+
+# Q5. Centros deportivos sin telefono o sin email (esperado: Fernando Carro - Las Rosas y Fúcar)
+SELECT ?center ?name ?telephone ?email
+WHERE {
+  ?center a :SportsCenter ; rdfs:label ?name .
+  OPTIONAL { ?center :telephone ?telephone }
+  OPTIONAL { ?center :email ?email }
+  FILTER (!BOUND(?telephone) || !BOUND(?email))
+}
+
+# Q6. Centros con mas de un telefono (valores multiples separados en el mapping)
+SELECT ?name (COUNT(?telephone) AS ?numTelephones) (GROUP_CONCAT(?telephone; separator=", ") AS ?telephones)
+WHERE {
+  ?center a :SportsCenter ; rdfs:label ?name ; :telephone ?telephone .
+}
+GROUP BY ?name
+HAVING (COUNT(?telephone) > 1)
+
+# Q7. Centros con piscina y su localizacion geografica
+SELECT ?name ?lat ?long
+WHERE {
+  ?center a :SportsCenter ;
+          rdfs:label ?name ;
+          :equipmentDescription ?equipment ;
+          geo:lat ?lat ;
+          geo:long ?long .
+  FILTER (CONTAINS(LCASE(?equipment), "piscina"))
+}
+ORDER BY ?name
+
+# Q8. Centros con codigo de accesibilidad 1
+SELECT ?name (GROUP_CONCAT(?code; separator=",") AS ?accessibilityCodes)
+WHERE {
+  ?center a :SportsCenter ; rdfs:label ?name ; :accessibilityInfo ?code .
+  FILTER EXISTS { ?center :accessibilityInfo "1"^^xsd:string }
+}
+GROUP BY ?name
+
+# Q9. Centros deportivos cercanos a la Puerta del Sol (40.4169, -3.7035) en un radio aprox. de 2 km
+SELECT ?name ?lat ?long
+WHERE {
+  ?center a :SportsCenter ; rdfs:label ?name ; geo:lat ?lat ; geo:long ?long .
+  FILTER (ABS(?lat - 40.4169) < 0.018 && ABS(?long + 3.7035) < 0.024)
+}
+ORDER BY ?name
+
+# Q10. Comprobacion de tipos de datos: literales de :pk y geo:lat que no tengan el datatype esperado (esperado: ninguno)
+SELECT ?center ?p ?value
+WHERE {
+  ?center ?p ?value .
+  FILTER ( (?p = :pk && DATATYPE(?value) != xsd:integer) ||
+           (?p IN (geo:lat, geo:long) && DATATYPE(?value) != xsd:float) )
+}

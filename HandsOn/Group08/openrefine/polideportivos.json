@@ -1,0 +1,478 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PK",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PK using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "jython:import re\nv = value or ''\nout = []\nfor p in re.split(r'[^\\d ]+', v):\n    d = p.replace(' ', '')\n    if len(d) == 11 and d.startswith('34'):\n        d = d[2:]\n    if len(d) == 9 and d not in out:\n        out.append(d)\nreturn ';'.join(out)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression jython:import re\nv = value or ''\nout = []\nfor p in re.split(r'[^\\d ]+', v):\n    d = p.replace(' ', '')\n    if len(d) == 11 and d.startswith('34'):\n        d = d[2:]\n    if len(d) == 9 and d not in out:\n        out.append(d)\nreturn ';'.join(out)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "jython:import re\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nfx = g('FAX')\nt = (value or '') + ' ' + fx\nout = []\nfor m in re.findall(r'[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+', t):\n    m = m.lower()\n    if m not in out:\n        out.append(m)\nreturn ';'.join(out)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column EMAIL using expression jython:import re\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nfx = g('FAX')\nt = (value or '') + ' ' + fx\nout = []\nfor m in re.findall(r'[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+', t):\n    m = m.lower()\n    if m not in out:\n        out.append(m)\nreturn ';'.join(out)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORARIO",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column HORARIO using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column EQUIPAMIENTO using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TRANSPORTE",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TRANSPORTE using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DESCRIPCION",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DESCRIPCION using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-VIA",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE-VIA using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE-VIAL",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CLASE-VIAL using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BARRIO using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DISTRITO using expression grel:value.unescape(\"html\").unescape(\"html\").replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NUM",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NUM using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODIGO-POSTAL",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CODIGO-POSTAL using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-BARRIO",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-BARRIO using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-DISTRITO using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONTENT-URL",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONTENT-URL using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LATITUD using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression grel:value.replace(/[\\p{Zs}\\s]+/,\" \").trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "grel:if(value==\"DISTRITO\",\"\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DISTRITO using expression grel:if(value==\"DISTRITO\",\"\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:if(toNumber(value)>0,-1*toNumber(value),value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression grel:if(toNumber(value)>0,-1*toNumber(value),value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "jython:codes = [c.strip() for c in (value or '').split(',') if c.strip()]\nex = []\nfor c in codes:\n    if c in ('4', '5', '6') and c not in ex:\n        ex.append(c)\nreturn ';'.join(ex)",
+    "onError": "set-to-blank",
+    "newColumnName": "ACCESIBILIDAD-EXTRAS",
+    "columnInsertIndex": 8,
+    "description": "Create column ACCESIBILIDAD-EXTRAS at index 8 based on column ACCESIBILIDAD using expression jython:codes = [c.strip() for c in (value or '').split(',') if c.strip()]\nex = []\nfor c in codes:\n    if c in ('4', '5', '6') and c not in ex:\n        ex.append(c)\nreturn ';'.join(ex)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "jython:codes = [c.strip() for c in (value or '').split(',') if c.strip()]\nlv = [c for c in codes if c in ('0', '1', '2', '3')]\nreturn lv[0] if lv else ''\n",
+    "onError": "set-to-blank",
+    "newColumnName": "ACCESIBILIDAD-NIVEL",
+    "columnInsertIndex": 8,
+    "description": "Create column ACCESIBILIDAD-NIVEL at index 8 based on column ACCESIBILIDAD using expression jython:codes = [c.strip() for c in (value or '').split(',') if c.strip()]\nlv = [c for c in codes if c in ('0', '1', '2', '3')]\nreturn lv[0] if lv else ''\n"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-BARRIO",
+    "expression": "jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nLOOK = {\"BARAJAS|CASCO H.BARAJAS\": \"3\", \"MORATALAZ|PAVONES\": \"1\", \"BARAJAS|ALAMEDA DE OSUNA\": \"1\", \"BARAJAS|TIMON\": \"4\", \"USERA|ORCASUR\": \"2\", \"SAN BLAS-CANILLEJAS|HELLIN\": \"2\", \"CHAMARTIN|NUEVA ESPANA\": \"5\", \"HORTALEZA|APOSTOL SANTIAGO\": \"5\", \"CARABANCHEL|PUERTA BONITA\": \"5\", \"CIUDAD LINEAL|PUEBLO NUEVO\": \"2\", \"CARABANCHEL|SAN ISIDRO\": \"3\", \"VILLA DE VALLECAS|ENSANCHE DE VALLECAS\": \"3\", \"SAN BLAS-CANILLEJAS|AMPOSTA\": \"3\", \"VILLAVERDE|BUTARQUE\": \"3\", \"FUENCARRAL-EL PARDO|VALVERDE\": \"6\", \"PUENTE DE VALLECAS|ENTREVIAS\": \"1\", \"MORATALAZ|VINATEROS\": \"6\", \"MONCLOA-ARAVACA|CASA DE CAMPO\": \"1\", \"CIUDAD LINEAL|VENTAS\": \"1\", \"SAN BLAS-CANILLEJAS|REJAS\": \"6\", \"SAN BLAS-CANILLEJAS|ARCOS\": \"4\", \"HORTALEZA|CANILLAS\": \"3\", \"ARGANZUELA|ACACIAS\": \"2\", \"LATINA|LOS CARMENES\": \"1\", \"MORATALAZ|MARROQUINA\": \"3\", \"CARABANCHEL|OPANEL\": \"2\", \"HORTALEZA|PIOVERA\": \"2\", \"FUENCARRAL-EL PARDO|PENA GRANDE\": \"3\", \"CHAMARTIN|HISPANOAMERICA\": \"4\", \"TETUAN|CUATRO CAMINOS\": \"2\", \"TETUAN|CASTILLEJOS\": \"3\", \"MORATALAZ|FONTARRON\": \"5\", \"SAN BLAS-CANILLEJAS|ROSAS\": \"5\", \"HORTALEZA|PINAR DEL REY\": \"4\", \"BARAJAS|AEROPUERTO\": \"2\", \"CARABANCHEL|ABRANTES\": \"7\", \"BARAJAS|CORRALEJOS\": \"5\", \"HORTALEZA|VALDEFUENTES\": \"6\", \"CIUDAD LINEAL|LA CONCEPCION\": \"4\", \"SALAMANCA|GUINDALERA\": \"4\", \"CIUDAD LINEAL|COSTILLARES\": \"9\", \"FUENCARRAL-EL PARDO|EL PARDO\": \"1\", \"CHAMARTIN|CASTILLA\": \"6\", \"PUENTE DE VALLECAS|PALOMERAS SURESTE\": \"4\", \"MONCLOA-ARAVACA|ARAVACA\": \"7\", \"RETIRO|LOS JERONIMOS\": \"5\", \"VILLA DE VALLECAS|CASCO H.VALLECAS\": \"1\", \"PUENTE DE VALLECAS|PORTAZGO\": \"5\", \"USERA|ZOFIO\": \"6\", \"USERA|ORCASITAS\": \"1\", \"CENTRO|EMBAJADORES\": \"2\", \"LATINA|LUCERO\": \"3\", \"VICALVARO|EL CANAVERAL\": \"4\", \"RETIRO|ADELFAS\": \"2\", \"MONCLOA-ARAVACA|CIUDAD UNIVERSITARIA\": \"3\", \"USERA|ALMENDRALES\": \"4\", \"LATINA|LAS AGUILAS\": \"7\", \"CHAMARTIN|PROSPERIDAD\": \"2\", \"HORTALEZA|PALOMAS\": \"1\", \"RETIRO|PACIFICO\": \"1\", \"VILLAVERDE|LOS ANGELES\": \"5\", \"VILLAVERDE|SAN CRISTOBAL\": \"2\", \"PUENTE DE VALLECAS|PALOMERAS BAJAS\": \"3\", \"PUENTE DE VALLECAS|NUMANCIA\": \"6\", \"CENTRO|UNIVERSIDAD\": \"5\", \"CIUDAD LINEAL|SAN PASCUAL\": \"5\", \"VICALVARO|VALDEBERNARDO\": \"2\", \"TETUAN|VALDEACEDERAS\": \"5\", \"FUENCARRAL-EL PARDO|LA PAZ\": \"5\", \"USERA|PRADOLONGO\": \"7\", \"MORATALAZ|MEDIA LEGUA\": \"4\", \"CHAMARTIN|EL VISO\": \"1\", \"VILLAVERDE|ANGELES\": \"5\", \"VILLAVERDE|LOS ROSALES\": \"4\", \"SAN BLAS-CANILLEJAS|SIMANCAS\": \"1\", \"ARGANZUELA|LEGAZPI\": \"4\", \"SAN BLAS-CANILLEJAS|EL SALVADOR\": \"8\", \"SAN BLAS-CANILLEJAS|CANILLEJAS\": \"7\", \"VICALVARO|CASCO H.VICALVARO\": \"1\", \"PUENTE DE VALLECAS|SAN DIEGO\": \"2\", \"TETUAN|BELLAS VISTAS\": \"1\", \"FUENCARRAL-EL PARDO|FUENTELARREINA\": \"2\", \"CARABANCHEL|BUENAVISTA\": \"6\", \"VILLAVERDE|VILLAVERDE ALTO C.H.\": \"1\", \"LATINA|ALUCHE\": \"4\", \"CHAMBERI|VALLEHERMOSO\": \"6\", \"ARGANZUELA|PALOS DE MOGUER\": \"6\", \"RETIRO|NINO JESUS\": \"6\", \"CHAMBERI|ARAPILES\": \"2\", \"ARGANZUELA|DELICIAS\": \"5\", \"CARABANCHEL|VISTA ALEGRE\": \"4\", \"CENTRO|PALACIO\": \"1\", \"MORATALAZ|HORCAJO\": \"2\", \"CIUDAD LINEAL|SAN JUAN BAUTISTA\": \"6\", \"FUENCARRAL-EL PARDO|MIRASIERRA\": \"7\", \"FUENCARRAL-EL PARDO|EL PILAR\": \"4\", \"LATINA|PUERTA DEL ANGEL\": \"2\", \"LATINA|CAMPAMENTO\": \"5\", \"CARABANCHEL|COMILLAS\": \"1\", \"CIUDAD LINEAL|ATALAYA\": \"8\", \"CIUDAD LINEAL|CONCEPCION\": \"4\", \"RETIRO|ESTRELLA\": \"3\", \"CHAMARTIN|CIUDAD JARDIN\": \"3\", \"TETUAN|ALMENARA\": \"4\", \"LATINA|CUATRO VIENTOS\": \"6\", \"ARGANZUELA|IMPERIAL\": \"1\", \"MONCLOA-ARAVACA|VALDEZARZA\": \"4\", \"FUENCARRAL-EL PARDO|EL GOLOSO\": \"8\", \"ARGANZUELA|CHOPERA\": \"3\", \"CARABANCHEL|PESETA\": \"7\", \"SALAMANCA|FUENTE DEL BERRO\": \"3\", \"SALAMANCA|GOYA\": \"2\", \"CENTRO|JUSTICIA\": \"4\", \"ARGANZUELA|PALOS DE LA FRONTERA\": \"6\", \"CENTRO|CORTES\": \"3\", \"TETUAN|BERRUGUETE\": \"6\", \"VILLAVERDE|SAN ANDRES\": \"1\"}\nd = g('DISTRITO')\nb = g('BARRIO')\nreturn LOOK.get(norm(d) + '|' + norm(b), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-BARRIO using expression jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nLOOK = {\"BARAJAS|CASCO H.BARAJAS\": \"3\", \"MORATALAZ|PAVONES\": \"1\", \"BARAJAS|ALAMEDA DE OSUNA\": \"1\", \"BARAJAS|TIMON\": \"4\", \"USERA|ORCASUR\": \"2\", \"SAN BLAS-CANILLEJAS|HELLIN\": \"2\", \"CHAMARTIN|NUEVA ESPANA\": \"5\", \"HORTALEZA|APOSTOL SANTIAGO\": \"5\", \"CARABANCHEL|PUERTA BONITA\": \"5\", \"CIUDAD LINEAL|PUEBLO NUEVO\": \"2\", \"CARABANCHEL|SAN ISIDRO\": \"3\", \"VILLA DE VALLECAS|ENSANCHE DE VALLECAS\": \"3\", \"SAN BLAS-CANILLEJAS|AMPOSTA\": \"3\", \"VILLAVERDE|BUTARQUE\": \"3\", \"FUENCARRAL-EL PARDO|VALVERDE\": \"6\", \"PUENTE DE VALLECAS|ENTREVIAS\": \"1\", \"MORATALAZ|VINATEROS\": \"6\", \"MONCLOA-ARAVACA|CASA DE CAMPO\": \"1\", \"CIUDAD LINEAL|VENTAS\": \"1\", \"SAN BLAS-CANILLEJAS|REJAS\": \"6\", \"SAN BLAS-CANILLEJAS|ARCOS\": \"4\", \"HORTALEZA|CANILLAS\": \"3\", \"ARGANZUELA|ACACIAS\": \"2\", \"LATINA|LOS CARMENES\": \"1\", \"MORATALAZ|MARROQUINA\": \"3\", \"CARABANCHEL|OPANEL\": \"2\", \"HORTALEZA|PIOVERA\": \"2\", \"FUENCARRAL-EL PARDO|PENA GRANDE\": \"3\", \"CHAMARTIN|HISPANOAMERICA\": \"4\", \"TETUAN|CUATRO CAMINOS\": \"2\", \"TETUAN|CASTILLEJOS\": \"3\", \"MORATALAZ|FONTARRON\": \"5\", \"SAN BLAS-CANILLEJAS|ROSAS\": \"5\", \"HORTALEZA|PINAR DEL REY\": \"4\", \"BARAJAS|AEROPUERTO\": \"2\", \"CARABANCHEL|ABRANTES\": \"7\", \"BARAJAS|CORRALEJOS\": \"5\", \"HORTALEZA|VALDEFUENTES\": \"6\", \"CIUDAD LINEAL|LA CONCEPCION\": \"4\", \"SALAMANCA|GUINDALERA\": \"4\", \"CIUDAD LINEAL|COSTILLARES\": \"9\", \"FUENCARRAL-EL PARDO|EL PARDO\": \"1\", \"CHAMARTIN|CASTILLA\": \"6\", \"PUENTE DE VALLECAS|PALOMERAS SURESTE\": \"4\", \"MONCLOA-ARAVACA|ARAVACA\": \"7\", \"RETIRO|LOS JERONIMOS\": \"5\", \"VILLA DE VALLECAS|CASCO H.VALLECAS\": \"1\", \"PUENTE DE VALLECAS|PORTAZGO\": \"5\", \"USERA|ZOFIO\": \"6\", \"USERA|ORCASITAS\": \"1\", \"CENTRO|EMBAJADORES\": \"2\", \"LATINA|LUCERO\": \"3\", \"VICALVARO|EL CANAVERAL\": \"4\", \"RETIRO|ADELFAS\": \"2\", \"MONCLOA-ARAVACA|CIUDAD UNIVERSITARIA\": \"3\", \"USERA|ALMENDRALES\": \"4\", \"LATINA|LAS AGUILAS\": \"7\", \"CHAMARTIN|PROSPERIDAD\": \"2\", \"HORTALEZA|PALOMAS\": \"1\", \"RETIRO|PACIFICO\": \"1\", \"VILLAVERDE|LOS ANGELES\": \"5\", \"VILLAVERDE|SAN CRISTOBAL\": \"2\", \"PUENTE DE VALLECAS|PALOMERAS BAJAS\": \"3\", \"PUENTE DE VALLECAS|NUMANCIA\": \"6\", \"CENTRO|UNIVERSIDAD\": \"5\", \"CIUDAD LINEAL|SAN PASCUAL\": \"5\", \"VICALVARO|VALDEBERNARDO\": \"2\", \"TETUAN|VALDEACEDERAS\": \"5\", \"FUENCARRAL-EL PARDO|LA PAZ\": \"5\", \"USERA|PRADOLONGO\": \"7\", \"MORATALAZ|MEDIA LEGUA\": \"4\", \"CHAMARTIN|EL VISO\": \"1\", \"VILLAVERDE|ANGELES\": \"5\", \"VILLAVERDE|LOS ROSALES\": \"4\", \"SAN BLAS-CANILLEJAS|SIMANCAS\": \"1\", \"ARGANZUELA|LEGAZPI\": \"4\", \"SAN BLAS-CANILLEJAS|EL SALVADOR\": \"8\", \"SAN BLAS-CANILLEJAS|CANILLEJAS\": \"7\", \"VICALVARO|CASCO H.VICALVARO\": \"1\", \"PUENTE DE VALLECAS|SAN DIEGO\": \"2\", \"TETUAN|BELLAS VISTAS\": \"1\", \"FUENCARRAL-EL PARDO|FUENTELARREINA\": \"2\", \"CARABANCHEL|BUENAVISTA\": \"6\", \"VILLAVERDE|VILLAVERDE ALTO C.H.\": \"1\", \"LATINA|ALUCHE\": \"4\", \"CHAMBERI|VALLEHERMOSO\": \"6\", \"ARGANZUELA|PALOS DE MOGUER\": \"6\", \"RETIRO|NINO JESUS\": \"6\", \"CHAMBERI|ARAPILES\": \"2\", \"ARGANZUELA|DELICIAS\": \"5\", \"CARABANCHEL|VISTA ALEGRE\": \"4\", \"CENTRO|PALACIO\": \"1\", \"MORATALAZ|HORCAJO\": \"2\", \"CIUDAD LINEAL|SAN JUAN BAUTISTA\": \"6\", \"FUENCARRAL-EL PARDO|MIRASIERRA\": \"7\", \"FUENCARRAL-EL PARDO|EL PILAR\": \"4\", \"LATINA|PUERTA DEL ANGEL\": \"2\", \"LATINA|CAMPAMENTO\": \"5\", \"CARABANCHEL|COMILLAS\": \"1\", \"CIUDAD LINEAL|ATALAYA\": \"8\", \"CIUDAD LINEAL|CONCEPCION\": \"4\", \"RETIRO|ESTRELLA\": \"3\", \"CHAMARTIN|CIUDAD JARDIN\": \"3\", \"TETUAN|ALMENARA\": \"4\", \"LATINA|CUATRO VIENTOS\": \"6\", \"ARGANZUELA|IMPERIAL\": \"1\", \"MONCLOA-ARAVACA|VALDEZARZA\": \"4\", \"FUENCARRAL-EL PARDO|EL GOLOSO\": \"8\", \"ARGANZUELA|CHOPERA\": \"3\", \"CARABANCHEL|PESETA\": \"7\", \"SALAMANCA|FUENTE DEL BERRO\": \"3\", \"SALAMANCA|GOYA\": \"2\", \"CENTRO|JUSTICIA\": \"4\", \"ARGANZUELA|PALOS DE LA FRONTERA\": \"6\", \"CENTRO|CORTES\": \"3\", \"TETUAN|BERRUGUETE\": \"6\", \"VILLAVERDE|SAN ANDRES\": \"1\"}\nd = g('DISTRITO')\nb = g('BARRIO')\nreturn LOOK.get(norm(d) + '|' + norm(b), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "COD-BARRIO",
+    "expression": "jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nDC = {\"CENTRO\": \"1\", \"ARGANZUELA\": \"2\", \"RETIRO\": \"3\", \"SALAMANCA\": \"4\", \"CHAMARTIN\": \"5\", \"TETUAN\": \"6\", \"CHAMBERI\": \"7\", \"FUENCARRAL-EL PARDO\": \"8\", \"MONCLOA-ARAVACA\": \"9\", \"LATINA\": \"10\", \"CARABANCHEL\": \"11\", \"USERA\": \"12\", \"PUENTE DE VALLECAS\": \"13\", \"MORATALAZ\": \"14\", \"CIUDAD LINEAL\": \"15\", \"HORTALEZA\": \"16\", \"VILLAVERDE\": \"17\", \"VILLA DE VALLECAS\": \"18\", \"VICALVARO\": \"19\", \"SAN BLAS-CANILLEJAS\": \"20\", \"BARAJAS\": \"21\"}\ndn = g('DISTRITO')\ncd = g('COD-DISTRITO')\ncb = g('COD-BARRIO')\ncode = DC.get(norm(dn))\nif code is None or cb == '':\n    return ''\nif cd != '' and str(cd) != code:\n    return ''\nreturn code + '-' + str(cb)",
+    "onError": "set-to-blank",
+    "newColumnName": "ID-BARRIO",
+    "columnInsertIndex": 23,
+    "description": "Create column ID-BARRIO at index 23 based on column COD-BARRIO using expression jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nDC = {\"CENTRO\": \"1\", \"ARGANZUELA\": \"2\", \"RETIRO\": \"3\", \"SALAMANCA\": \"4\", \"CHAMARTIN\": \"5\", \"TETUAN\": \"6\", \"CHAMBERI\": \"7\", \"FUENCARRAL-EL PARDO\": \"8\", \"MONCLOA-ARAVACA\": \"9\", \"LATINA\": \"10\", \"CARABANCHEL\": \"11\", \"USERA\": \"12\", \"PUENTE DE VALLECAS\": \"13\", \"MORATALAZ\": \"14\", \"CIUDAD LINEAL\": \"15\", \"HORTALEZA\": \"16\", \"VILLAVERDE\": \"17\", \"VILLA DE VALLECAS\": \"18\", \"VICALVARO\": \"19\", \"SAN BLAS-CANILLEJAS\": \"20\", \"BARAJAS\": \"21\"}\ndn = g('DISTRITO')\ncd = g('COD-DISTRITO')\ncb = g('COD-BARRIO')\ncode = DC.get(norm(dn))\nif code is None or cb == '':\n    return ''\nif cd != '' and str(cd) != code:\n    return ''\nreturn code + '-' + str(cb)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nDC = {\"CENTRO\": \"1\", \"ARGANZUELA\": \"2\", \"RETIRO\": \"3\", \"SALAMANCA\": \"4\", \"CHAMARTIN\": \"5\", \"TETUAN\": \"6\", \"CHAMBERI\": \"7\", \"FUENCARRAL-EL PARDO\": \"8\", \"MONCLOA-ARAVACA\": \"9\", \"LATINA\": \"10\", \"CARABANCHEL\": \"11\", \"USERA\": \"12\", \"PUENTE DE VALLECAS\": \"13\", \"MORATALAZ\": \"14\", \"CIUDAD LINEAL\": \"15\", \"HORTALEZA\": \"16\", \"VILLAVERDE\": \"17\", \"VILLA DE VALLECAS\": \"18\", \"VICALVARO\": \"19\", \"SAN BLAS-CANILLEJAS\": \"20\", \"BARAJAS\": \"21\"}\ndn = g('DISTRITO')\nreturn DC.get(norm(dn), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-DISTRITO using expression jython:import unicodedata\ndef norm(s):\n    s = unicodedata.normalize('NFD', s)\n    return ''.join(c for c in s if unicodedata.category(c) != 'Mn').upper().strip()\ndef g(n):\n    try:\n        v = cells[n].value\n    except KeyError:\n        return ''\n    return v if v is not None else ''\nDC = {\"CENTRO\": \"1\", \"ARGANZUELA\": \"2\", \"RETIRO\": \"3\", \"SALAMANCA\": \"4\", \"CHAMARTIN\": \"5\", \"TETUAN\": \"6\", \"CHAMBERI\": \"7\", \"FUENCARRAL-EL PARDO\": \"8\", \"MONCLOA-ARAVACA\": \"9\", \"LATINA\": \"10\", \"CARABANCHEL\": \"11\", \"USERA\": \"12\", \"PUENTE DE VALLECAS\": \"13\", \"MORATALAZ\": \"14\", \"CIUDAD LINEAL\": \"15\", \"HORTALEZA\": \"16\", \"VILLAVERDE\": \"17\", \"VILLA DE VALLECAS\": \"18\", \"VICALVARO\": \"19\", \"SAN BLAS-CANILLEJAS\": \"20\", \"BARAJAS\": \"21\"}\ndn = g('DISTRITO')\nreturn DC.get(norm(dn), value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-DISTRITO using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-BARRIO",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column COD-BARRIO using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LATITUD using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LONGITUD using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:value.split(\"/\")[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:value.split(\"/\")[-1]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "PK",
+    "expression": "grel:if(cell.cross(\"piscinas_publicas\",\"PK\").length()>0,\"true\",\"false\")",
+    "onError": "set-to-blank",
+    "newColumnName": "HAS-SWIMMING-POOL",
+    "columnInsertIndex": 1,
+    "description": "Create column HAS-SWIMMING-POOL at index 1 based on column PK using expression grel:if(cell.cross(\"piscinas_publicas\",\"PK\").length()>0,\"true\",\"false\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ACCESIBILIDAD",
+    "description": "Remove column ACCESIBILIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FAX",
+    "description": "Remove column FAX"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION-ENTIDAD",
+    "description": "Remove column DESCRIPCION-ENTIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO-NUM",
+    "description": "Remove column TIPO-NUM"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORIENTACION",
+    "description": "Remove column ORIENTACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PLANTA",
+    "description": "Remove column PLANTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Remove column PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Remove column ESCALERAS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LOCALIDAD",
+    "description": "Remove column LOCALIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PROVINCIA",
+    "description": "Remove column PROVINCIA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Remove column COORDENADA-X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Remove column COORDENADA-Y"
+  }
+]

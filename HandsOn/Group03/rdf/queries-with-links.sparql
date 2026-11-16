@@ -1,0 +1,89 @@
+# =========================================================
+# Verificación del enlazado BiciMAD <-> Wikidata
+# Q1-Q3: ejecutar sobre el TTL local
+# Q4-Q5: ejecutar en https://query.wikidata.org/sparql
+# =========================================================
+
+# ---------------------------------------------------------
+# Query 1: Cobertura del enlazado
+# Cuenta las calles totales y cuántas tienen owl:sameAs a Wikidata.
+# COUNT(?wd) solo cuenta las filas en las que el OPTIONAL encuentra enlace.
+# ---------------------------------------------------------
+PREFIX bm:  <https://bicismart.madrid.data.es/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT (COUNT(DISTINCT ?street) AS ?streets) (COUNT(?wd) AS ?linked)
+WHERE {
+  ?street a bm:Street .
+  OPTIONAL { ?street owl:sameAs ?wd }
+}
+
+# ---------------------------------------------------------
+# Query 2: IRIs de Wikidata no canónicas (esperado: 0 filas)
+# Test de regresión: todos los enlaces deben tener la forma
+# http://www.wikidata.org/entity/Q...; si no, los joins con Wikidata no devuelven nada.
+# ---------------------------------------------------------
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?street ?wd
+WHERE {
+  ?street owl:sameAs ?wd .
+  FILTER (!STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/Q"))
+}
+
+# ---------------------------------------------------------
+# Query 3: Cardinalidad 1:1 (esperado: 0 filas)
+# Detecta entidades de Wikidata enlazadas desde más de una calle.
+# ---------------------------------------------------------
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?wd (COUNT(?street) AS ?n)
+WHERE { ?street owl:sameAs ?wd }
+GROUP BY ?wd
+HAVING (COUNT(?street) > 1)
+
+# ---------------------------------------------------------
+# Query 4: Tipo (P31) de las entidades enlazadas
+# Comprueba que las entidades existen y son vías (calle, avenida, plaza...).
+# Las filas sin ?type son entidades sin P31 o inexistentes.
+# El VALUES se rellena con los pares (QID, nombre local) que da la Query 1.
+# ---------------------------------------------------------
+PREFIX wd:       <http://www.wikidata.org/entity/>
+PREFIX wdt:      <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd:       <http://www.bigdata.com/rdf#>
+
+SELECT ?type ?typeLabel (COUNT(?item) AS ?n)
+WHERE {
+  VALUES (?item ?streetName) {
+    (wd:Q54526348  "AGUSTIN DE FOXA")
+    (wd:Q105775876 "BOLIVAR")
+    (wd:Q5740815   "BRAVO MURILLO")
+  }
+  OPTIONAL { ?item wdt:P31 ?type }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
+}
+GROUP BY ?type ?typeLabel
+ORDER BY DESC(?n)
+
+# ---------------------------------------------------------
+# Query 5: Entidades enlazadas fuera de Madrid (esperado: 0 filas)
+# Comprueba que cada entidad está, directa o transitivamente (P131*), en Madrid (Q2807).
+# ?placeLabel indica dónde la sitúa Wikidata; si está vacío, la entidad no tiene P131.
+# ---------------------------------------------------------
+PREFIX wd:       <http://www.wikidata.org/entity/>
+PREFIX wdt:      <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd:       <http://www.bigdata.com/rdf#>
+
+SELECT ?streetName ?item ?itemLabel ?placeLabel
+WHERE {
+  VALUES (?item ?streetName) {
+    (wd:Q54526348  "AGUSTIN DE FOXA")
+    (wd:Q105775876 "BOLIVAR")
+    (wd:Q5740815   "BRAVO MURILLO")
+  }
+  FILTER NOT EXISTS { ?item wdt:P131* wd:Q2807 }
+  OPTIONAL { ?item wdt:P131 ?place }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
+}

@@ -1,0 +1,39 @@
+prefixes:
+  vocab: "http://smartcity.linkeddata.es/touristaccommodation/ontology/"
+  resource: "http://smartcity.linkeddata.es/touristaccommodation/resource/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+mappings:
+  # Mapeo para los Alojamientos
+  accommodation_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-updated.csv~csv']
+    s: resource:Accommodation/$(signatura)
+    po:
+      - [a, vocab:$(clase)]
+      - [rdfs:label, $(etiqueta_alojamiento), xsd:string]
+      - [vocab:hasName, $(denominacion), xsd:string]
+      - [vocab:categoryLevel, $(nivel_categoria), xsd:integer]
+      - [vocab:hasAddress, resource:Address/$(signatura)~iri]
+
+  # Mapeo para las Direcciones
+  address_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-updated.csv~csv']
+    s: resource:Address/$(signatura)
+    po:
+      - [a, vocab:Address]
+      - [rdfs:label, $(etiqueta_direccion), xsd:string]
+      - [vocab:hasStreet, $(via_nombre), xsd:string]
+      - [vocab:postalCode, $(cdpostal), xsd:string]
+      - [vocab:inCity, resource:City/$(localidad_id)~iri]
+
+  # Mapeo para las Ciudades (Localidades)
+  city_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-updated.csv~csv']
+    s: resource:City/$(localidad_id)
+    po:
+      - [a, vocab:City]
+      - [rdfs:label, $(localidad), xsd:string]

@@ -1,0 +1,4124 @@
+@prefix ns1: <https://w3id.org/smartinfra-galicia/ontology/Demographics#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15001> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15001-2025> ;
+    ns1:hasINECode "15001" ;
+    ns1:hasName "Abegondo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15002> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15002-2025> ;
+    ns1:hasINECode "15002" ;
+    ns1:hasName "Ames" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15003> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15003-2025> ;
+    ns1:hasINECode "15003" ;
+    ns1:hasName "Aranga" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15004> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15004-2025> ;
+    ns1:hasINECode "15004" ;
+    ns1:hasName "Ares" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15005> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15005-2025> ;
+    ns1:hasINECode "15005" ;
+    ns1:hasName "Arteixo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15006> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15006-2025> ;
+    ns1:hasINECode "15006" ;
+    ns1:hasName "Arzúa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15007> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15007-2025> ;
+    ns1:hasINECode "15007" ;
+    ns1:hasName "Baña, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15008> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15008-2025> ;
+    ns1:hasINECode "15008" ;
+    ns1:hasName "Bergondo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15009> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15009-2025> ;
+    ns1:hasINECode "15009" ;
+    ns1:hasName "Betanzos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15010> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15010-2025> ;
+    ns1:hasINECode "15010" ;
+    ns1:hasName "Boimorto" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15011> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15011-2025> ;
+    ns1:hasINECode "15011" ;
+    ns1:hasName "Boiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15012> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15012-2025> ;
+    ns1:hasINECode "15012" ;
+    ns1:hasName "Boqueixón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15013> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15013-2025> ;
+    ns1:hasINECode "15013" ;
+    ns1:hasName "Brión" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15014> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15014-2025> ;
+    ns1:hasINECode "15014" ;
+    ns1:hasName "Cabana de Bergantiños" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15015> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15015-2025> ;
+    ns1:hasINECode "15015" ;
+    ns1:hasName "Cabanas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15016> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15016-2025> ;
+    ns1:hasINECode "15016" ;
+    ns1:hasName "Camariñas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15017> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15017-2025> ;
+    ns1:hasINECode "15017" ;
+    ns1:hasName "Cambre" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15018> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15018-2025> ;
+    ns1:hasINECode "15018" ;
+    ns1:hasName "Capela, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15019> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15019-2025> ;
+    ns1:hasINECode "15019" ;
+    ns1:hasName "Carballo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15020> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15020-2025> ;
+    ns1:hasINECode "15020" ;
+    ns1:hasName "Carnota" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15021> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15021-2025> ;
+    ns1:hasINECode "15021" ;
+    ns1:hasName "Carral" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15022> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15022-2025> ;
+    ns1:hasINECode "15022" ;
+    ns1:hasName "Cedeira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15023> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15023-2025> ;
+    ns1:hasINECode "15023" ;
+    ns1:hasName "Cee" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15024> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15024-2025> ;
+    ns1:hasINECode "15024" ;
+    ns1:hasName "Cerceda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15025> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15025-2025> ;
+    ns1:hasINECode "15025" ;
+    ns1:hasName "Cerdido" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15026> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15026-2025> ;
+    ns1:hasINECode "15026" ;
+    ns1:hasName "Cesuras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15027> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15027-2025> ;
+    ns1:hasINECode "15027" ;
+    ns1:hasName "Coirós" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15028> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15028-2025> ;
+    ns1:hasINECode "15028" ;
+    ns1:hasName "Corcubión" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15029> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15029-2025> ;
+    ns1:hasINECode "15029" ;
+    ns1:hasName "Coristanco" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15030> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15030-2025> ;
+    ns1:hasINECode "15030" ;
+    ns1:hasName "Coruña, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15031> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15031-2025> ;
+    ns1:hasINECode "15031" ;
+    ns1:hasName "Culleredo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15032> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15032-2025> ;
+    ns1:hasINECode "15032" ;
+    ns1:hasName "Curtis" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15033> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15033-2025> ;
+    ns1:hasINECode "15033" ;
+    ns1:hasName "Dodro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15034> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15034-2025> ;
+    ns1:hasINECode "15034" ;
+    ns1:hasName "Dumbría" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15035> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15035-2025> ;
+    ns1:hasINECode "15035" ;
+    ns1:hasName "Fene" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15036> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15036-2025> ;
+    ns1:hasINECode "15036" ;
+    ns1:hasName "Ferrol" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15037> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15037-2025> ;
+    ns1:hasINECode "15037" ;
+    ns1:hasName "Fisterra" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15038> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15038-2025> ;
+    ns1:hasINECode "15038" ;
+    ns1:hasName "Frades" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15039> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15039-2025> ;
+    ns1:hasINECode "15039" ;
+    ns1:hasName "Irixoa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15040> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15040-2025> ;
+    ns1:hasINECode "15040" ;
+    ns1:hasName "Laxe" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15041> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15041-2025> ;
+    ns1:hasINECode "15041" ;
+    ns1:hasName "Laracha, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15042> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15042-2025> ;
+    ns1:hasINECode "15042" ;
+    ns1:hasName "Lousame" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15043> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15043-2025> ;
+    ns1:hasINECode "15043" ;
+    ns1:hasName "Malpica de Bergantiños" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15044> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15044-2025> ;
+    ns1:hasINECode "15044" ;
+    ns1:hasName "Mañón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15045> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15045-2025> ;
+    ns1:hasINECode "15045" ;
+    ns1:hasName "Mazaricos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15046> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15046-2025> ;
+    ns1:hasINECode "15046" ;
+    ns1:hasName "Melide" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15047> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15047-2025> ;
+    ns1:hasINECode "15047" ;
+    ns1:hasName "Mesía" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15048> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15048-2025> ;
+    ns1:hasINECode "15048" ;
+    ns1:hasName "Miño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15049> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15049-2025> ;
+    ns1:hasINECode "15049" ;
+    ns1:hasName "Moeche" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15050> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15050-2025> ;
+    ns1:hasINECode "15050" ;
+    ns1:hasName "Monfero" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15051> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15051-2025> ;
+    ns1:hasINECode "15051" ;
+    ns1:hasName "Mugardos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15052> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15052-2025> ;
+    ns1:hasINECode "15052" ;
+    ns1:hasName "Muxía" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15053> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15053-2025> ;
+    ns1:hasINECode "15053" ;
+    ns1:hasName "Muros" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15054> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15054-2025> ;
+    ns1:hasINECode "15054" ;
+    ns1:hasName "Narón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15055> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15055-2025> ;
+    ns1:hasINECode "15055" ;
+    ns1:hasName "Neda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15056> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15056-2025> ;
+    ns1:hasINECode "15056" ;
+    ns1:hasName "Negreira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15057> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15057-2025> ;
+    ns1:hasINECode "15057" ;
+    ns1:hasName "Noia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15058> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15058-2025> ;
+    ns1:hasINECode "15058" ;
+    ns1:hasName "Oleiros" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15059> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15059-2025> ;
+    ns1:hasINECode "15059" ;
+    ns1:hasName "Ordes" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15060> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15060-2025> ;
+    ns1:hasINECode "15060" ;
+    ns1:hasName "Oroso" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15061> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15061-2025> ;
+    ns1:hasINECode "15061" ;
+    ns1:hasName "Ortigueira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15062> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15062-2025> ;
+    ns1:hasINECode "15062" ;
+    ns1:hasName "Outes" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15063> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15063-2025> ;
+    ns1:hasINECode "15063" ;
+    ns1:hasName "Oza dos Ríos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15064> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15064-2025> ;
+    ns1:hasINECode "15064" ;
+    ns1:hasName "Paderne" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15065> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15065-2025> ;
+    ns1:hasINECode "15065" ;
+    ns1:hasName "Padrón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15066> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15066-2025> ;
+    ns1:hasINECode "15066" ;
+    ns1:hasName "Pino, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15067> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15067-2025> ;
+    ns1:hasINECode "15067" ;
+    ns1:hasName "Pobra do Caramiñal, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15068> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15068-2025> ;
+    ns1:hasINECode "15068" ;
+    ns1:hasName "Ponteceso" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15069> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15069-2025> ;
+    ns1:hasINECode "15069" ;
+    ns1:hasName "Pontedeume" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15070> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15070-2025> ;
+    ns1:hasINECode "15070" ;
+    ns1:hasName "Pontes de García Rodríguez, As" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15071> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15071-2025> ;
+    ns1:hasINECode "15071" ;
+    ns1:hasName "Porto do Son, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15072> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15072-2025> ;
+    ns1:hasINECode "15072" ;
+    ns1:hasName "Rianxo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15073> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15073-2025> ;
+    ns1:hasINECode "15073" ;
+    ns1:hasName "Ribeira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15074> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15074-2025> ;
+    ns1:hasINECode "15074" ;
+    ns1:hasName "Rois" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15075> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15075-2025> ;
+    ns1:hasINECode "15075" ;
+    ns1:hasName "Sada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15076> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15076-2025> ;
+    ns1:hasINECode "15076" ;
+    ns1:hasName "San Sadurniño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15077> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15077-2025> ;
+    ns1:hasINECode "15077" ;
+    ns1:hasName "Santa Comba" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15078> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15078-2025> ;
+    ns1:hasINECode "15078" ;
+    ns1:hasName "Santiago de Compostela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15079> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15079-2025> ;
+    ns1:hasINECode "15079" ;
+    ns1:hasName "Santiso" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15080> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15080-2025> ;
+    ns1:hasINECode "15080" ;
+    ns1:hasName "Sobrado" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15081> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15081-2025> ;
+    ns1:hasINECode "15081" ;
+    ns1:hasName "Somozas, As" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15082> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15082-2025> ;
+    ns1:hasINECode "15082" ;
+    ns1:hasName "Teo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15083> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15083-2025> ;
+    ns1:hasINECode "15083" ;
+    ns1:hasName "Toques" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15084> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15084-2025> ;
+    ns1:hasINECode "15084" ;
+    ns1:hasName "Tordoia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15085> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15085-2025> ;
+    ns1:hasINECode "15085" ;
+    ns1:hasName "Touro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15086> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15086-2025> ;
+    ns1:hasINECode "15086" ;
+    ns1:hasName "Trazo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15087> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15087-2025> ;
+    ns1:hasINECode "15087" ;
+    ns1:hasName "Valdoviño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15088> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15088-2025> ;
+    ns1:hasINECode "15088" ;
+    ns1:hasName "Val do Dubra" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15089> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15089-2025> ;
+    ns1:hasINECode "15089" ;
+    ns1:hasName "Vedra" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15090> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15090-2025> ;
+    ns1:hasINECode "15090" ;
+    ns1:hasName "Vilasantar" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15091> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15091-2025> ;
+    ns1:hasINECode "15091" ;
+    ns1:hasName "Vilarmaior" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15092> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15092-2025> ;
+    ns1:hasINECode "15092" ;
+    ns1:hasName "Vimianzo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15093> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15093-2025> ;
+    ns1:hasINECode "15093" ;
+    ns1:hasName "Zas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15901> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15901-2025> ;
+    ns1:hasINECode "15901" ;
+    ns1:hasName "Cariño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/15902> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/15902-2025> ;
+    ns1:hasINECode "15902" ;
+    ns1:hasName "Oza Cesuras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27001> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27001-2025> ;
+    ns1:hasINECode "27001" ;
+    ns1:hasName "Abadín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27002> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27002-2025> ;
+    ns1:hasINECode "27002" ;
+    ns1:hasName "Alfoz do Castrodouro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27003> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27003-2025> ;
+    ns1:hasINECode "27003" ;
+    ns1:hasName "Antas de Ulla" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27004> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27004-2025> ;
+    ns1:hasINECode "27004" ;
+    ns1:hasName "Baleira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27005> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27005-2025> ;
+    ns1:hasINECode "27005" ;
+    ns1:hasName "Barreiros" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27006> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27006-2025> ;
+    ns1:hasINECode "27006" ;
+    ns1:hasName "Becerreá" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27007> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27007-2025> ;
+    ns1:hasINECode "27007" ;
+    ns1:hasName "Begonte" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27008> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27008-2025> ;
+    ns1:hasINECode "27008" ;
+    ns1:hasName "Bóveda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27009> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27009-2025> ;
+    ns1:hasINECode "27009" ;
+    ns1:hasName "Carballedo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27010> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27010-2025> ;
+    ns1:hasINECode "27010" ;
+    ns1:hasName "Castro de Rei" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27011> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27011-2025> ;
+    ns1:hasINECode "27011" ;
+    ns1:hasName "Castroverde" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27012> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27012-2025> ;
+    ns1:hasINECode "27012" ;
+    ns1:hasName "Cervantes" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27013> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27013-2025> ;
+    ns1:hasINECode "27013" ;
+    ns1:hasName "Cervo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27014> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27014-2025> ;
+    ns1:hasINECode "27014" ;
+    ns1:hasName "Corgo, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27015> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27015-2025> ;
+    ns1:hasINECode "27015" ;
+    ns1:hasName "Cospeito" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27016> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27016-2025> ;
+    ns1:hasINECode "27016" ;
+    ns1:hasName "Chantada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27017> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27017-2025> ;
+    ns1:hasINECode "27017" ;
+    ns1:hasName "Folgoso do Courel" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27018> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27018-2025> ;
+    ns1:hasINECode "27018" ;
+    ns1:hasName "Fonsagrada, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27019> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27019-2025> ;
+    ns1:hasINECode "27019" ;
+    ns1:hasName "Foz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27020> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27020-2025> ;
+    ns1:hasINECode "27020" ;
+    ns1:hasName "Friol" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27021> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27021-2025> ;
+    ns1:hasINECode "27021" ;
+    ns1:hasName "Xermade" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27022> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27022-2025> ;
+    ns1:hasINECode "27022" ;
+    ns1:hasName "Guitiriz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27023> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27023-2025> ;
+    ns1:hasINECode "27023" ;
+    ns1:hasName "Guntín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27024> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27024-2025> ;
+    ns1:hasINECode "27024" ;
+    ns1:hasName "Incio, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27025> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27025-2025> ;
+    ns1:hasINECode "27025" ;
+    ns1:hasName "Xove" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27026> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27026-2025> ;
+    ns1:hasINECode "27026" ;
+    ns1:hasName "Láncara" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27027> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27027-2025> ;
+    ns1:hasINECode "27027" ;
+    ns1:hasName "Lourenzá" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27028> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27028-2025> ;
+    ns1:hasINECode "27028" ;
+    ns1:hasName "Lugo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27029> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27029-2025> ;
+    ns1:hasINECode "27029" ;
+    ns1:hasName "Meira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27030> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27030-2025> ;
+    ns1:hasINECode "27030" ;
+    ns1:hasName "Mondoñedo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27031> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27031-2025> ;
+    ns1:hasINECode "27031" ;
+    ns1:hasName "Monforte de Lemos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27032> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27032-2025> ;
+    ns1:hasINECode "27032" ;
+    ns1:hasName "Monterroso" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27033> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27033-2025> ;
+    ns1:hasINECode "27033" ;
+    ns1:hasName "Muras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27034> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27034-2025> ;
+    ns1:hasINECode "27034" ;
+    ns1:hasName "Navia de Suarna" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27035> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27035-2025> ;
+    ns1:hasINECode "27035" ;
+    ns1:hasName "Negueira de Muñiz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27037> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27037-2025> ;
+    ns1:hasINECode "27037" ;
+    ns1:hasName "Nogais, As" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27038> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27038-2025> ;
+    ns1:hasINECode "27038" ;
+    ns1:hasName "Ourol" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27039> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27039-2025> ;
+    ns1:hasINECode "27039" ;
+    ns1:hasName "Outeiro de Rei" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27040> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27040-2025> ;
+    ns1:hasINECode "27040" ;
+    ns1:hasName "Palas de Rei" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27041> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27041-2025> ;
+    ns1:hasINECode "27041" ;
+    ns1:hasName "Pantón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27042> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27042-2025> ;
+    ns1:hasINECode "27042" ;
+    ns1:hasName "Paradela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27043> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27043-2025> ;
+    ns1:hasINECode "27043" ;
+    ns1:hasName "Páramo, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27044> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27044-2025> ;
+    ns1:hasINECode "27044" ;
+    ns1:hasName "Pastoriza" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27045> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27045-2025> ;
+    ns1:hasINECode "27045" ;
+    ns1:hasName "Pedrafita do Cebreiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27046> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27046-2025> ;
+    ns1:hasINECode "27046" ;
+    ns1:hasName "Pol" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27047> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27047-2025> ;
+    ns1:hasINECode "27047" ;
+    ns1:hasName "Pobra do Brollón, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27048> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27048-2025> ;
+    ns1:hasINECode "27048" ;
+    ns1:hasName "Pontenova, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27049> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27049-2025> ;
+    ns1:hasINECode "27049" ;
+    ns1:hasName "Portomarín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27050> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27050-2025> ;
+    ns1:hasINECode "27050" ;
+    ns1:hasName "Quiroga" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27051> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27051-2025> ;
+    ns1:hasINECode "27051" ;
+    ns1:hasName "Ribadeo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27052> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27052-2025> ;
+    ns1:hasINECode "27052" ;
+    ns1:hasName "Ribas de Sil" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27053> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27053-2025> ;
+    ns1:hasINECode "27053" ;
+    ns1:hasName "Ribeira de Piquín, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27054> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27054-2025> ;
+    ns1:hasINECode "27054" ;
+    ns1:hasName "Riotorto" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27055> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27055-2025> ;
+    ns1:hasINECode "27055" ;
+    ns1:hasName "Samos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27056> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27056-2025> ;
+    ns1:hasINECode "27056" ;
+    ns1:hasName "Rábade" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27057> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27057-2025> ;
+    ns1:hasINECode "27057" ;
+    ns1:hasName "Sarria" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27058> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27058-2025> ;
+    ns1:hasINECode "27058" ;
+    ns1:hasName "Saviñao, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27059> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27059-2025> ;
+    ns1:hasINECode "27059" ;
+    ns1:hasName "Sober" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27060> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27060-2025> ;
+    ns1:hasINECode "27060" ;
+    ns1:hasName "Taboada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27061> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27061-2025> ;
+    ns1:hasINECode "27061" ;
+    ns1:hasName "Trabada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27062> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27062-2025> ;
+    ns1:hasINECode "27062" ;
+    ns1:hasName "Triacastela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27063> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27063-2025> ;
+    ns1:hasINECode "27063" ;
+    ns1:hasName "Valadouro, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27064> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27064-2025> ;
+    ns1:hasINECode "27064" ;
+    ns1:hasName "Vicedo, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27065> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27065-2025> ;
+    ns1:hasINECode "27065" ;
+    ns1:hasName "Vilalba" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27066> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27066-2025> ;
+    ns1:hasINECode "27066" ;
+    ns1:hasName "Viveiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27901> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27901-2025> ;
+    ns1:hasINECode "27901" ;
+    ns1:hasName "Baralla" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/27902> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/27902-2025> ;
+    ns1:hasINECode "27902" ;
+    ns1:hasName "Burela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32001> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32001-2025> ;
+    ns1:hasINECode "32001" ;
+    ns1:hasName "Allariz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32002> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32002-2025> ;
+    ns1:hasINECode "32002" ;
+    ns1:hasName "Amoeiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32003> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32003-2025> ;
+    ns1:hasINECode "32003" ;
+    ns1:hasName "Arnoia, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32004> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32004-2025> ;
+    ns1:hasINECode "32004" ;
+    ns1:hasName "Avión" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32005> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32005-2025> ;
+    ns1:hasINECode "32005" ;
+    ns1:hasName "Baltar" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32006> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32006-2025> ;
+    ns1:hasINECode "32006" ;
+    ns1:hasName "Bande" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32007> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32007-2025> ;
+    ns1:hasINECode "32007" ;
+    ns1:hasName "Baños de Molgas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32008> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32008-2025> ;
+    ns1:hasINECode "32008" ;
+    ns1:hasName "Barbadás" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32009> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32009-2025> ;
+    ns1:hasINECode "32009" ;
+    ns1:hasName "Barco de Valdeorras, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32010> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32010-2025> ;
+    ns1:hasINECode "32010" ;
+    ns1:hasName "Beade" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32011> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32011-2025> ;
+    ns1:hasINECode "32011" ;
+    ns1:hasName "Beariz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32012> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32012-2025> ;
+    ns1:hasINECode "32012" ;
+    ns1:hasName "Blancos, Os" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32013> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32013-2025> ;
+    ns1:hasINECode "32013" ;
+    ns1:hasName "Boborás" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32014> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32014-2025> ;
+    ns1:hasINECode "32014" ;
+    ns1:hasName "Bola, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32015> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32015-2025> ;
+    ns1:hasINECode "32015" ;
+    ns1:hasName "Bolo, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32016> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32016-2025> ;
+    ns1:hasINECode "32016" ;
+    ns1:hasName "Calvos de Randín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32017> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32017-2025> ;
+    ns1:hasINECode "32017" ;
+    ns1:hasName "Carballeda de Valdeorras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32018> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32018-2025> ;
+    ns1:hasINECode "32018" ;
+    ns1:hasName "Carballeda de Avia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32019> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32019-2025> ;
+    ns1:hasINECode "32019" ;
+    ns1:hasName "Carballiño, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32020> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32020-2025> ;
+    ns1:hasINECode "32020" ;
+    ns1:hasName "Cartelle" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32021> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32021-2025> ;
+    ns1:hasINECode "32021" ;
+    ns1:hasName "Castrelo do Val" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32022> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32022-2025> ;
+    ns1:hasINECode "32022" ;
+    ns1:hasName "Castrelo de Miño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32023> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32023-2025> ;
+    ns1:hasINECode "32023" ;
+    ns1:hasName "Castro de Caldelas, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32024> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32024-2025> ;
+    ns1:hasINECode "32024" ;
+    ns1:hasName "Celanova" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32025> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32025-2025> ;
+    ns1:hasINECode "32025" ;
+    ns1:hasName "Cenlle" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32026> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32026-2025> ;
+    ns1:hasINECode "32026" ;
+    ns1:hasName "Coles" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32027> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32027-2025> ;
+    ns1:hasINECode "32027" ;
+    ns1:hasName "Cortegada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32028> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32028-2025> ;
+    ns1:hasINECode "32028" ;
+    ns1:hasName "Cualedro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32029> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32029-2025> ;
+    ns1:hasINECode "32029" ;
+    ns1:hasName "Chandrexa de Queixa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32030> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32030-2025> ;
+    ns1:hasINECode "32030" ;
+    ns1:hasName "Entrimo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32031> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32031-2025> ;
+    ns1:hasINECode "32031" ;
+    ns1:hasName "Esgos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32032> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32032-2025> ;
+    ns1:hasINECode "32032" ;
+    ns1:hasName "Xinzo de Limia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32033> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32033-2025> ;
+    ns1:hasINECode "32033" ;
+    ns1:hasName "Gomesende" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32034> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32034-2025> ;
+    ns1:hasINECode "32034" ;
+    ns1:hasName "Gudiña, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32035> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32035-2025> ;
+    ns1:hasINECode "32035" ;
+    ns1:hasName "Irixo, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32036> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32036-2025> ;
+    ns1:hasINECode "32036" ;
+    ns1:hasName "Xunqueira de Ambía" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32037> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32037-2025> ;
+    ns1:hasINECode "32037" ;
+    ns1:hasName "Xunqueira de Espadanedo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32038> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32038-2025> ;
+    ns1:hasINECode "32038" ;
+    ns1:hasName "Larouco" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32039> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32039-2025> ;
+    ns1:hasINECode "32039" ;
+    ns1:hasName "Laza" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32040> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32040-2025> ;
+    ns1:hasINECode "32040" ;
+    ns1:hasName "Leiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32041> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32041-2025> ;
+    ns1:hasINECode "32041" ;
+    ns1:hasName "Lobeira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32042> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32042-2025> ;
+    ns1:hasINECode "32042" ;
+    ns1:hasName "Lobios" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32043> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32043-2025> ;
+    ns1:hasINECode "32043" ;
+    ns1:hasName "Maceda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32044> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32044-2025> ;
+    ns1:hasINECode "32044" ;
+    ns1:hasName "Manzaneda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32045> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32045-2025> ;
+    ns1:hasINECode "32045" ;
+    ns1:hasName "Maside" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32046> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32046-2025> ;
+    ns1:hasINECode "32046" ;
+    ns1:hasName "Melón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32047> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32047-2025> ;
+    ns1:hasINECode "32047" ;
+    ns1:hasName "Merca, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32048> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32048-2025> ;
+    ns1:hasINECode "32048" ;
+    ns1:hasName "Mezquita, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32049> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32049-2025> ;
+    ns1:hasINECode "32049" ;
+    ns1:hasName "Montederramo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32050> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32050-2025> ;
+    ns1:hasINECode "32050" ;
+    ns1:hasName "Monterrei" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32051> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32051-2025> ;
+    ns1:hasINECode "32051" ;
+    ns1:hasName "Muíños" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32052> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32052-2025> ;
+    ns1:hasINECode "32052" ;
+    ns1:hasName "Nogueira de Ramuín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32053> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32053-2025> ;
+    ns1:hasINECode "32053" ;
+    ns1:hasName "Oímbra" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32054> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32054-2025> ;
+    ns1:hasINECode "32054" ;
+    ns1:hasName "Ourense" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32055> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32055-2025> ;
+    ns1:hasINECode "32055" ;
+    ns1:hasName "Paderne de Allariz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32056> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32056-2025> ;
+    ns1:hasINECode "32056" ;
+    ns1:hasName "Padrenda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32057> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32057-2025> ;
+    ns1:hasINECode "32057" ;
+    ns1:hasName "Parada de Sil" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32058> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32058-2025> ;
+    ns1:hasINECode "32058" ;
+    ns1:hasName "Pereiro de Aguiar, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32059> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32059-2025> ;
+    ns1:hasINECode "32059" ;
+    ns1:hasName "Peroxa, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32060> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32060-2025> ;
+    ns1:hasINECode "32060" ;
+    ns1:hasName "Petín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32061> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32061-2025> ;
+    ns1:hasINECode "32061" ;
+    ns1:hasName "Piñor" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32062> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32062-2025> ;
+    ns1:hasINECode "32062" ;
+    ns1:hasName "Porqueira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32063> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32063-2025> ;
+    ns1:hasINECode "32063" ;
+    ns1:hasName "Pobra de Trives, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32064> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32064-2025> ;
+    ns1:hasINECode "32064" ;
+    ns1:hasName "Pontedeva" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32065> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32065-2025> ;
+    ns1:hasINECode "32065" ;
+    ns1:hasName "Punxín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32066> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32066-2025> ;
+    ns1:hasINECode "32066" ;
+    ns1:hasName "Quintela de Leirado" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32067> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32067-2025> ;
+    ns1:hasINECode "32067" ;
+    ns1:hasName "Rairiz de Veiga" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32068> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32068-2025> ;
+    ns1:hasINECode "32068" ;
+    ns1:hasName "Ramirás" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32069> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32069-2025> ;
+    ns1:hasINECode "32069" ;
+    ns1:hasName "Ribadavia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32070> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32070-2025> ;
+    ns1:hasINECode "32070" ;
+    ns1:hasName "San Xoán de Río" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32071> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32071-2025> ;
+    ns1:hasINECode "32071" ;
+    ns1:hasName "Riós, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32072> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32072-2025> ;
+    ns1:hasINECode "32072" ;
+    ns1:hasName "Rúa, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32073> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32073-2025> ;
+    ns1:hasINECode "32073" ;
+    ns1:hasName "Rubiá" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32074> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32074-2025> ;
+    ns1:hasINECode "32074" ;
+    ns1:hasName "San Amaro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32075> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32075-2025> ;
+    ns1:hasINECode "32075" ;
+    ns1:hasName "San Cibrao das Viñas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32076> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32076-2025> ;
+    ns1:hasINECode "32076" ;
+    ns1:hasName "San Cristovo de Cea" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32077> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32077-2025> ;
+    ns1:hasINECode "32077" ;
+    ns1:hasName "Sandiás" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32078> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32078-2025> ;
+    ns1:hasINECode "32078" ;
+    ns1:hasName "Sarreaus" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32079> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32079-2025> ;
+    ns1:hasINECode "32079" ;
+    ns1:hasName "Taboadela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32080> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32080-2025> ;
+    ns1:hasINECode "32080" ;
+    ns1:hasName "Teixeira, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32081> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32081-2025> ;
+    ns1:hasINECode "32081" ;
+    ns1:hasName "Toén" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32082> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32082-2025> ;
+    ns1:hasINECode "32082" ;
+    ns1:hasName "Trasmiras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32083> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32083-2025> ;
+    ns1:hasINECode "32083" ;
+    ns1:hasName "Veiga, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32084> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32084-2025> ;
+    ns1:hasINECode "32084" ;
+    ns1:hasName "Verea" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32085> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32085-2025> ;
+    ns1:hasINECode "32085" ;
+    ns1:hasName "Verín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32086> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32086-2025> ;
+    ns1:hasINECode "32086" ;
+    ns1:hasName "Viana do Bolo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32087> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32087-2025> ;
+    ns1:hasINECode "32087" ;
+    ns1:hasName "Vilamarín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32088> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32088-2025> ;
+    ns1:hasINECode "32088" ;
+    ns1:hasName "Vilamartín de Valdeorras" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32089> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32089-2025> ;
+    ns1:hasINECode "32089" ;
+    ns1:hasName "Vilar de Barrio" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32090> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32090-2025> ;
+    ns1:hasINECode "32090" ;
+    ns1:hasName "Vilar de Santos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32091> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32091-2025> ;
+    ns1:hasINECode "32091" ;
+    ns1:hasName "Vilardevós" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/32092> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/32092-2025> ;
+    ns1:hasINECode "32092" ;
+    ns1:hasName "Vilariño de Conso" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36001> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36001-2025> ;
+    ns1:hasINECode "36001" ;
+    ns1:hasName "Arbo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36002> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36002-2025> ;
+    ns1:hasINECode "36002" ;
+    ns1:hasName "Barro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36003> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36003-2025> ;
+    ns1:hasINECode "36003" ;
+    ns1:hasName "Baiona" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36004> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36004-2025> ;
+    ns1:hasINECode "36004" ;
+    ns1:hasName "Bueu" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36005> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36005-2025> ;
+    ns1:hasINECode "36005" ;
+    ns1:hasName "Caldas de Reis" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36006> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36006-2025> ;
+    ns1:hasINECode "36006" ;
+    ns1:hasName "Cambados" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36007> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36007-2025> ;
+    ns1:hasINECode "36007" ;
+    ns1:hasName "Campo Lameiro, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36008> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36008-2025> ;
+    ns1:hasINECode "36008" ;
+    ns1:hasName "Cangas de Morrazo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36009> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36009-2025> ;
+    ns1:hasINECode "36009" ;
+    ns1:hasName "Caniza, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36010> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36010-2025> ;
+    ns1:hasINECode "36010" ;
+    ns1:hasName "Catoira" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36011> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36011-2025> ;
+    ns1:hasINECode "36011" ;
+    ns1:hasName "Cerdedo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36012> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36012-2025> ;
+    ns1:hasINECode "36012" ;
+    ns1:hasName "Cotobade" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36013> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36013-2025> ;
+    ns1:hasINECode "36013" ;
+    ns1:hasName "Covelo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36014> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36014-2025> ;
+    ns1:hasINECode "36014" ;
+    ns1:hasName "Crecente" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36015> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36015-2025> ;
+    ns1:hasINECode "36015" ;
+    ns1:hasName "Cuntis" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36016> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36016-2025> ;
+    ns1:hasINECode "36016" ;
+    ns1:hasName "Dozón" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36017> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36017-2025> ;
+    ns1:hasINECode "36017" ;
+    ns1:hasName "Estrada, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36018> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36018-2025> ;
+    ns1:hasINECode "36018" ;
+    ns1:hasName "Forcarei" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36019> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36019-2025> ;
+    ns1:hasINECode "36019" ;
+    ns1:hasName "Fornelos de Montes" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36020> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36020-2025> ;
+    ns1:hasINECode "36020" ;
+    ns1:hasName "Agolada" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36021> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36021-2025> ;
+    ns1:hasINECode "36021" ;
+    ns1:hasName "Gondomar" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36022> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36022-2025> ;
+    ns1:hasINECode "36022" ;
+    ns1:hasName "Grove, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36023> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36023-2025> ;
+    ns1:hasINECode "36023" ;
+    ns1:hasName "Guarda, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36024> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36024-2025> ;
+    ns1:hasINECode "36024" ;
+    ns1:hasName "Lalín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36025> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36025-2025> ;
+    ns1:hasINECode "36025" ;
+    ns1:hasName "Lama, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36026> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36026-2025> ;
+    ns1:hasINECode "36026" ;
+    ns1:hasName "Marín" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36027> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36027-2025> ;
+    ns1:hasINECode "36027" ;
+    ns1:hasName "Meaño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36028> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36028-2025> ;
+    ns1:hasINECode "36028" ;
+    ns1:hasName "Meis" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36029> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36029-2025> ;
+    ns1:hasINECode "36029" ;
+    ns1:hasName "Moaña" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36030> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36030-2025> ;
+    ns1:hasINECode "36030" ;
+    ns1:hasName "Mondariz" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36031> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36031-2025> ;
+    ns1:hasINECode "36031" ;
+    ns1:hasName "Mondariz Balneario" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36032> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36032-2025> ;
+    ns1:hasINECode "36032" ;
+    ns1:hasName "Moraña" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36033> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36033-2025> ;
+    ns1:hasINECode "36033" ;
+    ns1:hasName "Mos" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36034> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36034-2025> ;
+    ns1:hasINECode "36034" ;
+    ns1:hasName "Neves, As" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36035> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36035-2025> ;
+    ns1:hasINECode "36035" ;
+    ns1:hasName "Nigrán" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36036> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36036-2025> ;
+    ns1:hasINECode "36036" ;
+    ns1:hasName "Oia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36037> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36037-2025> ;
+    ns1:hasINECode "36037" ;
+    ns1:hasName "Pazos de Borbén" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36038> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36038-2025> ;
+    ns1:hasINECode "36038" ;
+    ns1:hasName "Pontevedra" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36039> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36039-2025> ;
+    ns1:hasINECode "36039" ;
+    ns1:hasName "Porriño, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36040> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36040-2025> ;
+    ns1:hasINECode "36040" ;
+    ns1:hasName "Portas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36041> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36041-2025> ;
+    ns1:hasINECode "36041" ;
+    ns1:hasName "Poio" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36042> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36042-2025> ;
+    ns1:hasINECode "36042" ;
+    ns1:hasName "Ponteareas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36043> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36043-2025> ;
+    ns1:hasINECode "36043" ;
+    ns1:hasName "Ponte Caldelas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36044> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36044-2025> ;
+    ns1:hasINECode "36044" ;
+    ns1:hasName "Pontecesures" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36045> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36045-2025> ;
+    ns1:hasINECode "36045" ;
+    ns1:hasName "Redondela" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36046> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36046-2025> ;
+    ns1:hasINECode "36046" ;
+    ns1:hasName "Ribadumia" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36047> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36047-2025> ;
+    ns1:hasINECode "36047" ;
+    ns1:hasName "Rodeiro" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36048> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36048-2025> ;
+    ns1:hasINECode "36048" ;
+    ns1:hasName "Rosal, O" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36049> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36049-2025> ;
+    ns1:hasINECode "36049" ;
+    ns1:hasName "Salceda de Caselas" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36050> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36050-2025> ;
+    ns1:hasINECode "36050" ;
+    ns1:hasName "Salvaterra de Miño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36051> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36051-2025> ;
+    ns1:hasINECode "36051" ;
+    ns1:hasName "Sanxenxo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36052> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36052-2025> ;
+    ns1:hasINECode "36052" ;
+    ns1:hasName "Silleda" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36053> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36053-2025> ;
+    ns1:hasINECode "36053" ;
+    ns1:hasName "Soutomaior" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36054> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36054-2025> ;
+    ns1:hasINECode "36054" ;
+    ns1:hasName "Tomiño" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36055> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36055-2025> ;
+    ns1:hasINECode "36055" ;
+    ns1:hasName "Tui" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36056> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36056-2025> ;
+    ns1:hasINECode "36056" ;
+    ns1:hasName "Valga" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36057> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36057-2025> ;
+    ns1:hasINECode "36057" ;
+    ns1:hasName "Vigo" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36058> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36058-2025> ;
+    ns1:hasINECode "36058" ;
+    ns1:hasName "Vilaboa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36059> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36059-2025> ;
+    ns1:hasINECode "36059" ;
+    ns1:hasName "Vila de Cruces" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36060> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36060-2025> ;
+    ns1:hasINECode "36060" ;
+    ns1:hasName "Vilagarcía de Arousa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36061> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36061-2025> ;
+    ns1:hasINECode "36061" ;
+    ns1:hasName "Vilanova de Arousa" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36901> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36901-2025> ;
+    ns1:hasINECode "36901" ;
+    ns1:hasName "Illa de Arousa, A" .
+
+<https://w3id.org/smartinfra-galicia/resource/Municipality/36902> a ns1:Municipality ;
+    ns1:hasDemographicInformation <https://w3id.org/smartinfra-galicia/resource/Observation/36902-2025> ;
+    ns1:hasINECode "36902" ;
+    ns1:hasName "Cerdedo Cotobade" .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15001-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 67.1 ;
+    ns1:hasPopulationPercentage 1.35 ;
+    ns1:hasPopulationPercentage20To64 55.25 ;
+    ns1:hasPopulationPercentage65Plus 30.55 ;
+    ns1:hasPopulationPercentageUnder20 14.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15002-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 414.6 ;
+    ns1:hasPopulationPercentage 19.08 ;
+    ns1:hasPopulationPercentage20To64 64.91 ;
+    ns1:hasPopulationPercentage65Plus 14.91 ;
+    ns1:hasPopulationPercentageUnder20 20.18 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15003-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.0 ;
+    ns1:hasPopulationPercentage 4.48 ;
+    ns1:hasPopulationPercentage20To64 51.14 ;
+    ns1:hasPopulationPercentage65Plus 39.43 ;
+    ns1:hasPopulationPercentageUnder20 9.43 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15004-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 342.1 ;
+    ns1:hasPopulationPercentage 4.12 ;
+    ns1:hasPopulationPercentage20To64 57.82 ;
+    ns1:hasPopulationPercentage65Plus 28.25 ;
+    ns1:hasPopulationPercentageUnder20 13.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15005-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 367.1 ;
+    ns1:hasPopulationPercentage 8.24 ;
+    ns1:hasPopulationPercentage20To64 63.02 ;
+    ns1:hasPopulationPercentage65Plus 18.32 ;
+    ns1:hasPopulationPercentageUnder20 18.66 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15006-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 38.1 ;
+    ns1:hasPopulationPercentage 37.87 ;
+    ns1:hasPopulationPercentage20To64 55.15 ;
+    ns1:hasPopulationPercentage65Plus 31.39 ;
+    ns1:hasPopulationPercentageUnder20 13.45 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15007-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 33.0 ;
+    ns1:hasPopulationPercentage 31.75 ;
+    ns1:hasPopulationPercentage20To64 50.39 ;
+    ns1:hasPopulationPercentage65Plus 39.3 ;
+    ns1:hasPopulationPercentageUnder20 10.31 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15008-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 217.6 ;
+    ns1:hasPopulationPercentage 1.71 ;
+    ns1:hasPopulationPercentage20To64 55.55 ;
+    ns1:hasPopulationPercentage65Plus 29.21 ;
+    ns1:hasPopulationPercentageUnder20 15.24 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15009-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 558.0 ;
+    ns1:hasPopulationPercentage 33.77 ;
+    ns1:hasPopulationPercentage20To64 59.36 ;
+    ns1:hasPopulationPercentage65Plus 24.77 ;
+    ns1:hasPopulationPercentageUnder20 15.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15010-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.9 ;
+    ns1:hasPopulationPercentage 11.52 ;
+    ns1:hasPopulationPercentage20To64 54.6 ;
+    ns1:hasPopulationPercentage65Plus 37.2 ;
+    ns1:hasPopulationPercentageUnder20 8.2 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15011-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 219.0 ;
+    ns1:hasPopulationPercentage 28.75 ;
+    ns1:hasPopulationPercentage20To64 60.1 ;
+    ns1:hasPopulationPercentage65Plus 23.55 ;
+    ns1:hasPopulationPercentageUnder20 16.35 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15012-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 58.0 ;
+    ns1:hasPopulationPercentage 2.44 ;
+    ns1:hasPopulationPercentage20To64 57.32 ;
+    ns1:hasPopulationPercentage65Plus 26.79 ;
+    ns1:hasPopulationPercentageUnder20 15.89 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15013-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 109.6 ;
+    ns1:hasPopulationPercentage 4.7 ;
+    ns1:hasPopulationPercentage20To64 59.27 ;
+    ns1:hasPopulationPercentage65Plus 21.83 ;
+    ns1:hasPopulationPercentageUnder20 18.9 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15014-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 40.6 ;
+    ns1:hasPopulationPercentage 6.07 ;
+    ns1:hasPopulationPercentage20To64 51.35 ;
+    ns1:hasPopulationPercentage65Plus 37.88 ;
+    ns1:hasPopulationPercentageUnder20 10.77 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15015-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 108.0 ;
+    ns1:hasPopulationPercentage 13.95 ;
+    ns1:hasPopulationPercentage20To64 53.68 ;
+    ns1:hasPopulationPercentage65Plus 34.86 ;
+    ns1:hasPopulationPercentageUnder20 11.46 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15016-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 98.2 ;
+    ns1:hasPopulationPercentage 31.63 ;
+    ns1:hasPopulationPercentage20To64 54.59 ;
+    ns1:hasPopulationPercentage65Plus 33.21 ;
+    ns1:hasPopulationPercentageUnder20 12.2 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15017-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 608.0 ;
+    ns1:hasPopulationPercentage 5.93 ;
+    ns1:hasPopulationPercentage20To64 62.55 ;
+    ns1:hasPopulationPercentage65Plus 20.73 ;
+    ns1:hasPopulationPercentageUnder20 16.73 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15018-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.1 ;
+    ns1:hasPopulationPercentage 4.96 ;
+    ns1:hasPopulationPercentage20To64 55.07 ;
+    ns1:hasPopulationPercentage65Plus 33.85 ;
+    ns1:hasPopulationPercentageUnder20 11.08 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15019-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 172.5 ;
+    ns1:hasPopulationPercentage 47.88 ;
+    ns1:hasPopulationPercentage20To64 57.94 ;
+    ns1:hasPopulationPercentage65Plus 25.27 ;
+    ns1:hasPopulationPercentageUnder20 16.78 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15020-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 53.3 ;
+    ns1:hasPopulationPercentage 31.61 ;
+    ns1:hasPopulationPercentage20To64 50.07 ;
+    ns1:hasPopulationPercentage65Plus 39.74 ;
+    ns1:hasPopulationPercentageUnder20 10.19 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15021-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 142.3 ;
+    ns1:hasPopulationPercentage 1.64 ;
+    ns1:hasPopulationPercentage20To64 59.44 ;
+    ns1:hasPopulationPercentage65Plus 23.42 ;
+    ns1:hasPopulationPercentageUnder20 17.14 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15022-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 76.9 ;
+    ns1:hasPopulationPercentage 4.32 ;
+    ns1:hasPopulationPercentage20To64 55.86 ;
+    ns1:hasPopulationPercentage65Plus 30.44 ;
+    ns1:hasPopulationPercentageUnder20 13.69 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15023-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 134.6 ;
+    ns1:hasPopulationPercentage 36.6 ;
+    ns1:hasPopulationPercentage20To64 56.59 ;
+    ns1:hasPopulationPercentage65Plus 27.8 ;
+    ns1:hasPopulationPercentageUnder20 15.61 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15024-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 46.0 ;
+    ns1:hasPopulationPercentage 14.0 ;
+    ns1:hasPopulationPercentage20To64 54.84 ;
+    ns1:hasPopulationPercentage65Plus 30.1 ;
+    ns1:hasPopulationPercentageUnder20 15.06 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15025-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 19.1 ;
+    ns1:hasPopulationPercentage 8.91 ;
+    ns1:hasPopulationPercentage20To64 52.43 ;
+    ns1:hasPopulationPercentage65Plus 37.84 ;
+    ns1:hasPopulationPercentageUnder20 9.73 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15026-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage20To64 "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage65Plus "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentageUnder20 "N/A"^^xsd:decimal ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15027-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 57.8 ;
+    ns1:hasPopulationPercentage 4.85 ;
+    ns1:hasPopulationPercentage20To64 52.24 ;
+    ns1:hasPopulationPercentage65Plus 31.53 ;
+    ns1:hasPopulationPercentageUnder20 16.23 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15028-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 254.0 ;
+    ns1:hasPopulationPercentage 7.84 ;
+    ns1:hasPopulationPercentage20To64 57.97 ;
+    ns1:hasPopulationPercentage65Plus 30.5 ;
+    ns1:hasPopulationPercentageUnder20 11.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15029-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 40.4 ;
+    ns1:hasPopulationPercentage 8.52 ;
+    ns1:hasPopulationPercentage20To64 51.49 ;
+    ns1:hasPopulationPercentage65Plus 36.58 ;
+    ns1:hasPopulationPercentageUnder20 11.93 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15030-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6642.3 ;
+    ns1:hasPopulationPercentage 60.19 ;
+    ns1:hasPopulationPercentage20To64 58.84 ;
+    ns1:hasPopulationPercentage65Plus 25.65 ;
+    ns1:hasPopulationPercentageUnder20 15.51 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15031-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 505.9 ;
+    ns1:hasPopulationPercentage 7.48 ;
+    ns1:hasPopulationPercentage20To64 61.68 ;
+    ns1:hasPopulationPercentage65Plus 19.76 ;
+    ns1:hasPopulationPercentageUnder20 18.55 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15032-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.3 ;
+    ns1:hasPopulationPercentage 10.58 ;
+    ns1:hasPopulationPercentage20To64 58.0 ;
+    ns1:hasPopulationPercentage65Plus 27.33 ;
+    ns1:hasPopulationPercentageUnder20 14.67 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15033-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 72.1 ;
+    ns1:hasPopulationPercentage 17.04 ;
+    ns1:hasPopulationPercentage20To64 54.15 ;
+    ns1:hasPopulationPercentage65Plus 32.64 ;
+    ns1:hasPopulationPercentageUnder20 13.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15034-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.7 ;
+    ns1:hasPopulationPercentage 12.87 ;
+    ns1:hasPopulationPercentage20To64 53.46 ;
+    ns1:hasPopulationPercentage65Plus 36.02 ;
+    ns1:hasPopulationPercentageUnder20 10.52 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15035-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 473.7 ;
+    ns1:hasPopulationPercentage 8.2 ;
+    ns1:hasPopulationPercentage20To64 55.65 ;
+    ns1:hasPopulationPercentage65Plus 31.24 ;
+    ns1:hasPopulationPercentageUnder20 13.11 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15036-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 785.3 ;
+    ns1:hasPopulationPercentage 42.7 ;
+    ns1:hasPopulationPercentage20To64 56.35 ;
+    ns1:hasPopulationPercentage65Plus 29.6 ;
+    ns1:hasPopulationPercentageUnder20 14.04 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15037-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 159.4 ;
+    ns1:hasPopulationPercentage 22.21 ;
+    ns1:hasPopulationPercentage20To64 58.08 ;
+    ns1:hasPopulationPercentage65Plus 29.34 ;
+    ns1:hasPopulationPercentageUnder20 12.58 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15038-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 26.3 ;
+    ns1:hasPopulationPercentage 5.88 ;
+    ns1:hasPopulationPercentage20To64 54.15 ;
+    ns1:hasPopulationPercentage65Plus 35.32 ;
+    ns1:hasPopulationPercentageUnder20 10.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15039-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 19.5 ;
+    ns1:hasPopulationPercentage 3.34 ;
+    ns1:hasPopulationPercentage20To64 55.23 ;
+    ns1:hasPopulationPercentage65Plus 35.2 ;
+    ns1:hasPopulationPercentageUnder20 9.57 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15040-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 78.3 ;
+    ns1:hasPopulationPercentage 4.3 ;
+    ns1:hasPopulationPercentage20To64 52.97 ;
+    ns1:hasPopulationPercentage65Plus 34.68 ;
+    ns1:hasPopulationPercentageUnder20 12.36 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15041-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 93.5 ;
+    ns1:hasPopulationPercentage 17.56 ;
+    ns1:hasPopulationPercentage20To64 56.99 ;
+    ns1:hasPopulationPercentage65Plus 26.93 ;
+    ns1:hasPopulationPercentageUnder20 16.09 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15042-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.7 ;
+    ns1:hasPopulationPercentage 9.5 ;
+    ns1:hasPopulationPercentage20To64 53.92 ;
+    ns1:hasPopulationPercentage65Plus 33.73 ;
+    ns1:hasPopulationPercentageUnder20 12.35 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15043-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 85.7 ;
+    ns1:hasPopulationPercentage 7.83 ;
+    ns1:hasPopulationPercentage20To64 55.27 ;
+    ns1:hasPopulationPercentage65Plus 35.73 ;
+    ns1:hasPopulationPercentageUnder20 9.0 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15044-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.8 ;
+    ns1:hasPopulationPercentage 10.76 ;
+    ns1:hasPopulationPercentage20To64 52.76 ;
+    ns1:hasPopulationPercentage65Plus 38.35 ;
+    ns1:hasPopulationPercentageUnder20 8.89 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15045-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 19.9 ;
+    ns1:hasPopulationPercentage 28.33 ;
+    ns1:hasPopulationPercentage20To64 51.5 ;
+    ns1:hasPopulationPercentage65Plus 38.34 ;
+    ns1:hasPopulationPercentageUnder20 10.16 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15046-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 77.4 ;
+    ns1:hasPopulationPercentage 64.51 ;
+    ns1:hasPopulationPercentage20To64 57.33 ;
+    ns1:hasPopulationPercentage65Plus 26.45 ;
+    ns1:hasPopulationPercentageUnder20 16.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15047-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 22.1 ;
+    ns1:hasPopulationPercentage 6.48 ;
+    ns1:hasPopulationPercentage20To64 51.82 ;
+    ns1:hasPopulationPercentage65Plus 36.73 ;
+    ns1:hasPopulationPercentageUnder20 11.45 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15048-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 215.5 ;
+    ns1:hasPopulationPercentage 17.76 ;
+    ns1:hasPopulationPercentage20To64 59.13 ;
+    ns1:hasPopulationPercentage65Plus 23.71 ;
+    ns1:hasPopulationPercentageUnder20 17.15 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15049-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 24.8 ;
+    ns1:hasPopulationPercentage 0.79 ;
+    ns1:hasPopulationPercentage20To64 52.04 ;
+    ns1:hasPopulationPercentage65Plus 36.99 ;
+    ns1:hasPopulationPercentageUnder20 10.97 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15050-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.6 ;
+    ns1:hasPopulationPercentage 7.73 ;
+    ns1:hasPopulationPercentage20To64 52.81 ;
+    ns1:hasPopulationPercentage65Plus 36.27 ;
+    ns1:hasPopulationPercentageUnder20 10.92 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15051-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 407.1 ;
+    ns1:hasPopulationPercentage 3.42 ;
+    ns1:hasPopulationPercentage20To64 56.28 ;
+    ns1:hasPopulationPercentage65Plus 30.56 ;
+    ns1:hasPopulationPercentageUnder20 13.16 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15052-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 35.7 ;
+    ns1:hasPopulationPercentage 20.48 ;
+    ns1:hasPopulationPercentage20To64 52.59 ;
+    ns1:hasPopulationPercentage65Plus 36.55 ;
+    ns1:hasPopulationPercentageUnder20 10.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15053-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 112.1 ;
+    ns1:hasPopulationPercentage 68.39 ;
+    ns1:hasPopulationPercentage20To64 53.36 ;
+    ns1:hasPopulationPercentage65Plus 34.63 ;
+    ns1:hasPopulationPercentageUnder20 12.01 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15054-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 596.2 ;
+    ns1:hasPopulationPercentage 26.24 ;
+    ns1:hasPopulationPercentage20To64 60.09 ;
+    ns1:hasPopulationPercentage65Plus 22.34 ;
+    ns1:hasPopulationPercentageUnder20 17.57 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15055-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 201.1 ;
+    ns1:hasPopulationPercentage 3.24 ;
+    ns1:hasPopulationPercentage20To64 55.3 ;
+    ns1:hasPopulationPercentage65Plus 31.94 ;
+    ns1:hasPopulationPercentageUnder20 12.77 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15056-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 60.5 ;
+    ns1:hasPopulationPercentage 68.25 ;
+    ns1:hasPopulationPercentage20To64 57.71 ;
+    ns1:hasPopulationPercentage65Plus 25.89 ;
+    ns1:hasPopulationPercentageUnder20 16.4 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15057-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 379.1 ;
+    ns1:hasPopulationPercentage 43.79 ;
+    ns1:hasPopulationPercentage20To64 57.16 ;
+    ns1:hasPopulationPercentage65Plus 28.18 ;
+    ns1:hasPopulationPercentageUnder20 14.67 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15058-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 887.5 ;
+    ns1:hasPopulationPercentage 9.28 ;
+    ns1:hasPopulationPercentage20To64 58.53 ;
+    ns1:hasPopulationPercentage65Plus 22.25 ;
+    ns1:hasPopulationPercentageUnder20 19.22 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15059-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 82.5 ;
+    ns1:hasPopulationPercentage 35.52 ;
+    ns1:hasPopulationPercentage20To64 57.56 ;
+    ns1:hasPopulationPercentage65Plus 25.54 ;
+    ns1:hasPopulationPercentageUnder20 16.91 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15060-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 107.0 ;
+    ns1:hasPopulationPercentage 21.28 ;
+    ns1:hasPopulationPercentage20To64 63.14 ;
+    ns1:hasPopulationPercentage65Plus 17.88 ;
+    ns1:hasPopulationPercentageUnder20 18.98 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15061-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 25.9 ;
+    ns1:hasPopulationPercentage 48.01 ;
+    ns1:hasPopulationPercentage20To64 51.75 ;
+    ns1:hasPopulationPercentage65Plus 38.55 ;
+    ns1:hasPopulationPercentageUnder20 9.7 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15062-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 60.1 ;
+    ns1:hasPopulationPercentage 18.6 ;
+    ns1:hasPopulationPercentage20To64 51.63 ;
+    ns1:hasPopulationPercentage65Plus 37.28 ;
+    ns1:hasPopulationPercentageUnder20 11.1 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15063-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage20To64 "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage65Plus "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentageUnder20 "N/A"^^xsd:decimal ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15064-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 61.8 ;
+    ns1:hasPopulationPercentage 6.15 ;
+    ns1:hasPopulationPercentage20To64 54.8 ;
+    ns1:hasPopulationPercentage65Plus 33.05 ;
+    ns1:hasPopulationPercentageUnder20 12.15 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15065-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 172.1 ;
+    ns1:hasPopulationPercentage 54.47 ;
+    ns1:hasPopulationPercentage20To64 58.33 ;
+    ns1:hasPopulationPercentage65Plus 25.97 ;
+    ns1:hasPopulationPercentageUnder20 15.7 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15066-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 34.7 ;
+    ns1:hasPopulationPercentage 29.29 ;
+    ns1:hasPopulationPercentage20To64 56.8 ;
+    ns1:hasPopulationPercentage65Plus 28.84 ;
+    ns1:hasPopulationPercentageUnder20 14.36 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15067-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 280.6 ;
+    ns1:hasPopulationPercentage 13.83 ;
+    ns1:hasPopulationPercentage20To64 59.66 ;
+    ns1:hasPopulationPercentage65Plus 25.83 ;
+    ns1:hasPopulationPercentageUnder20 14.51 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15068-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 57.2 ;
+    ns1:hasPopulationPercentage 7.85 ;
+    ns1:hasPopulationPercentage20To64 52.59 ;
+    ns1:hasPopulationPercentage65Plus 35.29 ;
+    ns1:hasPopulationPercentageUnder20 12.13 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15069-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 253.9 ;
+    ns1:hasPopulationPercentage 31.65 ;
+    ns1:hasPopulationPercentage20To64 56.02 ;
+    ns1:hasPopulationPercentage65Plus 29.81 ;
+    ns1:hasPopulationPercentageUnder20 14.18 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15070-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 39.2 ;
+    ns1:hasPopulationPercentage 41.71 ;
+    ns1:hasPopulationPercentage20To64 56.29 ;
+    ns1:hasPopulationPercentage65Plus 29.61 ;
+    ns1:hasPopulationPercentageUnder20 14.1 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15071-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 95.8 ;
+    ns1:hasPopulationPercentage 28.12 ;
+    ns1:hasPopulationPercentage20To64 56.3 ;
+    ns1:hasPopulationPercentage65Plus 29.04 ;
+    ns1:hasPopulationPercentageUnder20 14.66 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15072-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 182.9 ;
+    ns1:hasPopulationPercentage 16.31 ;
+    ns1:hasPopulationPercentage20To64 57.55 ;
+    ns1:hasPopulationPercentage65Plus 27.74 ;
+    ns1:hasPopulationPercentageUnder20 14.71 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15073-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 393.9 ;
+    ns1:hasPopulationPercentage 41.11 ;
+    ns1:hasPopulationPercentage20To64 60.0 ;
+    ns1:hasPopulationPercentage65Plus 23.03 ;
+    ns1:hasPopulationPercentageUnder20 16.97 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15074-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 46.9 ;
+    ns1:hasPopulationPercentage 28.5 ;
+    ns1:hasPopulationPercentage20To64 55.57 ;
+    ns1:hasPopulationPercentage65Plus 29.67 ;
+    ns1:hasPopulationPercentageUnder20 14.76 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15075-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 635.5 ;
+    ns1:hasPopulationPercentage 4.18 ;
+    ns1:hasPopulationPercentage20To64 57.91 ;
+    ns1:hasPopulationPercentage65Plus 25.7 ;
+    ns1:hasPopulationPercentageUnder20 16.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15076-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 27.7 ;
+    ns1:hasPopulationPercentage 1.8 ;
+    ns1:hasPopulationPercentage20To64 51.73 ;
+    ns1:hasPopulationPercentage65Plus 35.89 ;
+    ns1:hasPopulationPercentageUnder20 12.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15077-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 46.3 ;
+    ns1:hasPopulationPercentage 71.67 ;
+    ns1:hasPopulationPercentage20To64 54.14 ;
+    ns1:hasPopulationPercentage65Plus 31.44 ;
+    ns1:hasPopulationPercentageUnder20 14.42 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15078-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 458.4 ;
+    ns1:hasPopulationPercentage 57.92 ;
+    ns1:hasPopulationPercentage20To64 59.82 ;
+    ns1:hasPopulationPercentage65Plus 24.03 ;
+    ns1:hasPopulationPercentageUnder20 16.16 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15079-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.2 ;
+    ns1:hasPopulationPercentage 11.77 ;
+    ns1:hasPopulationPercentage20To64 52.03 ;
+    ns1:hasPopulationPercentage65Plus 40.56 ;
+    ns1:hasPopulationPercentageUnder20 7.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15080-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.1 ;
+    ns1:hasPopulationPercentage 14.99 ;
+    ns1:hasPopulationPercentage20To64 53.07 ;
+    ns1:hasPopulationPercentage65Plus 37.49 ;
+    ns1:hasPopulationPercentageUnder20 9.44 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15081-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.7 ;
+    ns1:hasPopulationPercentage 0.69 ;
+    ns1:hasPopulationPercentage20To64 56.56 ;
+    ns1:hasPopulationPercentage65Plus 31.96 ;
+    ns1:hasPopulationPercentageUnder20 11.48 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15082-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 240.2 ;
+    ns1:hasPopulationPercentage 10.93 ;
+    ns1:hasPopulationPercentage20To64 59.84 ;
+    ns1:hasPopulationPercentage65Plus 22.86 ;
+    ns1:hasPopulationPercentageUnder20 17.3 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15083-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 13.6 ;
+    ns1:hasPopulationPercentage 8.73 ;
+    ns1:hasPopulationPercentage20To64 53.35 ;
+    ns1:hasPopulationPercentage65Plus 38.45 ;
+    ns1:hasPopulationPercentageUnder20 8.2 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15084-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 25.3 ;
+    ns1:hasPopulationPercentage 8.63 ;
+    ns1:hasPopulationPercentage20To64 49.86 ;
+    ns1:hasPopulationPercentage65Plus 40.15 ;
+    ns1:hasPopulationPercentageUnder20 9.99 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15085-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 28.9 ;
+    ns1:hasPopulationPercentage 21.32 ;
+    ns1:hasPopulationPercentage20To64 52.95 ;
+    ns1:hasPopulationPercentage65Plus 35.64 ;
+    ns1:hasPopulationPercentageUnder20 11.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15086-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 29.6 ;
+    ns1:hasPopulationPercentage 8.21 ;
+    ns1:hasPopulationPercentage20To64 51.89 ;
+    ns1:hasPopulationPercentage65Plus 34.93 ;
+    ns1:hasPopulationPercentageUnder20 13.18 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15087-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 77.1 ;
+    ns1:hasPopulationPercentage 4.48 ;
+    ns1:hasPopulationPercentage20To64 54.59 ;
+    ns1:hasPopulationPercentage65Plus 32.52 ;
+    ns1:hasPopulationPercentageUnder20 12.89 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15088-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 33.9 ;
+    ns1:hasPopulationPercentage 2.12 ;
+    ns1:hasPopulationPercentage20To64 51.18 ;
+    ns1:hasPopulationPercentage65Plus 35.96 ;
+    ns1:hasPopulationPercentageUnder20 12.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15089-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 93.0 ;
+    ns1:hasPopulationPercentage 2.82 ;
+    ns1:hasPopulationPercentage20To64 56.16 ;
+    ns1:hasPopulationPercentage65Plus 29.09 ;
+    ns1:hasPopulationPercentageUnder20 14.76 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15090-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.8 ;
+    ns1:hasPopulationPercentage 3.08 ;
+    ns1:hasPopulationPercentage20To64 52.76 ;
+    ns1:hasPopulationPercentage65Plus 37.18 ;
+    ns1:hasPopulationPercentageUnder20 10.06 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15091-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 40.8 ;
+    ns1:hasPopulationPercentage 3.1 ;
+    ns1:hasPopulationPercentage20To64 55.69 ;
+    ns1:hasPopulationPercentage65Plus 33.09 ;
+    ns1:hasPopulationPercentageUnder20 11.22 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15092-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.1 ;
+    ns1:hasPopulationPercentage 42.17 ;
+    ns1:hasPopulationPercentage20To64 53.04 ;
+    ns1:hasPopulationPercentage65Plus 34.76 ;
+    ns1:hasPopulationPercentageUnder20 12.2 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15093-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 31.5 ;
+    ns1:hasPopulationPercentage 26.2 ;
+    ns1:hasPopulationPercentage20To64 52.73 ;
+    ns1:hasPopulationPercentage65Plus 36.74 ;
+    ns1:hasPopulationPercentageUnder20 10.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15901-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 77.4 ;
+    ns1:hasPopulationPercentage 32.32 ;
+    ns1:hasPopulationPercentage20To64 52.37 ;
+    ns1:hasPopulationPercentage65Plus 36.59 ;
+    ns1:hasPopulationPercentageUnder20 11.04 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/15902-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 34.0 ;
+    ns1:hasPopulationPercentage 12.88 ;
+    ns1:hasPopulationPercentage20To64 54.62 ;
+    ns1:hasPopulationPercentage65Plus 33.5 ;
+    ns1:hasPopulationPercentageUnder20 11.88 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27001-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.4 ;
+    ns1:hasPopulationPercentage 5.82 ;
+    ns1:hasPopulationPercentage20To64 51.07 ;
+    ns1:hasPopulationPercentage65Plus 41.06 ;
+    ns1:hasPopulationPercentageUnder20 7.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27002-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 19.3 ;
+    ns1:hasPopulationPercentage 5.18 ;
+    ns1:hasPopulationPercentage20To64 52.78 ;
+    ns1:hasPopulationPercentage65Plus 39.79 ;
+    ns1:hasPopulationPercentageUnder20 7.43 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27003-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.6 ;
+    ns1:hasPopulationPercentage 20.63 ;
+    ns1:hasPopulationPercentage20To64 52.28 ;
+    ns1:hasPopulationPercentage65Plus 37.85 ;
+    ns1:hasPopulationPercentageUnder20 9.87 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27004-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6.5 ;
+    ns1:hasPopulationPercentage 24.82 ;
+    ns1:hasPopulationPercentage20To64 50.0 ;
+    ns1:hasPopulationPercentage65Plus 41.88 ;
+    ns1:hasPopulationPercentageUnder20 8.12 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27005-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 41.9 ;
+    ns1:hasPopulationPercentage 18.75 ;
+    ns1:hasPopulationPercentage20To64 54.81 ;
+    ns1:hasPopulationPercentage65Plus 33.84 ;
+    ns1:hasPopulationPercentageUnder20 11.36 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27006-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.4 ;
+    ns1:hasPopulationPercentage 30.97 ;
+    ns1:hasPopulationPercentage20To64 53.32 ;
+    ns1:hasPopulationPercentage65Plus 35.08 ;
+    ns1:hasPopulationPercentageUnder20 11.6 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27007-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 22.8 ;
+    ns1:hasPopulationPercentage 7.52 ;
+    ns1:hasPopulationPercentage20To64 52.94 ;
+    ns1:hasPopulationPercentage65Plus 37.21 ;
+    ns1:hasPopulationPercentageUnder20 9.85 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27008-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.1 ;
+    ns1:hasPopulationPercentage 4.6 ;
+    ns1:hasPopulationPercentage20To64 52.4 ;
+    ns1:hasPopulationPercentage65Plus 39.67 ;
+    ns1:hasPopulationPercentageUnder20 7.93 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27009-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.3 ;
+    ns1:hasPopulationPercentage 15.57 ;
+    ns1:hasPopulationPercentage20To64 48.16 ;
+    ns1:hasPopulationPercentage65Plus 45.84 ;
+    ns1:hasPopulationPercentageUnder20 5.99 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27010-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 28.2 ;
+    ns1:hasPopulationPercentage 12.99 ;
+    ns1:hasPopulationPercentage20To64 55.58 ;
+    ns1:hasPopulationPercentage65Plus 32.41 ;
+    ns1:hasPopulationPercentageUnder20 12.0 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27011-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.2 ;
+    ns1:hasPopulationPercentage 2.06 ;
+    ns1:hasPopulationPercentage20To64 53.39 ;
+    ns1:hasPopulationPercentage65Plus 36.67 ;
+    ns1:hasPopulationPercentageUnder20 9.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27012-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 4.1 ;
+    ns1:hasPopulationPercentage 12.51 ;
+    ns1:hasPopulationPercentage20To64 48.95 ;
+    ns1:hasPopulationPercentage65Plus 46.67 ;
+    ns1:hasPopulationPercentageUnder20 4.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27013-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 53.0 ;
+    ns1:hasPopulationPercentage 16.52 ;
+    ns1:hasPopulationPercentage20To64 54.75 ;
+    ns1:hasPopulationPercentage65Plus 33.51 ;
+    ns1:hasPopulationPercentageUnder20 11.74 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27014-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.4 ;
+    ns1:hasPopulationPercentage 2.8 ;
+    ns1:hasPopulationPercentage20To64 51.31 ;
+    ns1:hasPopulationPercentage65Plus 38.63 ;
+    ns1:hasPopulationPercentageUnder20 10.07 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27015-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 28.9 ;
+    ns1:hasPopulationPercentage 10.88 ;
+    ns1:hasPopulationPercentage20To64 53.56 ;
+    ns1:hasPopulationPercentage65Plus 35.79 ;
+    ns1:hasPopulationPercentageUnder20 10.65 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27016-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 46.1 ;
+    ns1:hasPopulationPercentage 63.92 ;
+    ns1:hasPopulationPercentage20To64 55.71 ;
+    ns1:hasPopulationPercentage65Plus 30.07 ;
+    ns1:hasPopulationPercentageUnder20 14.22 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27017-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 4.8 ;
+    ns1:hasPopulationPercentage 19.04 ;
+    ns1:hasPopulationPercentage20To64 49.24 ;
+    ns1:hasPopulationPercentage65Plus 45.02 ;
+    ns1:hasPopulationPercentageUnder20 5.74 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27018-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 7.0 ;
+    ns1:hasPopulationPercentage 69.81 ;
+    ns1:hasPopulationPercentage20To64 51.75 ;
+    ns1:hasPopulationPercentage65Plus 41.63 ;
+    ns1:hasPopulationPercentageUnder20 6.62 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27019-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 103.8 ;
+    ns1:hasPopulationPercentage 36.14 ;
+    ns1:hasPopulationPercentage20To64 57.71 ;
+    ns1:hasPopulationPercentage65Plus 27.08 ;
+    ns1:hasPopulationPercentageUnder20 15.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27020-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.4 ;
+    ns1:hasPopulationPercentage 3.01 ;
+    ns1:hasPopulationPercentage20To64 52.8 ;
+    ns1:hasPopulationPercentage65Plus 36.7 ;
+    ns1:hasPopulationPercentageUnder20 10.5 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27021-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.0 ;
+    ns1:hasPopulationPercentage 4.33 ;
+    ns1:hasPopulationPercentage20To64 51.47 ;
+    ns1:hasPopulationPercentage65Plus 39.76 ;
+    ns1:hasPopulationPercentageUnder20 8.77 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27022-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.6 ;
+    ns1:hasPopulationPercentage 13.46 ;
+    ns1:hasPopulationPercentage20To64 54.33 ;
+    ns1:hasPopulationPercentage65Plus 33.14 ;
+    ns1:hasPopulationPercentageUnder20 12.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27023-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.2 ;
+    ns1:hasPopulationPercentage 2.08 ;
+    ns1:hasPopulationPercentage20To64 50.2 ;
+    ns1:hasPopulationPercentage65Plus 41.74 ;
+    ns1:hasPopulationPercentageUnder20 8.06 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27024-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.3 ;
+    ns1:hasPopulationPercentage 6.76 ;
+    ns1:hasPopulationPercentage20To64 44.94 ;
+    ns1:hasPopulationPercentage65Plus 47.45 ;
+    ns1:hasPopulationPercentageUnder20 7.61 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27025-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.5 ;
+    ns1:hasPopulationPercentage 13.02 ;
+    ns1:hasPopulationPercentage20To64 59.19 ;
+    ns1:hasPopulationPercentage65Plus 28.0 ;
+    ns1:hasPopulationPercentageUnder20 12.81 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27026-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.5 ;
+    ns1:hasPopulationPercentage 11.13 ;
+    ns1:hasPopulationPercentage20To64 51.47 ;
+    ns1:hasPopulationPercentage65Plus 37.03 ;
+    ns1:hasPopulationPercentageUnder20 11.5 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27027-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 33.2 ;
+    ns1:hasPopulationPercentage 7.22 ;
+    ns1:hasPopulationPercentage20To64 52.21 ;
+    ns1:hasPopulationPercentage65Plus 33.48 ;
+    ns1:hasPopulationPercentageUnder20 14.31 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27028-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 303.4 ;
+    ns1:hasPopulationPercentage 83.2 ;
+    ns1:hasPopulationPercentage20To64 59.29 ;
+    ns1:hasPopulationPercentage65Plus 23.82 ;
+    ns1:hasPopulationPercentageUnder20 16.89 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27029-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 38.0 ;
+    ns1:hasPopulationPercentage 35.07 ;
+    ns1:hasPopulationPercentage20To64 55.77 ;
+    ns1:hasPopulationPercentage65Plus 29.3 ;
+    ns1:hasPopulationPercentageUnder20 14.93 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27030-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 23.1 ;
+    ns1:hasPopulationPercentage 11.46 ;
+    ns1:hasPopulationPercentage20To64 50.5 ;
+    ns1:hasPopulationPercentage65Plus 37.47 ;
+    ns1:hasPopulationPercentageUnder20 12.03 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27031-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 95.2 ;
+    ns1:hasPopulationPercentage 63.57 ;
+    ns1:hasPopulationPercentage20To64 56.26 ;
+    ns1:hasPopulationPercentage65Plus 28.82 ;
+    ns1:hasPopulationPercentageUnder20 14.92 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27032-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.9 ;
+    ns1:hasPopulationPercentage 42.64 ;
+    ns1:hasPopulationPercentage20To64 56.68 ;
+    ns1:hasPopulationPercentage65Plus 30.79 ;
+    ns1:hasPopulationPercentageUnder20 12.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27033-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 3.5 ;
+    ns1:hasPopulationPercentage 1.5 ;
+    ns1:hasPopulationPercentage20To64 51.91 ;
+    ns1:hasPopulationPercentage65Plus 41.15 ;
+    ns1:hasPopulationPercentageUnder20 6.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27034-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 4.0 ;
+    ns1:hasPopulationPercentage 10.61 ;
+    ns1:hasPopulationPercentage20To64 44.27 ;
+    ns1:hasPopulationPercentage65Plus 50.77 ;
+    ns1:hasPopulationPercentageUnder20 4.95 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27035-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 3.3 ;
+    ns1:hasPopulationPercentage 5.37 ;
+    ns1:hasPopulationPercentage20To64 59.49 ;
+    ns1:hasPopulationPercentage65Plus 28.69 ;
+    ns1:hasPopulationPercentageUnder20 11.81 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27037-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.3 ;
+    ns1:hasPopulationPercentage 10.0 ;
+    ns1:hasPopulationPercentage20To64 50.05 ;
+    ns1:hasPopulationPercentage65Plus 43.7 ;
+    ns1:hasPopulationPercentageUnder20 6.24 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27038-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6.8 ;
+    ns1:hasPopulationPercentage 3.86 ;
+    ns1:hasPopulationPercentage20To64 51.92 ;
+    ns1:hasPopulationPercentage65Plus 38.76 ;
+    ns1:hasPopulationPercentageUnder20 9.33 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27039-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 40.5 ;
+    ns1:hasPopulationPercentage 4.52 ;
+    ns1:hasPopulationPercentage20To64 58.04 ;
+    ns1:hasPopulationPercentage65Plus 26.55 ;
+    ns1:hasPopulationPercentageUnder20 15.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27040-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.3 ;
+    ns1:hasPopulationPercentage 36.73 ;
+    ns1:hasPopulationPercentage20To64 52.63 ;
+    ns1:hasPopulationPercentage65Plus 36.52 ;
+    ns1:hasPopulationPercentageUnder20 10.85 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27041-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.4 ;
+    ns1:hasPopulationPercentage 7.87 ;
+    ns1:hasPopulationPercentage20To64 46.11 ;
+    ns1:hasPopulationPercentage65Plus 45.3 ;
+    ns1:hasPopulationPercentageUnder20 8.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27042-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.8 ;
+    ns1:hasPopulationPercentage 6.96 ;
+    ns1:hasPopulationPercentage20To64 47.81 ;
+    ns1:hasPopulationPercentage65Plus 44.73 ;
+    ns1:hasPopulationPercentageUnder20 7.46 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27043-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.9 ;
+    ns1:hasPopulationPercentage 5.66 ;
+    ns1:hasPopulationPercentage20To64 52.05 ;
+    ns1:hasPopulationPercentage65Plus 37.91 ;
+    ns1:hasPopulationPercentageUnder20 10.03 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27044-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.0 ;
+    ns1:hasPopulationPercentage 7.28 ;
+    ns1:hasPopulationPercentage20To64 53.28 ;
+    ns1:hasPopulationPercentage65Plus 35.51 ;
+    ns1:hasPopulationPercentageUnder20 11.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27045-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.3 ;
+    ns1:hasPopulationPercentage 9.52 ;
+    ns1:hasPopulationPercentage20To64 47.41 ;
+    ns1:hasPopulationPercentage65Plus 47.64 ;
+    ns1:hasPopulationPercentageUnder20 4.95 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27046-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.3 ;
+    ns1:hasPopulationPercentage 30.67 ;
+    ns1:hasPopulationPercentage20To64 51.94 ;
+    ns1:hasPopulationPercentage65Plus 38.36 ;
+    ns1:hasPopulationPercentageUnder20 9.7 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27047-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 9.1 ;
+    ns1:hasPopulationPercentage 5.36 ;
+    ns1:hasPopulationPercentage20To64 47.44 ;
+    ns1:hasPopulationPercentage65Plus 44.94 ;
+    ns1:hasPopulationPercentageUnder20 7.62 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27048-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.5 ;
+    ns1:hasPopulationPercentage 12.96 ;
+    ns1:hasPopulationPercentage20To64 50.57 ;
+    ns1:hasPopulationPercentage65Plus 39.29 ;
+    ns1:hasPopulationPercentageUnder20 10.14 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27049-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.3 ;
+    ns1:hasPopulationPercentage 1.08 ;
+    ns1:hasPopulationPercentage20To64 49.46 ;
+    ns1:hasPopulationPercentage65Plus 42.13 ;
+    ns1:hasPopulationPercentageUnder20 8.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27050-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 9.6 ;
+    ns1:hasPopulationPercentage 62.53 ;
+    ns1:hasPopulationPercentage20To64 48.76 ;
+    ns1:hasPopulationPercentage65Plus 40.46 ;
+    ns1:hasPopulationPercentageUnder20 10.77 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27051-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 91.6 ;
+    ns1:hasPopulationPercentage 61.69 ;
+    ns1:hasPopulationPercentage20To64 57.56 ;
+    ns1:hasPopulationPercentage65Plus 26.84 ;
+    ns1:hasPopulationPercentageUnder20 15.6 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27052-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 13.2 ;
+    ns1:hasPopulationPercentage 18.44 ;
+    ns1:hasPopulationPercentage20To64 45.59 ;
+    ns1:hasPopulationPercentage65Plus 46.26 ;
+    ns1:hasPopulationPercentageUnder20 8.16 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27053-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 7.5 ;
+    ns1:hasPopulationPercentage 10.83 ;
+    ns1:hasPopulationPercentage20To64 54.21 ;
+    ns1:hasPopulationPercentage65Plus 39.19 ;
+    ns1:hasPopulationPercentageUnder20 6.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27054-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.8 ;
+    ns1:hasPopulationPercentage 23.43 ;
+    ns1:hasPopulationPercentage20To64 52.33 ;
+    ns1:hasPopulationPercentage65Plus 39.8 ;
+    ns1:hasPopulationPercentageUnder20 7.87 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27055-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.5 ;
+    ns1:hasPopulationPercentage 5.2 ;
+    ns1:hasPopulationPercentage20To64 49.48 ;
+    ns1:hasPopulationPercentage65Plus 44.49 ;
+    ns1:hasPopulationPercentageUnder20 6.02 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27056-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 291.9 ;
+    ns1:hasPopulationPercentage 1.25 ;
+    ns1:hasPopulationPercentage20To64 59.64 ;
+    ns1:hasPopulationPercentage65Plus 23.92 ;
+    ns1:hasPopulationPercentageUnder20 16.43 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27057-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 74.6 ;
+    ns1:hasPopulationPercentage 61.63 ;
+    ns1:hasPopulationPercentage20To64 57.4 ;
+    ns1:hasPopulationPercentage65Plus 27.39 ;
+    ns1:hasPopulationPercentageUnder20 15.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27058-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.6 ;
+    ns1:hasPopulationPercentage 11.61 ;
+    ns1:hasPopulationPercentage20To64 48.59 ;
+    ns1:hasPopulationPercentage65Plus 41.75 ;
+    ns1:hasPopulationPercentageUnder20 9.66 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27059-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.7 ;
+    ns1:hasPopulationPercentage 6.99 ;
+    ns1:hasPopulationPercentage20To64 47.7 ;
+    ns1:hasPopulationPercentage65Plus 43.82 ;
+    ns1:hasPopulationPercentageUnder20 8.48 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27060-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.8 ;
+    ns1:hasPopulationPercentage 20.51 ;
+    ns1:hasPopulationPercentage20To64 49.16 ;
+    ns1:hasPopulationPercentage65Plus 41.85 ;
+    ns1:hasPopulationPercentageUnder20 8.99 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27061-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.9 ;
+    ns1:hasPopulationPercentage 6.6 ;
+    ns1:hasPopulationPercentage20To64 49.2 ;
+    ns1:hasPopulationPercentage65Plus 41.63 ;
+    ns1:hasPopulationPercentageUnder20 9.17 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27062-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.6 ;
+    ns1:hasPopulationPercentage 2.65 ;
+    ns1:hasPopulationPercentage20To64 52.78 ;
+    ns1:hasPopulationPercentage65Plus 37.1 ;
+    ns1:hasPopulationPercentageUnder20 10.12 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27063-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.9 ;
+    ns1:hasPopulationPercentage 6.48 ;
+    ns1:hasPopulationPercentage20To64 50.75 ;
+    ns1:hasPopulationPercentage65Plus 35.65 ;
+    ns1:hasPopulationPercentageUnder20 13.6 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27064-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.5 ;
+    ns1:hasPopulationPercentage 6.22 ;
+    ns1:hasPopulationPercentage20To64 51.61 ;
+    ns1:hasPopulationPercentage65Plus 38.62 ;
+    ns1:hasPopulationPercentageUnder20 9.77 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27065-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.8 ;
+    ns1:hasPopulationPercentage 36.24 ;
+    ns1:hasPopulationPercentage20To64 56.42 ;
+    ns1:hasPopulationPercentage65Plus 29.82 ;
+    ns1:hasPopulationPercentageUnder20 13.76 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27066-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 138.0 ;
+    ns1:hasPopulationPercentage 60.37 ;
+    ns1:hasPopulationPercentage20To64 57.82 ;
+    ns1:hasPopulationPercentage65Plus 27.65 ;
+    ns1:hasPopulationPercentageUnder20 14.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27901-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 17.1 ;
+    ns1:hasPopulationPercentage 26.39 ;
+    ns1:hasPopulationPercentage20To64 51.2 ;
+    ns1:hasPopulationPercentage65Plus 39.54 ;
+    ns1:hasPopulationPercentageUnder20 9.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/27902-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 1241.4 ;
+    ns1:hasPopulationPercentage 33.51 ;
+    ns1:hasPopulationPercentage20To64 61.34 ;
+    ns1:hasPopulationPercentage65Plus 21.87 ;
+    ns1:hasPopulationPercentageUnder20 16.79 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32001-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 75.6 ;
+    ns1:hasPopulationPercentage 45.73 ;
+    ns1:hasPopulationPercentage20To64 57.59 ;
+    ns1:hasPopulationPercentage65Plus 25.58 ;
+    ns1:hasPopulationPercentageUnder20 16.83 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32002-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 61.5 ;
+    ns1:hasPopulationPercentage 1.68 ;
+    ns1:hasPopulationPercentage20To64 54.65 ;
+    ns1:hasPopulationPercentage65Plus 33.76 ;
+    ns1:hasPopulationPercentageUnder20 11.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32003-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 45.7 ;
+    ns1:hasPopulationPercentage 6.28 ;
+    ns1:hasPopulationPercentage20To64 49.26 ;
+    ns1:hasPopulationPercentage65Plus 42.49 ;
+    ns1:hasPopulationPercentageUnder20 8.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32004-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.1 ;
+    ns1:hasPopulationPercentage 11.31 ;
+    ns1:hasPopulationPercentage20To64 43.43 ;
+    ns1:hasPopulationPercentage65Plus 48.24 ;
+    ns1:hasPopulationPercentageUnder20 8.33 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32005-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 9.1 ;
+    ns1:hasPopulationPercentage 4.51 ;
+    ns1:hasPopulationPercentage20To64 50.23 ;
+    ns1:hasPopulationPercentage65Plus 41.55 ;
+    ns1:hasPopulationPercentageUnder20 8.22 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32006-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.7 ;
+    ns1:hasPopulationPercentage 22.77 ;
+    ns1:hasPopulationPercentage20To64 45.03 ;
+    ns1:hasPopulationPercentage65Plus 48.87 ;
+    ns1:hasPopulationPercentageUnder20 6.1 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32007-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.7 ;
+    ns1:hasPopulationPercentage 10.33 ;
+    ns1:hasPopulationPercentage20To64 51.36 ;
+    ns1:hasPopulationPercentage65Plus 42.59 ;
+    ns1:hasPopulationPercentageUnder20 6.05 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32008-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 370.1 ;
+    ns1:hasPopulationPercentage 7.68 ;
+    ns1:hasPopulationPercentage20To64 61.45 ;
+    ns1:hasPopulationPercentage65Plus 20.1 ;
+    ns1:hasPopulationPercentageUnder20 18.44 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32009-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 156.5 ;
+    ns1:hasPopulationPercentage 53.18 ;
+    ns1:hasPopulationPercentage20To64 60.09 ;
+    ns1:hasPopulationPercentage65Plus 23.66 ;
+    ns1:hasPopulationPercentageUnder20 16.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32010-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 56.7 ;
+    ns1:hasPopulationPercentage 2.41 ;
+    ns1:hasPopulationPercentage20To64 50.41 ;
+    ns1:hasPopulationPercentage65Plus 39.39 ;
+    ns1:hasPopulationPercentageUnder20 10.19 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32011-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.0 ;
+    ns1:hasPopulationPercentage 3.4 ;
+    ns1:hasPopulationPercentage20To64 43.9 ;
+    ns1:hasPopulationPercentage65Plus 49.5 ;
+    ns1:hasPopulationPercentageUnder20 6.61 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32012-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.7 ;
+    ns1:hasPopulationPercentage 3.65 ;
+    ns1:hasPopulationPercentage20To64 48.86 ;
+    ns1:hasPopulationPercentage65Plus 43.29 ;
+    ns1:hasPopulationPercentageUnder20 7.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32013-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 24.6 ;
+    ns1:hasPopulationPercentage 8.23 ;
+    ns1:hasPopulationPercentage20To64 43.77 ;
+    ns1:hasPopulationPercentage65Plus 46.36 ;
+    ns1:hasPopulationPercentageUnder20 9.87 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32014-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.4 ;
+    ns1:hasPopulationPercentage 6.68 ;
+    ns1:hasPopulationPercentage20To64 48.06 ;
+    ns1:hasPopulationPercentage65Plus 45.76 ;
+    ns1:hasPopulationPercentageUnder20 6.18 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32015-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.6 ;
+    ns1:hasPopulationPercentage 3.12 ;
+    ns1:hasPopulationPercentage20To64 40.18 ;
+    ns1:hasPopulationPercentage65Plus 53.32 ;
+    ns1:hasPopulationPercentageUnder20 6.51 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32016-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6.6 ;
+    ns1:hasPopulationPercentage 3.38 ;
+    ns1:hasPopulationPercentage20To64 41.42 ;
+    ns1:hasPopulationPercentage65Plus 55.33 ;
+    ns1:hasPopulationPercentageUnder20 3.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32017-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6.0 ;
+    ns1:hasPopulationPercentage 5.35 ;
+    ns1:hasPopulationPercentage20To64 52.42 ;
+    ns1:hasPopulationPercentage65Plus 37.99 ;
+    ns1:hasPopulationPercentageUnder20 9.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32018-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 25.3 ;
+    ns1:hasPopulationPercentage 7.78 ;
+    ns1:hasPopulationPercentage20To64 45.9 ;
+    ns1:hasPopulationPercentage65Plus 46.16 ;
+    ns1:hasPopulationPercentageUnder20 7.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32019-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 262.1 ;
+    ns1:hasPopulationPercentage 54.26 ;
+    ns1:hasPopulationPercentage20To64 55.35 ;
+    ns1:hasPopulationPercentage65Plus 29.85 ;
+    ns1:hasPopulationPercentageUnder20 14.8 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32020-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 26.1 ;
+    ns1:hasPopulationPercentage 14.54 ;
+    ns1:hasPopulationPercentage20To64 47.99 ;
+    ns1:hasPopulationPercentage65Plus 44.7 ;
+    ns1:hasPopulationPercentageUnder20 7.31 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32021-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 7.8 ;
+    ns1:hasPopulationPercentage 3.84 ;
+    ns1:hasPopulationPercentage20To64 45.51 ;
+    ns1:hasPopulationPercentage65Plus 44.03 ;
+    ns1:hasPopulationPercentageUnder20 10.45 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32022-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.4 ;
+    ns1:hasPopulationPercentage 8.53 ;
+    ns1:hasPopulationPercentage20To64 47.43 ;
+    ns1:hasPopulationPercentage65Plus 43.62 ;
+    ns1:hasPopulationPercentageUnder20 8.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32023-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.1 ;
+    ns1:hasPopulationPercentage 45.41 ;
+    ns1:hasPopulationPercentage20To64 52.06 ;
+    ns1:hasPopulationPercentage65Plus 39.45 ;
+    ns1:hasPopulationPercentageUnder20 8.49 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32024-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 84.6 ;
+    ns1:hasPopulationPercentage 33.62 ;
+    ns1:hasPopulationPercentage20To64 52.12 ;
+    ns1:hasPopulationPercentage65Plus 34.82 ;
+    ns1:hasPopulationPercentageUnder20 13.06 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32025-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.8 ;
+    ns1:hasPopulationPercentage 7.08 ;
+    ns1:hasPopulationPercentage20To64 53.7 ;
+    ns1:hasPopulationPercentage65Plus 37.02 ;
+    ns1:hasPopulationPercentageUnder20 9.28 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32026-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 84.7 ;
+    ns1:hasPopulationPercentage 2.22 ;
+    ns1:hasPopulationPercentage20To64 53.98 ;
+    ns1:hasPopulationPercentage65Plus 34.46 ;
+    ns1:hasPopulationPercentageUnder20 11.56 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32027-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 38.0 ;
+    ns1:hasPopulationPercentage 6.79 ;
+    ns1:hasPopulationPercentage20To64 54.64 ;
+    ns1:hasPopulationPercentage65Plus 38.12 ;
+    ns1:hasPopulationPercentageUnder20 7.23 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32028-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 13.0 ;
+    ns1:hasPopulationPercentage 6.21 ;
+    ns1:hasPopulationPercentage20To64 45.75 ;
+    ns1:hasPopulationPercentage65Plus 48.63 ;
+    ns1:hasPopulationPercentageUnder20 5.62 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32029-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 2.7 ;
+    ns1:hasPopulationPercentage 12.8 ;
+    ns1:hasPopulationPercentage20To64 43.95 ;
+    ns1:hasPopulationPercentage65Plus 51.8 ;
+    ns1:hasPopulationPercentageUnder20 4.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32030-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.9 ;
+    ns1:hasPopulationPercentage 17.04 ;
+    ns1:hasPopulationPercentage20To64 51.83 ;
+    ns1:hasPopulationPercentage65Plus 40.75 ;
+    ns1:hasPopulationPercentageUnder20 7.42 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32031-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 29.2 ;
+    ns1:hasPopulationPercentage 0.76 ;
+    ns1:hasPopulationPercentage20To64 50.05 ;
+    ns1:hasPopulationPercentage65Plus 40.27 ;
+    ns1:hasPopulationPercentageUnder20 9.68 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32032-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 72.8 ;
+    ns1:hasPopulationPercentage 50.4 ;
+    ns1:hasPopulationPercentage20To64 55.07 ;
+    ns1:hasPopulationPercentage65Plus 28.94 ;
+    ns1:hasPopulationPercentageUnder20 15.99 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32033-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 22.6 ;
+    ns1:hasPopulationPercentage 3.78 ;
+    ns1:hasPopulationPercentage20To64 48.28 ;
+    ns1:hasPopulationPercentage65Plus 47.34 ;
+    ns1:hasPopulationPercentageUnder20 4.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32034-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 7.0 ;
+    ns1:hasPopulationPercentage 22.14 ;
+    ns1:hasPopulationPercentage20To64 56.64 ;
+    ns1:hasPopulationPercentage65Plus 35.42 ;
+    ns1:hasPopulationPercentageUnder20 7.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32035-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.1 ;
+    ns1:hasPopulationPercentage 5.12 ;
+    ns1:hasPopulationPercentage20To64 43.3 ;
+    ns1:hasPopulationPercentage65Plus 49.63 ;
+    ns1:hasPopulationPercentageUnder20 7.07 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32036-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 22.3 ;
+    ns1:hasPopulationPercentage 9.43 ;
+    ns1:hasPopulationPercentage20To64 48.58 ;
+    ns1:hasPopulationPercentage65Plus 41.65 ;
+    ns1:hasPopulationPercentageUnder20 9.76 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32037-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 25.1 ;
+    ns1:hasPopulationPercentage 4.88 ;
+    ns1:hasPopulationPercentage20To64 52.88 ;
+    ns1:hasPopulationPercentage65Plus 37.9 ;
+    ns1:hasPopulationPercentageUnder20 9.22 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32038-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.4 ;
+    ns1:hasPopulationPercentage 1.93 ;
+    ns1:hasPopulationPercentage20To64 46.69 ;
+    ns1:hasPopulationPercentage65Plus 46.07 ;
+    ns1:hasPopulationPercentageUnder20 7.23 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32039-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 5.3 ;
+    ns1:hasPopulationPercentage 4.67 ;
+    ns1:hasPopulationPercentage20To64 44.22 ;
+    ns1:hasPopulationPercentage65Plus 48.13 ;
+    ns1:hasPopulationPercentageUnder20 7.65 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32040-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 39.6 ;
+    ns1:hasPopulationPercentage 10.05 ;
+    ns1:hasPopulationPercentage20To64 45.08 ;
+    ns1:hasPopulationPercentage65Plus 45.68 ;
+    ns1:hasPopulationPercentageUnder20 9.24 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32041-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.2 ;
+    ns1:hasPopulationPercentage 10.92 ;
+    ns1:hasPopulationPercentage20To64 40.57 ;
+    ns1:hasPopulationPercentage65Plus 55.86 ;
+    ns1:hasPopulationPercentageUnder20 3.57 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32042-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.6 ;
+    ns1:hasPopulationPercentage 27.73 ;
+    ns1:hasPopulationPercentage20To64 49.69 ;
+    ns1:hasPopulationPercentage65Plus 43.44 ;
+    ns1:hasPopulationPercentageUnder20 6.87 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32043-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 28.2 ;
+    ns1:hasPopulationPercentage 20.19 ;
+    ns1:hasPopulationPercentage20To64 53.69 ;
+    ns1:hasPopulationPercentage65Plus 33.29 ;
+    ns1:hasPopulationPercentageUnder20 13.02 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32044-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 6.7 ;
+    ns1:hasPopulationPercentage 20.85 ;
+    ns1:hasPopulationPercentage20To64 44.72 ;
+    ns1:hasPopulationPercentage65Plus 46.94 ;
+    ns1:hasPopulationPercentageUnder20 8.34 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32045-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 69.0 ;
+    ns1:hasPopulationPercentage 10.53 ;
+    ns1:hasPopulationPercentage20To64 52.82 ;
+    ns1:hasPopulationPercentage65Plus 33.6 ;
+    ns1:hasPopulationPercentageUnder20 13.58 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32046-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.3 ;
+    ns1:hasPopulationPercentage 7.16 ;
+    ns1:hasPopulationPercentage20To64 44.02 ;
+    ns1:hasPopulationPercentage65Plus 49.12 ;
+    ns1:hasPopulationPercentageUnder20 6.86 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32047-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 38.8 ;
+    ns1:hasPopulationPercentage 11.67 ;
+    ns1:hasPopulationPercentage20To64 50.51 ;
+    ns1:hasPopulationPercentage65Plus 38.41 ;
+    ns1:hasPopulationPercentageUnder20 11.08 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32048-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 9.5 ;
+    ns1:hasPopulationPercentage 18.33 ;
+    ns1:hasPopulationPercentage20To64 49.24 ;
+    ns1:hasPopulationPercentage65Plus 43.49 ;
+    ns1:hasPopulationPercentageUnder20 7.27 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32049-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 4.9 ;
+    ns1:hasPopulationPercentage 24.19 ;
+    ns1:hasPopulationPercentage20To64 50.83 ;
+    ns1:hasPopulationPercentage65Plus 45.52 ;
+    ns1:hasPopulationPercentageUnder20 3.64 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32050-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.3 ;
+    ns1:hasPopulationPercentage 9.8 ;
+    ns1:hasPopulationPercentage20To64 45.96 ;
+    ns1:hasPopulationPercentage65Plus 45.59 ;
+    ns1:hasPopulationPercentageUnder20 8.45 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32051-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.6 ;
+    ns1:hasPopulationPercentage 21.54 ;
+    ns1:hasPopulationPercentage20To64 49.86 ;
+    ns1:hasPopulationPercentage65Plus 45.8 ;
+    ns1:hasPopulationPercentageUnder20 4.35 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32052-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.1 ;
+    ns1:hasPopulationPercentage 1.42 ;
+    ns1:hasPopulationPercentage20To64 52.13 ;
+    ns1:hasPopulationPercentage65Plus 38.65 ;
+    ns1:hasPopulationPercentageUnder20 9.23 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32053-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 23.5 ;
+    ns1:hasPopulationPercentage 6.82 ;
+    ns1:hasPopulationPercentage20To64 52.11 ;
+    ns1:hasPopulationPercentage65Plus 38.49 ;
+    ns1:hasPopulationPercentageUnder20 9.4 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32054-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 1249.1 ;
+    ns1:hasPopulationPercentage 72.51 ;
+    ns1:hasPopulationPercentage20To64 57.24 ;
+    ns1:hasPopulationPercentage65Plus 27.09 ;
+    ns1:hasPopulationPercentageUnder20 15.67 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32055-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 34.6 ;
+    ns1:hasPopulationPercentage 9.43 ;
+    ns1:hasPopulationPercentage20To64 52.72 ;
+    ns1:hasPopulationPercentage65Plus 36.54 ;
+    ns1:hasPopulationPercentageUnder20 10.74 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32056-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 26.9 ;
+    ns1:hasPopulationPercentage 9.07 ;
+    ns1:hasPopulationPercentage20To64 49.9 ;
+    ns1:hasPopulationPercentage65Plus 43.14 ;
+    ns1:hasPopulationPercentageUnder20 6.96 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32057-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.0 ;
+    ns1:hasPopulationPercentage 18.32 ;
+    ns1:hasPopulationPercentage20To64 47.9 ;
+    ns1:hasPopulationPercentage65Plus 47.7 ;
+    ns1:hasPopulationPercentageUnder20 4.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32058-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 111.4 ;
+    ns1:hasPopulationPercentage 4.66 ;
+    ns1:hasPopulationPercentage20To64 57.22 ;
+    ns1:hasPopulationPercentage65Plus 25.32 ;
+    ns1:hasPopulationPercentageUnder20 17.46 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32059-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.9 ;
+    ns1:hasPopulationPercentage 1.23 ;
+    ns1:hasPopulationPercentage20To64 49.19 ;
+    ns1:hasPopulationPercentage65Plus 42.45 ;
+    ns1:hasPopulationPercentageUnder20 8.36 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32060-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 28.0 ;
+    ns1:hasPopulationPercentage 3.4 ;
+    ns1:hasPopulationPercentage20To64 55.5 ;
+    ns1:hasPopulationPercentage65Plus 34.89 ;
+    ns1:hasPopulationPercentageUnder20 9.6 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32061-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.9 ;
+    ns1:hasPopulationPercentage 4.2 ;
+    ns1:hasPopulationPercentage20To64 50.77 ;
+    ns1:hasPopulationPercentage65Plus 40.44 ;
+    ns1:hasPopulationPercentageUnder20 8.79 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32062-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 18.6 ;
+    ns1:hasPopulationPercentage 4.21 ;
+    ns1:hasPopulationPercentage20To64 45.16 ;
+    ns1:hasPopulationPercentage65Plus 48.39 ;
+    ns1:hasPopulationPercentageUnder20 6.45 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32063-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 22.9 ;
+    ns1:hasPopulationPercentage 52.32 ;
+    ns1:hasPopulationPercentage20To64 50.91 ;
+    ns1:hasPopulationPercentage65Plus 40.05 ;
+    ns1:hasPopulationPercentageUnder20 9.04 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32064-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 46.6 ;
+    ns1:hasPopulationPercentage 2.71 ;
+    ns1:hasPopulationPercentage20To64 52.29 ;
+    ns1:hasPopulationPercentage65Plus 41.83 ;
+    ns1:hasPopulationPercentageUnder20 5.88 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32065-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 43.6 ;
+    ns1:hasPopulationPercentage 2.84 ;
+    ns1:hasPopulationPercentage20To64 52.42 ;
+    ns1:hasPopulationPercentage65Plus 39.25 ;
+    ns1:hasPopulationPercentageUnder20 8.33 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32066-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 18.7 ;
+    ns1:hasPopulationPercentage 3.46 ;
+    ns1:hasPopulationPercentage20To64 45.9 ;
+    ns1:hasPopulationPercentage65Plus 46.42 ;
+    ns1:hasPopulationPercentageUnder20 7.68 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32067-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 16.0 ;
+    ns1:hasPopulationPercentage 6.02 ;
+    ns1:hasPopulationPercentage20To64 46.31 ;
+    ns1:hasPopulationPercentage65Plus 47.09 ;
+    ns1:hasPopulationPercentageUnder20 6.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32068-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.4 ;
+    ns1:hasPopulationPercentage 8.74 ;
+    ns1:hasPopulationPercentage20To64 47.16 ;
+    ns1:hasPopulationPercentage65Plus 45.27 ;
+    ns1:hasPopulationPercentageUnder20 7.57 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32069-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 195.4 ;
+    ns1:hasPopulationPercentage 32.62 ;
+    ns1:hasPopulationPercentage20To64 55.73 ;
+    ns1:hasPopulationPercentage65Plus 31.14 ;
+    ns1:hasPopulationPercentageUnder20 13.14 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32070-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 8.4 ;
+    ns1:hasPopulationPercentage 14.03 ;
+    ns1:hasPopulationPercentage20To64 43.41 ;
+    ns1:hasPopulationPercentage65Plus 51.16 ;
+    ns1:hasPopulationPercentageUnder20 5.43 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32071-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.0 ;
+    ns1:hasPopulationPercentage 5.58 ;
+    ns1:hasPopulationPercentage20To64 48.25 ;
+    ns1:hasPopulationPercentage65Plus 45.05 ;
+    ns1:hasPopulationPercentageUnder20 6.7 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32072-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 117.4 ;
+    ns1:hasPopulationPercentage 16.77 ;
+    ns1:hasPopulationPercentage20To64 55.04 ;
+    ns1:hasPopulationPercentage65Plus 32.96 ;
+    ns1:hasPopulationPercentageUnder20 12.0 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32073-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 13.8 ;
+    ns1:hasPopulationPercentage 5.53 ;
+    ns1:hasPopulationPercentage20To64 48.24 ;
+    ns1:hasPopulationPercentage65Plus 42.27 ;
+    ns1:hasPopulationPercentageUnder20 9.49 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32074-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 35.5 ;
+    ns1:hasPopulationPercentage 3.93 ;
+    ns1:hasPopulationPercentage20To64 47.38 ;
+    ns1:hasPopulationPercentage65Plus 43.41 ;
+    ns1:hasPopulationPercentageUnder20 9.21 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32075-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 146.3 ;
+    ns1:hasPopulationPercentage 3.97 ;
+    ns1:hasPopulationPercentage20To64 59.94 ;
+    ns1:hasPopulationPercentage65Plus 22.71 ;
+    ns1:hasPopulationPercentageUnder20 17.34 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32076-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.8 ;
+    ns1:hasPopulationPercentage 7.48 ;
+    ns1:hasPopulationPercentage20To64 48.4 ;
+    ns1:hasPopulationPercentage65Plus 44.93 ;
+    ns1:hasPopulationPercentageUnder20 6.67 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32077-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.6 ;
+    ns1:hasPopulationPercentage 5.67 ;
+    ns1:hasPopulationPercentage20To64 49.95 ;
+    ns1:hasPopulationPercentage65Plus 42.13 ;
+    ns1:hasPopulationPercentageUnder20 7.91 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32078-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 13.8 ;
+    ns1:hasPopulationPercentage 5.58 ;
+    ns1:hasPopulationPercentage20To64 43.35 ;
+    ns1:hasPopulationPercentage65Plus 50.47 ;
+    ns1:hasPopulationPercentageUnder20 6.18 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32079-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 58.7 ;
+    ns1:hasPopulationPercentage 1.02 ;
+    ns1:hasPopulationPercentage20To64 54.77 ;
+    ns1:hasPopulationPercentage65Plus 34.62 ;
+    ns1:hasPopulationPercentageUnder20 10.62 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32080-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.9 ;
+    ns1:hasPopulationPercentage 12.08 ;
+    ns1:hasPopulationPercentage20To64 48.33 ;
+    ns1:hasPopulationPercentage65Plus 44.38 ;
+    ns1:hasPopulationPercentageUnder20 7.29 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32081-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 40.0 ;
+    ns1:hasPopulationPercentage 1.6 ;
+    ns1:hasPopulationPercentage20To64 53.11 ;
+    ns1:hasPopulationPercentage65Plus 34.16 ;
+    ns1:hasPopulationPercentageUnder20 12.73 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32082-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.4 ;
+    ns1:hasPopulationPercentage 6.34 ;
+    ns1:hasPopulationPercentage20To64 45.1 ;
+    ns1:hasPopulationPercentage65Plus 46.91 ;
+    ns1:hasPopulationPercentageUnder20 7.98 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32083-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 3.0 ;
+    ns1:hasPopulationPercentage 3.47 ;
+    ns1:hasPopulationPercentage20To64 47.65 ;
+    ns1:hasPopulationPercentage65Plus 45.36 ;
+    ns1:hasPopulationPercentageUnder20 6.99 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32084-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.3 ;
+    ns1:hasPopulationPercentage 5.73 ;
+    ns1:hasPopulationPercentage20To64 48.51 ;
+    ns1:hasPopulationPercentage65Plus 42.33 ;
+    ns1:hasPopulationPercentageUnder20 9.17 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32085-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 147.9 ;
+    ns1:hasPopulationPercentage 56.5 ;
+    ns1:hasPopulationPercentage20To64 56.68 ;
+    ns1:hasPopulationPercentage65Plus 28.48 ;
+    ns1:hasPopulationPercentageUnder20 14.84 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32086-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.0 ;
+    ns1:hasPopulationPercentage 50.26 ;
+    ns1:hasPopulationPercentage20To64 46.6 ;
+    ns1:hasPopulationPercentage65Plus 41.99 ;
+    ns1:hasPopulationPercentageUnder20 11.41 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32087-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.8 ;
+    ns1:hasPopulationPercentage 1.26 ;
+    ns1:hasPopulationPercentage20To64 50.65 ;
+    ns1:hasPopulationPercentage65Plus 39.01 ;
+    ns1:hasPopulationPercentageUnder20 10.34 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32088-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.6 ;
+    ns1:hasPopulationPercentage 7.24 ;
+    ns1:hasPopulationPercentage20To64 49.31 ;
+    ns1:hasPopulationPercentage65Plus 42.28 ;
+    ns1:hasPopulationPercentageUnder20 8.4 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32089-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 11.0 ;
+    ns1:hasPopulationPercentage 6.13 ;
+    ns1:hasPopulationPercentage20To64 44.34 ;
+    ns1:hasPopulationPercentage65Plus 50.98 ;
+    ns1:hasPopulationPercentageUnder20 4.68 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32090-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 38.0 ;
+    ns1:hasPopulationPercentage 4.1 ;
+    ns1:hasPopulationPercentage20To64 50.51 ;
+    ns1:hasPopulationPercentage65Plus 39.06 ;
+    ns1:hasPopulationPercentageUnder20 10.43 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32091-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 10.6 ;
+    ns1:hasPopulationPercentage 6.58 ;
+    ns1:hasPopulationPercentage20To64 42.91 ;
+    ns1:hasPopulationPercentage65Plus 51.29 ;
+    ns1:hasPopulationPercentageUnder20 5.8 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/32092-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 2.5 ;
+    ns1:hasPopulationPercentage 9.27 ;
+    ns1:hasPopulationPercentage20To64 50.5 ;
+    ns1:hasPopulationPercentage65Plus 42.71 ;
+    ns1:hasPopulationPercentageUnder20 6.79 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36001-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 61.7 ;
+    ns1:hasPopulationPercentage 21.87 ;
+    ns1:hasPopulationPercentage20To64 54.07 ;
+    ns1:hasPopulationPercentage65Plus 35.17 ;
+    ns1:hasPopulationPercentageUnder20 10.76 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36002-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 98.2 ;
+    ns1:hasPopulationPercentage 2.93 ;
+    ns1:hasPopulationPercentage20To64 57.87 ;
+    ns1:hasPopulationPercentage65Plus 24.42 ;
+    ns1:hasPopulationPercentageUnder20 17.72 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36003-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 358.7 ;
+    ns1:hasPopulationPercentage 2.89 ;
+    ns1:hasPopulationPercentage20To64 60.05 ;
+    ns1:hasPopulationPercentage65Plus 24.46 ;
+    ns1:hasPopulationPercentageUnder20 15.49 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36004-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 383.6 ;
+    ns1:hasPopulationPercentage 14.46 ;
+    ns1:hasPopulationPercentage20To64 59.51 ;
+    ns1:hasPopulationPercentage65Plus 25.38 ;
+    ns1:hasPopulationPercentageUnder20 15.12 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36005-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 141.1 ;
+    ns1:hasPopulationPercentage 29.1 ;
+    ns1:hasPopulationPercentage20To64 59.28 ;
+    ns1:hasPopulationPercentage65Plus 25.35 ;
+    ns1:hasPopulationPercentageUnder20 15.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36006-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 591.4 ;
+    ns1:hasPopulationPercentage 12.51 ;
+    ns1:hasPopulationPercentage20To64 60.48 ;
+    ns1:hasPopulationPercentage65Plus 22.64 ;
+    ns1:hasPopulationPercentageUnder20 16.87 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36007-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 26.0 ;
+    ns1:hasPopulationPercentage 1.32 ;
+    ns1:hasPopulationPercentage20To64 53.77 ;
+    ns1:hasPopulationPercentage65Plus 36.29 ;
+    ns1:hasPopulationPercentageUnder20 9.95 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36008-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 701.1 ;
+    ns1:hasPopulationPercentage 32.63 ;
+    ns1:hasPopulationPercentage20To64 60.41 ;
+    ns1:hasPopulationPercentage65Plus 23.79 ;
+    ns1:hasPopulationPercentageUnder20 15.8 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36009-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 47.7 ;
+    ns1:hasPopulationPercentage 41.63 ;
+    ns1:hasPopulationPercentage20To64 55.12 ;
+    ns1:hasPopulationPercentage65Plus 31.34 ;
+    ns1:hasPopulationPercentageUnder20 13.54 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36010-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 111.2 ;
+    ns1:hasPopulationPercentage 9.89 ;
+    ns1:hasPopulationPercentage20To64 59.73 ;
+    ns1:hasPopulationPercentage65Plus 25.19 ;
+    ns1:hasPopulationPercentageUnder20 15.08 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36011-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage20To64 "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage65Plus "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentageUnder20 "N/A"^^xsd:decimal ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36012-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage20To64 "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentage65Plus "N/A"^^xsd:decimal ;
+    ns1:hasPopulationPercentageUnder20 "N/A"^^xsd:decimal ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36013-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 18.3 ;
+    ns1:hasPopulationPercentage 20.5 ;
+    ns1:hasPopulationPercentage20To64 53.37 ;
+    ns1:hasPopulationPercentage65Plus 36.21 ;
+    ns1:hasPopulationPercentageUnder20 10.42 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36014-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 33.5 ;
+    ns1:hasPopulationPercentage 16.0 ;
+    ns1:hasPopulationPercentage20To64 51.66 ;
+    ns1:hasPopulationPercentage65Plus 41.22 ;
+    ns1:hasPopulationPercentageUnder20 7.12 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36015-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 55.7 ;
+    ns1:hasPopulationPercentage 13.44 ;
+    ns1:hasPopulationPercentage20To64 55.15 ;
+    ns1:hasPopulationPercentage65Plus 32.22 ;
+    ns1:hasPopulationPercentageUnder20 12.63 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36016-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 12.8 ;
+    ns1:hasPopulationPercentage 2.4 ;
+    ns1:hasPopulationPercentage20To64 52.69 ;
+    ns1:hasPopulationPercentage65Plus 39.41 ;
+    ns1:hasPopulationPercentageUnder20 7.9 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36017-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 71.6 ;
+    ns1:hasPopulationPercentage 86.77 ;
+    ns1:hasPopulationPercentage20To64 56.03 ;
+    ns1:hasPopulationPercentage65Plus 29.41 ;
+    ns1:hasPopulationPercentageUnder20 14.56 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36018-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 18.1 ;
+    ns1:hasPopulationPercentage 13.23 ;
+    ns1:hasPopulationPercentage20To64 50.34 ;
+    ns1:hasPopulationPercentage65Plus 40.39 ;
+    ns1:hasPopulationPercentageUnder20 9.27 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36019-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 20.3 ;
+    ns1:hasPopulationPercentage 0.38 ;
+    ns1:hasPopulationPercentage20To64 55.23 ;
+    ns1:hasPopulationPercentage65Plus 32.75 ;
+    ns1:hasPopulationPercentageUnder20 12.02 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36020-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 15.0 ;
+    ns1:hasPopulationPercentage 5.63 ;
+    ns1:hasPopulationPercentage20To64 51.01 ;
+    ns1:hasPopulationPercentage65Plus 39.6 ;
+    ns1:hasPopulationPercentageUnder20 9.39 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36021-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 202.8 ;
+    ns1:hasPopulationPercentage 3.53 ;
+    ns1:hasPopulationPercentage20To64 61.56 ;
+    ns1:hasPopulationPercentage65Plus 21.31 ;
+    ns1:hasPopulationPercentageUnder20 17.14 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36022-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 496.9 ;
+    ns1:hasPopulationPercentage 9.82 ;
+    ns1:hasPopulationPercentage20To64 60.22 ;
+    ns1:hasPopulationPercentage65Plus 24.67 ;
+    ns1:hasPopulationPercentageUnder20 15.11 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36023-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 487.5 ;
+    ns1:hasPopulationPercentage 19.62 ;
+    ns1:hasPopulationPercentage20To64 58.45 ;
+    ns1:hasPopulationPercentage65Plus 26.21 ;
+    ns1:hasPopulationPercentageUnder20 15.35 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36024-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 61.9 ;
+    ns1:hasPopulationPercentage 51.21 ;
+    ns1:hasPopulationPercentage20To64 57.71 ;
+    ns1:hasPopulationPercentage65Plus 26.67 ;
+    ns1:hasPopulationPercentageUnder20 15.63 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36025-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 21.9 ;
+    ns1:hasPopulationPercentage 1.95 ;
+    ns1:hasPopulationPercentage20To64 54.75 ;
+    ns1:hasPopulationPercentage65Plus 34.72 ;
+    ns1:hasPopulationPercentageUnder20 10.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36026-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 654.0 ;
+    ns1:hasPopulationPercentage 29.3 ;
+    ns1:hasPopulationPercentage20To64 59.79 ;
+    ns1:hasPopulationPercentage65Plus 23.87 ;
+    ns1:hasPopulationPercentageUnder20 16.33 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36027-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 188.5 ;
+    ns1:hasPopulationPercentage 4.73 ;
+    ns1:hasPopulationPercentage20To64 57.96 ;
+    ns1:hasPopulationPercentage65Plus 26.21 ;
+    ns1:hasPopulationPercentageUnder20 15.84 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36028-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 89.4 ;
+    ns1:hasPopulationPercentage 4.23 ;
+    ns1:hasPopulationPercentage20To64 57.73 ;
+    ns1:hasPopulationPercentage65Plus 27.81 ;
+    ns1:hasPopulationPercentageUnder20 14.46 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36029-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 550.9 ;
+    ns1:hasPopulationPercentage 23.61 ;
+    ns1:hasPopulationPercentage20To64 59.92 ;
+    ns1:hasPopulationPercentage65Plus 23.77 ;
+    ns1:hasPopulationPercentageUnder20 16.31 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36030-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 54.1 ;
+    ns1:hasPopulationPercentage 10.43 ;
+    ns1:hasPopulationPercentage20To64 55.88 ;
+    ns1:hasPopulationPercentage65Plus 31.29 ;
+    ns1:hasPopulationPercentageUnder20 12.83 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36031-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 320.3 ;
+    ns1:hasPopulationPercentage 1.73 ;
+    ns1:hasPopulationPercentage20To64 64.19 ;
+    ns1:hasPopulationPercentage65Plus 22.57 ;
+    ns1:hasPopulationPercentageUnder20 13.24 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36032-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 100.4 ;
+    ns1:hasPopulationPercentage 12.5 ;
+    ns1:hasPopulationPercentage20To64 56.44 ;
+    ns1:hasPopulationPercentage65Plus 27.47 ;
+    ns1:hasPopulationPercentageUnder20 16.09 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36033-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 285.6 ;
+    ns1:hasPopulationPercentage 3.56 ;
+    ns1:hasPopulationPercentage20To64 59.91 ;
+    ns1:hasPopulationPercentage65Plus 22.84 ;
+    ns1:hasPopulationPercentageUnder20 17.25 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36034-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 55.5 ;
+    ns1:hasPopulationPercentage 8.56 ;
+    ns1:hasPopulationPercentage20To64 56.03 ;
+    ns1:hasPopulationPercentage65Plus 31.33 ;
+    ns1:hasPopulationPercentageUnder20 12.64 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36035-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 522.2 ;
+    ns1:hasPopulationPercentage 4.24 ;
+    ns1:hasPopulationPercentage20To64 59.44 ;
+    ns1:hasPopulationPercentage65Plus 24.54 ;
+    ns1:hasPopulationPercentageUnder20 16.02 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36036-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 36.8 ;
+    ns1:hasPopulationPercentage 6.01 ;
+    ns1:hasPopulationPercentage20To64 55.98 ;
+    ns1:hasPopulationPercentage65Plus 29.72 ;
+    ns1:hasPopulationPercentageUnder20 14.3 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36037-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 61.0 ;
+    ns1:hasPopulationPercentage 0.71 ;
+    ns1:hasPopulationPercentage20To64 57.02 ;
+    ns1:hasPopulationPercentage65Plus 28.05 ;
+    ns1:hasPopulationPercentageUnder20 14.93 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36038-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 703.5 ;
+    ns1:hasPopulationPercentage 66.32 ;
+    ns1:hasPopulationPercentage20To64 59.6 ;
+    ns1:hasPopulationPercentage65Plus 23.32 ;
+    ns1:hasPopulationPercentageUnder20 17.08 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36039-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 342.2 ;
+    ns1:hasPopulationPercentage 4.89 ;
+    ns1:hasPopulationPercentage20To64 62.98 ;
+    ns1:hasPopulationPercentage65Plus 18.51 ;
+    ns1:hasPopulationPercentageUnder20 18.5 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36040-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 121.2 ;
+    ns1:hasPopulationPercentage 8.32 ;
+    ns1:hasPopulationPercentage20To64 56.41 ;
+    ns1:hasPopulationPercentage65Plus 29.17 ;
+    ns1:hasPopulationPercentageUnder20 14.42 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36041-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 513.6 ;
+    ns1:hasPopulationPercentage 13.87 ;
+    ns1:hasPopulationPercentage20To64 60.61 ;
+    ns1:hasPopulationPercentage65Plus 21.8 ;
+    ns1:hasPopulationPercentageUnder20 17.59 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36042-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 184.9 ;
+    ns1:hasPopulationPercentage 54.37 ;
+    ns1:hasPopulationPercentage20To64 61.79 ;
+    ns1:hasPopulationPercentage65Plus 20.05 ;
+    ns1:hasPopulationPercentageUnder20 18.16 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36043-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 64.2 ;
+    ns1:hasPopulationPercentage 4.45 ;
+    ns1:hasPopulationPercentage20To64 57.76 ;
+    ns1:hasPopulationPercentage65Plus 27.07 ;
+    ns1:hasPopulationPercentageUnder20 15.17 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36044-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 459.3 ;
+    ns1:hasPopulationPercentage 9.28 ;
+    ns1:hasPopulationPercentage20To64 63.49 ;
+    ns1:hasPopulationPercentage65Plus 20.47 ;
+    ns1:hasPopulationPercentageUnder20 16.04 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36045-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 555.5 ;
+    ns1:hasPopulationPercentage 6.76 ;
+    ns1:hasPopulationPercentage20To64 59.0 ;
+    ns1:hasPopulationPercentage65Plus 25.47 ;
+    ns1:hasPopulationPercentageUnder20 15.53 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36046-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 262.4 ;
+    ns1:hasPopulationPercentage 4.67 ;
+    ns1:hasPopulationPercentage20To64 59.93 ;
+    ns1:hasPopulationPercentage65Plus 21.18 ;
+    ns1:hasPopulationPercentageUnder20 18.89 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36047-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 14.5 ;
+    ns1:hasPopulationPercentage 5.69 ;
+    ns1:hasPopulationPercentage20To64 52.33 ;
+    ns1:hasPopulationPercentage65Plus 38.12 ;
+    ns1:hasPopulationPercentageUnder20 9.55 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36048-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 148.9 ;
+    ns1:hasPopulationPercentage 12.9 ;
+    ns1:hasPopulationPercentage20To64 59.9 ;
+    ns1:hasPopulationPercentage65Plus 25.38 ;
+    ns1:hasPopulationPercentageUnder20 14.73 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36049-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 261.7 ;
+    ns1:hasPopulationPercentage 2.2 ;
+    ns1:hasPopulationPercentage20To64 63.27 ;
+    ns1:hasPopulationPercentage65Plus 16.29 ;
+    ns1:hasPopulationPercentageUnder20 20.44 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36050-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 170.0 ;
+    ns1:hasPopulationPercentage 24.91 ;
+    ns1:hasPopulationPercentage20To64 59.72 ;
+    ns1:hasPopulationPercentage65Plus 23.43 ;
+    ns1:hasPopulationPercentageUnder20 16.85 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36051-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 399.1 ;
+    ns1:hasPopulationPercentage 16.24 ;
+    ns1:hasPopulationPercentage20To64 59.05 ;
+    ns1:hasPopulationPercentage65Plus 25.59 ;
+    ns1:hasPopulationPercentageUnder20 15.36 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36052-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 53.0 ;
+    ns1:hasPopulationPercentage 22.52 ;
+    ns1:hasPopulationPercentage20To64 56.59 ;
+    ns1:hasPopulationPercentage65Plus 28.41 ;
+    ns1:hasPopulationPercentageUnder20 15.0 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36053-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 302.8 ;
+    ns1:hasPopulationPercentage 1.77 ;
+    ns1:hasPopulationPercentage20To64 61.01 ;
+    ns1:hasPopulationPercentage65Plus 19.82 ;
+    ns1:hasPopulationPercentageUnder20 19.17 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36054-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 129.6 ;
+    ns1:hasPopulationPercentage 27.12 ;
+    ns1:hasPopulationPercentage20To64 60.63 ;
+    ns1:hasPopulationPercentage65Plus 23.43 ;
+    ns1:hasPopulationPercentageUnder20 15.94 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36055-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 256.1 ;
+    ns1:hasPopulationPercentage 34.35 ;
+    ns1:hasPopulationPercentage20To64 59.71 ;
+    ns1:hasPopulationPercentage65Plus 23.03 ;
+    ns1:hasPopulationPercentageUnder20 17.26 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36056-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 142.2 ;
+    ns1:hasPopulationPercentage 17.46 ;
+    ns1:hasPopulationPercentage20To64 59.2 ;
+    ns1:hasPopulationPercentage65Plus 24.88 ;
+    ns1:hasPopulationPercentageUnder20 15.92 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36057-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 2711.7 ;
+    ns1:hasPopulationPercentage 69.09 ;
+    ns1:hasPopulationPercentage20To64 59.27 ;
+    ns1:hasPopulationPercentage65Plus 24.66 ;
+    ns1:hasPopulationPercentageUnder20 16.07 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36058-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 158.8 ;
+    ns1:hasPopulationPercentage 4.66 ;
+    ns1:hasPopulationPercentage20To64 56.52 ;
+    ns1:hasPopulationPercentage65Plus 28.11 ;
+    ns1:hasPopulationPercentageUnder20 15.38 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36059-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 32.0 ;
+    ns1:hasPopulationPercentage 12.55 ;
+    ns1:hasPopulationPercentage20To64 52.79 ;
+    ns1:hasPopulationPercentage65Plus 35.03 ;
+    ns1:hasPopulationPercentageUnder20 12.19 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36060-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 858.4 ;
+    ns1:hasPopulationPercentage 34.28 ;
+    ns1:hasPopulationPercentage20To64 60.01 ;
+    ns1:hasPopulationPercentage65Plus 23.59 ;
+    ns1:hasPopulationPercentageUnder20 16.4 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36061-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 302.6 ;
+    ns1:hasPopulationPercentage 9.19 ;
+    ns1:hasPopulationPercentage20To64 57.62 ;
+    ns1:hasPopulationPercentage65Plus 26.91 ;
+    ns1:hasPopulationPercentageUnder20 15.47 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36901-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 696.5 ;
+    ns1:hasPopulationPercentage 4.34 ;
+    ns1:hasPopulationPercentage20To64 60.71 ;
+    ns1:hasPopulationPercentage65Plus 23.31 ;
+    ns1:hasPopulationPercentageUnder20 15.98 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+
+<https://w3id.org/smartinfra-galicia/resource/Observation/36902-2025> a ns1:DemographicObservation ;
+    ns1:hasPopulationDensity 26.4 ;
+    ns1:hasPopulationPercentage 4.5 ;
+    ns1:hasPopulationPercentage20To64 53.02 ;
+    ns1:hasPopulationPercentage65Plus 34.34 ;
+    ns1:hasPopulationPercentageUnder20 12.64 ;
+    ns1:hasYear "2025"^^xsd:gYear .
+

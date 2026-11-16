@@ -1,0 +1,85 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "PLANTA",
+    "description": "Eliminar columna PLANTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Eliminar columna PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Eliminar columna ESCALERAS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORIENTACION",
+    "description": "Eliminar columna ORIENTACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FAX",
+    "description": "Eliminar columna FAX"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EMAIL",
+    "description": "Eliminar columna EMAIL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TELEFONO",
+    "description": "Eliminar columna TELEFONO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22698",
+        "name": "park"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22698"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LATITUD",
+    "description": "Eliminar columna LATITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUD",
+    "description": "Eliminar columna LONGITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO",
+    "description": "Eliminar columna TIPO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EQUIPAMIENTO",
+    "description": "Eliminar columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TRANSPORTE",
+    "description": "Eliminar columna TRANSPORTE"
+  }
+]

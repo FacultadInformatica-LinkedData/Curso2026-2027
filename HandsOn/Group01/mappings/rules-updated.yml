@@ -1,0 +1,43 @@
+prefixes:
+  vocab: "http://smartcity.linkeddata.es/touristaccommodation/ontology/"
+  resource: "http://smartcity.linkeddata.es/touristaccommodation/resource/"
+  schema: "http://schema.org/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+mappings:
+  # Accommodations: own class hierarchy (aligned with schema.org) + schema.org properties
+  accommodation_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-with-links.csv~csv']
+    s: resource:Accommodation/$(signatura)
+    po:
+      - [a, vocab:$(clase)]
+      - [rdfs:label, $(etiqueta_alojamiento), xsd:string]
+      - [schema:name, $(denominacion), xsd:string]
+      - [vocab:categoryLevel, $(nivel_categoria), xsd:integer]
+      - [schema:address, resource:Address/$(signatura)~iri]
+
+  # Addresses: schema:PostalAddress
+  address_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-with-links.csv~csv']
+    s: resource:Address/$(signatura)
+    po:
+      - [a, schema:PostalAddress]
+      - [rdfs:label, $(etiqueta_direccion), xsd:string]
+      - [schema:streetAddress, $(via_tipo) $(via_nombre), xsd:string]
+      - [schema:postalCode, $(cdpostal), xsd:string]
+      - [schema:addressLocality, $(localidad), xsd:string]
+      - [vocab:inCity, resource:City/$(localidad_id)~iri]
+
+  # Cities: schema:City, linked to Wikidata
+  city_mapping:
+    sources:
+      - ['../csv/alojamientos-turisticos-with-links.csv~csv']
+    s: resource:City/$(localidad_id)
+    po:
+      - [a, schema:City]
+      - [rdfs:label, $(localidad), xsd:string]
+      - [owl:sameAs, $(wikidata_uri)~iri]

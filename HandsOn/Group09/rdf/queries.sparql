@@ -1,0 +1,33 @@
+PREFIX ont: <http://smartcity.linkeddata.es/bicis/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX res: <http://smartcity.linkeddata.es/bicis/resource/>
+
+# Query 1: Obtener todos los modelos distintos de aparcabicis instalados
+SELECT DISTINCT ?model
+WHERE {
+  ?parking a ont:BicycleParking ;
+           ont:hasModel ?model .
+}
+
+# Query 2: Contar el número total de aparcamientos en el distrito Centro
+SELECT (COUNT(?parking) AS ?totalCentro)
+WHERE {
+  ?parking a ont:BicycleParking ;
+           ont:inDistrict <http://smartcity.linkeddata.es/bicis/resource/District/CENTRO> .
+}
+
+# Query 3: Obtener la latitud y longitud del aparcabicis con ID 10037979
+SELECT ?lat ?long
+WHERE {
+  <http://smartcity.linkeddata.es/bicis/resource/BicycleParking/10037979> ont:latitude ?lat ;
+                                                                          ont:longitude ?long .
+}
+
+# Query 4: Listar 10 aparcabicis con su capacidad y dirección
+SELECT ?parking ?address ?capacity
+WHERE {
+  ?parking a ont:BicycleParking ;
+           ont:streetAddress ?address ;
+           ont:hasCapacity ?capacity .
+}
+LIMIT 10

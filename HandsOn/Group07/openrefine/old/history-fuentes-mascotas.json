@@ -1,0 +1,52 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "MODELO",
+    "description": "Eliminar columna MODELO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UBICACION",
+    "description": "Eliminar columna UBICACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CONTRATO_COD",
+    "description": "Eliminar columna CONTRATO_COD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CODIGO_INTERNO",
+    "description": "Eliminar columna CODIGO_INTERNO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FECHA_INSTALACION",
+    "description": "Eliminar columna FECHA_INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SISTEMA_COORD",
+    "description": "Eliminar columna SISTEMA_COORD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NDP",
+    "description": "Eliminar columna NDP"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DIRECCION_AUX",
+    "description": "Eliminar columna DIRECCION_AUX"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUD",
+    "description": "Eliminar columna LONGITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LATITUD",
+    "description": "Eliminar columna LATITUD"
+  }
+]

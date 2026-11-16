@@ -1,0 +1,19 @@
+PREFIX bm:  <https://bicismart.madrid.data.es/ontology#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Calles del Callejero cuyo nombre contiene el texto buscado, con sus distritos,
+# su enlace a Wikidata y cuántas estaciones BiciMAD están en ellas.
+SELECT ?street ?name ?wikidata
+       (GROUP_CONCAT(DISTINCT STR(?district); separator=",") AS ?districts)
+       (COUNT(DISTINCT ?station) AS ?stations)
+WHERE {
+  ?street a bm:Street ;
+          bm:streetName ?name .
+  FILTER (CONTAINS(?name, $text))
+  OPTIONAL { ?street bm:districtCode ?district }
+  OPTIONAL { ?street owl:sameAs ?wikidata }
+  OPTIONAL { ?station bm:locatedOnStreet ?street }
+}
+GROUP BY ?street ?name ?wikidata
+ORDER BY STRLEN(?name)
+LIMIT 200

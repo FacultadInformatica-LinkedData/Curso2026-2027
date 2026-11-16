@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "ex": "http://example.org/assignment2/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "name": "schema:name",
+
+    "age": {
+      "@id": "schema:age",
+      "@type": "xsd:integer"
+    },
+
+    "hometown": "schema:homeLocation",
+
+    "almaMater": "schema:alumniOf",
+
+    "parents": {
+      "@id": "schema:parent",
+      "@type": "@id",
+      "@container": "@set"
+    },
+
+    "subjects": {
+      "@id": "ex:hasSubject",
+      "@type": "@id",
+      "@container": "@set"
+    },
+
+    "teachers": {
+      "@id": "schema:teacher",
+      "@type": "@id",
+      "@container": "@set"
+    },
+
+    "description": "schema:description"
+  },
+
+  "@graph": [
+    {
+      "@id": "ex:MarcosBarral",
+      "@type": "schema:Person",
+      "name": "Marcos Barral",
+      "age": 21,
+
+      "hometown": {
+        "@type": "schema:City",
+        "name": "Madrid"
+      },
+
+      "almaMater": {
+        "@type": "schema:CollegeOrUniversity",
+        "name": "Universidad Politécnica de Madrid"
+      },
+
+      "parents": [
+        "ex:David",
+        "ex:Gema"
+      ],
+
+      "subjects": [
+        "ex:SemanticWebLinkedDataKnowledgeGraphs",
+        "ex:FundamentosDeVideojuegos"
+      ]
+    },
+
+    {
+      "@id": "ex:David",
+      "@type": "schema:Person",
+      "name": "David"
+    },
+
+    {
+      "@id": "ex:Gema",
+      "@type": "schema:Person",
+      "name": "Gema"
+    },
+
+    {
+      "@id": "ex:SemanticWebLinkedDataKnowledgeGraphs",
+      "@type": "schema:Course",
+      "name": "Semantic Web, Linked Data and Knowledge Graphs",
+
+      "teachers": [
+        "ex:OscarCorcho"
+      ],
+
+      "description": "Course about Semantic Web technologies, Linked Data, RDF, RDF Schema, JSON-LD and Knowledge Graphs."
+    },
+
+    {
+      "@id": "ex:OscarCorcho",
+      "@type": "schema:Person",
+      "name": "Oscar Corcho"
+    },
+
+    {
+      "@id": "ex:FundamentosDeVideojuegos",
+      "@type": "schema:Course",
+      "name": "Fundamentos de Videojuegos",
+
+      "teachers": [
+        "ex:JoseMariaBarambonesRamirez"
+      ],
+
+      "description": "Course covering fundamental concepts and techniques used in video game development."
+    },
+
+    {
+      "@id": "ex:JoseMariaBarambonesRamirez",
+      "@type": "schema:Person",
+      "name": "JOSE MARIA BARAMBONES RAMIREZ"
+    }
+  ]
+}

@@ -1,80 +1,105 @@
+@prefix cls: <https://group10.org/air-quality-2026/ontology/classes/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
-@prefix ns: <http://www.owl-ontologies.com/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <https://group10.org/air-quality-2026/ontology/properties/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns: a owl:Ontology ;
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+<https://group10.org/air-quality-2026/ontology> a owl:Ontology ;
+    dcterms:creator "Group 10" ;
+    dcterms:title "Air quality meteorological observations ontology" ;
+    owl:versionInfo "2.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
-ns:hasDay a owl:DatatypeProperty ;
+prop:hasDay a owl:DatatypeProperty ;
     rdfs:label "has day" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:Observation ;
+    rdfs:range xsd:integer .
 
-ns:hasId a owl:DatatypeProperty ;
-    rdfs:label "has id" ;
-    rdfs:range xsd:Integer .
+prop:hasHour a owl:DatatypeProperty ;
+    rdfs:label "has hour" ;
+    rdfs:domain cls:Observation ;
+    rdfs:range xsd:integer .
 
-ns:hasMeasurementCode a owl:DatatypeProperty ;
+prop:hasMeasurementCode a owl:DatatypeProperty ;
     rdfs:label "has measurement code" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:MeasurementType ;
+    rdfs:range xsd:integer .
 
-ns:hasMeasurementType a owl:ObjectProperty ;
+prop:hasMeasurementType a owl:ObjectProperty ;
     rdfs:label "has measurement type" ;
-    rdfs:domain ns:SamplePoint ;
-    rdfs:range ns:MeasurementType .
+    rdfs:domain cls:SamplePoint ;
+    rdfs:range cls:MeasurementType .
 
-ns:hasMonth a owl:DatatypeProperty ;
+prop:hasMonth a owl:DatatypeProperty ;
     rdfs:label "has month" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:Observation ;
+    rdfs:range xsd:integer .
 
-ns:hasSamplePoint a owl:ObjectProperty ;
+prop:hasMunicipalityCode a owl:DatatypeProperty ;
+    rdfs:label "has municipality code" ;
+    rdfs:domain cls:Municipality ;
+    rdfs:range xsd:string .
+
+prop:hasSamplePoint a owl:ObjectProperty ;
     rdfs:label "has sample point" ;
-    rdfs:domain ns:Obervation ;
-    rdfs:range ns:SamplePoint .
+    rdfs:domain cls:Observation ;
+    rdfs:range cls:SamplePoint .
 
-ns:hasStation a owl:ObjectProperty ;
+prop:hasStation a owl:ObjectProperty ;
     rdfs:label "has station" ;
-    rdfs:domain ns:SamplePoint ;
-    rdfs:range ns:Station .
+    rdfs:domain cls:SamplePoint ;
+    rdfs:range cls:Station .
 
-ns:hasStationCode a owl:DatatypeProperty ;
+prop:hasStationCode a owl:DatatypeProperty ;
     rdfs:label "has station code" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:Station ;
+    rdfs:range xsd:integer .
 
-ns:hasTechnique a owl:DatatypeProperty ;
+prop:hasTechnique a owl:DatatypeProperty ;
     rdfs:label "has technique" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:SamplePoint ;
+    rdfs:range xsd:integer .
 
-ns:hasValue a owl:DatatypeProperty ;
+prop:hasValue a owl:DatatypeProperty ;
     rdfs:label "has value" ;
+    rdfs:domain cls:Observation ;
     rdfs:range xsd:decimal .
 
-ns:hasYear a owl:DatatypeProperty ;
+prop:hasYear a owl:DatatypeProperty ;
     rdfs:label "has year" ;
-    rdfs:range xsd:Integer .
+    rdfs:domain cls:Observation ;
+    rdfs:range xsd:integer .
 
-ns:isValidated a owl:DatatypeProperty ;
+prop:isValidated a owl:DatatypeProperty ;
     rdfs:label "is validated" ;
-    rdfs:range xsd:Boolean .
+    rdfs:domain cls:Observation ;
+    rdfs:range xsd:boolean .
 
-ns:locatedIn a owl:ObjectProperty ;
+prop:locatedIn a owl:ObjectProperty ;
     rdfs:label "located in" ;
-    rdfs:domain ns:Station ;
-    rdfs:range ns:Municipality .
+    rdfs:domain cls:Station ;
+    rdfs:range cls:Municipality .
 
-ns:MeasurementType a owl:Class ;
+cls:MeasurementType a owl:Class ;
     rdfs:label "Measurement Type" .
 
-ns:Municipality a owl:Class ;
+cls:Municipality a owl:Class ;
     rdfs:label "Municipality" .
 
-ns:Obervation a owl:Class ;
-    rdfs:label "Obervation" .
-
-ns:Station a owl:Class ;
+cls:Station a owl:Class ;
     rdfs:label "Station" .
 
-ns:SamplePoint a owl:Class ;
+cls:SamplePoint a owl:Class ;
     rdfs:label "Sample Point" .
+
+cls:Observation a owl:Class ;
+    rdfs:label "Observation" .
 

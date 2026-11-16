@@ -1,0 +1,12 @@
+MAGNITUD,FORMULA,NOMBRE,UNIDAD,POLLUTANT_SLUG
+1,SO2,Dióxido de azufre,µg/m3,dioxido-de-azufre
+6,CO,Monóxido de carbono,mg/m3,monoxido-de-carbono
+7,NO,Monóxido de nitrógeno,µg/m3,monoxido-de-nitrogeno
+8,NO2,Dióxido de nitrógeno,µg/m3,dioxido-de-nitrogeno
+9,PM2.5,Partículas en suspensión menores de 2.5 µm,µg/m3,pm2-5
+10,PM10,Partículas en suspensión menores de 10 µm,µg/m3,pm10
+12,NOx,Óxidos de nitrógeno,µg/m3,oxidos-de-nitrogeno
+14,O3,Ozono,µg/m3,ozono
+20,TOL,Tolueno,µg/m3,tolueno
+30,BEN,Benceno,µg/m3,benceno
+35,EBE,Etilbenceno,µg/m3,etilbenceno

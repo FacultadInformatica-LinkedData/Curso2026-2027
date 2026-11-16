@@ -1,0 +1,62 @@
+# Hands-On 4 - Group05
+# Reglas de mapping en YARRRML equivalentes a mappings/polideportivos.rml
+# Ejecutado con morph-kgc 2.10 desde HandsOn/Group05 (ruta del CSV relativa a ese directorio)
+
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  ont: http://smartcity.linkeddata.es/sports/ontology/
+  sc: http://smartcity.linkeddata.es/sports/resource/SportsCenter/
+  district: http://smartcity.linkeddata.es/sports/resource/District/
+
+sources:
+  polideportivos: [csv/200186-0-polideportivos-updated.csv~csv]
+
+mappings:
+
+  sportscenter:
+    sources: polideportivos
+    s: sc:$(URI-CENTRO)
+    po:
+      - [a, ont:SportsCenter]
+      - [rdfs:label, $(NOMBRE), es~lang]
+      - [ont:pk, $(PK), xsd:integer]
+      - [ont:equipmentDescription, $(EQUIPAMIENTO), xsd:string]
+      - [ont:transportInfo, $(TRANSPORTE), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:float]
+      - [geo:long, $(LONGITUD), xsd:float]
+      # Columnas multivaluadas: un literal por valor
+      - p: ont:accessibilityInfo
+        o:
+          function: grel:string_split
+          parameters:
+            - [grel:valueParameter, $(ACCESIBILIDAD)]
+            - [grel:p_string_sep, ","]
+          datatype: xsd:string
+      - p: ont:telephone
+        o:
+          function: grel:string_split
+          parameters:
+            - [grel:valueParameter, $(TELEFONO)]
+            - [grel:p_string_sep, ";"]
+          datatype: xsd:string
+      - p: ont:email
+        o:
+          function: grel:string_split
+          parameters:
+            - [grel:valueParameter, $(EMAIL)]
+            - [grel:p_string_sep, ";"]
+          datatype: xsd:string
+      # Enlace con el distrito (misma plantilla que el sujeto de "district")
+      - [ont:locatedInDistrict, district:$(URI-DISTRITO)~iri]
+
+  district:
+    sources: polideportivos
+    # URI legible: .../resource/District/{URI-DISTRITO}, p.ej. District/MoncloaAravaca
+    s: district:$(URI-DISTRITO)
+    po:
+      - [a, ont:District]
+      - [rdfs:label, $(DISTRITO), es~lang]

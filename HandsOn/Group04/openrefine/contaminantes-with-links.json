@@ -1,0 +1,20 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "MAGNITUD",
+    "expression": "grel:if(value.toString() == \"1\", \"Q5282\",\nif(value.toString() == \"6\", \"Q2025\",\nif(value.toString() == \"7\", \"Q207843\",\nif(value.toString() == \"8\", \"Q207895\",\nif(value.toString() == \"9\", \"Q48035814\",\nif(value.toString() == \"10\", \"Q1056863\",\nif(value.toString() == \"12\", \"Q424418\",\nif(value.toString() == \"14\", \"Q36933\",\nif(value.toString() == \"20\", \"Q15779\",\nif(value.toString() == \"30\", \"Q2270\",\nif(value.toString() == \"35\", \"Q409184\", \"\")))))))))))",
+    "onError": "set-to-blank",
+    "newColumnName": "WIKIDATA_ID",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna WIKIDATA_ID en el índice 1 basada en la columna MAGNITUD usando la expresión grel:if(value.toString() == \"1\", \"Q5282\",\nif(value.toString() == \"6\", \"Q2025\",\nif(value.toString() == \"7\", \"Q207843\",\nif(value.toString() == \"8\", \"Q207895\",\nif(value.toString() == \"9\", \"Q48035814\",\nif(value.toString() == \"10\", \"Q1056863\",\nif(value.toString() == \"12\", \"Q424418\",\nif(value.toString() == \"14\", \"Q36933\",\nif(value.toString() == \"20\", \"Q15779\",\nif(value.toString() == \"30\", \"Q2270\",\nif(value.toString() == \"35\", \"Q409184\", \"\")))))))))))"
+  },
+  {
+    "op": "core/column-move-last",
+    "columnName": "WIKIDATA_ID",
+    "description": "Move column WIKIDATA_ID to the end"
+  }
+]

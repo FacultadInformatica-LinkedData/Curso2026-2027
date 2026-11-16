@@ -1,0 +1,102 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1c2430;
+  --muted: #5d6b7c;
+  --line: #dde2e8;
+  --basic: #2e9e5b;
+  --centre: #2f6fdb;
+  --accent: #1f4fa3;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #fff;
+}
+header h1 { margin: 0; font-size: 20px; }
+#status { margin: 0; font-size: 13px; opacity: .9; }
+
+main { flex: 1; display: flex; min-height: 0; }
+#panel {
+  width: 340px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding: 14px;
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  max-height: calc(100vh - 100px);
+}
+#panel section { margin-bottom: 22px; }
+#panel h2 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+label { display: block; margin-bottom: 10px; font-size: 13px; color: var(--muted); }
+input[type=search], select {
+  display: block; width: 100%; margin-top: 4px; padding: 7px 8px;
+  font: inherit; color: var(--text); background: #fff;
+  border: 1px solid var(--line); border-radius: 6px;
+}
+fieldset { border: 0; padding: 0; margin: 0 0 10px; }
+legend { font-size: 13px; color: var(--muted); padding: 0; margin-bottom: 4px; }
+label.check { display: flex; align-items: center; gap: 8px; color: var(--text); margin-bottom: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot.basic { background: var(--basic); }
+.dot.centre { background: var(--centre); }
+button {
+  padding: 7px 12px; font: inherit; cursor: pointer;
+  color: var(--accent); background: #fff; border: 1px solid var(--accent); border-radius: 6px;
+}
+button:hover { background: #eef3fb; }
+.hint { margin: 0 0 8px; font-size: 12px; color: var(--muted); }
+
+#nearest { margin: 10px 0 0; padding-left: 20px; font-size: 13px; }
+#nearest li { margin-bottom: 4px; cursor: pointer; }
+#nearest li:hover { color: var(--accent); }
+#nearest .km { color: var(--muted); }
+
+.bar-row { display: grid; grid-template-columns: 120px 1fr 32px; align-items: center; gap: 6px; margin-bottom: 3px; font-size: 12px; cursor: pointer; }
+.bar-row.sel .name { font-weight: 700; }
+.bar-row .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { height: 10px; background: #edf0f4; border-radius: 5px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--accent); }
+.bar-row .n { text-align: right; color: var(--muted); }
+
+#mapwrap { position: relative; flex: 1; min-width: 0; }
+#map { position: absolute; inset: 0; }
+#detail {
+  position: absolute; z-index: 1000; top: 12px; right: 12px; width: 330px;
+  max-height: calc(100% - 24px); overflow-y: auto; padding: 14px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+}
+#detail h3 { margin: 0 24px 4px 0; font-size: 16px; }
+#detail .close { position: absolute; top: 8px; right: 8px; padding: 0 8px; border-color: var(--line); color: var(--muted); }
+#detail .tag { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; color: #fff; }
+#detail .tag.basic { background: var(--basic); }
+#detail .tag.centre { background: var(--centre); }
+#detail dl { margin: 10px 0 0; font-size: 13px; }
+#detail dt { margin-top: 8px; font-weight: 600; color: var(--muted); }
+#detail dd { margin: 0; overflow-wrap: anywhere; }
+#detail .na { color: var(--muted); font-style: italic; }
+
+footer { padding: 8px 20px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); background: var(--card); }
+a { color: var(--accent); }
+
+@media (max-width: 760px) {
+  main { flex-direction: column; }
+  #panel { width: auto; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); }
+  #mapwrap { min-height: 70vh; flex: none; }
+  #detail { width: auto; left: 12px; }
+  header { flex-direction: column; gap: 2px; }
+}

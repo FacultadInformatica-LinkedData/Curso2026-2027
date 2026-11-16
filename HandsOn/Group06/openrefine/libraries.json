@@ -1,0 +1,632 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "EQUIPAMIENTO",
+    "description": "Eliminar columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION",
+    "description": "Eliminar columna DESCRIPCION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PLANTA",
+    "description": "Eliminar columna PLANTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Eliminar columna PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Eliminar columna ESCALERAS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORIENTACION",
+    "description": "Eliminar columna ORIENTACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LOCALIDAD",
+    "description": "Eliminar columna LOCALIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PROVINCIA",
+    "description": "Eliminar columna PROVINCIA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Eliminar columna COORDENADA-X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Eliminar columna COORDENADA-Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION-ENTIDAD",
+    "description": "Eliminar columna DESCRIPCION-ENTIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO-NUM",
+    "description": "Eliminar columna TIPO-NUM"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CLASE-VIAL",
+    "expression": "join ([coalesce(cells['CLASE-VIAL'].value,''),coalesce(cells['NOMBRE-VIA'].value,'')],' ')",
+    "onError": "keep-original",
+    "newColumnName": "DIRECCION",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna DIRECCION en el índice 8 basada en la columna CLASE-VIAL usando la expresión join ([coalesce(cells['CLASE-VIAL'].value,''),coalesce(cells['NOMBRE-VIA'].value,'')],' ')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "PK",
+      "NOMBRE",
+      "HORARIO",
+      "TRANSPORTE",
+      "ACCESIBILIDAD",
+      "CONTENT-URL",
+      "DIRECCION",
+      "NUM",
+      "CODIGO-POSTAL",
+      "COD-BARRIO",
+      "BARRIO",
+      "COD-DISTRITO",
+      "DISTRITO",
+      "LATITUD",
+      "LONGITUD",
+      "TELEFONO",
+      "FAX",
+      "EMAIL",
+      "TIPO"
+    ],
+    "description": "Reorganizar columnas"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION",
+    "expression": "join ([coalesce(cells['DIRECCION'].value,''),coalesce(cells['NUM'].value,'')],', ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DIRECCION usando la expresión join ([coalesce(cells['DIRECCION'].value,''),coalesce(cells['NUM'].value,'')],', ')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "PK",
+      "NOMBRE",
+      "HORARIO",
+      "TRANSPORTE",
+      "ACCESIBILIDAD",
+      "CONTENT-URL",
+      "DIRECCION",
+      "CODIGO-POSTAL",
+      "COD-BARRIO",
+      "BARRIO",
+      "COD-DISTRITO",
+      "DISTRITO",
+      "LATITUD",
+      "LONGITUD",
+      "TELEFONO",
+      "FAX",
+      "EMAIL",
+      "TIPO"
+    ],
+    "description": "Reorganizar columnas"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:value.split(\"/\")[2]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TIPO usando la expresión grel:value.split(\"/\")[2]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FAX",
+    "description": "Eliminar columna FAX"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"1\")",
+    "onError": "set-to-blank",
+    "newColumnName": "ACCESIBLE",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna ACCESIBLE en el índice 5 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"1\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"2\")",
+    "onError": "set-to-blank",
+    "newColumnName": "PARCIALMENTE-ACCESIBLE",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna PARCIALMENTE-ACCESIBLE en el índice 5 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"2\")"
+  },
+  {
+    "op": "core/column-move-left",
+    "columnName": "ACCESIBLE",
+    "description": "Move column ACCESIBLE to the left"
+  },
+  {
+    "op": "core/column-move-right",
+    "columnName": "ACCESIBILIDAD",
+    "description": "Move column ACCESIBILIDAD to the right"
+  },
+  {
+    "op": "core/column-move-right",
+    "columnName": "ACCESIBILIDAD",
+    "description": "Move column ACCESIBILIDAD to the right"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"6\")",
+    "onError": "set-to-blank",
+    "newColumnName": "BUCLE-INDUCCION-MAGNETICO",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna BUCLE-INDUCCION-MAGNETICO en el índice 7 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"6\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"5\")",
+    "onError": "set-to-blank",
+    "newColumnName": "SEÑALIZACION-PODOTACTIL",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna SEÑALIZACION-PODOTACTIL en el índice 7 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"5\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"4\")",
+    "onError": "set-to-blank",
+    "newColumnName": "LENGUA-SIGNO",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna LENGUA-SIGNO en el índice 7 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"4\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ACCESIBILIDAD",
+    "expression": "grel:value.contains(\"3\")",
+    "onError": "set-to-blank",
+    "newColumnName": "SIN-INFORMACION-ACCESIBILIDAD",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna SIN-INFORMACION-ACCESIBILIDAD en el índice 7 basada en la columna ACCESIBILIDAD usando la expresión grel:value.contains(\"3\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ACCESIBILIDAD",
+    "description": "Eliminar columna ACCESIBILIDAD"
+  },
+  {
+    "op": "core/column-move-left",
+    "columnName": "SIN-INFORMACION-ACCESIBILIDAD",
+    "description": "Move column SIN-INFORMACION-ACCESIBILIDAD to the left"
+  },
+  {
+    "op": "core/column-move-left",
+    "columnName": "SIN-INFORMACION-ACCESIBILIDAD",
+    "description": "Move column SIN-INFORMACION-ACCESIBILIDAD to the left"
+  },
+  {
+    "op": "core/column-move-left",
+    "columnName": "PARCIALMENTE-ACCESIBLE",
+    "description": "Move column PARCIALMENTE-ACCESIBLE to the left"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "grel:value.replace(/\\s*\\([^)]*\\)/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión grel:value.replace(/\\s*\\([^)]*\\)/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORARIO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna HORARIO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LATITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LATITUD usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LONGITUD",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna LONGITUD usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORARIO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna HORARIO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TRANSPORTE",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TRANSPORTE usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PK",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna PK usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONTENT-URL",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna CONTENT-URL usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DIRECCION usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODIGO-POSTAL",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna CODIGO-POSTAL usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-BARRIO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD-BARRIO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna BARRIO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "COD-DISTRITO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna COD-DISTRITO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRITO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TELEFONO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna EMAIL usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TIPO usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORARIO",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna HORARIO usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TRANSPORTE",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TRANSPORTE usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NOMBRE usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIRECCION",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DIRECCION usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODIGO-POSTAL",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna CODIGO-POSTAL usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna BARRIO usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRITO usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna EMAIL usando la expresión value.unescape('html')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TIPO usando la expresión value.unescape('html')"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Column",
+    "description": "Eliminar columna Column"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column2",
+    "description": "Eliminar columna Column2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column3",
+    "description": "Eliminar columna Column3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column4",
+    "description": "Eliminar columna Column4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column5",
+    "description": "Eliminar columna Column5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column6",
+    "description": "Eliminar columna Column6"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column7",
+    "description": "Eliminar columna Column7"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column8",
+    "description": "Eliminar columna Column8"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column9",
+    "description": "Eliminar columna Column9"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column10",
+    "description": "Eliminar columna Column10"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column11",
+    "description": "Eliminar columna Column11"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column12",
+    "description": "Eliminar columna Column12"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column13",
+    "description": "Eliminar columna Column13"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column14",
+    "description": "Eliminar columna Column14"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column15",
+    "description": "Eliminar columna Column15"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column16",
+    "description": "Eliminar columna Column16"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column17",
+    "description": "Eliminar columna Column17"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column18",
+    "description": "Eliminar columna Column18"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column19",
+    "description": "Eliminar columna Column19"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LATITUD",
+    "description": "Eliminar columna LATITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUD",
+    "description": "Eliminar columna LONGITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FECHA PUESTA EN SERVICIO",
+    "description": "Eliminar columna FECHA PUESTA EN SERVICIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ANT/DES/ESQ.",
+    "description": "Eliminar columna ANT/DES/ESQ."
+  }
+]

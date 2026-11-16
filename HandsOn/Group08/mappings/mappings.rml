@@ -1,0 +1,118 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ms: <http://madridsports.example.org/ontology/madridsports#> .
+@prefix : <http://madridsports.example.org/mappings#> .
+
+:BasicFacilityMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/basic_facilities.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facility/{PK}" ; rr:class ms:BasicSportsFacility ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:sourceKey ; rr:objectMap [ rml:reference "PK" ; rr:datatype xsd:integer ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:openingHours ; rr:objectMap [ rml:reference "OPENING_HOURS" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:equipment ; rr:objectMap [ rml:reference "EQUIPMENT" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:transport ; rr:objectMap [ rml:reference "TRANSPORT" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:description ; rr:objectMap [ rml:reference "DESCRIPTION" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetType ; rr:objectMap [ rml:reference "STREET_TYPE" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetName ; rr:objectMap [ rml:reference "STREET_NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetNumber ; rr:objectMap [ rml:reference "STREET_NUMBER" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:postalCode ; rr:objectMap [ rml:reference "POSTAL_CODE" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:latitude ; rr:objectMap [ rml:reference "LATITUDE" ; rr:datatype xsd:decimal ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:longitude ; rr:objectMap [ rml:reference "LONGITUDE" ; rr:datatype xsd:decimal ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:phone ; rr:objectMap [ rml:reference "PHONE" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:email ; rr:objectMap [ rml:reference "EMAIL" ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:source ; rr:objectMap [ rml:reference "URL" ; rr:termType rr:IRI ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:locatedInDistrict ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/district/{DISTRICT_CODE}" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:locatedInNeighbourhood ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/neighbourhood/{NEIGHBOURHOOD_ID}" ] ] .
+
+:SportsCentreMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/sports_centres.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facility/{PK}" ; rr:class ms:SportsCentre ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:sourceKey ; rr:objectMap [ rml:reference "PK" ; rr:datatype xsd:integer ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:openingHours ; rr:objectMap [ rml:reference "OPENING_HOURS" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:equipment ; rr:objectMap [ rml:reference "EQUIPMENT" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:transport ; rr:objectMap [ rml:reference "TRANSPORT" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:description ; rr:objectMap [ rml:reference "DESCRIPTION" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetType ; rr:objectMap [ rml:reference "STREET_TYPE" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetName ; rr:objectMap [ rml:reference "STREET_NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:streetNumber ; rr:objectMap [ rml:reference "STREET_NUMBER" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:postalCode ; rr:objectMap [ rml:reference "POSTAL_CODE" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:latitude ; rr:objectMap [ rml:reference "LATITUDE" ; rr:datatype xsd:decimal ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:longitude ; rr:objectMap [ rml:reference "LONGITUDE" ; rr:datatype xsd:decimal ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:phone ; rr:objectMap [ rml:reference "PHONE" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:email ; rr:objectMap [ rml:reference "EMAIL" ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:source ; rr:objectMap [ rml:reference "URL" ; rr:termType rr:IRI ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:locatedInDistrict ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/district/{DISTRICT_CODE}" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:locatedInNeighbourhood ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/neighbourhood/{NEIGHBOURHOOD_ID}" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:hasSwimmingPool ; rr:objectMap [ rml:reference "HAS_POOL" ; rr:datatype xsd:boolean ] ] .
+
+:FacilityTypeLinkMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/facility_types.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facility/{PK}" ] ;
+    rr:predicateObjectMap [ rr:predicate ms:hasFacilityType ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/facilityType/{TYPE}" ] ] .
+
+:AccessibilityLevelLinkMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/accessibility_levels.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facility/{PK}" ] ;
+    rr:predicateObjectMap [ rr:predicate ms:hasAccessibilityLevel ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/accessibilityLevel/{CODE}" ] ] .
+
+:AccessibilityFeatureLinkMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/accessibility_features.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facility/{PK}" ] ;
+    rr:predicateObjectMap [ rr:predicate ms:hasAccessibilityFeature ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/accessibilityFeature/{CODE}" ] ] .
+
+:FacilityTypeMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/facility_types.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/facilityType/{TYPE}" ; rr:class ms:FacilityType ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "TYPE" ; rr:language "es" ] ] .
+
+:AccessibilityLevelMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/accessibility_level_codes.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/accessibilityLevel/{CODE}" ; rr:class ms:AccessibilityLevel ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "LABEL" ; rr:language "en" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:accessibilityCode ; rr:objectMap [ rml:reference "CODE" ; rr:datatype xsd:integer ] ] .
+
+:AccessibilityFeatureMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/accessibility_feature_codes.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/accessibilityFeature/{CODE}" ; rr:class ms:AccessibilityFeature ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "LABEL" ; rr:language "en" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:accessibilityCode ; rr:objectMap [ rml:reference "CODE" ; rr:datatype xsd:integer ] ] .
+
+:DistrictMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/districts.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/district/{CODE}" ; rr:class ms:District ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:districtCode ; rr:objectMap [ rml:reference "CODE" ; rr:datatype xsd:integer ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:partOfCity ; rr:objectMap [ rr:constant <http://madridsports.example.org/resource/city/madrid> ] ] .
+
+:NeighbourhoodMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/neighbourhoods.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:template "http://madridsports.example.org/resource/neighbourhood/{ID}" ; rr:class ms:Neighbourhood ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "NAME" ; rr:language "es" ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:neighbourhoodNumber ; rr:objectMap [ rml:reference "NUMBER" ; rr:datatype xsd:integer ] ] ;
+    rr:predicateObjectMap [ rr:predicate ms:belongsToDistrict ; rr:objectMap [ rr:template "http://madridsports.example.org/resource/district/{DISTRICT_CODE}" ] ] .
+
+:CityMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/districts.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:constant <http://madridsports.example.org/resource/city/madrid> ; rr:class ms:City ] ;
+    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rr:constant "Madrid"@es ] ] ;
+    rr:predicateObjectMap [ rr:predicate owl:sameAs ; rr:objectMap [ rr:constant <http://dbpedia.org/resource/Madrid> ] ] ;
+    rr:predicateObjectMap [ rr:predicate owl:sameAs ; rr:objectMap [ rr:constant <http://www.wikidata.org/entity/Q2807> ] ] .
+
+:DatasetMap a rr:TriplesMap ;
+    rml:logicalSource [ rml:source "csv/rml/districts.csv" ; rml:referenceFormulation ql:CSV ] ;
+    rr:subjectMap [ rr:constant <http://madridsports.example.org/resource/dataset/madridSports> ; rr:class dcat:Dataset ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:title ; rr:objectMap [ rr:constant "Madrid municipal sports facilities (RDF)"@en ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:license ; rr:objectMap [ rr:constant <https://creativecommons.org/licenses/by/4.0/> ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:source ; rr:objectMap [ rr:constant <https://datos.madrid.es/dataset/200215-0-instalaciones-deportivas> ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:source ; rr:objectMap [ rr:constant <https://datos.madrid.es/dataset/200186-0-polideportivos> ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:source ; rr:objectMap [ rr:constant <https://datos.madrid.es/dataset/210227-0-piscinas-publicas> ] ] ;
+    rr:predicateObjectMap [ rr:predicate dcterms:description ; rr:objectMap [ rr:constant "Contains data of the Ayuntamiento de Madrid (datos.madrid.es), licensed under CC BY 4.0. Derived from those datasets and modified: transformed to RDF by Group 08."@en ] ] .
+

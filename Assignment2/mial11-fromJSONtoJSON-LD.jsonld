@@ -1,0 +1,111 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://www.w3.org/2001/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "http://example.org/",
+
+            "fullNAme": "foaf:name",
+            "homeTown": {
+                "@id": "schema:homeLocation",
+                "@type": "@id"
+            },
+
+            "almaMater": {
+                "@id": "schema:alumniOf",
+                "@type": "@id"
+        },
+
+        "parent": {
+                "@id": "schema:parent",
+                "@type": "@id"
+        },
+
+        "professors": {
+                "@id": "schema:teacher",
+                "@type": "@id"
+        },
+
+        "subjects": {
+                "@id": "ex:studiesSubject",
+                "@type": "@id"
+        },
+
+        "age": {
+                "@id": "ex:age",
+                "@type": "xsd:integer"
+        },
+
+        "description": "schema:description",
+        "name": "schema:name"
+    },
+
+    "@id": "https://example.org/people/mial11",
+    "@type": "foaf:Person",
+    "fullNAme": "Mia Lacson",
+    "age": 25,
+
+    "homeTown": {
+        "@id": "https://example.org/places/madrid",
+        "@type": "schema:City",
+        "name": "Madrid"
+    },
+
+    "almaMater": {
+        "@id": "https://example.org/organizations/UPM",
+        "@type": "schema:CollegeOrUniversity",
+        "name": "UPM"
+    },
+
+    "parent": [
+        {
+            "@id": "https://example.org/people/Mau",
+            "@type": "foaf:Person",
+            "fullNAme": "Mau Lacson"
+        },
+        {
+            "@id": "https://example.org/people/Al",
+            "@type": "foaf:Person",
+            "fullNAme": "Al Lacson"
+        }
+    ],
+
+    "subjects": [
+        {
+            "@id": "https://example.org/subjects/SemanticWeb",
+            "@type": "schema:Course",
+            "name": "Semanic Web",
+            "professors": [
+                {
+                    "@id": "https://example.org/people/Oscar",
+                    "@type": "foaf:Person",
+                    "fullNAme": "Oscar Corcho" 
+                },
+                {
+                    "@id": "https://example.org/people/Oscar",
+                    "@type": "foaf:Person",
+                    "fullNAme": "Daniel Garijo"
+                }
+            ],
+            "description": "Study of linked data, RDF, ontologies...etc."
+        },
+        {
+            "@id": "https://example.org/subjects/SoftwareEngineeringII",
+            "@type": "schema:Course",
+            "name": "Software Engineerig II",
+            "professors": [
+                {
+                    "@id": "https://example.org/people/Ana",
+                    "@type": "foaf:Person",
+                    "fullNAme": "Ana Profe" 
+                },
+                {
+                    "@id": "https://example.org/people/Tomas",
+                    "@type": "foaf:Person",
+                    "fullNAme": "Tomas Profe"
+                }
+            ],
+            "description": "Continuation of Software Enginerring I."
+        }
+    ]
+}

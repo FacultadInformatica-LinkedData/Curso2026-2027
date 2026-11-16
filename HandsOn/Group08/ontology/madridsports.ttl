@@ -167,6 +167,12 @@ ms:postalCode a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "postal code"@en .
 
+ms:webPage a owl:DatatypeProperty ;
+    rdfs:domain ms:SportsFacility ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "web page"@en ;
+    rdfs:comment "URL of the page of the facility on madrid.es (column CONTENT-URL of the source data)."@en .
+
 ms:latitude a owl:DatatypeProperty ;
     rdfs:domain ms:SportsFacility ;
     rdfs:range xsd:decimal ;

@@ -1,0 +1,56 @@
+PREFIX bici: <http://www.example.org/bicimad/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Q1. Total number of stations
+SELECT (COUNT(?s) AS ?total)
+WHERE {
+  ?s a bici:Station .
+}
+
+# Q2. Number of stations by status
+SELECT ?status (COUNT(?s) AS ?n)
+WHERE {
+  ?s a bici:Station ;
+     bici:hasStatus ?statusResource .
+
+  ?statusResource rdfs:label ?status .
+}
+GROUP BY ?status
+ORDER BY DESC(?n)
+
+# Q3. Stations with more than 30 docking bases
+SELECT ?name ?bases
+WHERE {
+  ?s a bici:Station ;
+     rdfs:label ?name ;
+     bici:totalBases ?bases .
+
+  FILTER(?bases > 30)
+}
+ORDER BY DESC(?bases)
+
+# Q4. Stations that are not in service
+SELECT ?name ?status
+WHERE {
+  ?s a bici:Station ;
+     rdfs:label ?name ;
+     bici:hasStatus ?statusResource .
+
+  ?statusResource rdfs:label ?status .
+
+  FILTER(?status != "IN_SERVICE")
+}
+
+# Q5. Stations on Serrano street with their coordinates
+SELECT ?name ?address ?latitude ?longitude
+WHERE {
+  ?s a bici:Station ;
+     rdfs:label ?name ;
+     bici:hasLocation ?location .
+
+  ?location bici:address ?address ;
+            bici:latitude ?latitude ;
+            bici:longitude ?longitude .
+
+  FILTER(CONTAINS(?address, "Serrano"))
+}

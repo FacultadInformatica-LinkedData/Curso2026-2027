@@ -1,5 +1,5 @@
-@prefix : <https://w3id.org/madrid-culture/ontology/> .
-@prefix res: <https://w3id.org/madrid-culture/resource/> .
+@prefix : <http://w3id.org/madrid-culture/ontology/> .
+@prefix res: <http://w3id.org/madrid-culture/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -143,11 +143,9 @@
 
 # We will reuse the following properties from well-known vocabularies:
 # - schema:name (for the names of the libraries, museums, district and neighborhood)
-# - schema:description (for the descriptions of the museums and libraries)
 # - schema:openingHours (for the days and hours in which the libraries and museums open)
-# - schema:sameAs (for linking entities)
+# - owl:sameAs (for linking entities)
 # - schema:url (for the official website url of the libraries and museums)
 # - schema:longitude (for the longitude of the libraries and museums)
 # - schema:latitude (for the latitude of the libraries and museums)
 # - schema:telephone (for the telephone number of the libraries and museums)
-# - schema:faxNumber (for the fax number of the libraries and museums)

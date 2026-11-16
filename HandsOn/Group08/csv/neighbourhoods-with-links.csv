@@ -1,0 +1,116 @@
+ID,NAME,NUMBER,DISTRICT_CODE,WIKIDATA_URI,WIKIDATA_LABEL
+1-1,PALACIO,1,1,http://www.wikidata.org/entity/Q2136510,Palacio
+1-2,EMBAJADORES,2,1,http://www.wikidata.org/entity/Q2449844,Embajadores
+1-3,CORTES,3,1,http://www.wikidata.org/entity/Q2535637,Cortes
+1-4,JUSTICIA,4,1,http://www.wikidata.org/entity/Q1992319,Justicia
+1-5,UNIVERSIDAD,5,1,http://www.wikidata.org/entity/Q10387767,Universidad
+2-1,IMPERIAL,1,2,,
+2-2,ACACIAS,2,2,http://www.wikidata.org/entity/Q3319190,Las Acacias
+2-3,CHOPERA,3,2,http://www.wikidata.org/entity/Q3773750,La Chopera
+2-4,LEGAZPI,4,2,http://www.wikidata.org/entity/Q3773990,Legazpi
+2-5,DELICIAS,5,2,http://www.wikidata.org/entity/Q3773736,Las Delicias
+2-6,PALOS DE MOGUER,6,2,,
+3-1,PACIFICO,1,3,http://www.wikidata.org/entity/Q3773753,Pacífico
+3-2,ADELFAS,2,3,http://www.wikidata.org/entity/Q3774001,Adelfas
+3-3,ESTRELLA,3,3,http://www.wikidata.org/entity/Q3773738,Estrella
+3-5,LOS JERONIMOS,5,3,http://www.wikidata.org/entity/Q10306766,Jerónimos
+3-6,NIÑO JESUS,6,3,,
+4-2,GOYA,2,4,http://www.wikidata.org/entity/Q3814578,Goya
+4-3,FUENTE DEL BERRO,3,4,http://www.wikidata.org/entity/Q3814564,Fuente del Berro
+4-4,GUINDALERA,4,4,http://www.wikidata.org/entity/Q3814559,La Guindalera
+5-1,EL VISO,1,5,http://www.wikidata.org/entity/Q4778,El Viso
+5-2,PROSPERIDAD,2,5,http://www.wikidata.org/entity/Q4776,Prosperidad
+5-3,CIUDAD JARDIN,3,5,http://www.wikidata.org/entity/Q3773744,Ciudad Jardín
+5-4,HISPANOAMERICA,4,5,http://www.wikidata.org/entity/Q3814573,Hispanoamérica
+5-5,NUEVA ESPAÑA,5,5,http://www.wikidata.org/entity/Q10338128,Nueva España
+5-6,CASTILLA,6,5,http://www.wikidata.org/entity/Q3813735,Castilla
+6-1,BELLAS VISTAS,1,6,http://www.wikidata.org/entity/Q11908929,Bellas Vistas
+6-2,CUATRO CAMINOS,2,6,http://www.wikidata.org/entity/Q5824684,Cuatro Caminos
+6-3,CASTILLEJOS,3,6,http://www.wikidata.org/entity/Q11913212,Castillejos
+6-4,ALMENARA,4,6,,
+6-5,VALDEACEDERAS,5,6,http://www.wikidata.org/entity/Q10388711,Valdeacederas
+6-6,BERRUGUETE,6,6,http://www.wikidata.org/entity/Q11909208,Berruguete
+7-2,ARAPILES,2,7,http://www.wikidata.org/entity/Q10856744,Arapiles
+7-6,VALLEHERMOSO,6,7,http://www.wikidata.org/entity/Q6122685,Vallehermoso
+8-1,EL PARDO,1,8,http://www.wikidata.org/entity/Q3314337,El Pardo
+8-2,FUENTELARREINA,2,8,http://www.wikidata.org/entity/Q10286156,Fuentelarreina
+8-3,PEÑA GRANDE,3,8,,
+8-4,EL PILAR,4,8,http://www.wikidata.org/entity/Q3773964,El Pilar
+8-5,LA PAZ,5,8,http://www.wikidata.org/entity/Q5869740,La Paz
+8-6,VALVERDE,6,8,,
+8-7,MIRASIERRA,7,8,http://www.wikidata.org/entity/Q31134,Mirasierra
+8-8,EL GOLOSO,8,8,http://www.wikidata.org/entity/Q10271137,El Goloso
+9-1,CASA DE CAMPO,1,9,http://www.wikidata.org/entity/Q16302441,Casa de Campo
+9-3,CIUDAD UNIVERSITARIA,3,9,http://www.wikidata.org/entity/Q3319235,Ciudad Universitaria
+9-4,VALDEZARZA,4,9,http://www.wikidata.org/entity/Q10388728,Valdezarza
+9-7,ARAVACA,7,9,http://www.wikidata.org/entity/Q3314682,Aravaca
+10-1,LOS CARMENES,1,10,http://www.wikidata.org/entity/Q10319792,Los Cármenes
+10-2,PUERTA DEL ANGEL,2,10,,
+10-3,LUCERO,3,10,http://www.wikidata.org/entity/Q31162,Lucero
+10-4,ALUCHE,4,10,http://www.wikidata.org/entity/Q31140,Aluĉo
+10-5,CAMPAMENTO,5,10,http://www.wikidata.org/entity/Q31169,Campamento
+10-6,CUATRO VIENTOS,6,10,http://www.wikidata.org/entity/Q5191881,Cuatro Vientos
+10-7,LAS AGUILAS,7,10,http://www.wikidata.org/entity/Q5971372,Las Águilas
+11-1,COMILLAS,1,11,http://www.wikidata.org/entity/Q955844,Comillas
+11-2,OPAÑEL,2,11,http://www.wikidata.org/entity/Q3813756,Opañel
+11-3,SAN ISIDRO,3,11,http://www.wikidata.org/entity/Q3813733,San Isidro
+11-4,VISTA ALEGRE,4,11,http://www.wikidata.org/entity/Q3813741,Vista Alegre
+11-5,PUERTA BONITA,5,11,http://www.wikidata.org/entity/Q3813762,Puerta Bonita
+11-6,BUENAVISTA,6,11,http://www.wikidata.org/entity/Q953929,Buenavista
+11-7,ABRANTES,7,11,http://www.wikidata.org/entity/Q3773949,Abrantes
+12-1,ORCASITAS,1,12,http://www.wikidata.org/entity/Q3773941,Orcasitas
+12-2,ORCASUR,2,12,http://www.wikidata.org/entity/Q10341270,Orcasur
+12-3,SAN FERMIN,3,12,http://www.wikidata.org/entity/Q71758,San Fermín
+12-4,ALMENDRALES,4,12,http://www.wikidata.org/entity/Q9604761,Almendrales
+12-5,MOSCARDO,5,12,http://www.wikidata.org/entity/Q11937679,Moscardó
+12-6,ZOFIO,6,12,http://www.wikidata.org/entity/Q71751,Zofío
+12-7,PRADOLONGO,7,12,http://www.wikidata.org/entity/Q10352360,Pradolongo
+13-1,ENTREVIAS,1,13,http://www.wikidata.org/entity/Q71756,Entrevías
+13-2,SAN DIEGO,2,13,http://www.wikidata.org/entity/Q11946851,San Diego
+13-3,PALOMERAS BAJAS,3,13,http://www.wikidata.org/entity/Q10343902,Palomeras Bajas
+13-4,PALOMERAS SURESTE,4,13,http://www.wikidata.org/entity/Q10343901,Palomeras Sureste
+13-5,PORTAZGO,5,13,http://www.wikidata.org/entity/Q18005921,Portazgo
+13-6,NUMANCIA,6,13,http://www.wikidata.org/entity/Q10338144,Numancia
+14-1,PAVONES,1,14,http://www.wikidata.org/entity/Q71760,Pavones
+14-2,HORCAJO,2,14,http://www.wikidata.org/entity/Q10293641,Horcajo
+14-3,MARROQUINA,3,14,http://www.wikidata.org/entity/Q11935636,Marroquina
+14-4,MEDIA LEGUA,4,14,http://www.wikidata.org/entity/Q9031035,Media Legua
+14-5,FONTARRON,5,14,http://www.wikidata.org/entity/Q10283284,Fontarrón
+14-6,VINATEROS,6,14,http://www.wikidata.org/entity/Q10391533,Vinateros
+15-1,VENTAS,1,15,,
+15-2,PUEBLO NUEVO,2,15,http://www.wikidata.org/entity/Q71753,Pueblo Nuevo
+15-4,LA CONCEPCION,4,15,,
+15-5,SAN PASCUAL,5,15,http://www.wikidata.org/entity/Q165612,San Pascual
+15-6,SAN JUAN BAUTISTA,6,15,http://www.wikidata.org/entity/Q165609,San Juan Bautista
+15-8,ATALAYA,8,15,http://www.wikidata.org/entity/Q14193114,Atalaya
+15-9,COSTILLARES,9,15,http://www.wikidata.org/entity/Q331385,Costillares
+16-1,PALOMAS,1,16,http://www.wikidata.org/entity/Q390460,Palomas
+16-2,PIOVERA,2,16,http://www.wikidata.org/entity/Q5964851,La Piovera
+16-3,CANILLAS,3,16,http://www.wikidata.org/entity/Q9694341,Canillas
+16-4,PINAR DEL REY,4,16,http://www.wikidata.org/entity/Q10349788,Pinar del Rey
+16-5,APOSTOL SANTIAGO,5,16,http://www.wikidata.org/entity/Q11906303,Apóstol Santiago
+16-6,VALDEFUENTES,6,16,http://www.wikidata.org/entity/Q10388714,Valdefuentes
+17-1,VILLAVERDE ALTO C.H.,1,17,,
+17-2,SAN CRISTOBAL,2,17,http://www.wikidata.org/entity/Q390457,San Cristóbal
+17-3,BUTARQUE,3,17,http://www.wikidata.org/entity/Q390453,Butarque
+17-4,LOS ROSALES,4,17,http://www.wikidata.org/entity/Q10319807,Los Rosales
+17-5,LOS ANGELES,5,17,http://www.wikidata.org/entity/Q390462,Los Ángeles
+18-1,CASCO H.VALLECAS,1,18,http://www.wikidata.org/entity/Q16544370,Casco Histórico de Vallecas
+18-2,SANTA EUGENIA,2,18,http://www.wikidata.org/entity/Q390463,Santa Eugenia
+18-3,ENSANCHE DE VALLECAS,3,18,http://www.wikidata.org/entity/Q3847485,Ensanche de Vallecas
+19-1,CASCO H.VICALVARO,1,19,http://www.wikidata.org/entity/Q16544374,Casco Histórico de Vicálvaro
+19-2,VALDEBERNARDO,2,19,http://www.wikidata.org/entity/Q43025212,Valdebernardo
+19-4,EL CAÑAVERAL,4,19,http://www.wikidata.org/entity/Q5821309,El Cañaveral
+20-1,SIMANCAS,1,20,http://www.wikidata.org/entity/Q10371626,Simancas
+20-2,HELLIN,2,20,http://www.wikidata.org/entity/Q10294546,Hellín
+20-3,AMPOSTA,3,20,http://www.wikidata.org/entity/Q11905392,Amposta
+20-4,ARCOS,4,20,http://www.wikidata.org/entity/Q9627876,Arcos
+20-5,ROSAS,5,20,http://www.wikidata.org/entity/Q18880469,Rosas
+20-6,REJAS,6,20,http://www.wikidata.org/entity/Q10359029,Rejas
+20-7,CANILLEJAS,7,20,http://www.wikidata.org/entity/Q663013,Canillejas
+20-8,EL SALVADOR,8,20,,
+21-1,ALAMEDA DE OSUNA,1,21,http://www.wikidata.org/entity/Q760737,Alameda de Osuna
+21-2,AEROPUERTO,2,21,http://www.wikidata.org/entity/Q9586697,Aeropuerto
+21-3,CASCO H.BARAJAS,3,21,http://www.wikidata.org/entity/Q9701730,Casco Histórico de Barajas
+21-4,TIMON,4,21,http://www.wikidata.org/entity/Q10382570,Timón
+21-5,CORRALEJOS,5,21,http://www.wikidata.org/entity/Q10260772,Corralejos

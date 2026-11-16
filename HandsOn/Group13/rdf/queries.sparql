@@ -1,0 +1,24 @@
+PREFIX : <http://educamadrid.linkeddata.es/ontology/CentroEducativo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+# Consulta 1: Obtener el nombre y el tipo de 10 centros educativos
+SELECT ?name ?type WHERE {
+  ?school a :EducationalCenter ;
+          :centerName ?name ;
+          :centerType ?type .
+} LIMIT 10
+
+# Consulta 2: Obtener las coordenadas y la URI del distrito de las direcciones instanciadas
+SELECT ?name ?lat ?long ?district WHERE {
+  ?school a :EducationalCenter ;
+          :hasAddress ?address .
+  ?school :centerName ?name .
+  ?address :latitude ?lat ;
+           :longitude ?long ;
+           :inDistrict ?district .
+} LIMIT 10
+
+# Consulta 3: Contar el número total de centros educativos generados en el grafo
+SELECT (COUNT(?school) AS ?totalSchools) WHERE {
+  ?school a :EducationalCenter .
+}

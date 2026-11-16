@@ -1,0 +1,156 @@
+PREFIX bm: <http://breathemadrid.es/ontology#>
+PREFIX bmr: <http://breathemadrid.es/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Q1. Explicit types (expected: Observation 3024, Station 24, Pollutant 11, Municipality 1; station subclasses: 9, 12, 3)
+SELECT ?class (COUNT(?s) AS ?individuals)
+WHERE { ?s a ?class }
+GROUP BY ?class
+ORDER BY DESC(?individuals)
+
+# Q2. All stations with name, type, municipality and coordinates (expected: 24 rows)
+SELECT ?station ?name ?typeName ?municipality ?lat ?lon
+WHERE {
+  VALUES (?type ?typeName) {
+    (bm:UrbanTrafficStation "Urbana tráfico")
+    (bm:UrbanBackgroundStation "Urbana fondo")
+    (bm:SuburbanStation "Suburbana")
+  }
+  ?station a bm:Station, ?type ;
+           bm:stationName ?name ;
+           bm:locatedIn ?m ;
+           bm:latitude ?lat ;
+           bm:longitude ?lon .
+  ?m bm:municipalityName ?municipality .
+}
+ORDER BY ?name
+
+# Q3. Pollutants measured by each station (one row per station, pollutant names aggregated)
+SELECT ?stationName (GROUP_CONCAT(?pollutantName; separator=", ") AS ?pollutants)
+WHERE {
+  ?station a bm:Station ;
+           bm:stationName ?stationName ;
+           bm:measuresPollutant ?p .
+  ?p bm:pollutantName ?pollutantName .
+}
+GROUP BY ?stationName
+ORDER BY ?stationName
+
+# Q4. Hourly valid PM10 observations at Plaza de España, in time order
+SELECT ?dateTime ?value
+WHERE {
+  ?obs a bm:Observation ;
+       bm:observedAt ?station ;
+       bm:observesPollutant <http://breathemadrid.es/resource/pollutant/pm10> ;
+       bm:dateTime ?dateTime ;
+       bm:isValid true ;
+       bm:value ?value .
+  ?station bm:stationName "Plaza de España" .
+}
+ORDER BY ?dateTime
+
+# Q5. Average, maximum and number of valid measurements per pollutant (PM10 avg ≈ 24.92 over 249 values; NO2 avg = 16.5 over 402)
+SELECT ?pollutantName ?unit (COUNT(?obs) AS ?validObservations) (AVG(?value) AS ?average) (MAX(?value) AS ?maximum)
+WHERE {
+  ?obs a bm:Observation ;
+       bm:observesPollutant ?p ;
+       bm:isValid true ;
+       bm:value ?value .
+  ?p bm:pollutantName ?pollutantName ;
+     bm:unit ?unit .
+}
+GROUP BY ?pollutantName ?unit
+ORDER BY DESC(?average)
+
+# Q6. Average NO2 per station subclass (traffic vs background vs suburban)
+SELECT ?typeName (AVG(?value) AS ?avgNO2)
+WHERE {
+  ?obs bm:observesPollutant <http://breathemadrid.es/resource/pollutant/dioxido-de-nitrogeno> ;
+       bm:observedAt ?station ;
+       bm:isValid true ;
+       bm:value ?value .
+  VALUES (?type ?typeName) {
+    (bm:UrbanTrafficStation "Urbana tráfico")
+    (bm:UrbanBackgroundStation "Urbana fondo")
+    (bm:SuburbanStation "Suburbana")
+  }
+  ?station a ?type .
+}
+GROUP BY ?typeName
+ORDER BY DESC(?avgNO2)
+
+# Q7. Station and hour with the highest valid value for each pollutant (ties return one row per hour)
+SELECT ?pollutantName ?stationName ?dateTime ?value
+WHERE {
+  {
+    SELECT ?p (MAX(?v) AS ?value)
+    WHERE { ?o bm:observesPollutant ?p ; bm:isValid true ; bm:value ?v }
+    GROUP BY ?p
+  }
+  ?obs bm:observesPollutant ?p ;
+       bm:isValid true ;
+       bm:value ?value ;
+       bm:dateTime ?dateTime ;
+       bm:observedAt ?station .
+  ?p bm:pollutantName ?pollutantName .
+  ?station bm:stationName ?stationName .
+}
+ORDER BY ?pollutantName
+
+# Q8. Number of invalid observations (and so without a value) per pollutant
+SELECT ?pollutantName (COUNT(?obs) AS ?invalidObservations)
+WHERE {
+  ?obs a bm:Observation ;
+       bm:observesPollutant ?p ;
+       bm:isValid false .
+  ?p bm:pollutantName ?pollutantName .
+}
+GROUP BY ?pollutantName
+ORDER BY DESC(?invalidObservations)
+
+# Q9. Stations located in Madrid that are linked to Wikidata through the municipality
+SELECT ?stationName ?wikidata
+WHERE {
+  ?station a bm:Station ;
+           bm:stationName ?stationName ;
+           bm:locatedIn ?m .
+  ?m owl:sameAs ?wikidata .
+}
+ORDER BY ?stationName
+
+# Q10. Sanity check: observations linked to a station or pollutant that does not exist (expected: false)
+ASK {
+  ?obs a bm:Observation .
+  {
+    ?obs bm:observedAt ?station .
+    FILTER NOT EXISTS { ?station a bm:Station }
+  }
+  UNION
+  {
+    ?obs bm:observesPollutant ?p .
+    FILTER NOT EXISTS { ?p a bm:Pollutant }
+  }
+}
+
+# Q11. Sanity check: invalid observations that still carry a value (expected: false)
+ASK {
+  ?obs bm:isValid false ;
+       bm:value ?v .
+}
+
+# Q12. Sanity check: individuals without label or without type (expected: no rows)
+SELECT ?s
+WHERE {
+  { ?s ?p ?o . FILTER NOT EXISTS { ?s rdfs:label ?l } }
+  UNION
+  { ?s ?p ?o . FILTER NOT EXISTS { ?s a ?t } }
+}
+
+# Q13. Sanity check: observation dates (expected: 3024 xsd:dateTime values, from 2026-10-01T01:00:00 to 2026-10-02T00:00:00)
+SELECT (COUNT(?dt) AS ?total) (SUM(IF(DATATYPE(?dt) = xsd:dateTime, 1, 0)) AS ?typedAsDateTime) (MIN(?dt) AS ?first) (MAX(?dt) AS ?last)
+WHERE {
+  ?obs a bm:Observation ;
+       bm:dateTime ?dt .
+}

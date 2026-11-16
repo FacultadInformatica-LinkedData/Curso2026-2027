@@ -1,0 +1,194 @@
+@prefix rr:  <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:  <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bici: <http://www.example.org/bicimad/ontology/> .
+
+@base <http://www.example.org/bicimad/mapping/> .
+
+
+<#StationMap> a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "csv/bikestationbicimad_csv-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.example.org/bicimad/resource/station/{number}" ;
+        rr:class bici:Station
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "Name" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:name ;
+        rr:objectMap [
+            rml:reference "Name" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:objectId ;
+        rr:objectMap [
+            rml:reference "OBJECTID" ;
+            rr:datatype xsd:integer ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:stationNumber ;
+        rr:objectMap [
+            rml:reference "number" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:activate ;
+        rr:objectMap [
+            rml:reference "Activate" ;
+            rr:datatype xsd:integer ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:noAvailable ;
+        rr:objectMap [
+            rml:reference "NoAvailable" ;
+            rr:datatype xsd:integer ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:ligth ;
+        rr:objectMap [
+            rml:reference "Ligth" ;
+            rr:datatype xsd:integer ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:totalBases ;
+        rr:objectMap [
+            rml:reference "TotalBases" ;
+            rr:datatype xsd:integer ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:hasLocation ;
+        rr:objectMap [
+            rr:parentTriplesMap <#LocationMap> ;
+            rr:joinCondition [
+                rr:child "number" ;
+                rr:parent "number"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:hasStatus ;
+        rr:objectMap [
+            rr:parentTriplesMap <#StateMap> ;
+            rr:joinCondition [
+                rr:child "State" ;
+                rr:parent "State"
+            ]
+        ]
+    ] .
+
+
+<#LocationMap> a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "csv/bikestationbicimad_csv-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.example.org/bicimad/resource/location/{number}" ;
+        rr:class bici:Location
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "Name" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:address ;
+        rr:objectMap [
+            rml:reference "Address" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:positionText ;
+        rr:objectMap [
+            rml:reference "PosicionSTR" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:longitude ;
+        rr:objectMap [
+            rml:reference "POINT_X" ;
+            rr:datatype xsd:decimal ;
+            rr:termType rr:Literal
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate bici:latitude ;
+        rr:objectMap [
+            rml:reference "POINT_Y" ;
+            rr:datatype xsd:decimal ;
+            rr:termType rr:Literal
+        ]
+    ] .
+
+<#StateMap> a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "csv/bikestationbicimad_csv-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.example.org/bicimad/resource/status/{State}" ;
+        rr:class bici:StationStatus
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "State" ;
+            rr:datatype xsd:string ;
+            rr:termType rr:Literal
+        ]
+    ] .

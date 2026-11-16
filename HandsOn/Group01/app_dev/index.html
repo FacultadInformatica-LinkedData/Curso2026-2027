@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madrid Smart City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <a class="brand" href="index.html"><span id="logo"></span><span>Madrid Smart City</span></a>
+      <p class="tagline">Encuentra alojamiento turístico en los 169 municipios de la Comunidad de Madrid</p>
+      <div class="kpis" id="kpis"></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters">
+      <h2>¿Qué buscas?</h2>
+      <label>Tipo de alojamiento
+        <select id="f-type"></select>
+      </label>
+      <fieldset>
+        <legend>Categoría</legend>
+        <div class="chips" id="f-stars">
+          <label class="chip"><input type="checkbox" value="1"><span>★</span></label>
+          <label class="chip"><input type="checkbox" value="2"><span>★★</span></label>
+          <label class="chip"><input type="checkbox" value="3"><span>★★★</span></label>
+          <label class="chip"><input type="checkbox" value="4"><span>★★★★</span></label>
+          <label class="chip"><input type="checkbox" value="5"><span>★★★★★</span></label>
+          <label class="chip plain"><input type="checkbox" value="none"><span>Sin categoría</span></label>
+        </div>
+        <p class="hint">Sin marcar ninguna, se muestran todas.</p>
+      </fieldset>
+      <label>Municipio
+        <select id="f-city"><option value="">Todos los municipios</option></select>
+      </label>
+      <label>Código postal
+        <input id="f-pc" type="text" inputmode="numeric" maxlength="5" placeholder="p. ej. 28013">
+      </label>
+      <label>Nombre
+        <input id="f-name" type="text" placeholder="p. ej. palacio">
+      </label>
+      <button id="f-reset" type="button" class="ghost">Limpiar filtros</button>
+    </aside>
+
+    <section class="content">
+      <div class="map-card">
+        <div id="map" aria-label="Mapa de municipios"></div>
+      </div>
+      <p class="hint map-hint">Cada círculo es un municipio y su tamaño indica cuántos alojamientos cumplen tu búsqueda. Pulsa uno para ver solo ese municipio.</p>
+      <div id="city-banner"></div>
+      <div class="results-head">
+        <h2 id="results-title">Resultados</h2>
+        <span id="status" class="status"></span>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="cards" id="results"></div>
+      <nav class="pager" id="pager" aria-label="Paginación"></nav>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Datos: Registro de alojamientos turísticos de la
+      <a href="https://datos.comunidad.madrid" target="_blank" rel="noopener">Comunidad de Madrid</a> (CC BY 4.0) ·
+      Información de municipios: <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a> ·
+      Mapa: © OpenStreetMap</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="common.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+@prefix : <http://educamadrid.linkeddata.es/ontology/CentroEducativo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<http://educamadrid.linkeddata.es/ontology/CentroEducativo> a owl:Ontology ;
+    rdfs:label "Madrid Educational Centers Ontology"@en ;
+    rdfs:comment "Ontology for modeling educational centers and their location details in Madrid based on open data."@en ;
+    dcterms:title "Madrid Educational Centers Ontology"@en ;
+    dcterms:created "2026-10-04"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#EducationalCenter
+:EducationalCenter a owl:Class ;
+    rdfs:label "Educational Center"@en ;
+    rdfs:comment "An institution or organization that provides education and training services."@en ;
+    rdfs:subClassOf schema:EducationalOrganization .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#Address
+:Address a owl:Class ;
+    rdfs:label "Address"@en ;
+    rdfs:comment "Physical location and postal details of a facility or institution."@en ;
+    rdfs:subClassOf schema:PostalAddress .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#District
+:District a owl:Class ;
+    rdfs:label "District"@en ;
+    rdfs:comment "An administrative division of the municipality of Madrid."@en ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#Neighborhood
+:Neighborhood a owl:Class ;
+    rdfs:label "Neighborhood"@en ;
+    rdfs:comment "A localized subdivision within an administrative district of Madrid."@en ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#Accessibility
+:Accessibility a owl:Class ;
+    rdfs:label "Accessibility"@en ;
+    rdfs:comment "Information representing the physical accessibility status of a location."@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#hasAddress
+:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address"@en ;
+    rdfs:comment "Relates an educational center to its physical postal address."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range :Address .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#inDistrict
+:inDistrict a owl:ObjectProperty ;
+    rdfs:label "in district"@en ;
+    rdfs:comment "Relates an address or neighborhood to its corresponding district."@en ;
+    rdfs:domain :Address ;
+    rdfs:range :District .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#inNeighborhood
+:inNeighborhood a owl:ObjectProperty ;
+    rdfs:label "in neighborhood"@en ;
+    rdfs:comment "Relates an address to its corresponding neighborhood."@en ;
+    rdfs:domain :Address ;
+    rdfs:range :Neighborhood .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#belongsToDistrict
+:belongsToDistrict a owl:ObjectProperty ;
+    rdfs:label "belongs to district"@en ;
+    rdfs:comment "Relates a neighborhood to the administrative district it belongs to."@en ;
+    rdfs:domain :Neighborhood ;
+    rdfs:range :District .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#hasAccessibility
+:hasAccessibility a owl:ObjectProperty ;
+    rdfs:label "has accessibility"@en ;
+    rdfs:comment "Relates an educational center to its accessibility level classification."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range :Accessibility .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#pk
+:pk a owl:DatatypeProperty ;
+    rdfs:label "primary key"@en ;
+    rdfs:comment "Unique primary key identifier from the original dataset."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:integer .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#centerName
+:centerName a owl:DatatypeProperty ;
+    rdfs:label "center name"@en ;
+    rdfs:comment "Official name of the educational center."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#centerType
+:centerType a owl:DatatypeProperty ;
+    rdfs:label "center type"@en ;
+    rdfs:comment "Category or type path of the educational institution."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#description
+:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:comment "Textual description, offered courses, or additional information about the center."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#schedule
+:schedule a owl:DatatypeProperty ;
+    rdfs:label "schedule"@en ;
+    rdfs:comment "Operating hours or schedule details of the center."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#equipment
+:equipment a owl:DatatypeProperty ;
+    rdfs:label "equipment"@en ;
+    rdfs:comment "Facilities and equipment available at the center."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#transportation
+:transportation a owl:DatatypeProperty ;
+    rdfs:label "transportation"@en ;
+    rdfs:comment "Public transportation options (bus, metro) to reach the center."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#telephone
+:telephone a owl:DatatypeProperty ;
+    rdfs:label "telephone"@en ;
+    rdfs:comment "Contact telephone number."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#email
+:email a owl:DatatypeProperty ;
+    rdfs:label "email"@en ;
+    rdfs:comment "Contact email address."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#contentUrl
+:contentUrl a owl:DatatypeProperty ;
+    rdfs:label "content URL"@en ;
+    rdfs:comment "URL link to the detailed page of the center on Madrid's open data portal."@en ;
+    rdfs:domain :EducationalCenter ;
+    rdfs:range xsd:anyURI .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#streetType
+:streetType a owl:DatatypeProperty ;
+    rdfs:label "street type"@en ;
+    rdfs:comment "Type of thoroughfare (e.g., CALLE, AVENIDA)."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#streetName
+:streetName a owl:DatatypeProperty ;
+    rdfs:label "street name"@en ;
+    rdfs:comment "Name of the street or thoroughfare."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#streetNumber
+:streetNumber a owl:DatatypeProperty ;
+    rdfs:label "street number"@en ;
+    rdfs:comment "Street number of the address."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#postalCode
+:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code"@en ;
+    rdfs:comment "Postal zip code of the address."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#latitude
+:latitude a owl:DatatypeProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "Geographic latitude coordinate in WGS84 decimal degrees."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:double .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#longitude
+:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "Geographic longitude coordinate in WGS84 decimal degrees."@en ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:double .
+
+###  http://educamadrid.linkeddata.es/ontology/CentroEducativo#accessibilityCode
+:accessibilityCode a owl:DatatypeProperty ;
+    rdfs:label "accessibility code"@en ;
+    rdfs:comment "Numerical code representing the accessibility rating."@en ;
+    rdfs:domain :Accessibility ;
+    rdfs:range xsd:string .

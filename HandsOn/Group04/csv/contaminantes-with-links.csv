@@ -1,0 +1,12 @@
+MAGNITUD,FORMULA,NOMBRE,UNIDAD,WIKIDATA_ID
+1,SO2,Dióxido de azufre,µg/m3,Q5282
+6,CO,Monóxido de carbono,mg/m3,Q2025
+7,NO,Monóxido de nitrógeno,µg/m3,Q207843
+8,NO2,Dióxido de nitrógeno,µg/m3,Q207895
+9,PM2.5,Partículas en suspensión menores de 2.5 µm,µg/m3,Q48035814
+10,PM10,Partículas en suspensión menores de 10 µm,µg/m3,Q1056863
+12,NOx,Óxidos de nitrógeno,µg/m3,Q424418
+14,O3,Ozono,µg/m3,Q36933
+20,TOL,Tolueno,µg/m3,Q15779
+30,BEN,Benceno,µg/m3,Q2270
+35,EBE,Etilbenceno,µg/m3,Q409184
