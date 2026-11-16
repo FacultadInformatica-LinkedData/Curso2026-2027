@@ -1,0 +1,105 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+PREFIX vocab: <http://smartcity.linkeddata.es/touristaccommodation/ontology/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# NOTE: these queries must be run over ontology/ontology-updated.ttl + rdf/data-updated.ttl loaded together.
+# Accommodations are typed with their own concrete class, which is aligned with schema.org through
+# rdfs:subClassOf, so a/rdfs:subClassOf* reaches both our classes and the schema.org ones
+# (works with or without RDFS inference).
+
+# Query 1: Count accommodations as schema:LodgingBusiness (only schema.org vocabulary)
+SELECT (COUNT(DISTINCT ?accommodation) AS ?total)
+WHERE {
+  ?accommodation a/rdfs:subClassOf* schema:LodgingBusiness .
+}
+
+# Query 2: Count accommodations by own class
+SELECT ?type ?typeLabel (COUNT(?accommodation) AS ?total)
+WHERE {
+  ?accommodation a ?type .
+  ?type rdfs:subClassOf* vocab:Accommodation ;
+        rdfs:label ?typeLabel .
+}
+GROUP BY ?type ?typeLabel
+ORDER BY DESC(?total)
+
+# Query 3: Which own classes are instances of schema:Hotel? (hotels, apart-hotels and rural hotels)
+SELECT ?type (COUNT(?accommodation) AS ?total)
+WHERE {
+  ?accommodation a ?type .
+  ?type rdfs:subClassOf+ schema:Hotel .
+}
+GROUP BY ?type
+ORDER BY DESC(?total)
+
+# Query 4: Name and full postal address of accommodations, using only schema.org terms
+SELECT ?name ?street ?postalCode ?locality
+WHERE {
+  ?accommodation schema:name ?name ;
+                 schema:address ?address .
+  ?address a schema:PostalAddress ;
+           schema:streetAddress ?street ;
+           schema:postalCode ?postalCode ;
+           schema:addressLocality ?locality .
+}
+ORDER BY ?name
+LIMIT 20
+
+# Query 5: Hotels with 4 or 5 stars and their city
+SELECT ?name ?level ?cityName
+WHERE {
+  ?hotel a vocab:Hotel ;
+         schema:name ?name ;
+         vocab:categoryLevel ?level ;
+         schema:address/vocab:inCity/rdfs:label ?cityName .
+  FILTER (?level >= 4)
+}
+ORDER BY DESC(?level) ?cityName ?name
+
+# Query 6: Top 10 cities (schema:City) by number of accommodations, with their Wikidata link
+SELECT ?cityName ?wikidata (COUNT(?accommodation) AS ?total)
+WHERE {
+  ?accommodation schema:address/vocab:inCity ?city .
+  ?city a schema:City ;
+        rdfs:label ?cityName ;
+        owl:sameAs ?wikidata .
+}
+GROUP BY ?cityName ?wikidata
+ORDER BY DESC(?total)
+LIMIT 10
+
+# Query 7: Accommodations that cannot be linked to Wikidata (FILTER NOT EXISTS)
+SELECT (COUNT(DISTINCT ?accommodation) AS ?notLinked)
+WHERE {
+  ?accommodation a/rdfs:subClassOf* schema:LodgingBusiness .
+  FILTER NOT EXISTS {
+    ?accommodation schema:address/vocab:inCity/owl:sameAs ?wikidata .
+  }
+}
+
+# Query 8 (federated): Top 10 cities by number of accommodations, with their population from Wikidata (P1082)
+SELECT ?cityName ?total ?population
+       (ROUND(?total * 1000 / ?population * 100) / 100 AS ?per1000Inhabitants)
+WHERE {
+  {
+    SELECT ?wikidata ?cityName (COUNT(?accommodation) AS ?total)
+    WHERE {
+      ?accommodation schema:address/vocab:inCity ?city .
+      ?city rdfs:label ?cityName ;
+            owl:sameAs ?wikidata .
+    }
+    GROUP BY ?wikidata ?cityName
+    ORDER BY DESC(?total)
+    LIMIT 10
+  }
+  # Remote part restricted to municipalities of Spain (Q2074737) in the Community of Madrid (Q5756)
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata wdt:P31 wd:Q2074737 ;
+              wdt:P131 wd:Q5756 ;
+              wdt:P1082 ?population .
+  }
+}
+ORDER BY DESC(?total)

@@ -12,7 +12,7 @@
 map:map_accommodation_mapping_000 rml:logicalSource map:source_000 ;
 	rdf:type rr:TriplesMap ;
 	rdfs:label "accommodation_mapping" ;
-	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005 ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_004, map:pom_005 ;
 	rr:subjectMap map:s_000 .
 
 map:map_address_mapping_000 rml:logicalSource map:source_001 ;
@@ -28,10 +28,10 @@ map:map_city_mapping_000 rml:logicalSource map:source_002 ;
 	rr:subjectMap map:s_002 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant vocab:Accommodation ;
+	rr:template "http://smartcity.linkeddata.es/touristaccommodation/ontology/{clase}" ;
 	rr:termType rr:IRI .
 
-map:om_001 rml:reference "denominacion" ;
+map:om_001 rml:reference "etiqueta_alojamiento" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
@@ -41,14 +41,9 @@ map:om_002 rml:reference "denominacion" ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
-map:om_003 rml:reference "alojamiento_tipo" ;
+map:om_004 rml:reference "nivel_categoria" ;
 	rdf:type rr:ObjectMap ;
-	rr:datatype xsd:string ;
-	rr:termType rr:Literal .
-
-map:om_004 rml:reference "categoria" ;
-	rdf:type rr:ObjectMap ;
-	rr:datatype xsd:string ;
+	rr:datatype xsd:integer ;
 	rr:termType rr:Literal .
 
 map:om_005 rdf:type rr:ObjectMap ;
@@ -59,7 +54,7 @@ map:om_006 rdf:type rr:ObjectMap ;
 	rr:constant vocab:Address ;
 	rr:termType rr:IRI .
 
-map:om_007 rml:reference "via_nombre" ;
+map:om_007 rml:reference "etiqueta_direccion" ;
 	rdf:type rr:ObjectMap ;
 	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
@@ -71,11 +66,11 @@ map:om_008 rml:reference "via_nombre" ;
 
 map:om_009 rml:reference "cdpostal" ;
 	rdf:type rr:ObjectMap ;
-	rr:datatype xsd:integer ;
+	rr:datatype xsd:string ;
 	rr:termType rr:Literal .
 
 map:om_010 rdf:type rr:ObjectMap ;
-	rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad}" ;
+	rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad_id}" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
@@ -96,11 +91,8 @@ map:pm_001 rdf:type rr:PredicateMap ;
 map:pm_002 rdf:type rr:PredicateMap ;
 	rr:constant vocab:hasName .
 
-map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant vocab:hasType .
-
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant vocab:hasCategory .
+	rr:constant vocab:categoryLevel .
 
 map:pm_005 rdf:type rr:PredicateMap ;
 	rr:constant vocab:hasAddress .
@@ -137,10 +129,6 @@ map:pom_001 rdf:type rr:PredicateObjectMap ;
 map:pom_002 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_002 ;
 	rr:predicateMap map:pm_002 .
-
-map:pom_003 rdf:type rr:PredicateObjectMap ;
-	rr:objectMap map:om_003 ;
-	rr:predicateMap map:pm_003 .
 
 map:pom_004 rdf:type rr:PredicateObjectMap ;
 	rr:objectMap map:om_004 ;
@@ -188,7 +176,7 @@ map:s_001 rdf:type rr:SubjectMap ;
 	rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/Address/{signatura}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad}" .
+	rr:template "http://smartcity.linkeddata.es/touristaccommodation/resource/City/{localidad_id}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "../csv/alojamientos-turisticos-updated.csv" ;

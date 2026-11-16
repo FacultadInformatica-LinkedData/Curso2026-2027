@@ -1,25 +1,74 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vocab: <http://smartcity.linkeddata.es/touristaccommodation/ontology/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-# mostras municipios y enlaces a wikidata
-SELECT DISTINCT ?city ?wikidata
+# NOTE: these queries must be run over ontology/ontology.ttl + rdf/data-with-links.ttl loaded together.
+# Accommodations are typed only with their concrete class, so "all accommodations" is obtained
+# with the property path a/rdfs:subClassOf* vocab:Accommodation (works with or without RDFS inference).
+
+# Query 1: Municipalities and their links to Wikidata
+SELECT DISTINCT ?city ?cityName ?wikidata
 WHERE {
-    ?city a vocab:City .
-    ?city owl:sameAs ?wikidata .
+    ?city a vocab:City ;
+          rdfs:label ?cityName ;
+          owl:sameAs ?wikidata .
 }
+ORDER BY ?cityName
 
-# mostrar cuantos municipios tienen enlaces diferentes
+# Query 2: Number of municipalities linked to Wikidata
 SELECT (COUNT(DISTINCT ?city) AS ?total)
 WHERE {
-    ?city a vocab:City .
-    ?city owl:sameAs ?wikidata .
+    ?city a vocab:City ;
+          owl:sameAs ?wikidata .
 }
 
-# mostrar alojamientos y sus enlaces a wikidata
-SELECT DISTINCT ?accommodation ?city ?wikidata
+# Query 3: Accommodations and the Wikidata link of their municipality
+SELECT DISTINCT ?accommodation ?label ?cityName ?wikidata
 WHERE {
-    ?accommodation a vocab:Accommodation .
-    ?accommodation vocab:hasAddress ?address .
-    ?address vocab:inCity ?city .
-    ?city owl:sameAs ?wikidata .
+    ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                   rdfs:label ?label ;
+                   vocab:hasAddress/vocab:inCity ?city .
+    ?city rdfs:label ?cityName ;
+          owl:sameAs ?wikidata .
 }
+ORDER BY ?cityName ?label
+LIMIT 20
+
+# Query 4: Accommodations that cannot be linked to Wikidata (FILTER NOT EXISTS)
+SELECT (COUNT(DISTINCT ?accommodation) AS ?notLinked)
+WHERE {
+    ?accommodation a/rdfs:subClassOf* vocab:Accommodation .
+    FILTER NOT EXISTS {
+        ?accommodation vocab:hasAddress/vocab:inCity/owl:sameAs ?wikidata .
+    }
+}
+
+# Query 5 (federated): Top 10 municipalities by number of accommodations, with their population
+# taken from Wikidata (P1082) through owl:sameAs, and accommodations per 1,000 inhabitants.
+SELECT ?cityName ?wikidata ?total ?population
+       (ROUND(?total * 1000 / ?population * 100) / 100 AS ?per1000Inhabitants)
+WHERE {
+    {
+        SELECT ?wikidata ?cityName (COUNT(?accommodation) AS ?total)
+        WHERE {
+            ?accommodation a/rdfs:subClassOf* vocab:Accommodation ;
+                           vocab:hasAddress/vocab:inCity ?city .
+            ?city rdfs:label ?cityName ;
+                  owl:sameAs ?wikidata .
+        }
+        GROUP BY ?wikidata ?cityName
+        ORDER BY DESC(?total)
+        LIMIT 10
+    }
+    # Remote part: municipalities of Spain (Q2074737) located in the Community of Madrid (Q5756)
+    # and their population (P1082). Restricting it keeps the remote result small (179 rows).
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?wikidata wdt:P31 wd:Q2074737 ;
+                  wdt:P131 wd:Q5756 ;
+                  wdt:P1082 ?population .
+    }
+}
+ORDER BY DESC(?total)
