@@ -1,9 +1,11 @@
 @prefix ns1: <http://w3id.org/madrid-culture/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://w3id.org/madrid-culture/resource/library/10395362> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal María Lejárraga" ;
     schema1:latitude 40.49041562546542 ;
     schema1:longitude -3.655356751728003 ;
     schema1:name "Biblioteca Pública Municipal María Lejárraga" ;
@@ -18,6 +20,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697942> .
 
 <http://w3id.org/madrid-culture/resource/library/115056> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal José Hierro" ;
     schema1:latitude 40.433291625973624 ;
     schema1:longitude -3.6105662311927453 ;
     schema1:name "Biblioteca Pública Municipal José Hierro" ;
@@ -32,9 +35,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697922> .
 
 <http://w3id.org/madrid-culture/resource/library/11572165> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal San Fermín" ;
     schema1:latitude 40.3711623444796 ;
     schema1:longitude -3.692742821990015 ;
-    schema1:name "Biblioteca Pública Municipal de San Fermín" ;
+    schema1:name "Biblioteca Pública Municipal San Fermín" ;
     schema1:openingHours "Apertura de lunes a domingo.   Horario: de lunes a viernes de 8:30 a 21 horas; sábados y domingos de 8:30 a 15 horas.   Verano (del 15 de junio al 15 de septiembre): de lunes a viernes de 8:30 a 20 horas; sábados y domingos de 8:30 a 14 horas.   Cerrado: festivos, Semana Santa (de jueves a domingo), los dos últimos fines de semana de julio y todos los fines de semana de agosto, 24 y 31 de diciembre." ;
     schema1:telephone "91 480 47 25" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=83e748aaf535e710VgnVCM1000001d4a900aRCRD> ;
@@ -42,9 +46,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/11572165> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/11572165> ;
     ns1:transport "Metro: San Fermín-Orcasur (línea 3)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q111257503> .
 
 <http://w3id.org/madrid-culture/resource/library/123303> a ns1:Library ;
+    rdfs:label "Biblioteca Pública José Hierro" ;
     schema1:latitude 40.38188230129181 ;
     schema1:longitude -3.7106157111470615 ;
     schema1:name "Biblioteca Pública José Hierro" ;
@@ -59,6 +65,7 @@
     owl:sameAs <https://wikidata.org/entity/Q26834202> .
 
 <http://w3id.org/madrid-culture/resource/library/12734939> a ns1:Library ;
+    rdfs:label "Centro Cultural Paco Rabal. Biblioteca Pública" ;
     schema1:latitude 40.379459109283275 ;
     schema1:longitude -3.661114669233002 ;
     schema1:name "Centro Cultural Paco Rabal. Biblioteca Pública" ;
@@ -73,6 +80,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85698025> .
 
 <http://w3id.org/madrid-culture/resource/library/12773298> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Francisco Umbral" ;
     schema1:latitude 40.35118703272002 ;
     schema1:longitude -3.679345889376551 ;
     schema1:name "Biblioteca Pública Municipal Francisco Umbral" ;
@@ -87,6 +95,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85698734> .
 
 <http://w3id.org/madrid-culture/resource/library/167128> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Francisco Ayala" ;
     schema1:latitude 40.39982891410407 ;
     schema1:longitude -3.621281890570377 ;
     schema1:name "Biblioteca Pública Municipal Francisco Ayala" ;
@@ -101,6 +110,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697910> .
 
 <http://w3id.org/madrid-culture/resource/library/1745> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Canillejas" ;
     schema1:latitude 40.44640229188281 ;
     schema1:longitude -3.6117933204271098 ;
     schema1:name "Biblioteca Pública Municipal Canillejas" ;
@@ -115,6 +125,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697890> .
 
 <http://w3id.org/madrid-culture/resource/library/1746> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal San Blas" ;
     schema1:latitude 40.420231627534996 ;
     schema1:longitude -3.6218113860909074 ;
     schema1:name "Biblioteca Pública Municipal San Blas" ;
@@ -129,6 +140,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697960> .
 
 <http://w3id.org/madrid-culture/resource/library/1747> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Vicálvaro" ;
     schema1:latitude 40.405283650744316 ;
     schema1:longitude -3.6086278232922804 ;
     schema1:name "Biblioteca Pública Municipal Vicálvaro" ;
@@ -143,6 +155,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697974> .
 
 <http://w3id.org/madrid-culture/resource/library/1748> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Gerardo Diego" ;
     schema1:latitude 40.37790196240434 ;
     schema1:longitude -3.6227296605039516 ;
     schema1:name "Biblioteca Pública Municipal Gerardo Diego" ;
@@ -157,6 +170,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697914> .
 
 <http://w3id.org/madrid-culture/resource/library/1750> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Huerta de la Salud" ;
     schema1:latitude 40.47571688103069 ;
     schema1:longitude -3.64667257750353 ;
     schema1:name "Biblioteca Pública Municipal Huerta de la Salud" ;
@@ -171,6 +185,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697920> .
 
 <http://w3id.org/madrid-culture/resource/library/1752> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Miguel Delibes" ;
     schema1:latitude 40.40971737692924 ;
     schema1:longitude -3.6529822109115133 ;
     schema1:name "Biblioteca Pública Municipal Miguel Delibes" ;
@@ -185,6 +200,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697948> .
 
 <http://w3id.org/madrid-culture/resource/library/1753> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Portazgo" ;
     schema1:latitude 40.393189968014696 ;
     schema1:longitude -3.6554147649183943 ;
     schema1:name "Biblioteca Pública Municipal Portazgo" ;
@@ -199,6 +215,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697955> .
 
 <http://w3id.org/madrid-culture/resource/library/1754> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Gabriel García Márquez" ;
     schema1:latitude 40.366768324753416 ;
     schema1:longitude -3.701141063083806 ;
     schema1:name "Biblioteca Pública Municipal Gabriel García Márquez" ;
@@ -213,6 +230,7 @@
     owl:sameAs <https://wikidata.org/entity/Q42268564> .
 
 <http://w3id.org/madrid-culture/resource/library/1755> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Ana María Matute" ;
     schema1:latitude 40.39786734087938 ;
     schema1:longitude -3.720088245008897 ;
     schema1:name "Biblioteca Pública Municipal Ana María Matute" ;
@@ -227,6 +245,7 @@
     owl:sameAs <https://wikidata.org/entity/Q70135254> .
 
 <http://w3id.org/madrid-culture/resource/library/1756> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal La Chata" ;
     schema1:latitude 40.38330593504341 ;
     schema1:longitude -3.7420633861175796 ;
     schema1:name "Biblioteca Pública Municipal La Chata" ;
@@ -241,6 +260,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697929> .
 
 <http://w3id.org/madrid-culture/resource/library/1757> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Aluche" ;
     schema1:latitude 40.39597072367931 ;
     schema1:longitude -3.7562716852987847 ;
     schema1:name "Biblioteca Pública Municipal Aluche" ;
@@ -255,6 +275,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697879> .
 
 <http://w3id.org/madrid-culture/resource/library/1759> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal María Zambrano" ;
     schema1:latitude 40.46903299144094 ;
     schema1:longitude -3.6976620067964996 ;
     schema1:name "Biblioteca Pública Municipal María Zambrano" ;
@@ -269,6 +290,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697944> .
 
 <http://w3id.org/madrid-culture/resource/library/1760> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Francisco Ibáñez" ;
     schema1:latitude 40.44810636195716 ;
     schema1:longitude -3.6762309620097398 ;
     schema1:name "Biblioteca Pública Municipal Francisco Ibáñez" ;
@@ -283,6 +305,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697912> .
 
 <http://w3id.org/madrid-culture/resource/library/1761> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Vallecas" ;
     schema1:latitude 40.395023959810636 ;
     schema1:longitude -3.665554302127492 ;
     schema1:name "Biblioteca Pública Municipal Vallecas" ;
@@ -297,6 +320,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697968> .
 
 <http://w3id.org/madrid-culture/resource/library/1762> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal David Gistau" ;
     schema1:latitude 40.43199309720514 ;
     schema1:longitude -3.670929243543714 ;
     schema1:name "Biblioteca Pública Municipal David Gistau" ;
@@ -311,6 +335,7 @@
     owl:sameAs <https://wikidata.org/entity/Q47012449> .
 
 <http://w3id.org/madrid-culture/resource/library/1763> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Pío Baroja" ;
     schema1:latitude 40.40003652682007 ;
     schema1:longitude -3.7074488154950584 ;
     schema1:name "Biblioteca Pública Municipal Pío Baroja" ;
@@ -325,9 +350,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697953> .
 
 <http://w3id.org/madrid-culture/resource/library/1764> a ns1:Library ;
+    rdfs:label "Biblioteca Pública José Luis Sampedro" ;
     schema1:latitude 40.435399621146054 ;
     schema1:longitude -3.69966592825407 ;
-    schema1:name "Biblioteca Pública Chamberí - José Luis Sampedro" ;
+    schema1:name "Biblioteca Pública José Luis Sampedro" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.   Días de cierre: sábados: 4 de abril, 16 de mayo y todos los sábados de julio, agosto y septiembre, 26 de diciembre Domingos: todos. Festivos: 1 de enero; 2 y 3 de abril; 1, 2 y 15 mayo; 12 de octubre; 2 y 9 de noviembre; 7, 8, 24, 25 y 31 de diciembre." ;
     schema1:telephone "914 459 782" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=5a2279262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -335,12 +361,14 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1764> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1764> ;
     ns1:transport "Metro: Iglesia (línea 1), Quevedo (línea 2), Alonso Cano (línea 7)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697863> .
 
 <http://w3id.org/madrid-culture/resource/library/1765> a ns1:Library ;
+    rdfs:label "Biblioteca Pública del Estado Manuel Alvar" ;
     schema1:latitude 40.4344013219248 ;
     schema1:longitude -3.6689700985764175 ;
-    schema1:name "Biblioteca Pública Manuel Alva" ;
+    schema1:name "Biblioteca Pública del Estado Manuel Alvar" ;
     schema1:openingHours "Cerrada temporalmente." ;
     schema1:telephone "917 263 701" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=d51979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -348,9 +376,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1765> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1765> ;
     ns1:transport "Metro: Diego de León (líneas 4, 5 y 6), Cartagena (línea 7), Parque de las Avenidas (línea 7)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q30453528> .
 
 <http://w3id.org/madrid-culture/resource/library/1770> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Hortaleza" ;
     schema1:latitude 40.47719279779815 ;
     schema1:longitude -3.6496196128895835 ;
     schema1:name "Biblioteca Pública Hortaleza" ;
@@ -365,6 +395,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697866> .
 
 <http://w3id.org/madrid-culture/resource/library/1771> a ns1:Library ;
+    rdfs:label "Biblioteca Pública José Acuña" ;
     schema1:latitude 40.427947044751 ;
     schema1:longitude -3.716950806640097 ;
     schema1:name "Biblioteca Pública José Acuña" ;
@@ -379,6 +410,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697854> .
 
 <http://w3id.org/madrid-culture/resource/library/1773> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Javier Marías" ;
     schema1:latitude 40.403992358842835 ;
     schema1:longitude -3.6494384856607582 ;
     schema1:name "Biblioteca Pública Javier Marías" ;
@@ -393,9 +425,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697877> .
 
 <http://w3id.org/madrid-culture/resource/library/1774> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Elena Fortún" ;
     schema1:latitude 40.403577814444176 ;
     schema1:longitude -3.6724086076957154 ;
-    schema1:name "Biblioteca Pública Retiro - Elena Fortún" ;
+    schema1:name "Biblioteca Pública Elena Fortún" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes, de 9 a 21 horas. Sábados, de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.    Días de cierre: Sábados : 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; Domingos: todos; Festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7, 8 y 25 de diciembre. otros: 24 y 31 de diciembre." ;
     schema1:telephone "915 019 146" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=44213d0b5e71c010VgnVCM1000000b205a0aRCRD> ;
@@ -403,9 +436,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1774> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1774> ;
     ns1:transport "Metro: Pacífico (líneas 1 y 6), Conde de Casal (línea 6)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697975> .
 
 <http://w3id.org/madrid-culture/resource/library/1777> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Ruiz Egea" ;
     schema1:latitude 40.44660265004691 ;
     schema1:longitude -3.702878714068386 ;
     schema1:name "Biblioteca Pública Ruiz Egea" ;
@@ -420,6 +455,7 @@
     owl:sameAs <https://wikidata.org/entity/Q55725097> .
 
 <http://w3id.org/madrid-culture/resource/library/1790> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal José Saramago" ;
     schema1:latitude 40.47860087334554 ;
     schema1:longitude -3.7094408342979954 ;
     schema1:name "Biblioteca Pública Municipal José Saramago" ;
@@ -434,6 +470,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697927> .
 
 <http://w3id.org/madrid-culture/resource/library/1792> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Pozo del Tío Raimundo" ;
     schema1:latitude 40.3735856436473 ;
     schema1:longitude -3.6602546064905397 ;
     schema1:name "Biblioteca Pública Municipal Pozo del Tío Raimundo" ;
@@ -448,6 +485,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697957> .
 
 <http://w3id.org/madrid-culture/resource/library/1794> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Ciudad Lineal" ;
     schema1:latitude 40.43644651057092 ;
     schema1:longitude -3.6372924261150033 ;
     schema1:name "Biblioteca Pública Municipal Ciudad Lineal" ;
@@ -462,9 +500,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697893> .
 
 <http://w3id.org/madrid-culture/resource/library/1798> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Pedro Salinas" ;
     schema1:latitude 40.407095978373384 ;
     schema1:longitude -3.7110439355238602 ;
-    schema1:name "Biblioteca Pública Centro - Pedro Salinas" ;
+    schema1:name "Biblioteca Pública Pedro Salinas" ;
     schema1:openingHours "Apertura de lunes a viernes.  De lunes a viernes de 9 a 21 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: Sábado y domingos; 1 de enero; 6 de enero; 2 y 3 de abril; 1, 2 y 15 de mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre 24, 25 y 31 de diciembre" ;
     schema1:telephone "913 665 407" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=67ed995a8bf5d010VgnVCM2000000c205a0aRCRD> ;
@@ -472,12 +511,14 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1798> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1798> ;
     ns1:transport "Metro: Puerta Toledo (línea 5)  Cercanías: Embajadores (C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697859> .
 
 <http://w3id.org/madrid-culture/resource/library/1800> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Miguel Hernández" ;
     schema1:latitude 40.38449744232138 ;
     schema1:longitude -3.642917675006409 ;
-    schema1:name "Biblioteca Pública de Vallecas" ;
+    schema1:name "Biblioteca Pública Miguel Hernández" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: Sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; Domingos: todos; Festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre; 25 de diciembre. Otros: 24 y 31 de diciembre." ;
     schema1:telephone "913 033 195" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=535979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -485,12 +526,14 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/1800> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/1800> ;
     ns1:transport "Metro: Miguel Hernández (línea 1)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q18818698> .
 
 <http://w3id.org/madrid-culture/resource/library/181101> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Luis Martín Santos" ;
     schema1:latitude 40.38092043731836 ;
     schema1:longitude -3.6136725045662423 ;
-    schema1:name "Biblioteca Pública Villa de Vallecas - Luis Martín Santos" ;
+    schema1:name "Biblioteca Pública Luis Martín Santos" ;
     schema1:openingHours "Apertura de lunes a domingo.  De lunes a viernes de 9 a 21 horas. Fines de semana y festivos de 11 a 19 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: 1 y 6 de enero; 1 de mayo; fines de semana y festivos del mes de agosto; 24, 25 y 31 de diciembre." ;
     schema1:telephone "912 760 231" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=09ac38d60b41c010VgnVCM2000000c205a0aRCRD> ;
@@ -498,9 +541,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/181101> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/181101> ;
     ns1:transport "Metro: Villa de Vallecas (línea 1)  Renfe: Líneas C1, C2 Y C7." ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697979> .
 
 <http://w3id.org/madrid-culture/resource/library/185595> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Manuel Vázquez Montalbán" ;
     schema1:latitude 40.45749513485957 ;
     schema1:longitude -3.710539712535917 ;
     schema1:name "Biblioteca Pública Municipal Manuel Vázquez Montalbán" ;
@@ -516,6 +561,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697940> .
 
 <http://w3id.org/madrid-culture/resource/library/186714> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Pablo Neruda" ;
     schema1:latitude 40.42941133441142 ;
     schema1:longitude -3.6416899839787695 ;
     schema1:name "Biblioteca Pública Municipal Pablo Neruda" ;
@@ -530,6 +576,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697951> .
 
 <http://w3id.org/madrid-culture/resource/library/1882> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Benito Pérez Galdós" ;
     schema1:latitude 40.42738668300474 ;
     schema1:longitude -3.7105999955473625 ;
     schema1:name "Biblioteca Pública Municipal Benito Pérez Galdós" ;
@@ -544,9 +591,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697887> .
 
 <http://w3id.org/madrid-culture/resource/library/25526> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Antonio Mingote" ;
     schema1:latitude 40.37944179159947 ;
     schema1:longitude -3.7694389972002424 ;
-    schema1:name "Biblioteca Pública Latina - Antonio Mingote" ;
+    schema1:name "Biblioteca Pública Antonio Mingote" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes de 9 a 21 horas. Sábados de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre:sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; domingos: todos; festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 ,8  y 25 de diciembre. otros: 24 y 31 de diciembre." ;
     schema1:telephone "915 093 625" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=c73e995a8bf5d010VgnVCM2000000c205a0aRCRD> ;
@@ -554,9 +602,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/25526> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/25526> ;
     ns1:transport "Metro: Aluche (línea 5)  Cercanías Renfe: Maestra Justa Freire - Polideportivo Aluche (antigua estación de Fanjul) (línea C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697873> .
 
 <http://w3id.org/madrid-culture/resource/library/50313490> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Benjamín Palencia" ;
     schema1:latitude 40.36691109856854 ;
     schema1:longitude -3.6164419466246676 ;
     schema1:name "Biblioteca Pública Municipal Benjamín Palencia" ;
@@ -570,6 +620,7 @@
     ns1:type "BibliotecasPublicas" .
 
 <http://w3id.org/madrid-culture/resource/library/50313615> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Victoria Prego" ;
     schema1:latitude 40.36161849969019 ;
     schema1:longitude -3.7537019050296867 ;
     schema1:name "Biblioteca Pública Municipal Victoria Prego" ;
@@ -583,6 +634,7 @@
     ns1:type "BibliotecasPublicas" .
 
 <http://w3id.org/madrid-culture/resource/library/51188> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Dámaso Alonso" ;
     schema1:latitude 40.467453379213175 ;
     schema1:longitude -3.6846112774442705 ;
     schema1:name "Biblioteca Pública Municipal Dámaso Alonso" ;
@@ -597,6 +649,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85685025> .
 
 <http://w3id.org/madrid-culture/resource/library/51849> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal La Elipa" ;
     schema1:latitude 40.42343352863466 ;
     schema1:longitude -3.6518288644365704 ;
     schema1:name "Biblioteca Pública Municipal La Elipa" ;
@@ -611,9 +664,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697932> .
 
 <http://w3id.org/madrid-culture/resource/library/5765642> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Luis Rosales" ;
     schema1:latitude 40.37342554545538 ;
     schema1:longitude -3.7480707331054375 ;
-    schema1:name "Biblioteca Pública de Carabanchel Luis Rosales" ;
+    schema1:name "Biblioteca Pública Luis Rosales" ;
     schema1:openingHours "Apertura de lunes a domingo.  De lunes a viernes de 9 a 21 horas. Fines de semana y festivos de 11 a 19 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: 1 y 6 de enero; 1 de mayo; fines de semana y festivos del mes de agosto; 24, 25 y 31 de diciembre." ;
     schema1:telephone "912 760 233" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=7a73f884ad3f9210VgnVCM1000000b205a0aRCRD> ;
@@ -621,9 +675,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/5765642> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/5765642> ;
     ns1:transport "Metro: Carabanchel Alto (línea 11)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q5727787> .
 
 <http://w3id.org/madrid-culture/resource/library/5768564> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Ángel González" ;
     schema1:latitude 40.397074625115906 ;
     schema1:longitude -3.7664885474841556 ;
     schema1:name "Biblioteca Pública Municipal Ángel González" ;
@@ -638,6 +694,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697883> .
 
 <http://w3id.org/madrid-culture/resource/library/5975465> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Iván de Vargas" ;
     schema1:latitude 40.41410290844665 ;
     schema1:longitude -3.7098591212735883 ;
     schema1:name "Biblioteca Pública Municipal Iván de Vargas" ;
@@ -652,6 +709,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2886368> .
 
 <http://w3id.org/madrid-culture/resource/library/66904> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Rafael Alberti" ;
     schema1:latitude 40.48785071405995 ;
     schema1:longitude -3.6985735344788924 ;
     schema1:name "Biblioteca Pública Rafael Alberti" ;
@@ -666,6 +724,7 @@
     owl:sameAs <https://wikidata.org/entity/Q5728080> .
 
 <http://w3id.org/madrid-culture/resource/library/6893633> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro" ;
     schema1:latitude 40.4166091081099 ;
     schema1:longitude -3.6795930368034804 ;
     schema1:name "Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro" ;
@@ -680,6 +739,7 @@
     owl:sameAs <https://wikidata.org/entity/Q85697904> .
 
 <http://w3id.org/madrid-culture/resource/library/7697128> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Mario Vargas Llosa" ;
     schema1:latitude 40.426642215368176 ;
     schema1:longitude -3.699722994908341 ;
     schema1:name "Biblioteca Pública Municipal Mario Vargas Llosa" ;
@@ -694,6 +754,7 @@
     owl:sameAs <https://wikidata.org/entity/Q63191732> .
 
 <http://w3id.org/madrid-culture/resource/library/79941> a ns1:Library ;
+    rdfs:label "Biblioteca Pública Municipal Gloria Fuertes" ;
     schema1:latitude 40.46055947228695 ;
     schema1:longitude -3.5937461811785347 ;
     schema1:name "Biblioteca Pública Municipal Gloria Fuertes" ;
@@ -708,9 +769,10 @@
     owl:sameAs <https://wikidata.org/entity/Q85697917> .
 
 <http://w3id.org/madrid-culture/resource/library/86719> a ns1:Library ;
+    rdfs:label "Biblioteca Pública María Moliner" ;
     schema1:latitude 40.34952488592754 ;
     schema1:longitude -3.7101159464904097 ;
-    schema1:name "Biblioteca Pública Villaverde - María Moliner" ;
+    schema1:name "Biblioteca Pública María Moliner" ;
     schema1:openingHours "Apertura de lunes a sábado.  De lunes a viernes, de 9 a 21 horas. Sábados, de 9 a 14 horas. Todos los días los servicios de lectura en sala y acceso a internet finalizarán 15 minutos antes del cierre.  Días de cierre: sábados: 4 de abril; 16 de mayo; todos los sábados de julio, agosto y septiembre.;26 de diciembre; domingos: todos; festivos:1 de enero; 6 de enero: 2 y 3 de abril; 1, 2 y 15 mayo; 12 octubre; 2 y 9 de noviembre; 7 y 8 de diciembre; 25 de diciembre. otros: 24 y 31 de diciembre. ." ;
     schema1:telephone "917 230 194" ;
     schema1:url <http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=127979262ef5d010VgnVCM1000000b205a0aRCRD> ;
@@ -718,9 +780,11 @@
     ns1:hasAccessibility <http://w3id.org/madrid-culture/resource/accessibility/86719> ;
     ns1:hasAddress <http://w3id.org/madrid-culture/resource/address/86719> ;
     ns1:transport "Metro: Villaverde Alto (línea 3)  Cercanías Renfe: Puente Alcocer (linea C5)" ;
-    ns1:type "BibliotecasPublicas" .
+    ns1:type "BibliotecasPublicas" ;
+    owl:sameAs <https://wikidata.org/entity/Q85697984> .
 
 <http://w3id.org/madrid-culture/resource/museum/10091450> a ns1:Museum ;
+    rdfs:label "Museo EMT" ;
     schema1:latitude 40.480173612860305 ;
     schema1:longitude -3.6831595451893273 ;
     schema1:name "Museo EMT" ;
@@ -735,6 +799,7 @@
     owl:sameAs <https://wikidata.org/entity/Q117459440> .
 
 <http://w3id.org/madrid-culture/resource/museum/10237457> a ns1:Museum ;
+    rdfs:label "Museo Félix Cañada" ;
     schema1:latitude 40.44258652423883 ;
     schema1:longitude -3.7007870509139242 ;
     schema1:name "Museo Félix Cañada" ;
@@ -748,6 +813,7 @@
     ns1:type "Museos" .
 
 <http://w3id.org/madrid-culture/resource/museum/103331> a ns1:Museum ;
+    rdfs:label "La Casa Encendida de la Fundación Montemadrid" ;
     schema1:latitude 40.40596221830597 ;
     schema1:longitude -3.6997720739017033 ;
     schema1:name "La Casa Encendida de la Fundación Montemadrid" ;
@@ -762,6 +828,7 @@
     owl:sameAs <https://wikidata.org/entity/Q5962732> .
 
 <http://w3id.org/madrid-culture/resource/museum/12324237> a ns1:Museum ;
+    rdfs:label "Frontón Beti Jai" ;
     schema1:latitude 40.4306688171435 ;
     schema1:longitude -3.6911570649287717 ;
     schema1:name "Frontón Beti Jai" ;
@@ -776,6 +843,7 @@
     owl:sameAs <https://wikidata.org/entity/Q8962895> .
 
 <http://w3id.org/madrid-culture/resource/museum/12329440> a ns1:Museum ;
+    rdfs:label "Galería de la Colecciones Reales" ;
     schema1:latitude 40.42199428916459 ;
     schema1:longitude -3.7126736761494654 ;
     schema1:name "Galería de la Colecciones Reales" ;
@@ -790,6 +858,7 @@
     owl:sameAs <https://wikidata.org/entity/Q6033986> .
 
 <http://w3id.org/madrid-culture/resource/museum/18176> a ns1:Museum ;
+    rdfs:label "Museo ICO" ;
     schema1:latitude 40.41676546905435 ;
     schema1:longitude -3.6977222605477635 ;
     schema1:name "Museo ICO" ;
@@ -804,6 +873,7 @@
     owl:sameAs <https://wikidata.org/entity/Q60829823> .
 
 <http://w3id.org/madrid-culture/resource/museum/2050> a ns1:Museum ;
+    rdfs:label "Museo Arqueológico Nacional" ;
     schema1:latitude 40.4232789604228 ;
     schema1:longitude -3.6884121235090532 ;
     schema1:name "Museo Arqueológico Nacional" ;
@@ -818,6 +888,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1352282> .
 
 <http://w3id.org/madrid-culture/resource/museum/2053> a ns1:Museum ;
+    rdfs:label "Museo Lázaro Galdiano" ;
     schema1:latitude 40.43675593917329 ;
     schema1:longitude -3.6861820403705816 ;
     schema1:name "Museo Lázaro Galdiano" ;
@@ -832,6 +903,7 @@
     owl:sameAs <https://wikidata.org/entity/Q386570> .
 
 <http://w3id.org/madrid-culture/resource/museum/2054> a ns1:Museum ;
+    rdfs:label "Museo de Historia de Madrid" ;
     schema1:latitude 40.42577054821346 ;
     schema1:longitude -3.700845660719608 ;
     schema1:name "Museo de Historia de Madrid" ;
@@ -846,6 +918,7 @@
     owl:sameAs <https://wikidata.org/entity/Q876383> .
 
 <http://w3id.org/madrid-culture/resource/museum/2055> a ns1:Museum ;
+    rdfs:label "Museo Nacional de Artes Decorativas" ;
     schema1:latitude 40.417896616053866 ;
     schema1:longitude -3.689754509701677 ;
     schema1:name "Museo Nacional de Artes Decorativas" ;
@@ -860,6 +933,7 @@
     owl:sameAs <https://wikidata.org/entity/Q5361303> .
 
 <http://w3id.org/madrid-culture/resource/museum/2056> a ns1:Museum ;
+    rdfs:label "Museo Nacional de Ciencias Naturales" ;
     schema1:latitude 40.44042600324054 ;
     schema1:longitude -3.690212174964136 ;
     schema1:name "Museo Nacional de Ciencias Naturales" ;
@@ -874,6 +948,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1966699> .
 
 <http://w3id.org/madrid-culture/resource/museum/2057> a ns1:Museum ;
+    rdfs:label "Museo Nacional de Antropología" ;
     schema1:latitude 40.40789416485114 ;
     schema1:longitude -3.688857928950199 ;
     schema1:name "Museo Nacional de Antropología" ;
@@ -888,6 +963,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2917041> .
 
 <http://w3id.org/madrid-culture/resource/museum/2058> a ns1:Museum ;
+    rdfs:label "Museo del Prado" ;
     schema1:latitude 40.414069291230945 ;
     schema1:longitude -3.6922134558146453 ;
     schema1:name "Museo del Prado" ;
@@ -902,6 +978,7 @@
     owl:sameAs <https://wikidata.org/entity/Q160112> .
 
 <http://w3id.org/madrid-culture/resource/museum/2059> a ns1:Museum ;
+    rdfs:label "Museo del Romanticismo" ;
     schema1:latitude 40.42586197424505 ;
     schema1:longitude -3.6987680583559555 ;
     schema1:name "Museo del Romanticismo" ;
@@ -916,6 +993,7 @@
     owl:sameAs <https://wikidata.org/entity/Q6974501> .
 
 <http://w3id.org/madrid-culture/resource/museum/20605> a ns1:Museum ;
+    rdfs:label "Templo de Debod" ;
     schema1:latitude 40.42425096551599 ;
     schema1:longitude -3.716531855540272 ;
     schema1:name "Templo de Debod" ;
@@ -930,6 +1008,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1140249> .
 
 <http://w3id.org/madrid-culture/resource/museum/2061> a ns1:Museum ;
+    rdfs:label "Palacio Real de El Pardo" ;
     schema1:latitude 40.520535786694516 ;
     schema1:longitude -3.7762260009975077 ;
     schema1:name "Palacio Real de El Pardo" ;
@@ -944,6 +1023,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1368571> .
 
 <http://w3id.org/madrid-culture/resource/museum/2062> a ns1:Museum ;
+    rdfs:label "Palacio Real de Madrid" ;
     schema1:latitude 40.4176388210189 ;
     schema1:longitude -3.7116287580867042 ;
     schema1:name "Palacio Real de Madrid" ;
@@ -958,6 +1038,7 @@
     owl:sameAs <https://wikidata.org/entity/Q171517> .
 
 <http://w3id.org/madrid-culture/resource/museum/2064> a ns1:Museum ;
+    rdfs:label "Casón del Buen Retiro" ;
     schema1:latitude 40.41527545361461 ;
     schema1:longitude -3.689222446432277 ;
     schema1:name "Casón del Buen Retiro" ;
@@ -972,6 +1053,7 @@
     owl:sameAs <https://wikidata.org/entity/Q3321174> .
 
 <http://w3id.org/madrid-culture/resource/museum/2066> a ns1:Museum ;
+    rdfs:label "Museo del Ferrocarril de Madrid" ;
     schema1:latitude 40.406996505596624 ;
     schema1:longitude -3.6930483362488657 ;
     schema1:name "Museo del Ferrocarril de Madrid" ;
@@ -986,6 +1068,7 @@
     owl:sameAs <https://wikidata.org/entity/Q6034436> .
 
 <http://w3id.org/madrid-culture/resource/museum/2067> a ns1:Museum ;
+    rdfs:label "Museo Africano Misioneros Combonianos" ;
     schema1:latitude 40.44946738556641 ;
     schema1:longitude -3.651489872602189 ;
     schema1:name "Museo Africano Misioneros Combonianos" ;
@@ -1000,6 +1083,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406426> .
 
 <http://w3id.org/madrid-culture/resource/museum/2068> a ns1:Museum ;
+    rdfs:label "Museo de Aeronáutica y Astronáutica" ;
     schema1:latitude 40.37362 ;
     schema1:longitude -3.80843 ;
     schema1:name "Museo de Aeronáutica y Astronáutica" ;
@@ -1014,6 +1098,7 @@
     owl:sameAs <https://wikidata.org/entity/Q11057120> .
 
 <http://w3id.org/madrid-culture/resource/museum/2069> a ns1:Museum ;
+    rdfs:label "Centro Cultural La Corrala. Museo de Artes y Tradiciones Populares" ;
     schema1:latitude 40.408827275648434 ;
     schema1:longitude -3.7083241323093614 ;
     schema1:name "Centro Cultural La Corrala. Museo de Artes y Tradiciones Populares" ;
@@ -1028,6 +1113,7 @@
     owl:sameAs <https://wikidata.org/entity/Q52247359> .
 
 <http://w3id.org/madrid-culture/resource/museum/2071> a ns1:Museum ;
+    rdfs:label "Museo de Escultura al Aire Libre de la Castellana" ;
     schema1:latitude 40.433219398671156 ;
     schema1:longitude -3.6876122680805956 ;
     schema1:name "Museo de Escultura al Aire Libre de la Castellana" ;
@@ -1042,6 +1128,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2283575> .
 
 <http://w3id.org/madrid-culture/resource/museum/2072> a ns1:Museum ;
+    rdfs:label "Museo Casa de la Moneda" ;
     schema1:latitude 40.42260021542579 ;
     schema1:longitude -3.669139860245996 ;
     schema1:name "Museo Casa de la Moneda" ;
@@ -1056,6 +1143,7 @@
     owl:sameAs <https://wikidata.org/entity/Q39072661> .
 
 <http://w3id.org/madrid-culture/resource/museum/2073> a ns1:Museum ;
+    rdfs:label "Museo de la Farmacia Hispana" ;
     schema1:latitude 40.44451127873064 ;
     schema1:longitude -3.7262019812409104 ;
     schema1:name "Museo de la Farmacia Hispana" ;
@@ -1070,6 +1158,7 @@
     owl:sameAs <https://wikidata.org/entity/Q105942790> .
 
 <http://w3id.org/madrid-culture/resource/museum/2074> a ns1:Museum ;
+    rdfs:label "Museo Geominero" ;
     schema1:latitude 40.442053385603636 ;
     schema1:longitude -3.699669233707377 ;
     schema1:name "Museo Geominero" ;
@@ -1084,6 +1173,7 @@
     owl:sameAs <https://wikidata.org/entity/Q13532751> .
 
 <http://w3id.org/madrid-culture/resource/museum/2075> a ns1:Museum ;
+    rdfs:label "Museo Histórico Minero Don Felipe de Borbón y Grecia" ;
     schema1:latitude 40.44209227424258 ;
     schema1:longitude -3.7003734646151534 ;
     schema1:name "Museo Histórico Minero Don Felipe de Borbón y Grecia" ;
@@ -1098,6 +1188,7 @@
     owl:sameAs <https://wikidata.org/entity/Q53997723> .
 
 <http://w3id.org/madrid-culture/resource/museum/2076> a ns1:Museum ;
+    rdfs:label "Museo Naval" ;
     schema1:latitude 40.417817776538435 ;
     schema1:longitude -3.6927096854547727 ;
     schema1:name "Museo Naval" ;
@@ -1112,6 +1203,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1815235> .
 
 <http://w3id.org/madrid-culture/resource/museum/2077> a ns1:Museum ;
+    rdfs:label "Museo Taurino de la Comunidad de Madrid" ;
     schema1:latitude 40.431581087036655 ;
     schema1:longitude -3.6628632167710227 ;
     schema1:name "Museo Taurino de la Comunidad de Madrid" ;
@@ -1126,6 +1218,7 @@
     owl:sameAs <https://wikidata.org/entity/Q27500479> .
 
 <http://w3id.org/madrid-culture/resource/museum/2079> a ns1:Museum ;
+    rdfs:label "Panteón de España" ;
     schema1:latitude 40.40623069629338 ;
     schema1:longitude -3.683398479420631 ;
     schema1:name "Panteón de España" ;
@@ -1140,6 +1233,7 @@
     owl:sameAs <https://wikidata.org/entity/Q7131757> .
 
 <http://w3id.org/madrid-culture/resource/museum/2084> a ns1:Museum ;
+    rdfs:label "Museo de Cera" ;
     schema1:latitude 40.42448764583997 ;
     schema1:longitude -3.6913807191328303 ;
     schema1:name "Museo de Cera" ;
@@ -1154,6 +1248,7 @@
     owl:sameAs <https://wikidata.org/entity/Q15121263> .
 
 <http://w3id.org/madrid-culture/resource/museum/2086> a ns1:Museum ;
+    rdfs:label "Museo del Reloj Grassy" ;
     schema1:latitude 40.41914742345852 ;
     schema1:longitude -3.698056640392267 ;
     schema1:name "Museo del Reloj Grassy" ;
@@ -1168,6 +1263,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406434> .
 
 <http://w3id.org/madrid-culture/resource/museum/2087> a ns1:Museum ;
+    rdfs:label "Real Fábrica de Tapices" ;
     schema1:latitude 40.406094596697045 ;
     schema1:longitude -3.6825092130232404 ;
     schema1:name "Real Fábrica de Tapices" ;
@@ -1182,6 +1278,7 @@
     owl:sameAs <https://wikidata.org/entity/Q570665> .
 
 <http://w3id.org/madrid-culture/resource/museum/2090> a ns1:Museum ;
+    rdfs:label "Museo de Calcografía Nacional" ;
     schema1:latitude 40.4176555144213 ;
     schema1:longitude -3.7006500629589394 ;
     schema1:name "Museo de Calcografía Nacional" ;
@@ -1196,6 +1293,7 @@
     owl:sameAs <https://wikidata.org/entity/Q111818807> .
 
 <http://w3id.org/madrid-culture/resource/museum/2091> a ns1:Museum ;
+    rdfs:label "Museo de América" ;
     schema1:latitude 40.43793725485899 ;
     schema1:longitude -3.7218544182655786 ;
     schema1:name "Museo de América" ;
@@ -1210,6 +1308,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2568412> .
 
 <http://w3id.org/madrid-culture/resource/museum/2092> a ns1:Museum ;
+    rdfs:label "Museo de Astronomía y Geodesia" ;
     schema1:latitude 40.44945850908754 ;
     schema1:longitude -3.7259383636708434 ;
     schema1:name "Museo de Astronomía y Geodesia" ;
@@ -1224,6 +1323,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406428> .
 
 <http://w3id.org/madrid-culture/resource/museum/2095> a ns1:Museum ;
+    rdfs:label "Museo de Mineralogía" ;
     schema1:latitude 40.54537941407227 ;
     schema1:longitude -3.6951833197962536 ;
     schema1:name "Museo de Mineralogía" ;
@@ -1238,6 +1338,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406431> .
 
 <http://w3id.org/madrid-culture/resource/museum/2099> a ns1:Museum ;
+    rdfs:label "Museo Nacional Thyssen-Bornemisza" ;
     schema1:latitude 40.41601631762229 ;
     schema1:longitude -3.694738346891257 ;
     schema1:name "Museo Nacional Thyssen-Bornemisza" ;
@@ -1252,6 +1353,7 @@
     owl:sameAs <https://wikidata.org/entity/Q176251> .
 
 <http://w3id.org/madrid-culture/resource/museum/2101> a ns1:Museum ;
+    rdfs:label "Museo Tiflológico" ;
     schema1:latitude 40.45525267846033 ;
     schema1:longitude -3.700169379369277 ;
     schema1:name "Museo Tiflológico" ;
@@ -1266,6 +1368,7 @@
     owl:sameAs <https://wikidata.org/entity/Q109568487> .
 
 <http://w3id.org/madrid-culture/resource/museum/2107> a ns1:Museum ;
+    rdfs:label "Museo de la Guardia Civil" ;
     schema1:latitude 40.44438828230001 ;
     schema1:longitude -3.7122910771593154 ;
     schema1:name "Museo de la Guardia Civil" ;
@@ -1280,6 +1383,7 @@
     owl:sameAs <https://wikidata.org/entity/Q110560070> .
 
 <http://w3id.org/madrid-culture/resource/museum/2112> a ns1:Museum ;
+    rdfs:label "Museo de San Isidro. Los Orígenes de Madrid" ;
     schema1:latitude 40.41207900253883 ;
     schema1:longitude -3.7108161027466378 ;
     schema1:name "Museo de San Isidro. Los Orígenes de Madrid" ;
@@ -1294,6 +1398,7 @@
     owl:sameAs <https://wikidata.org/entity/Q5556798> .
 
 <http://w3id.org/madrid-culture/resource/museum/2114> a ns1:Museum ;
+    rdfs:label "Museo de la Real Academia de Bellas Artes de San Fernando" ;
     schema1:latitude 40.4176555144213 ;
     schema1:longitude -3.7006500629589394 ;
     schema1:name "Museo de la Real Academia de Bellas Artes de San Fernando" ;
@@ -1308,6 +1413,7 @@
     owl:sameAs <https://wikidata.org/entity/Q96658155> .
 
 <http://w3id.org/madrid-culture/resource/museum/2115> a ns1:Museum ;
+    rdfs:label "Museo del Traje. Centro de Investigación del Patrimonio Etnológico (CIPE)" ;
     schema1:latitude 40.439664788611644 ;
     schema1:longitude -3.727822373257623 ;
     schema1:name "Museo del Traje. Centro de Investigación del Patrimonio Etnológico (CIPE)" ;
@@ -1322,6 +1428,7 @@
     owl:sameAs <https://wikidata.org/entity/Q9047135> .
 
 <http://w3id.org/madrid-culture/resource/museum/2213> a ns1:Museum ;
+    rdfs:label "Planetario de Madrid" ;
     schema1:latitude 40.392279999540044 ;
     schema1:longitude -3.684956957448299 ;
     schema1:name "Planetario de Madrid" ;
@@ -1336,6 +1443,7 @@
     owl:sameAs <https://wikidata.org/entity/Q9060456> .
 
 <http://w3id.org/madrid-culture/resource/museum/3348> a ns1:Museum ;
+    rdfs:label "Monasterio de las Descalzas Reales" ;
     schema1:latitude 40.4182401043926 ;
     schema1:longitude -3.7062038988539387 ;
     schema1:name "Monasterio de las Descalzas Reales" ;
@@ -1350,6 +1458,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2268271> .
 
 <http://w3id.org/madrid-culture/resource/museum/3349> a ns1:Museum ;
+    rdfs:label "Real Monasterio de la Encarnación" ;
     schema1:latitude 40.4196839293774 ;
     schema1:longitude -3.7115609584031253 ;
     schema1:name "Real Monasterio de la Encarnación" ;
@@ -1364,6 +1473,7 @@
     owl:sameAs <https://wikidata.org/entity/Q205524> .
 
 <http://w3id.org/madrid-culture/resource/museum/3359> a ns1:Museum ;
+    rdfs:label "Real Basílica San Francisco el Grande" ;
     schema1:latitude 40.41084698628934 ;
     schema1:longitude -3.714492963837602 ;
     schema1:name "Real Basílica San Francisco el Grande" ;
@@ -1378,6 +1488,7 @@
     owl:sameAs <https://wikidata.org/entity/Q2473884> .
 
 <http://w3id.org/madrid-culture/resource/museum/3362> a ns1:Museum ;
+    rdfs:label "Parroquia Santa Cruz" ;
     schema1:latitude 40.414614986413675 ;
     schema1:longitude -3.7052543046190265 ;
     schema1:name "Parroquia Santa Cruz" ;
@@ -1392,6 +1503,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406436> .
 
 <http://w3id.org/madrid-culture/resource/museum/4112> a ns1:Museum ;
+    rdfs:label "Museo Cerralbo" ;
     schema1:latitude 40.423779252051425 ;
     schema1:longitude -3.7145996063573756 ;
     schema1:name "Museo Cerralbo" ;
@@ -1406,6 +1518,7 @@
     owl:sameAs <https://wikidata.org/entity/Q976019> .
 
 <http://w3id.org/madrid-culture/resource/museum/4545827> a ns1:Museum ;
+    rdfs:label "Museo de Historia de la Comunidad Judía de Madrid" ;
     schema1:latitude 40.43543567370733 ;
     schema1:longitude -3.7000203622984 ;
     schema1:name "Museo de Historia de la Comunidad Judía de Madrid" ;
@@ -1420,6 +1533,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406429> .
 
 <http://w3id.org/madrid-culture/resource/museum/4566286> a ns1:Museum ;
+    rdfs:label "Museo de la Catedral de la Almudena" ;
     schema1:latitude 40.4155496711662 ;
     schema1:longitude -3.7136674233151394 ;
     schema1:name "Museo de la Catedral de la Almudena" ;
@@ -1434,6 +1548,7 @@
     owl:sameAs <https://wikidata.org/entity/Q107611898> .
 
 <http://w3id.org/madrid-culture/resource/museum/4707297> a ns1:Museum ;
+    rdfs:label "Real Monasterio de Santa Isabel" ;
     schema1:latitude 40.409468201532654 ;
     schema1:longitude -3.696232255860979 ;
     schema1:name "Real Monasterio de Santa Isabel" ;
@@ -1448,6 +1563,7 @@
     owl:sameAs <https://wikidata.org/entity/Q9067089> .
 
 <http://w3id.org/madrid-culture/resource/museum/4847190> a ns1:Museum ;
+    rdfs:label "Casa Museo Lope de Vega" ;
     schema1:latitude 40.41436862259971 ;
     schema1:longitude -3.6974667215860615 ;
     schema1:name "Casa Museo Lope de Vega" ;
@@ -1462,6 +1578,7 @@
     owl:sameAs <https://wikidata.org/entity/Q948580> .
 
 <http://w3id.org/madrid-culture/resource/museum/4949641> a ns1:Museum ;
+    rdfs:label "Casita Museo de Ratón Pérez" ;
     schema1:latitude 40.4170597715272 ;
     schema1:longitude -3.7055199334442492 ;
     schema1:name "Casita Museo de Ratón Pérez" ;
@@ -1476,6 +1593,7 @@
     owl:sameAs <https://wikidata.org/entity/Q107291466> .
 
 <http://w3id.org/madrid-culture/resource/museum/4997114> a ns1:Museum ;
+    rdfs:label "Museo Sorolla" ;
     schema1:latitude 40.43525811195212 ;
     schema1:longitude -3.69257053914393 ;
     schema1:name "Museo Sorolla" ;
@@ -1490,6 +1608,7 @@
     owl:sameAs <https://wikidata.org/entity/Q1592523> .
 
 <http://w3id.org/madrid-culture/resource/museum/50067411> a ns1:Museum ;
+    rdfs:label "Museo Banksy Madrid" ;
     schema1:latitude 40.40373631152966 ;
     schema1:longitude -3.7061944207022304 ;
     schema1:name "Museo Banksy Madrid" ;
@@ -1504,6 +1623,7 @@
     owl:sameAs <https://wikidata.org/entity/Q139673758> .
 
 <http://w3id.org/madrid-culture/resource/museum/5349304> a ns1:Museum ;
+    rdfs:label "Museo Nacional Centro de Arte Reina Sofía (MNCARS)" ;
     schema1:latitude 40.40864029339671 ;
     schema1:longitude -3.6939504103293244 ;
     schema1:name "Museo Nacional Centro de Arte Reina Sofía (MNCARS)" ;
@@ -1518,6 +1638,7 @@
     owl:sameAs <https://wikidata.org/entity/Q460889> .
 
 <http://w3id.org/madrid-culture/resource/museum/5682031> a ns1:Museum ;
+    rdfs:label "Castillo de la Alameda" ;
     schema1:latitude 40.45836469361315 ;
     schema1:longitude -3.5932763223327178 ;
     schema1:name "Castillo de la Alameda" ;
@@ -1532,6 +1653,7 @@
     owl:sameAs <https://wikidata.org/entity/Q8342365> .
 
 <http://w3id.org/madrid-culture/resource/museum/5727435> a ns1:Museum ;
+    rdfs:label "Museo de Bomberos de Madrid" ;
     schema1:latitude 40.39453171263195 ;
     schema1:longitude -3.6539313207612207 ;
     schema1:name "Museo de Bomberos de Madrid" ;
@@ -1546,6 +1668,7 @@
     owl:sameAs <https://wikidata.org/entity/Q113329713> .
 
 <http://w3id.org/madrid-culture/resource/museum/58353> a ns1:Museum ;
+    rdfs:label "Espacio Fundación Telefónica" ;
     schema1:latitude 40.42042493125648 ;
     schema1:longitude -3.701594573150366 ;
     schema1:name "Espacio Fundación Telefónica" ;
@@ -1560,6 +1683,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406425> .
 
 <http://w3id.org/madrid-culture/resource/museum/5873478> a ns1:Museum ;
+    rdfs:label "Museo ABC" ;
     schema1:latitude 40.42741340671151 ;
     schema1:longitude -3.7095381101739444 ;
     schema1:name "Museo ABC" ;
@@ -1574,6 +1698,7 @@
     owl:sameAs <https://wikidata.org/entity/Q21564330> .
 
 <http://w3id.org/madrid-culture/resource/museum/6017808> a ns1:Museum ;
+    rdfs:label "Casa Museo Fuente del Rey" ;
     schema1:latitude 40.45529252796688 ;
     schema1:longitude -3.770356911495524 ;
     schema1:name "Casa Museo Fuente del Rey" ;
@@ -1588,6 +1713,7 @@
     owl:sameAs <https://wikidata.org/entity/Q28808141> .
 
 <http://w3id.org/madrid-culture/resource/museum/6019032> a ns1:Museum ;
+    rdfs:label "Museo Los Caños del Peral. Estación de Metro Ópera" ;
     schema1:latitude 40.41776291784375 ;
     schema1:longitude -3.70918800795985 ;
     schema1:name "Museo Los Caños del Peral. Estación de Metro Ópera" ;
@@ -1602,6 +1728,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406427> .
 
 <http://w3id.org/madrid-culture/resource/museum/6469186> a ns1:Museum ;
+    rdfs:label "Ermita de San Antonio de la Florida" ;
     schema1:latitude 40.425256682855846 ;
     schema1:longitude -3.725725718176111 ;
     schema1:name "Ermita de San Antonio de la Florida" ;
@@ -1616,6 +1743,7 @@
     owl:sameAs <https://wikidata.org/entity/Q3109752> .
 
 <http://w3id.org/madrid-culture/resource/museum/7071384> a ns1:Museum ;
+    rdfs:label "Yacimiento paleontológico. Estación de Metro Carpetana" ;
     schema1:latitude 40.39254099575156 ;
     schema1:longitude -3.7413026173286053 ;
     schema1:name "Yacimiento paleontológico. Estación de Metro Carpetana" ;
@@ -1630,6 +1758,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406438> .
 
 <http://w3id.org/madrid-culture/resource/museum/79870> a ns1:Museum ;
+    rdfs:label "Imprenta Municipal. Artes del libro" ;
     schema1:latitude 40.413896825498995 ;
     schema1:longitude -3.7054692169323364 ;
     schema1:name "Imprenta Municipal. Artes del libro" ;
@@ -1644,6 +1773,7 @@
     owl:sameAs <https://wikidata.org/entity/Q19453318> .
 
 <http://w3id.org/madrid-culture/resource/museum/83922> a ns1:Museum ;
+    rdfs:label "Museo de Arte Contemporáneo de Madrid" ;
     schema1:latitude 40.42739911262292 ;
     schema1:longitude -3.710589286287491 ;
     schema1:name "Museo de Arte Contemporáneo de Madrid" ;
@@ -1658,6 +1788,7 @@
     owl:sameAs <https://wikidata.org/entity/Q6940528> .
 
 <http://w3id.org/madrid-culture/resource/museum/85301> a ns1:Museum ;
+    rdfs:label "Museo de Sanidad e Higiene Pública" ;
     schema1:latitude 40.475476558696364 ;
     schema1:longitude -3.6900419862500202 ;
     schema1:name "Museo de Sanidad e Higiene Pública" ;
@@ -1672,6 +1803,7 @@
     owl:sameAs <https://wikidata.org/entity/Q134406432> .
 
 <http://w3id.org/madrid-culture/resource/accessibility/10091450> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 10091450"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1680,6 +1812,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/10237457> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 10237457"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -1688,6 +1821,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/103331> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 103331"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1696,6 +1830,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/10395362> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 10395362"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1704,6 +1839,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/115056> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 115056"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1712,6 +1848,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/11572165> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 11572165"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1720,6 +1857,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/12324237> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 12324237"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1728,6 +1866,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/12329440> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 12329440"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1736,6 +1875,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/123303> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 123303"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1744,6 +1884,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/12734939> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 12734939"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1752,6 +1893,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/12773298> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 12773298"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1760,6 +1902,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/167128> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 167128"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1768,6 +1911,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1745> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1745"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1776,6 +1920,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1746> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1746"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1784,6 +1929,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1747> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1747"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1792,6 +1938,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1748> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1748"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1800,6 +1947,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1750> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1750"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1808,6 +1956,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1752> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1752"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1816,6 +1965,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1753> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1753"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1824,6 +1974,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1754> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1754"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1832,6 +1983,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1755> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1755"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1840,6 +1992,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1756> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1756"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1848,6 +2001,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1757> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1757"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1856,6 +2010,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1759> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1759"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1864,6 +2019,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1760> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1760"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1872,6 +2028,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1761> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1761"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1880,6 +2037,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1762> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1762"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1888,6 +2046,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1763> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1763"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1896,6 +2055,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1764> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1764"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1904,6 +2064,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1765> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1765"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1912,6 +2073,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1770> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1770"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1920,6 +2082,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1771> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1771"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -1928,6 +2091,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1773> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1773"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1936,6 +2100,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1774> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1774"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1944,6 +2109,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1777> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1777"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1952,6 +2118,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1790> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1790"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1960,6 +2127,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1792> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1792"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1968,6 +2136,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1794> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1794"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -1976,6 +2145,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1798> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1798"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1984,6 +2154,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1800> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1800"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -1992,6 +2163,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/181101> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 181101"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2000,6 +2172,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/18176> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 18176"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2008,6 +2181,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/185595> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 185595"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2016,6 +2190,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/186714> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 186714"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2024,6 +2199,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/1882> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 1882"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2032,6 +2208,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2050> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2050"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2040,6 +2217,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2053> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2053"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2048,6 +2226,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2054> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2054"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2056,6 +2235,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2055> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2055"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2064,6 +2244,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2056> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2056"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2072,6 +2253,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2057> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2057"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2080,6 +2262,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2058> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2058"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2088,6 +2271,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2059> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2059"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2096,6 +2280,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/20605> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 20605"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2104,6 +2289,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2061> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2061"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2112,6 +2298,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2062> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2062"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2120,6 +2307,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2064> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2064"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2128,6 +2316,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2066> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2066"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2136,6 +2325,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2067> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2067"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2144,6 +2334,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2068> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2068"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2152,6 +2343,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2069> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2069"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2160,6 +2352,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2071> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2071"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2168,6 +2361,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2072> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2072"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2176,6 +2370,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2073> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2073"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2184,6 +2379,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2074> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2074"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2192,6 +2388,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2075> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2075"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2200,6 +2397,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2076> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2076"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2208,6 +2406,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2077> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2077"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2216,6 +2415,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2079> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2079"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2224,6 +2424,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2084> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2084"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2232,6 +2433,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2086> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2086"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2240,6 +2442,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2087> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2087"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2248,6 +2451,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2090> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2090"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2256,6 +2460,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2091> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2091"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2264,6 +2469,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2092> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2092"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2272,6 +2478,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2095> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2095"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2280,6 +2487,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2099> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2099"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2288,6 +2496,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2101> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2101"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2296,6 +2505,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2107> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2107"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2304,6 +2514,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2112> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2112"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2312,6 +2523,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2114> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2114"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2320,6 +2532,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2115> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2115"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2328,6 +2541,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/2213> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 2213"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2336,6 +2550,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/25526> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 25526"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2344,6 +2559,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/3348> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 3348"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2352,6 +2568,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/3349> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 3349"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2360,6 +2577,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/3359> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 3359"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2368,6 +2586,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/3362> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 3362"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2376,6 +2595,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4112> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4112"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2384,6 +2604,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4545827> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4545827"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2392,6 +2613,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4566286> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4566286"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2400,6 +2622,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4707297> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4707297"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2408,6 +2631,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4847190> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4847190"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2416,6 +2640,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4949641> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4949641"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2424,6 +2649,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/4997114> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 4997114"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2432,6 +2658,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/50067411> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 50067411"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2440,6 +2667,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/50313490> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 50313490"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2448,6 +2676,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/50313615> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 50313615"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2456,6 +2685,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/51188> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 51188"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2464,6 +2694,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/51849> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 51849"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2472,6 +2703,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5349304> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5349304"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2480,6 +2712,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5682031> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5682031"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2488,6 +2721,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5727435> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5727435"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2496,6 +2730,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5765642> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5765642"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2504,6 +2739,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5768564> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5768564"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2512,6 +2748,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/58353> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 58353"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2520,6 +2757,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5873478> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5873478"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2528,6 +2766,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/5975465> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 5975465"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2536,6 +2775,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/6017808> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 6017808"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2544,6 +2784,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/6019032> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 6019032"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2552,6 +2793,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/6469186> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 6469186"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2560,6 +2802,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/66904> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 66904"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2568,6 +2811,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/6893633> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 6893633"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2576,6 +2820,7 @@
     ns1:tactilePaving true .
 
 <http://w3id.org/madrid-culture/resource/accessibility/7071384> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 7071384"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2584,6 +2829,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/7697128> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 7697128"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2592,6 +2838,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/79870> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 79870"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2600,6 +2847,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/79941> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 79941"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2608,6 +2856,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/83922> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 83922"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop true ;
     ns1:noInfoAccessibility false ;
@@ -2616,6 +2865,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/85301> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 85301"@es ;
     ns1:accessible false ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility true ;
@@ -2624,6 +2874,7 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/accessibility/86719> a ns1:Accessibility ;
+    rdfs:label "Accesibilidad 86719"@es ;
     ns1:accessible true ;
     ns1:magneticInductionLoop false ;
     ns1:noInfoAccessibility false ;
@@ -2632,1056 +2883,1273 @@
     ns1:tactilePaving false .
 
 <http://w3id.org/madrid-culture/resource/address/10091450> a ns1:Address ;
+    rdfs:label "CALLE MAURICIO LEGENDRE, 40" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/5> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/5-6> ;
     ns1:postalCode "28046" ;
     ns1:streetAddress "CALLE MAURICIO LEGENDRE, 40" .
 
 <http://w3id.org/madrid-culture/resource/address/10237457> a ns1:Address ;
+    rdfs:label "CALLE ALENZA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-5> ;
     ns1:postalCode "28003" ;
     ns1:streetAddress "CALLE ALENZA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/103331> a ns1:Address ;
+    rdfs:label "RONDA VALENCIA, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28012" ;
     ns1:streetAddress "RONDA VALENCIA, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/10395362> a ns1:Address ;
+    rdfs:label "CALLE PRINCESA DE EBOLI, 29" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/16> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/16-6> ;
     ns1:postalCode "28050" ;
     ns1:streetAddress "CALLE PRINCESA DE EBOLI, 29" .
 
 <http://w3id.org/madrid-culture/resource/address/115056> a ns1:Address ;
+    rdfs:label "CALLE MARIA SEVILLA DIAGO, 15" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/20> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/20-5> ;
     ns1:postalCode "28022" ;
     ns1:streetAddress "CALLE MARIA SEVILLA DIAGO, 15" .
 
 <http://w3id.org/madrid-culture/resource/address/11572165> a ns1:Address ;
+    rdfs:label "AVENIDA SAN FERMIN, 10" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/12> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/12-3> ;
     ns1:postalCode "28041" ;
     ns1:streetAddress "AVENIDA SAN FERMIN, 10" .
 
 <http://w3id.org/madrid-culture/resource/address/12324237> a ns1:Address ;
+    rdfs:label "CALLE MARQUES DEL RISCAL, 7" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-4> ;
     ns1:postalCode "28010" ;
     ns1:streetAddress "CALLE MARQUES DEL RISCAL, 7" .
 
 <http://w3id.org/madrid-culture/resource/address/12329440> a ns1:Address ;
+    rdfs:label "CALLE BAILEN, 0" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "CALLE BAILEN, 0" .
 
 <http://w3id.org/madrid-culture/resource/address/123303> a ns1:Address ;
+    rdfs:label "AVENIDA RAFAELA YBARRA, 43" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/12> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/12-7> ;
     ns1:postalCode "28026" ;
     ns1:streetAddress "AVENIDA RAFAELA YBARRA, 43" .
 
 <http://w3id.org/madrid-culture/resource/address/12734939> a ns1:Address ;
+    rdfs:label "CALLE FELIPE DE DIEGO, 13" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-3> ;
     ns1:postalCode "28018" ;
     ns1:streetAddress "CALLE FELIPE DE DIEGO, 13" .
 
 <http://w3id.org/madrid-culture/resource/address/12773298> a ns1:Address ;
+    rdfs:label "CALLE CALCIO, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/17> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/17-3> ;
     ns1:postalCode "28021" ;
     ns1:streetAddress "CALLE CALCIO, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/167128> a ns1:Address ;
+    rdfs:label "BULEVAR INDALECIO PRIETO, 21" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/19> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/19-2> ;
     ns1:postalCode "28032" ;
     ns1:streetAddress "BULEVAR INDALECIO PRIETO, 21" .
 
 <http://w3id.org/madrid-culture/resource/address/1745> a ns1:Address ;
+    rdfs:label "CALLE BOLTAÑA, 23" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/20> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/20-7> ;
     ns1:postalCode "28022" ;
     ns1:streetAddress "CALLE BOLTAÑA, 23" .
 
 <http://w3id.org/madrid-culture/resource/address/1746> a ns1:Address ;
+    rdfs:label "CALLE SAN ROMAN DEL VALLE, 8" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/20> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/20-4> ;
     ns1:postalCode "28037" ;
     ns1:streetAddress "CALLE SAN ROMAN DEL VALLE, 8" .
 
 <http://w3id.org/madrid-culture/resource/address/1747> a ns1:Address ;
+    rdfs:label "CALLE VILLARDONDIEGO, 36" ;
     ns1:postalCode "28032" ;
     ns1:streetAddress "CALLE VILLARDONDIEGO, 36" .
 
 <http://w3id.org/madrid-culture/resource/address/1748> a ns1:Address ;
+    rdfs:label "CALLE MONTE AYA, 12" ;
     ns1:postalCode "28031" ;
     ns1:streetAddress "CALLE MONTE AYA, 12" .
 
 <http://w3id.org/madrid-culture/resource/address/1750> a ns1:Address ;
+    rdfs:label "CALLE MAR DE LAS ANTILLAS, 10" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/16> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/16-4> ;
     ns1:postalCode "28033" ;
     ns1:streetAddress "CALLE MAR DE LAS ANTILLAS, 10" .
 
 <http://w3id.org/madrid-culture/resource/address/1752> a ns1:Address ;
+    rdfs:label "CALLE ARROYO BELINCOSO, 11" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/14> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/14-4> ;
     ns1:postalCode "28030" ;
     ns1:streetAddress "CALLE ARROYO BELINCOSO, 11" .
 
 <http://w3id.org/madrid-culture/resource/address/1753> a ns1:Address ;
+    rdfs:label "CALLE CANTALAPIEDRA, 11" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-6> ;
     ns1:postalCode "28038" ;
     ns1:streetAddress "CALLE CANTALAPIEDRA, 11" .
 
 <http://w3id.org/madrid-culture/resource/address/1754> a ns1:Address ;
+    rdfs:label "PLAZA PUEBLO, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/12> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/12-2> ;
     ns1:postalCode "28041" ;
     ns1:streetAddress "PLAZA PUEBLO, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/1755> a ns1:Address ;
+    rdfs:label "CALLE ISAAC ALBENIZ, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/11> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/11-3> ;
     ns1:postalCode "28019" ;
     ns1:streetAddress "CALLE ISAAC ALBENIZ, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/1756> a ns1:Address ;
+    rdfs:label "CALLE GENERAL RICARDOS, 252" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/11> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/11-4> ;
     ns1:postalCode "28025" ;
     ns1:streetAddress "CALLE GENERAL RICARDOS, 252" .
 
 <http://w3id.org/madrid-culture/resource/address/1757> a ns1:Address ;
+    rdfs:label "CALLE CAMARENA, 10" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/10> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/10-4> ;
     ns1:postalCode "28047" ;
     ns1:streetAddress "CALLE CAMARENA, 10" .
 
 <http://w3id.org/madrid-culture/resource/address/1759> a ns1:Address ;
+    rdfs:label "PLAZA DONOSO, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/6> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/6-4> ;
     ns1:postalCode "28029" ;
     ns1:streetAddress "PLAZA DONOSO, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/1760> a ns1:Address ;
+    rdfs:label "CALLE MANTUANO, 51" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/5> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/5-3> ;
     ns1:postalCode "28002" ;
     ns1:streetAddress "CALLE MANTUANO, 51" .
 
 <http://w3id.org/madrid-culture/resource/address/1761> a ns1:Address ;
+    rdfs:label "CALLE PUERTO DEL MONASTERIO, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-2> ;
     ns1:postalCode "28053" ;
     ns1:streetAddress "CALLE PUERTO DEL MONASTERIO, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/1762> a ns1:Address ;
+    rdfs:label "AVENIDA TOREROS, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-4> ;
     ns1:postalCode "28028" ;
     ns1:streetAddress "AVENIDA TOREROS, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/1763> a ns1:Address ;
+    rdfs:label "CALLE ARGANDA, 12" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/2> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/2-2> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "CALLE ARGANDA, 12" .
 
 <http://w3id.org/madrid-culture/resource/address/1764> a ns1:Address ;
+    rdfs:label "CALLE FELIPE EL HERMOSO, 4" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-3> ;
     ns1:postalCode "28010" ;
     ns1:streetAddress "CALLE FELIPE EL HERMOSO, 4" .
 
 <http://w3id.org/madrid-culture/resource/address/1765> a ns1:Address ;
+    rdfs:label "CALLE AZCONA, 42" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-4> ;
     ns1:postalCode "28028" ;
     ns1:streetAddress "CALLE AZCONA, 42" .
 
 <http://w3id.org/madrid-culture/resource/address/1770> a ns1:Address ;
+    rdfs:label "CALLE ABERTURA, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/16> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/16-4> ;
     ns1:postalCode "28033" ;
     ns1:streetAddress "CALLE ABERTURA, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/1771> a ns1:Address ;
+    rdfs:label "CALLE QUINTANA, 9" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-2> ;
     ns1:postalCode "28008" ;
     ns1:streetAddress "CALLE QUINTANA, 9" .
 
 <http://w3id.org/madrid-culture/resource/address/1773> a ns1:Address ;
+    rdfs:label "CALLE CORREGIDOR ALONSO DE TOBAR, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/14> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/14-5> ;
     ns1:postalCode "28030" ;
     ns1:streetAddress "CALLE CORREGIDOR ALONSO DE TOBAR, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/1774> a ns1:Address ;
+    rdfs:label "CALLE DOCTOR ESQUERDO, 189" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-2> ;
     ns1:postalCode "28007" ;
     ns1:streetAddress "CALLE DOCTOR ESQUERDO, 189" .
 
 <http://w3id.org/madrid-culture/resource/address/1777> a ns1:Address ;
+    rdfs:label "CALLE RAIMUNDO FERNANDEZ VILLAVERDE, 6" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-5> ;
     ns1:postalCode "28003" ;
     ns1:streetAddress "CALLE RAIMUNDO FERNANDEZ VILLAVERDE, 6" .
 
 <http://w3id.org/madrid-culture/resource/address/1790> a ns1:Address ;
+    rdfs:label "AVENIDA MONFORTE DE LEMOS, 38" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/8> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/8-4> ;
     ns1:postalCode "28029" ;
     ns1:streetAddress "AVENIDA MONFORTE DE LEMOS, 38" .
 
 <http://w3id.org/madrid-culture/resource/address/1792> a ns1:Address ;
+    rdfs:label "AVENIDA GLORIETAS, 19" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-1> ;
     ns1:postalCode "28053" ;
     ns1:streetAddress "AVENIDA GLORIETAS, 19" .
 
 <http://w3id.org/madrid-culture/resource/address/1794> a ns1:Address ;
+    rdfs:label "CALLE HERMANOS GARCIA NOBLEJAS, 14" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/15> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/15-2> ;
     ns1:postalCode "28037" ;
     ns1:streetAddress "CALLE HERMANOS GARCIA NOBLEJAS, 14" .
 
 <http://w3id.org/madrid-culture/resource/address/1798> a ns1:Address ;
+    rdfs:label "GLORIETA PUERTA DE TOLEDO, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "GLORIETA PUERTA DE TOLEDO, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/1800> a ns1:Address ;
+    rdfs:label "AVENIDA RAFAEL ALBERTI, 36" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-4> ;
     ns1:postalCode "28018" ;
     ns1:streetAddress "AVENIDA RAFAEL ALBERTI, 36" .
 
 <http://w3id.org/madrid-culture/resource/address/181101> a ns1:Address ;
+    rdfs:label "PLAZA ANTONIO MARIA SEGOVIA, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/18> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/18-2> ;
     ns1:postalCode "28031" ;
     ns1:streetAddress "PLAZA ANTONIO MARIA SEGOVIA, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/18176> a ns1:Address ;
+    rdfs:label "CALLE ZORRILLA, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-3> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE ZORRILLA, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/185595> a ns1:Address ;
+    rdfs:label "CALLE FRANCOS RODRIGUEZ, 67" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/6> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/6-1> ;
     ns1:postalCode "28039" ;
     ns1:streetAddress "CALLE FRANCOS RODRIGUEZ, 67" .
 
 <http://w3id.org/madrid-culture/resource/address/186714> a ns1:Address ;
+    rdfs:label "CALLE ASCAO, 4" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/15> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/15-2> ;
     ns1:postalCode "28017" ;
     ns1:streetAddress "CALLE ASCAO, 4" .
 
 <http://w3id.org/madrid-culture/resource/address/1882> a ns1:Address ;
+    rdfs:label "CALLE CONDE DUQUE, 9" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-5> ;
     ns1:postalCode "28015" ;
     ns1:streetAddress "CALLE CONDE DUQUE, 9" .
 
 <http://w3id.org/madrid-culture/resource/address/2050> a ns1:Address ;
+    rdfs:label "CALLE SERRANO, 13" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-1> ;
     ns1:postalCode "28001" ;
     ns1:streetAddress "CALLE SERRANO, 13" .
 
 <http://w3id.org/madrid-culture/resource/address/2053> a ns1:Address ;
+    rdfs:label "CALLE SERRANO, 122" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-6> ;
     ns1:postalCode "28006" ;
     ns1:streetAddress "CALLE SERRANO, 122" .
 
 <http://w3id.org/madrid-culture/resource/address/2054> a ns1:Address ;
+    rdfs:label "CALLE FUENCARRAL, 78" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-4> ;
     ns1:postalCode "28004" ;
     ns1:streetAddress "CALLE FUENCARRAL, 78" .
 
 <http://w3id.org/madrid-culture/resource/address/2055> a ns1:Address ;
+    rdfs:label "CALLE MONTALBAN, 12" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE MONTALBAN, 12" .
 
 <http://w3id.org/madrid-culture/resource/address/2056> a ns1:Address ;
+    rdfs:label "CALLE JOSE GUTIERREZ ABASCAL, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/5> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/5-1> ;
     ns1:postalCode "28006" ;
     ns1:streetAddress "CALLE JOSE GUTIERREZ ABASCAL, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/2057> a ns1:Address ;
+    rdfs:label "CALLE ALFONSO XII, 68" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE ALFONSO XII, 68" .
 
 <http://w3id.org/madrid-culture/resource/address/2058> a ns1:Address ;
-    ns1:streetAddress "MUSEO NACIONAL DEL PRADO," .
+    rdfs:label "MUSEO NACIONAL DEL PRADO, s/n" ;
+    ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
+    ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
+    ns1:postalCode "28014" ;
+    ns1:streetAddress "MUSEO NACIONAL DEL PRADO, s/n" .
 
 <http://w3id.org/madrid-culture/resource/address/2059> a ns1:Address ;
+    rdfs:label "CALLE SAN MATEO, 13" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-4> ;
     ns1:postalCode "28004" ;
     ns1:streetAddress "CALLE SAN MATEO, 13" .
 
 <http://w3id.org/madrid-culture/resource/address/20605> a ns1:Address ;
+    rdfs:label "CALLE FERRAZ, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-1> ;
     ns1:postalCode "28008" ;
     ns1:streetAddress "CALLE FERRAZ, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/2061> a ns1:Address ;
+    rdfs:label "CALLE MANUEL ALONSO, 8" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/8> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/8-1> ;
     ns1:postalCode "28048" ;
     ns1:streetAddress "CALLE MANUEL ALONSO, 8" .
 
 <http://w3id.org/madrid-culture/resource/address/2062> a ns1:Address ;
+    rdfs:label "PLAZA ORIENTE, 0" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "PLAZA ORIENTE, 0" .
 
 <http://w3id.org/madrid-culture/resource/address/2064> a ns1:Address ;
+    rdfs:label "CALLE ALFONSO XII, 28" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE ALFONSO XII, 28" .
 
 <http://w3id.org/madrid-culture/resource/address/2066> a ns1:Address ;
+    rdfs:label "PASEO DELICIAS, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/2> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/2-6> ;
     ns1:postalCode "28045" ;
     ns1:streetAddress "PASEO DELICIAS, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/2067> a ns1:Address ;
+    rdfs:label "CALLE ARTURO SORIA, 101" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/15> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/15-6> ;
     ns1:postalCode "28043" ;
     ns1:streetAddress "CALLE ARTURO SORIA, 101" .
 
 <http://w3id.org/madrid-culture/resource/address/2068> a ns1:Address ;
+    rdfs:label "AUTOVIA A-5, 10.700" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/10> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/10-6> ;
     ns1:postalCode "28024" ;
     ns1:streetAddress "AUTOVIA A-5, 10.700" .
 
 <http://w3id.org/madrid-culture/resource/address/2069> a ns1:Address ;
+    rdfs:label "CALLE CARLOS ARNICHES, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "CALLE CARLOS ARNICHES, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/2071> a ns1:Address ;
+    rdfs:label "PASEO CASTELLANA, 40" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-6> ;
     ns1:postalCode "28046" ;
     ns1:streetAddress "PASEO CASTELLANA, 40" .
 
 <http://w3id.org/madrid-culture/resource/address/2072> a ns1:Address ;
+    rdfs:label "CALLE DOCTOR ESQUERDO, 36" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-2> ;
     ns1:postalCode "28028" ;
     ns1:streetAddress "CALLE DOCTOR ESQUERDO, 36" .
 
 <http://w3id.org/madrid-culture/resource/address/2073> a ns1:Address ;
+    rdfs:label "PLAZA RAMON Y CAJAL, 0" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-3> ;
     ns1:postalCode "28040" ;
     ns1:streetAddress "PLAZA RAMON Y CAJAL, 0" .
 
 <http://w3id.org/madrid-culture/resource/address/2074> a ns1:Address ;
+    rdfs:label "CALLE RIOS ROSAS, 23" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-5> ;
     ns1:postalCode "28003" ;
     ns1:streetAddress "CALLE RIOS ROSAS, 23" .
 
 <http://w3id.org/madrid-culture/resource/address/2075> a ns1:Address ;
+    rdfs:label "CALLE RIOS ROSAS, 21" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-5> ;
     ns1:postalCode "28003" ;
     ns1:streetAddress "CALLE RIOS ROSAS, 21" .
 
 <http://w3id.org/madrid-culture/resource/address/2076> a ns1:Address ;
+    rdfs:label "PASEO PRADO, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "PASEO PRADO, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/2077> a ns1:Address ;
+    rdfs:label "CALLE ALCALA, 237" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/4> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/4-4> ;
     ns1:postalCode "28028" ;
     ns1:streetAddress "CALLE ALCALA, 237" .
 
 <http://w3id.org/madrid-culture/resource/address/2079> a ns1:Address ;
+    rdfs:label "CALLE JULIAN GAYARRE, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-1> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE JULIAN GAYARRE, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/2084> a ns1:Address ;
+    rdfs:label "PASEO RECOLETOS, 41" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-4> ;
     ns1:postalCode "28004" ;
     ns1:streetAddress "PASEO RECOLETOS, 41" .
 
 <http://w3id.org/madrid-culture/resource/address/2086> a ns1:Address ;
+    rdfs:label "CALLE GRAN VIA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-3> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "CALLE GRAN VIA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/2087> a ns1:Address ;
+    rdfs:label "CALLE FUENTERRABIA, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-1> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE FUENTERRABIA, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/2090> a ns1:Address ;
+    rdfs:label "CALLE ALCALA, 13" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-6> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE ALCALA, 13" .
 
 <http://w3id.org/madrid-culture/resource/address/2091> a ns1:Address ;
+    rdfs:label "AVENIDA REYES CATOLICOS, 6" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-3> ;
     ns1:postalCode "28040" ;
     ns1:streetAddress "AVENIDA REYES CATOLICOS, 6" .
 
 <http://w3id.org/madrid-culture/resource/address/2092> a ns1:Address ;
+    rdfs:label "PLAZA CIENCIAS, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-3> ;
     ns1:postalCode "28040" ;
     ns1:streetAddress "PLAZA CIENCIAS, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/2095> a ns1:Address ;
+    rdfs:label "CALLE FRANCISCO TOMAS Y VALIENTE, 7" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/8> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/8-8> ;
     ns1:postalCode "28049" ;
     ns1:streetAddress "CALLE FRANCISCO TOMAS Y VALIENTE, 7" .
 
 <http://w3id.org/madrid-culture/resource/address/2099> a ns1:Address ;
+    rdfs:label "PASEO PRADO, 8" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-3> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "PASEO PRADO, 8" .
 
 <http://w3id.org/madrid-culture/resource/address/2101> a ns1:Address ;
+    rdfs:label "CALLE LA CORUÑA, 18" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/6> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/6-2> ;
     ns1:postalCode "28020" ;
     ns1:streetAddress "CALLE LA CORUÑA, 18" .
 
 <http://w3id.org/madrid-culture/resource/address/2107> a ns1:Address ;
+    rdfs:label "CALLE GUZMAN EL BUENO, 110" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-6> ;
     ns1:postalCode "28003" ;
     ns1:streetAddress "CALLE GUZMAN EL BUENO, 110" .
 
 <http://w3id.org/madrid-culture/resource/address/2112> a ns1:Address ;
+    rdfs:label "PLAZA SAN ANDRES, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "PLAZA SAN ANDRES, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/2114> a ns1:Address ;
+    rdfs:label "CALLE ALCALA, 13" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-6> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE ALCALA, 13" .
 
 <http://w3id.org/madrid-culture/resource/address/2115> a ns1:Address ;
+    rdfs:label "AVENIDA JUAN DE HERRERA, 2" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-3> ;
     ns1:postalCode "28040" ;
     ns1:streetAddress "AVENIDA JUAN DE HERRERA, 2" .
 
 <http://w3id.org/madrid-culture/resource/address/2213> a ns1:Address ;
+    rdfs:label "AVENIDA PLANETARIO, 16" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/2> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/2-4> ;
     ns1:postalCode "28045" ;
     ns1:streetAddress "AVENIDA PLANETARIO, 16" .
 
 <http://w3id.org/madrid-culture/resource/address/25526> a ns1:Address ;
+    rdfs:label "CALLE RAFAEL FINAT, 51" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/10> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/10-7> ;
     ns1:postalCode "28044" ;
     ns1:streetAddress "CALLE RAFAEL FINAT, 51" .
 
 <http://w3id.org/madrid-culture/resource/address/3348> a ns1:Address ;
+    rdfs:label "PLAZA DESCALZAS, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-6> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "PLAZA DESCALZAS, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/3349> a ns1:Address ;
+    rdfs:label "PLAZA ENCARNACION, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "PLAZA ENCARNACION, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/3359> a ns1:Address ;
+    rdfs:label "CALLE SAN BUENAVENTURA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "CALLE SAN BUENAVENTURA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/3362> a ns1:Address ;
+    rdfs:label "CALLE ATOCHA, 6" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-6> ;
     ns1:postalCode "28012" ;
     ns1:streetAddress "CALLE ATOCHA, 6" .
 
 <http://w3id.org/madrid-culture/resource/address/4112> a ns1:Address ;
+    rdfs:label "CALLE VENTURA RODRIGUEZ, 17" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-2> ;
     ns1:postalCode "28008" ;
     ns1:streetAddress "CALLE VENTURA RODRIGUEZ, 17" .
 
 <http://w3id.org/madrid-culture/resource/address/4545827> a ns1:Address ;
+    rdfs:label "CALLE BALMES, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-3> ;
     ns1:postalCode "28010" ;
     ns1:streetAddress "CALLE BALMES, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/4566286> a ns1:Address ;
+    rdfs:label "CALLE BAILEN, 10" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "CALLE BAILEN, 10" .
 
 <http://w3id.org/madrid-culture/resource/address/4707297> a ns1:Address ;
+    rdfs:label "CALLE SANTA ISABEL, 48" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28012" ;
     ns1:streetAddress "CALLE SANTA ISABEL, 48" .
 
 <http://w3id.org/madrid-culture/resource/address/4847190> a ns1:Address ;
+    rdfs:label "CALLE CERVANTES, 11" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-3> ;
     ns1:postalCode "28014" ;
     ns1:streetAddress "CALLE CERVANTES, 11" .
 
 <http://w3id.org/madrid-culture/resource/address/4949641> a ns1:Address ;
+    rdfs:label "CALLE ARENAL, 8" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-6> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "CALLE ARENAL, 8" .
 
 <http://w3id.org/madrid-culture/resource/address/4997114> a ns1:Address ;
+    rdfs:label "PASEO GENERAL MARTINEZ CAMPOS, 37" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/7> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/7-4> ;
     ns1:postalCode "28010" ;
     ns1:streetAddress "PASEO GENERAL MARTINEZ CAMPOS, 37" .
 
 <http://w3id.org/madrid-culture/resource/address/50067411> a ns1:Address ;
+    rdfs:label "PASEO ESPERANZA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/2> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/2-2> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "PASEO ESPERANZA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/50313490> a ns1:Address ;
+    rdfs:label "AVENIDA LA GAVIA, 55" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/18> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/18-3> ;
     ns1:postalCode "28051" ;
     ns1:streetAddress "AVENIDA LA GAVIA, 55" .
 
 <http://w3id.org/madrid-culture/resource/address/50313615> a ns1:Address ;
+    rdfs:label "AVENIDA CARABANCHEL ALTO, 53" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/11> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/11-6> ;
     ns1:postalCode "28054" ;
     ns1:streetAddress "AVENIDA CARABANCHEL ALTO, 53" .
 
 <http://w3id.org/madrid-culture/resource/address/51188> a ns1:Address ;
+    rdfs:label "CALLE MANUEL FERRERO, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/5> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/5-6> ;
     ns1:postalCode "28036" ;
     ns1:streetAddress "CALLE MANUEL FERRERO, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/51849> a ns1:Address ;
+    rdfs:label "CALLE NUESTRA SEÑORA DEL VILLAR, 6" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/15> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/15-1> ;
     ns1:postalCode "28017" ;
     ns1:streetAddress "CALLE NUESTRA SEÑORA DEL VILLAR, 6" .
 
 <http://w3id.org/madrid-culture/resource/address/5349304> a ns1:Address ;
+    rdfs:label "CALLE SANTA ISABEL, 52" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28012" ;
     ns1:streetAddress "CALLE SANTA ISABEL, 52" .
 
 <http://w3id.org/madrid-culture/resource/address/5682031> a ns1:Address ;
+    rdfs:label "CALLE ANTONIO SANCHA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/21> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/21-1> ;
     ns1:postalCode "28042" ;
     ns1:streetAddress "CALLE ANTONIO SANCHA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/5727435> a ns1:Address ;
+    rdfs:label "CALLE BOADA, 4" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/13> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/13-6> ;
     ns1:postalCode "28038" ;
     ns1:streetAddress "CALLE BOADA, 4" .
 
 <http://w3id.org/madrid-culture/resource/address/5765642> a ns1:Address ;
+    rdfs:label "CALLE ANTONIA RODRIGUEZ SACRISTAN, 7" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/11> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/11-5> ;
     ns1:postalCode "28044" ;
     ns1:streetAddress "CALLE ANTONIA RODRIGUEZ SACRISTAN, 7" .
 
 <http://w3id.org/madrid-culture/resource/address/5768564> a ns1:Address ;
+    rdfs:label "CALLE GRANJA DE TORREHERMOSA, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/10> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/10-4> ;
     ns1:postalCode "28024" ;
     ns1:streetAddress "CALLE GRANJA DE TORREHERMOSA, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/58353> a ns1:Address ;
+    rdfs:label "CALLE FUENCARRAL, 3" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-5> ;
     ns1:postalCode "28004" ;
     ns1:streetAddress "CALLE FUENCARRAL, 3" .
 
 <http://w3id.org/madrid-culture/resource/address/5873478> a ns1:Address ;
+    rdfs:label "CALLE AMANIEL, 29" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-5> ;
     ns1:postalCode "28015" ;
     ns1:streetAddress "CALLE AMANIEL, 29" .
 
 <http://w3id.org/madrid-culture/resource/address/5975465> a ns1:Address ;
+    rdfs:label "CALLE SAN JUSTO, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28005" ;
     ns1:streetAddress "CALLE SAN JUSTO, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/6017808> a ns1:Address ;
+    rdfs:label "CALLE FUENTE DEL REY, 11" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-7> ;
     ns1:postalCode "28023" ;
     ns1:streetAddress "CALLE FUENTE DEL REY, 11" .
 
 <http://w3id.org/madrid-culture/resource/address/6019032> a ns1:Address ;
+    rdfs:label "PLAZA ISABEL II, 1" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-1> ;
     ns1:postalCode "28013" ;
     ns1:streetAddress "PLAZA ISABEL II, 1" .
 
 <http://w3id.org/madrid-culture/resource/address/6469186> a ns1:Address ;
+    rdfs:label "GLORIETA SAN ANTONIO DE LA FLORIDA, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/9> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/9-1> ;
     ns1:postalCode "28008" ;
     ns1:streetAddress "GLORIETA SAN ANTONIO DE LA FLORIDA, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/66904> a ns1:Address ;
+    rdfs:label "CALLE SANGENJO, 38" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/8> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/8-5> ;
     ns1:postalCode "28034" ;
     ns1:streetAddress "CALLE SANGENJO, 38" .
 
 <http://w3id.org/madrid-culture/resource/address/6893633> a ns1:Address ;
+    rdfs:label "PASEO FERNÁN NÚÑEZ, 24" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/3> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/3-5> ;
     ns1:postalCode "28009" ;
     ns1:streetAddress "PASEO FERNÁN NÚÑEZ, 24" .
 
 <http://w3id.org/madrid-culture/resource/address/7071384> a ns1:Address ;
+    rdfs:label "CALLE VIA CARPETANA, 141" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/11> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/11-4> ;
     ns1:postalCode "28047" ;
     ns1:streetAddress "CALLE VIA CARPETANA, 141" .
 
 <http://w3id.org/madrid-culture/resource/address/7697128> a ns1:Address ;
+    rdfs:label "CALLE BARCELO, 4" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-4> ;
     ns1:postalCode "28004" ;
     ns1:streetAddress "CALLE BARCELO, 4" .
 
 <http://w3id.org/madrid-culture/resource/address/79870> a ns1:Address ;
+    rdfs:label "CALLE CONCEPCION JERONIMA, 15" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-2> ;
     ns1:postalCode "28012" ;
     ns1:streetAddress "CALLE CONCEPCION JERONIMA, 15" .
 
 <http://w3id.org/madrid-culture/resource/address/79941> a ns1:Address ;
+    rdfs:label "AVENIDA LOGROÑO, 179" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/21> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/21-5> ;
     ns1:postalCode "28042" ;
     ns1:streetAddress "AVENIDA LOGROÑO, 179" .
 
 <http://w3id.org/madrid-culture/resource/address/83922> a ns1:Address ;
+    rdfs:label "CALLE CONDE DUQUE, 9" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/1> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/1-5> ;
     ns1:postalCode "28015" ;
     ns1:streetAddress "CALLE CONDE DUQUE, 9" .
 
 <http://w3id.org/madrid-culture/resource/address/85301> a ns1:Address ;
+    rdfs:label "AVENIDA MONFORTE DE LEMOS, 5" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/8> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/8-5> ;
     ns1:postalCode "28029" ;
     ns1:streetAddress "AVENIDA MONFORTE DE LEMOS, 5" .
 
 <http://w3id.org/madrid-culture/resource/address/86719> a ns1:Address ;
+    rdfs:label "CALLE VILLALONSO, 16" ;
     ns1:locatedInDistrict <http://w3id.org/madrid-culture/resource/district/17> ;
     ns1:locatedInNeighborhood <http://w3id.org/madrid-culture/resource/neighborhood/17-1> ;
     ns1:postalCode "28021" ;
     ns1:streetAddress "CALLE VILLALONSO, 16" .
 
 <http://w3id.org/madrid-culture/resource/district/19> a ns1:District ;
+    rdfs:label "Vicálvaro" ;
     schema1:name "Vicálvaro" ;
     owl:sameAs <https://wikidata.org/entity/Q589403> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/10-6> a ns1:Neighborhood ;
+    rdfs:label "Cuatro Vientos" ;
     schema1:name "Cuatro Vientos" ;
     owl:sameAs <https://wikidata.org/entity/Q5191881> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/10-7> a ns1:Neighborhood ;
-    schema1:name "Las Águilas" .
+    rdfs:label "Las Águilas" ;
+    schema1:name "Las Águilas" ;
+    owl:sameAs <https://wikidata.org/entity/Q5971372> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-3> a ns1:Neighborhood ;
+    rdfs:label "San Isidro" ;
     schema1:name "San Isidro" ;
     owl:sameAs <https://wikidata.org/entity/Q3813733> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-5> a ns1:Neighborhood ;
-    schema1:name "Puerta Bonita" .
+    rdfs:label "Puerta Bonita" ;
+    schema1:name "Puerta Bonita" ;
+    owl:sameAs <https://wikidata.org/entity/Q3813762> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-6> a ns1:Neighborhood ;
+    rdfs:label "Buenavista" ;
     schema1:name "Buenavista" ;
     owl:sameAs <https://wikidata.org/entity/Q953929> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/12-2> a ns1:Neighborhood ;
+    rdfs:label "Orcasur" ;
     schema1:name "Orcasur" ;
     owl:sameAs <https://wikidata.org/entity/Q10341270> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/12-3> a ns1:Neighborhood ;
-    schema1:name "San Fermín" .
+    rdfs:label "San Fermín" ;
+    schema1:name "San Fermín" ;
+    owl:sameAs <https://wikidata.org/entity/Q71758> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/12-7> a ns1:Neighborhood ;
+    rdfs:label "Pradolongo" ;
     schema1:name "Pradolongo" ;
     owl:sameAs <https://wikidata.org/entity/Q10352360> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-1> a ns1:Neighborhood ;
+    rdfs:label "Entrevías" ;
     schema1:name "Entrevías" ;
     owl:sameAs <https://wikidata.org/entity/Q71756> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-2> a ns1:Neighborhood ;
+    rdfs:label "San Diego" ;
     schema1:name "San Diego" ;
     owl:sameAs <https://wikidata.org/entity/Q11946851> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-3> a ns1:Neighborhood ;
+    rdfs:label "Palomeras Bajas" ;
     schema1:name "Palomeras Bajas" ;
     owl:sameAs <https://wikidata.org/entity/Q10343902> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-4> a ns1:Neighborhood ;
-    schema1:name "Palomeras Sureste" .
+    rdfs:label "Palomeras Sureste" ;
+    schema1:name "Palomeras Sureste" ;
+    owl:sameAs <https://wikidata.org/entity/Q10343901> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/14-4> a ns1:Neighborhood ;
+    rdfs:label "Media Legua" ;
     schema1:name "Media Legua" ;
     owl:sameAs <https://wikidata.org/entity/Q9031035> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/14-5> a ns1:Neighborhood ;
+    rdfs:label "Fontarrón" ;
     schema1:name "Fontarrón" ;
     owl:sameAs <https://wikidata.org/entity/Q10283284> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/15-1> a ns1:Neighborhood ;
+    rdfs:label "Ventas" ;
     schema1:name "Ventas" ;
     owl:sameAs <https://wikidata.org/entity/Q71762> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/15-6> a ns1:Neighborhood ;
+    rdfs:label "San Juan Bautista" ;
     schema1:name "San Juan Bautista" ;
     owl:sameAs <https://wikidata.org/entity/Q165609> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/16-6> a ns1:Neighborhood ;
+    rdfs:label "Valdefuentes" ;
     schema1:name "Valdefuentes" ;
     owl:sameAs <https://wikidata.org/entity/Q10388714> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/17-1> a ns1:Neighborhood ;
-    schema1:name "Villaverde Alto, Casco Histórico de Villaverde" .
+    rdfs:label "Villaverde Alto, Casco Histórico de Villaverde" ;
+    schema1:name "Villaverde Alto, Casco Histórico de Villaverde" ;
+    owl:sameAs <https://wikidata.org/entity/Q390435> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/17-3> a ns1:Neighborhood ;
+    rdfs:label "Butarque" ;
     schema1:name "Butarque" ;
     owl:sameAs <https://wikidata.org/entity/Q390453> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/18-2> a ns1:Neighborhood ;
-    schema1:name "Santa Eugenia" .
+    rdfs:label "Santa Eugenia" ;
+    schema1:name "Santa Eugenia" ;
+    owl:sameAs <https://wikidata.org/entity/Q390463> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/18-3> a ns1:Neighborhood ;
+    rdfs:label "Ensanche de Vallecas" ;
     schema1:name "Ensanche de Vallecas" ;
     owl:sameAs <https://wikidata.org/entity/Q3847485> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/19-2> a ns1:Neighborhood ;
+    rdfs:label "Valdebernardo" ;
     schema1:name "Valdebernardo" ;
     owl:sameAs <https://wikidata.org/entity/Q43025212> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/2-4> a ns1:Neighborhood ;
+    rdfs:label "Legazpi" ;
     schema1:name "Legazpi" ;
     owl:sameAs <https://wikidata.org/entity/Q3773990> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/2-6> a ns1:Neighborhood ;
+    rdfs:label "Palos de la Frontera" ;
     schema1:name "Palos de la Frontera" ;
     owl:sameAs <https://wikidata.org/entity/Q521009> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/20-4> a ns1:Neighborhood ;
+    rdfs:label "Arcos" ;
     schema1:name "Arcos" ;
     owl:sameAs <https://wikidata.org/entity/Q9627876> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/20-5> a ns1:Neighborhood ;
+    rdfs:label "Rosas" ;
     schema1:name "Rosas" ;
     owl:sameAs <https://wikidata.org/entity/Q18880469> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/20-7> a ns1:Neighborhood ;
+    rdfs:label "Canillejas" ;
     schema1:name "Canillejas" ;
     owl:sameAs <https://wikidata.org/entity/Q663013> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/21-1> a ns1:Neighborhood ;
+    rdfs:label "Alameda de Osuna" ;
     schema1:name "Alameda de Osuna" ;
     owl:sameAs <https://wikidata.org/entity/Q760737> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/21-5> a ns1:Neighborhood ;
+    rdfs:label "Corralejos" ;
     schema1:name "Corralejos" ;
     owl:sameAs <https://wikidata.org/entity/Q10260772> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/3-2> a ns1:Neighborhood ;
-    schema1:name "Adelfas" .
+    rdfs:label "Adelfas" ;
+    schema1:name "Adelfas" ;
+    owl:sameAs <https://wikidata.org/entity/Q3774001> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/4-1> a ns1:Neighborhood ;
+    rdfs:label "Recoletos" ;
     schema1:name "Recoletos" ;
     owl:sameAs <https://wikidata.org/entity/Q3814551> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/4-2> a ns1:Neighborhood ;
+    rdfs:label "Goya" ;
     schema1:name "Goya" ;
     owl:sameAs <https://wikidata.org/entity/Q3814578> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/5-1> a ns1:Neighborhood ;
+    rdfs:label "El Viso" ;
     schema1:name "El Viso" ;
     owl:sameAs <https://wikidata.org/entity/Q4778> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/5-3> a ns1:Neighborhood ;
+    rdfs:label "Ciudad Jardín" ;
     schema1:name "Ciudad Jardín" ;
     owl:sameAs <https://wikidata.org/entity/Q3773744> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/6-1> a ns1:Neighborhood ;
+    rdfs:label "Bellas Vistas" ;
     schema1:name "Bellas Vistas" ;
     owl:sameAs <https://wikidata.org/entity/Q11908929> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/6-2> a ns1:Neighborhood ;
+    rdfs:label "Cuatro Caminos" ;
     schema1:name "Cuatro Caminos" ;
     owl:sameAs <https://wikidata.org/entity/Q5824684> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/6-4> a ns1:Neighborhood ;
+    rdfs:label "Almenara" ;
     schema1:name "Almenara" ;
     owl:sameAs <https://wikidata.org/entity/Q2265427> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/7-6> a ns1:Neighborhood ;
+    rdfs:label "Vallehermoso" ;
     schema1:name "Vallehermoso" ;
     owl:sameAs <https://wikidata.org/entity/Q6122685> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/8-1> a ns1:Neighborhood ;
+    rdfs:label "El Pardo" ;
     schema1:name "El Pardo" ;
     owl:sameAs <https://wikidata.org/entity/Q3314337> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/8-4> a ns1:Neighborhood ;
+    rdfs:label "El Pilar" ;
     schema1:name "El Pilar" ;
     owl:sameAs <https://wikidata.org/entity/Q3773964> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/8-8> a ns1:Neighborhood ;
+    rdfs:label "El Goloso" ;
     schema1:name "El Goloso" ;
     owl:sameAs <https://wikidata.org/entity/Q10271137> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/9-7> a ns1:Neighborhood ;
+    rdfs:label "Aravaca" ;
     schema1:name "Aravaca" ;
     owl:sameAs <https://wikidata.org/entity/Q3314682> .
 
 <http://w3id.org/madrid-culture/resource/district/14> a ns1:District ;
+    rdfs:label "Moratalaz" ;
     schema1:name "Moratalaz" ;
     owl:sameAs <https://wikidata.org/entity/Q2076109> .
 
 <http://w3id.org/madrid-culture/resource/district/17> a ns1:District ;
+    rdfs:label "Villaverde" ;
     schema1:name "Villaverde" ;
     owl:sameAs <https://wikidata.org/entity/Q919536> .
 
 <http://w3id.org/madrid-culture/resource/district/18> a ns1:District ;
+    rdfs:label "Villa de Vallecas" ;
     schema1:name "Villa de Vallecas" ;
     owl:sameAs <https://wikidata.org/entity/Q1947988> .
 
 <http://w3id.org/madrid-culture/resource/district/21> a ns1:District ;
+    rdfs:label "Barajas" ;
     schema1:name "Barajas" ;
     owl:sameAs <https://wikidata.org/entity/Q807230> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/10-4> a ns1:Neighborhood ;
+    rdfs:label "Aluĉo" ;
     schema1:name "Aluĉo" ;
     owl:sameAs <https://wikidata.org/entity/Q31140> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/11-4> a ns1:Neighborhood ;
+    rdfs:label "Vista Alegre" ;
     schema1:name "Vista Alegre" ;
     owl:sameAs <https://wikidata.org/entity/Q3813741> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/13-6> a ns1:Neighborhood ;
+    rdfs:label "Numancia" ;
     schema1:name "Numancia" ;
     owl:sameAs <https://wikidata.org/entity/Q10338144> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/15-2> a ns1:Neighborhood ;
+    rdfs:label "Pueblo Nuevo" ;
     schema1:name "Pueblo Nuevo" ;
     owl:sameAs <https://wikidata.org/entity/Q71753> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/16-4> a ns1:Neighborhood ;
+    rdfs:label "Pinar del Rey" ;
     schema1:name "Pinar del Rey" ;
     owl:sameAs <https://wikidata.org/entity/Q10349788> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/2-2> a ns1:Neighborhood ;
+    rdfs:label "Las Acacias" ;
     schema1:name "Las Acacias" ;
     owl:sameAs <https://wikidata.org/entity/Q3319190> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/3-1> a ns1:Neighborhood ;
+    rdfs:label "Pacífico" ;
     schema1:name "Pacífico" ;
     owl:sameAs <https://wikidata.org/entity/Q3773753> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/4-6> a ns1:Neighborhood ;
+    rdfs:label "Castellana" ;
     schema1:name "Castellana" ;
     owl:sameAs <https://wikidata.org/entity/Q4781> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/5-6> a ns1:Neighborhood ;
+    rdfs:label "Castilla" ;
     schema1:name "Castilla" ;
     owl:sameAs <https://wikidata.org/entity/Q3813735> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/7-3> a ns1:Neighborhood ;
+    rdfs:label "Trafalgar" ;
     schema1:name "Trafalgar" ;
     owl:sameAs <https://wikidata.org/entity/Q10384027> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/7-4> a ns1:Neighborhood ;
+    rdfs:label "Almagro" ;
     schema1:name "Almagro" ;
     owl:sameAs <https://wikidata.org/entity/Q10954432> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/8-5> a ns1:Neighborhood ;
+    rdfs:label "La Paz" ;
     schema1:name "La Paz" ;
     owl:sameAs <https://wikidata.org/entity/Q5869740> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/9-1> a ns1:Neighborhood ;
+    rdfs:label "Casa de Campo" ;
     schema1:name "Casa de Campo" ;
     owl:sameAs <https://wikidata.org/entity/Q16302441> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/9-2> a ns1:Neighborhood ;
+    rdfs:label "Argüelles" ;
     schema1:name "Argüelles" ;
     owl:sameAs <https://wikidata.org/entity/Q64874> .
 
 <http://w3id.org/madrid-culture/resource/district/12> a ns1:District ;
+    rdfs:label "Usera" ;
     schema1:name "Usera" ;
     owl:sameAs <https://wikidata.org/entity/Q953368> .
 
 <http://w3id.org/madrid-culture/resource/district/16> a ns1:District ;
+    rdfs:label "Hortaleza" ;
     schema1:name "Hortaleza" ;
     owl:sameAs <https://wikidata.org/entity/Q1928529> .
 
 <http://w3id.org/madrid-culture/resource/district/20> a ns1:District ;
+    rdfs:label "San Blas-Canillejas" ;
     schema1:name "San Blas-Canillejas" ;
     owl:sameAs <https://wikidata.org/entity/Q2001937> .
 
 <http://w3id.org/madrid-culture/resource/district/6> a ns1:District ;
+    rdfs:label "Tetuán" ;
     schema1:name "Tetuán" ;
     owl:sameAs <https://wikidata.org/entity/Q1773540> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/4-4> a ns1:Neighborhood ;
+    rdfs:label "La Guindalera" ;
     schema1:name "La Guindalera" ;
     owl:sameAs <https://wikidata.org/entity/Q3814559> .
 
 <http://w3id.org/madrid-culture/resource/district/10> a ns1:District ;
+    rdfs:label "Latina" ;
     schema1:name "Latina" ;
     owl:sameAs <https://wikidata.org/entity/Q794954> .
 
 <http://w3id.org/madrid-culture/resource/district/15> a ns1:District ;
+    rdfs:label "Ciudad Lineal" ;
     schema1:name "Ciudad Lineal" ;
     owl:sameAs <https://wikidata.org/entity/Q1763694> .
 
 <http://w3id.org/madrid-culture/resource/district/2> a ns1:District ;
+    rdfs:label "Arganzuela" ;
     schema1:name "Arganzuela" ;
     owl:sameAs <https://wikidata.org/entity/Q2000929> .
 
 <http://w3id.org/madrid-culture/resource/district/5> a ns1:District ;
+    rdfs:label "Chamartín" ;
     schema1:name "Chamartín" ;
     owl:sameAs <https://wikidata.org/entity/Q1766348> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/1-3> a ns1:Neighborhood ;
+    rdfs:label "Cortes" ;
     schema1:name "Cortes" ;
     owl:sameAs <https://wikidata.org/entity/Q2535637> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/1-4> a ns1:Neighborhood ;
+    rdfs:label "Justicia" ;
     schema1:name "Justicia" ;
     owl:sameAs <https://wikidata.org/entity/Q1992319> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/1-5> a ns1:Neighborhood ;
+    rdfs:label "Universidad" ;
     schema1:name "Universidad" ;
     owl:sameAs <https://wikidata.org/entity/Q10387767> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/7-5> a ns1:Neighborhood ;
+    rdfs:label "Ríos Rosas" ;
     schema1:name "Ríos Rosas" ;
     owl:sameAs <https://wikidata.org/entity/Q10366270> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/9-3> a ns1:Neighborhood ;
+    rdfs:label "Ciudad Universitaria" ;
     schema1:name "Ciudad Universitaria" ;
     owl:sameAs <https://wikidata.org/entity/Q3319235> .
 
 <http://w3id.org/madrid-culture/resource/district/11> a ns1:District ;
+    rdfs:label "Carabanchel" ;
     schema1:name "Carabanchel" ;
     owl:sameAs <https://wikidata.org/entity/Q1001991> .
 
 <http://w3id.org/madrid-culture/resource/district/8> a ns1:District ;
+    rdfs:label "Fuencarral-El Pardo" ;
     schema1:name "Fuencarral-El Pardo" ;
     owl:sameAs <https://wikidata.org/entity/Q656196> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/1-6> a ns1:Neighborhood ;
+    rdfs:label "Sol" ;
     schema1:name "Sol" ;
     owl:sameAs <https://wikidata.org/entity/Q2465181> .
 
-<http://w3id.org/madrid-culture/resource/neighborhood/3-5> a ns1:Neighborhood ;
-    schema1:name "Jerónimos" ;
-    owl:sameAs <https://wikidata.org/entity/Q10306766> .
-
 <http://w3id.org/madrid-culture/resource/district/13> a ns1:District ;
+    rdfs:label "Puente de Vallecas" ;
     schema1:name "Puente de Vallecas" ;
     owl:sameAs <https://wikidata.org/entity/Q2003054> .
 
 <http://w3id.org/madrid-culture/resource/neighborhood/1-2> a ns1:Neighborhood ;
+    rdfs:label "Embajadores" ;
     schema1:name "Embajadores" ;
     owl:sameAs <https://wikidata.org/entity/Q2449844> .
 
+<http://w3id.org/madrid-culture/resource/neighborhood/3-5> a ns1:Neighborhood ;
+    rdfs:label "Jerónimos" ;
+    schema1:name "Jerónimos" ;
+    owl:sameAs <https://wikidata.org/entity/Q10306766> .
+
 <http://w3id.org/madrid-culture/resource/district/4> a ns1:District ;
+    rdfs:label "Salamanca" ;
     schema1:name "Salamanca" ;
     owl:sameAs <https://wikidata.org/entity/Q1773521> .
 
-<http://w3id.org/madrid-culture/resource/district/3> a ns1:District ;
-    schema1:name "Retiro" ;
-    owl:sameAs <https://wikidata.org/entity/Q2002296> .
-
 <http://w3id.org/madrid-culture/resource/neighborhood/1-1> a ns1:Neighborhood ;
+    rdfs:label "Palacio" ;
     schema1:name "Palacio" ;
     owl:sameAs <https://wikidata.org/entity/Q2136510> .
 
+<http://w3id.org/madrid-culture/resource/district/3> a ns1:District ;
+    rdfs:label "Retiro" ;
+    schema1:name "Retiro" ;
+    owl:sameAs <https://wikidata.org/entity/Q2002296> .
+
 <http://w3id.org/madrid-culture/resource/district/7> a ns1:District ;
+    rdfs:label "Chamberí" ;
     schema1:name "Chamberí" ;
     owl:sameAs <https://wikidata.org/entity/Q1763370> .
 
 <http://w3id.org/madrid-culture/resource/district/9> a ns1:District ;
+    rdfs:label "Moncloa-Aravaca" ;
     schema1:name "Moncloa-Aravaca" ;
     owl:sameAs <https://wikidata.org/entity/Q2017682> .
 
 <http://w3id.org/madrid-culture/resource/district/1> a ns1:District ;
+    rdfs:label "Centro" ;
     schema1:name "Centro" ;
     owl:sameAs <https://wikidata.org/entity/Q1763376> .
 

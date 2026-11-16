@@ -1,0 +1,18 @@
+.facility-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 12px 16px 4px;
+  align-content: start;
+}
+
+@media (min-width: 768px) {
+  .facility-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

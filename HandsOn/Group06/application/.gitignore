@@ -1,0 +1,73 @@
+
+# ==========================
+# PYTHON / FASTAPI
+# ==========================
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribución y paquetes
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing y análisis
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ==========================
+# REACT / VITE / NODE.JS
+# ==========================
+
+# Dependencias
+node_modules/
+
+# Archivos generados
+dist/
+*.local
+
+# Caché
+.vite/
+
+# ==========================
+# VARIABLES DE ENTORNO
+# ==========================
+
+.env
+.env.*
+!.env.example
+
+# ==========================
+# LOGS
+# ==========================
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==========================
+# EDITORES
+# ==========================
+
+.vscode/
+.idea/
+
+# ==========================
+# SISTEMA OPERATIVO
+# ==========================
+
+.DS_Store
+Thumbs.db
