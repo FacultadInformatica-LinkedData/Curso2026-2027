@@ -1,0 +1,19 @@
+html, body, #map { height: 100%; margin: 0; background: #e8eee3; }
+.leaflet-control-zoom { margin-bottom: 28px !important; }
+.station-marker {
+    box-sizing: border-box; display: grid; place-items: center;
+    border-radius: 16px; border: 2px solid white; background: #176da4;
+    color: white; font: bold 11px system-ui; box-shadow: 0 1px 5px #17242c55;
+    white-space: nowrap;
+}
+.station-marker.is-selected { background: #12485e; outline: 3px solid #48a1ba; }
+.station-marker.no-reading { background: #63737b; }
+#tile-status {
+    position: absolute; z-index: 1000; bottom: 25px; left: 8px;
+    padding: 4px 8px; background: white; color: #17242c; font: 12px system-ui;
+}
+.region-control {
+    margin-bottom: 23px !important; border: 1px solid #c6d1cf; border-radius: 14px;
+    padding: 8px 11px; background: white; color: #1d5d77; font: bold 12px system-ui;
+}
+#map { position: fixed; inset: 0; width: 100vw; height: 100vh; }
