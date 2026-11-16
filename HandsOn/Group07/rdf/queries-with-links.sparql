@@ -1,0 +1,116 @@
+PREFIX ue:   <http://www.madridurbanenvironment.org/ontology/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+
+
+
+# 1 Numero total de enlaces owl:sameAs
+SELECT (COUNT(*) AS ?numberOfLinks)
+WHERE {
+  ?s owl:sameAs ?external .
+}
+;
+
+# 2 Numero de entidades enlazadas por clase
+SELECT ?class (COUNT(DISTINCT ?s) AS ?linkedEntities)
+WHERE {
+  ?s a ?class ;
+     owl:sameAs ?external .
+}
+GROUP BY ?class
+ORDER BY DESC(?linkedEntities)
+;
+
+# 3 Distritos con su enlace a Wikidata
+SELECT ?district ?label ?wikidata
+WHERE {
+  ?district a ue:District ;
+            rdfs:label ?label ;
+            owl:sameAs ?wikidata .
+}
+ORDER BY ?label
+;
+
+# 4 Barrios enlazados a Wikidata (con su distrito)
+SELECT ?neighborhood ?label ?districtLabel ?wikidata
+WHERE {
+  ?neighborhood a ue:Neighborhood ;
+                rdfs:label ?label ;
+                owl:sameAs ?wikidata ;
+                ue:belongsToDistrict ?d .
+  ?d rdfs:label ?districtLabel .
+}
+ORDER BY ?districtLabel ?label
+;
+
+# 5 Parques enlazados a Wikidata (nombre legible en ue:name)
+SELECT ?park ?name ?wikidata
+WHERE {
+  ?park a ue:Park ;
+        ue:name ?name ;
+        owl:sameAs ?wikidata .
+}
+ORDER BY ?name
+;
+
+# 6 Parques junto con el enlace Wikidata del distrito donde estan
+SELECT ?name ?districtLabel ?districtWikidata
+WHERE {
+  ?park a ue:Park ;
+        ue:name ?name ;
+        ue:district ?district .
+  ?district rdfs:label ?districtLabel ;
+            owl:sameAs ?districtWikidata .
+}
+ORDER BY ?districtLabel ?name
+LIMIT 50
+;
+
+# 7 Parques del distrito Retiro, con el enlace de ese distrito
+# (la etiqueta ahora es "Retiro"; LCASE(STR()) evita depender de mayusculas/tipo)
+SELECT ?park ?name ?districtWikidata
+WHERE {
+  ?park a ue:Park ;
+        ue:name ?name ;
+        ue:district ?district .
+  ?district rdfs:label ?label ;
+            owl:sameAs ?districtWikidata .
+  FILTER(LCASE(STR(?label)) = "retiro")
+}
+ORDER BY ?name
+;
+
+# 8 Comprobacion: todo enlace debe ser una URI valida de Wikidata
+# (https?://www.wikidata.org/entity/Q...). Devuelve los enlaces incorrectos.
+SELECT ?s ?external
+WHERE {
+  ?s owl:sameAs ?external .
+  FILTER(!REGEX(STR(?external), "^https?://www\\.wikidata\\.org/entity/Q[0-9]+$"))
+}
+ORDER BY ?s
+;
+
+# 9 Cobertura: distritos SIN enlace externo
+# (se espera "Otros Municipios", que no es un distrito de Madrid)
+SELECT ?district ?label
+WHERE {
+  ?district a ue:District ;
+            rdfs:label ?label .
+  FILTER NOT EXISTS { ?district owl:sameAs ?external }
+}
+ORDER BY ?label
+;
+
+# 10 Fuentes por distrito junto con el enlace Wikidata del distrito
+SELECT ?district ?wikidata (COUNT(DISTINCT ?f) AS ?fountains)
+WHERE {
+  ?f a ue:DrinkingFountain ;
+     ue:district ?d .
+  ?d rdfs:label ?district .
+  OPTIONAL { ?d owl:sameAs ?wikidata }
+}
+GROUP BY ?district ?wikidata
+ORDER BY DESC(?fountains)
+
