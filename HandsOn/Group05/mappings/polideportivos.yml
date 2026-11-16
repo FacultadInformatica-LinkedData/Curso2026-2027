@@ -8,7 +8,6 @@ prefixes:
   xsd: http://www.w3.org/2001/XMLSchema#
   geo: http://www.w3.org/2003/01/geo/wgs84_pos#
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
-  morph-kgc: https://github.com/morph-kgc/morph-kgc/function/built-in.ttl#
   ont: http://smartcity.linkeddata.es/sports/ontology/
   sc: http://smartcity.linkeddata.es/sports/resource/SportsCenter/
   district: http://smartcity.linkeddata.es/sports/resource/District/
@@ -20,7 +19,7 @@ mappings:
 
   sportscenter:
     sources: polideportivos
-    s: sc:$(PK)
+    s: sc:$(URI-CENTRO)
     po:
       - [a, ont:SportsCenter]
       - [rdfs:label, $(NOMBRE), es~lang]
@@ -51,35 +50,13 @@ mappings:
             - [grel:valueParameter, $(EMAIL)]
             - [grel:p_string_sep, ";"]
           datatype: xsd:string
-      # Enlace con el distrito (join por la columna DISTRITO)
-      - p: ont:locatedInDistrict
-        o:
-          mapping: district
-          condition:
-            function: equal
-            parameters:
-              - [str1, $(DISTRITO), s]
-              - [str2, $(DISTRITO), o]
+      # Enlace con el distrito (misma plantilla que el sujeto de "district")
+      - [ont:locatedInDistrict, district:$(URI-DISTRITO)~iri]
 
   district:
     sources: polideportivos
-    # URI: .../resource/District/ + replace(toLowerCase(DISTRITO), " ", "-")
-    s:
-      function: morph-kgc:concat
-      parameters:
-        - [grel:valueParameter1, "http://smartcity.linkeddata.es/sports/resource/District/"]
-        - parameter: grel:valueParameter2
-          value:
-            function: grel:string_replace
-            parameters:
-              - parameter: grel:valueParameter
-                value:
-                  function: grel:toLowerCase
-                  parameters:
-                    - [grel:valueParameter, $(DISTRITO)]
-              - [grel:p_string_find, " "]
-              - [grel:p_string_replace, "-"]
-      type: iri
+    # URI legible: .../resource/District/{URI-DISTRITO}, p.ej. District/MoncloaAravaca
+    s: district:$(URI-DISTRITO)
     po:
       - [a, ont:District]
       - [rdfs:label, $(DISTRITO), es~lang]

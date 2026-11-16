@@ -33,7 +33,7 @@ En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar 
 ### Acciones detalladas
 1.- Importación: el CSV original (200186-0-polideportivos-csv.csv) se ha importado en OpenRefine con codificación ISO-8859-1 y separador punto y coma (;). Estos ajustes no quedan registrados en el JSON, pero son necesarios para que tildes y eñes se lean correctamente (por ejemplo, "Barceló" o "PEÑA GRANDE").
 
-2.- El texto en NOMBRE ha sido limpiado eliminando los espacios extra (con trim y sustituyendo espacios múltiples por uno solo). La columna DISTRITO se ha normalizado a formato título (con toTitlecase), por ejemplo "MONCLOA-ARAVACA" pasa a "Moncloa-Aravaca".
+2.- El texto en NOMBRE ha sido limpiado eliminando los espacios extra (con trim y sustituyendo espacios múltiples por uno solo). La columna DISTRITO se ha normalizado a formato título (con toTitlecase(" -"), usando el espacio y el guion como separadores de palabra), por ejemplo "MONCLOA-ARAVACA" pasa a "Moncloa-Aravaca".
 
 3.- Las columnas de texto largo (HORARIO, EQUIPAMIENTO, TRANSPORTE, DESCRIPCION y DESCRIPCION-ENTIDAD) contenían entidades HTML doblemente codificadas, como "&amp;iexcl;" o "&amp;ldquo;". Se han decodificado (con unescape("html") aplicado dos veces) y se han eliminado los espacios y saltos de línea sobrantes.
 
@@ -52,6 +52,8 @@ En esta tercera entrega de la práctica nuestro objetivo era limpiar y preparar 
 10.- PK, LATITUD y LONGITUD han sido convertidas a números.
 
 11.- Se han eliminado las columnas PUERTA y ESCALERAS, que estaban completamente vacías.
+
+12.- (Añadido tras el feedback de `HO_evaluation_1.md`) Se han creado las columnas URI-CENTRO y URI-DISTRITO con identificadores legibles para las URIs de los individuos: sin tildes, sin espacios ni signos y en UpperCamelCase (por ejemplo, "Centro Deportivo Municipal Marqués de Samaranch" → MarquesDeSamaranch y "Moncloa-Aravaca" → MoncloaAravaca). En los centros se omite el prefijo común "Centro Deportivo Municipal" y lo que va entre paréntesis. Los 82 identificadores de centros y los 21 de distritos son únicos.
 
 ### Problemas conocidos
 - El código de barrio de Ambroz (COD-BARRIO) sigue vacío porque no hemos podido confirmar su valor en el callejero oficial.
