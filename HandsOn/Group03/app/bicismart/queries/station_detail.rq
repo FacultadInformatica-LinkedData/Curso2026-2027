@@ -1,0 +1,23 @@
+PREFIX bm:   <https://bicismart.madrid.data.es/ontology#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Ficha de una estación, buscada por su bm:stationId: datos de BiciMAD, su calle del Callejero
+# y el enlace de la calle a Wikidata.
+SELECT ?station ?id ?name ?lat ?lon ?capacity ?unavailable ?state ?activated ?usable
+       ?street ?streetName ?wikidata
+       (GROUP_CONCAT(DISTINCT STR(?district); separator=",") AS ?districts)
+       (GROUP_CONCAT(DISTINCT ?postalCode; separator=",") AS ?postalCodes)
+WHERE {
+  VALUES ?id { $id }
+  #include _station
+  OPTIONAL {
+    ?station bm:locatedOnStreet ?street .
+    ?street bm:streetName ?streetName .
+    OPTIONAL { ?street bm:districtCode ?district }
+    OPTIONAL { ?street bm:postalCode ?postalCode }
+    OPTIONAL { ?street owl:sameAs ?wikidata }
+  }
+}
+GROUP BY ?station ?id ?name ?lat ?lon ?capacity ?unavailable ?state ?activated ?usable ?street ?streetName ?wikidata
